@@ -20,7 +20,6 @@ def resolve():
         resolve_handler = assembly_resolver.WindowsResolveEventHandler
     else:
         resolve_handler = assembly_resolver.MechanicalResolveEventHandler
-
     System.AppDomain.CurrentDomain.AssemblyResolve += resolve_handler
 
 resolve()
@@ -66,3 +65,27 @@ if MAKE:
 
 if MINIFY:
     minify()
+
+
+def write_docs(commands, tiny_pages_path):
+    """Output to the tinypages directory.
+
+    Parameters
+    ----------
+    tiny_pages_path : str
+        Path to the tiny pages directory.
+
+    """
+
+    doc_src = os.path.join(tiny_pages_path, "docs.rst")
+    with open(doc_src, "w") as fid:
+        fid.write("###################\n")
+        fid.write("Autosummary Testing\n")
+        fid.write("###################\n")
+
+        fid.write(".. currentmodule:: ansys.mapdl.commands\n\n")
+        fid.write(".. autosummary::\n")
+        fid.write("   :toctree: _autosummary/\n\n")
+        for ans_name in commands:
+            cmd_name = ans_name
+            fid.write(f"   {cmd_name}\n")
