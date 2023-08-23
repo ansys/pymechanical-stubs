@@ -18,7 +18,12 @@ autocomplete.
 
 # Documentation
 
-1. Run main.py to generate the stubs from Mechanical 232.
+1. Install Mechanical 2023 R2 onto your computer. 
+
+    Ensure the environment variable, AWP_ROOT232, is set to the location of
+    Mechanical 2023 R2 (C:\Program Files\Ansys Inc\v232).
+
+2. Run main.py to generate the stubs from Mechanical 232.
 
     python main.py
 
@@ -26,7 +31,7 @@ autocomplete.
     If the message, "Done creating all Mechanical stubs" appears, proceed 
     to the next step.
 
-2. Next, create a virtual environment and activate it:
+3. Next, create a virtual environment and activate it:
 
     python -m venv .venv
     
@@ -36,11 +41,11 @@ autocomplete.
     Linux:
         source .venv/bin/activate
 
-3. Navigate to the package directory and install mechanical-stubs
+4. Navigate to the package directory and install mechanical-stubs
 
     cd package && pip install -e .
 
-4. Navigate to the doc directory and make the Sphinx documentation
+5. Navigate to the doc directory and make the Sphinx documentation
 
     cd doc && make html
 
