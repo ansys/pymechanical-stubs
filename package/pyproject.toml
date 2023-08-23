@@ -30,10 +30,12 @@ dependencies = [
     "numpydoc==1.5.0",
     "sphinx-copybutton==0.5.1",
     "build>= 0.10.0",
+    "sphinx.autoapi",
+    "sphinx.jinja",
 ]
 
 [tool.flit.module]
-name = "ansys.mechanical.stubs"
+name = "Ansys"
 
 [project.urls]
 Source = "https://github.com/pyansys/mechanical-stubs/"

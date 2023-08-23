@@ -83,7 +83,7 @@ def write_docstring(buffer: typing.TextIO, doc_member: typing.Optional[DocMember
         return
     indent = "    " * indent_level
     buffer.write(f'{indent}"""\n')
-    buffer.write(f"{indent}{summary}\n")
+    buffer.write(f"{indent}{summary}\n") #include utf-8 encoding
     buffer.write(f'{indent}"""\n')
 
 
@@ -140,6 +140,13 @@ class Property:
     value: typing.Optional[typing.Any] # may be used if static
 
 
+def fix_str(prop_str):
+    backtick = prop_str.index('`')
+    open_bracket = prop_str.index('[')
+    new_str = prop_str[0:backtick]+prop_str[open_bracket:]
+    return new_str.replace('+','.')
+    
+
 def get_properties(class_type: typing.Any, doc: typing.Dict[str, DocMember], type_filter: typing.Callable=None) -> typing.List[Property]:
     # TODO - base class properties are not handled here. They might be published if they are ansys types
     #        or not if they are system types (e.g. the IList methods implemented by an Ansys type that derives from System.Collections.Generic.IList)
@@ -147,6 +154,10 @@ def get_properties(class_type: typing.Any, doc: typing.Dict[str, DocMember], typ
     output = []
     for prop in props:
         prop_type = f'"{prop.PropertyType.ToString()}"'
+        
+        if "`" in prop_type:
+            prop_type = fix_str(prop_type)
+        
         prop_name = prop.Name
         declaring_type_name = prop.DeclaringType.ToString()
         method_doc_key = f"P:{declaring_type_name}.{prop_name}"
@@ -186,9 +197,14 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int=1) -
         buffer.write(f"{indent}@property\n")
         buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop.type}]:\n")
         indent = "    " * (1 + indent_level)
+        
         write_docstring(buffer, prop.doc, indent_level + 1)
+            
         if prop.value:
-            buffer.write(f"{indent}return {prop.value}\n")
+            if (type(prop.value) != type(1)) and ("`" in f"{prop.value}"):
+                prop.value = fix_str(f"{prop.value}")
+
+            buffer.write(f"{indent}return {prop.value}\n") 
         else:
             buffer.write(f"{indent}return None\n")
     else:
@@ -196,7 +212,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int=1) -
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop.type}]) -> None:\n")
             indent = "    " * (1 + indent_level)
-            write_docstring(buffer, prop.doc, indent_level + 1)
+            write_docstring(buffer, prop.doc, indent_level + 1) 
             buffer.write(f"{indent}return None\n")
             buffer.write("\n")
             indent = "    " * (indent_level)
@@ -206,7 +222,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int=1) -
             buffer.write(f"{indent}@property\n")
             buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop.type}]:\n")
             indent = "    " * (1 + indent_level)
-            write_docstring(buffer, prop.doc, indent_level + 1)
+            write_docstring(buffer, prop.doc, indent_level + 1) 
             buffer.write(f"{indent}return None\n")
     buffer.write("\n")
 
@@ -274,7 +290,7 @@ def write_module(namespace: str, mod_types: typing.List, doc: typing.Dict[str, D
     class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
-    with open(outdir / "__init__.py", "w") as f:
+    with open(outdir / "__init__.py", "w", encoding='utf-8') as f:
         #TODO - jinja
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")

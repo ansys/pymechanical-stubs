@@ -9,7 +9,7 @@ import sys
 import gen
 
 def resolve():
-    install_dir = os.environ["AWP_ROOTDV_DEV"]
+    install_dir = os.environ["AWP_ROOT232"] # Change this back to AWP_ROOTDV_DEV
     platform_string = "winx64" if os.name == "nt" else "linx64"
     sys.path.append(os.path.join(install_dir, "aisol", "bin", platform_string))
     version = int(install_dir[-3:])
@@ -24,7 +24,7 @@ def resolve():
 
 resolve()
 
-outdir = pathlib.Path(__file__).parent / "out"
+outdir = pathlib.Path(__file__).parent / "package" / "src" 
 logging.getLogger().setLevel(logging.INFO)
 
 ASSEMBLIES = [
@@ -46,9 +46,21 @@ def is_type_published(mod_type: "System.RuntimeType"):
     return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
 
 def make():
-    outdir.mkdir(exist_ok=True)
+    outdir.mkdir(parents=True, exist_ok=True)    
     for assembly in ASSEMBLIES:
         gen.make(outdir, assembly, type_filter=is_type_published)
+    
+    with open(os.path.join(outdir, "Ansys","__init__.py"), 'w') as f:
+        f.write('''try:
+    import importlib.metadata as importlib_metadata
+except ModuleNotFoundError:  # pragma: no cover
+    import importlib_metadata  # type: ignore
+__version__ = importlib_metadata.version("ansys-mechanical-stubs")
+"""Mechanical Scripting version"""
+''')
+        
+    print("Done creating all Mechanical stubs.")
+
 
 def minify():
     pass

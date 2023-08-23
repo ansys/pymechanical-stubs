@@ -1,4 +1,6 @@
 
-out/
+package/src
+package/doc/source/_build
+.venv
 
 *__pycache__/

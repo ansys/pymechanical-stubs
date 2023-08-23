@@ -18,7 +18,34 @@ autocomplete.
 
 # Documentation
 
-TODO
+1. Run main.py to generate the stubs from Mechanical 232.
+
+    python main.py
+
+    Note: There may be an Unhandled Exception when the stubs are done running.
+    If the message, "Done creating all Mechanical stubs" appears, proceed 
+    to the next step.
+
+2. Next, create a virtual environment and activate it:
+
+    python -m venv .venv
+    
+    Windows:
+        .venv\Scripts\activate.bat
+
+    Linux:
+        source .venv/bin/activate
+
+3. Navigate to the package directory and install mechanical-stubs
+
+    cd package && pip install -e .
+
+4. Navigate to the doc directory and make the Sphinx documentation
+
+    cd doc && make html
+
+    Note: Warning messages can be ignored for now. 
+
 
 # Quickstart
 
