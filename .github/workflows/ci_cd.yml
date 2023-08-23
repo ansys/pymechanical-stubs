@@ -78,7 +78,7 @@ jobs:
           AWP_ROOT232: /install/ansys_inc/v232
           NUM_CORES: 1
         run: |
-            python main.py
+            python3 main.py
       
       - name: Install mechanical-stubs dependencies
         run: |
