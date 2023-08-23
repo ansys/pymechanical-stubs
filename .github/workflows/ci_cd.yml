@@ -26,14 +26,14 @@ concurrency:
 
 jobs:
 
-  # style:
-  #   name: Code style
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: PyAnsys code style checks
-  #       uses: ansys/actions/code-style@v4
-  #       with:
-  #         python-version: ${{ env.MAIN_PYTHON_VERSION }}
+  style:
+    name: Code style
+    runs-on: ubuntu-latest
+    steps:
+      - name: PyAnsys code style checks
+        uses: ansys/actions/code-style@v4
+        with:
+          python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
   # docs-style:
   #   name: Documentation Style Check
