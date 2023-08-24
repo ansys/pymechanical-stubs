@@ -4,9 +4,9 @@
    contain the root `toctree` directive.
 
 Mechanical API Documentation
-======================================
+============================
 
-This documentation lists the APIs used in Ansys Mechanical 2023R2. 
+This documentation lists the APIs used in Ansys Mechanical 2023R2.
 
 .. toctree::
    :maxdepth: 2

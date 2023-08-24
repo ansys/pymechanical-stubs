@@ -3,9 +3,10 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-from datetime import datetime
 import os
+from datetime import datetime
 
+from Ansys import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     ansys_logo_white,
@@ -17,31 +18,31 @@ from ansys_sphinx_theme import (
 )
 from sphinx.builders.latex import LaTeXBuilder
 
-from Ansys import __version__
-
 LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 # Project information
-project = "ansys-mechanical-stubs"
+project = "ansys-mechanical-scripting"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS, Inc."
-release = version = __version__ 
-cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com")
-switcher_version = get_version_match(__version__) 
+release = version = __version__
+cname = os.getenv(
+    "DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com"
+)
+switcher_version = get_version_match(__version__)
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
-    'numpydoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.inheritance_diagram',
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.viewcode",
+    "numpydoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.inheritance_diagram",
     "sphinx_jinja",
     "autoapi.extension",
 ]
@@ -58,7 +59,7 @@ autoapi_options = [
     "special-members",
 ]
 autoapi_template_dir = "_autoapi_templates"
-suppress_warnings = ["autoapi.python_import_resolution"]
+suppress_warnings = ["autoapi.python_import_resolution", "epub.duplicated_toc_entry"]
 exclude_patterns.append("_autoapi_templates/index.rst")
 autoapi_python_use_implicit_namespaces = True
 
@@ -70,7 +71,7 @@ intersphinx_mapping = {
     "imageio": ("https://imageio.readthedocs.io/en/stable", None),
     "pandas": ("https://pandas.pydata.org/pandas-docs/stable", None),
     "pytest": ("https://docs.pytest.org/en/stable", None),
-    }
+}
 
 # Numpydoc config
 numpydoc_use_plots = True
@@ -103,10 +104,10 @@ numpydoc_validation_checks = {
 html_favicon = ansys_favicon
 
 # The suffix(es) of source filenames.
-source_suffix = '.rst'
+source_suffix = ".rst"
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = "index"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
@@ -121,7 +122,7 @@ language = "en"
 # Select desired logo, theme, and declare the html title
 html_logo = pyansys_logo_black
 html_theme = "ansys_sphinx_theme"
-html_short_title = html_title = "Mechanical Stubs"
+html_short_title = html_title = "Ansys Mechanical Scripting"
 
 # specify the location of your github repo
 html_context = {
@@ -143,14 +144,10 @@ html_theme_options = {
     "use_edit_page_button": True,
     "additional_breadcrumbs": [
         ("PyAnsys", "https://docs.pyansys.com/"),
-    ],
-    "icon_links": [
-        {
-            "name": "Support",
-            "url": "https://github.com/ansys/mechanical-stubs/discussions",
-            "icon": "fa fa-comment fa-fw",
-        },
+        ("PyMechanical", "https://mechanical.docs.pyansys.com/"),
+        (
+            "Mechanical Scripting",
+            "https://mechanical.docs.pyansys.com/version/stable/user_guide_scripting/index.html",
+        ),
     ],
 }
-
-

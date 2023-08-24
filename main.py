@@ -11,11 +11,17 @@ import gen
 import System  # isort: skip
 
 
-def resolve():
+def get_version():
     install_dir = os.environ["AWP_ROOT232"]  # Change this back to AWP_ROOTDV_DEV
+    version = int(install_dir[-3:])
+
+    return install_dir, version
+
+
+def resolve():
+    install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
     sys.path.append(os.path.join(install_dir, "aisol", "bin", platform_string))
-    version = int(install_dir[-3:])
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
@@ -54,17 +60,31 @@ def is_type_published(mod_type: "System.RuntimeType"):
 
 
 def make():
+    install_dir, version = get_version()  # 232
+    version = str(version)
+    version = version[:2] + "." + version[2:]
+    major_minor = version.split(".")
+    major = major_minor[0]
+    minor = major_minor[1]
+
     outdir.mkdir(parents=True, exist_ok=True)
+
     for assembly in ASSEMBLIES:
         gen.make(outdir, assembly, type_filter=is_type_published)
 
     with open(os.path.join(outdir, "Ansys", "__init__.py"), "w") as f:
         f.write(
-            '''try:
+            f'''try:
     import importlib.metadata as importlib_metadata
 except ModuleNotFoundError:  # pragma: no cover
     import importlib_metadata  # type: ignore
-__version__ = importlib_metadata.version("ansys-mechanical-stubs")
+patch = importlib_metadata.version("ansys-mechanical-stubs")
+
+# major, minor, patch
+version_info = {major}, {minor}, patch
+
+# Format version
+__version__ = ".".join(map(str, version_info))
 """Mechanical Scripting version"""
 '''
         )

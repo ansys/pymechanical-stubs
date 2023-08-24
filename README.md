@@ -18,38 +18,38 @@ autocomplete.
 
 # Documentation
 
-1. Install Mechanical 2023 R2 onto your computer. 
+1. Install Mechanical 2023 R2 onto your computer.
 
     Ensure the environment variable, AWP_ROOT232, is set to the location of
     Mechanical 2023 R2 (C:\Program Files\Ansys Inc\v232).
 
 2. Run main.py to generate the stubs from Mechanical 232.
 
-    python main.py
+    ```python main.py```
 
     Note: There may be an Unhandled Exception when the stubs are done running.
-    If the message, "Done creating all Mechanical stubs" appears, proceed 
+    If the message, "Done creating all Mechanical stubs" appears, proceed
     to the next step.
 
 3. Next, create a virtual environment and activate it:
 
-    python -m venv .venv
-    
+    ```python -m venv .venv```
+
     Windows:
-        .venv\Scripts\activate.bat
+        ```.venv\Scripts\activate.bat```
 
     Linux:
-        source .venv/bin/activate
+        ```source .venv/bin/activate```
 
 4. Navigate to the package directory and install mechanical-stubs
 
-    cd package && pip install -e .
+    ```cd package && pip install -e .```
 
 5. Navigate to the doc directory and make the Sphinx documentation
 
-    cd doc && make html
+    ```cd doc && make html```
 
-    Note: Warning messages can be ignored for now. 
+    Note: Warning messages can be ignored for now.
 
 
 # Quickstart
