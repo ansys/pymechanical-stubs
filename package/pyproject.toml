@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 # Check https://flit.readthedocs.io/en/latest/pyproject_toml.html for all available sections
 name = "ansys-mechanical-stubs"
-version = "0.1.dev0"
+version = "0"
 description = "PyMechanical scripting API stubs."
 readme = "README.rst"
 requires-python = ">=3.9"
@@ -30,10 +30,12 @@ dependencies = [
     "numpydoc==1.5.0",
     "sphinx-copybutton==0.5.1",
     "build>= 0.10.0",
+    "sphinx-autoapi==2.1.1",
+    "sphinx-jinja==2.0.2",
 ]
 
 [tool.flit.module]
-name = "ansys.mechanical.stubs"
+name = "Ansys"
 
 [project.urls]
 Source = "https://github.com/pyansys/mechanical-stubs/"
