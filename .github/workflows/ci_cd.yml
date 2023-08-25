@@ -69,7 +69,7 @@ jobs:
 
       - name: Install package
         run: |
-          pip install -e ./package
+          cd package && pip install -e .
 
       - name: Run main.py
         env:
