@@ -67,9 +67,9 @@ jobs:
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
 
-      - name: Install package
-        run: |
-          cd package && pip install -e .
+      # - name: Install package
+      #  run: |
+      #    cd package && pip install -e .
 
       - name: Run main.py
         env:
