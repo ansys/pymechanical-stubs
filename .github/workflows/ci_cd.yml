@@ -66,7 +66,10 @@ jobs:
           apt install -y python3.8-venv
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
-          pip3 install -e ./package
+
+      - name: Install package
+        run: |
+          pip install -e ./package
 
       - name: Run main.py
         env:
