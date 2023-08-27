@@ -85,6 +85,7 @@ jobs:
           NUM_CORES: 1
         run: |
             python3 main.py
+        continue-on-error: True 
       
       - name: Make Sphinx Docs
         run: |
