@@ -91,22 +91,6 @@ jobs:
         run: |
           cd package && pip install -e .
 
-      - name: Generate .coveragerc file
-        run: |
-          cat > .coveragerc << 'EOF'
-
-          # .coveragerc to control coverage.py
-          [run]
-          relative_files = True
-
-          [paths]
-          source =
-              src/Ansys
-              /opt/hostedtoolcache/**/Ansys
-              /usr/local/lib/**/Ansys
-
-          EOF
-      
       - name: Run Ansys documentation building action
         uses: ansys/actions/doc-build@v4
         with:
