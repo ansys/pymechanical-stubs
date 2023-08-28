@@ -28,10 +28,34 @@ dependencies = [
     "flit>3.8.0",
     "sphinx-notfound-page==0.8.3",
     "numpydoc==1.5.0",
-    "sphinx-copybutton==0.5.1",
     "build>= 0.10.0",
+]
+
+doc = [
+    "Sphinx==7.1.2",
+    "ansys-sphinx-theme==0.10.4",
+    "grpcio==1.57.0",
+    "imageio-ffmpeg==0.4.8",
+    "imageio==2.31.1",
+    "jupyter_sphinx==0.4.0",
+    "jupyterlab>=3.2.8",
+    "matplotlib==3.7.2",
+    "numpydoc==1.5.0",
+    "plotly==5.16.1",
+    "pypandoc==1.11",
+    "pytest-sphinx==0.5.0",
+    "pythreejs==2.4.2",
+    "pyvista==0.41.1",
     "sphinx-autoapi==2.1.1",
     "sphinx-jinja==2.0.2",
+    "sphinx-autobuild==2021.3.14",
+    "sphinx-autodoc-typehints==1.24.0",
+    "sphinx-copybutton==0.5.1",
+    "sphinx_design==0.5.0",
+    "sphinx-gallery==0.14.0",
+    "sphinx-notfound-page==0.8.3",
+    "sphinxcontrib-websupport==1.2.6",
+    "sphinxemoji==0.2.0",
 ]
 
 [tool.flit.module]
