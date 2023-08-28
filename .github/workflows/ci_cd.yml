@@ -65,6 +65,8 @@ jobs:
           apt install -y python3-pip
           apt install -y python3.8-venv
           apt install -y mono-complete
+          apt install -y sudo
+          apt install -y curl
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
           pip3 install ansys-pythonnet
