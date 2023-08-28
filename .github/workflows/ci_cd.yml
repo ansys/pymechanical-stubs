@@ -67,6 +67,7 @@ jobs:
           apt install -y mono-complete
           apt install -y sudo
           apt install -y curl
+          apt install -y wget
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
           pip3 install ansys-pythonnet
