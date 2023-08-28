@@ -93,6 +93,8 @@ jobs:
           cd package && pip install -e .
 
       - name: Run Ansys documentation building action
+        env:
+          PYTHONPATH: /__t/Python/3.10.12/x64/bin/pip
         uses: ansys/actions/doc-build@v4
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
