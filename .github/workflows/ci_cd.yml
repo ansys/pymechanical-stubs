@@ -68,6 +68,7 @@ jobs:
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
           pip3 install ansys-pythonnet
+          pip3 install sphinx
 
       # - name: Install package
       #  run: |
