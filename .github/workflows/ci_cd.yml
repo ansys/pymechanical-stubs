@@ -15,7 +15,7 @@ env:
   DOCKER_PACKAGE: ghcr.io/ansys/mechanical
   DOCKER_IMAGE_VERSION: 23.1.0
   DOCKER_MECH_CONTAINER_NAME: mechanical
-  MAIN_PYTHON_VERSION: '3.10'
+  MAIN_PYTHON_VERSION: '3.9'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
   DOCUMENTATION_CNAME: scripting.mechanical.docs.pyansys.com
