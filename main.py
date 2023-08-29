@@ -36,7 +36,9 @@ def resolve():
 resolve()
 
 outdir = pathlib.Path(__file__).parent / "package" / "src"
+
 logging.getLogger().setLevel(logging.INFO)
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 ASSEMBLIES = [
     "Ansys.Mechanical.DataModel",
@@ -88,8 +90,7 @@ __version__ = ".".join(map(str, version_info))
 """Mechanical Scripting version"""
 '''
         )
-
-    print("Done creating all Mechanical stubs.")
+    print("Done processing all mechanical stubs.")
 
 
 def minify():
