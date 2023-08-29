@@ -95,7 +95,7 @@ jobs:
       - name: Run Ansys documentation building action
         uses: ansys/actions/doc-build@v4
         with:
-          use-cache: False
+          use-python-cache: False
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
           dependencies: "pandoc"
   
