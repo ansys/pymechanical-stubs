@@ -7,3 +7,4 @@ pythonnet's
 namespaces
 sublicense
 subpackages
+Copyright (c) 2023 ANSYS, Inc.
