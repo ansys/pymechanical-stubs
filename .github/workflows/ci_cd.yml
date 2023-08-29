@@ -93,7 +93,7 @@ jobs:
           cat results.txt
 
           # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" results.txt || true)
+          output=$(grep -c "Done processing all mechanical stubs" results.txt)
           if [ $output -eq 1 ]; then
             echo "All mechanical stubs were created"
             exit 0
