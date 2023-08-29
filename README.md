@@ -1,8 +1,8 @@
 # clr-stubs
 
 Python stub generation system for .NET assemblies, using pythonnet
-These stubs are intended to be used by the autocomplete engine of editors like Atom, Sublime, and VSCode, as well
-as for python documentation generation (e.g. with Sphinx)
+These stubs are intended to be used by the autocomplete engine of editors like Atom, Sublime, and VS Code, as well
+as for python documentation generation (for example, with Sphinx)
 
 ## Why clr-stubs?
 
