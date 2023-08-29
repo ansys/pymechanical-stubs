@@ -42,6 +42,7 @@ jobs:
        - name: PyAnsys documentation style checks
          uses: ansys/actions/doc-style@v4
          with:
+           vale-config: package/doc/.vale.ini
            token: ${{ secrets.GITHUB_TOKEN }}
 
   doc-build:
@@ -55,6 +56,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ['3.10']
+    needs: [style, doc-style]
 
     steps:
       - name: Install Git and checkout project
