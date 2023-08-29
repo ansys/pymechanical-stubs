@@ -74,27 +74,25 @@ jobs:
           pip3 install ansys-pythonnet
           pip3 install sphinx
 
-      - name: Run main.py
-        env:
-          LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
-          ANSYSCL232_DIR: /install/ansys_inc/v232/licensingclient
-          ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
-          ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
-          ANSYS_WORKBENCH_LOGGING: 0
-          ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
-          AWP_ROOT232: /install/ansys_inc/v232
-          NUM_CORES: 1
-        run: |
-            python3 main.py
-        continue-on-error: True
+      #- name: Run main.py
+      #  env:
+      #    LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
+      #    ANSYSCL232_DIR: /install/ansys_inc/v232/licensingclient
+      #    ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
+      #    ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
+      #    ANSYS_WORKBENCH_LOGGING: 0
+      #    ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
+      #    AWP_ROOT232: /install/ansys_inc/v232
+      #    NUM_CORES: 1
+      #  run: |
+      #      python3 main.py
+      #  continue-on-error: True
 
-      - name: Install package
-        run: |
-          cd package && pip install -e .
+      # - name: Install package
+      #  run: |
+      #    cd package && pip install -e .
 
       - name: Run Ansys documentation building action
-        env:
-          PYTHON_PATH: /__t/Python/3.10.12/x64/bin/pip
         uses: ansys/actions/doc-build@v4
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
