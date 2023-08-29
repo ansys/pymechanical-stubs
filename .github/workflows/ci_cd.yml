@@ -85,8 +85,13 @@ jobs:
           AWP_ROOT232: /install/ansys_inc/v232
           NUM_CORES: 1
         run: |
-            python3 main.py
+            python3 main.py > results.txt
+            echo "VALID_RESULTS=$(cat results.txt)" >> $GITHUB_ENV
         continue-on-error: True
+
+      - name: Check results
+        if: ${{ env.VALID_RESULTS }} == ""
+        run: exit 1
 
       - name: Install package
         run: |
