@@ -89,6 +89,7 @@ jobs:
         continue-on-error: True
 
       - name: Get main.py results
+        run: |
           echo "VALID_RESULTS=$(cat results.txt)" >> $GITHUB_ENV
 
       - name: Check main.py results
