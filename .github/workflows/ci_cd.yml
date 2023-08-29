@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Install Git and checkout project
         uses: actions/checkout@v3
-        
+
       - name: Install dependencies
         run: |
           apt update

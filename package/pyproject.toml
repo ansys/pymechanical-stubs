@@ -28,14 +28,10 @@ dependencies = [
     "flit>3.8.0",
     "sphinx-notfound-page==0.8.3",
     "numpydoc==1.5.0",
-    "build>= 0.10.0",
-    "Sphinx==7.1.2",
-    "ansys-sphinx-theme==0.10.4",
-    "sphinx-autoapi==2.1.1",
-    "sphinx_jinja",
-    "sphinx-autobuild==2021.3.14",
-    "sphinx-autodoc-typehints==1.24.0",
     "sphinx-copybutton==0.5.1",
+    "build>=0.10.0",
+    "sphinx-autoapi==2.1.1",
+    "sphinx-jinja==2.0.2",
 ]
 
 [tool.flit.module]
