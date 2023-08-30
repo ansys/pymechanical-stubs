@@ -124,10 +124,10 @@ jobs:
         run: |
           cd ./package/doc && make html
 
-       - name: Generate needed files for deploying pages
-         run: |
-           touch package/doc/_build/html/.nojekyll
-           echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
+      - name: Generate needed files for deploying pages
+        run: |
+          touch package/doc/_build/html/.nojekyll
+          echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
       
       - name: Upload HTML Documentation
         uses: actions/upload-artifact@v3
