@@ -122,7 +122,7 @@ language = "en"
 # Select desired logo, theme, and declare the html title
 html_logo = pyansys_logo_black
 html_theme = "ansys_sphinx_theme"
-html_short_title = html_title = "Ansys Mechanical Scripting"
+html_short_title = html_title = "Mechanical API Documentation"
 
 # specify the location of your github repo
 html_context = {

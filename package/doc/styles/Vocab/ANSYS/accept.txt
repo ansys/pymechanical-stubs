@@ -8,3 +8,4 @@ pythonnet's
 namespaces
 sublicense
 subpackages
+toctree

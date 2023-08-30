@@ -9,6 +9,7 @@ Mechanical API Documentation
 This documentation lists the APIs used in Ansys Mechanical 2023R2.
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
 
    autoapi/index

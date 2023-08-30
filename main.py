@@ -12,7 +12,7 @@ import System  # isort: skip
 
 
 def get_version():
-    install_dir = os.environ["AWP_ROOT232"]  # Change this back to AWP_ROOTDV_DEV
+    install_dir = os.environ["AWP_ROOTDV_DEV"]
     version = int(install_dir[-3:])
 
     return install_dir, version
@@ -26,10 +26,7 @@ def resolve():
     import Ansys
 
     assembly_resolver = Ansys.Mechanical.Embedding.AssemblyResolver
-    if version == 231:
-        resolve_handler = assembly_resolver.WindowsResolveEventHandler
-    else:
-        resolve_handler = assembly_resolver.MechanicalResolveEventHandler
+    resolve_handler = assembly_resolver.MechanicalResolveEventHandler
     System.AppDomain.CurrentDomain.AssemblyResolve += resolve_handler
 
 
@@ -62,7 +59,7 @@ def is_type_published(mod_type: "System.RuntimeType"):
 
 
 def make():
-    install_dir, version = get_version()  # 232
+    install_dir, version = get_version()
     version = str(version)
     version = version[:2] + "." + version[2:]
     major_minor = version.split(".")
