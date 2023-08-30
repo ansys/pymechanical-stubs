@@ -1,0 +1,165 @@
+name: GitHub CI
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*"
+    branches:
+      - main
+      - release/*
+
+env:
+  PYMECHANICAL_PORT: 10000  # default won't work on GitHub runners
+  PYMECHANICAL_START_INSTANCE: FALSE
+  DOCKER_PACKAGE: ghcr.io/ansys/mechanical
+  DOCKER_IMAGE_VERSION: 23.1.0
+  DOCKER_MECH_CONTAINER_NAME: mechanical
+  MAIN_PYTHON_VERSION: '3.10'
+  PACKAGE_NAME: ansys-mechanical-stubs
+  PACKAGE_NAMESPACE: ansys.mechanical.stubs
+  DOCUMENTATION_CNAME: scripting.mechanical.docs.pyansys.com
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  style:
+    name: Code style
+    runs-on: ubuntu-latest
+    steps:
+      - name: PyAnsys code style checks
+        uses: ansys/actions/code-style@v4
+        with:
+          python-version: ${{ env.MAIN_PYTHON_VERSION }}
+
+  doc-style:
+     name: Documentation Style Check
+     runs-on: ubuntu-latest
+     steps:
+       - name: PyAnsys documentation style checks
+         uses: ansys/actions/doc-style@v4
+         with:
+           vale-config: package/doc/.vale.ini
+           token: ${{ secrets.GITHUB_TOKEN }}
+
+  doc-build:
+    name: Create docstrings
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ansys/mechanical:23.2.0
+      options: --entrypoint /bin/bash
+    strategy:
+      max-parallel: 2
+      fail-fast: false
+      matrix:
+        python-version: ['3.10']
+    needs: [style, doc-style]
+
+    steps:
+      - name: Install Git and checkout project
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          apt update
+          apt install -y lsb-release
+          apt install -y python3-pip
+          apt install -y python3.8-venv
+          apt install -y mono-complete
+          pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          pip3 install --upgrade pip flit
+          pip3 install ansys-pythonnet
+          pip3 install sphinx
+
+      - name: Run main.py
+        env:
+          LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
+          ANSYSCL232_DIR: /install/ansys_inc/v232/licensingclient
+          ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
+          ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
+          ANSYS_WORKBENCH_LOGGING: 0
+          ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
+          AWP_ROOT232: /install/ansys_inc/v232
+          NUM_CORES: 1
+        run: |
+          python3 main.py > results.txt
+        continue-on-error: True
+
+      - name: Check main.py results
+        run: |
+          cat results.txt
+
+          # Check if failure occurred
+          output=$(grep -c "Done processing all mechanical stubs" results.txt)
+          if [ $output -eq 1 ]; then
+            echo "All mechanical stubs were created"
+            exit 0
+          else
+            echo "There was an issue creating the mechanical stubs"
+            exit 1
+          fi
+
+      - name: Install package
+        run: |
+          cd package && pip install -e .
+
+      - name: Retrieve Mechanial version
+        run: |
+          echo "MECHANICAL_VERSION=$(python3 -c 'from Ansys import __version__; print(__version__)')" >> $GITHUB_ENV
+          echo "Mechanical version is: $(python3 -c "from Ansys import __version__; print(__version__)")"
+        id: version
+
+      - name: Cache docs build directory
+        uses: actions/cache@v3
+        with:
+          path: package/doc/_build
+          key: doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}-${{ github.sha }}
+          restore-keys: |
+            doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}
+
+      - name: Create Sphinx Documentation
+        run: |
+          cd ./package/doc && make html
+
+      - name: Generate needed files for deploying pages
+        run: |
+          touch package/doc/_build/html/.nojekyll
+          echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
+
+      - name: Upload HTML Documentation
+        uses: actions/upload-artifact@v3
+        with:
+          name: documentation-html
+          path: package/doc/_build/html
+          retention-days: 7
+
+  doc-deploy:
+    name: Documentation deploy
+    runs-on: ubuntu-latest
+    needs: [doc-build]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: documentation-html
+          path: documentation-html
+
+      - name: List all files
+        run: ls -R .
+
+      - name: Deploy to GitHub Pages
+        if: contains(github.ref, 'refs/heads/main')
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: documentation-html/
+          clean: true
+          single-commit: true
