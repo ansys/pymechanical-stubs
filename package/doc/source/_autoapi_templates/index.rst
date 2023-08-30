@@ -1,8 +1,9 @@
-API reference
-=============
+Mechanical API Documentation
+============================
 
-This section provides descriptions of Ansys-Mechanical-Stubs subpackages, submodules, classes,
-methods, and attributes. Use the search feature or click links to view API documentation.
+This documentation lists the APIs used in Ansys Mechanical, providing descriptions of
+the objects, methods, and properties for all namespaces. Use the search feature or
+click the links to view the API documentation.
 
 .. toctree::
    :titlesonly:

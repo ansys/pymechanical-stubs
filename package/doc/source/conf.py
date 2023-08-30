@@ -61,6 +61,7 @@ autoapi_options = [
 autoapi_template_dir = "_autoapi_templates"
 suppress_warnings = ["autoapi.python_import_resolution"]
 exclude_patterns.append("_autoapi_templates/index.rst")
+autoapi_keep_files = True
 autoapi_python_use_implicit_namespaces = True
 
 # Intersphinx mapping
@@ -129,7 +130,7 @@ html_context = {
     "github_user": "ansys",
     "github_repo": "mechanical-stubs",
     "github_version": "main",
-    "doc_path": "doc/source",
+    "doc_path": "doc/source/autoapi",
 }
 html_theme_options = {
     "switcher": {
@@ -137,7 +138,7 @@ html_theme_options = {
         "version_match": switcher_version,
     },
     "check_switcher": False,
-    "github_url": "https://github.com/ansys/mechanical-stubs",
+    "github_url": "https://scripting.mechanical.docs.pyansys.com",
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "collapse_navigation": True,
