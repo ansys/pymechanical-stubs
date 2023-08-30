@@ -112,10 +112,6 @@ jobs:
           echo "Mechanical version is: $(python3 -c "from Ansys import __version__; print(__version__)")"
         id: version
 
-      - name: Create Sphinx Documentation
-        run: |
-          cd ./package/doc && make html
-
       - name: Cache docs build directory
         uses: actions/cache@v3
         with:
@@ -123,6 +119,10 @@ jobs:
           key: doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}-${{ github.sha }}
           restore-keys: |
             doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}
+
+      - name: Create Sphinx Documentation
+        run: |
+          cd ./package/doc && make html
 
       - name: Upload HTML Documentation
         uses: actions/upload-artifact@v3
