@@ -3,12 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Mechanical API Documentation
-============================
+Ansys Mechanical Scripting
+==========================
 
 This documentation lists the APIs used in Ansys Mechanical 2023R2.
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
 
    autoapi/index
