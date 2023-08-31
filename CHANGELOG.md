@@ -12,6 +12,7 @@ This document follows the conventions laid out in [Keep a CHANGELOG](https://kee
 ### Changed
 
 - toctree adjustments (#9)
+- Update landing page (#11)
 
 ### Fixed
 
