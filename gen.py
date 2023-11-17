@@ -229,10 +229,10 @@ def write_class(
     props = get_properties(class_type, doc, type_filter)
     # Write import statements for property types
     # prop.type
-    # prop_imports = list(get_prop_imports(props, 1))
-    # for import_statement in prop_imports:
-    #     buffer.write(f"{import_statement}\n")
-    # buffer.write("\n")
+    prop_imports = list(get_prop_imports(props, 1))
+    for import_statement in prop_imports:
+        buffer.write(f"{import_statement}\n")
+    buffer.write("\n")
     # Write each property within the class
     [write_property(buffer, prop, 1) for prop in props]
 
@@ -432,8 +432,6 @@ def python_type(prop_type):
     except:
         pass
 
-    # print(prop_type)
-
     if "System.Boolean" in prop_type:
         return "bool"
     elif "System.String" in prop_type:
@@ -442,6 +440,8 @@ def python_type(prop_type):
         return "float"
     elif "System.Int" in prop_type:
         return "int"
+    elif "System.Void" in prop_type:
+        return "None"
     elif "IReadOnlyList" in prop_type:
         if "[" in prop_type:
             get_class = prop_type[open_bracket+1:close_bracket].split('.')[-1]
@@ -462,6 +462,8 @@ def python_type(prop_type):
             return f'enumerate["{prop_type}"]'
     elif "System.Object" in prop_type:
         return f"object"
+    else:
+        return prop_type
     # elif "UInt32" in prop_type:
     #     print("unsigned int")
 
@@ -521,17 +523,17 @@ def get_methods(
     ]
     output = []
     for method in methods:
-        method_return_type = f'"{fix_str(method.ReturnType.ToString())}"'
+        method_return_type = f'{python_type(fix_str(method.ReturnType.ToString()))}'
         method_name = method.Name
         params = method.GetParameters()
 
         args = [
-            Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
+            Param(type=python_type(fix_str(param.ParameterType.ToString())), name=param.Name)
             for param in params
         ]
 
-        print("ARGS")
-        print(args)
+        # print("ARGS")
+        # print(args)
 
         full_method_name = method_name + f"({','.join([fix_str(arg.type) for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
@@ -557,7 +559,7 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
         first_arg = "cls"
     else:
         first_arg = "self"
-    args = [first_arg] + [f'{arg.name}: "{arg.type}"' for arg in method.args]
+    args = [first_arg] + [f'{arg.name}: {arg.type}' for arg in method.args]
     args = f"({', '.join(args)})"
     # def PropertyByAPIName(self, name: "System.String") -> "Ansys.ACT.Automation.Mechanical.Property":
     # """
