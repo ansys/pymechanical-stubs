@@ -1,6 +1,7 @@
 import logging
 import os
 import pathlib
+import pkgutil
 import shutil
 import sys
 
@@ -85,10 +86,45 @@ version_info = {major}, {minor}, patch
 # Format version
 __version__ = ".".join(map(str, version_info))
 """Mechanical Scripting version"""
+
+# Import all submodules
 '''
         )
+        f.close()
+
+
+    path = os.path.join("package", "src", "Ansys")
+
+    # Make Ansys/__init__.py
+    get_dirs = os.listdir(path)
+    with open(os.path.join(path, "__init__.py"), "w") as f:
+        for dir in get_dirs:
+            if os.path.isdir(os.path.join(path, dir)):
+                f.write(f"import Ansys.{dir} as {dir}\n")
+        f.close()
+
+    # Add import statements to init files
+    for (dirpath, dirnames, filenames) in os.walk(path):
+        for dir in dirnames:
+            full_path = os.path.join(dirpath, dir)
+            init_path = os.path.join(full_path, '__init__.py')
+            if "__pycache__" not in init_path:
+                # Make missing init files
+                if not os.path.isfile(init_path):
+                    print(f"{init_path} does not exist")
+                    module_list = []
+                    import_str = full_path.replace(os.sep, '.').replace("package.src.", '')
+                    for loader, module_name, is_pkg in pkgutil.walk_packages([os.path.dirname(init_path)]):
+                        module_list.append(module_name)
+
+                    with open(init_path, "w") as f:
+                        for module in module_list:
+                            f.write(f"import {import_str}.{module} as {module}\n")
+                        f.close()
     print("Done processing all mechanical stubs.")
 
+
+# replace the properties with import statements
 
 def minify():
     pass
