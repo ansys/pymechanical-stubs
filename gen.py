@@ -227,24 +227,30 @@ def write_class(
 
     # Generate a list of each of the properties
     props = get_properties(class_type, doc, type_filter)
-    # Write import statements for property types
-    # prop.type
-    prop_imports = list(get_prop_imports(props, 1))
-    for import_statement in prop_imports:
-        buffer.write(f"{import_statement}\n")
+    methods = [
+        prop
+        for prop in class_type.GetMethods()
+        if (type_filter is None or type_filter(prop))
+    ]
+
+    # Write import statements properties and methods
+    import_statements = get_imports(props, methods, 1)
+    for statement in import_statements:
+        buffer.write(f"{statement}\n")
     buffer.write("\n")
-    # Write each property within the class
-    [write_property(buffer, prop, 1) for prop in props]
 
     # Generate a list of methods
     methods = get_methods(class_type, doc, type_filter)
+
+    # Write each property within the class
+    [write_property(buffer, prop, 1) for prop in props]
     # Write each method inside the class
     [write_method(buffer, method, 1) for method in methods]
 
     # TODO - constructor
 
-    # if len(props) == 0 and len(methods) == 0:
-    #     buffer.write("    pass\n")
+    if len(props) == 0 and len(methods) == 0:
+        buffer.write("    pass\n")
     buffer.write("\n")
 
 
@@ -320,27 +326,57 @@ def get_properties(
     return output
 
 
-def get_prop_imports(props, indent_level: int = 1) -> None:
-    prop_types_list = []
-    type_dict = {}
+def dict_import_helper(check_str, import_dict):
+    """Add import to import_dict"""
+    if 'Ansys' in check_str:
+        # Remove double quotes
+        check_str = check_str.replace('"', '')
+
+        # Only get the phrase containing Ansys
+        # Ex: Ansys.ACT.Automation.Mechanical.CrossSections
+        # ]]
+        if "]" in check_str:
+            index = check_str.index("Ansys")
+            check_str = check_str[index:-1]
+
+        beginning_str = ".".join(check_str.split(".")[1:-1])
+        if beginning_str not in import_dict:
+            import_dict[beginning_str] = set()
+        end_str = check_str.split(".")[-1]
+        import_dict[beginning_str].add(end_str)
+
+    return import_dict
+
+
+
+def get_imports(props, methods, indent_level: int = 1) -> None:
+    """Create import statements for properties and methods."""
+    import_list = []
+    import_dict = {}
     indent = "    " * indent_level
 
+    # Get import statements for property types
     for prop in props:
-        if '"Ansys' in prop.type:
-            beginning_str = ".".join(prop.type.split(".")[1:-1]) # .replace('"', '')
-            if beginning_str not in type_dict:
-                type_dict[beginning_str] = set()
-            end_str = prop.type.split(".")[-1][0:-1]
-            type_dict[beginning_str].add(end_str)
+        import_dict = dict_import_helper(prop.type, import_dict)
 
-    for key, value in type_dict.items():
+    # Get import statements for method return types and parameter types
+    for method in methods:
+        return_type = fix_str(method.ReturnType.ToString())
+        import_dict = dict_import_helper(return_type, import_dict)
+
+        params = fix_str(method.GetParameters())
+        for param in params:
+            import_dict = dict_import_helper(param.ParameterType.ToString(), import_dict)
+
+    # Append all import statements to list
+    for key, value in import_dict.items():
         value_list = list(value)
         value_str = ", ".join(value_list).replace('"', '')
         key = key.replace('"', '')
 
-        prop_types_list.append(f"{indent}from {key} import {value_str}")
+        import_list.append(f"{indent}from {key} import {value_str}")
 
-    return set(prop_types_list)
+    return list(set(import_list))
 
 
 # Helper for write_class()
@@ -364,12 +400,7 @@ def write_property(
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
 
-        # if '"Ansys' not in prop.type:
-        print(f'"Ansys not in {prop.type}')
-        # print('IN PROP TYPE')
-        # end_str = prop.type.split(".")[-1].replace('"', '')
-        # buffer.write(f"{indent}def {prop.name}(cls) -> {end_str}:\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> {python_type(prop.type)}:\n")
+        buffer.write(f"{indent}def {prop.name}(cls) -> {python_type(prop.name, prop.type)}:\n")
         indent = "    " * (1 + indent_level)
 
         write_docstring(buffer, prop.doc, indent_level + 1)
@@ -381,8 +412,6 @@ def write_property(
             buffer.write(f"{indent}return {prop.value}\n")
         else:
             buffer.write(f"{indent}return None\n")
-        # else:
-            # print(f"ignoring {prop.type}")
     else:
         # def SetLocation(self, newvalue: typing.Optional["Ansys.ACT.Interfaces.Common.ISelectionInfo"]) -> None:
         #     """
@@ -395,7 +424,7 @@ def write_property(
         if prop.setter and not prop.getter:
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: {python_type(prop.type)}) -> None:\n"
+                f"{indent}def {prop.name}(self, newvalue: {python_type(prop.name, prop.type)}) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
             write_docstring(buffer, prop.doc, indent_level + 1)
@@ -406,16 +435,9 @@ def write_property(
         else:
             assert prop.getter
 
-            # if '"Ansys' not in prop.type:
-            # print(f'"Ansys not in {prop.type}')
             buffer.write(f"{indent}@property\n")
-            # if "System.Double[]" in prop.type:
-            #     prop.type = prop.type.replace("System.Double[]", "System.Double")
-            # buffer.write(
-            #     f"{indent}def {prop.name}(self) -> typing.Optional[{prop.type}]:\n"
-            # )
             buffer.write(
-                f"{indent}def {prop.name}(self) -> {python_type(prop.type)}:\n"
+                f"{indent}def {prop.name}(self) -> {python_type(prop.name, prop.type)}:\n"
             )
 
             indent = "    " * (1 + indent_level)
@@ -424,7 +446,7 @@ def write_property(
     buffer.write("\n")
 
 
-def python_type(prop_type):
+def python_type(prop_name, prop_type):
     # "System.Collections.Generic.IEnumerable[Ansys.ACT.Automation.Mechanical.Analysis]"
     try:
         open_bracket = prop_type.index("[")
@@ -444,26 +466,30 @@ def python_type(prop_type):
         return "None"
     elif "IReadOnlyList" in prop_type:
         if "[" in prop_type:
-            get_class = prop_type[open_bracket+1:close_bracket].split('.')[-1]
-            return f'typing.Tuple["{get_class}"]'
+            prop_type = prop_type[open_bracket+1:close_bracket].split('.')[-1]
+            return f'typing.Tuple["{prop_type}"]'
         else:
             return f'typing.Tuple["{prop_type}"]'
     elif "IList" in prop_type:
         if "[" in prop_type:
-            get_class = prop_type[open_bracket+1:close_bracket].split('.')[-1]
-            return f'typing.List["{get_class}"]'
+            prop_type = prop_type[open_bracket+1:close_bracket].split('.')[-1]
+            return f'typing.List["{prop_type}"]'
         else:
             return f'typing.List["{prop_type}"]'
     elif "IEnumerable" in prop_type:
         if "[" in prop_type:
-            get_class = prop_type[open_bracket+1:close_bracket].split('.')[-1]
-            return f'enumerate["{get_class}"]'
+            prop_type = prop_type[open_bracket+1:close_bracket].split('.')[-1]
+            return f'enumerate["{prop_type}"]'
         else:
             return f'enumerate["{prop_type}"]'
     elif "System.Object" in prop_type:
         return f"object"
     else:
-        return prop_type
+        class_name = prop_type.replace('"', '').split('.')[-1]
+        if prop_name == class_name:
+            return prop_type
+        else:
+            return f'"{class_name}"'
     # elif "UInt32" in prop_type:
     #     print("unsigned int")
 
@@ -523,17 +549,18 @@ def get_methods(
     ]
     output = []
     for method in methods:
-        method_return_type = f'{python_type(fix_str(method.ReturnType.ToString()))}'
         method_name = method.Name
+        method_return_type = f'{python_type(method_name, fix_str(method.ReturnType.ToString()))}'
         params = method.GetParameters()
 
-        args = [
-            Param(type=python_type(fix_str(param.ParameterType.ToString())), name=param.Name)
-            for param in params
-        ]
+        args = []
 
-        # print("ARGS")
-        # print(args)
+        for param in params:
+            param_type = python_type(method_name, fix_str(param.ParameterType.ToString()))
+            if "Ansys." in param_type:
+                args.append(Param(type=f'"{param_type}"', name=param.Name))
+            else:
+                args.append(Param(type=param_type, name=param.Name))
 
         full_method_name = method_name + f"({','.join([fix_str(arg.type) for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
@@ -596,3 +623,11 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
 #     """Returns True if object is Namespace: Module"""
 #     if isinstance(something, type(System)):
 #         return True
+
+
+
+# To do:
+# property return types
+# method arg types whenever it's Ansys.xyz.abc -> have to put it in quotes
+#   also have to do the import statements for methods - maybe do that at the
+#   same time as the property import statements
