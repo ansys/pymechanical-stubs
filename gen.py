@@ -328,21 +328,40 @@ def get_properties(
 
 def dict_import_helper(check_str, import_dict):
     """Add import to import_dict"""
-    if 'Ansys' in check_str:
+    if "Ansys" in check_str:
         # Remove double quotes
         check_str = check_str.replace('"', '')
 
         # Only get the phrase containing Ansys
         # Ex: Ansys.ACT.Automation.Mechanical.CrossSections
-        # ]]
         if "]" in check_str:
-            index = check_str.index("Ansys")
-            check_str = check_str[index:-1]
+            ansys_index = check_str.index("Ansys")
+            check_str = check_str[ansys_index:].replace("]", "")
 
-        beginning_str = ".".join(check_str.split(".")[1:-1])
-        if beginning_str not in import_dict:
-            import_dict[beginning_str] = set()
-        end_str = check_str.split(".")[-1]
+            if "," in check_str:
+                str_list = check_str.split(",")
+                for string in str_list:
+                    if "Ansys" in string:
+                        import_dict = manipulate_str(string, import_dict)
+        else:
+            import_dict = manipulate_str(check_str, import_dict)
+
+    return import_dict
+
+
+def manipulate_str(check_str, import_dict):
+    beginning_str = ".".join(check_str.split(".")[1:-1])
+    if beginning_str not in import_dict:
+        import_dict[beginning_str] = set()
+    end_str = check_str.split(".")[-1]
+
+    if "+" in end_str:
+        sep_str = end_str.split("+")
+        for item in sep_str:
+            import_dict[beginning_str].add(item)
+    elif "]" in end_str:
+        end_str = end_str.replace("]", "")
+    else:
         import_dict[beginning_str].add(end_str)
 
     return import_dict
@@ -359,6 +378,10 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
     for prop in props:
         import_dict = dict_import_helper(prop.type, import_dict)
 
+    for key, value in import_dict.items():
+        if "IDataModelObject" in key:
+            print(key)
+
     # Get import statements for method return types and parameter types
     for method in methods:
         return_type = fix_str(method.ReturnType.ToString())
@@ -370,6 +393,8 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
 
     # Append all import statements to list
     for key, value in import_dict.items():
+        if "IDataModelObject" in key:
+            print(key)
         value_list = list(value)
         value_str = ", ".join(value_list).replace('"', '')
         key = key.replace('"', '')
@@ -377,6 +402,46 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
         import_list.append(f"{indent}from {key} import {value_str}")
 
     return list(set(import_list))
+
+
+def python_type(prop_name, prop_type):
+    type_dict = {"System.Boolean": "bool", "System.String": "str", "System.Double": "float",
+                 "System.Int": "int", "System.Void": "None", "System.Collections.Generic.IEnumerable": "enumerate",
+                 "System.Object": "object", "System.Collections.Generic.KeyValuePair": "dict",
+                 "System.Collections.Generic.IDictionary": "dict", "System.Collections.Generic.IReadOnlyList": "tuple",
+                 "System.Collections.Generic.IList": "list"}
+
+    # Missing types: "UInt32"
+    for key,value in type_dict.items():
+        if key in prop_type:
+            prop_type = prop_type.replace(key, value)
+
+    prop_type = prop_type.replace('"', '')
+    if "Ansys" in prop_type:
+        ans_index = prop_type.index("Ansys")
+        if ans_index == 0:
+            module = prop_type.split('.')
+            joined_module = ".".join(module[1:])
+            class_name = module[-1]
+            if prop_name == class_name:
+                return f'"{joined_module}"'
+            else:
+                return f'"{class_name}"'
+        else:
+            bracket_index = prop_type.index("]")
+            module = prop_type[ans_index:bracket_index].split('.')
+            joined_module = ".".join(module[1:])
+            class_name = module[-1]
+
+            if prop_name == class_name:
+                return prop_type.replace(".".join(module), f'"{joined_module}"')
+            else:
+                return prop_type.replace(".".join(module), f'"{class_name}"')
+    else:
+        return prop_type
+
+    # @property
+    # def Environments(self) -> typing.Iterable["Analysis"]:
 
 
 # Helper for write_class()
@@ -444,57 +509,6 @@ def write_property(
             write_docstring(buffer, prop.doc, indent_level + 1)
             buffer.write(f"{indent}return None\n")
     buffer.write("\n")
-
-
-def python_type(prop_name, prop_type):
-    # "System.Collections.Generic.IEnumerable[Ansys.ACT.Automation.Mechanical.Analysis]"
-    try:
-        open_bracket = prop_type.index("[")
-        close_bracket = prop_type.index("]")
-    except:
-        pass
-
-    if "System.Boolean" in prop_type:
-        return "bool"
-    elif "System.String" in prop_type:
-        return "str"
-    elif "System.Double" in prop_type:
-        return "float"
-    elif "System.Int" in prop_type:
-        return "int"
-    elif "System.Void" in prop_type:
-        return "None"
-    elif "IReadOnlyList" in prop_type:
-        if "[" in prop_type:
-            prop_type = prop_type[open_bracket+1:close_bracket].split('.')[-1]
-            return f'typing.Tuple["{prop_type}"]'
-        else:
-            return f'typing.Tuple["{prop_type}"]'
-    elif "IList" in prop_type:
-        if "[" in prop_type:
-            prop_type = prop_type[open_bracket+1:close_bracket].split('.')[-1]
-            return f'typing.List["{prop_type}"]'
-        else:
-            return f'typing.List["{prop_type}"]'
-    elif "IEnumerable" in prop_type:
-        if "[" in prop_type:
-            prop_type = prop_type[open_bracket+1:close_bracket].split('.')[-1]
-            return f'enumerate["{prop_type}"]'
-        else:
-            return f'enumerate["{prop_type}"]'
-    elif "System.Object" in prop_type:
-        return f"object"
-    else:
-        class_name = prop_type.replace('"', '').split('.')[-1]
-        if prop_name == class_name:
-            return prop_type
-        else:
-            return f'"{class_name}"'
-    # elif "UInt32" in prop_type:
-    #     print("unsigned int")
-
-    # @property
-    # def Environments(self) -> typing.Iterable["Analysis"]:
 
 
 # Helper for fix_str()

@@ -111,7 +111,7 @@ __version__ = ".".join(map(str, version_info))
             if "__pycache__" not in init_path:
                 # Make missing init files
                 if not os.path.isfile(init_path):
-                    print(f"{init_path} does not exist")
+                    # print(f"{init_path} does not exist")
                     module_list = []
                     import_str = full_path.replace(os.sep, '.').replace("package.src.", '')
                     for loader, module_name, is_pkg in pkgutil.walk_packages([os.path.dirname(init_path)]):
