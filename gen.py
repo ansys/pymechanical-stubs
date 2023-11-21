@@ -405,13 +405,13 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
 
 
 def python_type(prop_name, prop_type):
-    type_dict = {"System.Boolean": "bool", "System.String": "str", "System.Double": "float",
+    type_dict = {"System.Boolean": "bool", "System.String": "str", "System.Double": "float", "System.Int32": "int",
                  "System.Int": "int", "System.Void": "None", "System.Collections.Generic.IEnumerable": "enumerate",
                  "System.Object": "object", "System.Collections.Generic.KeyValuePair": "dict",
                  "System.Collections.Generic.IDictionary": "dict", "System.Collections.Generic.IReadOnlyList": "tuple",
-                 "System.Collections.Generic.IList": "list"}
+                 "System.Collections.Generic.IList": "list", "System.UInt32": "int"}
 
-    # Missing types: "UInt32"
+    # Should System.UInt32 be int, or int + 2**32?
     for key,value in type_dict.items():
         if key in prop_type:
             prop_type = prop_type.replace(key, value)
