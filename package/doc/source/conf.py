@@ -49,7 +49,7 @@ extensions = [
 exclude_patterns = []
 
 # Configuration for Sphinx autoapi
-autoapi_dirs = ["../../src/Ansys"]
+autoapi_dirs = ["../../src/ansys/mechanical/stubs"]
 autoapi_type = "python"
 autoapi_options = [
     "members",

@@ -378,10 +378,6 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
     for prop in props:
         import_dict = dict_import_helper(prop.type, import_dict)
 
-    for key, value in import_dict.items():
-        if "IDataModelObject" in key:
-            print(key)
-
     # Get import statements for method return types and parameter types
     for method in methods:
         return_type = fix_str(method.ReturnType.ToString())
@@ -393,13 +389,11 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
 
     # Append all import statements to list
     for key, value in import_dict.items():
-        if "IDataModelObject" in key:
-            print(key)
         value_list = list(value)
         value_str = ", ".join(value_list).replace('"', '')
         key = key.replace('"', '')
 
-        import_list.append(f"{indent}from {key} import {value_str}")
+        import_list.append(f"{indent}from ansys.mechanical.stubs.Ansys.{key} import {value_str}")
 
     return list(set(import_list))
 
