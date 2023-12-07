@@ -35,7 +35,7 @@ dependencies = [
 ]
 
 [tool.flit.module]
-name = "Ansys"
+name = "ansys/mechanical/stubs"
 
 [project.urls]
 Source = "https://github.com/pyansys/mechanical-stubs/"

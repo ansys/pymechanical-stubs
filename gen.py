@@ -133,6 +133,28 @@ def write_enum(
     buffer.write("\n")
 
 
+# Helper for fix_str()
+def remove_backtick(input_str):
+    backtick = input_str.index("`")
+    new_str = input_str[0:backtick] + input_str[backtick+2:]
+
+    if "`" in new_str:
+        return remove_backtick(new_str)
+    else:
+        return new_str
+
+
+# Helper for get_properties() and write_properties
+def fix_str(input_str):
+    if "+" in input_str:
+        input_str = input_str.replace("+", ".")
+    if "[]" in input_str:
+        input_str = input_str.replace("[]", "")
+    if "`" in input_str:
+        input_str = remove_backtick(input_str)
+    return input_str
+
+
 @dataclass
 class Param:
     type: str
@@ -159,13 +181,6 @@ class Property:
     value: typing.Optional[typing.Any]  # may be used if static
 
 
-def fix_str(prop_str):
-    backtick = prop_str.index("`")
-    open_bracket = prop_str.index("[")
-    new_str = prop_str[0:backtick] + prop_str[open_bracket:]
-    return new_str.replace("+", ".")
-
-
 def get_properties(
     class_type: typing.Any,
     doc: typing.Dict[str, DocMember],
@@ -180,11 +195,7 @@ def get_properties(
     ]
     output = []
     for prop in props:
-        prop_type = f'"{prop.PropertyType.ToString()}"'
-
-        if "`" in prop_type:
-            prop_type = fix_str(prop_type)
-
+        prop_type = f'"{fix_str(prop.PropertyType.ToString())}"'
         prop_name = prop.Name
         declaring_type_name = prop.DeclaringType.ToString()
         method_doc_key = f"P:{declaring_type_name}.{prop_name}"
@@ -242,7 +253,7 @@ def write_property(
         write_docstring(buffer, prop.doc, indent_level + 1)
 
         if prop.value:
-            if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
+            if (type(prop.value) is not type(1)):
                 prop.value = fix_str(f"{prop.value}")
 
             buffer.write(f"{indent}return {prop.value}\n")
@@ -303,14 +314,14 @@ def get_methods(
     ]
     output = []
     for method in methods:
-        method_return_type = f'"{method.ReturnType.ToString()}"'
+        method_return_type = f'"{fix_str(method.ReturnType.ToString())}"'
         method_name = method.Name
         params = method.GetParameters()
         args = [
-            Param(type=param.ParameterType.ToString(), name=param.Name)
+            Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
             for param in params
         ]
-        full_method_name = method_name + f"({','.join([arg.type for arg in args])})"
+        full_method_name = method_name + f"({','.join([fix_str(arg.type) for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
         method_doc_key = f"M:{declaring_type_name}.{full_method_name}"
         method_doc = doc.get(method_doc_key, None)

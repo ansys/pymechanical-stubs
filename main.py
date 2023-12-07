@@ -32,7 +32,7 @@ def resolve():
 
 resolve()
 
-outdir = pathlib.Path(__file__).parent / "package" / "src"
+outdir = pathlib.Path(__file__).parent / "package" / "src" / "ansys" / "mechanical" / "stubs"
 
 logging.getLogger().setLevel(logging.INFO)
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -71,7 +71,7 @@ def make():
     for assembly in ASSEMBLIES:
         gen.make(outdir, assembly, type_filter=is_type_published)
 
-    with open(os.path.join(outdir, "Ansys", "__init__.py"), "w") as f:
+    with open(os.path.join(outdir, "__init__.py"), "w") as f:
         f.write(
             f'''try:
     import importlib.metadata as importlib_metadata
@@ -85,8 +85,41 @@ version_info = {major}, {minor}, patch
 # Format version
 __version__ = ".".join(map(str, version_info))
 """Mechanical Scripting version"""
+
+from .Ansys import *
 '''
         )
+
+    path = os.path.join("package", "src", "ansys", "mechanical", "stubs", "Ansys")
+
+    # Make Ansys/__init__.py
+    get_dirs = os.listdir(path)
+    with open(os.path.join(path, "__init__.py"), "w") as f:
+        for dir in get_dirs:
+            if os.path.isdir(os.path.join(path, dir)):
+                f.write(f"import ansys.mechanical.stubs.Ansys.{dir} as {dir}\n")
+        f.close()
+
+    # Add import statements to init files
+    for (dirpath, dirnames, filenames) in os.walk(path):
+        for dir in dirnames:
+            full_path = os.path.join(dirpath, dir)
+            init_path = os.path.join(full_path, '__init__.py')
+
+            if "__pycache__" not in init_path:
+                module_list = []
+                import_str = full_path.replace(os.sep, '.').replace("package.src.", '')
+                [ module_list.append(os.path.basename(dir.path)) for dir in os.scandir(os.path.dirname(init_path)) ]
+
+                # Make missing init files
+                # if not os.path.isfile(init_path):
+                with open(init_path, "a") as f:
+                    for module in module_list:
+                        if module != "__init__.py":
+                            f.write(f"import {import_str}.{module} as {module}\n")
+                    f.close()
+
+
     print("Done processing all mechanical stubs.")
 
 
