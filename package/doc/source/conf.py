@@ -6,6 +6,7 @@
 import os
 from datetime import datetime
 
+from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     ansys_logo_white,
@@ -16,7 +17,6 @@ from ansys_sphinx_theme import (
     watermark,
 )
 from sphinx.builders.latex import LaTeXBuilder
-from ansys.mechanical.stubs import __version__
 
 LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 
