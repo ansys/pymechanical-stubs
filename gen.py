@@ -186,7 +186,7 @@ def write_enum(
 # Helper for write_enum() and write_class()
 def write_docstring(
     buffer: typing.TextIO, doc_member: typing.Optional[DocMember], indent_level=1
-) -> None:    
+) -> None:
     """Write docstring of class or enum with the given indentation level, if available."""
     if doc_member is None:
         return
@@ -223,7 +223,7 @@ def write_class(
     # Write the class
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
-    
+
     if class_doc is None:
         # print(namespace)
         logging.debug(f"    writing class {class_type.Name}")
@@ -421,7 +421,7 @@ def python_type(prop_name, prop_type):
     for key,value in type_dict.items():
         if key in prop_type:
             prop_type = prop_type.replace(key, value)
-            
+
     prop_type = prop_type.replace('"', '')
     if "Ansys" in prop_type:
         ans_index = prop_type.index("Ansys")
@@ -477,7 +477,7 @@ def write_property(
         ), "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-        
+
         buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop.type}]:\n")
         # buffer.write(f"{indent}def {prop.name}(cls) -> {python_type(prop.name, prop.type)}:\n")
         indent = "    " * (1 + indent_level)
