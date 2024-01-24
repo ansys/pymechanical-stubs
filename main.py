@@ -90,7 +90,7 @@ from .Ansys import *
 '''
         )
         f.close()
-        
+
     path = os.path.join("package", "src", "ansys", "mechanical", "stubs", "Ansys")
 
     # Make src/ansys/mechanical/stubs/Ansys/__init__.py
