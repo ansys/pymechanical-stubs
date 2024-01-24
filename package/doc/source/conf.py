@@ -6,7 +6,7 @@
 import os
 from datetime import datetime
 
-from Ansys import __version__
+from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     ansys_logo_white,
@@ -49,7 +49,7 @@ extensions = [
 exclude_patterns = []
 
 # Configuration for Sphinx autoapi
-autoapi_dirs = ["../../src/Ansys"]
+autoapi_dirs = ["../../src/ansys/mechanical/stubs/Ansys"]
 autoapi_type = "python"
 autoapi_options = [
     "members",
@@ -137,7 +137,7 @@ html_theme_options = {
         "version_match": switcher_version,
     },
     "check_switcher": False,
-    "github_url": "https://github.com/ansys/mechanical-stubs",
+    "github_url": "https://github.com/ansys-internal/mechanical-stubs",
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "collapse_navigation": True,
