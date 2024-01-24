@@ -36,14 +36,39 @@ jobs:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
   doc-style:
-     name: Documentation Style Check
-     runs-on: ubuntu-latest
-     steps:
-       - name: PyAnsys documentation style checks
-         uses: ansys/actions/doc-style@v4
-         with:
-           vale-config: package/doc/.vale.ini
-           token: ${{ secrets.GITHUB_TOKEN }}
+    name: Documentation Style Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: PyAnsys documentation style checks
+        uses: ansys/actions/doc-style@v4
+        with:
+          vale-config: package/doc/.vale.ini
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  smoke-tests:
+    name: Build and Smoke tests
+    runs-on: ${{ matrix.os }}
+    needs: [style, doc-build]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.9', '3.10', '3.11', '3.12']
+        should-release:
+          - ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags') }}
+        exclude:
+          - should-release: false
+            os: macos-latest
+    steps:
+      - name: Install package
+        run: |
+          cd package
+      - name: Build wheelhouse and perform smoke test
+        uses: ansys/actions/build-wheelhouse@v4
+        with:
+          library-name: ${{ env.PACKAGE_NAME }}
+          operating-system: ${{ matrix.os }}
+          python-version: ${{ matrix.python-version }}
 
   doc-build:
     name: Create docstrings
@@ -122,7 +147,7 @@ jobs:
 
       - name: Create Sphinx Documentation
         run: |
-          cd ./package/doc && make html
+          make -C ./package/doc html
 
       - name: Generate needed files for deploying pages
         run: |
