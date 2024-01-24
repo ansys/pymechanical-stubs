@@ -6,7 +6,7 @@
 import os
 from datetime import datetime
 
-from Ansys import __version__
+from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     ansys_logo_white,
