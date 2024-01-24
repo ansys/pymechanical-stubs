@@ -38,6 +38,6 @@ dependencies = [
 name = "ansys.mechanical.stubs"
 
 [project.urls]
-Source = "https://github.com/pyansys/mechanical-stubs/"
-Tracker = "https://github.com/pyansys/mechanical-stubs/issues"
-Homepage = "https://github.com/pyansys/mechanical-stubs"
+Source = "https://github.com/ansys-internal/mechanical-stubs/"
+Tracker = "https://github.com/ansys-internal/mechanical-stubs/issues"
+Homepage = "https://github.com/ansys-internal/mechanical-stubs"

@@ -13,7 +13,7 @@ env:
   PYMECHANICAL_PORT: 10000  # default won't work on GitHub runners
   PYMECHANICAL_START_INSTANCE: FALSE
   DOCKER_PACKAGE: ghcr.io/ansys/mechanical
-  DOCKER_IMAGE_VERSION: 23.1.0
+  DOCKER_IMAGE_VERSION: 23.2.0
   DOCKER_MECH_CONTAINER_NAME: mechanical
   MAIN_PYTHON_VERSION: '3.10'
   PACKAGE_NAME: ansys-mechanical-stubs
