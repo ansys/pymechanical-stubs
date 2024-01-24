@@ -8,7 +8,7 @@ name = "ansys-mechanical-stubs"
 version = "0"
 description = "PyMechanical scripting API stubs."
 readme = "README.rst"
-requires-python = ">=3.8,<4"
+requires-python = ">=3.9,<4"
 license = {file = "LICENSE"}
 authors = [
     {name = "ANSYS, Inc.", email = "pyansys.support@ansys.com"},
@@ -35,7 +35,7 @@ dependencies = [
 ]
 
 [tool.flit.module]
-name = "Ansys"
+name = "ansys.mechanical.stubs"
 
 [project.urls]
 Source = "https://github.com/pyansys/mechanical-stubs/"
