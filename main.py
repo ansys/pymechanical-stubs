@@ -108,21 +108,20 @@ from .Ansys import *
         for dir in dirnames:
             full_path = os.path.join(dirpath, dir)
             init_path = os.path.join(full_path, '__init__.py')
-            if "__pycache__" not in init_path:
-                # Make missing init files
-                if not os.path.isfile(init_path):
-                    # print(f"{init_path} does not exist")
-                    module_list = []
-                    import_str = full_path.replace(os.sep, '.').replace("package.src.", '')
-                    # for loader, module_name, is_pkg in pkgutil.walk_packages([os.path.dirname(init_path)]):
-                    #     module_list.append(module_name)
-                    # [module_list.append(x[1]) for x in os.walk(os.path.dirname(init_path))]
-                    [ module_list.append(os.path.basename(dir.path)) for dir in os.scandir(os.path.dirname(init_path)) ]
 
-                    with open(init_path, "w") as f:
-                        for module in module_list:
+            if "__pycache__" not in init_path:
+                module_list = []
+                import_str = full_path.replace(os.sep, '.').replace("package.src.", '')
+                [ module_list.append(os.path.basename(dir.path)) for dir in os.scandir(os.path.dirname(init_path)) ]
+
+                # Make missing init files
+                # if not os.path.isfile(init_path):
+                with open(init_path, "a") as f:
+                    for module in module_list:
+                        if module != "__init__.py":
                             f.write(f"import {import_str}.{module} as {module}\n")
-                        f.close()
+                    f.close()
+
     print("Done processing all mechanical stubs.")
 
 

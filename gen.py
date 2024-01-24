@@ -78,6 +78,9 @@ def load_doc(xml_path: str) -> ET:
     root = tree.getroot()
     members = root.find("members")
     doc_members = [DocMember(member) for member in members]
+    # for member in doc_members:
+    #     if "NamedSelectionCriterion" in member.name:
+    #         print(member.name)
     output = {doc_member.name: doc_member for doc_member in doc_members}
     return output
 
@@ -183,7 +186,7 @@ def write_enum(
 # Helper for write_enum() and write_class()
 def write_docstring(
     buffer: typing.TextIO, doc_member: typing.Optional[DocMember], indent_level=1
-) -> None:
+) -> None:    
     """Write docstring of class or enum with the given indentation level, if available."""
     if doc_member is None:
         return
@@ -217,27 +220,35 @@ def write_class(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    # logging.debug(f"    writing class {class_type.Name}")
     # Write the class
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
+    
+    if class_doc is None:
+        # print(namespace)
+        logging.debug(f"    writing class {class_type.Name}")
+        for key in doc.keys():
+            if f"M:{namespace}.{class_type.Name}.#ctor" in key:
+                print(key)
+                class_doc = doc.get(key, None)
+
     # Write the docstring for the class
     write_docstring(buffer, class_doc, 1)
     buffer.write("\n")
 
     # Generate a list of each of the properties
     props = get_properties(class_type, doc, type_filter)
-    methods = [
-        prop
-        for prop in class_type.GetMethods()
-        if (type_filter is None or type_filter(prop))
-    ]
+    # methods = [
+    #     prop
+    #     for prop in class_type.GetMethods()
+    #     if (type_filter is None or type_filter(prop))
+    # ]
 
-    # Write import statements properties and methods
-    import_statements = get_imports(props, methods, 1)
-    for statement in import_statements:
-        buffer.write(f"{statement}\n")
-    buffer.write("\n")
+    # # Write import statements properties and methods
+    # import_statements = get_imports(props, methods, 1)
+    # for statement in import_statements:
+    #     buffer.write(f"{statement}\n")
+    # buffer.write("\n")
 
     # Generate a list of methods
     methods = get_methods(class_type, doc, type_filter)
@@ -401,15 +412,16 @@ def get_imports(props, methods, indent_level: int = 1) -> None:
 def python_type(prop_name, prop_type):
     type_dict = {"System.Boolean": "bool", "System.String": "str", "System.Double": "float", "System.Int32": "int",
                  "System.Int": "int", "System.Void": "None", "System.Collections.Generic.IEnumerable": "enumerate",
+                 "System.Collections.IEnumerable": "enumerate",
                  "System.Object": "object", "System.Collections.Generic.KeyValuePair": "dict",
                  "System.Collections.Generic.IDictionary": "dict", "System.Collections.Generic.IReadOnlyList": "tuple",
-                 "System.Collections.Generic.IList": "list", "System.UInt32": "int"}
+                 "System.Collections.Generic.IList": "list", "System.UInt32": "int", "System.Type": "type"}
 
     # Should System.UInt32 be int, or int + 2**32?
     for key,value in type_dict.items():
         if key in prop_type:
             prop_type = prop_type.replace(key, value)
-
+            
     prop_type = prop_type.replace('"', '')
     if "Ansys" in prop_type:
         ans_index = prop_type.index("Ansys")
@@ -428,11 +440,18 @@ def python_type(prop_name, prop_type):
             class_name = module[-1]
 
             if prop_name == class_name:
-                return prop_type.replace(".".join(module), f'"{joined_module}"')
+                return_val = prop_type.replace(".".join(module), f'"{joined_module}"')
+                return f"typing.Optional[{return_val}]"
             else:
-                return prop_type.replace(".".join(module), f'"{class_name}"')
+                return_val = prop_type.replace(".".join(module), f'"{class_name}"')
+                return f"typing.Optional[{return_val}]"
     else:
-        return prop_type
+        if "ChildrenType" in prop_type:
+            prop_type = prop_type.replace('ChildrenType', '"ChildrenType"')
+        if '"' not in prop_type:
+            return f'typing.Optional["{prop_type}"]'
+        else:
+            return f"typing.Optional[{prop_type}]"
 
     # @property
     # def Environments(self) -> typing.Iterable["Analysis"]:
@@ -458,8 +477,9 @@ def write_property(
         ), "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-
-        buffer.write(f"{indent}def {prop.name}(cls) -> {python_type(prop.name, prop.type)}:\n")
+        
+        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop.type}]:\n")
+        # buffer.write(f"{indent}def {prop.name}(cls) -> {python_type(prop.name, prop.type)}:\n")
         indent = "    " * (1 + indent_level)
 
         write_docstring(buffer, prop.doc, indent_level + 1)
@@ -483,8 +503,11 @@ def write_property(
         if prop.setter and not prop.getter:
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: {python_type(prop.name, prop.type)}) -> None:\n"
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop.type}]) -> None:\n"
             )
+            # buffer.write(
+            #     f"{indent}def {prop.name}(self, newvalue: {python_type(prop.name, prop.type)}) -> None:\n"
+            # )
             indent = "    " * (1 + indent_level)
             write_docstring(buffer, prop.doc, indent_level + 1)
             buffer.write(f"{indent}return None\n")
@@ -496,8 +519,11 @@ def write_property(
 
             buffer.write(f"{indent}@property\n")
             buffer.write(
-                f"{indent}def {prop.name}(self) -> {python_type(prop.name, prop.type)}:\n"
+                f"{indent}def {prop.name}(self) -> typing.Optional[{prop.type}]:\n"
             )
+            # buffer.write(
+            #     f"{indent}def {prop.name}(self) -> {python_type(prop.name, prop.type)}:\n"
+            # )
 
             indent = "    " * (1 + indent_level)
             write_docstring(buffer, prop.doc, indent_level + 1)
@@ -558,17 +584,22 @@ def get_methods(
     output = []
     for method in methods:
         method_name = method.Name
-        method_return_type = f'{python_type(method_name, fix_str(method.ReturnType.ToString()))}'
+        method_return_type = f'"{fix_str(method.ReturnType.ToString())}"'
+        # method_return_type = f'{python_type(method_name, fix_str(method.ReturnType.ToString()))}'
         params = method.GetParameters()
+        args = [
+            Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
+            for param in params
+        ]
 
-        args = []
+        # args = []
 
-        for param in params:
-            param_type = python_type(method_name, fix_str(param.ParameterType.ToString()))
-            if "Ansys." in param_type:
-                args.append(Param(type=f'"{param_type}"', name=param.Name))
-            else:
-                args.append(Param(type=param_type, name=param.Name))
+        # for param in params:
+        #     param_type = python_type(method_name, fix_str(param.ParameterType.ToString()))
+        #     if "Ansys." in param_type:
+        #         args.append(Param(type=f'"{param_type}"', name=param.Name))
+        #     else:
+        #         args.append(Param(type=param_type, name=param.Name))
 
         full_method_name = method_name + f"({','.join([fix_str(arg.type) for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
