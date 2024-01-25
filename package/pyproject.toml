@@ -32,6 +32,8 @@ dependencies = [
     "build>=0.10.0",
     "sphinx-autoapi==3.0.0",
     "sphinx-jinja==2.0.2",
+    "ansys-pythonnet",
+    "sphinx",
 ]
 
 [tool.flit.module]

@@ -45,11 +45,15 @@ jobs:
           vale-config: package/doc/.vale.ini
           token: ${{ secrets.GITHUB_TOKEN }}
 
-  smoke-tests:
-    name: Build and Smoke tests
+  doc-build:
+    name: Create docstrings
+    needs: [style, doc-style]
     runs-on: ${{ matrix.os }}
-    needs: [style, doc-build]
+    container:
+      image: ghcr.io/ansys/mechanical:23.2.0
+      options: --entrypoint /bin/bash
     strategy:
+      max-parallel: 2
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -60,30 +64,6 @@ jobs:
           - should-release: false
             os: macos-latest
     steps:
-      - name: Install package
-        run: |
-          cd package
-      - name: Build wheelhouse and perform smoke test
-        uses: ansys/actions/build-wheelhouse@v4
-        with:
-          library-name: ${{ env.PACKAGE_NAME }}
-          operating-system: ${{ matrix.os }}
-          python-version: ${{ matrix.python-version }}
-
-  doc-build:
-    name: Create docstrings
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/ansys/mechanical:23.2.0
-      options: --entrypoint /bin/bash
-    strategy:
-      max-parallel: 2
-      fail-fast: false
-      matrix:
-        python-version: ['3.10']
-    needs: [style, doc-style]
-
-    steps:
       - name: Install Git and checkout project
         uses: actions/checkout@v3
 
@@ -91,13 +71,12 @@ jobs:
         run: |
           apt update
           apt install -y lsb-release
+          apt install -y python${{ matrix.python-version }}-venv
           apt install -y python3-pip
-          apt install -y python3.9-venv
           apt install -y mono-complete
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
-          pip3 install ansys-pythonnet
-          pip3 install sphinx
+          cd package && pip3 install -e .
 
       - name: Run main.py
         env:
@@ -129,7 +108,7 @@ jobs:
 
       - name: Install package
         run: |
-          cd package && pip install -e .
+          pip install -e .
 
       - name: Retrieve Mechanial version
         run: |
@@ -137,21 +116,13 @@ jobs:
           echo "Mechanical version is: $(python3 -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
         id: version
 
-      - name: Cache docs build directory
-        uses: actions/cache@v3
-        with:
-          path: package/doc/_build
-          key: doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}-${{ github.sha }}
-          restore-keys: |
-            doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}
-
       - name: Create Sphinx Documentation
         run: |
-          make -C ./package/doc html
+          make -C doc html
 
       - name: Generate needed files for deploying pages
         run: |
-          touch package/doc/_build/html/.nojekyll
+          touch doc/_build/html/.nojekyll
           echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
 
       - name: Upload HTML Documentation
@@ -159,6 +130,24 @@ jobs:
         with:
           name: documentation-html
           path: package/doc/_build/html
+          retention-days: 7
+
+      - name: "Generate the wheelhouse"
+        shell: bash
+        run: |
+          python -m pip wheel .[package] -w wheelhouse
+
+      - name: "Compress the wheelhouse"
+        uses: vimtor/action-zip@v1.1
+        with:
+          files: wheelhouse
+          dest: ${{ env.PACKAGE_NAME }}-v${{ steps.version }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
+
+      - name: "Upload the compressed wheelhouse"
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PACKAGE_NAME }}-v${{ steps.version }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}
+          path: ${{ env.PACKAGE_NAME }}-v${{ steps.version }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
           retention-days: 7
 
   doc-deploy:

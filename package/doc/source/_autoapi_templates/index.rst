@@ -7,7 +7,7 @@ API documentation in more depth.
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 2
+   :maxdepth: 10
 
    {% for page in pages %}
    {% if (page.top_level_object or page.name.split('.')) and page.display %}
