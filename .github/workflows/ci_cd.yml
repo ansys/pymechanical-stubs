@@ -70,12 +70,22 @@ jobs:
       - name: Install dependencies
         run: |
           apt update
+          apt install software-properties-common -y
+          add-apt-repository ppa:deadsnakes/ppa -y
+          apt install python${{ matrix.python-version }} -y
+          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+          apt install python${{ matrix.python-version }}-venv -y
+          python -m ensurepip --default-pip
+          pip3 install --upgrade pip
+          python --version
+          pip3 --version
+
+          apt update
           apt install -y lsb-release
-          apt install -y python${{ matrix.python-version }}-venv
-          apt install -y python3-pip
           apt install -y mono-complete
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
+
           cd package && pip3 install -e .
 
       - name: Run main.py
