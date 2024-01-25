@@ -98,7 +98,7 @@ jobs:
 
       - name: Install package
         run: |
-          pip install -e .
+          cd package && pip install -e .
 
       - name: Retrieve Mechanial version
         run: |
