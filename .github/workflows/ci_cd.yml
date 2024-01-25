@@ -63,6 +63,7 @@ jobs:
           apt install -y python3-pip
           apt install -y python3.9-venv
           apt install -y mono-complete
+          apt-get install zip
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
           pip3 install ansys-pythonnet
@@ -125,13 +126,10 @@ jobs:
         shell: bash
         run: |
           cd package
+          python3 -m pip install .[package]
+          python3 -m pip install importlib-metadata
           python3 -m pip wheel .[package] -w wheelhouse
-
-      - name: "Compress the wheelhouse"
-        uses: vimtor/action-zip@v1.1
-        with:
-          files: wheelhouse
-          dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip
+          zip -r -j ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip wheelhouse/*
 
       - name: "Upload the compressed wheelhouse"
         uses: actions/upload-artifact@v4

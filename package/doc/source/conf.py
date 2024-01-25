@@ -107,7 +107,7 @@ html_favicon = ansys_favicon
 source_suffix = ".rst"
 
 # The master toctree document.
-master_doc = "autoapi/index"
+master_doc = "autoapi/ansys/mechanical/stubs/index"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
