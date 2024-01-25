@@ -52,11 +52,6 @@ jobs:
     container:
       image: ghcr.io/ansys/mechanical:23.2.0
       options: --entrypoint /bin/bash
-    strategy:
-      max-parallel: 2
-      fail-fast: false
-      matrix:
-        python-version: ['3.9', '3.10', '3.11', '3.12']
     steps:
       - name: Install Git and checkout project
         uses: actions/checkout@v3
@@ -64,17 +59,9 @@ jobs:
       - name: Install dependencies
         run: |
           apt update
-          apt install software-properties-common -y
-          add-apt-repository ppa:deadsnakes/ppa -y
-          apt install python${{ matrix.python-version }} -y
-          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
-          apt install python${{ matrix.python-version }}-venv -y
-          python -m ensurepip --default-pip
-          pip3 install --upgrade pip
-          python --version
-          pip3 --version
-
           apt install -y lsb-release
+          apt install -y python3-pip
+          apt install -y python3.9-venv
           apt install -y mono-complete
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
