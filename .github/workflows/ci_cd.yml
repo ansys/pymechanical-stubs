@@ -108,11 +108,11 @@ jobs:
 
       - name: Create Sphinx Documentation
         run: |
-          make -C doc html
+          make -C package/doc html
 
       - name: Generate needed files for deploying pages
         run: |
-          touch doc/_build/html/.nojekyll
+          touch package/doc/_build/html/.nojekyll
           echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
 
       - name: Upload HTML Documentation
@@ -125,6 +125,7 @@ jobs:
       - name: "Generate the wheelhouse"
         shell: bash
         run: |
+          cd package
           python -m pip wheel .[package] -w wheelhouse
 
       - name: "Compress the wheelhouse"
