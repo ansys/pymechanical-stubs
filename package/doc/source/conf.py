@@ -35,21 +35,22 @@ switcher_version = get_version_match(__version__)
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "sphinx.ext.intersphinx",
     "sphinx.ext.autodoc",
-    "sphinx.ext.viewcode",
-    "numpydoc",
     "sphinx.ext.autosummary",
-    "sphinx.ext.inheritance_diagram",
-    "sphinx_jinja",
     "autoapi.extension",
+    "sphinx_autodoc_typehints",
+    "numpydoc",
+    "sphinx.ext.intersphinx",
+    "sphinx_copybutton",
+    "sphinx_design",
 ]
+
 exclude_patterns = ["_autoapi_templates", "_build", "Thumbs.db", ".DS_Store"]
 
 # Configuration for Sphinx autoapi
 autoapi_type = "python"
 autoapi_dirs = ["../../src/ansys"]
-# autoapi_root = "api"
+autoapi_root = "api"
 autoapi_options = [
     "members",
     "undoc-members",
@@ -107,7 +108,7 @@ html_favicon = ansys_favicon
 source_suffix = ".rst"
 
 # The master toctree document.
-master_doc = "autoapi/ansys/mechanical/stubs/index"
+master_doc = "api/ansys/mechanical/stubs/index"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
@@ -142,6 +143,7 @@ html_theme_options = {
     "show_breadcrumbs": True,
     "collapse_navigation": True,
     "use_edit_page_button": True,
+    "navigation_depth": 8,
     "additional_breadcrumbs": [
         ("PyAnsys", "https://docs.pyansys.com/"),
         ("PyMechanical", "https://mechanical.docs.pyansys.com/"),

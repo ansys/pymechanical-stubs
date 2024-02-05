@@ -18,4 +18,4 @@ link or tab in the navigation bar to explore the Mechanical API Documentation in
    :hidden:
    :maxdepth: 2
 
-   autoapi/index
+   api/index

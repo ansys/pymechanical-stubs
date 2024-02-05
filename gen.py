@@ -42,7 +42,7 @@ def crawl_loaded_references(assembly, type_filter: typing.Callable = None) -> di
 
 def dump_types(namespaces):
     printable_namespaces = {k: [x.Name for x in v] for k, v in namespaces.items()}
-    logging.debug(json.dumps(printable_namespaces, indent=2, sort_keys=True))
+    # logging.debug(json.dumps(printable_namespaces, indent=2, sort_keys=True))
 
 
 class DocMember:
@@ -85,6 +85,9 @@ def write_docstring(
     if doc_member is None:
         return
     summary = doc_member.summary
+    # if "AddComment" in doc_member.name:
+    #     print(doc_member.name)
+    #     print(summary)
     if summary is None:
         return
     indent = "    " * indent_level
@@ -100,7 +103,7 @@ def write_enum_field(
     buffer: typing.TextIO, field: typing.Any, indent_level: int = 1
 ) -> None:
     name = field.Name
-    logging.debug(f"        writing enum value {name}")
+    # logging.debug(f"        writing enum value {name}")
     int_value = field.GetRawConstantValue()
     str_value = ENUM_VALUE_REPLACEMENTS.get(name, name)
     indent = "    " * indent_level
@@ -114,7 +117,7 @@ def write_enum(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    logging.debug(f"    writing enum {enum_type.Name}")
+    # logging.debug(f"    writing enum {enum_type.Name}")
     fields = [
         field
         for field in enum_type.GetFields()
@@ -153,6 +156,7 @@ def fix_str(input_str):
     if "`" in input_str:
         input_str = remove_backtick(input_str)
     return input_str
+
 
 @dataclass
 class Param:
@@ -194,7 +198,7 @@ def get_properties(
     ]
     output = []
     for prop in props:
-        prop_type = f'"{fix_str(prop.PropertyType.ToString())}"'
+        prop_type = f'"{prop.PropertyType.ToString()}"'
         prop_name = prop.Name
         declaring_type_name = prop.DeclaringType.ToString()
         method_doc_key = f"P:{declaring_type_name}.{prop_name}"
@@ -237,7 +241,7 @@ def get_properties(
 def write_property(
     buffer: typing.TextIO, prop: Property, indent_level: int = 1
 ) -> None:
-    logging.debug(f"        writing property {prop.name}")
+    # logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
     if prop.static:
         # this only works for autocomplete for python 3.9+
@@ -246,7 +250,7 @@ def write_property(
         ), "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop.type}]:\n")
+        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
         indent = "    " * (1 + indent_level)
 
         write_docstring(buffer, prop.doc, indent_level + 1)
@@ -262,7 +266,7 @@ def write_property(
         if prop.setter and not prop.getter:
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop.type}]) -> None:\n"
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type)}]) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
             write_docstring(buffer, prop.doc, indent_level + 1)
@@ -274,7 +278,7 @@ def write_property(
             assert prop.getter
             buffer.write(f"{indent}@property\n")
             buffer.write(
-                f"{indent}def {prop.name}(self) -> typing.Optional[{prop.type}]:\n"
+                f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type)}]:\n"
             )
             indent = "    " * (1 + indent_level)
             write_docstring(buffer, prop.doc, indent_level + 1)
@@ -283,7 +287,8 @@ def write_property(
 
 
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
-    logging.debug(f"        writing method {method.name}")
+    # if "AddComment" in method.name:
+    #     logging.debug(f"        writing method {method.name}")
     indent = "    " * indent_level
     if method.static:
         buffer.write(f"{indent}@classmethod\n")
@@ -297,6 +302,29 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     write_docstring(buffer, method.doc, indent_level + 1)
     buffer.write(f"{indent}pass\n")
     buffer.write("\n")
+
+
+def adjust_method_name_xml(method_name):
+    """Adjust the method name to find docstring in XML."""
+    # GetChildren(System...) is GetChildren``1(System...) in the XML file
+    if ".GetChildren(System" in method_name:
+        method_name = method_name.replace(".GetChildren(System", ".GetChildren``1(System")
+    # IList`1[ChildrenType] is IList{``0} in the XML file
+    if "IList`1[ChildrenType]" in method_name:
+        method_name = method_name.replace("IList`1[ChildrenType]", "IList{``0}")
+    # IList`1[Ansys...] is IList{Ansys...} in the XML file
+    # IEnumerable`1[Ansys...]` is IEnumerable{Ansys...} in the XML file
+    if "`1[Ansys" in method_name:
+        method_name = method_name.replace("`1[Ansys", "{Ansys").replace("]", "}")
+    if "`2[Ansys" in method_name:
+        method_name = method_name.replace("`2[Ansys", "{Ansys").replace("]", "}")
+    # IEnumerable`1[System.Object] is IEnumerable{System.Object} in the XML file
+    if "IEnumerable`1[System" in method_name:
+        method_name = method_name.replace("IEnumerable`1[System", "IEnumerable{System").replace("]", "}")
+    if "+" in method_name:
+        method_name = method_name.replace("+", ".")
+
+    return method_name
 
 
 def get_methods(
@@ -313,21 +341,28 @@ def get_methods(
     ]
     output = []
     for method in methods:
-        method_return_type = f'"{fix_str(method.ReturnType.ToString())}"'
+        method_return_type = f'"{method.ReturnType.ToString()}"'
         method_name = method.Name
         params = method.GetParameters()
         args = [
             Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
             for param in params
         ]
-        full_method_name = method_name + f"({','.join([fix_str(arg.type) for arg in args])})"
+        full_method_name = method_name + f"({','.join([arg.type for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
-        method_doc_key = f"M:{declaring_type_name}.{full_method_name}"
+
+        # Get the method name
+        method_doc_key = f"M:{declaring_type_name}.{full_method_name}".replace("()", "")
+        method_doc_key = adjust_method_name_xml(method_doc_key)
+
         method_doc = doc.get(method_doc_key, None)
+        # if method_doc == None:
+        #     print(method_doc_key)
+
         method = Method(
             name=method_name,
             doc=method_doc,
-            return_type=method_return_type,
+            return_type=fix_str(method_return_type),
             static=method.IsStatic,
             args=args,
         )
@@ -342,7 +377,7 @@ def write_class(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    logging.debug(f"    writing class {class_type.Name}")
+    # logging.debug(f"    writing class {class_type.Name}")
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
     write_docstring(buffer, class_doc, 1)
@@ -369,24 +404,24 @@ def write_module(
     outdir = pathlib.Path(outdir)
     for token in namespace.split("."):
         outdir = outdir / token
-    logging.info(f"Writing to {str(outdir.resolve())}")
+    # logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
     class_types = [
         mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface
     ]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
-    logging.info(f"Writing to {str(outdir.resolve())}")
+    # logging.info(f"Writing to {str(outdir.resolve())}")
     with open(outdir / "__init__.py", "w", encoding="utf-8") as f:
         # TODO - jinja
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")
         f.write("import typing\n\n")
-        logging.info(f"    {len(enum_types)} enum types")
+        # logging.info(f"    {len(enum_types)} enum types")
         for enum_type in enum_types:
             write_enum(f, enum_type, namespace, doc, type_filter)
         for class_type in class_types:
             write_class(f, class_type, namespace, doc, type_filter)
-    logging.info(f"Done processing {namespace}")
+    # logging.info(f"Done processing {namespace}")
 
 
 def load_doc(xml_path: str) -> ET:
@@ -395,6 +430,7 @@ def load_doc(xml_path: str) -> ET:
     root = tree.getroot()
     members = root.find("members")
     doc_members = [DocMember(member) for member in members]
+    # 'M:Ansys.ACT.Automation.Mechanical.VirtualCell.GetChildren``1(System.Boolean,System.Collections.Generic.IList{``0})': <gen.DocMember object at 0x0000018B1F50A050>
     output = {doc_member.name: doc_member for doc_member in doc_members}
     return output
 
@@ -406,11 +442,11 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
     directory = System.IO.Path.GetDirectoryName(path)
     xml_path = System.IO.Path.Combine(directory, assembly.GetName().Name + ".xml")
     if System.IO.File.Exists(xml_path):
-        logging.info(f"Loading xml doc from {xml_path}")
+        # logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
     else:
-        logging.warning("XML Doc file does not exist, skipping")
+        # logging.warning("XML Doc file does not exist, skipping")
         return None
 
 
@@ -418,25 +454,25 @@ def get_namespaces(
     assembly: "System.Reflection.RuntimeAssembly", type_filter: typing.Callable = None
 ) -> typing.Dict:
     """Get all the namespaces and filtered types in the assembly given by assembly_name."""
-    logging.info(
-        f"    Getting types from the {os.path.basename(assembly.CodeBase)} assembly"
-    )
+    # # logging.info(
+    # #     f"    Getting types from the {os.path.basename(assembly.CodeBase)} assembly"
+    # # )
     namespaces = crawl_loaded_references(assembly, type_filter)
     return namespaces
 
 
 def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -> None:
     """Generate python stubs for an assembly."""
-    logging.info(f"Loading assembly {assembly_name}")
+    # logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
-    if type_filter is not None:
-        logging.info(f"   Using a type_filter: {str(type_filter)}")
+    # if type_filter is not None:
+        # logging.info(f"   Using a type_filter: {str(type_filter)}")
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
     doc = get_doc(assembly)
-    logging.info(f"    {len(namespaces.items())} namespaces")
+    # logging.info(f"    {len(namespaces.items())} namespaces")
     for namespace, mod_types in namespaces.items():
-        logging.info(f"Processing {namespace}")
-        logging.info(f"   {len(namespaces.items())} namespaces")
+        # logging.info(f"Processing {namespace}")
+        # logging.info(f"   {len(namespaces.items())} namespaces")
         write_module(namespace, mod_types, doc, outdir, type_filter)
-        logging.info(f"Done processing {namespace}")
+        # logging.info(f"Done processing {namespace}")
