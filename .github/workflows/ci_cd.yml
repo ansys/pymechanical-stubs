@@ -66,6 +66,7 @@ jobs:
           apt-get install -y zip
           pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip3 install --upgrade pip flit
+          cd package
           pip3 install -e .[doc]
 
       - name: Run main.py
