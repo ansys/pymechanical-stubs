@@ -99,17 +99,17 @@ jobs:
 
       - name: Retrieve Mechanial version
         run: |
+          cd package
+          pip3 install -e .
           echo "MECHANICAL_VERSION=$(python3 -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
           echo "Mechanical version is: $(python3 -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
       - name: Install package and create wheelhouse
         run: |
           cd package
-          pip3 install -e .
           python3 -m pip install .[package]
-          python3 -m pip install .[doc]
           python3 -m pip install importlib-metadata
-          python3 -m pip wheel .[package,doc] -w wheelhouse
+          python3 -m pip wheel .[package] -w wheelhouse
           zip -r -j ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip wheelhouse/*
 
       - name: "Upload the compressed wheelhouse"
