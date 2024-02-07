@@ -78,13 +78,15 @@ def make():
 except ModuleNotFoundError:  # pragma: no cover
     import importlib_metadata  # type: ignore
 patch = importlib_metadata.version("ansys-mechanical-stubs")
+"""Patch version for the ansys-mechanical-stubs package."""
 
 # major, minor, patch
 version_info = {major}, {minor}, patch
+"""Mechanical version with patch version of ansys-mechanical-stubs."""
 
 # Format version
 __version__ = ".".join(map(str, version_info))
-"""Mechanical Scripting version"""
+"""Mechanical Scripting version."""
 
 from .Ansys import *
 '''
@@ -96,6 +98,7 @@ from .Ansys import *
     # Make src/ansys/mechanical/stubs/Ansys/__init__.py
     get_dirs = os.listdir(path)
     with open(os.path.join(path, "__init__.py"), "w") as f:
+        # f.write(f'"""The Ansys subpackage containing the Mechanical stubs."""')
         for dir in get_dirs:
             if os.path.isdir(os.path.join(path, dir)):
                 f.write(f"import ansys.mechanical.stubs.Ansys.{dir} as {dir}\n")
@@ -115,6 +118,10 @@ from .Ansys import *
                 # Make missing init files
                 # if not os.path.isfile(init_path):
                 with open(init_path, "a") as f:
+                    # Only add docstring if the init file is empty
+                    # This is for init files that only contain import statements
+                    if os.path.getsize(init_path) == 0:
+                        f.write(f'"""{os.path.basename(full_path)} submodule."""\n')
                     for module in module_list:
                         if module != "__init__.py":
                             f.write(f"import {import_str}.{module} as {module}\n")

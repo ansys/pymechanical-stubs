@@ -106,9 +106,9 @@ jobs:
         run: |
           cd package
           pip3 install -e .
-          python3 -m pip install .[package]
+          python3 -m pip install .[package,doc]
           python3 -m pip install importlib-metadata
-          python3 -m pip wheel .[package] -w wheelhouse
+          python3 -m pip wheel .[package,doc] -w wheelhouse
           zip -r -j ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip wheelhouse/*
 
       - name: "Upload the compressed wheelhouse"

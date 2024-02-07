@@ -85,9 +85,6 @@ def write_docstring(
     if doc_member is None:
         return
     summary = doc_member.summary
-    # if "AddComment" in doc_member.name:
-    #     print(doc_member.name)
-    #     print(summary)
     if summary is None:
         return
     indent = "    " * indent_level
@@ -125,7 +122,13 @@ def write_enum(
     ]
     buffer.write(f"class {enum_type.Name}(Enum):\n")
     enum_doc = doc.get(f"T:{namespace}.{enum_type.Name}", None)
-    write_docstring(buffer, enum_doc, 1)
+    if enum_doc == None:
+        write_missing_class_enum_docstring(buffer, enum_type.Name, "enum")
+    else:
+        write_docstring(buffer, enum_doc, 1)
+    # if enum_doc == None:
+    #     print(enum_type.Name)
+    # write_docstring(buffer, enum_doc, 1)
     buffer.write("\n")
     for field in fields:
         write_enum_field(buffer, field, 1)
@@ -252,9 +255,13 @@ def write_property(
         buffer.write(f"{indent}@property\n")
         buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
         indent = "    " * (1 + indent_level)
-
-        write_docstring(buffer, prop.doc, indent_level + 1)
-
+        if prop.doc == None:
+            write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+        else:
+            write_docstring(buffer, prop.doc, indent_level + 1)
+        # if prop.doc == None:
+        #     print(prop.name)
+        # write_docstring(buffer, prop.doc, indent_level + 1)
         if prop.value:
             if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
                 prop.value = fix_str(f"{prop.value}")
@@ -269,7 +276,13 @@ def write_property(
                 f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type)}]) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
-            write_docstring(buffer, prop.doc, indent_level + 1)
+            if prop.doc == None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            # if prop.doc == None:
+            #    print(prop.name)
+            # write_docstring(buffer, prop.doc, indent_level + 1)
             buffer.write(f"{indent}return None\n")
             buffer.write("\n")
             indent = "    " * (indent_level)
@@ -281,14 +294,41 @@ def write_property(
                 f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type)}]:\n"
             )
             indent = "    " * (1 + indent_level)
-            write_docstring(buffer, prop.doc, indent_level + 1)
+            if prop.doc == None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            # if prop.doc == None:
+            #    print(prop.name)
+            # write_docstring(buffer, prop.doc, indent_level + 1)
             buffer.write(f"{indent}return None\n")
     buffer.write("\n")
 
 
+def write_missing_class_enum_docstring(buffer, name, obj_type):
+    """Writes a docstring for classes and enums that do not contain a docstring in the XML file."""
+    indent = "    " * 1
+    buffer.write(f'{indent}"""\n')
+    if obj_type == "class":
+        if name[0] == "I":
+            buffer.write(f"{indent}{name} interface.\n")
+        else:
+            buffer.write(f"{indent}{name} {obj_type}.\n")
+    buffer.write(f'{indent}"""\n')
+
+
+def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
+    """Writes a docstring for methods and properties that do not contain a docstring in the XML file."""
+    indent = "    " * indent_level
+    buffer.write(f'{indent}"""\n')
+    if obj.name == "GetChildren":
+        buffer.write(f"{indent}Gets the list of children, filtered by type.\n")
+    else:
+        buffer.write(f"{indent}{obj.name} {obj_type}.\n")
+    buffer.write(f'{indent}"""\n')
+
+
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
-    # if "AddComment" in method.name:
-    #     logging.debug(f"        writing method {method.name}")
     indent = "    " * indent_level
     if method.static:
         buffer.write(f"{indent}@classmethod\n")
@@ -299,7 +339,10 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     args = f"({', '.join(args)})"
     buffer.write(f"{indent}def {method.name}{args} -> {method.return_type}:\n")
     indent = "    " * (1 + indent_level)
-    write_docstring(buffer, method.doc, indent_level + 1)
+    if method.doc == None:
+        write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
+    else:
+        write_docstring(buffer, method.doc, indent_level + 1)
     buffer.write(f"{indent}pass\n")
     buffer.write("\n")
 
@@ -380,7 +423,10 @@ def write_class(
     # logging.debug(f"    writing class {class_type.Name}")
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
-    write_docstring(buffer, class_doc, 1)
+    if class_doc == None:
+        write_missing_class_enum_docstring(buffer, class_type.Name, "class")
+    else:
+        write_docstring(buffer, class_doc, 1)
     buffer.write("\n")
     props = get_properties(class_type, doc, type_filter)
     [write_property(buffer, prop, 1) for prop in props]
@@ -413,6 +459,7 @@ def write_module(
     # logging.info(f"Writing to {str(outdir.resolve())}")
     with open(outdir / "__init__.py", "w", encoding="utf-8") as f:
         # TODO - jinja
+        f.write(f'"""{os.path.basename(outdir)} subpackage."""\n')
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")
         f.write("import typing\n\n")
