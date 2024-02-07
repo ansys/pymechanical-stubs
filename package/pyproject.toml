@@ -8,7 +8,7 @@ name = "ansys-mechanical-stubs"
 version = "0"
 description = "PyMechanical scripting API stubs."
 readme = "README.rst"
-requires-python = ">=3.8,<4"
+requires-python = ">=3.9,<4"
 license = {file = "LICENSE"}
 authors = [
     {name = "ANSYS, Inc.", email = "pyansys.support@ansys.com"},
@@ -24,10 +24,11 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "flit>3.8.0",
+    "ansys-pythonnet>=3.1.0rc2",
     "build>=0.10.0",
     "colorama==0.4.6",
     "charset-normalizer==3.3.2",
+    "flit>3.8.0",
 ]
 
 [project.optional-dependencies]
