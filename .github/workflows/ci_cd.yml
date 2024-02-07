@@ -95,7 +95,7 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v232
           NUM_CORES: 1
         run: |
-          pip install ansys-pythonnet
+          pip install pythonnet
           python3 main.py > results.txt
         continue-on-error: True
 
