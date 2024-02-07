@@ -69,18 +69,18 @@ jobs:
           ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
           apt install python${{ matrix.python-version }}-venv -y
           python -m ensurepip --default-pip
-          pip3 install --upgrade pip
+          pip install --upgrade pip
           python --version
-          pip3 --version
+          pip --version
 
           apt update
           apt install -y lsb-release
           apt install -y mono-complete
           apt-get install -y zip
-          pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          pip3 install --upgrade pip flit
+          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          pip install --upgrade pip flit
           cd package
-          pip3 install -e .[doc]
+          pip install -e .[doc]
 
       - name: Run main.py
         env:
@@ -113,7 +113,7 @@ jobs:
       - name: Retrieve Mechanial version
         run: |
           cd package
-          pip3 install -e .
+          pip install -e .
           echo "MECHANICAL_VERSION=$(python3 -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
           echo "Mechanical version is: $(python3 -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
