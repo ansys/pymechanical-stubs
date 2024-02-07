@@ -76,6 +76,7 @@ jobs:
           apt update
           apt install -y lsb-release
           apt install -y mono-complete
+          apt install -y make
           apt-get install -y zip
           pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip install --upgrade pip flit
