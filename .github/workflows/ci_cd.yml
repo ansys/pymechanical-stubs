@@ -82,7 +82,6 @@ jobs:
           cd package
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
-          pip install ansys-pythonnet
           pip install -e .[doc]
 
       - name: Run main.py
@@ -96,6 +95,7 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v232
           NUM_CORES: 1
         run: |
+          pip install ansys-pythonnet
           python3 main.py > results.txt
         continue-on-error: True
 
