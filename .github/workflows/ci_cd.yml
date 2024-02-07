@@ -82,7 +82,7 @@ jobs:
           cd package
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
-          pip install -e .
+          pip install ansys-pythonnet
           pip install -e .[doc]
 
       - name: Run main.py
