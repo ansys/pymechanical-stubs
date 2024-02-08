@@ -133,7 +133,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9
-          path: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip
+          path: package/${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip
+          retention-days: 7
+
+      - name: "Upload the wheel"
+        uses: actions/upload-artifact@v4
+        with:
+          name: ansys_mechanical_stubs-0-py3-none-any.whl
+          path: tmp/ansys_mechanical_stubs-0-py3-none-any.whl
           retention-days: 7
 
       - name: Create Sphinx documentation
