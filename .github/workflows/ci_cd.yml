@@ -120,25 +120,39 @@ jobs:
           echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
           echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
-      - name: Install package and create wheelhouse
+      - name: Install build and twine, and build dist artifacts
         run: |
           cd package
           python -m pip install .[package]
-          python -m pip install importlib-metadata
-          python -m pip wheel .[package] -w wheelhouse
+          python -m pip install build twine
+          python -m build && python -m twine check dist/*
 
-      - name: "Compress the wheelhouse"
-        uses: vimtor/action-zip@v1.1
-        with:
-          files: package/wheelhouse
-          dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip
-
-      - name: "Upload the compressed wheelhouse"
+      - name: "Upload distribution artifacts to GitHub artifacts"
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}
-          path: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip
+          name: ${{ env.PACKAGE_NAME }}-artifacts
+          path: package/dist/
           retention-days: 7
+
+      # - name: Install package and create wheelhouse
+      #   run: |
+      #     cd package
+      #     python -m pip install .[package]
+      #     python -m pip install importlib-metadata
+      #     python -m pip wheel .[package] -w wheelhouse
+
+      # - name: "Compress the wheelhouse"
+      #   uses: vimtor/action-zip@v1.1
+      #   with:
+      #     files: package/wheelhouse
+      #     dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip
+
+      # - name: "Upload the compressed wheelhouse"
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}
+      #     path: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip
+      #     retention-days: 7
 
       - name: Create Sphinx documentation
         run: |
