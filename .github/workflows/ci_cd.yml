@@ -126,7 +126,8 @@ jobs:
           python -m pip install .[package]
           python -m pip install importlib-metadata
           python -m pip wheel .[package] -w wheelhouse
-          zip -r -j ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-3.9.zip wheelhouse/*
+          echo "Zipping wheelhouse ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip"
+          zip -r -j ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip wheelhouse/*
 
       - name: "Upload the compressed wheelhouse"
         uses: actions/upload-artifact@v4
