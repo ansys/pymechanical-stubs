@@ -30,6 +30,7 @@ dependencies = [
 
 [project.optional-dependencies]
 doc = [
+    "ansys-pythonnet>=3.1.0rc2",
     "ansys-sphinx-theme==0.13.1",
     "autodoc_pydantic==2.0.1",
     "jupyter_sphinx==0.5.3",
