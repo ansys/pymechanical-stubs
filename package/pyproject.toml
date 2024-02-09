@@ -46,6 +46,7 @@ dependencies = [
 doc = [
     "ansys-sphinx-theme==0.13.2",
     "autodoc_pydantic==2.0.1",
+    "GitPython==3.1.41",
     "jupyter_sphinx==0.5.3",
     "nbsphinx==0.9.3",
     "numpydoc==1.6.0",
