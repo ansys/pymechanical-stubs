@@ -34,6 +34,7 @@ switcher_version = get_version_match(__version__)
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+# Sphinx extensions
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
@@ -143,7 +144,6 @@ html_theme_options = {
     "show_breadcrumbs": True,
     "collapse_navigation": True,
     "use_edit_page_button": True,
-    "navigation_depth": 8,
     "additional_breadcrumbs": [
         ("PyAnsys", "https://docs.pyansys.com/"),
         ("PyMechanical", "https://mechanical.docs.pyansys.com/"),
