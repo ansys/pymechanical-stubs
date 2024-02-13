@@ -157,6 +157,7 @@ jobs:
 
       - name: Create Sphinx documentation
         run: |
+          apt-get install git
           make -C package/doc html
 
       - name: Generate needed files for deploying pages
