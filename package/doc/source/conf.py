@@ -134,6 +134,7 @@ html_context = {
     "doc_path": "doc/source",
 }
 html_theme_options = {
+    "navigation_depth": 10,
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
         "version_match": switcher_version,
