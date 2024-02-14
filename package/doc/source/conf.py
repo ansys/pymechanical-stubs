@@ -36,14 +36,15 @@ switcher_version = get_version_match(__version__)
 
 # Sphinx extensions
 extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.autosummary",
     "autoapi.extension",
-    "sphinx_autodoc_typehints",
     "numpydoc",
-    "sphinx.ext.intersphinx",
+    "sphinx_autodoc_typehints",
     "sphinx_copybutton",
     "sphinx_design",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.intersphinx",
+    "sphinx_markdown_builder",
 ]
 
 exclude_patterns = ["_autoapi_templates", "_build", "Thumbs.db", ".DS_Store"]
