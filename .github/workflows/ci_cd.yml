@@ -84,6 +84,7 @@ jobs:
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
           pip install -e .[doc]
+          pip download --platform=none --only-binary=:all: charset-normalizer
 
       - name: Run main.py
         env:
@@ -158,8 +159,7 @@ jobs:
       - name: Create Sphinx documentation
         run: |
           apt-get install git -y
-          sphinx-build -M markdown doc/source doc/_build
-          # make -C package/doc html
+          sphinx-build -M markdown package/doc/source package/doc/_build
 
       - name: Upload Markdown Documentation
         uses: actions/upload-artifact@v3
