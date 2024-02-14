@@ -84,7 +84,6 @@ jobs:
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
           pip install -e .[doc]
-          pip download --platform=none --only-binary=:all: charset-normalizer
 
       - name: Run main.py
         env:
@@ -141,7 +140,6 @@ jobs:
           cd package
           python -m pip install .[package]
           python -m pip install importlib-metadata
-          python -m pip download --platform=none --only-binary=:all: charset-normalizer
           python -m pip wheel .[package] -w wheelhouse
 
       - name: "Compress the wheelhouse"
