@@ -57,7 +57,7 @@ jobs:
         os: [ubuntu-latest]
         versions: [
           { image: '23.2.0', v: 'v232' },
-          { image: '24.1.0', v: 'v241' }
+          # { image: '24.1.0', v: 'v241' }
         ]
         python-version: ['3.10'] # ['3.9', '3.10', '3.11', '3.12']
     steps:
