@@ -54,7 +54,7 @@ jobs:
       options: --entrypoint /bin/bash
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         mechanical-version: ['23.2.0', '24.1.0']
         python-version: ['3.9', '3.10', '3.11', '3.12']
     steps:
