@@ -161,17 +161,24 @@ jobs:
           sphinx-build -M markdown doc/source doc/_build
           # make -C package/doc html
 
-      - name: Generate needed files for deploying pages
-        run: |
-          touch package/doc/_build/html/.nojekyll
-          echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
-
-      - name: Upload HTML Documentation
+      - name: Upload Markdown Documentation
         uses: actions/upload-artifact@v3
         with:
-          name: documentation-html
-          path: package/doc/_build/html
+          name: documentation-md
+          path: package/doc/_build/markdown
           retention-days: 7
+
+      # - name: Generate needed files for deploying pages
+      #   run: |
+      #     touch package/doc/_build/html/.nojekyll
+      #     echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
+
+      # - name: Upload HTML Documentation
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: documentation-html
+      #     path: package/doc/_build/html
+      #     retention-days: 7
 
   doc-deploy:
     name: Documentation deploy
