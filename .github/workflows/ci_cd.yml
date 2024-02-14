@@ -48,13 +48,15 @@ jobs:
   doc-build:
     name: Create docstrings
     needs: [style, doc-style]
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     container:
-      image: ghcr.io/ansys/mechanical:23.2.0
+      image: ghcr.io/ansys/mechanical:${{ matrix.mechanical-version }}
       options: --entrypoint /bin/bash
     strategy:
       matrix:
-        python-version: ['3.9']
+        os: [ubuntu-latest, windows-latest]
+        mechanical-version: ['23.2.0', '24.1.0']
+        python-version: ['3.9', '3.10', '3.11', '3.12']
     steps:
       - name: Install Git and checkout project
         uses: actions/checkout@v3
@@ -146,12 +148,12 @@ jobs:
         uses: vimtor/action-zip@v1.1
         with:
           files: package/wheelhouse
-          dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}.zip
+          dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
 
       - name: "Upload the wheelhouse files"
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-ubuntu-latest-${{ matrix.python-version }}
+          name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}
           path: package/wheelhouse/*
           retention-days: 7
 
@@ -162,6 +164,7 @@ jobs:
 
       - name: Upload Markdown Documentation
         uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
         with:
           name: documentation-md
           path: package/doc/_build/markdown
@@ -191,8 +194,8 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: documentation-html
-          path: documentation-html
+          name: documentation-md
+          path: documentation-md
 
       - name: List all files
         run: ls -R .
@@ -203,6 +206,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: documentation-html/
+          folder: documentation-md/
           clean: true
           single-commit: true
