@@ -141,6 +141,7 @@ jobs:
           cd package
           python -m pip install .[package]
           python -m pip install importlib-metadata
+          python -m pip download --platform=none --only-binary=:all: charset-normalizer
           python -m pip wheel .[package] -w wheelhouse
 
       - name: "Compress the wheelhouse"
