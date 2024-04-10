@@ -5,7 +5,6 @@ import shutil
 import sys
 
 import clr
-
 import gen
 
 import System  # isort: skip
@@ -32,7 +31,7 @@ def resolve():
 
 resolve()
 
-outdir = pathlib.Path(__file__).parent / "package" / "src" / "ansys" / "mechanical" / "stubs"
+outdir = pathlib.Path(__file__).parent / "src" / "ansys" / "mechanical" / "stubs"
 
 logging.getLogger().setLevel(logging.INFO)
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -93,7 +92,7 @@ from .Ansys import *
         )
         f.close()
 
-    path = os.path.join("package", "src", "ansys", "mechanical", "stubs", "Ansys")
+    path = os.path.join("src", "ansys", "mechanical", "stubs", "Ansys")
 
     # Make src/ansys/mechanical/stubs/Ansys/__init__.py
     get_dirs = os.listdir(path)
@@ -105,15 +104,18 @@ from .Ansys import *
         f.close()
 
     # Add import statements to init files
-    for (dirpath, dirnames, filenames) in os.walk(path):
+    for dirpath, dirnames, filenames in os.walk(path):
         for dir in dirnames:
             full_path = os.path.join(dirpath, dir)
-            init_path = os.path.join(full_path, '__init__.py')
+            init_path = os.path.join(full_path, "__init__.py")
 
             if "__pycache__" not in init_path:
                 module_list = []
-                import_str = full_path.replace(os.sep, '.').replace("package.src.", '')
-                [ module_list.append(os.path.basename(dir.path)) for dir in os.scandir(os.path.dirname(init_path)) ]
+                import_str = full_path.replace(os.sep, ".").replace("src.", "")
+                [
+                    module_list.append(os.path.basename(dir.path))
+                    for dir in os.scandir(os.path.dirname(init_path))
+                ]
 
                 # Make missing init files
                 # if not os.path.isfile(init_path):

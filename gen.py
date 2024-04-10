@@ -1,15 +1,15 @@
 """Module containing routine to generate python stubs for an assembly."""
 
+from dataclasses import dataclass
 import json
 import logging
 import os
 import pathlib
 import typing
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass
 
-import clr
 import System
+import clr
 
 
 def is_namespace(something):
@@ -96,9 +96,7 @@ def write_docstring(
 ENUM_VALUE_REPLACEMENTS = {"None": "None_", "True": "True_"}
 
 
-def write_enum_field(
-    buffer: typing.TextIO, field: typing.Any, indent_level: int = 1
-) -> None:
+def write_enum_field(buffer: typing.TextIO, field: typing.Any, indent_level: int = 1) -> None:
     name = field.Name
     # logging.debug(f"        writing enum value {name}")
     int_value = field.GetRawConstantValue()
@@ -142,7 +140,7 @@ def write_enum(
 # Helper for fix_str()
 def remove_backtick(input_str):
     backtick = input_str.index("`")
-    new_str = input_str[0:backtick] + input_str[backtick+2:]
+    new_str = input_str[0:backtick] + input_str[backtick + 2 :]
 
     if "`" in new_str:
         return remove_backtick(new_str)
@@ -195,9 +193,7 @@ def get_properties(
     # TODO - base class properties are not handled here. They might be published if they are ansys types
     #        or not if they are system types (e.g. the IList methods implemented by an Ansys type that derives from System.Collections.Generic.IList)
     props = [
-        prop
-        for prop in class_type.GetProperties()
-        if (type_filter is None or type_filter(prop))
+        prop for prop in class_type.GetProperties() if (type_filter is None or type_filter(prop))
     ]
     output = []
     for prop in props:
@@ -241,16 +237,12 @@ def get_properties(
     return output
 
 
-def write_property(
-    buffer: typing.TextIO, prop: Property, indent_level: int = 1
-) -> None:
+def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1) -> None:
     # logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
     if prop.static:
         # this only works for autocomplete for python 3.9+
-        assert (
-            prop.getter and not prop.setter
-        ), "Don't deal with public static getter+setter"
+        assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
         buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
@@ -363,7 +355,9 @@ def adjust_method_name_xml(method_name):
         method_name = method_name.replace("`2[Ansys", "{Ansys").replace("]", "}")
     # IEnumerable`1[System.Object] is IEnumerable{System.Object} in the XML file
     if "IEnumerable`1[System" in method_name:
-        method_name = method_name.replace("IEnumerable`1[System", "IEnumerable{System").replace("]", "}")
+        method_name = method_name.replace("IEnumerable`1[System", "IEnumerable{System").replace(
+            "]", "}"
+        )
     if "+" in method_name:
         method_name = method_name.replace("+", ".")
 
@@ -378,9 +372,7 @@ def get_methods(
     # TODO - base class properties are not handled here. They might be published if they are ansys types
     #        or not if they are system types (e.g. the IList methods implemented by an Ansys type that derives from System.Collections.Generic.IList)
     methods = [
-        prop
-        for prop in class_type.GetMethods()
-        if (type_filter is None or type_filter(prop))
+        prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
     ]
     output = []
     for method in methods:
@@ -388,8 +380,7 @@ def get_methods(
         method_name = method.Name
         params = method.GetParameters()
         args = [
-            Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
-            for param in params
+            Param(type=fix_str(param.ParameterType.ToString()), name=param.Name) for param in params
         ]
         full_method_name = method_name + f"({','.join([arg.type for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
@@ -452,9 +443,7 @@ def write_module(
         outdir = outdir / token
     # logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
-    class_types = [
-        mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface
-    ]
+    class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     # logging.info(f"Writing to {str(outdir.resolve())}")
     with open(outdir / "__init__.py", "w", encoding="utf-8") as f:
@@ -513,7 +502,7 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     # logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
     # if type_filter is not None:
-        # logging.info(f"   Using a type_filter: {str(type_filter)}")
+    # logging.info(f"   Using a type_filter: {str(type_filter)}")
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
     doc = get_doc(assembly)
