@@ -3,11 +3,10 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import os
 from datetime import datetime
+import os
 from pathlib import Path
 
-from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     get_autoapi_templates_dir_relative_path,
@@ -15,6 +14,8 @@ from ansys_sphinx_theme import (
     pyansys_logo_black,
 )
 from sphinx.builders.latex import LaTeXBuilder
+
+from ansys.mechanical.stubs import __version__
 
 LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 
@@ -26,9 +27,7 @@ project = "ansys-mechanical-scripting"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS, Inc."
 release = version = __version__
-cname = os.getenv(
-    "DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com"
-)
+cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com")
 switcher_version = get_version_match(__version__)
 
 # -- General configuration ---------------------------------------------------
@@ -46,6 +45,9 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_markdown_builder",
 ]
+
+markdown_anchor_sections = True
+markdown_anchor_signatures = True
 
 exclude_patterns = ["_autoapi_templates", "_build", "Thumbs.db", ".DS_Store"]
 
@@ -141,7 +143,7 @@ html_theme_options = {
         "version_match": switcher_version,
     },
     "check_switcher": False,
-    "github_url": "https://github.com/ansys-internal/mechanical-stubs",
+    "github_url": "https://github.com/ansys/mechanical-stubs",
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "collapse_navigation": True,
