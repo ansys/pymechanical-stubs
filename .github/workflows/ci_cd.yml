@@ -170,6 +170,18 @@ jobs:
       #     path: doc/_build/markdown
       #     retention-days: 7
 
+      - name: Create Sphinx documentation
+        run: |
+          make -C doc html
+
+      - name: Upload HTML Documentation
+        uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-html-${{ matrix.versions.image }}
+          path: doc/_build/html
+          retention-days: 7
+
       - name: Generate needed files for deploying pages
         run: |
           touch .nojekyll CNAME
