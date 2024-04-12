@@ -5,7 +5,6 @@ import shutil
 import sys
 
 import clr
-
 import gen
 
 import System  # isort: skip
@@ -32,7 +31,7 @@ def resolve():
 
 resolve()
 
-outdir = pathlib.Path(__file__).parent / "package" / "src"
+outdir = pathlib.Path(__file__).parent / "src" / "ansys" / "mechanical" / "stubs"
 
 logging.getLogger().setLevel(logging.INFO)
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -71,22 +70,64 @@ def make():
     for assembly in ASSEMBLIES:
         gen.make(outdir, assembly, type_filter=is_type_published)
 
-    with open(os.path.join(outdir, "Ansys", "__init__.py"), "w") as f:
+    with open(os.path.join(outdir, "__init__.py"), "w") as f:
         f.write(
             f'''try:
     import importlib.metadata as importlib_metadata
 except ModuleNotFoundError:  # pragma: no cover
     import importlib_metadata  # type: ignore
 patch = importlib_metadata.version("ansys-mechanical-stubs")
+"""Patch version for the ansys-mechanical-stubs package."""
 
 # major, minor, patch
 version_info = {major}, {minor}, patch
+"""Mechanical version with patch version of ansys-mechanical-stubs."""
 
 # Format version
 __version__ = ".".join(map(str, version_info))
-"""Mechanical Scripting version"""
+"""Mechanical Scripting version."""
+
+from .Ansys import *
 '''
         )
+        f.close()
+
+    path = os.path.join("src", "ansys", "mechanical", "stubs", "Ansys")
+
+    # Make src/ansys/mechanical/stubs/Ansys/__init__.py
+    get_dirs = os.listdir(path)
+    with open(os.path.join(path, "__init__.py"), "w") as f:
+        # f.write(f'"""The Ansys subpackage containing the Mechanical stubs."""')
+        for dir in get_dirs:
+            if os.path.isdir(os.path.join(path, dir)):
+                f.write(f"import ansys.mechanical.stubs.Ansys.{dir} as {dir}\n")
+        f.close()
+
+    # Add import statements to init files
+    for dirpath, dirnames, filenames in os.walk(path):
+        for dir in dirnames:
+            full_path = os.path.join(dirpath, dir)
+            init_path = os.path.join(full_path, "__init__.py")
+
+            if "__pycache__" not in init_path:
+                module_list = []
+                import_str = full_path.replace(os.sep, ".").replace("src.", "")
+                [
+                    module_list.append(os.path.basename(dir.path))
+                    for dir in os.scandir(os.path.dirname(init_path))
+                ]
+
+                # Make missing init files
+                # if not os.path.isfile(init_path):
+                with open(init_path, "a") as f:
+                    # Only add docstring if the init file is empty
+                    # This is for init files that only contain import statements
+                    if os.path.getsize(init_path) == 0:
+                        f.write(f'"""{os.path.basename(full_path)} submodule."""\n')
+                    for module in module_list:
+                        if module != "__init__.py":
+                            f.write(f"import {import_str}.{module} as {module}\n")
+                    f.close()
     print("Done processing all mechanical stubs.")
 
 

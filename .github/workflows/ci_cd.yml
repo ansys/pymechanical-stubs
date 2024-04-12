@@ -13,7 +13,7 @@ env:
   PYMECHANICAL_PORT: 10000  # default won't work on GitHub runners
   PYMECHANICAL_START_INSTANCE: FALSE
   DOCKER_PACKAGE: ghcr.io/ansys/mechanical
-  DOCKER_IMAGE_VERSION: 23.1.0
+  DOCKER_IMAGE_VERSION: 23.2.0
   DOCKER_MECH_CONTAINER_NAME: mechanical
   MAIN_PYTHON_VERSION: '3.10'
   PACKAGE_NAME: ansys-mechanical-stubs
@@ -36,28 +36,30 @@ jobs:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
   doc-style:
-     name: Documentation Style Check
-     runs-on: ubuntu-latest
-     steps:
-       - name: PyAnsys documentation style checks
-         uses: ansys/actions/doc-style@v4
-         with:
-           vale-config: package/doc/.vale.ini
-           token: ${{ secrets.GITHUB_TOKEN }}
+    name: Documentation Style Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: PyAnsys documentation style checks
+        uses: ansys/actions/doc-style@v4
+        with:
+          vale-config: doc/.vale.ini
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   doc-build:
     name: Create docstrings
-    runs-on: ubuntu-latest
+    needs: [style, doc-style]
+    runs-on: ${{ matrix.os }}
     container:
-      image: ghcr.io/ansys/mechanical:23.2.0
+      image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
       options: --entrypoint /bin/bash
     strategy:
-      max-parallel: 2
-      fail-fast: false
       matrix:
-        python-version: ['3.10']
-    needs: [style, doc-style]
-
+        os: [ubuntu-latest]
+        versions: [
+          { image: '23.2.0', v: 'v232' },
+          # { image: '24.1.0', v: 'v241' }
+        ]
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
       - name: Install Git and checkout project
         uses: actions/checkout@v3
@@ -65,27 +67,42 @@ jobs:
       - name: Install dependencies
         run: |
           apt update
+          apt install --reinstall ca-certificates
+          apt install software-properties-common -y
+          add-apt-repository ppa:deadsnakes/ppa -y
+          apt install python${{ matrix.python-version }} -y
+          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+          apt install python${{ matrix.python-version }}-venv -y
+          python -m ensurepip --default-pip
+          pip install --upgrade pip
+          python --version
+          pip --version
+
+          apt update
           apt install -y lsb-release
-          apt install -y python3-pip
-          apt install -y python3.8-venv
           apt install -y mono-complete
-          pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          pip3 install --upgrade pip flit
-          pip3 install ansys-pythonnet
-          pip3 install sphinx
+          apt install -y make
+          apt-get install -y zip
+          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          pip install --upgrade pip flit pytz tzdata
+
+          mkdir -p src/ansys/mechanical/stubs
+          touch src/ansys/mechanical/stubs/__init__.py
+          pip install -e .[doc]
 
       - name: Run main.py
         env:
           LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
-          ANSYSCL232_DIR: /install/ansys_inc/v232/licensingclient
+          ANSYSCL232_DIR: /install/ansys_inc/${{ matrix.versions.v }}/licensingclient
           ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
           ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
           ANSYS_WORKBENCH_LOGGING: 0
           ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
-          AWP_ROOTDV_DEV: /install/ansys_inc/v232
+          AWP_ROOTDV_DEV: /install/ansys_inc/${{ matrix.versions.v }}
           NUM_CORES: 1
         run: |
-          python3 main.py > results.txt
+          pip install ansys-pythonnet
+          python main.py > results.txt
         continue-on-error: True
 
       - name: Check main.py results
@@ -102,44 +119,89 @@ jobs:
             exit 1
           fi
 
-      - name: Install package
-        run: |
-          cd package && pip install -e .
-
       - name: Retrieve Mechanial version
         run: |
-          echo "MECHANICAL_VERSION=$(python3 -c 'from Ansys import __version__; print(__version__)')" >> $GITHUB_ENV
-          echo "Mechanical version is: $(python3 -c "from Ansys import __version__; print(__version__)")"
-        id: version
+          pip install -e .
+          echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
+          echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
-      - name: Cache docs build directory
-        uses: actions/cache@v3
-        with:
-          path: package/doc/_build
-          key: doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}-${{ github.sha }}
-          restore-keys: |
-            doc-build-v${{ env.RESET_DOC_BUILD_CACHE }}-${{ env.MECHANICAL_VERSION }}
-
-      - name: Create Sphinx Documentation
+      - name: Install build and twine, and build dist artifacts
         run: |
-          cd ./package/doc && make html
+          # This and the next step are the same as the build-library action
+          python -m pip install build twine
+          python -m build && python -m twine check dist/*
+
+      - name: "Upload distribution artifacts to GitHub artifacts"
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PACKAGE_NAME }}-artifacts
+          path: dist/
+          retention-days: 7
+
+      - name: Install package and create wheelhouse
+        run: |
+          python -m pip install .
+          python -m pip install importlib-metadata
+          python -m pip wheel . -w wheelhouse
+
+      - name: "Compress the wheelhouse"
+        uses: vimtor/action-zip@v1.1
+        with:
+          files: wheelhouse
+          dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
+
+      - name: "Upload the wheelhouse files"
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}
+          path: wheelhouse/*
+          retention-days: 7
+
+      # - name: Create Sphinx documentation
+      #   run: |
+      #     apt-get install git -y
+      #     sphinx-build -M markdown doc/source doc/_build
+
+      # - name: Upload Markdown Documentation
+      #   uses: actions/upload-artifact@v3
+      #   if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      #   with:
+      #     name: documentation-md-${{ matrix.versions.image }}
+      #     path: doc/_build/markdown
+      #     retention-days: 7
+
+      - name: Create Sphinx documentation
+        run: |
+          apt-get install git -y
+          make -C doc html
+
+      - name: Upload HTML Documentation
+        uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-html-${{ matrix.versions.image }}
+          path: doc/_build/html
+          retention-days: 7
 
       - name: Generate needed files for deploying pages
         run: |
-          touch package/doc/_build/html/.nojekyll
-          echo ${{ env.DOCUMENTATION_CNAME }} >> package/doc/_build/html/CNAME
+          touch .nojekyll CNAME
+          echo ${{ env.DOCUMENTATION_CNAME }} >> CNAME
 
       - name: Upload HTML Documentation
         uses: actions/upload-artifact@v3
         with:
-          name: documentation-html
-          path: package/doc/_build/html
+          name: documentation-html-${{ matrix.versions.image }}
+          path: doc/_build/html
           retention-days: 7
 
   doc-deploy:
     name: Documentation deploy
     runs-on: ubuntu-latest
     needs: [doc-build]
+    strategy:
+      matrix:
+        mechanical-version: ['23.2.0'] # , 24.1.0']
 
     steps:
       - name: Checkout
@@ -148,8 +210,8 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: documentation-html
-          path: documentation-html
+          name: documentation-html-${{ matrix.mechanical-version }} # documentation-md-${{ matrix.mechanical-version }}
+          path: documentation-html-${{ matrix.mechanical-version }} # documentation-md-${{ matrix.mechanical-version }}
 
       - name: List all files
         run: ls -R .
@@ -160,6 +222,88 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: documentation-html/
+          folder: documentation-html-${{ matrix.mechanical-version }}/ # documentation-md-${{ matrix.mechanical-version }}/
           clean: true
           single-commit: true
+
+  doc-deploy-dev:
+    name: "Deploy development documentation"
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: doc-build
+    steps:
+      - name: "Deploy development documentation"
+        uses: ansys/actions/doc-deploy-dev@v4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  doc-deploy-stable:
+    name: "Deploy stable documentation"
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+    runs-on: ubuntu-latest
+    needs: doc-deploy-dev
+    steps:
+      - name: "Deploy stable documentation"
+        uses: ansys/actions/doc-deploy-stable@v4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  doc-deploy-index:
+    name: "Index the documentation and scrap using PyMeilisearch"
+    runs-on: ubuntu-latest
+    needs: doc-deploy-dev
+    if: github.event_name == 'push'
+    steps:
+      - name: Scrape the stable documentation to PyMeilisearch
+        run: |
+          VERSION=$(python -c "from ansys.mechanical.stubs import __version__; print('.'.join(__version__.split('.')[:2]))")
+          VERSION_MEILI=$(python -c "from ansys.mechanical.stubs import __version__; print('-'.join(__version__.split('.')[:2]))")
+          echo "Calculated VERSION: $VERSION"
+          echo "Calculated VERSION_MEILI: $VERSION_MEILI"
+
+      - name: "Deploy the latest documentation index"
+        uses: ansys/actions/doc-deploy-index@v4.1
+        with:
+          cname: "scripting.mechanical.docs.pyansys.com/version/$VERSION"
+          index-name: "<index-name>v$VERSION_MEILI"
+          host-url: "<meilisearch-host-url>"
+          api-key: ${{ secrets.MEILISEARCH_API_KEY }}
+
+  release-pypi-private:
+    name: "Release to the private PyPI repository"
+    runs-on: ubuntu-latest
+    needs: [doc-build]
+    steps:
+      - name: "Release to the private PyPI repository"
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+        uses: ansys/actions/release-pypi-private@v4
+        with:
+          library-name: ${{ env.PACKAGE_NAME }}
+          twine-username: "__token__"
+          twine-token: ${{ secrets.PYANSYS_PYPI_PRIVATE_PAT }}
+
+  release-pypi-public:
+    name: "Release to the public PyPI repository"
+    runs-on: ubuntu-latest
+    needs: [release-pypi-private]
+    steps:
+      - name: "Release to the public PyPI repository"
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+        uses: ansys/actions/release-pypi-public@v4
+        with:
+          library-name: ${{ env.PACKAGE_NAME }}
+          twine-username: "__token__"
+          twine-token: ${{ secrets.PYPI_TOKEN }}
+
+  release-github:
+    name: "Release to GitHub"
+    runs-on: ubuntu-latest
+    needs: [release-pypi-public]
+    steps:
+      - name: "Release to GitHub"
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+        uses: ansys/actions/release-github@v4
+        with:
+          library-name: ${{ env.PACKAGE_NAME }}
