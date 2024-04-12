@@ -145,7 +145,7 @@ jobs:
           python -m pip wheel . -w wheelhouse
 
       - name: "Compress the wheelhouse"
-        uses: vimtor/action-zip@v1.1
+        uses: vimtor/action-zip@v1.2
         with:
           files: wheelhouse
           dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
