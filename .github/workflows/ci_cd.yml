@@ -208,7 +208,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: documentation-html-${{ matrix.mechanical-version }} # documentation-md-${{ matrix.mechanical-version }}
           path: documentation-html-${{ matrix.mechanical-version }} # documentation-md-${{ matrix.mechanical-version }}
