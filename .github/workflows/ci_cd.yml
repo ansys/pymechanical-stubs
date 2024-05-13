@@ -98,6 +98,9 @@ jobs:
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
           pip install .[doc] 2> results.txt
+
+          echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
+          echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
         continue-on-error: True
 
       - name: Check stubs were generated
@@ -114,20 +117,20 @@ jobs:
             exit 1
           fi
 
-      - name: Retrieve Mechanial version
-        env:
-          LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
-          ANSYSCL232_DIR: /install/ansys_inc/${{ matrix.versions.v }}/licensingclient
-          ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
-          ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
-          ANSYS_WORKBENCH_LOGGING: 0
-          ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
-          AWP_ROOTDV_DEV: /install/ansys_inc/${{ matrix.versions.v }}
-          NUM_CORES: 1
-        run: |
-          pip install . 2> results.txt
-          echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
-          echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
+      # - name: Retrieve Mechanial version
+      #   env:
+      #     LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
+      #     ANSYSCL232_DIR: /install/ansys_inc/${{ matrix.versions.v }}/licensingclient
+      #     ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
+      #     ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
+      #     ANSYS_WORKBENCH_LOGGING: 0
+      #     ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
+      #     AWP_ROOTDV_DEV: /install/ansys_inc/${{ matrix.versions.v }}
+      #     NUM_CORES: 1
+      #   run: |
+      #     pip install . 2> results.txt
+      #     echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
+      #     echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
       - name: Install build and twine, and build dist artifacts
         run: |
