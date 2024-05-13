@@ -65,6 +65,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies
+        env:
+          LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
+          ANSYSCL232_DIR: /install/ansys_inc/${{ matrix.versions.v }}/licensingclient
+          ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
+          ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
+          ANSYS_WORKBENCH_LOGGING: 0
+          ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
+          AWP_ROOTDV_DEV: /install/ansys_inc/${{ matrix.versions.v }}
+          NUM_CORES: 1
         run: |
           apt update
           apt install --reinstall ca-certificates
@@ -84,28 +93,14 @@ jobs:
           apt install -y make
           apt-get install -y zip
           pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          pip install --upgrade pip flit pytz tzdata
+          pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
-          pip install -e .[doc]
-
-      - name: Run main.py
-        env:
-          LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
-          ANSYSCL232_DIR: /install/ansys_inc/${{ matrix.versions.v }}/licensingclient
-          ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
-          ANSYS_WORKBENCH_LOGGING_CONSOLE: 0
-          ANSYS_WORKBENCH_LOGGING: 0
-          ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
-          AWP_ROOTDV_DEV: /install/ansys_inc/${{ matrix.versions.v }}
-          NUM_CORES: 1
-        run: |
-          pip install ansys-pythonnet
-          python main.py > results.txt
+          pip install .[doc] > results.txt
         continue-on-error: True
 
-      - name: Check main.py results
+      - name: Check stubs were generated
         run: |
           cat results.txt
 
@@ -121,7 +116,7 @@ jobs:
 
       - name: Retrieve Mechanial version
         run: |
-          pip install -e .
+          pip install .
           echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
           echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
