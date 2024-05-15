@@ -83,7 +83,7 @@ def is_type_published(mod_type: "System.RuntimeType"):
     return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
 
 
-def make(outdir, ASSEMBLIES):
+def make(base_dir, outdir, ASSEMBLIES):
     """
     Makes __init__.py files in src/ansys/mechanical/stubs, generates
     classes, properties, and methods with their docstrings from assembly files from the
@@ -149,7 +149,7 @@ from .Ansys import *
 
             if "__pycache__" not in init_path:
                 module_list = []
-                import_str = full_path.replace(os.sep, ".").replace("src.", "")
+                import_str = full_path.replace(os.path.join(base_dir, "src", ""), "").replace(os.sep, ".")
                 [
                     module_list.append(os.path.basename(dir.path))
                     for dir in os.scandir(os.path.dirname(init_path))
@@ -203,8 +203,8 @@ def main():
     CLEAN = False
 
     # Path in which to generate the __init__.py files
-    # outdir = pathlib.Path(__file__).parent.parent / "src" / "ansys" / "mechanical" / "stubs"
-    outdir = pathlib.Path(__file__).parent.parent / "ansys" / "mechanical" / "stubs"
+    base_dir = pathlib.Path(__file__).parent.parent.parent
+    outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -219,10 +219,14 @@ def main():
     resolve()
 
     if MAKE:
-        make(outdir, ASSEMBLIES)
+        make(base_dir, outdir, ASSEMBLIES)
 
     if MINIFY:
         minify()
 
     if CLEAN:
         clean(outdir)
+
+
+if __name__ == '__main__':
+    main()
