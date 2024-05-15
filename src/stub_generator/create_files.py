@@ -106,7 +106,10 @@ def make(base_dir, outdir, ASSEMBLIES):
     outdir.mkdir(parents=True, exist_ok=True)
 
     for assembly in ASSEMBLIES:
-        generate_content.make(outdir, assembly, type_filter=is_type_published)
+        try:
+            generate_content.make(outdir, assembly, type_filter=is_type_published)
+        except Exception as e:
+            print(e)
 
     with open(os.path.join(outdir, "__init__.py"), "w") as f:
         f.write(
