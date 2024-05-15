@@ -95,7 +95,6 @@ jobs:
           apt-get install -y zip
           pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip install --upgrade pip flit pytz tzdata ansys-pythonnet
-          pip install -e .[doc]
 
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
@@ -179,6 +178,7 @@ jobs:
       - name: Create Sphinx documentation
         run: |
           apt-get install git -y
+          pip install -e .[doc]
           make -C doc html
 
       - name: Upload HTML Documentation
