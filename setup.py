@@ -30,6 +30,7 @@ class PostInstallCommand(install):
         install.run(self)
         main()
 
+
 # Get the long description from the README file
 HERE = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(HERE, "README.rst"), encoding="utf-8") as f:
