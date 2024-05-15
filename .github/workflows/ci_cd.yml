@@ -135,7 +135,7 @@ jobs:
       - name: "Upload distribution artifacts to GitHub artifacts"
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.PACKAGE_NAME }}-artifacts
+          name: ${{ env.PACKAGE_NAME }}-artifacts-v${{ matrix.versions.version }}
           path: dist/
           retention-days: 7
 
