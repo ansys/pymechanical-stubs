@@ -556,13 +556,17 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     assembly = clr.AddReference(assembly_name)
     # if type_filter is not None:
     # logging.info(f"   Using a type_filter: {str(type_filter)}")
-    namespaces = get_namespaces(assembly, type_filter)
-    dump_types(namespaces)
-    doc = get_doc(assembly)
-    # logging.info(f"    {len(namespaces.items())} namespaces")
-    for namespace, mod_types in namespaces.items():
-        if "DesignModeler" not in namespace:
-            logging.info(f"Processing {namespace}")
-            # logging.info(f"   {len(namespaces.items())} namespaces")
-            write_module(namespace, mod_types, doc, outdir, type_filter)
-            # logging.info(f"Done processing {namespace}")
+    try:
+        namespaces = get_namespaces(assembly, type_filter)
+        dump_types(namespaces)
+        doc = get_doc(assembly)
+        # logging.info(f"    {len(namespaces.items())} namespaces")
+        for namespace, mod_types in namespaces.items():
+            if "DesignModeler" not in namespace:
+                logging.info(f"Processing {namespace}")
+                # logging.info(f"   {len(namespaces.items())} namespaces")
+                write_module(namespace, mod_types, doc, outdir, type_filter)
+                # logging.info(f"Done processing {namespace}")
+    except Exception as e:
+        print(e)
+        print("EXCEPTION!!")
