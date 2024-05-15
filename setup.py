@@ -8,7 +8,7 @@ from setuptools import find_namespace_packages, setup
 from setuptools.command.develop import develop
 from setuptools.command.install import install
 
-SCRIPT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stub_generator")
+SCRIPT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "stub_generator")
 
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
@@ -29,7 +29,6 @@ class PostInstallCommand(install):
     def run(self):
         install.run(self)
         main()
-
 
 # Get the long description from the README file
 HERE = os.path.abspath(os.path.dirname(__file__))

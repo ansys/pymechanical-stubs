@@ -180,7 +180,8 @@ def main():
     CLEAN = False
 
     # Path in which to generate the __init__.py files
-    outdir = pathlib.Path(__file__).parent.parent / "src" / "ansys" / "mechanical" / "stubs"
+    # outdir = pathlib.Path(__file__).parent.parent / "src" / "ansys" / "mechanical" / "stubs"
+    outdir = pathlib.Path(__file__).parent.parent / "ansys" / "mechanical" / "stubs"
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
