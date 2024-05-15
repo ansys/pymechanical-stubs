@@ -149,7 +149,9 @@ from .Ansys import *
 
             if "__pycache__" not in init_path:
                 module_list = []
-                import_str = full_path.replace(os.path.join(base_dir, "src", ""), "").replace(os.sep, ".")
+                import_str = full_path.replace(os.path.join(base_dir, "src", ""), "").replace(
+                    os.sep, "."
+                )
                 [
                     module_list.append(os.path.basename(dir.path))
                     for dir in os.scandir(os.path.dirname(init_path))
@@ -228,5 +230,5 @@ def main():
         clean(outdir)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
