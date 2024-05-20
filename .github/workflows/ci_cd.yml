@@ -169,9 +169,7 @@ jobs:
 
       - name: Create Markdown documentation
         run: |
-          mkdir -p doc/_build/markdown
-          touch doc/_build/markdown/file.md
-          # sphinx-build -M markdown doc/source doc/_build
+          sphinx-build -M markdown doc/source doc/_build
 
       - name: Upload Markdown Documentation
         uses: actions/upload-artifact@v3
@@ -181,11 +179,40 @@ jobs:
           path: doc/_build/markdown
           retention-days: 7
 
+      - name: Create Output Directory
+        run: |
+          mkdir -p output
+
+      - name: Clean ID in first row
+        run: |
+          python scripts/01-clean-id.py --input_folder doc/_build/markdown --output_folder output
+
+      - name: Clean Empty Rows
+        run: |
+          python scripts/02-clean-empty-row.py --input_folder output
+
+      # - name: Create Table of Contents
+      #   run: |
+      #     # python scripts/03-create-toc-from-html-mechanical.py --input_folder output
+
+      - name: Add header to tables
+        run: |
+          python scripts/04-add-header-to-tables.py --input_file output/toc.yml --output_file output/toc.yml
+
+      - name: Remove links in heading
+        run: |
+          python scripts/05-remove-link-in-heading.py --input_file output/toc.yml --output_file output/toc.yml
+
+      - name: Upload to GitHub Artifacts
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-markdown-files-${{ matrix.versions.image }}
+          path: output/
+
       - name: Create Sphinx documentation
         run: |
-          mkdir -p doc/_build/html
-          touch doc/_build/html/file.html
-          # make -C doc html
+          make -C doc html
 
       - name: Upload Sphinx HTML Documentation
         uses: actions/upload-artifact@v3
@@ -200,50 +227,13 @@ jobs:
           touch .nojekyll CNAME
           echo ${{ env.DOCUMENTATION_CNAME }} >> CNAME
 
-      # - name: Create Output Directory
-      #   run: |
-      #     # mkdir -p ${{ github.event.inputs.output_path }}
-      #     mkdir -p output
-
-      # - name: Clean ID in first row
-      #   run: |
-      #     python scripts/01-clean-id.py --input_folder ${{ github.event.inputs.folder_path }} --output_folder ${{ github.event.inputs.output_path }}
-      #     # python scripts/01-clean-id.py --input_folder markdown/input/rigid --output_folder output
-
-      # - name: Clean Empty Rows
-      #   run: |
-      #     python scripts/02-clean-empty-row.py --input_folder ${{ github.event.inputs.output_path }}
-      #     # python scripts/02-clean-empty-row.py --input_folder output
-
-      # # - name: Create Table of Contents
-      # #   run: |
-      # #     python scripts/03-create-toc-from-html-mechanical.py --input_folder ${{ github.event.inputs.html_folder_path }}
-      # #     # python scripts/03-create-toc-from-html-mechanical.py --input_folder output
-
-      # - name: Add header to tables
-      #   run: |
-      #     python scripts/04-add-header-to-tables.py --input_folder ${{ github.event.inputs.output_path }}
-      #     # python scripts/04-add-header-to-tables.py --input_file output/toc.yml --output_file output/toc.yml
-
-      # - name: Remove links in heading
-      #   run: |
-      #     python scripts/05-remove-link-in-heading.py --input_folder ${{ github.event.inputs.output_path }}
-      #     # python scripts/05-remove-link-in-heading.py --input_file output/toc.yml --output_file output/toc.yml
-
-      # - name: Upload to GitHub Artifacts
-      #   if: matrix.python-version == env.MAIN_PYTHON_VERSION
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: processed-markdown-files-${{ matrix.versions.image }}
-      #     path: output/
-
   doc-deploy:
     name: Documentation deploy
     runs-on: ubuntu-latest
     needs: [doc-build]
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , 24.1.0']
+        mechanical-version: ['23.2.0' , '24.1.0']
 
     steps:
       - name: Checkout
@@ -275,7 +265,7 @@ jobs:
     needs: doc-build
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , 24.1.0']
+        mechanical-version: ['23.2.0' , '24.1.0']
     steps:
       - name: "Deploy development documentation"
         uses: ansys/actions/doc-deploy-dev@v4
@@ -291,7 +281,7 @@ jobs:
     needs: doc-deploy-dev
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , 24.1.0']
+        mechanical-version: ['23.2.0' , '24.1.0']
     steps:
       - name: "Deploy stable documentation"
         uses: ansys/actions/doc-deploy-stable@v4
@@ -307,7 +297,7 @@ jobs:
     if: github.event_name == 'push'
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , 24.1.0']
+        mechanical-version: ['23.2.0' , '24.1.0']
     steps:
       - name: Scrape the stable documentation to PyMeilisearch
         run: |

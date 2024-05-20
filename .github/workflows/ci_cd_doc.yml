@@ -114,23 +114,56 @@ jobs:
           echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV
           echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs import __version__; print(__version__)")"
 
-      - name: Create Sphinx documentation
+      - name: Install doc dependencies
         run: |
-          apt-get install git -y
+            apt-get install git -y
+            pip install -e .[doc]
+
+      - name: Create Markdown documentation
+        run: |
           sphinx-build -M markdown doc/source doc/_build
 
       - name: Upload Markdown Documentation
         uses: actions/upload-artifact@v3
         if: matrix.python-version == env.MAIN_PYTHON_VERSION
         with:
-          name: documentation-md-${{ matrix.versions.image }}
-          path: doc/_build/markdown
-          retention-days: 7
+            name: documentation-md-${{ matrix.versions.image }}
+            path: doc/_build/markdown
+            retention-days: 7
+
+      - name: Create Output Directory
+        run: |
+          mkdir -p output
+
+      - name: Clean ID in first row
+        run: |
+          python scripts/01-clean-id.py --input_folder doc/_build/markdown --output_folder output
+
+      - name: Clean Empty Rows
+        run: |
+          python scripts/02-clean-empty-row.py --input_folder output
+
+    # - name: Create Table of Contents
+    #   run: |
+    #     # python scripts/03-create-toc-from-html-mechanical.py --input_folder output
+
+      - name: Add header to tables
+        run: |
+          python scripts/04-add-header-to-tables.py --input_file output/toc.yml --output_file output/toc.yml
+
+      - name: Remove links in heading
+        run: |
+          python scripts/05-remove-link-in-heading.py --input_file output/toc.yml --output_file output/toc.yml
+
+      - name: Upload to GitHub Artifacts
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-markdown-files-${{ matrix.versions.image }}
+          path: output/
 
       - name: Create Sphinx documentation
         run: |
-          apt-get install git -y
-          pip install -e .[doc]
           make -C doc html
 
       - name: Upload HTML Documentation
