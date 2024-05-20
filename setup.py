@@ -89,6 +89,7 @@ setup(
             "jupyter_sphinx==0.5.3",
             "nbsphinx==0.9.3",
             "numpydoc==1.6.0",
+            "PyYAML==6.0.1",
             "Sphinx==7.2.6",
             "sphinx-autoapi==3.0.0",
             "sphinx-autodoc-typehints==1.25.3",

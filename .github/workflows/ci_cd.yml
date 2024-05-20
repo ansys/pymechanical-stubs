@@ -169,7 +169,8 @@ jobs:
 
       - name: Create Markdown documentation
         run: |
-          sphinx-build -M markdown doc/source doc/_build
+          mkdir -p doc/_build/markdown
+          # sphinx-build -M markdown doc/source doc/_build
 
       - name: Upload Markdown Documentation
         uses: actions/upload-artifact@v3
@@ -181,7 +182,8 @@ jobs:
 
       - name: Create Sphinx documentation
         run: |
-          make -C doc html
+          mkdir -p doc/_build/html
+          # make -C doc html
 
       - name: Upload Sphinx HTML Documentation
         uses: actions/upload-artifact@v3
@@ -195,6 +197,43 @@ jobs:
         run: |
           touch .nojekyll CNAME
           echo ${{ env.DOCUMENTATION_CNAME }} >> CNAME
+
+      # - name: Create Output Directory
+      #   run: |
+      #     # mkdir -p ${{ github.event.inputs.output_path }}
+      #     mkdir -p output
+
+      # - name: Clean ID in first row
+      #   run: |
+      #     python scripts/01-clean-id.py --input_folder ${{ github.event.inputs.folder_path }} --output_folder ${{ github.event.inputs.output_path }}
+      #     # python scripts/01-clean-id.py --input_folder markdown/input/rigid --output_folder output
+
+      # - name: Clean Empty Rows
+      #   run: |
+      #     python scripts/02-clean-empty-row.py --input_folder ${{ github.event.inputs.output_path }}
+      #     # python scripts/02-clean-empty-row.py --input_folder output
+
+      # # - name: Create Table of Contents
+      # #   run: |
+      # #     python scripts/03-create-toc-from-html-mechanical.py --input_folder ${{ github.event.inputs.html_folder_path }}
+      # #     # python scripts/03-create-toc-from-html-mechanical.py --input_folder output
+
+      # - name: Add header to tables
+      #   run: |
+      #     python scripts/04-add-header-to-tables.py --input_folder ${{ github.event.inputs.output_path }}
+      #     # python scripts/04-add-header-to-tables.py --input_file output/toc.yml --output_file output/toc.yml
+
+      # - name: Remove links in heading
+      #   run: |
+      #     python scripts/05-remove-link-in-heading.py --input_folder ${{ github.event.inputs.output_path }}
+      #     # python scripts/05-remove-link-in-heading.py --input_file output/toc.yml --output_file output/toc.yml
+
+      # - name: Upload to GitHub Artifacts
+      #   if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: processed-markdown-files-${{ matrix.versions.image }}
+      #     path: output/
 
   doc-deploy:
     name: Documentation deploy
@@ -211,8 +250,8 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: documentation-html-${{ matrix.mechanical-version }} # documentation-md-${{ matrix.mechanical-version }}
-          path: documentation-html-${{ matrix.mechanical-version }} # documentation-md-${{ matrix.mechanical-version }}
+          name: 'documentation-html-${{ matrix.mechanical-version }}'
+          path: 'documentation-html-${{ matrix.mechanical-version }}'
 
       - name: List all files
         run: ls -R .
@@ -223,7 +262,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: documentation-html-${{ matrix.mechanical-version }}/ # documentation-md-${{ matrix.mechanical-version }}/
+          folder: 'documentation-html-${{ matrix.mechanical-version }}/'
           clean: true
           single-commit: true
 
@@ -241,7 +280,7 @@ jobs:
         with:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          doc-artifact-name: documentation-html-${{ matrix.mechanical-version }}
+          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
 
   doc-deploy-stable:
     name: "Deploy stable documentation"
@@ -257,7 +296,7 @@ jobs:
         with:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          doc-artifact-name: documentation-html-${{ matrix.mechanical-version }}
+          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
 
   doc-deploy-index:
     name: "Index the documentation and scrap using PyMeilisearch"
@@ -282,7 +321,7 @@ jobs:
           index-name: "<index-name>v$VERSION_MEILI"
           host-url: "<meilisearch-host-url>"
           api-key: ${{ secrets.MEILISEARCH_API_KEY }}
-          doc-artifact-name: documentation-html-${{ matrix.mechanical-version }}
+          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
 
   release-pypi-private:
     name: "Release to the private PyPI repository"
