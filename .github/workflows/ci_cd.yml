@@ -103,8 +103,6 @@ jobs:
 
       - name: Check stubs were generated
         run: |
-          cat results.txt
-
           # Check if failure occurred
           output=$(grep -c "Done processing all mechanical stubs" results.txt)
           if [ $output -eq 1 ]; then
@@ -134,8 +132,6 @@ jobs:
 
       - name: Check stubs were generated
         run: |
-          cat build_results.txt
-
           # Check if failure occurred
           output=$(grep -c "Done processing all mechanical stubs" build_results.txt)
           if [ $output -eq 1 ]; then
@@ -165,8 +161,6 @@ jobs:
 
       - name: Check stubs were generated
         run: |
-          cat wheel_results.txt
-
           # Check if failure occurred
           output=$(grep -c "Done processing all mechanical stubs" wheel_results.txt)
           if [ $output -eq 1 ]; then
