@@ -98,11 +98,13 @@ jobs:
 
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
-          pip install . > results.txt
+          pip install . 2> results.txt
         continue-on-error: True
 
       - name: Check stubs were generated
         run: |
+          cat results.txt
+
           # Check if failure occurred
           output=$(grep -c "Done processing all mechanical stubs" results.txt)
           if [ $output -eq 1 ]; then
@@ -126,21 +128,9 @@ jobs:
         run: |
           # This and the next step are the same as the build-library action
           python -m pip install build twine
-          python -m build > build_results.txt
+          python -m build 2> build_results.txt
           python -m twine check dist/*
         continue-on-error: True
-
-      - name: Check stubs were generated
-        run: |
-          # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" build_results.txt)
-          if [ $output -eq 1 ]; then
-            echo "All mechanical stubs were created"
-            exit 0
-          else
-            echo "There was an issue creating the mechanical stubs"
-            exit 1
-          fi
 
       - name: "Upload distribution artifacts to GitHub artifacts"
         uses: actions/upload-artifact@v4
@@ -156,20 +146,8 @@ jobs:
         run: |
           python -m pip install -e .
           python -m pip install importlib-metadata
-          python -m pip wheel . -w wheelhouse > wheel_results.txt
+          python -m pip wheel . -w wheelhouse 2> wheel_results.txt
         continue-on-error: True
-
-      - name: Check stubs were generated
-        run: |
-          # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" wheel_results.txt)
-          if [ $output -eq 1 ]; then
-            echo "All mechanical stubs were created"
-            exit 0
-          else
-            echo "There was an issue creating the mechanical stubs"
-            exit 1
-          fi
 
       - name: "Compress the wheelhouse"
         uses: vimtor/action-zip@v1.1
