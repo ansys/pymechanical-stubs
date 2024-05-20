@@ -36,8 +36,8 @@ jobs:
 
         - name: Clean ID in first row
           run: |
-            python scripts/01-clean-id.py --input_folder ${{ github.event.inputs.folder_path }} --output_folder ${{ github.event.inputs.output_path }}
-            # python scripts/01-clean-id.py --input_folder markdown/input/rigid --output_folder output
+            python scripts/01-clean-id.py --input_folder ${{ github.event.inputs.folder_path }}
+            # python scripts/01-clean-id.py --input_folder markdown/input/rigid
 
         - name: Clean Empty Rows
           run: |
@@ -52,12 +52,12 @@ jobs:
         - name: Add header to tables
           run: |
             python scripts/04-add-header-to-tables.py --input_folder ${{ github.event.inputs.output_path }}
-            # python scripts/04-add-header-to-tables.py --input_file output/toc.yml --output_file output/toc.yml
+            # python scripts/04-add-header-to-tables.py --input_file output/toc.yml
 
         - name: Remove links in heading
           run: |
             python scripts/05-remove-link-in-heading.py --input_folder ${{ github.event.inputs.output_path }}
-            # python scripts/05-remove-link-in-heading.py --input_file output/toc.yml --output_file output/toc.yml
+            # python scripts/05-remove-link-in-heading.py --input_file output/toc.yml
 
         - name: Upload to GitHub Artifacts
           uses: actions/upload-artifact@v4
