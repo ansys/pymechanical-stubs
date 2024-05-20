@@ -162,9 +162,13 @@ jobs:
           path: wheelhouse/*
           retention-days: 7
 
-      - name: Create Markdown documentation
+      - name: Install doc dependencies
         run: |
           apt-get install git -y
+          pip install -e .[doc]
+
+      - name: Create Markdown documentation
+        run: |
           sphinx-build -M markdown doc/source doc/_build
 
       - name: Upload Markdown Documentation
@@ -177,8 +181,6 @@ jobs:
 
       - name: Create Sphinx documentation
         run: |
-          apt-get install git -y
-          pip install -e .[doc]
           make -C doc html
 
       - name: Upload Sphinx HTML Documentation
