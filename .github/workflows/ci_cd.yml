@@ -170,6 +170,7 @@ jobs:
       - name: Create Markdown documentation
         run: |
           mkdir -p doc/_build/markdown
+          touch doc/_build/markdown/file.md
           # sphinx-build -M markdown doc/source doc/_build
 
       - name: Upload Markdown Documentation
@@ -183,6 +184,7 @@ jobs:
       - name: Create Sphinx documentation
         run: |
           mkdir -p doc/_build/html
+          touch doc/_build/html/file.html
           # make -C doc html
 
       - name: Upload Sphinx HTML Documentation
