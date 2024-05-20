@@ -77,10 +77,13 @@ def is_type_published(mod_type: "System.RuntimeType"):
     # TODO - should this filter just get applied by the sphinx system as opposed to the stub generator?
     #        that way all the System stuff we depend on could also get generated (like in the iron-python-stubs
     #        project).
-    attrs = mod_type.GetCustomAttributes(True)
-    if len(attrs) == 0:
-        return False
-    return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
+    try:
+        attrs = mod_type.GetCustomAttributes(True)
+        if len(attrs) == 0:
+            return False
+        return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
+    except Exception as e:
+        print(e)
 
 
 def make(base_dir, outdir, ASSEMBLIES):
