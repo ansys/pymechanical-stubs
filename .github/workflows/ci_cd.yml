@@ -191,9 +191,9 @@ jobs:
         run: |
           python scripts/02-clean-empty-row.py --input_folder output
 
-      # - name: Create Table of Contents
-      #   run: |
-      #     # python scripts/03-create-toc-from-html-mechanical.py --input_folder output
+      - name: Create Table of Contents
+        run: |
+          python scripts/03-create-toc-from-html-mechanical.py doc/_build/html doc/_build/html/index.html
 
       - name: Add header to tables
         run: |
