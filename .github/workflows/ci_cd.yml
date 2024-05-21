@@ -179,6 +179,18 @@ jobs:
           path: doc/_build/markdown
           retention-days: 7
 
+      - name: Create Sphinx documentation
+        run: |
+          make -C doc html
+
+      - name: Upload Sphinx HTML Documentation
+        uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-html-${{ matrix.versions.image }}
+          path: doc/_build/html
+          retention-days: 7
+
       - name: Create Output Directory
         run: |
           mkdir -p output
@@ -209,18 +221,6 @@ jobs:
         with:
           name: processed-markdown-files-${{ matrix.versions.image }}
           path: output/
-
-      - name: Create Sphinx documentation
-        run: |
-          make -C doc html
-
-      - name: Upload Sphinx HTML Documentation
-        uses: actions/upload-artifact@v3
-        if: matrix.python-version == env.MAIN_PYTHON_VERSION
-        with:
-          name: documentation-html-${{ matrix.versions.image }}
-          path: doc/_build/html
-          retention-days: 7
 
       - name: Generate needed files for deploying pages
         run: |
