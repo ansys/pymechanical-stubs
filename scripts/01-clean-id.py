@@ -2,6 +2,8 @@ import argparse
 import os
 import re
 
+DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
+
 
 def remove_links_from_markdown_files(directory_path):
     # Define the regular expression pattern to match <a id="..."></a> tags at the beginning of the file
@@ -31,7 +33,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Clean string starting with #id in Markdown files."
     )
-    parser.add_argument("--input_folder", help="Path to the folder of Markdown files")
+    parser.add_argument(
+        "--input_folder",
+        type=str,
+        help="Path to the folder containing Markdown files",
+        default=DEFAULT_INPUT_FOLDER,
+    )
     args = parser.parse_args()
 
     folder_path = args.input_folder

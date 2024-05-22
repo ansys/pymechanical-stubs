@@ -3,6 +3,8 @@ import os
 import pathlib
 import re
 
+DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
+
 
 def remove_empty_rows_at_top_and_before_heading1(directory_path):
     # Define the regular expression pattern to match empty rows at the top and before Heading 1
@@ -32,7 +34,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Clean empty rows before heading 1 in Markdown files."
     )
-    parser.add_argument("--input_folder", help="Path to the folder of Markdown files")
+    parser.add_argument(
+        "--input_folder",
+        type=str,
+        help="Path to the folder containing Markdown files",
+        default=DEFAULT_INPUT_FOLDER,
+    )
     args = parser.parse_args()
 
     folder_path = args.input_folder

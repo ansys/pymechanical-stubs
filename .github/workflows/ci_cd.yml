@@ -193,11 +193,11 @@ jobs:
 
       - name: Clean ID in first row
         run: |
-          python scripts/01-clean-id.py --input_folder doc/_build/markdown
+          python scripts/01-clean-id.py
 
       - name: Clean Empty Rows
         run: |
-          python scripts/02-clean-empty-row.py --input_folder doc/_build/markdown
+          python scripts/02-clean-empty-row.py
 
       - name: Create Table of Contents
         run: |
@@ -209,7 +209,7 @@ jobs:
 
       - name: Remove links in heading
         run: |
-          python scripts/05-remove-link-in-heading.py --input_file output/toc.yml
+          python scripts/05-remove-link-in-heading.py
 
       - name: Upload to GitHub Artifacts
         if: matrix.python-version == env.MAIN_PYTHON_VERSION
