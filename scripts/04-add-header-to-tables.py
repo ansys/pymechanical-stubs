@@ -2,6 +2,8 @@ import argparse
 import os
 import sys
 
+DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
+
 
 def remove_column_table(input_table):
     # Split input table into rows
@@ -121,16 +123,14 @@ def process_md_files(folder_path):
 
 
 if __name__ == "__main__":
-    # Check if the folder path is provided
-    if len(sys.argv) != 2:
-        print("Usage: python script_name.py 'folder_path'")
-        sys.exit(1)
-
-    # Get the folder path from command line argument
-    # folder_path = sys.argv[1]
-
     parser = argparse.ArgumentParser(description="Add headers to tables in Markdown files.")
-    parser.add_argument("--input_folder", help="Path to the folder of Markdown files")
+    parser.add_argument(
+        "--input_folder",
+        type=str,
+        help="Path to the folder containing Markdown files",
+        default=DEFAULT_INPUT_FOLDER,
+    )
+
     args = parser.parse_args()
 
     folder_path = args.input_folder

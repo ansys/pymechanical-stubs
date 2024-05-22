@@ -1,5 +1,6 @@
 import argparse
 import os
+import pathlib
 import re
 
 
@@ -35,5 +36,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     folder_path = args.input_folder
+    repo_dir = pathlib.Path(__file__).parent.parent
+    full_dir_path = os.path.join(repo_dir, folder_path)
+
     # Replace 'your_directory' with the actual path to the directory containing your Markdown files
     remove_empty_rows_at_top_and_before_heading1(folder_path)

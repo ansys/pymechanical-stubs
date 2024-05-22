@@ -191,25 +191,21 @@ jobs:
           path: doc/_build/html
           retention-days: 7
 
-      - name: Create Output Directory
-        run: |
-          mkdir -p output
-
       - name: Clean ID in first row
         run: |
           python scripts/01-clean-id.py --input_folder doc/_build/markdown
 
       - name: Clean Empty Rows
         run: |
-          python scripts/02-clean-empty-row.py --input_folder output
+          python scripts/02-clean-empty-row.py --input_folder doc/_build/markdown
 
       - name: Create Table of Contents
         run: |
-          python scripts/03-create-toc-from-html-mechanical.py doc/_build/html doc/_build/html/index.html
+          python scripts/03-create-toc-from-html-mechanical.py
 
       - name: Add header to tables
         run: |
-          python scripts/04-add-header-to-tables.py --input_file output/toc.yml
+          python scripts/04-add-header-to-tables.py
 
       - name: Remove links in heading
         run: |

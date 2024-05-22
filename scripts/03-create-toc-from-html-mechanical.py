@@ -1,8 +1,14 @@
+import argparse
 import os
+import pathlib
 import sys
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
+
+DEFAULT_API_FOLDER = "doc/_build/html/api"
+DEFAULT_HTML_FILE = "index.html"
+DEFAULT_OUTPUT_FOLDER = "output"
 
 
 # This script must be run as follows: python script_name api index.html
@@ -67,14 +73,13 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
     return indented_items
 
 
-def create_toc_file(indented_items):
-    os.chdir("..")
+def create_toc_file(api_folder, indented_items):
     cnt = 0
     with open("toc.yml", "w", encoding="utf-8") as f:
         f.write("- name: Introduction\n")
         f.write("  href: index.md\n")
         f.write("- name: API reference\n")
-        f.write("  href: " + subpath + "/" + "index.md\n")
+        f.write("  href: " + api_folder + "/" + "index.md\n")
         f.write("  items: \n")
         for indentation, nav_item in indented_items:
             print(nav_item)
@@ -89,7 +94,7 @@ def create_toc_file(indented_items):
                     f.write(
                         "  " * indentation
                         + "  href: "
-                        + subpath
+                        + api_folder
                         + "/"
                         + nav_item["href"].replace("html", "md")
                         + "\n"
@@ -97,21 +102,51 @@ def create_toc_file(indented_items):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: python script.py <subpath> <index.html>")
+    parser = argparse.ArgumentParser(description="Create table of contents from html files.")
+    parser.add_argument(
+        "--api_folder",
+        type=str,
+        help="Path to the api folder.",
+        default=DEFAULT_API_FOLDER,
+    )
+    parser.add_argument(
+        "--output_folder",
+        type=str,
+        help="Name of the folder where toc.yml should be stored.",
+        default=DEFAULT_OUTPUT_FOLDER,
+    )
+    parser.add_argument(
+        "--html_file",
+        type=str,
+        help="Name of the html file to create the table of contents from.",
+        default=DEFAULT_HTML_FILE,
+    )
+    args = parser.parse_args()
+
+    api_folder = args.api_folder
+    html_file = args.html_file
+    output_folder = args.output_folder
+
+    repo_dir = pathlib.Path(__file__).parent.parent
+    full_file_path = os.path.join(repo_dir, api_folder, html_file)
+    full_dir_path = os.path.join(repo_dir, api_folder)
+
+    if not os.path.isfile(full_file_path):
+        print(f"Error: {full_file_path} does not exist.")
         sys.exit(1)
 
-    subpath = sys.argv[1]
-    html_file = sys.argv[2]
-
-    if not os.path.isfile(html_file):
-        print(f"Error: {html_file} does not exist.")
-        sys.exit(1)
-    print("HTML_PATH= ", subpath, "/", html_file)
-    os.chdir(subpath)
+    print(f"HTML_PATH={os.path.join(full_dir_path, html_file)}")
+    os.chdir(full_dir_path)
     html_content, base_dir = parse_index_html(html_file)
     nav_items = extract_nav_items(base_dir, html_content)
     indented_items = build_indented_items(nav_items, base_dir)
-    create_toc_file(indented_items)
+
+    output_folder_path = os.path.join(repo_dir, output_folder)
+    os.chdir(repo_dir)
+    if not os.path.isdir(output_folder_path):
+        os.mkdir(output_folder)
+
+    os.chdir(output_folder_path)
+    create_toc_file(api_folder, indented_items)
 
     print("toc.yml file created successfully!")

@@ -2,6 +2,8 @@ import argparse
 import os
 import re
 
+DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
+
 
 def process_markdown_file(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -24,7 +26,12 @@ def process_directory(directory):
 if __name__ == "__main__":
     # directory_path = input("Enter the path to the directory containing markdown files: ")
     parser = argparse.ArgumentParser(description="Remove links in heading if any.")
-    parser.add_argument("--input_folder", help="Path to the folder of Markdown files")
+    parser.add_argument(
+        "--input_folder",
+        type=str,
+        help="Path to the folder containing Markdown files",
+        default=DEFAULT_INPUT_FOLDER,
+    )
     args = parser.parse_args()
 
     folder_path = args.input_folder
