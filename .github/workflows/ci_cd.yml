@@ -43,7 +43,7 @@ jobs:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
   doc-style:
-    name: Documentation Style Check
+    name: Documentation style check
     runs-on: ubuntu-latest
     steps:
       - name: PyAnsys documentation style checks
@@ -53,7 +53,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
   doc-build:
-    name: Create docstrings
+    name: Create wheelhouse and documentation
     needs: [style, doc-style]
     runs-on: ${{ matrix.os }}
     container:
@@ -131,7 +131,7 @@ jobs:
           python -m twine check dist/*
         continue-on-error: True
 
-      - name: "Upload distribution artifacts to GitHub artifacts"
+      - name: Upload distribution artifacts to GitHub artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.PACKAGE_NAME }}-artifacts-v${{ matrix.versions.version }}
@@ -148,57 +148,41 @@ jobs:
           python -m pip wheel . -w wheelhouse 2> wheel_results.txt
         continue-on-error: True
 
-      - name: "Compress the wheelhouse"
+      - name: Compress the wheelhouse
         uses: vimtor/action-zip@v1.1
         with:
           files: wheelhouse
           dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
 
-      - name: "Upload the wheelhouse files"
+      - name: Upload the wheelhouse files
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}
           path: wheelhouse/*
           retention-days: 7
 
-      - name: Install doc dependencies
+      - name: Install documentation dependencies
         run: |
           apt-get install git -y
           pip install -e .[doc]
 
-      - name: Create Markdown documentation
+      - name: Create markdown documentation
         run: |
           sphinx-build -M markdown doc/source doc/_build
-
-      - name: Upload Markdown Documentation
-        uses: actions/upload-artifact@v3
-        if: matrix.python-version == env.MAIN_PYTHON_VERSION
-        with:
-          name: documentation-md-${{ matrix.versions.image }}
-          path: doc/_build/markdown
-          retention-days: 7
 
       - name: Create Sphinx documentation
         run: |
           make -C doc html
 
-      - name: Upload Sphinx HTML Documentation
-        uses: actions/upload-artifact@v3
-        if: matrix.python-version == env.MAIN_PYTHON_VERSION
-        with:
-          name: documentation-html-${{ matrix.versions.image }}
-          path: doc/_build/html
-          retention-days: 7
-
       - name: Clean ID in first row
         run: |
           python scripts/01-clean-id.py
 
-      - name: Clean Empty Rows
+      - name: Clean empty rows
         run: |
           python scripts/02-clean-empty-row.py
 
-      - name: Create Table of Contents
+      - name: Create table of contents
         run: |
           python scripts/03-create-toc-from-html-mechanical.py
 
@@ -214,8 +198,24 @@ jobs:
         if: matrix.python-version == env.MAIN_PYTHON_VERSION
         uses: actions/upload-artifact@v4
         with:
-          name: processed-markdown-files-${{ matrix.versions.image }}
+          name: toc-file-${{ matrix.versions.image }}
           path: output/
+
+      - name: Upload markdown documentation
+        uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-md-${{ matrix.versions.image }}
+          path: doc/_build/markdown
+          retention-days: 7
+
+      - name: Upload Sphinx HTML documentation
+        uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-html-${{ matrix.versions.image }}
+          path: doc/_build/html
+          retention-days: 7
 
       - name: Generate needed files for deploying pages
         run: |
@@ -234,7 +234,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download Artifacts
+      - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
           name: 'documentation-html-${{ matrix.mechanical-version }}'
