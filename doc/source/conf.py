@@ -7,7 +7,6 @@ from datetime import datetime
 import os
 from pathlib import Path
 
-from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     get_autoapi_templates_dir_relative_path,
@@ -16,13 +15,15 @@ from ansys_sphinx_theme import (
 )
 from sphinx.builders.latex import LaTeXBuilder
 
+from ansys.mechanical.stubs import __version__
+
 LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 # Project information
-project = "ansys-mechanical-scripting"
+project = "ansys-mechanical-stubs"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS, Inc."
 release = version = __version__
@@ -131,7 +132,7 @@ html_short_title = html_title = "Mechanical API Documentation"
 # specify the location of your github repo
 html_context = {
     "github_user": "ansys",
-    "github_repo": "mechanical-stubs",
+    "github_repo": "pymechanical-stubs",
     "github_version": "main",
     "doc_path": "doc/source",
 }
@@ -142,7 +143,7 @@ html_theme_options = {
         "version_match": switcher_version,
     },
     "check_switcher": False,
-    "github_url": "https://github.com/ansys/mechanical-stubs",
+    "github_url": "https://github.com/ansys/pymechanical-stubs",
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "collapse_navigation": True,
