@@ -98,13 +98,12 @@ jobs:
 
           mkdir -p src/ansys/mechanical/stubs
           touch src/ansys/mechanical/stubs/__init__.py
-          pip install . 2> results.txt
+          # Install library with -v to ensure stub_generator content is displayed
+          pip install . -v 2> results.txt
         continue-on-error: True
 
       - name: Check stubs were generated
         run: |
-          cat results.txt
-
           # Check if failure occurred
           output=$(grep -c "Done processing all mechanical stubs" results.txt)
           if [ $output -eq 1 ]; then
