@@ -114,15 +114,19 @@ def make(base_dir, outdir, ASSEMBLIES, str_version):
 
     with open(os.path.join(outdir, "__init__.py"), "w") as f:
         f.write(
-            f'''try:
+            f'''from stub_generator.create_files import get_version
+
+try:
     import importlib.metadata as importlib_metadata
 except ModuleNotFoundError:  # pragma: no cover
     import importlib_metadata  # type: ignore
 patch = importlib_metadata.version("ansys-mechanical-stubs")
 """Patch version for the ansys-mechanical-stubs package."""
 
+install_dir, version = get_version()
+
 # major, minor, patch
-version_info = {major}, {minor}, patch
+version_info = version[:-1], version[-1], patch
 """Mechanical version with patch version of ansys-mechanical-stubs."""
 
 # Format version
