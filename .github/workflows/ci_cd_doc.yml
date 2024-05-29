@@ -129,23 +129,23 @@ jobs:
 
       - name: Clean ID in first row
         run: |
-          python .github/workflow_scripts/01-clean-id.py
+          python scripts/01-clean-id.py
 
       - name: Clean empty rows
         run: |
-          python .github/workflow_scripts/02-clean-empty-row.py
+          python scripts/02-clean-empty-row.py
 
       - name: Create table of contents
         run: |
-          python .github/workflow_scripts/03-create-toc-from-html-mechanical.py
+          python scripts/03-create-toc-from-html-mechanical.py
 
       - name: Add header to tables
         run: |
-          python .github/workflow_scripts/04-add-header-to-tables.py
+          python scripts/04-add-header-to-tables.py
 
       - name: Remove links in heading
         run: |
-          python .github/workflow_scripts/05-remove-link-in-heading.py
+          python scripts/05-remove-link-in-heading.py
 
       - name: Upload to GitHub Artifacts
         if: matrix.python-version == env.MAIN_PYTHON_VERSION
