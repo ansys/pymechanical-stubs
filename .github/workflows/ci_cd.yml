@@ -63,7 +63,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         versions: [
-          { image: '23.2.0', version: '232' },
+          # { image: '23.2.0', version: '232' },
           { image: '24.1.0', version: '241' }
         ]
         python-version: ['3.10'] #, '3.11', '3.12']
@@ -230,7 +230,7 @@ jobs:
     needs: [doc-build]
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , '24.1.0']
+        mechanical-version: ['24.1.0'] # , ['23.2.0']
 
     steps:
       - name: Checkout
@@ -262,7 +262,7 @@ jobs:
     needs: doc-build
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , '24.1.0']
+        mechanical-version: ['24.1.0'] # , '23.2.0']
     steps:
       - name: "Deploy development documentation"
         uses: ansys/actions/doc-deploy-dev@v4
@@ -278,7 +278,7 @@ jobs:
     needs: doc-deploy-dev
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , '24.1.0']
+        mechanical-version: ['24.1.0'] # , '23.2.0']
     steps:
       - name: "Deploy stable documentation"
         uses: ansys/actions/doc-deploy-stable@v4
@@ -294,7 +294,7 @@ jobs:
     needs: doc-deploy-dev
     strategy:
       matrix:
-        mechanical-version: ['23.2.0' , '24.1.0']
+        mechanical-version: ['24.1.0'] # , '23.2.0']
     steps:
       - name: Scrape the stable documentation to PyMeilisearch
         run: |

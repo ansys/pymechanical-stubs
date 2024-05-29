@@ -20,6 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import argparse
 import logging
 import os
 import pathlib
@@ -86,7 +87,7 @@ def is_type_published(mod_type: "System.RuntimeType"):
         print(e)
 
 
-def make(base_dir, outdir, ASSEMBLIES):
+def make(base_dir, outdir, ASSEMBLIES, str_version):
     """
     Makes __init__.py files in src/ansys/mechanical/stubs, generates
     classes, properties, and methods with their docstrings from assembly files from the
@@ -135,13 +136,13 @@ from .Ansys import *
 
     path = os.path.join(outdir, "Ansys")
 
-    # Make src/ansys/mechanical/stubs/Ansys/__init__.py
+    # Make src/ansys/mechanical/stubs/241/Ansys/__init__.py
     get_dirs = os.listdir(path)
     with open(os.path.join(path, "__init__.py"), "w") as f:
         # f.write(f'"""The Ansys subpackage containing the Mechanical stubs."""')
         for dir in get_dirs:
             if os.path.isdir(os.path.join(path, dir)):
-                f.write(f"import ansys.mechanical.stubs.Ansys.{dir} as {dir}\n")
+                f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
         f.close()
 
     # Add import statements to init files
@@ -207,9 +208,13 @@ def main():
     MINIFY = False
     CLEAN = False
 
+    # Get version of the Mechanical install
+    install_dir, version = get_version()
+    version = f"v{str(version)}"
+
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent.parent
-    outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
+    outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs" / version
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -224,7 +229,7 @@ def main():
     resolve()
 
     if MAKE:
-        make(base_dir, outdir, ASSEMBLIES)
+        make(base_dir, outdir, ASSEMBLIES, version)
 
     if MINIFY:
         minify()
