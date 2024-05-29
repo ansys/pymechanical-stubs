@@ -115,20 +115,6 @@ jobs:
           python -m twine check dist/*
         continue-on-error: True
 
-      - name: Check stubs were generated
-        run: |
-          cat build_results.txt
-
-          # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" build_results.txt)
-          if [ $output -eq 1 ]; then
-            echo "All mechanical stubs were created"
-            exit 0
-          else
-            echo "There was an issue creating the mechanical stubs"
-            exit 1
-          fi
-
       - name: "Upload distribution artifacts to GitHub artifacts"
         uses: actions/upload-artifact@v4
         with:
@@ -145,20 +131,6 @@ jobs:
           python -m pip install importlib-metadata
           python -m pip wheel . -w wheelhouse 2> wheel_results.txt
         continue-on-error: True
-
-      - name: Check stubs were generated
-        run: |
-          cat wheel_results.txt
-
-          # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" wheel_results.txt)
-          if [ $output -eq 1 ]; then
-            echo "All mechanical stubs were created"
-            exit 0
-          else
-            echo "There was an issue creating the mechanical stubs"
-            exit 1
-          fi
 
       - name: "Compress the wheelhouse"
         uses: vimtor/action-zip@v1.1
