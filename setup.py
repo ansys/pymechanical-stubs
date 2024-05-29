@@ -42,7 +42,7 @@ setup(
     name="ansys-mechanical-stubs",
     packages=find_namespace_packages(where="src", include="ansys*"),
     package_dir={"": "src"},
-    version="2024.2.dev0",
+    version="dev0",
     description=description,
     long_description=long_description,
     license="MIT",

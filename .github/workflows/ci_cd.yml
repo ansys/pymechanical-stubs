@@ -104,6 +104,8 @@ jobs:
 
       - name: Check stubs were generated
         run: |
+          cat results.txt
+
           # Check if failure occurred
           output=$(grep -c "Done processing all mechanical stubs" results.txt)
           if [ $output -eq 1 ]; then
@@ -127,7 +129,7 @@ jobs:
         run: |
           # This and the next step are the same as the build-library action
           python -m pip install build twine
-          python -m build 2> build_results.txt
+          python -m build
           python -m twine check dist/*
         continue-on-error: True
 
