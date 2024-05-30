@@ -116,6 +116,9 @@ jobs:
           fi
 
       - name: Retrieve Mechanial version
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
+          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
         run: |
           pip install -e .
           echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs.v${{ matrix.versions.version }} import __version__; print(__version__)')" >> $GITHUB_ENV
@@ -168,10 +171,16 @@ jobs:
           pip install -e .[doc]
 
       - name: Create markdown documentation
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
+          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
         run: |
           sphinx-build -M markdown doc/source doc/_build
 
       - name: Create Sphinx documentation
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
+          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
         run: |
           make -C doc html
 
@@ -243,16 +252,6 @@ jobs:
 
       - name: List all files
         run: ls -R .
-
-      - name: Deploy to GitHub Pages
-        if: contains(github.ref, 'refs/heads/main')
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: 'documentation-html-${{ matrix.mechanical-version }}/'
-          clean: true
-          single-commit: true
 
   doc-deploy-dev:
     name: "Deploy development documentation"
