@@ -10,11 +10,6 @@ on:
       - release/*
 
 env:
-  PYMECHANICAL_PORT: 10000  # default won't work on GitHub runners
-  PYMECHANICAL_START_INSTANCE: FALSE
-  DOCKER_PACKAGE: ghcr.io/ansys/mechanical
-  DOCKER_IMAGE_VERSION: 23.2.0
-  DOCKER_MECH_CONTAINER_NAME: mechanical
   MAIN_PYTHON_VERSION: '3.10'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
@@ -25,7 +20,9 @@ env:
   ANSYS_WORKBENCH_LOGGING: 0
   ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
   NUM_CORES: 1
-
+  MEILISEARCH_API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+  MEILISEARCH_HOST_URL: ${{ vars.MEILISEARCH_HOST_URL }}
+  MEILISEARCH_PUBLIC_API_KEY: ${{ secrets.MEILISEARCH_PUBLIC_API_KEY }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -121,8 +118,8 @@ jobs:
           ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
         run: |
           pip install -e .
-          echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs.v${{ matrix.versions.version }} import __version__; print(__version__)')" >> $GITHUB_ENV
-          echo "Mechanical version is: $(python -c "from ansys.mechanical.stubs.v${{ matrix.versions.version }} import __version__; print(__version__)")"
+          echo "MECHANICAL_VERSION=$(python -c 'from ${{ env.PACKAGE_NAMESPACE }}.v${{ matrix.versions.version }} import __version__; print(__version__)')" >> $GITHUB_ENV
+          echo "Mechanical version is: $(python -c "from ${{ env.PACKAGE_NAMESPACE }}.v${{ matrix.versions.version }} import __version__; print(__version__)")"
 
       - name: Install build and twine, and build dist artifacts
         env:
@@ -232,84 +229,6 @@ jobs:
           touch .nojekyll CNAME
           echo ${{ env.DOCUMENTATION_CNAME }} >> CNAME
 
-  doc-deploy:
-    name: Documentation deploy
-    runs-on: ubuntu-latest
-    needs: [doc-build]
-    strategy:
-      matrix:
-        mechanical-version: ['24.1.0']
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: 'documentation-html-${{ matrix.mechanical-version }}'
-          path: 'documentation-html-${{ matrix.mechanical-version }}'
-
-      - name: List all files
-        run: ls -R .
-
-  doc-deploy-dev:
-    name: "Deploy development documentation"
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    needs: doc-build
-    strategy:
-      matrix:
-        mechanical-version: ['24.1.0']
-    steps:
-      - name: "Deploy development documentation"
-        uses: ansys/actions/doc-deploy-dev@v4
-        with:
-          cname: ${{ env.DOCUMENTATION_CNAME }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
-
-  doc-deploy-stable:
-    name: "Deploy stable documentation"
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-    runs-on: ubuntu-latest
-    needs: doc-deploy-dev
-    strategy:
-      matrix:
-        mechanical-version: ['24.1.0']
-    steps:
-      - name: "Deploy stable documentation"
-        uses: ansys/actions/doc-deploy-stable@v4
-        with:
-          cname: ${{ env.DOCUMENTATION_CNAME }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
-
-  doc-deploy-index:
-    name: "Index the documentation and scrap using PyMeilisearch"
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    needs: doc-deploy-dev
-    strategy:
-      matrix:
-        mechanical-version: ['24.1.0']
-    steps:
-      - name: Scrape the stable documentation to PyMeilisearch
-        run: |
-          VERSION=$(python -c "from ansys.mechanical.stubs import __version__; print('.'.join(__version__.split('.')[:2]))")
-          VERSION_MEILI=$(python -c "from ansys.mechanical.stubs import __version__; print('-'.join(__version__.split('.')[:2]))")
-          echo "Calculated VERSION: $VERSION"
-          echo "Calculated VERSION_MEILI: $VERSION_MEILI"
-
-      - name: "Deploy the latest documentation index"
-        uses: ansys/actions/doc-deploy-index@v4.1
-        with:
-          cname: "scripting.mechanical.docs.pyansys.com/version/$VERSION"
-          index-name: "<index-name>v$VERSION_MEILI"
-          host-url: "<meilisearch-host-url>"
-          api-key: ${{ secrets.MEILISEARCH_API_KEY }}
-          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
-
   release-pypi-private:
     name: "Release to the private PyPI repository"
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
@@ -346,3 +265,78 @@ jobs:
         uses: ansys/actions/release-github@v4
         with:
           library-name: ${{ env.PACKAGE_NAME }}
+
+  doc-deploy-dev:
+    name: "Deploy development documentation"
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: doc-build
+    strategy:
+      matrix:
+        mechanical-version: ['24.1.0']
+    steps:
+      - name: "Deploy development documentation"
+        uses: ansys/actions/doc-deploy-dev@v4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
+
+  doc-index-dev:
+    name: "Deploy dev index docs"
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: doc-deploy-dev
+    steps:
+      - name: "Deploy the latest documentation index"
+        uses: ansys/actions/doc-deploy-index@v6
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}/version/dev
+          index-name: pymechanical-stubs-vdev
+          host-url: ${{ env.MEILISEARCH_HOST_URL }}
+          api-key: ${{ env.MEILISEARCH_API_KEY }}
+          python-version: ${{ env.MAIN_PYTHON_VERSION }}
+
+  doc-deploy-stable:
+    name: "Deploy stable documentation"
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+    runs-on: ubuntu-latest
+    needs: [release-pypi-private, release-github]
+    strategy:
+      matrix:
+        mechanical-version: ['24.1.0']
+    steps:
+      - name: "Deploy stable documentation"
+        uses: ansys/actions/doc-deploy-stable@v4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          doc-artifact-name: 'documentation-html-${{ matrix.mechanical-version }}'
+
+  doc-index-stable:
+    name: "Index the documentation and scrap using PyMeilisearch"
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: doc-deploy-stable
+    strategy:
+      matrix:
+        versions: [
+          { image: '24.1.0', version: '241' }
+        ]
+    steps:
+      - name: Scrape the stable documentation to PyMeilisearch
+        run: |
+          VERSION=$(python -c "from ${{ env.PACKAGE_NAMESPACE }}.v${{ matrix.versions.version }} import __version__; print('.'.join(__version__.split('.')[:2]))")
+          VERSION_MEILI=$(python -c "from ${{ env.PACKAGE_NAMESPACE }}.v${{ matrix.versions.version }} import __version__; print('-'.join(__version__.split('.')[:2]))")
+          echo "Calculated VERSION: $VERSION"
+          echo "Calculated VERSION_MEILI: $VERSION_MEILI"
+
+      - name: "Deploy the latest documentation index"
+        uses: ansys/actions/doc-deploy-index@v4.1
+        with:
+          cname: "scripting.mechanical.docs.pyansys.com/version/$VERSION"
+          index-name: "pymechanical-stubs-v$VERSION_MEILI"
+          host-url: ${{ env.MEILISEARCH_HOST_URL }}
+          api-key: ${{ secrets.MEILISEARCH_API_KEY }}
+          doc-artifact-name: 'documentation-html-${{ matrix.versions.image }}'
+          python-version: ${{ env.MAIN_PYTHON_VERSION }}
