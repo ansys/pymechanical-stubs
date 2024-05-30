@@ -124,6 +124,7 @@ patch = importlib_metadata.version("ansys-mechanical-stubs")
 """Patch version for the ansys-mechanical-stubs package."""
 
 install_dir, version = get_version()
+version = str(version)
 
 # major, minor, patch
 version_info = version[:-1], version[-1], patch
