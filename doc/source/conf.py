@@ -4,10 +4,19 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 from datetime import datetime
+import importlib
 import os
 from pathlib import Path
 
-from ansys.mechanical.stubs import __version__
+from stub_generator.create_files import get_version
+
+install_dir, version = get_version()
+version = str(version)
+
+module_with_version = f"ansys.mechanical.stubs.v{version}"
+ansys_mech_stubs = importlib.import_module(module_with_version)
+
+# from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     get_autoapi_templates_dir_relative_path,
@@ -25,9 +34,9 @@ LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 project = "ansys-mechanical-stubs"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS, Inc."
-release = version = __version__
+release = version = ansys_mech_stubs.__version__
 cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com")
-switcher_version = get_version_match(__version__)
+switcher_version = get_version_match(ansys_mech_stubs.__version__)
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
