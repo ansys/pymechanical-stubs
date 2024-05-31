@@ -28,7 +28,6 @@ import shutil
 import sys
 
 import clr
-
 import generate_content
 
 import System  # isort: skip
@@ -113,7 +112,7 @@ def make(base_dir, outdir, ASSEMBLIES, str_version):
         generate_content.make(outdir, assembly, type_filter=is_type_published)
 
     with open(os.path.join(outdir, "__init__.py"), "w") as f:
-        f.write(f'''import ansys.mechanical.stubs.v{major}{minor}.Ansys as Ansys''')
+        f.write(f"""import ansys.mechanical.stubs.v{major}{minor}.Ansys as Ansys""")
 
     path = os.path.join(outdir, "Ansys")
 
@@ -196,7 +195,7 @@ def main():
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent
     outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs" / version
-    
+
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 

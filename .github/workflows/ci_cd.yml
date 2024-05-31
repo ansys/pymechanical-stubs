@@ -125,7 +125,7 @@ jobs:
         run: |
           print(os.getcwd())
           outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
-  
+
       # - name: Retrieve Mechanial version
       #   run: |
       #     pip install -e .
@@ -164,7 +164,7 @@ jobs:
   #       os: [ubuntu-latest, windows-latest]
   #       python-version: ['3.10', '3.11', '3.12']
   #   steps:
-  #     - name: Generate markdown documentation 
+  #     - name: Generate markdown documentation
   #       run: |
   #         sphinx-build -M markdown doc/source doc/_build
 
@@ -196,7 +196,7 @@ jobs:
   #     - name: Create Sphinx documentation
   #       run: |
   #         make -C doc html
- 
+
   # clean-documentation:
   #   name: Clean documentation
   #   needs: [doc-build-markdown, doc-build-html]
