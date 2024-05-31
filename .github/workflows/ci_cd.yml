@@ -117,12 +117,13 @@ jobs:
 
   init-file-version:
     name: Generate __init__ file and get version
-    needs: [style, doc-style]
+    needs: [gen-stubs]
     runs-on: ubuntu-latest
     steps:
       - name: Create __init__.py
         shell: python
         run: |
+          import os
           print(os.getcwd())
           outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
 
