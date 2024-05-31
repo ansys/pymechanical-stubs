@@ -53,49 +53,51 @@ jobs:
     name: Checkout repository
     needs: [style, doc-style]
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
-      options: --entrypoint /bin/bash
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install --reinstall ca-certificates
-          sudo apt install software-properties-common -y
-          sudo add-apt-repository ppa:deadsnakes/ppa -y
-          sudo apt install python${{ env.MAIN_PYTHON_VERSION }} -y
-          sudo ln -fs /usr/bin/python${{ env.MAIN_PYTHON_VERSION }} /usr/bin/python
-          sudo apt install python${{ env.MAIN_PYTHON_VERSION }}-venv -y
-          sudo apt install -y lsb-release mono-complete make git zip
-
-          sudo python -m ensurepip --default-pip
-          sudo pip install --upgrade pip
-          python --version
-          pip --version
-
-          mkdir -p src/ansys/mechanical/stubs
-          touch src/ansys/mechanical/stubs/__init__.py
-          sudo pip install -e .[doc]
-          sudo pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          sudo pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
   gen-stubs:
     name: Generate Mechanical stubs
     needs: [checkout-repo]
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
       options: --entrypoint /bin/bash
     strategy:
       matrix:
+        os: [ubuntu-latest]
         versions: [
           { image: '23.2.0', version: '232' },
           { image: '24.1.0', version: '241' }
         ]
+        python-version: ['3.10']
     steps:
+      - name: Install dependencies
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
+          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
+        run: |
+          apt update
+          apt install --reinstall ca-certificates
+          apt install software-properties-common -y
+          add-apt-repository ppa:deadsnakes/ppa -y
+          apt install python${{ matrix.python-version }} -y
+          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+          apt install python${{ matrix.python-version }}-venv -y
+          apt install -y lsb-release mono-complete make git zip
+
+          python -m ensurepip --default-pip
+          pip install --upgrade pip
+          python --version
+          pip --version
+
+          mkdir -p src/ansys/mechanical/stubs
+          touch src/ansys/mechanical/stubs/__init__.py
+          pip install -e .[doc]
+          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+
       - name: Generate the mechanical stub files
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
