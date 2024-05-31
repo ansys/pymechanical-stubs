@@ -62,7 +62,7 @@ jobs:
           sudo apt update
           sudo apt install --reinstall ca-certificates
           sudo apt install software-properties-common -y
-          add-apt-repository ppa:deadsnakes/ppa -y
+          sudo add-apt-repository ppa:deadsnakes/ppa -y
           sudo apt install python${{ env.MAIN_PYTHON_VERSION }} -y
           ln -s /usr/bin/python${{ env.MAIN_PYTHON_VERSION }} /usr/bin/python
           sudo apt install python${{ env.MAIN_PYTHON_VERSION }}-venv -y
