@@ -59,7 +59,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt update
+          sudo apt update
           apt install --reinstall ca-certificates
           apt install software-properties-common -y
           add-apt-repository ppa:deadsnakes/ppa -y
