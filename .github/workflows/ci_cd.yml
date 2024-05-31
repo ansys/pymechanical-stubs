@@ -87,6 +87,8 @@ jobs:
           python --version
           pip --version
 
+          mkdir -p src/ansys/mechanical/stubs
+          touch src/ansys/mechanical/stubs/__init__.py
           pip install -e .[doc]
           pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           pip install --upgrade pip flit pytz tzdata ansys-pythonnet
@@ -96,8 +98,6 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
           ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
         run: |
-          mkdir -p src/ansys/mechanical/stubs
-          touch src/ansys/mechanical/stubs/__init__.py
           python stub_generator/create_files.py > results.txt
         continue-on-error: True
 
@@ -114,6 +114,8 @@ jobs:
             echo "There was an issue creating the mechanical stubs"
             exit 1
           fi
+
+          pwd
 
   init-file-version:
     name: Generate __init__ file and get version
