@@ -82,13 +82,12 @@ jobs:
   gen-stubs:
     name: Generate Mechanical stubs
     needs: [checkout-repo]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
       options: --entrypoint /bin/bash
     strategy:
       matrix:
-        os: [ubuntu-latest]
         versions: [
           { image: '23.2.0', version: '232' },
           { image: '24.1.0', version: '241' }
