@@ -29,7 +29,7 @@ import sys
 
 import clr
 
-import stub_generator.generate_content as generate_content
+import generate_content
 
 import System  # isort: skip
 
@@ -113,35 +113,11 @@ def make(base_dir, outdir, ASSEMBLIES, str_version):
         generate_content.make(outdir, assembly, type_filter=is_type_published)
 
     with open(os.path.join(outdir, "__init__.py"), "w") as f:
-        f.write(
-            f'''from stub_generator.create_files import get_version
-
-try:
-    import importlib.metadata as importlib_metadata
-except ModuleNotFoundError:  # pragma: no cover
-    import importlib_metadata  # type: ignore
-patch = importlib_metadata.version("ansys-mechanical-stubs")
-"""Patch version for the ansys-mechanical-stubs package."""
-
-install_dir, version = get_version()
-version = str(version)
-
-# major, minor, patch
-version_info = version[:-1], version[-1], patch
-"""Mechanical version with patch version of ansys-mechanical-stubs."""
-
-# Format version
-__version__ = ".".join(map(str, version_info))
-"""Mechanical Scripting version."""
-
-from .Ansys import *
-'''
-        )
-        f.close()
+        f.write(f'''import ansys.mechanical.stubs.v{major}{minor}.Ansys as Ansys''')
 
     path = os.path.join(outdir, "Ansys")
 
-    # Make src/ansys/mechanical/stubs/241/Ansys/__init__.py
+    # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
     get_dirs = os.listdir(path)
     with open(os.path.join(path, "__init__.py"), "w") as f:
         # f.write(f'"""The Ansys subpackage containing the Mechanical stubs."""')
@@ -218,9 +194,9 @@ def main():
     version = f"v{str(version)}"
 
     # Path in which to generate the __init__.py files
-    base_dir = pathlib.Path(__file__).parent.parent.parent
+    base_dir = pathlib.Path(__file__).parent.parent
     outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs" / version
-
+    
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
