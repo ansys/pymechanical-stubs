@@ -163,16 +163,17 @@ jobs:
 
         with open("src/ansys/mechanical/stubs/__init__.py", "w") as f:
             f.write('''try:
-              import importlib.metadata as importlib_metadata
-          except ModuleNotFoundError:  # pragma: no cover
-              import importlib_metadata  # type: ignore
+                import importlib.metadata as importlib_metadata
+              except ModuleNotFoundError:  # pragma: no cover
+                  import importlib_metadata  # type: ignore
 
-          __version__ = importlib_metadata.version("ansys-mechanical-stubs")
-          """Patch version for the ansys-mechanical-stubs package."""
+              __version__ = importlib_metadata.version("ansys-mechanical-stubs")
+              """Patch version for the ansys-mechanical-stubs package."""
 
             ''')
-          for folder in subfolders:
-              f.write(f"from .{folder} import *")
+
+            for folder in subfolders:
+                f.write(f"from .{folder} import *")
 
     - name: Display init file
       run: cat src/ansys/mechanical/stubs/__init__.py
