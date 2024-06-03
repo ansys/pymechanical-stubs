@@ -128,6 +128,7 @@ jobs:
   wheelhouse-build:
     name: Build wheelhouse
     runs-on: ${{ matrix.os }}
+    needs: [gen-stubs]
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
