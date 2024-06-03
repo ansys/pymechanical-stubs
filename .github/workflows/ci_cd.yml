@@ -147,12 +147,9 @@ jobs:
       run: |
         cd ${{ env.PACKAGE_PATH }}
 
-        version_folders=`find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
-
-        for v in "${version_folders[@]}"
+        for d in `find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
         do
-          echo "$v"
-          mv $v ${vers%%-*}
+          mv -v "$d" "${d%%-*}"
         done
 
         cd -
