@@ -147,10 +147,9 @@ jobs:
       run: |
         cd ${{ env.PACKAGE_PATH }}
 
-        for d in `find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
-        do
-          mv -v "$d" "${d%%-*}"
-        done
+        version_dirs=`find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
+
+        for d in ${version_folders[@]}; do   mv "$d" "${d%%-*}"; done
 
         cd -
 
@@ -218,7 +217,7 @@ jobs:
 
   doc-build:
     name: Make html and markdown documentation
-    needs: [gen-stubs]
+    needs: [wheelhouse-build]
     runs-on: ubuntu-latest
     strategy:
       matrix:
