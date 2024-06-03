@@ -121,7 +121,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: matrix.python-version == env.MAIN_PYTHON_VERSION
         with:
-          name: v${{ matrix.versions.version }}-stubs
+          name: v${{ matrix.versions.version }}
           path: src/ansys/mechanical/stubs/v${{ matrix.versions.version }}
           retention-days: 7
 
@@ -129,6 +129,9 @@ jobs:
     name: Make html and markdown documentation
     needs: [gen-stubs]
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10']
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -146,133 +149,72 @@ jobs:
       run: |
         import os
 
-        print(os.getcwd())
-
         subfolders = [ f.name for f in os.scandir("src/ansys/mechanical/stubs/") if f.is_dir() ]
 
         with open("src/ansys/mechanical/stubs/__init__.py", "w") as f:
             f.write('''try:
-                import importlib.metadata as importlib_metadata
-              except ModuleNotFoundError:  # pragma: no cover
-                  import importlib_metadata  # type: ignore
+            import importlib.metadata as importlib_metadata
+          except ModuleNotFoundError:  # pragma: no cover
+              import importlib_metadata  # type: ignore
 
-              __version__ = importlib_metadata.version("ansys-mechanical-stubs")
-              """Patch version for the ansys-mechanical-stubs package."""
+          __version__ = importlib_metadata.version("ansys-mechanical-stubs")
+          """Patch version for the ansys-mechanical-stubs package."""
 
             ''')
 
             for folder in subfolders:
-                f.write(f"from .{folder} import *")
+                f.write(f"from .{folder} import *\n")
 
     - name: Display init file
       run: cat src/ansys/mechanical/stubs/__init__.py
 
-      # - name: Retrieve Mechanial version
-      #   run: |
-      #     pip install -e .
-      #     echo "MECHANICAL_VERSION=$(python -c 'from ${{ env.PACKAGE_NAMESPACE }} import __version__; print(__version__)')" >> $GITHUB_ENV
-      #     echo "Mechanical version is: $(python -c "from ${{ env.PACKAGE_NAMESPACE }} import __version__; print(__version__)")"
+    - name: Generate html and markdown documentation
+      run: |
+        make -C doc html
+        sphinx-build -M markdown doc/source doc/_build
 
+    - name: Clean ID in first row
+      run: |
+        python scripts/01-clean-id.py
 
-  # smoke-tests:
-  #   name: Build and Smoke tests
-  #   runs-on: ${{ matrix.os }}
-  #   needs: [style]
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       os: [ubuntu-latest, windows-latest, macos-latest]
-  #       python-version: ['3.9', '3.10', '3.11', '3.12']
-  #       should-release:
-  #         - ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags') }}
-  #       exclude:
-  #         - should-release: false
-  #           os: macos-latest
-  #   steps:
-  #     - name: Build wheelhouse and perform smoke test
-  #       uses: ansys/actions/build-wheelhouse@v6
-  #       with:
-  #         library-name: ${{ env.PACKAGE_NAME }}
-  #         operating-system: ${{ matrix.os }}
-  #         python-version: ${{ matrix.python-version }}
+    - name: Clean empty rows
+      run: |
+        python scripts/02-clean-empty-row.py
 
-  # doc-build-markdown:
-  #   name: Create markdown documentation
-  #   needs: [style, doc-style]
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest, windows-latest]
-  #       python-version: ['3.10', '3.11', '3.12']
-  #   steps:
-  #     - name: Generate markdown documentation
-  #       run: |
-  #         sphinx-build -M markdown doc/source doc/_build
+    - name: Create table of contents
+      run: |
+        python scripts/03-create-toc-from-html-mechanical.py
 
-  #     - name: Upload markdown documentation
-  #       uses: actions/upload-artifact@v3
-  #       if: matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: documentation-md
-  #         path: doc/_build/markdown
-  #         retention-days: 7
+    - name: Add header to tables
+      run: |
+        python scripts/04-add-header-to-tables.py
 
-  #     - name: Upload Sphinx HTML documentation
-  #       uses: actions/upload-artifact@v3
-  #       if: matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: documentation-html
-  #         path: doc/_build/html
-  #         retention-days: 7
+    - name: Remove links in heading
+      run: |
+        python scripts/05-remove-link-in-heading.py
 
-  # doc-build-html:
-  #   name: Create html documentation
-  #   needs: [style, doc-style]
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest, windows-latest]
-  #       python-version: ['3.10', '3.11', '3.12']
-  #   steps:
-  #     - name: Create Sphinx documentation
-  #       run: |
-  #         make -C doc html
+    - name: Upload to GitHub Artifacts
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      uses: actions/upload-artifact@v4
+      with:
+        name: toc-file
+        path: output/
 
-  # clean-documentation:
-  #   name: Clean documentation
-  #   needs: [doc-build-markdown, doc-build-html]
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest]
-  #       python-version: ['3.10']
-  #   steps:
-  #     - name: Clean ID in first row
-  #       run: |
-  #         python scripts/01-clean-id.py
+    - name: Upload markdown documentation
+      uses: actions/upload-artifact@v3
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-md
+        path: doc/_build/markdown
+        retention-days: 7
 
-  #     - name: Clean empty rows
-  #       run: |
-  #         python scripts/02-clean-empty-row.py
-
-  #     - name: Create table of contents
-  #       run: |
-  #         python scripts/03-create-toc-from-html-mechanical.py
-
-  #     - name: Add header to tables
-  #       run: |
-  #         python scripts/04-add-header-to-tables.py
-
-  #     - name: Remove links in heading
-  #       run: |
-  #         python scripts/05-remove-link-in-heading.py
-
-  #     - name: Upload to GitHub Artifacts
-  #       if: matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: toc-files
-  #         path: output/
+    - name: Upload Sphinx HTML documentation
+      uses: actions/upload-artifact@v3
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-html
+        path: doc/_build/html
+        retention-days: 7
 
   # release-pypi-private:
   #   name: "Release to the private PyPI repository"
