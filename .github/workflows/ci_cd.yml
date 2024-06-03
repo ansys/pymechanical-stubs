@@ -141,29 +141,41 @@ jobs:
       matrix:
         versions: [ '232', '241' ]
     steps:
+      - name: Set up src directory
+        run: mkdir -p src/ansys/mechanical/stubs
+
       - name: "Download the library artifacts from build-library step"
         uses: actions/download-artifact@v4
         with:
           name: v${{ matrix.versions }}-stubs
-          path: v${{ matrix.versions }}
+          path: src/ansys/mechanical/stubs/v${{ matrix.versions }}
 
-      - name: "Display the structure of downloaded files"
-        shell: bash
-        run: |
-          pwd
-          ls -l
+  doc-build:
+    name: Make html and markdown documentation
+    needs: [download-stubs]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create __init__.py in src/ansys/mechanical/stubs
+      shell: python
+      run: |
+        import os
+        subfolders = [ f.name for f in os.scandir("src/ansys/mechanical/stubs/") if f.is_dir() ]
 
-  # init-file-version:
-  #   name: Generate __init__ file and get version
-  #   needs: [download-stubs]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Create __init__.py
-  #       shell: python
-  #       run: |
-  #         import os
-  #         print(os.getcwd())
-  #         outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
+        with open("src/ansys/mechanical/stubs/__init__.py", "w") as f:
+            f.write('''try:
+              import importlib.metadata as importlib_metadata
+          except ModuleNotFoundError:  # pragma: no cover
+              import importlib_metadata  # type: ignore
+
+          __version__ = importlib_metadata.version("ansys-mechanical-stubs")
+          """Patch version for the ansys-mechanical-stubs package."""
+
+            ''')
+          for folder in subfolders:
+              f.write(f"from .{folder} import *")
+
+    - name: Display init file
+      run: cat src/ansys/mechanical/stubs/__init__.py
 
       # - name: Retrieve Mechanial version
       #   run: |
