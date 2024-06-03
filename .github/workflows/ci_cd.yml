@@ -160,8 +160,9 @@ jobs:
             for folder in subfolders:
                 f.write(f"from .{folder} import *\n")
 
-    - name: Display init file
-      run: cat src/ansys/mechanical/stubs/__init__.py
+    - name: Install project & doc dependencies
+      run: |
+        pip install -e .[doc]
 
     - name: Generate html and markdown documentation
       run: |
