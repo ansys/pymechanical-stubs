@@ -13,6 +13,7 @@ env:
   MAIN_PYTHON_VERSION: '3.10'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
+  PACKAGE_PATH: src/ansys/mechanical/stubs
   DOCUMENTATION_CNAME: scripting.mechanical.docs.pyansys.com
   LICENSE_SERVER: ${{ secrets.LICENSE_SERVER }}
   ANSYSLMD_LICENSE_FILE: 1055@${{ secrets.LICENSE_SERVER }}
@@ -54,24 +55,24 @@ jobs:
     needs: [style, doc-style]
     runs-on: ${{ matrix.os }}
     container:
-      image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
+      image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
       options: --entrypoint /bin/bash
     strategy:
       matrix:
         os: [ubuntu-latest]
-        versions: [
+        mechanical: [
           { image: '23.2.0', version: '232' },
           { image: '24.1.0', version: '241' }
         ]
-        python-version: ['3.10']
+        python-version: ['3.10', '3.11', '3.12']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install dependencies
         env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
-          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
           apt update
           apt install --reinstall ca-certificates
@@ -87,8 +88,8 @@ jobs:
           python --version
           pip --version
 
-          mkdir -p src/ansys/mechanical/stubs
-          touch src/ansys/mechanical/stubs/__init__.py
+          mkdir -p ${{ env.PACKAGE_PATH }}
+          touch ${{ env.PACKAGE_PATH }}/__init__.py
           pwd
           ls -l
           pip install -e .[doc]
@@ -97,8 +98,8 @@ jobs:
 
       - name: Generate the mechanical stub files
         env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
-          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
           python stub_generator/create_files.py > results.txt
         continue-on-error: True
@@ -117,39 +118,55 @@ jobs:
             exit 1
           fi
 
-      - name: Upload v${{ matrix.versions.version }} stubs
+      - name: Upload v${{ matrix.mechanical.version }} stubs
         uses: actions/upload-artifact@v4
-        if: matrix.python-version == env.MAIN_PYTHON_VERSION
         with:
-          name: v${{ matrix.versions.version }}
-          path: src/ansys/mechanical/stubs/v${{ matrix.versions.version }}
+          name: v${{ matrix.mechanical.version }}-${{ matrix.python-version }}
+          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
           retention-days: 7
 
   wheelhouse-build:
     name: Build wheelhouse
     runs-on: ${{ matrix.os }}
     needs: [gen-stubs]
-    strategy:
+    strategy: 
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ['3.10', '3.11', '3.12']
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: "Download the library artifacts from build-library step"
+    - name: Download the library artifacts
       uses: actions/download-artifact@v4
       with:
-        path: src/ansys/mechanical/stubs/
+        pattern: "*-${{ matrix.python-version }}"
+        path: ${{ env.PACKAGE_PATH }}/
+    
+    - name: Display structure of downloaded files
+      run: |
+        cd ${{ env.PACKAGE_PATH }}
 
-    - name: Create __init__.py in src/ansys/mechanical/stubs
+        version_folders=`find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
+
+        for v in "${version_folders[@]}"
+        do
+          echo "$v"
+          mv $v ${vers%%-*}
+        done
+
+        cd -
+
+        ls -R ${{ env.PACKAGE_PATH }}/
+
+    - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
       shell: python
       run: |
         import os
 
-        subfolders = [ f.name for f in os.scandir("src/ansys/mechanical/stubs/") if f.is_dir() ]
+        subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
 
-        with open("src/ansys/mechanical/stubs/__init__.py", "w") as f:
+        with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
             f.write('''try:
             import importlib.metadata as importlib_metadata
         except ModuleNotFoundError:  # pragma: no cover
@@ -216,16 +233,16 @@ jobs:
     - name: "Download the library artifacts from build-library step"
       uses: actions/download-artifact@v4
       with:
-        path: src/ansys/mechanical/stubs/
+        path: ${{ env.PACKAGE_PATH }}/
 
-    - name: Create __init__.py in src/ansys/mechanical/stubs
+    - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
       shell: python
       run: |
         import os
 
-        subfolders = [ f.name for f in os.scandir("src/ansys/mechanical/stubs/") if f.is_dir() ]
+        subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
 
-        with open("src/ansys/mechanical/stubs/__init__.py", "w") as f:
+        with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
             f.write('''try:
             import importlib.metadata as importlib_metadata
         except ModuleNotFoundError:  # pragma: no cover
