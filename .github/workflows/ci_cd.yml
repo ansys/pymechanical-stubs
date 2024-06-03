@@ -129,7 +129,7 @@ jobs:
     name: Build wheelhouse
     runs-on: ${{ matrix.os }}
     needs: [gen-stubs]
-    strategy: 
+    strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
         python-version: ['3.10', '3.11', '3.12']
@@ -142,7 +142,7 @@ jobs:
       with:
         pattern: "*-${{ matrix.python-version }}"
         path: ${{ env.PACKAGE_PATH }}/
-    
+
     - name: Display structure of downloaded files
       run: |
         cd ${{ env.PACKAGE_PATH }}
