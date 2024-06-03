@@ -73,6 +73,9 @@ jobs:
         ]
         python-version: ['3.10']
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Install dependencies
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
@@ -122,17 +125,45 @@ jobs:
             exit 1
           fi
 
-  init-file-version:
-    name: Generate __init__ file and get version
+      - name: Upload v${{ matrix.versions.version }} stubs
+        uses: actions/upload-artifact@v3
+        if: matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: v${{ matrix.versions.version }}-stubs
+          path: src/ansys/mechanical/stubs/v241
+          retention-days: 7
+
+  download-stubs:
+    name: Download stubs to src/ansys/mechanical/stubs
     needs: [gen-stubs]
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        versions: [ '232', '241' ]
     steps:
-      - name: Create __init__.py
-        shell: python
+      - name: "Download the library artifacts from build-library step"
+        uses: actions/download-artifact@v4
+        with:
+          name: v${{ matrix.versions }}
+          path: v${{ matrix.versions }}-stubs
+
+      - name: "Display the structure of downloaded files"
+        shell: bash
         run: |
-          import os
-          print(os.getcwd())
-          outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
+          pwd
+          ls -R
+
+  # init-file-version:
+  #   name: Generate __init__ file and get version
+  #   needs: [download-stubs]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Create __init__.py
+  #       shell: python
+  #       run: |
+  #         import os
+  #         print(os.getcwd())
+  #         outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs"
 
       # - name: Retrieve Mechanial version
       #   run: |
