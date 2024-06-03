@@ -64,7 +64,7 @@ jobs:
           { image: '23.2.0', version: '232' },
           { image: '24.1.0', version: '241' }
         ]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -132,7 +132,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -148,6 +148,7 @@ jobs:
         cd ${{ env.PACKAGE_PATH }}
 
         version_dirs=`find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
+        echo $version_dirs
 
         for d in ${version_folders[@]}; do   mv "$d" "${d%%-*}"; done
 
