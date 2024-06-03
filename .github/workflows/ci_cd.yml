@@ -126,7 +126,7 @@ jobs:
           fi
 
       - name: Upload v${{ matrix.versions.version }} stubs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: matrix.python-version == env.MAIN_PYTHON_VERSION
         with:
           name: v${{ matrix.versions.version }}-stubs
