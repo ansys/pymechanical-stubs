@@ -140,7 +140,7 @@ html_theme_options = {
     "navigation_depth": 10,
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": switcher_version,
+        "version_match": get_version_match(__version__),
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",

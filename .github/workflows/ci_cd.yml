@@ -176,6 +176,7 @@ jobs:
         python -m twine check dist/*
 
     - name: "Upload distribution artifacts to GitHub artifacts"
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
         name: ${{ env.PACKAGE_NAME }}-artifacts
