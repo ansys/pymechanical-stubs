@@ -57,98 +57,102 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-  gen-stubs:
-    name: Generate Mechanical stubs
-    needs: [checkout-repo]
-    runs-on: ${{ matrix.os }}
-    container:
-      image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
-      options: --entrypoint /bin/bash
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        versions: [
-          { image: '23.2.0', version: '232' },
-          { image: '24.1.0', version: '241' }
-        ]
-        python-version: ['3.10']
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+  # gen-stubs:
+  #   name: Generate Mechanical stubs
+  #   needs: [checkout-repo]
+  #   runs-on: ${{ matrix.os }}
+  #   container:
+  #     image: ghcr.io/ansys/mechanical:${{ matrix.versions.image }}
+  #     options: --entrypoint /bin/bash
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest]
+  #       versions: [
+  #         { image: '23.2.0', version: '232' },
+  #         { image: '24.1.0', version: '241' }
+  #       ]
+  #       python-version: ['3.10']
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
 
-      - name: Install dependencies
-        env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
-          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
-        run: |
-          apt update
-          apt install --reinstall ca-certificates
-          apt install software-properties-common -y
-          add-apt-repository ppa:deadsnakes/ppa -y
-          apt install python${{ matrix.python-version }} -y
-          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
-          apt install python${{ matrix.python-version }}-venv -y
-          apt install -y lsb-release mono-complete make git zip
+  #     - name: Install dependencies
+  #       env:
+  #         AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
+  #         ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
+  #       run: |
+  #         apt update
+  #         apt install --reinstall ca-certificates
+  #         apt install software-properties-common -y
+  #         add-apt-repository ppa:deadsnakes/ppa -y
+  #         apt install python${{ matrix.python-version }} -y
+  #         ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+  #         apt install python${{ matrix.python-version }}-venv -y
+  #         apt install -y lsb-release mono-complete make git zip
 
-          python -m ensurepip --default-pip
-          pip install --upgrade pip
-          python --version
-          pip --version
+  #         python -m ensurepip --default-pip
+  #         pip install --upgrade pip
+  #         python --version
+  #         pip --version
 
-          mkdir -p src/ansys/mechanical/stubs
-          touch src/ansys/mechanical/stubs/__init__.py
-          pwd
-          ls -l
-          pip install -e .[doc]
-          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+  #         mkdir -p src/ansys/mechanical/stubs
+  #         touch src/ansys/mechanical/stubs/__init__.py
+  #         pwd
+  #         ls -l
+  #         pip install -e .[doc]
+  #         pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+  #         pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
-      - name: Generate the mechanical stub files
-        env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
-          ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
-        run: |
-          python stub_generator/create_files.py > results.txt
-        continue-on-error: True
+  #     - name: Generate the mechanical stub files
+  #       env:
+  #         AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.versions.version }}
+  #         ANSYSCL${{ matrix.versions.version }}_DIR: /install/ansys_inc/v${{ matrix.versions.version }}/licensingclient
+  #       run: |
+  #         python stub_generator/create_files.py > results.txt
+  #       continue-on-error: True
 
-      - name: Check stubs were generated
-        run: |
-          cat results.txt
+  #     - name: Check stubs were generated
+  #       run: |
+  #         cat results.txt
 
-          # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" results.txt)
-          if [ $output -eq 1 ]; then
-            echo "All mechanical stubs were created"
-            exit 0
-          else
-            echo "There was an issue creating the mechanical stubs"
-            exit 1
-          fi
+  #         # Check if failure occurred
+  #         output=$(grep -c "Done processing all mechanical stubs" results.txt)
+  #         if [ $output -eq 1 ]; then
+  #           echo "All mechanical stubs were created"
+  #           exit 0
+  #         else
+  #           echo "There was an issue creating the mechanical stubs"
+  #           exit 1
+  #         fi
 
-      - name: Upload v${{ matrix.versions.version }} stubs
-        uses: actions/upload-artifact@v4
-        if: matrix.python-version == env.MAIN_PYTHON_VERSION
-        with:
-          name: v${{ matrix.versions.version }}-stubs
-          path: src/ansys/mechanical/stubs/v${{ matrix.versions.version }}
-          retention-days: 7
+  #     - name: Upload v${{ matrix.versions.version }} stubs
+  #       uses: actions/upload-artifact@v4
+  #       if: matrix.python-version == env.MAIN_PYTHON_VERSION
+  #       with:
+  #         name: v${{ matrix.versions.version }}-stubs
+  #         path: src/ansys/mechanical/stubs/v${{ matrix.versions.version }}
+  #         retention-days: 7
 
   download-stubs:
     name: Download stubs to src/ansys/mechanical/stubs
-    needs: [gen-stubs]
+    # needs: [gen-stubs]
     runs-on: ubuntu-latest
     strategy:
       matrix:
         versions: [ '232', '241' ]
     steps:
       - name: Set up src directory
-        run: mkdir -p src/ansys/mechanical/stubs
+        run: |
+          mkdir -p src/ansys/mechanical/stubs/v241
+          mkdir -p src/ansys/mechanical/stubs/v232
+          # mkdir -p src/ansys/mechanical/stubs
+          ls -R
 
-      - name: "Download the library artifacts from build-library step"
-        uses: actions/download-artifact@v4
-        with:
-          name: v${{ matrix.versions }}-stubs
-          path: src/ansys/mechanical/stubs/v${{ matrix.versions }}
+      # - name: "Download the library artifacts from build-library step"
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: v${{ matrix.versions }}-stubs
+      #     path: src/ansys/mechanical/stubs/v${{ matrix.versions }}
 
   doc-build:
     name: Make html and markdown documentation
@@ -159,6 +163,9 @@ jobs:
       shell: python
       run: |
         import os
+
+        print(os.getcwd())
+
         subfolders = [ f.name for f in os.scandir("src/ansys/mechanical/stubs/") if f.is_dir() ]
 
         with open("src/ansys/mechanical/stubs/__init__.py", "w") as f:
