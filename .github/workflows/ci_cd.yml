@@ -153,7 +153,8 @@ jobs:
         cd ${{ env.PACKAGE_PATH }}
 
         find . -name "v*-${{ matrix.python-version }}" -print0 |
-        while IFS= read -r -d '' line; do
+        while IFS= read -r -d '' line
+        do
           version_only=${line%%-*}
           echo "Renaming folder from $line to $version_only"
           mv "$line" "$version_only"
