@@ -8,7 +8,6 @@ import importlib
 import os
 from pathlib import Path
 
-from ansys.mechanical.stubs import __version__
 from ansys_sphinx_theme import (
     ansys_favicon,
     get_autoapi_templates_dir_relative_path,
@@ -16,6 +15,8 @@ from ansys_sphinx_theme import (
     pyansys_logo_black,
 )
 from sphinx.builders.latex import LaTeXBuilder
+
+from ansys.mechanical.stubs import __version__
 
 LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 
