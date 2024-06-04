@@ -88,8 +88,8 @@ jobs:
       #     python --version
       #     pip --version
 
-      #     mkdir -p ${{ env.PACKAGE_PATH }}
-      #     touch ${{ env.PACKAGE_PATH }}/__init__.py
+        #     mkdir -p ${{ env.PACKAGE_PATH }}
+        #     touch ${{ env.PACKAGE_PATH }}/__init__.py
       #     pwd
       #     ls -l
       #     pip install -e .[doc]
@@ -118,10 +118,10 @@ jobs:
       #       exit 1
       #     fi
 
-      - name: Make directories
-        run: |
-          mkdir -p ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
-          touch ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}/__init__.py
+      # - name: Make directories
+      #   run: |
+      #     mkdir -p ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
+      #     touch ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}/__init__.py
 
       - name: Upload v${{ matrix.mechanical.version }} stubs
         uses: actions/upload-artifact@v4
@@ -168,8 +168,6 @@ jobs:
     - name: Display structure of downloaded files
       if: matrix.os == 'windows-latest'
       run: |
-        New-Item -ItemType Directory -Path ${{ env.PACKAGE_PATH }} -Force
-
         Get-Childitem ${{ env.PACKAGE_PATH }} |
         Foreach-object {
             $OldName = $_.name;
