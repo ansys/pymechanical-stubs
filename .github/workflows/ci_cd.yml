@@ -172,7 +172,7 @@ jobs:
         Foreach-object {
             $OldName = $_.name;
             $NewName = $_.name -replace '-${{ matrix.python-version }}','';
-            Rename-Item -Newname $NewName -Path ${{ env.PACKAGE_PATH }};
+            Rename-Item -Path ${{ env.PACKAGE_PATH }}/$OldName -NewName $NewName;
             Write-Output $("Renamed {0} to {1}" -f $OldName,$NewName)
             }
 
