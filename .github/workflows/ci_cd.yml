@@ -235,6 +235,7 @@ jobs:
     - name: "Download the library artifacts from build-library step"
       uses: actions/download-artifact@v4
       with:
+        pattern: "*-${{ matrix.python-version }}"
         path: ${{ env.PACKAGE_PATH }}/
 
     - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
