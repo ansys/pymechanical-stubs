@@ -66,57 +66,61 @@ jobs:
         ]
         python-version: ['3.10'] #, '3.11', '3.12']
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
 
-      - name: Install dependencies
-        env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+      # - name: Install dependencies
+      #   env:
+      #     AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+      #     ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+      #   run: |
+      #     apt update
+      #     apt install --reinstall ca-certificates
+      #     apt install software-properties-common -y
+      #     add-apt-repository ppa:deadsnakes/ppa -y
+      #     apt install python${{ matrix.python-version }} -y
+      #     ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+      #     apt install python${{ matrix.python-version }}-venv -y
+      #     apt install -y lsb-release mono-complete make git zip
+
+      #     python -m ensurepip --default-pip
+      #     pip install --upgrade pip
+      #     python --version
+      #     pip --version
+
+      #     mkdir -p ${{ env.PACKAGE_PATH }}
+      #     touch ${{ env.PACKAGE_PATH }}/__init__.py
+      #     pwd
+      #     ls -l
+      #     pip install -e .[doc]
+      #     pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+      #     pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+
+      # - name: Generate the mechanical stub files
+      #   env:
+      #     AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+      #     ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+      #   run: |
+      #     python stub_generator/create_files.py > results.txt
+      #   continue-on-error: True
+
+      # - name: Check stubs were generated
+      #   run: |
+      #     cat results.txt
+
+      #     # Check if failure occurred
+      #     output=$(grep -c "Done processing all mechanical stubs" results.txt)
+      #     if [ $output -eq 1 ]; then
+      #       echo "All mechanical stubs were created"
+      #       exit 0
+      #     else
+      #       echo "There was an issue creating the mechanical stubs"
+      #       exit 1
+      #     fi
+
+      - name: Make directories
         run: |
-          apt update
-          apt install --reinstall ca-certificates
-          apt install software-properties-common -y
-          add-apt-repository ppa:deadsnakes/ppa -y
-          apt install python${{ matrix.python-version }} -y
-          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
-          apt install python${{ matrix.python-version }}-venv -y
-          apt install -y lsb-release mono-complete make git zip
-
-          python -m ensurepip --default-pip
-          pip install --upgrade pip
-          python --version
-          pip --version
-
-          mkdir -p ${{ env.PACKAGE_PATH }}
-          touch ${{ env.PACKAGE_PATH }}/__init__.py
-          pwd
-          ls -l
-          pip install -e .[doc]
-          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          pip install --upgrade pip flit pytz tzdata ansys-pythonnet
-
-      - name: Generate the mechanical stub files
-        env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
-        run: |
-          python stub_generator/create_files.py > results.txt
-        continue-on-error: True
-
-      - name: Check stubs were generated
-        run: |
-          cat results.txt
-
-          # Check if failure occurred
-          output=$(grep -c "Done processing all mechanical stubs" results.txt)
-          if [ $output -eq 1 ]; then
-            echo "All mechanical stubs were created"
-            exit 0
-          else
-            echo "There was an issue creating the mechanical stubs"
-            exit 1
-          fi
+          mkdir -p ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
 
       - name: Upload v${{ matrix.mechanical.version }} stubs
         uses: actions/upload-artifact@v4
@@ -150,7 +154,12 @@ jobs:
         version_dirs=`find . -name "v*-${{ matrix.python-version }}" -printf '%P\n'`
         echo $version_dirs
 
-        for d in ${version_folders[@]}; do   mv "$d" "${d%%-*}"; done
+        for d in ${version_folders[@]}
+        do
+          version_only=${d%%-*}
+          echo "Renaming folder from $d to $version_only"
+          mv "$d" "$version_only"
+        done
 
         cd -
 
