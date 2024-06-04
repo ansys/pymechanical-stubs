@@ -168,6 +168,8 @@ jobs:
     - name: Display structure of downloaded files
       if: matrix.os == 'windows-latest'
       run: |
+        New-Item -ItemType Directory -Path ${{ env.PACKAGE_PATH }} -Force
+
         Get-Childitem ${{ env.PACKAGE_PATH }} |
         Foreach-object {
             $OldName = $_.name;
