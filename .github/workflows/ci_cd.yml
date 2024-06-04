@@ -149,6 +149,7 @@ jobs:
         path: ${{ env.PACKAGE_PATH }}/
 
     - name: Display structure of downloaded files
+      if: matrix.os == 'ubuntu-latest'
       run: |
         cd ${{ env.PACKAGE_PATH }}
 
@@ -163,6 +164,17 @@ jobs:
         cd -
 
         ls -R ${{ env.PACKAGE_PATH }}/
+
+    - name: Display structure of downloaded files
+      if: matrix.os == 'windows-latest'
+      run: |
+        Get-Childitem ${{ env.PACKAGE_PATH }} |
+        Foreach-object {
+            $OldName = $_.name;
+            $NewName = $_.name -replace '-${{ matrix.python-version }}','';
+            Rename-Item -Newname $NewName -Path ${{ env.PACKAGE_PATH }};
+            Write-Output $("Renamed {0} to {1}" -f $OldName,$NewName)
+            }
 
     - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
       shell: python
