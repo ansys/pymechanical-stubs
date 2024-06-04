@@ -148,7 +148,7 @@ jobs:
         pattern: "*-${{ matrix.python-version }}"
         path: ${{ env.PACKAGE_PATH }}/
 
-    - name: Display structure of downloaded files
+    - name: Remove ${{ matrix.python-version }} from folder name
       if: matrix.os == 'ubuntu-latest'
       run: |
         cd ${{ env.PACKAGE_PATH }}
@@ -162,8 +162,6 @@ jobs:
         done
 
         cd -
-
-        ls -R ${{ env.PACKAGE_PATH }}/
 
     - name: Display structure of downloaded files
       if: matrix.os == 'windows-latest'
@@ -237,6 +235,20 @@ jobs:
       with:
         pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
         path: ${{ env.PACKAGE_PATH }}/
+
+    - name: Remove ${{ matrix.python-version }} from folder name
+      run: |
+        cd ${{ env.PACKAGE_PATH }}
+
+        find . -name "v*-${{ matrix.python-version }}" -print0 |
+        while IFS= read -r -d '' line
+        do
+          version_only=${line%%-*}
+          echo "Renaming folder from $line to $version_only"
+          mv "$line" "$version_only"
+        done
+
+        cd -
 
     - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
       shell: python
@@ -330,7 +342,7 @@ jobs:
         pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
         path: ${{ env.PACKAGE_PATH }}/
 
-    - name: Display structure of downloaded files
+    - name: Remove ${{ env.MAIN_PYTHON_VERSION }} from folder name
       run: |
         cd ${{ env.PACKAGE_PATH }}
 
@@ -343,8 +355,6 @@ jobs:
         done
 
         cd -
-
-        ls -R ${{ env.PACKAGE_PATH }}/
 
     - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
       shell: python
