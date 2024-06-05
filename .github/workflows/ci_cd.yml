@@ -195,7 +195,7 @@ jobs:
     #         for folder in subfolders:
     #             f.write(f"from .{folder} import *\n")
     #             f.write('"""Mechanical installation version."""\n')
-  
+
     - name: List files
       run: ls -R
 
