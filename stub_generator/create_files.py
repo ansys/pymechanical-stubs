@@ -112,14 +112,15 @@ def make(base_dir, outdir, ASSEMBLIES, str_version):
         generate_content.make(outdir, assembly, type_filter=is_type_published)
 
     with open(os.path.join(outdir, "__init__.py"), "w") as f:
-        f.write(f"""import ansys.mechanical.stubs.v{major}{minor}.Ansys as Ansys""")
+        f.write(f'"""Ansys Mechanical {str_version} subpackage."""\n')
+        f.write(f"""import ansys.mechanical.stubs.{str_version}.Ansys as Ansys""")
 
     path = os.path.join(outdir, "Ansys")
 
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
     get_dirs = os.listdir(path)
     with open(os.path.join(path, "__init__.py"), "w") as f:
-        # f.write(f'"""The Ansys subpackage containing the Mechanical stubs."""')
+        f.write(f'"""Ansys subpackage."""\n')
         for dir in get_dirs:
             if os.path.isdir(os.path.join(path, dir)):
                 f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")

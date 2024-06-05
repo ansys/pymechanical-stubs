@@ -113,7 +113,7 @@ html_favicon = ansys_favicon
 source_suffix = ".rst"
 
 # The master toctree document.
-master_doc = "api/ansys/mechanical/stubs/index"
+master_doc = "index"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
@@ -141,7 +141,7 @@ html_theme_options = {
     "navigation_depth": 10,
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": get_version_match(__version__),
+        "version_match": switcher_version,
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
