@@ -69,59 +69,54 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Install dependencies
-      #   env:
-      #     AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-      #     ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
-      #   run: |
-      #     apt update
-      #     apt install --reinstall ca-certificates
-      #     apt install software-properties-common -y
-      #     add-apt-repository ppa:deadsnakes/ppa -y
-      #     apt install python${{ matrix.python-version }} -y
-      #     ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
-      #     apt install python${{ matrix.python-version }}-venv -y
-      #     apt install -y lsb-release mono-complete make git zip
-
-      #     python -m ensurepip --default-pip
-      #     pip install --upgrade pip
-      #     python --version
-      #     pip --version
-
-      #       mkdir -p ${{ env.PACKAGE_PATH }}
-      #       touch ${{ env.PACKAGE_PATH }}/__init__.py
-      #     pwd
-      #     ls -l
-      #     pip install -e .[doc]
-      #     pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-      #     pip install --upgrade pip flit pytz tzdata ansys-pythonnet
-
-      # - name: Generate the mechanical stub files
-      #   env:
-      #     AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-      #     ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
-      #   run: |
-      #     python stub_generator/create_files.py > results.txt
-      #   continue-on-error: True
-
-      # - name: Check stubs were generated
-      #   run: |
-      #     cat results.txt
-
-      #     # Check if failure occurred
-      #     output=$(grep -c "Done processing all mechanical stubs" results.txt)
-      #     if [ $output -eq 1 ]; then
-      #       echo "All mechanical stubs were created"
-      #       exit 0
-      #     else
-      #       echo "There was an issue creating the mechanical stubs"
-      #       exit 1
-      #     fi
-
-      - name: Make folders
+      - name: Install dependencies
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          mkdir -p ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
-          touch ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}/__init__.py
+          apt update
+          apt install --reinstall ca-certificates
+          apt install software-properties-common -y
+          add-apt-repository ppa:deadsnakes/ppa -y
+          apt install python${{ matrix.python-version }} -y
+          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+          apt install python${{ matrix.python-version }}-venv -y
+          apt install -y lsb-release mono-complete make git zip
+
+          python -m ensurepip --default-pip
+          pip install --upgrade pip
+          python --version
+          pip --version
+
+            mkdir -p ${{ env.PACKAGE_PATH }}
+            touch ${{ env.PACKAGE_PATH }}/__init__.py
+          pwd
+          ls -l
+          pip install -e .[doc]
+          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+
+      - name: Generate the mechanical stub files
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+        run: |
+          python stub_generator/create_files.py > results.txt
+        continue-on-error: True
+
+      - name: Check stubs were generated
+        run: |
+          cat results.txt
+
+          # Check if failure occurred
+          output=$(grep -c "Done processing all mechanical stubs" results.txt)
+          if [ $output -eq 1 ]; then
+            echo "All mechanical stubs were created"
+            exit 0
+          else
+            echo "There was an issue creating the mechanical stubs"
+            exit 1
+          fi
 
       - name: Upload v${{ matrix.mechanical.version }} stubs
         uses: actions/upload-artifact@v4
@@ -148,61 +143,6 @@ jobs:
         folder-pattern: "*-${{ matrix.python-version }}"
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
-
-    # - name: Download the library artifacts
-    #   uses: actions/download-artifact@v4
-    #   with:
-    #     pattern: "*-${{ matrix.python-version }}"
-    #     path: ${{ env.PACKAGE_PATH }}/
-
-    # - name: Remove ${{ matrix.python-version }} from folder name
-    #   if: matrix.os == 'ubuntu-latest'
-    #   run: |
-    #     cd ${{ env.PACKAGE_PATH }}
-
-    #     find . -name "v*-${{ matrix.python-version }}" -print0 |
-    #     while IFS= read -r -d '' line
-    #     do
-    #       version_only=${line%%-*}
-    #       echo "Renaming folder from $line to $version_only"
-    #       mv "$line" "$version_only"
-    #     done
-
-    #     cd -
-
-    # - name: Display structure of downloaded files
-    #   if: matrix.os == 'windows-latest'
-    #   run: |
-    #     Get-Childitem ${{ env.PACKAGE_PATH }} |
-    #     Foreach-object {
-    #         $OldName = $_.name;
-    #         $NewName = $_.name -replace '-${{ matrix.python-version }}','';
-    #         Rename-Item -Path ${{ env.PACKAGE_PATH }}/$OldName -NewName $NewName;
-    #         Write-Output $("Renamed {0} to {1}" -f $OldName,$NewName)
-    #         }
-
-    # - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
-    #   shell: python
-    #   run: |
-    #     import os
-
-    #     subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
-
-    #     with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
-    #         f.write('''try:
-    #         import importlib.metadata as importlib_metadata
-    #     except ModuleNotFoundError:  # pragma: no cover
-    #         import importlib_metadata  # type: ignore
-
-    #     __version__ = importlib_metadata.version("ansys-mechanical-stubs")
-    #     """Patch version for the ansys-mechanical-stubs package."""\n\n''')
-
-    #         for folder in subfolders:
-    #             f.write(f"from .{folder} import *\n")
-    #             f.write('"""Mechanical installation version."""\n')
-
-    - name: List files
-      run: ls -R
 
     - name: Retrieve Mechanical version
       run: |
@@ -240,45 +180,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: "Download the library artifacts from build-library step"
-      uses: actions/download-artifact@v4
+    - name: Download stubs
+      uses: ./.github/workflows/setup-stubs/
       with:
-        pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
-        path: ${{ env.PACKAGE_PATH }}/
-
-    - name: Remove ${{ matrix.python-version }} from folder name
-      run: |
-        cd ${{ env.PACKAGE_PATH }}
-
-        find . -name "v*-${{ matrix.python-version }}" -print0 |
-        while IFS= read -r -d '' line
-        do
-          version_only=${line%%-*}
-          echo "Renaming folder from $line to $version_only"
-          mv "$line" "$version_only"
-        done
-
-        cd -
-
-    - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
-      shell: python
-      run: |
-        import os
-
-        subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
-
-        with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
-            f.write('''try:
-            import importlib.metadata as importlib_metadata
-        except ModuleNotFoundError:  # pragma: no cover
-            import importlib_metadata  # type: ignore
-
-        __version__ = importlib_metadata.version("ansys-mechanical-stubs")
-        """Patch version for the ansys-mechanical-stubs package."""\n\n''')
-
-            for folder in subfolders:
-                f.write(f"from .{folder} import *\n")
-                f.write('"""Mechanical installation version."""\n')
+        folder-pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ matrix.python-version }}
 
     - name: Install project & doc dependencies
       run: |
@@ -346,45 +253,12 @@ jobs:
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
         use-cache: false
 
-    - name: Download the library artifacts
-      uses: actions/download-artifact@v4
+    - name: Download stubs
+      uses: ./.github/workflows/setup-stubs/
       with:
-        pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
-        path: ${{ env.PACKAGE_PATH }}/
-
-    - name: Remove ${{ env.MAIN_PYTHON_VERSION }} from folder name
-      run: |
-        cd ${{ env.PACKAGE_PATH }}
-
-        find . -name "v*-${{ env.MAIN_PYTHON_VERSION }}" -print0 |
-        while IFS= read -r -d '' line
-        do
-          version_only=${line%%-*}
-          echo "Renaming folder from $line to $version_only"
-          mv "$line" "$version_only"
-        done
-
-        cd -
-
-    - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
-      shell: python
-      run: |
-        import os
-
-        subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
-
-        with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
-            f.write('''try:
-            import importlib.metadata as importlib_metadata
-        except ModuleNotFoundError:  # pragma: no cover
-            import importlib_metadata  # type: ignore
-
-        __version__ = importlib_metadata.version("ansys-mechanical-stubs")
-        """Patch version for the ansys-mechanical-stubs package."""\n\n''')
-
-            for folder in subfolders:
-                f.write(f"from .{folder} import *\n")
-                f.write('"""Mechanical installation version."""\n')
+        folder-pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
     - name: "Install build and twine"
       shell: bash
