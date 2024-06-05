@@ -37,6 +37,13 @@ runs:
   using: "composite"
   steps:
 
+    - name: Get cwd
+      shell: python
+      run: |
+        import os
+
+        print(os.getcwd())
+
     - name: Download the library artifacts
       uses: actions/download-artifact@v4
       with:
@@ -48,7 +55,7 @@ runs:
       run: |
         import os
 
-        for dirpath, dirnames, filenames in os.walk(${{ inputs.package-path }}):
+        for dirpath, dirnames, filenames in os.walk("${{ inputs.package-path }}"):
           for dir in dirnames:
               original_dir = os.path.join(dirpath, dir)
               new_dir = dir.replace("-${{ inputs.python-version }}", "")
