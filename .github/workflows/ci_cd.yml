@@ -138,7 +138,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Download stubs
-      uses: ./.github/setup-stubs/
+      uses: ./.github/workflows/setup-stubs/
       with:
         folder-pattern: "*-${{ matrix.python-version }}"
         package-path: "${{ env.PACKAGE_PATH }}"
