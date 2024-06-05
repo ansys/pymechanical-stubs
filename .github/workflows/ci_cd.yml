@@ -137,59 +137,66 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Download the library artifacts
-      uses: actions/download-artifact@v4
+    - name: Download stubs
+      uses: setup-version-dirs
       with:
-        pattern: "*-${{ matrix.python-version }}"
-        path: ${{ env.PACKAGE_PATH }}/
+        folder-pattern: "*-${{ matrix.python-version }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ matrix.python-version }}
 
-    - name: Remove ${{ matrix.python-version }} from folder name
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        cd ${{ env.PACKAGE_PATH }}
+    # - name: Download the library artifacts
+    #   uses: actions/download-artifact@v4
+    #   with:
+    #     pattern: "*-${{ matrix.python-version }}"
+    #     path: ${{ env.PACKAGE_PATH }}/
 
-        find . -name "v*-${{ matrix.python-version }}" -print0 |
-        while IFS= read -r -d '' line
-        do
-          version_only=${line%%-*}
-          echo "Renaming folder from $line to $version_only"
-          mv "$line" "$version_only"
-        done
+    # - name: Remove ${{ matrix.python-version }} from folder name
+    #   if: matrix.os == 'ubuntu-latest'
+    #   run: |
+    #     cd ${{ env.PACKAGE_PATH }}
 
-        cd -
+    #     find . -name "v*-${{ matrix.python-version }}" -print0 |
+    #     while IFS= read -r -d '' line
+    #     do
+    #       version_only=${line%%-*}
+    #       echo "Renaming folder from $line to $version_only"
+    #       mv "$line" "$version_only"
+    #     done
 
-    - name: Display structure of downloaded files
-      if: matrix.os == 'windows-latest'
-      run: |
-        Get-Childitem ${{ env.PACKAGE_PATH }} |
-        Foreach-object {
-            $OldName = $_.name;
-            $NewName = $_.name -replace '-${{ matrix.python-version }}','';
-            Rename-Item -Path ${{ env.PACKAGE_PATH }}/$OldName -NewName $NewName;
-            Write-Output $("Renamed {0} to {1}" -f $OldName,$NewName)
-            }
+    #     cd -
 
-    - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
-      shell: python
-      run: |
-        import os
+    # - name: Display structure of downloaded files
+    #   if: matrix.os == 'windows-latest'
+    #   run: |
+    #     Get-Childitem ${{ env.PACKAGE_PATH }} |
+    #     Foreach-object {
+    #         $OldName = $_.name;
+    #         $NewName = $_.name -replace '-${{ matrix.python-version }}','';
+    #         Rename-Item -Path ${{ env.PACKAGE_PATH }}/$OldName -NewName $NewName;
+    #         Write-Output $("Renamed {0} to {1}" -f $OldName,$NewName)
+    #         }
 
-        subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
+    # - name: Create __init__.py in ${{ env.PACKAGE_PATH }}
+    #   shell: python
+    #   run: |
+    #     import os
 
-        with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
-            f.write('''try:
-            import importlib.metadata as importlib_metadata
-        except ModuleNotFoundError:  # pragma: no cover
-            import importlib_metadata  # type: ignore
+    #     subfolders = [ f.name for f in os.scandir("${{ env.PACKAGE_PATH }}/") if f.is_dir() ]
 
-        __version__ = importlib_metadata.version("ansys-mechanical-stubs")
-        """Patch version for the ansys-mechanical-stubs package."""\n\n''')
+    #     with open("${{ env.PACKAGE_PATH }}/__init__.py", "w") as f:
+    #         f.write('''try:
+    #         import importlib.metadata as importlib_metadata
+    #     except ModuleNotFoundError:  # pragma: no cover
+    #         import importlib_metadata  # type: ignore
 
-            for folder in subfolders:
-                f.write(f"from .{folder} import *\n")
-                f.write('"""Mechanical installation version."""\n')
+    #     __version__ = importlib_metadata.version("ansys-mechanical-stubs")
+    #     """Patch version for the ansys-mechanical-stubs package."""\n\n''')
 
-    - name: Retrieve Mechanial version
+    #         for folder in subfolders:
+    #             f.write(f"from .{folder} import *\n")
+    #             f.write('"""Mechanical installation version."""\n')
+
+    - name: Retrieve Mechanical version
       run: |
         pip install -e .
         echo "MECHANICAL_VERSION=$(python -c 'from ansys.mechanical.stubs import __version__; print(__version__)')" >> $GITHUB_ENV

@@ -1,0 +1,76 @@
+name: >
+  Build library action
+
+description: |
+  Verifies if a Python library builds properly. As a result of a successful
+  building process, wheel and source distribution artifacts are generated. This
+  action is expected to be used as an independent job.
+
+  .. note::
+
+      Use this action instead of the `build-ci-wheels
+      <https://actions.docs.ansys.com/version/stable/build-actions/index.html#build-ci-wheels-action>`_
+      if your library is a pure Python project with no source code to be compiled.
+
+inputs:
+
+  # Required inputs
+  folder-pattern:
+    description: >
+      Pattern of the folder to download. For example, "v[0-9][0-9][0-9]-3.10"
+    required: true
+    type: string
+
+  package-path:
+    description: >
+      Path to where the package is located. For example, src/ansys/mechanical/stubs
+    required: true
+    type: string
+
+  python-version:
+    description: >
+      Python version in the folder pattern. For example, 3.10
+    required: true
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: Download the library artifacts
+      uses: actions/download-artifact@v4
+      with:
+        pattern: ${{ inputs.folder-pattern }}
+        path: ${{ inputs.package-path }}/
+
+    - name: Rename folders
+      shell: python
+      run: |
+        import os
+
+        for dirpath, dirnames, filenames in os.walk(${{ inputs.package-path }}):
+          for dir in dirnames:
+              original_dir = os.path.join(dirpath, dir)
+              new_dir = dir.replace("-${{ inputs.python-version }}", "")
+              renamed_dir = os.path.join(dirpath, new_dir)
+              os.rename(original_dir, renamed_dir)
+
+    - name: Create __init__.py in ${{ inputs.package-path }}
+      shell: python
+      run: |
+        import os
+
+        subfolders = [ f.name for f in os.scandir("${{ inputs.package-path }}/") if f.is_dir() ]
+
+        with open("${{ inputs.package-path }}/__init__.py", "w") as f:
+            f.write('''try:
+            import importlib.metadata as importlib_metadata
+        except ModuleNotFoundError:  # pragma: no cover
+            import importlib_metadata  # type: ignore
+
+        __version__ = importlib_metadata.version("ansys-mechanical-stubs")
+        """Patch version for the ansys-mechanical-stubs package."""\n\n''')
+
+            for folder in subfolders:
+                f.write(f"from .{folder} import *\n")
+                f.write('"""Mechanical installation version."""\n')
