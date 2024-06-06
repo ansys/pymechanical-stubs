@@ -135,7 +135,7 @@ jobs:
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
       with:
-        folder-pattern: "*-${{ matrix.python-version }}"
+        folder-pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
 
