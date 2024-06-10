@@ -39,5 +39,6 @@ repos:
   rev: v0.2.9
   hooks:
   - id: add-license-headers
+    files: '(src|examples|tests|scripts)/.*\.(py)|\.(proto)'
     args:
     - --start_year=2023
