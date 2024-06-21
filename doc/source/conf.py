@@ -36,7 +36,7 @@ switcher_version = get_version_match(__version__)
 
 # Sphinx extensions
 extensions = [
-    "autoapi.extension",
+    "ansys_sphinx_theme.extension.autoapi",
     "numpydoc",
     "sphinx_autodoc_typehints",
     "sphinx_copybutton",
@@ -50,24 +50,9 @@ extensions = [
 markdown_anchor_sections = True
 markdown_anchor_signatures = True
 
-exclude_patterns = ["_autoapi_templates", "_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-# Configuration for Sphinx autoapi
-autoapi_type = "python"
-autoapi_dirs = ["../../src/ansys"]
-autoapi_root = "api"
-autoapi_options = [
-    "members",
-    "undoc-members",
-    "show-inheritance",
-    "show-module-summary",
-    "special-members",
-]
-autoapi_template_dir = get_autoapi_templates_dir_relative_path(Path(__file__))
-suppress_warnings = ["autoapi.python_import_resolution"]
-autoapi_python_use_implicit_namespaces = True
-autoapi_keep_files = True
-autoapi_render_in_single_page = ["class", "enum", "exception"]
+suppress_warnings = ["autoapi.python_import_resolution", "design.grid", "config.cache"]
 
 # Intersphinx mapping
 intersphinx_mapping = {
@@ -157,4 +142,6 @@ html_theme_options = {
             "https://mechanical.docs.pyansys.com/version/stable/user_guide_scripting/index.html",
         ),
     ],
+    "ansys_sphinx_theme_autoapi": {"project": project, "templates": "_templates/autoapi"},
+    # "navigation_depth": 10,
 }
