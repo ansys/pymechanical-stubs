@@ -200,7 +200,7 @@ jobs:
     - name: "Generate html and markdown documentation"
       run: |
         # make -C doc html
-        sphinx-build -M markdown pymechanical-stubs/doc/source pymechanical-stubs/doc/_build
+        sphinx-build -M markdown doc/source doc/_build
 
     - name: "Clean ID in first row"
       run: |
