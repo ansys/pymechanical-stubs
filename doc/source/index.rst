@@ -23,4 +23,4 @@ link or tab in the navigation bar on this page to explore the Mechanical API Doc
    :hidden:
    :maxdepth: 2
 
-   _templates/autoapi/index
+   api/index

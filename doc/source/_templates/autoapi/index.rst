@@ -1,8 +1,8 @@
-API Reference
+API reference
 =============
 
-This documentation lists all supported APIs used in Ansys Mechanical. It provides brief descriptions of the objects,
-methods, and properties for all namespaces.
+This section describes {{ project_name }} endpoints, their capabilities, and how
+to interact with them programmatically.
 
 .. toctree::
    :titlesonly:
