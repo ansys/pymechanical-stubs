@@ -199,7 +199,7 @@ jobs:
 
     - name: "Generate html and markdown documentation"
       run: |
-        make -C doc html
+        # make -C doc html
         sphinx-build -M markdown doc/source doc/_build
 
     - name: "Clean ID in first row"
