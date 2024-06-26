@@ -46,8 +46,15 @@ The ``{{ obj.name }}`` library
 {{ "================" + "=" * obj.name|length }}
     {% else %}
     {% if obj.type == "package" %}
-The ``{{ obj.short_name }}`` package
+
+        {% if obj.short_name == "v241" %}
+Mechanical 2024 R1 API Reference
+================================
+        {% else %}
+``{{ obj.short_name }}``
 {{ "====================" + "=" * obj.short_name|length }}
+        {% endif %}
+
     {% else %}
 The ``{{ obj.short_name }}.py`` module
 {{ "==================" + "=" * obj.short_name|length }}

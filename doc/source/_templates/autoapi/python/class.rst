@@ -130,13 +130,6 @@ Overview
 
 {# ---------------------- Begin class details -------------------- #}
 
-Import detail
--------------
-{% set split_parts = obj.obj["full_name"].split('.') %}
-{% set joined_parts = '.'.join(split_parts[:-1]) %}
-
-    from {{ joined_parts }} import {{ obj["short_name"] }}
-
     {% if visible_properties %}
 Property detail
 ---------------
