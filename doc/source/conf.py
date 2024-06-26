@@ -159,6 +159,9 @@ html_theme_options = {
     "navigation_depth": 10,
 }
 
+markdown_anchor_sections = True
+markdown_anchor_signatures = True
+
 # -- Linkcheck config --------------------------------------------------------
 
 linkcheck_ignore = []
