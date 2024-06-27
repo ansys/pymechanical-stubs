@@ -1,3 +1,4 @@
+.. vale off
 API reference
 =============
 
@@ -9,3 +10,5 @@ descriptions of the objects, methods, and properties for all namespaces.
    :maxdepth: 3
 
    <span class="nf nf-md-package"></span>Mechanical 2024 R1</api/ansys/mechanical/stubs/v241/index>
+
+.. vale on

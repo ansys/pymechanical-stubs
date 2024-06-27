@@ -1,3 +1,5 @@
+.. vale off
+
 {% if obj.display %}
 
 {# ----------------- Start macros definition for tab item ------------------#}
@@ -212,3 +214,5 @@ Methods
 
 {# ---------------------- End class details -------------------- #}
 {% endif %}
+
+.. vale on
