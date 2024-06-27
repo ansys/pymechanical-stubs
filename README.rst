@@ -45,7 +45,7 @@ Overview
 
 PyMechanical Stubs generates ``__init__.py`` files from assembly files in the Ansys Mechanical Product to
 create python files that can be used for autocomplete with PyMechanical. Stubs are generated for each
-version of Mechanical, starting with 2024 R1. 
+version of Mechanical, starting with 2024 R1.
 
 ``clr-stubs`` generate Python stubs for .NET assemblies using pythonnet. These stubs are intended
 to be used by the autocomplete engine of editors like Atom, Sublime, and VS Code, as well as
