@@ -63,38 +63,62 @@ autocomplete.
 Manually create ``__init__.py`` files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install Mechanical 2023 R2 onto your computer.
+1. Install Mechanical 2024 R1 onto your computer.
 
     Ensure the environment variable, AWP_ROOTDV_DEV, is set to the location of
-    Mechanical 2023 R2 (C:\Program Files\Ansys Inc\v232).
+    Mechanical 2024 R1 (C:\Program Files\Ansys Inc\v241).
 
-2. Run main.py to generate the stubs from Mechanical 232.
+2. Clone the repository.
 
-    ```python main.py```
+.. code:: bash
 
-    Note: There may be an Unhandled Exception when the stubs are done running.
+     git clone https://github.com/ansys/pymechanical-stubs.git
+
+
+3. Run stub_generator/create_files.py to generate the stubs from Mechanical 241.
+
+.. code:: bash
+
+    python stub_generator/create_files.py
+
+.. note::
+    There may be an Unhandled Exception when the stubs are done running.
     If the message, "Done creating all Mechanical stubs" appears, proceed
     to the next step.
 
-3. Next, create a virtual environment and activate it:
+4. Next, create a virtual environment and activate it:
 
-    ```python -m venv .venv```
+.. code:: bash
 
-    Windows:
-        ```.venv\Scripts\activate.bat```
+    python -m venv .venv
 
-    Linux:
-        ```source .venv/bin/activate```
+Windows:
 
-4. Install ansys-mechanical-stubs
+.. code:: bash
 
-    ```pip install -e .```
+    venv\Scripts\activate.bat
 
-5. Make the Sphinx documentation
+Linux:
 
-    ```make -C doc html```
+.. code:: bash
 
-    Note: Warning messages can be ignored for now. The documentation generation takes a long time.
+    source .venv/bin/activate
+
+5. Install ansys-mechanical-stubs
+
+.. code:: bash
+
+    pip install -e .
+
+6. Make the Sphinx documentation
+
+.. code:: bash
+
+    make -C doc html
+
+.. note::
+
+    Warning messages can be ignored for now. The documentation generation takes a long time.
 
 Installation
 ^^^^^^^^^^^^
@@ -129,7 +153,7 @@ For example, on Linux with Python 3.9, unzip the wheelhouse archive and install 
 
 .. code:: bash
 
-    unzip ansys-mechanical-stubs-v23.2.0-wheelhouse-ubuntu-latest-3.9.zip -d wheelhouse
+    unzip ansys-mechanical-stubs-v0.1.0-wheelhouse-ubuntu-latest-3.10 -d wheelhouse
     pip install ansys-mechanical-stubs -f wheelhouse --no-index --upgrade --ignore-installed
 
 If you are on Windows with Python 3.9, unzip the wheelhouse archive to a wheelhouse directory
@@ -150,7 +174,7 @@ This code shows how to import PyMechanical Stubs and its basic capabilities:
 
    TYPE_CHECKING = True
    if TYPE_CHECKING:
-       import ansys.mechanical.stubs.Ansys as Ansys
+       import ansys.mechanical.stubs.v241.Ansys as Ansys
 
    geometry_import = Model.GeometryImportGroup.AddGeometryImport()
 
