@@ -230,7 +230,7 @@ jobs:
         path: output/
 
     - name: "Upload markdown documentation"
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-md
@@ -238,7 +238,7 @@ jobs:
         retention-days: 7
 
     - name: "Upload Sphinx HTML documentation"
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-html
