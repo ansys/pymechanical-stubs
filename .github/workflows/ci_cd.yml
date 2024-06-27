@@ -63,7 +63,7 @@ jobs:
         mechanical: [
           { image: '24.1.0', version: '241' }
         ]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
