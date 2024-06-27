@@ -25,24 +25,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
-dependencies = [
-    "build==1.0.3",
-    "certifi==2024.2.2",
-    "charset_normalizer==3.3.2",
-    "colorama==0.4.6",
-    "docutils==0.20.1",
-    "flit_core==3.9.0",
-    "flit==3.9.0",
-    "idna==3.6",
-    "importlib_metadata==7.0.1",
-    "packaging==23.2",
-    "pyproject_hooks==1.0.0",
-    "requests==2.31.0",
-    "tomli_w==1.0.0",
-    "tomli==2.0.1",
-    "urllib3==2.2.0",
-    "zipp==3.17.0",
-]
+dependencies = []
 
 [project.optional-dependencies]
 doc = [
