@@ -37,9 +37,8 @@ DEFAULT_OUTPUT_FOLDER = "output"
 def parse_index_html(html_file):
     with open(html_file, "r", encoding="utf-8") as f:
         html_content = f.read()
-    return html_content, os.path.dirname(
-        html_file
-    )  # Return HTML content and directory of the HTML file
+    # Return HTML content and directory of the HTML file
+    return html_content, os.path.dirname(html_file)
 
 
 def extract_nav_items(base_dir, html_content):
@@ -105,7 +104,7 @@ def create_toc_file(api_folder, indented_items):
         f.write("  items: \n")
         for indentation, nav_item in indented_items:
             print(nav_item)
-            if nav_item["href"] == "ansys/mechanical/stubs/index.html":
+            if nav_item["href"] == "ansys/mechanical/stubs/v241/index.html":
                 cnt = cnt + 1
             if cnt <= 1:
                 if nav_item["name"] == "items:":
