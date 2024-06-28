@@ -43,9 +43,9 @@ PyMechanical Stubs
 Overview
 --------
 
-PyMechanical Stubs generates ``__init__.py`` files from assembly files in the Ansys Mechanical Product to
-create python files that can be used for autocomplete with PyMechanical. Stubs are generated for each
-version of Mechanical, starting with 2024 R1.
+PyMechanical Stubs generates ``__init__.py`` files from assembly files in the Mechanical
+application to create python files that can be used for autocomplete with PyMechanical.
+Stubs are generated for each version of Mechanical, starting with 2024 R1.
 
 ``clr-stubs`` generate Python stubs for .NET assemblies using pythonnet. These stubs are intended
 to be used by the autocomplete engine of editors like Atom, Sublime, and VS Code, as well as
@@ -64,7 +64,7 @@ autocomplete.
 Manually create ``__init__.py`` files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install Mechanical 2024 R1 onto your computer.
+1. Install Mechanical 2024 R1.
 
    .. note::
 
@@ -78,18 +78,19 @@ Manually create ``__init__.py`` files
         git clone https://github.com/ansys/pymechanical-stubs.git
 
 
-3. Run stub_generator/create_files.py to generate the stubs from Mechanical 241.
+3. Run stub_generator/create_files.py to generate the stubs from Mechanical 2024 R1.
 
    .. code:: bash
 
        python stub_generator/create_files.py
 
    .. note::
+
        There may be an Unhandled Exception when the stubs are done running.
        If the message, "Done creating all Mechanical stubs" appears, proceed
        to the next step.
 
-4. Next, create a virtual environment and activate it:
+4. Next, create and activate a virtual environment:
 
    .. code:: bash
 
@@ -121,7 +122,7 @@ Manually create ``__init__.py`` files
 
    .. note::
 
-       Warning messages can be ignored for now. The documentation generation takes a long time.
+       You can ignore any current warning messages. It is a lengthy process to generate the documentation.
 
 Installation
 ^^^^^^^^^^^^
@@ -149,8 +150,8 @@ archive for your corresponding machine architecture from the repository's `Relea
 <https://github.com/ansys/pymechanical-stubs/releases>`_.
 
 Each wheelhouse archive contains all the Python wheels necessary to install PyMechanical Stubs from scratch on Windows,
-Linux, and MacOS from Python 3.10 to 3.12. You can install this on an isolated system with a fresh Python
-installation or on a virtual environment.
+Linux, and MacOS from Python 3.10 to 3.12. In addition, you can install the wheelhouse on a new virtual environment
+that does not include any previously installed dependencies.
 
 For example, on Linux with Python 3.10, unzip the wheelhouse archive and install it with these commands:
 
@@ -162,8 +163,11 @@ For example, on Linux with Python 3.10, unzip the wheelhouse archive and install
 If you are on Windows with Python 3.10, unzip the wheelhouse archive to a wheelhouse directory
 and then install using the same ``pip install`` command as in the preceding example.
 
-Consider installing using a virtual environment. For more information, see `Creation of virtual
-environments <https://docs.python.org/3/library/venv.html>`_ in the Python documentation.
+.. note::
+
+    If desired, you can install the wheelhouse on an isolated  or virtual system.
+    See `Creation of virtual environments <https://docs.python.org/3/library/venv.html>`_ in the
+    Python documentation for the required steps.
 
 Basic usage
 ^^^^^^^^^^^
