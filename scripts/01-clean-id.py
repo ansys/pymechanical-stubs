@@ -21,9 +21,9 @@
 # SOFTWARE.
 
 import argparse
+import fileinput
 import os
 import re
-import fileinput
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
@@ -32,7 +32,7 @@ def remove_links_from_markdown_files(directory_path):
     # Define the regular expression pattern to match <a id="..."></a> tags at the beginning of the file
     tag_pattern = r'^<a id=".*?"></a>'
     # Define the regular expression pattern to remove vale on/off comments
-    vale_pattern = r'^<!-- vale .*? -->'
+    vale_pattern = r"^<!-- vale .*? -->"
 
     # Iterate over all files and subdirectories in the specified directory
     for root, _, files in os.walk(directory_path):
@@ -43,19 +43,19 @@ def remove_links_from_markdown_files(directory_path):
                 # Only want to remove first <a></a> tag
                 first_a_tag = False
 
-                with fileinput.FileInput(file_path, inplace = True, encoding='utf-8') as f: 
-                    for line in f: 
+                with fileinput.FileInput(file_path, inplace=True, encoding="utf-8") as f:
+                    for line in f:
                         # Remove vale on/off comments
-                        if bool(re.match(fr"{vale_pattern}", line)):
+                        if bool(re.match(rf"{vale_pattern}", line)):
                             line = line.replace(line, "")
-                            print(line, end ='\n')
+                            print(line, end="\n")
                         # Remove first <a></a> tag
-                        elif first_a_tag == False and bool(re.match(fr"{tag_pattern}", line)):
+                        elif first_a_tag == False and bool(re.match(rf"{tag_pattern}", line)):
                             line = line.replace(line, "")
                             print(line)
                             first_a_tag = True
                         else:
-                            print(line, end ='') 
+                            print(line, end="")
 
 
 if __name__ == "__main__":
