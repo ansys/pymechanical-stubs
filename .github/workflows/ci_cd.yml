@@ -63,7 +63,7 @@ jobs:
         mechanical: [
           { image: '24.1.0', version: '241' }
         ]
-        python-version: ['3.10'] #, '3.11', '3.12']
+        python-version: ['3.10', '3.11', '3.12']
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
@@ -127,7 +127,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.10'] #, '3.11', '3.12']
+        python-version: ['3.10', '3.11', '3.12']
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
@@ -217,6 +217,7 @@ jobs:
     - name: "Fix paths in toc.yml"
       shell: bash
       run: |
+        # Remove doc/_build/html from paths in toc.yml file
         sed -i -e 's;doc/_build/html/;;g' output/toc.yml
 
     - name: "Add header to tables"
