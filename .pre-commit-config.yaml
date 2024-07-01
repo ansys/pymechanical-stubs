@@ -37,9 +37,12 @@ repos:
   - id: trailing-whitespace
 
 - repo: https://github.com/ansys/pre-commit-hooks
-  rev: v0.2.9
+  rev: v0.4.0
   hooks:
   - id: add-license-headers
     files: '(src|examples|tests|scripts)/.*\.(py)|\.(proto)'
     args:
     - --start_year=2023
+  - id: tech-review
+    args:
+    - --product=scripting.mechanical
