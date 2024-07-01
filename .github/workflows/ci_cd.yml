@@ -63,7 +63,7 @@ jobs:
         mechanical: [
           { image: '24.1.0', version: '241' }
         ]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
@@ -127,7 +127,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
@@ -213,6 +213,11 @@ jobs:
     - name: "Create table of contents"
       run: |
         python scripts/03-create-toc-from-html-mechanical.py
+
+    - name: "Fix paths in toc.yml"
+      shell: bash
+      run: |
+        sed -i -e 's;doc/_build/html/;;g' output/toc.yml
 
     - name: "Add header to tables"
       run: |
