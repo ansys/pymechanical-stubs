@@ -23,6 +23,7 @@
 import argparse
 import os
 import pathlib
+import re
 import sys
 from urllib.parse import urljoin
 
@@ -37,9 +38,8 @@ DEFAULT_OUTPUT_FOLDER = "output"
 def parse_index_html(html_file):
     with open(html_file, "r", encoding="utf-8") as f:
         html_content = f.read()
-    return html_content, os.path.dirname(
-        html_file
-    )  # Return HTML content and directory of the HTML file
+    # Return HTML content and directory of the HTML file
+    return html_content, os.path.dirname(html_file)
 
 
 def extract_nav_items(base_dir, html_content):
@@ -56,8 +56,9 @@ def extract_nav_items(base_dir, html_content):
             # print('SKIP ../index.html file=', href)
             continue  # Skip '../index.html' paths and path not ending with just index.html
         item = {"name": link.text.strip(), "href": base_dir + href}
-        # print('ITEM=', item)
-        items.append(item)
+        if item not in items:
+            # print('ITEM=', item)
+            items.append(item)
 
     return items
 
@@ -96,7 +97,6 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
 
 
 def create_toc_file(api_folder, indented_items):
-    cnt = 0
     with open("toc.yml", "w", encoding="utf-8") as f:
         f.write("- name: Introduction\n")
         f.write("  href: index.md\n")
@@ -104,23 +104,19 @@ def create_toc_file(api_folder, indented_items):
         f.write("  href: " + api_folder + "/" + "index.md\n")
         f.write("  items: \n")
         for indentation, nav_item in indented_items:
-            print(nav_item)
-            if nav_item["href"] == "ansys/mechanical/stubs/index.html":
-                cnt = cnt + 1
-            if cnt <= 1:
-                if nav_item["name"] == "items:":
-                    f.write("  " * (indentation + 1) + "items:\n")
-                else:
-                    f.write("  " * indentation + "- name: " + nav_item["name"] + "\n")
-                if nav_item["href"]:
-                    f.write(
-                        "  " * indentation
-                        + "  href: "
-                        + api_folder
-                        + "/"
-                        + nav_item["href"].replace("html", "md")
-                        + "\n"
-                    )
+            if nav_item["name"] == "items:":
+                f.write("  " * (indentation + 1) + "items:\n")
+            else:
+                f.write("  " * indentation + "- name: " + nav_item["name"] + "\n")
+            if nav_item["href"]:
+                f.write(
+                    "  " * indentation
+                    + "  href: "
+                    + api_folder
+                    + "/"
+                    + nav_item["href"].replace("html", "md")
+                    + "\n"
+                )
 
 
 if __name__ == "__main__":

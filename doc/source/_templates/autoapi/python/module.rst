@@ -49,8 +49,8 @@ The ``{{ obj.name }}`` library
     {% else %}
     {% if obj.type == "package" %}
 
-        {% if obj.short_name == "v241" %}
-Mechanical 2024 R1 API Reference
+        {% if (obj.short_name | length==4) and obj.short_name.startswith("v") %}
+Mechanical 20{{ obj.short_name[1:3] }} R{{ obj.short_name[3] }} API Reference
 ================================
         {% else %}
 ``{{ obj.short_name }}``

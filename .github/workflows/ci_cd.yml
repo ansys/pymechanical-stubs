@@ -214,6 +214,12 @@ jobs:
       run: |
         python scripts/03-create-toc-from-html-mechanical.py
 
+    - name: "Fix paths in toc.yml"
+      shell: bash
+      run: |
+        # Remove doc/_build/html from paths in toc.yml file
+        sed -i -e 's;doc/_build/html/;;g' output/toc.yml
+
     - name: "Add header to tables"
       run: |
         python scripts/04-add-header-to-tables.py
