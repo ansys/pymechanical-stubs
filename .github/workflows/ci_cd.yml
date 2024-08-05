@@ -300,7 +300,7 @@ jobs:
     needs: [doc-build]
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     steps:
-    
+
       - name: "Release to the private PyPI repository"
         uses: ansys/actions/release-pypi-private@v6
         with:
