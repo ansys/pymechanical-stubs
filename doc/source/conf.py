@@ -122,7 +122,7 @@ html_short_title = html_title = "PyMechanical Stubs"
 html_theme = "ansys_sphinx_theme"
 html_logo = pyansys_logo_black
 html_context = {
-    "github_user": "pyansys",
+    "github_user": "ansys",
     "github_repo": "pymechanical-stubs",
     "github_version": "main",
     "doc_path": "doc/source",
