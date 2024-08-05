@@ -52,7 +52,7 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    sys.path.append(os.path.join(install_dir, "aisol", "bin", platform_string))
+    sys.path.append(install_dir / "aisol" / "bin" / platform_string)
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
@@ -62,7 +62,7 @@ def resolve():
 
 
 def clean(outdir):
-    """Removes src/ansys/mechanical/stubs directory.
+    """Remove src/ansys/mechanical/stubs directory.
 
     Parameters
     ----------
@@ -73,9 +73,19 @@ def clean(outdir):
 
 
 def is_type_published(mod_type: "System.RuntimeType"):
-    # TODO - should this filter just get applied by the sphinx system as opposed to the stub generator?
-    #        that way all the System stuff we depend on could also get generated (like in the iron-python-stubs
-    #        project).
+    """Get published type if it exists.
+
+    Parameters
+    ----------
+    mod_type: System.RuntimeType
+        A module type.
+
+    Returns
+    -------
+    bool
+        `True` if "Ansys.Utilities.Sdk.PublishedAttribute" is in map(str, attrs)
+        `False` if "Ansys.Utilities.Sdk.PublishedAttribute" is not in map(str, attrs)
+    """
     try:
         attrs = mod_type.GetCustomAttributes(True)
         if len(attrs) == 0:
@@ -85,78 +95,70 @@ def is_type_published(mod_type: "System.RuntimeType"):
         print(e)
 
 
-def make(base_dir, outdir, ASSEMBLIES, str_version):
-    """
-    Makes __init__.py files in src/ansys/mechanical/stubs, generates
+def make(base_dir, outdir, assemblies, str_version):
+    """Generate the __init__.py files from assembly files.
+
+    Make __init__.py files in src/ansys/mechanical/stubs, generate
     classes, properties, and methods with their docstrings from assembly files from the
-    Ansys Mechanical install, and adds import statements to the __init__.py files.
+    Ansys Mechanical install, and add import statements to the __init__.py files.
 
     Parameters
     ----------
     outdir: pathlib.Path
         Path to where the init files are generated.
-    ASSEMBLIES: list
+    assemblies: list
         List of Mechanical assembly files to create classes, properties, and methods from.
     """
     install_dir, version = get_version()
     version = str(version)
     version = version[:2] + "." + version[2:]
-    major_minor = version.split(".")
-    major = major_minor[0]
-    minor = major_minor[1]
 
     outdir.mkdir(parents=True, exist_ok=True)
 
-    for assembly in ASSEMBLIES:
+    for assembly in assemblies:
         generate_content.make(outdir, assembly, type_filter=is_type_published)
 
-    with open(os.path.join(outdir, "__init__.py"), "w") as f:
+    with pathlib.Path.open(outdir / "__init__.py", "w") as f:
         f.write(f'"""Ansys Mechanical {str_version} subpackage."""\n')
         f.write(f"""import ansys.mechanical.stubs.{str_version}.Ansys as Ansys""")
 
-    path = os.path.join(outdir, "Ansys")
+    path = outdir / "Ansys"
 
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
     get_dirs = os.listdir(path)
-    with open(os.path.join(path, "__init__.py"), "w") as f:
+    with pathlib.Path.open(path / "__init__.py", "w") as f:
         f.write('"""Ansys subpackage."""\n')
         for dir in get_dirs:
-            if os.path.isdir(os.path.join(path, dir)):
+            if pathlib.Path.is_dir(path / dir):
                 f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
         f.close()
 
     # Add import statements to init files
     for dirpath, dirnames, filenames in os.walk(path):
         for dir in dirnames:
-            full_path = os.path.join(dirpath, dir)
-            init_path = os.path.join(full_path, "__init__.py")
+            full_path = dirpath / dir
+            init_path = full_path / "__init__.py"
 
             if "__pycache__" not in init_path:
                 module_list = []
-                import_str = full_path.replace(os.path.join(base_dir, "src", ""), "").replace(
-                    os.sep, "."
-                )
+                import_str = full_path.replace(base_dir / "src" / "", "").replace(os.sep, ".")
                 [
-                    module_list.append(os.path.basename(dir.path))
-                    for dir in os.scandir(os.path.dirname(init_path))
+                    module_list.append(pathlib.Path(dir.path).name)
+                    for dir in os.scandir(pathlib.Path(init_path).parent)
                 ]
 
                 # Make missing init files
                 # if not os.path.isfile(init_path):
-                with open(init_path, "a") as f:
+                with pathlib.Path.open(init_path, "a") as f:
                     # Only add docstring if the init file is empty
                     # This is for init files that only contain import statements
-                    if os.path.getsize(init_path) == 0:
-                        f.write(f'"""{os.path.basename(full_path)} submodule."""\n')
+                    if pathlib.Path.stat(init_path).st_size == 0:
+                        f.write(f'"""{pathlib.Path(full_path).name} submodule."""\n')
                     for module in module_list:
                         if module != "__init__.py":
                             f.write(f"import {import_str}.{module} as {module}\n")
                     f.close()
     print("Done processing all mechanical stubs.")
-
-
-def minify():
-    pass
 
 
 def write_docs(commands, tiny_pages_path):
@@ -166,10 +168,9 @@ def write_docs(commands, tiny_pages_path):
     ----------
     tiny_pages_path : str
         Path to the tiny pages directory.
-
     """
-    doc_src = os.path.join(tiny_pages_path, "docs.rst")
-    with open(doc_src, "w") as fid:
+    doc_src = pathlib.Path(tiny_pages_path / "docs.rst")
+    with pathlib.Path.open(doc_src, "w") as fid:
         fid.write("###################\n")
         fid.write("Autosummary Testing\n")
         fid.write("###################\n")
@@ -183,9 +184,9 @@ def write_docs(commands, tiny_pages_path):
 
 
 def main():
-    MAKE = True
-    MINIFY = False
-    CLEAN = False
+    """Generate the Mechanical stubs based on assembly files."""
+    make_bool = True
+    clean_bool = False
 
     # Get version of the Mechanical install
     install_dir, version = get_version()
@@ -199,7 +200,7 @@ def main():
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
     # Assembly files to read from the Ansys Mechanical install.
-    ASSEMBLIES = [
+    assemblies = [
         "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
         "Ansys.ACT.WB1",
@@ -207,13 +208,10 @@ def main():
 
     resolve()
 
-    if MAKE:
-        make(base_dir, outdir, ASSEMBLIES, version)
+    if make_bool:
+        make(base_dir, outdir, assemblies, version)
 
-    if MINIFY:
-        minify()
-
-    if CLEAN:
+    if clean_bool:
         clean(outdir)
 
 

@@ -29,6 +29,7 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 
 def remove_empty_rows_at_top_and_before_heading1(directory_path):
+    """Remove empty rows before heading 1 in Markdown files."""
     # Define the regular expression pattern to match empty rows at the top and before Heading 1
     pattern = r"^\s*\n+"
 

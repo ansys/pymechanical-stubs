@@ -29,6 +29,7 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 
 def remove_links_from_markdown_files(directory_path):
+    """Remove <a> tags and vale comments from markdown files."""
     # Define the regular expression pattern to match <a id="..."></a> tags at the beginning of the file
     tag_pattern = r'^<a id=".*?"></a>'
     # Define the regular expression pattern to remove vale on/off comments

@@ -23,18 +23,18 @@
 """Module containing routine to generate python stubs for an assembly."""
 
 from dataclasses import dataclass
+import json
 import logging
-import os
 import pathlib
 import typing
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ElementTree
 
 import clr
 import System
 
 
 def is_namespace(something):
-    """Checks if object is a namespace.
+    """Check if an object is a namespace.
 
     Parameters
     ----------
@@ -52,12 +52,14 @@ def is_namespace(something):
 
 
 def iter_module(module, type_filter: typing.Callable = None):
-    """Recursively iterates through all namespaces in assembly
+    """Recursively iterates through all namespaces in assembly.
 
     Parameters
     ----------
-    module:
+    module: System.Reflection.RuntimeAssembly
+        An assembly module
     type_filter: typing.Callable
+        Whether or not the type is published
 
     Returns
     -------
@@ -77,13 +79,17 @@ def iter_module(module, type_filter: typing.Callable = None):
     return namespaces
 
 
-def crawl_loaded_references(assembly, type_filter: typing.Callable = None) -> dict:
+def crawl_loaded_references(
+    assembly: "System.Reflection.RuntimeAssembly", type_filter: typing.Callable = None
+) -> dict:
     """Crawl Loaded assemblies to get Namespaces.
 
     Parameters
     ----------
-    assembly:
+    assembly: System.Reflection.RuntimeAssembly
+        An assembly. For example, Ansys.ACT.WB1.
     type_filter: typing.Callable
+        Whether or not the type is published
 
     Returns
     -------
@@ -93,48 +99,71 @@ def crawl_loaded_references(assembly, type_filter: typing.Callable = None) -> di
     return iter_module(assembly, type_filter)
 
 
-def dump_types(namespaces):
+def dump_types(namespaces: dict):
+    """Crawl Loaded assemblies to get Namespaces.
+
+    Parameters
+    ----------
+    namespaces: dict
+        Dictionary of namespaces in the assembly
+    """
     printable_namespaces = {k: [x.Name for x in v] for k, v in namespaces.items()}
-    # logging.debug(json.dumps(printable_namespaces, indent=2, sort_keys=True))
+    logging.debug(json.dumps(printable_namespaces, indent=2, sort_keys=True))
 
 
 class DocMember:
     """Docstring member."""
 
-    def __init__(self, element: ET.Element):
+    def __init__(self, element: ElementTree.Element):
         self._element = element
 
     @classmethod
-    def __get_element_text(self, element: typing.Optional[ET.Element]):
+    def __get_element_text(cls, element: typing.Optional[ElementTree.Element]):
+        """Get the text of an element."""
         if element is None:
             return None
         return element.text
 
     @property
     def name(self) -> str:
+        """The name within the element."""
         return self._element.attrib["name"]
 
     @property
     def summary(self) -> str:
+        """The summary within the element."""
         return self.__get_element_text(self._element.find("summary"))
 
     @property
     def params(self) -> str:
+        """The parameters within a element."""
         return self._element.findall("param")
 
     @property
     def remarks(self) -> str:
+        """The remarks within the element."""
         return self.__get_element_text(self._element.find("remarks"))
 
     @property
-    def example(self) -> ET.Element:
+    def example(self) -> ElementTree.Element:
+        """The example within the element."""
         return self._element.find("example")
 
 
 def write_docstring(
     buffer: typing.TextIO, doc_member: typing.Optional[DocMember], indent_level=1
 ) -> None:
-    """Write docstring of class or enum with the given indentation level, if available."""
+    """Write docstring of class or enum with the given indentation level, if available.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the docstring
+    doc_member: typing.Optional[DocMember]
+        A member's name, summary, params, remarks, and examples
+    indent_level: int
+        ``1`` to write one indent
+    """
     if doc_member is None:
         return
     summary = doc_member.summary
@@ -150,8 +179,19 @@ ENUM_VALUE_REPLACEMENTS = {"None": "None_", "True": "True_"}
 
 
 def write_enum_field(buffer: typing.TextIO, field: typing.Any, indent_level: int = 1) -> None:
+    """Write an enum field.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the docstring
+    field: typing.Any
+        The field information from System.Reflection.MdFieldInfo
+    indent_level: int
+        ``1`` to write one indent
+    """
     name = field.Name
-    # logging.debug(f"        writing enum value {name}")
+    logging.debug(f"        writing enum value {name}")
     int_value = field.GetRawConstantValue()
     str_value = ENUM_VALUE_REPLACEMENTS.get(name, name)
     indent = "    " * indent_level
@@ -165,7 +205,22 @@ def write_enum(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    # logging.debug(f"    writing enum {enum_type.Name}")
+    """Write an enum.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the docstring
+    enum_type: typing.Any
+        The enum type
+    namespace: str
+        The namespace of the enum
+    doc: typing.Dict[str, DocMember]
+        A DocMember or string that holds information about the enum.
+    type_filter: typing.Callable = None
+        Whether or not the type is published.
+    """
+    logging.debug(f"    writing enum {enum_type.Name}")
     fields = [
         field
         for field in enum_type.GetFields()
@@ -173,25 +228,32 @@ def write_enum(
     ]
     buffer.write(f"class {enum_type.Name}(Enum):\n")
     enum_doc = doc.get(f"T:{namespace}.{enum_type.Name}", None)
-    if enum_doc == None:
+    if enum_doc is None:
         write_missing_class_enum_docstring(buffer, enum_type.Name, "enum")
     else:
         write_docstring(buffer, enum_doc, 1)
-    # if enum_doc == None:
-    #     print(enum_type.Name)
-    # write_docstring(buffer, enum_doc, 1)
     buffer.write("\n")
     for field in fields:
         write_enum_field(buffer, field, 1)
     if len(fields) == 0:
-        # TODO - some Mechanical types are published but don't have published values, like PinNature. These
-        #        should be handled as bugs for the Mechanical team.
         buffer.write("    pass\n")
     buffer.write("\n")
 
 
 # Helper for fix_str()
-def remove_backtick(input_str):
+def remove_backtick(input_str: str):
+    """Remove backticks from a given string.
+
+    Parameters
+    ----------
+    input_str: str
+        A string that could contain backticks
+
+    Returns
+    -------
+    str
+        A string without backticks
+    """
     backtick = input_str.index("`")
     new_str = input_str[0:backtick] + input_str[backtick + 2 :]
 
@@ -202,7 +264,19 @@ def remove_backtick(input_str):
 
 
 # Helper for get_properties() and write_properties
-def fix_str(input_str):
+def fix_str(input_str: str):
+    """Replace incorrect special characters in strings.
+
+    Parameters
+    ----------
+    input_str: str
+        A string that could contain backticks
+
+    Returns
+    -------
+    str
+        A string that doesn't have special characters
+    """
     if "+" in input_str:
         input_str = input_str.replace("+", ".")
     if "[]" in input_str:
@@ -214,12 +288,16 @@ def fix_str(input_str):
 
 @dataclass
 class Param:
+    """Param class."""
+
     type: str
     name: str
 
 
 @dataclass
 class Method:
+    """Method class."""
+
     name: str
     doc: DocMember
     return_type: str
@@ -229,6 +307,8 @@ class Method:
 
 @dataclass
 class Property:
+    """Property class."""
+
     name: str
     type: str
     getter: bool
@@ -243,8 +323,22 @@ def get_properties(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> typing.List[Property]:
-    # TODO - base class properties are not handled here. They might be published if they are ansys types
-    #        or not if they are system types (e.g. the IList methods implemented by an Ansys type that derives from System.Collections.Generic.IList)
+    """Get information from properties and store it in the Property object.
+
+    Parameters
+    ----------
+    class_type: typing.Any
+        The class type.
+    doc: typing.Dict[str, DocMember]
+        A DocMember or string that holds information about the property.
+    type_filter: typing.Callable = None
+        Whether or not the type is published.
+
+    Returns
+    -------
+    typing.List[Property]
+        A list of properties
+    """
     props = [
         prop for prop in class_type.GetProperties() if (type_filter is None or type_filter(prop))
     ]
@@ -291,7 +385,18 @@ def get_properties(
 
 
 def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1) -> None:
-    # logging.debug(f"        writing property {prop.name}")
+    """Write a property.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the docstring
+    prop: Property
+        A Property object containing information about the property
+    indent_level: int
+        ``1`` to write one indent
+    """
+    logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
     if prop.static:
         # this only works for autocomplete for python 3.9+
@@ -300,13 +405,10 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         buffer.write(f"{indent}@property\n")
         buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
         indent = "    " * (1 + indent_level)
-        if prop.doc == None:
+        if prop.doc is None:
             write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
         else:
             write_docstring(buffer, prop.doc, indent_level + 1)
-        # if prop.doc == None:
-        #     print(prop.name)
-        # write_docstring(buffer, prop.doc, indent_level + 1)
         if prop.value:
             if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
                 prop.value = fix_str(f"{prop.value}")
@@ -321,13 +423,10 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
                 f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type)}]) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
-            if prop.doc == None:
+            if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
             else:
                 write_docstring(buffer, prop.doc, indent_level + 1)
-            # if prop.doc == None:
-            #    print(prop.name)
-            # write_docstring(buffer, prop.doc, indent_level + 1)
             buffer.write(f"{indent}return None\n")
             buffer.write("\n")
             indent = "    " * (indent_level)
@@ -339,19 +438,26 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
                 f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type)}]:\n"
             )
             indent = "    " * (1 + indent_level)
-            if prop.doc == None:
+            if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
             else:
                 write_docstring(buffer, prop.doc, indent_level + 1)
-            # if prop.doc == None:
-            #    print(prop.name)
-            # write_docstring(buffer, prop.doc, indent_level + 1)
             buffer.write(f"{indent}return None\n")
     buffer.write("\n")
 
 
 def write_missing_class_enum_docstring(buffer, name, obj_type):
-    """Writes a docstring for classes and enums that do not contain a docstring in the XML file."""
+    """Write a docstring for classes and enums that do not contain a docstring in the XML file.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the docstring
+    name: str
+        The name of an interface
+    obj_type: str
+        The object type of the interface
+    """
     indent = "    " * 1
     buffer.write(f'{indent}"""\n')
     if obj_type == "class":
@@ -363,7 +469,19 @@ def write_missing_class_enum_docstring(buffer, name, obj_type):
 
 
 def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
-    """Writes a docstring for methods and properties that do not contain a docstring in the XML file."""
+    """Write a docstring for methods and properties that do not contain a docstring in the XML file.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the docstring
+    obj: generate_content.Method or generate_content.Property
+        A method or property object
+    obj_type: type
+        The object type of the interface
+    indent_level: int
+        ``1`` to indent a line once
+    """
     indent = "    " * indent_level
     buffer.write(f'{indent}"""\n')
     if obj.name == "GetChildren":
@@ -374,6 +492,17 @@ def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
 
 
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
+    """Write a method.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the method
+    method: Method
+        A Method object
+    indent_level: int
+        ``1`` to indent a line once
+    """
     indent = "    " * indent_level
     if method.static:
         buffer.write(f"{indent}@classmethod\n")
@@ -384,7 +513,7 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     args = f"({', '.join(args)})"
     buffer.write(f"{indent}def {method.name}{args} -> {method.return_type}:\n")
     indent = "    " * (1 + indent_level)
-    if method.doc == None:
+    if method.doc is None:
         write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
     else:
         write_docstring(buffer, method.doc, indent_level + 1)
@@ -392,8 +521,14 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     buffer.write("\n")
 
 
-def adjust_method_name_xml(method_name):
-    """Adjust the method name to find docstring in XML."""
+def adjust_method_name_xml(method_name: str):
+    """Adjust the method name to find docstring in XML.
+
+    Parameters
+    ----------
+    method_name: str
+        The method name
+    """
     # GetChildren(System...) is GetChildren``1(System...) in the XML file
     if ".GetChildren(System" in method_name:
         method_name = method_name.replace(".GetChildren(System", ".GetChildren``1(System")
@@ -422,8 +557,22 @@ def get_methods(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> typing.List[Method]:
-    # TODO - base class properties are not handled here. They might be published if they are ansys types
-    #        or not if they are system types (e.g. the IList methods implemented by an Ansys type that derives from System.Collections.Generic.IList)
+    """Get information from methods and store it in the Method object.
+
+    Parameters
+    ----------
+    class_type: typing.Any
+        The class type.
+    doc: typing.Dict[str, DocMember]
+        A DocMember or string that holds information about the method.
+    type_filter: typing.Callable = None
+        Whether or not the type is published.
+
+    Returns
+    -------
+    typing.List[Method]
+        A list of methods
+    """
     methods = [
         prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
     ]
@@ -441,10 +590,7 @@ def get_methods(
         # Get the method name
         method_doc_key = f"M:{declaring_type_name}.{full_method_name}".replace("()", "")
         method_doc_key = adjust_method_name_xml(method_doc_key)
-
         method_doc = doc.get(method_doc_key, None)
-        # if method_doc == None:
-        #     print(method_doc_key)
 
         method = Method(
             name=method_name,
@@ -464,10 +610,25 @@ def write_class(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    # logging.debug(f"    writing class {class_type.Name}")
+    """Write a class.
+
+    Parameters
+    ----------
+    buffer: typing.TextIO
+        The buffer for writing the class
+    class_type: typing.Any
+        The class type object
+    namespace: str
+        The namespace of the class being written
+    doc: typing.Dict[str, DocMember]
+        A DocMember or string that holds information about the class.
+    type_filter: typing.Callable = None
+        Whether or not the type is published
+    """
+    logging.debug(f"    writing class {class_type.Name}")
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
-    if class_doc == None:
+    if class_doc is None:
         write_missing_class_enum_docstring(buffer, class_type.Name, "class")
     else:
         write_docstring(buffer, class_doc, 1)
@@ -476,8 +637,6 @@ def write_class(
     [write_property(buffer, prop, 1) for prop in props]
     methods = get_methods(class_type, doc, type_filter)
     [write_method(buffer, method, 1) for method in methods]
-
-    # TODO - constructor
 
     if len(props) == 0 and len(methods) == 0:
         buffer.write("    pass\n")
@@ -491,31 +650,54 @@ def write_module(
     outdir: str,
     type_filter: typing.Callable = None,
 ) -> None:
+    """Write a module.
+
+    Parameters
+    ----------
+    mod_type: typing.Any
+        The module type object
+    doc: typing.Dict[str, DocMember]
+        A DocMember or string that holds information about the class.
+    outdir: str
+        The path of the file that contains the module.
+    type_filter: typing.Callable = None
+        Whether or not the type is published
+    """
     outdir = pathlib.Path(outdir)
     for token in namespace.split("."):
         outdir = outdir / token
-    # logging.info(f"Writing to {str(outdir.resolve())}")
+    logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
     class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
-    # logging.info(f"Writing to {str(outdir.resolve())}")
-    with open(outdir / "__init__.py", "w", encoding="utf-8") as f:
-        # TODO - jinja
-        f.write(f'"""{os.path.basename(outdir)} subpackage."""\n')
+    logging.info(f"Writing to {str(outdir.resolve())}")
+    with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
+        f.write(f'"""{pathlib.PurePath(outdir).name} subpackage."""\n')
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")
         f.write("import typing\n\n")
-        # logging.info(f"    {len(enum_types)} enum types")
+        logging.info(f"    {len(enum_types)} enum types")
         for enum_type in enum_types:
             write_enum(f, enum_type, namespace, doc, type_filter)
         for class_type in class_types:
             write_class(f, class_type, namespace, doc, type_filter)
-    # logging.info(f"Done processing {namespace}")
+    logging.info(f"Done processing {namespace}")
 
 
-def load_doc(xml_path: str) -> ET:
-    """Get a dictionary of doc entities from the Assembly documentation file."""
-    tree = ET.parse(xml_path)
+def load_doc(xml_path: str) -> ElementTree:
+    """Get a dictionary of doc entities from the Assembly documentation file.
+
+    Parameters
+    ----------
+    xml_path: str
+        The path to the XML file
+
+    Returns
+    -------
+    ElementTree
+        An element tree of the information from the assembly XML file
+    """
+    tree = ElementTree.parse(xml_path)
     root = tree.getroot()
     members = root.find("members")
     doc_members = [DocMember(member) for member in members]
@@ -525,45 +707,72 @@ def load_doc(xml_path: str) -> ET:
 
 
 def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
-    """Get the documentation file from assembly, or None if it doesn't exist."""
+    """Get the documentation file from assembly, or None if it doesn't exist.
+
+    Parameters
+    ----------
+    assembly: "System.Reflection.RuntimeAssembly"
+        An assembly. For example, Ansys.ACT.WB1.
+    """
     uri = System.UriBuilder(assembly.CodeBase)
     path = System.Uri.UnescapeDataString(uri.Path)
     directory = System.IO.Path.GetDirectoryName(path)
     xml_path = System.IO.Path.Combine(directory, assembly.GetName().Name + ".xml")
     if System.IO.File.Exists(xml_path):
-        # logging.info(f"Loading xml doc from {xml_path}")
+        logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
     else:
-        # logging.warning("XML Doc file does not exist, skipping")
+        logging.warning("XML Doc file does not exist, skipping")
         return None
 
 
 def get_namespaces(
     assembly: "System.Reflection.RuntimeAssembly", type_filter: typing.Callable = None
 ) -> typing.Dict:
-    """Get all the namespaces and filtered types in the assembly given by assembly_name."""
-    # # logging.info(
-    # #     f"    Getting types from the {os.path.basename(assembly.CodeBase)} assembly"
-    # # )
+    """Get all the namespaces and filtered types in the assembly given by assembly_name.
+
+    Parameters
+    ----------
+    assembly: "System.Reflection.RuntimeAssembly"
+        An assembly
+    type_filter:
+        Whether or not the type is published
+
+    Returns
+    -------
+    typing.Dict
+        A dictionary of published namespaces within the assembly
+    """
+    logging.info(f"    Getting types from the {pathlib.PurePath(assembly.CodeBase).name} assembly")
     namespaces = crawl_loaded_references(assembly, type_filter)
     return namespaces
 
 
 def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -> None:
-    """Generate python stubs for an assembly."""
-    # logging.info(f"Loading assembly {assembly_name}")
+    """Generate Python stubs for an assembly.
+
+    Parameters
+    ----------
+    outdir: str
+        The directory where modules are being written to.
+    assembly_name: str
+        The name of the assembly
+    type_filter: typing.Callable
+        Whether or not a type is published
+    """
+    logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
-    # if type_filter is not None:
-    # logging.info(f"   Using a type_filter: {str(type_filter)}")
+    if type_filter is not None:
+        logging.info(f"   Using a type_filter: {str(type_filter)}")
     # Type filter is what gets messed up
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
     doc = get_doc(assembly)
-    # logging.info(f"    {len(namespaces.items())} namespaces")
+    logging.info(f"    {len(namespaces.items())} namespaces")
     for namespace, mod_types in namespaces.items():
         if "DesignModeler" not in namespace:
             logging.info(f"Processing {namespace}")
-            # logging.info(f"   {len(namespaces.items())} namespaces")
+            logging.info(f"   {len(namespaces.items())} namespaces")
             write_module(namespace, mod_types, doc, outdir, type_filter)
-            # logging.info(f"Done processing {namespace}")
+            logging.info(f"Done processing {namespace}")

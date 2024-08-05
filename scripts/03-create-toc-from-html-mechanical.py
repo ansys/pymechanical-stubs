@@ -34,6 +34,7 @@ DEFAULT_OUTPUT_FOLDER = "output"
 
 # This script must be run as follows: python script_name api index.html
 def parse_index_html(html_file):
+    """Read & return the HTML content and index.html file name."""
     with open(html_file, "r", encoding="utf-8") as f:
         html_content = f.read()
     # Return HTML content and directory of the HTML file
@@ -41,6 +42,7 @@ def parse_index_html(html_file):
 
 
 def extract_nav_items(base_dir, html_content):
+    """Extract navigation items and append them to a dictionary."""
     soup = BeautifulSoup(html_content, "html.parser")
     # nav_links = soup.find_all('a', class_='nav-link nav-internal')  # Find nav links with class 'nav-link nav-internal'
     reference_links = soup.find_all(
@@ -62,6 +64,7 @@ def extract_nav_items(base_dir, html_content):
 
 
 def build_indented_items(nav_items, base_dir="", indentation=1):
+    """Create a list from the navigation items dictionary with indentation."""
     indented_items = []
     for nav_item in nav_items:
         # print('NAV_ITEM=', nav_item)
@@ -95,6 +98,7 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
 
 
 def create_toc_file(api_folder, indented_items):
+    """Create the toc.yml file with the indented_items list."""
     with open("toc.yml", "w", encoding="utf-8") as f:
         f.write("- name: Introduction\n")
         f.write("  href: index.md\n")

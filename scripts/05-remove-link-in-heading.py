@@ -28,6 +28,7 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 
 def process_markdown_file(file_path):
+    """Update markdown file content."""
     with open(file_path, "r", encoding="utf-8") as file:
         content = file.read()
 
@@ -38,6 +39,7 @@ def process_markdown_file(file_path):
 
 
 def process_directory(directory):
+    """Process all markdown files within a directory."""
     for dirpath, _, filenames in os.walk(directory):
         for filename in filenames:
             if filename.endswith(".md"):

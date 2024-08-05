@@ -27,6 +27,7 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 
 def remove_column_table(input_table):
+    """Remove column tables and return the modified table."""
     # Split input table into rows
     rows = input_table.strip().split("\n")
 
@@ -62,6 +63,7 @@ def remove_column_table(input_table):
 
 
 def process_md_table(input_table):
+    """Create new header for markdown tables."""
     # Split input table into rows
     rows = input_table.strip().split("\n")
 
@@ -85,6 +87,7 @@ def process_md_table(input_table):
 
 
 def process_md_files(folder_path):
+    """Parse tables and update them with a correct header if they are missing one."""
     # Traverse the directory structure recursively
     for root, dirs, files in os.walk(folder_path):
         for file in files:
