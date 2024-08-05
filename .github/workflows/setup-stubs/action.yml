@@ -1,16 +1,9 @@
 name: >
-  Build library action
+  Set up Mechanical stubs
 
 description: |
-  Verifies if a Python library builds properly. As a result of a successful
-  building process, wheel and source distribution artifacts are generated. This
-  action is expected to be used as an independent job.
-
-  .. note::
-
-      Use this action instead of the `build-ci-wheels
-      <https://actions.docs.ansys.com/version/stable/build-actions/index.html#build-ci-wheels-action>`_
-      if your library is a pure Python project with no source code to be compiled.
+  Downloads the Mechanical stubs __init__.py files to the repository and creates
+  the __init__.py file for all versions of Mechanical stubs.
 
 inputs:
 
@@ -36,6 +29,10 @@ inputs:
 runs:
   using: "composite"
   steps:
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
 
     - name: Get cwd
       shell: python
