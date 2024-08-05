@@ -20,7 +20,7 @@ jobs:
     name: Syncer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: micnncim/action-label-syncer@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -96,6 +96,6 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: ansys/actions/doc-changelog@main
+    - uses: ansys/actions/doc-changelog@v6
       with:
         token: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
