@@ -23,15 +23,14 @@
 """Module containing routine to generate python stubs for an assembly."""
 
 from dataclasses import dataclass
-import json
 import logging
 import os
 import pathlib
 import typing
 import xml.etree.ElementTree as ET
 
-import System
 import clr
+import System
 
 
 def is_namespace(something):
@@ -41,6 +40,7 @@ def is_namespace(something):
     ----------
     something: object
         Object to check if it's a namespace
+
     Returns
     -------
     bool

@@ -22,7 +22,6 @@
 
 import argparse
 import os
-import sys
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 

@@ -23,9 +23,7 @@
 import argparse
 import os
 import pathlib
-import re
 import sys
-from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 

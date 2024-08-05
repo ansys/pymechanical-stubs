@@ -20,7 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import argparse
 import logging
 import os
 import pathlib
@@ -120,7 +119,7 @@ def make(base_dir, outdir, ASSEMBLIES, str_version):
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
     get_dirs = os.listdir(path)
     with open(os.path.join(path, "__init__.py"), "w") as f:
-        f.write(f'"""Ansys subpackage."""\n')
+        f.write('"""Ansys subpackage."""\n')
         for dir in get_dirs:
             if os.path.isdir(os.path.join(path, dir)):
                 f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
@@ -169,7 +168,6 @@ def write_docs(commands, tiny_pages_path):
         Path to the tiny pages directory.
 
     """
-
     doc_src = os.path.join(tiny_pages_path, "docs.rst")
     with open(doc_src, "w") as fid:
         fid.write("###################\n")
