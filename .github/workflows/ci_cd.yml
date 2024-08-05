@@ -59,7 +59,7 @@ jobs:
       options: --entrypoint /bin/bash
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [public-ubuntu-latest-8-cores]
         mechanical: [
           { image: '24.1.0', version: '241' },
           { image: '24.2.0', version: '242' },
