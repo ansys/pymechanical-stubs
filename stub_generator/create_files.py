@@ -53,7 +53,7 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    assembly_path = install_dir / "aisol" / "bin" / platform_string
+    assembly_path = pathlib.Path(install_dir, "aisol", "bin", platform_string)
     sys.path.append(assembly_path)
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
