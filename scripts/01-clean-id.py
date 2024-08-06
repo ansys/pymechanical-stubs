@@ -19,6 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+"""Clean markdown files by removing vale and <a> tags."""
 
 import argparse
 import fileinput
@@ -39,7 +40,7 @@ def remove_links_from_markdown_files(directory_path):
     for root, _, files in os.walk(directory_path):
         for file in files:
             if file.endswith(".md"):
-                file_path = os.path.join(root, file)
+                file_path = root / file
                 print(f"Processing {file_path}")
                 # Only want to remove first <a></a> tag
                 first_a_tag = False
@@ -51,7 +52,7 @@ def remove_links_from_markdown_files(directory_path):
                             line = line.replace(line, "")
                             print(line, end="\n")
                         # Remove first <a></a> tag
-                        elif first_a_tag == False and bool(re.match(rf"{tag_pattern}", line)):
+                        elif not first_a_tag and bool(re.match(rf"{tag_pattern}", line)):
                             line = line.replace(line, "")
                             print(line)
                             first_a_tag = True

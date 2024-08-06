@@ -19,9 +19,11 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+"""Remove links in heading."""
 
 import argparse
 import os
+import pathlib
 import re
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
@@ -29,12 +31,12 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 def process_markdown_file(file_path):
     """Update markdown file content."""
-    with open(file_path, "r", encoding="utf-8") as file:
+    with pathlib.Path.open(file_path, "r", encoding="utf-8") as file:
         content = file.read()
 
     updated_content = re.sub(r"(#+)\s*\[`([^`]+)`\]\(#.*?\)", r"\1 `\2`", content)
 
-    with open(file_path, "w", encoding="utf-8") as file:
+    with pathlib.Path.open(file_path, "w", encoding="utf-8") as file:
         file.write(updated_content)
 
 
@@ -43,7 +45,7 @@ def process_directory(directory):
     for dirpath, _, filenames in os.walk(directory):
         for filename in filenames:
             if filename.endswith(".md"):
-                file_path = os.path.join(dirpath, filename)
+                file_path = dirpath / filename
                 process_markdown_file(file_path)
 
 
