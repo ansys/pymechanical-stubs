@@ -24,6 +24,7 @@
 import argparse
 import fileinput
 import os
+import pathlib
 import re
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
@@ -40,7 +41,7 @@ def remove_links_from_markdown_files(directory_path):
     for root, _, files in os.walk(directory_path):
         for file in files:
             if file.endswith(".md"):
-                file_path = root / file
+                file_path = str(pathlib.Path(root, file))
                 print(f"Processing {file_path}")
                 # Only want to remove first <a></a> tag
                 first_a_tag = False

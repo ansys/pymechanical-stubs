@@ -45,7 +45,7 @@ def process_directory(directory):
     for dirpath, _, filenames in os.walk(directory):
         for filename in filenames:
             if filename.endswith(".md"):
-                file_path = dirpath / filename
+                file_path = str(pathlib.Path(dirpath, filename))
                 process_markdown_file(file_path)
 
 

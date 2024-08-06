@@ -39,7 +39,7 @@ def parse_index_html(html_file):
     with pathlib.Path.open(html_file, "r", encoding="utf-8") as f:
         html_content = f.read()
     # Return HTML content and directory of the HTML file
-    return html_content, pathlib.Path(html_file).parent
+    return html_content, str(pathlib.Path(html_file).parent)
 
 
 def extract_nav_items(base_dir, html_content):
@@ -71,7 +71,7 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
         # print('NAV_ITEM=', nav_item)
         indented_items.append((indentation, nav_item))
         if "index.html" in nav_item["href"]:
-            # nested_html_path = base_dir / nav_item['href']  # Construct nested HTML file path
+            # nested_html_path = str(pathlib.Path(base_dir, nav_item['href']) # Construct nested HTML file path
             # print('NAV_ITEM[HREF]= ', nav_item['href'])
             # find the index of index.html
             str = "index.html"
@@ -149,20 +149,20 @@ if __name__ == "__main__":
     output_folder = args.output_folder
 
     repo_dir = pathlib.Path(__file__).parent.parent
-    full_file_path = repo_dir / api_folder / html_file
-    full_dir_path = repo_dir / api_folder
+    full_file_path = pathlib.Path(repo_dir, api_folder, html_file)
+    full_dir_path = str(pathlib.Path(repo_dir, api_folder))
 
     if not pathlib.Path.is_file(full_file_path):
         print(f"Error: {full_file_path} does not exist.")
         sys.exit(1)
 
-    print(f"HTML_PATH={full_dir_path / html_file}")
+    print(f"HTML_PATH={str(pathlib.Path(full_dir_path, html_file))}")
     os.chdir(full_dir_path)
     html_content, base_dir = parse_index_html(html_file)
     nav_items = extract_nav_items(base_dir, html_content)
     indented_items = build_indented_items(nav_items, base_dir)
 
-    output_folder_path = repo_dir / output_folder
+    output_folder_path = pathlib.Path(repo_dir, output_folder)
     os.chdir(repo_dir)
     if not pathlib.Path.is_dir(output_folder_path):
         pathlib.Path.mkdir(output_folder)
