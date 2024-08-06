@@ -53,8 +53,7 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    assembly_path = pathlib.Path(install_dir, "aisol", "bin", platform_string)
-    sys.path.append(assembly_path)
+    sys.path.append(f"{pathlib.Path(install_dir, 'aisol', 'bin', platform_string)}")
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
@@ -141,12 +140,12 @@ def make(base_dir, outdir, assemblies, str_version):
     # Add import statements to init files
     for dirpath, dirnames, filenames in os.walk(path):
         for dir in dirnames:
-            full_path = dirpath / dir
-            init_path = full_path / "__init__.py"
+            full_path = str(pathlib.Path(dirpath, dir))
+            init_path = pathlib.Path(full_path, "__init__.py")
 
-            if "__pycache__" not in init_path:
+            if "__pycache__" not in str(init_path):
                 module_list = []
-                original_str = base_dir / "src" / ""
+                original_str = f"{pathlib.Path(base_dir, 'src')}{os.sep}"
                 import_str = full_path.replace(original_str, "").replace(os.sep, ".")
                 [
                     module_list.append(pathlib.Path(dir.path).name)
