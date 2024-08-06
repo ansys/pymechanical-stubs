@@ -53,7 +53,8 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    sys.path.append(install_dir / "aisol" / "bin" / platform_string)
+    assembly_path = install_dir / "aisol" / "bin" / platform_string
+    sys.path.append(assembly_path)
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
@@ -119,18 +120,21 @@ def make(base_dir, outdir, assemblies, str_version):
     for assembly in assemblies:
         generate_content.make(outdir, assembly, type_filter=is_type_published)
 
-    with pathlib.Path.open(outdir / "__init__.py", "w") as f:
+    outdir_init = outdir / "__init__.py"
+    with pathlib.Path.open(outdir_init, "w") as f:
         f.write(f'"""Ansys Mechanical {str_version} subpackage."""\n')
         f.write(f"""import ansys.mechanical.stubs.{str_version}.Ansys as Ansys""")
 
     path = outdir / "Ansys"
+    path_init = path / "__init__.py"
 
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
     get_dirs = os.listdir(path)
-    with pathlib.Path.open(path / "__init__.py", "w") as f:
+    with pathlib.Path.open(path_init, "w") as f:
         f.write('"""Ansys subpackage."""\n')
         for dir in get_dirs:
-            if pathlib.Path.is_dir(path / dir):
+            full_dir_path = path / dir
+            if pathlib.Path.is_dir(full_dir_path):
                 f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
         f.close()
 
@@ -142,7 +146,8 @@ def make(base_dir, outdir, assemblies, str_version):
 
             if "__pycache__" not in init_path:
                 module_list = []
-                import_str = full_path.replace(base_dir / "src" / "", "").replace(os.sep, ".")
+                original_str = base_dir / "src" / ""
+                import_str = full_path.replace(original_str, "").replace(os.sep, ".")
                 [
                     module_list.append(pathlib.Path(dir.path).name)
                     for dir in os.scandir(pathlib.Path(init_path).parent)
