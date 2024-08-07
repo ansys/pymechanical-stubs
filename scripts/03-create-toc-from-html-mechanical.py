@@ -39,7 +39,7 @@ def parse_index_html(html_file):
     with pathlib.Path.open(html_file, "r", encoding="utf-8") as f:
         html_content = f.read()
     # Return HTML content and directory of the HTML file
-    return html_content, str(pathlib.Path(html_file).parent)
+    return html_content, pathlib.Path(html_file).parent
 
 
 def extract_nav_items(base_dir, html_content):
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     api_folder = args.api_folder
-    html_file = args.html_file
+    html_file = pathlib.Path(args.html_file)
     output_folder = args.output_folder
 
     repo_dir = pathlib.Path(__file__).parent.parent
