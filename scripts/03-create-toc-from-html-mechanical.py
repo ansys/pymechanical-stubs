@@ -56,7 +56,7 @@ def extract_nav_items(base_dir, html_content):
         if href.startswith("../") or "#" in href:
             # print('SKIP ../index.html file=', href)
             continue  # Skip '../index.html' paths and path not ending with just index.html
-        item = {"name": link.text.strip(), "href": base_dir + href}
+        item = {"name": link.text.strip(), "href": str(pathlib.Path(base_dir, href))}
         if item not in items:
             # print('ITEM=', item)
             items.append(item)
