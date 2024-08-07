@@ -100,7 +100,7 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
 
 def create_toc_file(api_folder, indented_items):
     """Create the toc.yml file with the indented_items list."""
-    with pathlib.Path.open("toc.yml", "w", encoding="utf-8") as f:
+    with pathlib.Path.open(pathlib.Path("toc.yml"), "w", encoding="utf-8") as f:
         f.write("- name: Introduction\n")
         f.write("  href: index.md\n")
         f.write("- name: API reference\n")
