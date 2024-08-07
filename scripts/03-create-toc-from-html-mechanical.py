@@ -79,7 +79,7 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
             nested_html_path = nav_item["href"][0:index]
             # print('nested_html_path= ', nested_html_path)
             try:
-                full_path = nested_html_path + str
+                full_path = pathlib.Path(nested_html_path, str)
                 # print('full_path=',full_path)
                 nested_html_content, _ = parse_index_html(full_path)  # Parse nested HTML file
                 nested_items = extract_nav_items(nested_html_path, nested_html_content)
