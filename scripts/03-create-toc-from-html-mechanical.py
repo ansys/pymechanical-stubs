@@ -146,7 +146,7 @@ if __name__ == "__main__":
 
     api_folder = args.api_folder
     html_file = pathlib.Path(args.html_file)
-    output_folder = args.output_folder
+    output_folder = pathlib.Path(args.output_folder)
 
     repo_dir = pathlib.Path(__file__).parent.parent
     full_file_path = pathlib.Path(repo_dir, api_folder, html_file)
