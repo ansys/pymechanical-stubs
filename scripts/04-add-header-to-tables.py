@@ -95,7 +95,7 @@ def process_md_files(folder_path):
         for file in files:
             # Check if the file is a Markdown file
             if file.endswith(".md"):
-                file_path = str(pathlib.Path(root, file))
+                file_path = pathlib.Path(root, file)
                 print("Processing:", file_path)
                 # Read the input file
                 with pathlib.Path.open(file_path, "r", encoding="utf-8") as file:

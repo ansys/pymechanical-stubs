@@ -38,7 +38,7 @@ def remove_empty_rows_at_top_and_before_heading1(directory_path):
     for root, dirs, files in os.walk(directory_path):
         for file in files:
             if file.endswith(".md"):
-                file_path = str(pathlib.Path(root, file))
+                file_path = pathlib.Path(root, file)
 
                 # Read the content of the Markdown file
                 with pathlib.Path.open(file_path, "r", encoding="utf-8") as f:
