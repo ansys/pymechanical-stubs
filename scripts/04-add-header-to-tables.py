@@ -19,15 +19,17 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+"""Add headers to tables in markdown files."""
 
 import argparse
 import os
-import sys
+import pathlib
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 
 def remove_column_table(input_table):
+    """Remove column tables and return the modified table."""
     # Split input table into rows
     rows = input_table.strip().split("\n")
 
@@ -63,6 +65,7 @@ def remove_column_table(input_table):
 
 
 def process_md_table(input_table):
+    """Create new header for markdown tables."""
     # Split input table into rows
     rows = input_table.strip().split("\n")
 
@@ -86,15 +89,16 @@ def process_md_table(input_table):
 
 
 def process_md_files(folder_path):
+    """Parse tables and update them with a correct header if they are missing one."""
     # Traverse the directory structure recursively
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             # Check if the file is a Markdown file
             if file.endswith(".md"):
-                file_path = os.path.join(root, file)
+                file_path = pathlib.Path(root, file)
                 print("Processing:", file_path)
                 # Read the input file
-                with open(file_path, "r", encoding="utf-8") as file:
+                with pathlib.Path.open(file_path, "r", encoding="utf-8") as file:
                     file_content = file.read()
 
                 # Split the file content by at least one newline character
@@ -109,7 +113,7 @@ def process_md_files(folder_path):
                     if table.strip().startswith("|"):
                         # Check if the table has two columns with an empty column (first row only)
                         rows = table.strip().split("\n")
-                        is2ColumnTable = False
+                        is_2_column_table = False
                         for i in range(0, len(rows)):
                             if i == 1:
                                 continue
@@ -119,14 +123,14 @@ def process_md_files(folder_path):
                                     print("Found 1 column table")
                                 else:
                                     print("Found 2 column table")
-                                    is2ColumnTable = True
+                                    is_2_column_table = True
 
                         if rows[0].count("|") > 3:
                             print("Found >2 column table")
-                        elif is2ColumnTable == True:
+                        elif is_2_column_table:
                             # Process the MD table
                             modified_table = process_md_table(table)
-                        elif is2ColumnTable == False:
+                        elif not is_2_column_table:
                             # Remove the empty column from the table
                             modified_table = remove_column_table(table)
                     else:
@@ -138,7 +142,7 @@ def process_md_files(folder_path):
                 modified_content = "\n\n".join(modified_tables)
 
                 # Write the modified content back to the input file
-                with open(file_path, "w", encoding="utf-8") as file:
+                with pathlib.Path.open(file_path, "w", encoding="utf-8") as file:
                     file.write(modified_content)
 
                 print("File '{}' has been updated with corrected tables.".format(file_path))
