@@ -19,13 +19,12 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+"""Create a table of contents file from HTML files."""
 
 import argparse
 import os
 import pathlib
-import re
 import sys
-from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
@@ -36,13 +35,15 @@ DEFAULT_OUTPUT_FOLDER = "output"
 
 # This script must be run as follows: python script_name api index.html
 def parse_index_html(html_file):
-    with open(html_file, "r", encoding="utf-8") as f:
+    """Read & return the HTML content and index.html file name."""
+    with pathlib.Path.open(html_file, "r", encoding="utf-8") as f:
         html_content = f.read()
     # Return HTML content and directory of the HTML file
-    return html_content, os.path.dirname(html_file)
+    return html_content, pathlib.Path(html_file).parent
 
 
 def extract_nav_items(base_dir, html_content):
+    """Extract navigation items and append them to a dictionary."""
     soup = BeautifulSoup(html_content, "html.parser")
     # nav_links = soup.find_all('a', class_='nav-link nav-internal')  # Find nav links with class 'nav-link nav-internal'
     reference_links = soup.find_all(
@@ -55,7 +56,7 @@ def extract_nav_items(base_dir, html_content):
         if href.startswith("../") or "#" in href:
             # print('SKIP ../index.html file=', href)
             continue  # Skip '../index.html' paths and path not ending with just index.html
-        item = {"name": link.text.strip(), "href": base_dir + href}
+        item = {"name": link.text.strip(), "href": str(pathlib.Path(base_dir, href))}
         if item not in items:
             # print('ITEM=', item)
             items.append(item)
@@ -64,12 +65,13 @@ def extract_nav_items(base_dir, html_content):
 
 
 def build_indented_items(nav_items, base_dir="", indentation=1):
+    """Create a list from the navigation items dictionary with indentation."""
     indented_items = []
     for nav_item in nav_items:
         # print('NAV_ITEM=', nav_item)
         indented_items.append((indentation, nav_item))
         if "index.html" in nav_item["href"]:
-            # nested_html_path = os.path.join(base_dir, nav_item['href'])  # Construct nested HTML file path
+            # nested_html_path = str(pathlib.Path(base_dir, nav_item['href']) # Construct nested HTML file path
             # print('NAV_ITEM[HREF]= ', nav_item['href'])
             # find the index of index.html
             str = "index.html"
@@ -77,7 +79,7 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
             nested_html_path = nav_item["href"][0:index]
             # print('nested_html_path= ', nested_html_path)
             try:
-                full_path = nested_html_path + str
+                full_path = pathlib.Path(nested_html_path, str)
                 # print('full_path=',full_path)
                 nested_html_content, _ = parse_index_html(full_path)  # Parse nested HTML file
                 nested_items = extract_nav_items(nested_html_path, nested_html_content)
@@ -97,7 +99,8 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
 
 
 def create_toc_file(api_folder, indented_items):
-    with open("toc.yml", "w", encoding="utf-8") as f:
+    """Create the toc.yml file with the indented_items list."""
+    with pathlib.Path.open(pathlib.Path("toc.yml"), "w", encoding="utf-8") as f:
         f.write("- name: Introduction\n")
         f.write("  href: index.md\n")
         f.write("- name: API reference\n")
@@ -142,27 +145,27 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     api_folder = args.api_folder
-    html_file = args.html_file
-    output_folder = args.output_folder
+    html_file = pathlib.Path(args.html_file)
+    output_folder = pathlib.Path(args.output_folder)
 
     repo_dir = pathlib.Path(__file__).parent.parent
-    full_file_path = os.path.join(repo_dir, api_folder, html_file)
-    full_dir_path = os.path.join(repo_dir, api_folder)
+    full_file_path = pathlib.Path(repo_dir, api_folder, html_file)
+    full_dir_path = str(pathlib.Path(repo_dir, api_folder))
 
-    if not os.path.isfile(full_file_path):
+    if not pathlib.Path.is_file(full_file_path):
         print(f"Error: {full_file_path} does not exist.")
         sys.exit(1)
 
-    print(f"HTML_PATH={os.path.join(full_dir_path, html_file)}")
+    print(f"HTML_PATH={str(pathlib.Path(full_dir_path, html_file))}")
     os.chdir(full_dir_path)
     html_content, base_dir = parse_index_html(html_file)
     nav_items = extract_nav_items(base_dir, html_content)
     indented_items = build_indented_items(nav_items, base_dir)
 
-    output_folder_path = os.path.join(repo_dir, output_folder)
+    output_folder_path = pathlib.Path(repo_dir, output_folder)
     os.chdir(repo_dir)
-    if not os.path.isdir(output_folder_path):
-        os.mkdir(output_folder)
+    if not pathlib.Path.is_dir(output_folder_path):
+        pathlib.Path.mkdir(output_folder)
 
     os.chdir(output_folder_path)
     create_toc_file(api_folder, indented_items)
