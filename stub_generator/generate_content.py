@@ -264,19 +264,23 @@ def remove_backtick(input_str: str):
 
 
 # Helper for get_properties() and write_properties
-def fix_str(input_str: str):
+def fix_str(input_str: str, ans_stubs_import_str: str):
     """Replace incorrect special characters in strings.
 
     Parameters
     ----------
     input_str: str
         A string that could contain backticks
+    ans_stubs_import_str: str
+        Append this string to the beginning of a type containing "Ansys"
 
     Returns
     -------
     str
         A string that doesn't have special characters
     """
+    if "Ansys" in input_str:
+        input_str = input_str.replace("Ansys", f"{ans_stubs_import_str}.Ansys")
     if "+" in input_str:
         input_str = input_str.replace("+", ".")
     if "[]" in input_str:
@@ -384,7 +388,9 @@ def get_properties(
     return output
 
 
-def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1) -> None:
+def write_property(
+    buffer: typing.TextIO, prop: Property, ans_stubs_import_str: str, indent_level: int = 1
+) -> None:
     """Write a property.
 
     Parameters
@@ -403,7 +409,9 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
+        buffer.write(
+            f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type, ans_stubs_import_str)}]:\n"
+        )
         indent = "    " * (1 + indent_level)
         if prop.doc is None:
             write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
@@ -411,7 +419,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
             write_docstring(buffer, prop.doc, indent_level + 1)
         if prop.value:
             if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
-                prop.value = fix_str(f"{prop.value}")
+                prop.value = fix_str(f"{prop.value}", ans_stubs_import_str)
 
             buffer.write(f"{indent}return {prop.value}\n")
         else:
@@ -420,7 +428,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         if prop.setter and not prop.getter:
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type)}]) -> None:\n"
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type, ans_stubs_import_str)}]) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
@@ -435,7 +443,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
             assert prop.getter
             buffer.write(f"{indent}@property\n")
             buffer.write(
-                f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type)}]:\n"
+                f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type, ans_stubs_import_str)}]:\n"
             )
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
@@ -491,7 +499,9 @@ def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
     buffer.write(f'{indent}"""\n')
 
 
-def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
+def write_method(
+    buffer: typing.TextIO, method: Method, ans_stubs_import_str: str, indent_level: int = 1
+) -> None:
     """Write a method.
 
     Parameters
@@ -500,6 +510,8 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
         The buffer for writing the method
     method: Method
         A Method object
+    ans_stubs_import_str: str
+        The Ansys import string with its version. For example, ansys.mechanical.stubs.v241
     indent_level: int
         ``1`` to indent a line once
     """
@@ -555,6 +567,7 @@ def adjust_method_name_xml(method_name: str):
 def get_methods(
     class_type: typing.Any,
     doc: typing.Dict[str, DocMember],
+    ans_stubs_import_str: str,
     type_filter: typing.Callable = None,
 ) -> typing.List[Method]:
     """Get information from methods and store it in the Method object.
@@ -582,7 +595,10 @@ def get_methods(
         method_name = method.Name
         params = method.GetParameters()
         args = [
-            Param(type=fix_str(param.ParameterType.ToString()), name=param.Name) for param in params
+            Param(
+                type=fix_str(param.ParameterType.ToString(), ans_stubs_import_str), name=param.Name
+            )
+            for param in params
         ]
         full_method_name = method_name + f"({','.join([arg.type for arg in args])})"
         declaring_type_name = method.DeclaringType.ToString()
@@ -595,7 +611,7 @@ def get_methods(
         method = Method(
             name=method_name,
             doc=method_doc,
-            return_type=fix_str(method_return_type),
+            return_type=fix_str(method_return_type, ans_stubs_import_str),
             static=method.IsStatic,
             args=args,
         )
@@ -608,6 +624,7 @@ def write_class(
     class_type: typing.Any,
     namespace: str,
     doc: typing.Dict[str, DocMember],
+    ans_stubs_import_str: str,
     type_filter: typing.Callable = None,
 ) -> None:
     """Write a class.
@@ -634,9 +651,9 @@ def write_class(
         write_docstring(buffer, class_doc, 1)
     buffer.write("\n")
     props = get_properties(class_type, doc, type_filter)
-    [write_property(buffer, prop, 1) for prop in props]
-    methods = get_methods(class_type, doc, type_filter)
-    [write_method(buffer, method, 1) for method in methods]
+    [write_property(buffer, prop, ans_stubs_import_str, 1) for prop in props]
+    methods = get_methods(class_type, doc, ans_stubs_import_str, type_filter)
+    [write_method(buffer, method, ans_stubs_import_str, 1) for method in methods]
 
     if len(props) == 0 and len(methods) == 0:
         buffer.write("    pass\n")
@@ -648,6 +665,7 @@ def write_module(
     mod_types: typing.List,
     doc: typing.Dict[str, DocMember],
     outdir: str,
+    ans_stubs_import_str: str,
     type_filter: typing.Callable = None,
 ) -> None:
     """Write a module.
@@ -680,7 +698,7 @@ def write_module(
         for enum_type in enum_types:
             write_enum(f, enum_type, namespace, doc, type_filter)
         for class_type in class_types:
-            write_class(f, class_type, namespace, doc, type_filter)
+            write_class(f, class_type, namespace, doc, ans_stubs_import_str, type_filter)
     logging.info(f"Done processing {namespace}")
 
 
@@ -749,13 +767,17 @@ def get_namespaces(
     return namespaces
 
 
-def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -> None:
+def make(
+    outdir: str, ans_stubs_import_str: str, assembly_name: str, type_filter: typing.Callable = None
+) -> None:
     """Generate Python stubs for an assembly.
 
     Parameters
     ----------
     outdir: str
         The directory where modules are being written to.
+    ans_stubs_import_str: str
+        The Ansys import string with its version. For example, ansys.mechanical.stubs.v241
     assembly_name: str
         The name of the assembly
     type_filter: typing.Callable
@@ -774,5 +796,5 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
         if "DesignModeler" not in namespace:
             logging.info(f"Processing {namespace}")
             logging.info(f"   {len(namespaces.items())} namespaces")
-            write_module(namespace, mod_types, doc, outdir, type_filter)
+            write_module(namespace, mod_types, doc, outdir, ans_stubs_import_str, type_filter)
             logging.info(f"Done processing {namespace}")

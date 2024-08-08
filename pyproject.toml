@@ -24,7 +24,9 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
-dependencies = []
+dependencies = [
+    "ansys-pythonnet==3.1.0rc3"
+]
 
 [project.optional-dependencies]
 doc = [
