@@ -96,7 +96,7 @@ def is_type_published(mod_type: "System.RuntimeType"):
         print(e)
 
 
-def make(base_dir, outdir, assemblies, str_version):
+def make(base_dir, outdir, ans_stubs_import_str, assemblies, str_version):
     """Generate the __init__.py files from assembly files.
 
     Make __init__.py files in src/ansys/mechanical/stubs, generate
@@ -117,7 +117,7 @@ def make(base_dir, outdir, assemblies, str_version):
     outdir.mkdir(parents=True, exist_ok=True)
 
     for assembly in assemblies:
-        generate_content.make(outdir, assembly, type_filter=is_type_published)
+        generate_content.make(outdir, ans_stubs_import_str, assembly, type_filter=is_type_published)
 
     outdir_init = outdir / "__init__.py"
     with pathlib.Path.open(outdir_init, "w") as f:
@@ -200,6 +200,7 @@ def main():
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent
     outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs" / version
+    ans_stubs_import_str = f"ansys.mechanical.stubs.{version}"
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -214,7 +215,7 @@ def main():
     resolve()
 
     if make_bool:
-        make(base_dir, outdir, assemblies, version)
+        make(base_dir, outdir, ans_stubs_import_str, assemblies, version)
 
     if clean_bool:
         clean(outdir)
