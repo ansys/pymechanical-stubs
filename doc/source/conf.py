@@ -55,9 +55,15 @@ intersphinx_mapping = {
     "pypim": ("https://pypim.docs.pyansys.com/version/dev/", None),
 }
 
-suppress_warnings = ["label.*", "autoapi.python_import_resolution", "design.grid", "config.cache"]
+suppress_warnings = [
+    "label.*",
+    "autoapi.python_import_resolution",
+    "design.grid",
+    "config.cache",
+    "ref.python",
+]
 show_warning_types = True
-# supress_warnings = ["ref.option"]
+exclude_patterns = ["api/ansys/mechanical/stubs/index.rst"]  # Intentionally excluded from toctree
 
 
 # numpydoc configuration
