@@ -56,6 +56,7 @@ intersphinx_mapping = {
 }
 
 suppress_warnings = ["label.*", "autoapi.python_import_resolution", "design.grid", "config.cache"]
+show_warning_types = True
 # supress_warnings = ["ref.option"]
 
 
