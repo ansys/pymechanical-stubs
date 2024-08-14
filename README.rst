@@ -66,7 +66,7 @@ Manually create ``__init__.py`` files
 
 1. Install Mechanical 2024 R1.
 
-   .. note::
+   **Note**
 
        Ensure the environment variable, AWP_ROOTDV_DEV, is set to the location of
        Mechanical 2024 R1 (``C:\Program Files\Ansys Inc\v241``).
@@ -84,7 +84,7 @@ Manually create ``__init__.py`` files
 
        python stub_generator/create_files.py
 
-   .. note::
+   **Note**
 
        There may be an Unhandled Exception when the stubs are done running.
        If the message, "Done creating all Mechanical stubs" appears, proceed
@@ -120,7 +120,7 @@ Manually create ``__init__.py`` files
 
        make -C doc html
 
-   .. note::
+   **Note**
 
        You can ignore any current warning messages. It is a lengthy process to generate the documentation.
 
@@ -144,12 +144,11 @@ To install the latest development version, run these commands:
 Install in offline mode
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-If you lack an internet connection on your installation machine (or you do not have access to the
-private Ansys PyPI packages repository), you should install PyMechanical Stubs by downloading the wheelhouse
-archive for your corresponding machine architecture from the repository's `Releases page
-<https://github.com/ansys/pymechanical-stubs/releases>`_.
+If you lack an internet connection or you do not have access to the private Ansys PyPI packages repository,
+you should install PyMechanical Stubs by downloading the wheelhouse archive for your corresponding machine
+architecture from the repository's `Releases page <https://github.com/ansys/pymechanical-stubs/releases>`_.
 
-Each wheelhouse archive contains all the Python wheels necessary to install PyMechanical Stubs from scratch on Windows,
+Each wheelhouse archive contains all of the Python wheels necessary to install PyMechanical Stubs from scratch on Windows,
 Linux, and MacOS from Python 3.10 to 3.12. In addition, you can install the wheelhouse on a new virtual environment
 that does not include any previously installed dependencies.
 
@@ -163,7 +162,7 @@ For example, on Linux with Python 3.10, unzip the wheelhouse archive and install
 If you are on Windows with Python 3.10, unzip the wheelhouse archive to a wheelhouse directory
 and then install using the same ``pip install`` command as in the preceding example.
 
-.. note::
+**Note**
 
     If desired, you can install the wheelhouse on an isolated  or virtual system.
     See `Creation of virtual environments <https://docs.python.org/3/library/venv.html>`_ in the
@@ -211,7 +210,7 @@ Credits
 ^^^^^^^
 
 This project is inspired by [ironpython-stubs](https://github.com/gtalarico/ironpython-stubs) but is developed
-from scratch
+from scratch.
 
 .. LINKS AND REFERENCES
 .. _PyMechanical Stubs documentation: https://scripting.mechanical.docs.pyansys.com/version/stable/index.html
