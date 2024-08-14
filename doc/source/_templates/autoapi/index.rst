@@ -18,9 +18,4 @@ descriptions of the objects, methods, and properties for all namespaces.
    {% endif %}
    {% endfor %}
 
-.. toctree::
-   :hidden:
-
-   ansys/mechanical/stubs/index
-
 .. vale on
