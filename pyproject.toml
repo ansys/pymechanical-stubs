@@ -5,10 +5,10 @@ build-backend = "flit_core.buildapi"
 [project]
 # Check https://flit.readthedocs.io/en/latest/pyproject_toml.html for all available sections
 name = "ansys-mechanical-stubs"
-version = "0.1.0"
+version = "0.1.dev0"
 description = "PyMechanical scripting API stubs."
 readme = "README.rst"
-requires-python = ">=3.9,<4"
+requires-python = ">=3.10,<4"
 license = {file = "LICENSE"}
 authors = [{ name = "ANSYS, Inc.", email = "pyansys.core@ansys.com" }]
 maintainers = [{ name = "ANSYS, Inc.", email = "pyansys.core@ansys.com" }]
@@ -19,13 +19,14 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Information Analysis",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
 
-dependencies = []
+dependencies = [
+    "ansys-pythonnet==3.1.0rc3"
+]
 
 [project.optional-dependencies]
 doc = [
@@ -132,14 +133,6 @@ directory = "miscellaneous"
 name = "Miscellaneous"
 showcontent = true
 
-[tool.numpydoc_validation]
-checks = [
-    "all",   # report on all checks, except the below
-    "EX01",
-    "SA01",
-    "ES01",
-]
-
 [[tool.towncrier.type]]
 directory = "documentation"
 name = "Documentation"
@@ -154,3 +147,11 @@ showcontent = true
 directory = "test"
 name = "Test"
 showcontent = true
+
+[tool.numpydoc_validation]
+checks = [
+    "all",   # report on all checks, except the below
+    "EX01",
+    "SA01",
+    "ES01",
+]

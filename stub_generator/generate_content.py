@@ -132,7 +132,35 @@ class DocMember:
     @property
     def summary(self) -> str:
         """The summary within the element."""
-        return self.__get_element_text(self._element.find("summary"))
+        summary = self._element.find("summary")
+        summary_text = None
+
+        if summary is not None:
+            summary_text = summary.text
+            # Get text from tags in the summary text if necessary
+            for tags in summary:
+                if "paramref" in tags.tag:
+                    # Get the text of the member's (self._element's) parameter
+                    param_text = self._element.find("param").text
+                    # Remove period from end of parameter text
+                    if param_text[-1] == ".":
+                        param_text = param_text[:-1]
+                    # Make first letter of parameter text lowercase
+                    if param_text[0].isupper():
+                        param_text = param_text[0].lower() + param_text[1:]
+                    # Append the parameter text to the summary_text string
+                    summary_text += param_text
+                    # Append the text after the param tag to the summary_text
+                    summary_text += tags.tail
+                else:
+                    for key in tags.attrib:
+                        # Append the text of the key of a tag to the summary_text
+                        summary_text += tags.attrib.get(key)
+                        if tags.tail is not None:
+                            # Append the text after the tag to the summary_text if it exists
+                            summary_text += tags.tail
+
+        return summary_text
 
     @property
     def params(self) -> str:
@@ -167,6 +195,7 @@ def write_docstring(
     if doc_member is None:
         return
     summary = doc_member.summary
+    print(summary)
     if summary is None:
         return
     indent = "    " * indent_level

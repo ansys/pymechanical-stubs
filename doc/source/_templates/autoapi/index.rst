@@ -1,4 +1,5 @@
 .. vale off
+
 API reference
 =============
 
@@ -9,16 +10,12 @@ descriptions of the objects, methods, and properties for all namespaces.
    :titlesonly:
    :maxdepth: 3
 
-   {% set version_list = [] %}
-
    {% for page in pages %}
    {% if (page.top_level_object or page.name.split('.') | length == 4) and page.display %}
    {% set page_name = page.name.split('.')|list %}
-   {{ version_list.append(page_name[-1]) }}
    {% set version = page_name[-1] %}
    <span class="nf nf-md-package"></span>Mechanical 20{{ version[1:3] }} R{{ version[3] }}<{{ page.include_path }}>
    {% endif %}
    {% endfor %}
-
 
 .. vale on
