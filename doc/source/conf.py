@@ -55,8 +55,15 @@ intersphinx_mapping = {
     "pypim": ("https://pypim.docs.pyansys.com/version/dev/", None),
 }
 
-suppress_warnings = ["label.*", "autoapi.python_import_resolution", "design.grid", "config.cache"]
-# supress_warnings = ["ref.option"]
+suppress_warnings = [
+    "label.*",
+    "autoapi.python_import_resolution",
+    "design.grid",
+    "config.cache",
+    "ref.python",
+]
+# show_warning_types = True
+# exclude_patterns = ["api/ansys/mechanical/stubs/index.rst"]  # Intentionally excluded from toctree
 
 
 # numpydoc configuration
@@ -122,7 +129,7 @@ html_short_title = html_title = "PyMechanical Stubs"
 html_theme = "ansys_sphinx_theme"
 html_logo = pyansys_logo_black
 html_context = {
-    "github_user": "pyansys",
+    "github_user": "ansys",
     "github_repo": "pymechanical-stubs",
     "github_version": "main",
     "doc_path": "doc/source",

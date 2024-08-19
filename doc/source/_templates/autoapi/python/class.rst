@@ -136,7 +136,7 @@ Overview
 Property detail
 ---------------
     {% for property in visible_properties %}
-{{ property.render() }}
+{{ property.render().replace(":type:", ":no-index:\n   :type:") }}
     {% endfor %}
     {% endif %}
 
@@ -154,7 +154,17 @@ Attribute detail
 Method detail
 -------------
     {% for method in all_visible_methods %}
-{{ method.render() }}
+    {% if 'processed by numpydoc' in method.render() -%}
+{% set no_newline_docstring = method.docstring | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") %}
+{% set newline_count = (no_newline_docstring | length) - (no_newline_docstring | replace("\n","") | length) %}
+    {% if newline_count == 3 or newline_count == 4 %}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") | replace("\n   \n", "   :no-index:\n\n") }}
+    {% else %}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ..", "\n..") | replace("\n   \n", "   :no-index:\n.. code-block:: text\n\n") }}
+    {% endif %}
+    {% else -%}
+{{ method.render()+"   :no-index:\n" }}
+    {% endif %}
     {% endfor %}
     {% endif %}
     {% if is_own_page and own_page_children %}

@@ -59,7 +59,7 @@ jobs:
       options: --entrypoint /bin/bash
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [public-ubuntu-latest-8-cores]
         mechanical: [
           { image: '24.1.0', version: '241' },
           { image: '24.2.0', version: '242' },
@@ -84,13 +84,13 @@ jobs:
           apt install -y lsb-release mono-complete make git zip
 
           python -m ensurepip --default-pip
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           python --version
-          pip --version
+          python -m pip --version
 
-          pip install -e .[doc]
-          pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+          python -m pip install -e .[doc]
+          python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
       - name: "Generate the Mechanical stub files"
         env:
@@ -142,7 +142,7 @@ jobs:
 
     - name: "Install project"
       run: |
-        pip install -e .
+        python -m pip install -e .
 
     - name: "Retrieve Mechanical version"
       shell: python
@@ -196,7 +196,7 @@ jobs:
 
     - name: "Install project & doc dependencies"
       run: |
-        pip install -e .[doc]
+        python -m pip install -e .[doc]
 
     - name: "Generate html and markdown documentation"
       run: |
@@ -295,12 +295,12 @@ jobs:
         path: dist/
         retention-days: 7
 
-  release-pypi-private:
-    name: "Release to the private PyPI repository"
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+  release:
     runs-on: ubuntu-latest
     needs: [doc-build]
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     steps:
+
       - name: "Release to the private PyPI repository"
         uses: ansys/actions/release-pypi-private@v7
         with:
@@ -308,25 +308,13 @@ jobs:
           twine-username: "__token__"
           twine-token: ${{ secrets.PYANSYS_PYPI_PRIVATE_PAT }}
 
-  # release-pypi-public:
-  #   name: "Release to the public PyPI repository"
-  #   if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-  #   runs-on: ubuntu-latest
-  #   needs: [release-pypi-private]
-  #   steps:
-  #     - name: "Release to the public PyPI repository"
-  #       uses: ansys/actions/release-pypi-public@v6
-  #       with:
-  #         library-name: ${{ env.PACKAGE_NAME }}
-  #         twine-username: "__token__"
-  #         twine-token: ${{ secrets.PYPI_TOKEN }}
+     #- name: "Release to the public PyPI repository"
+     #  uses: ansys/actions/release-pypi-public@v6
+     #  with:
+     #    library-name: ${{ env.PACKAGE_NAME }}
+     #    twine-username: "__token__"
+     #    twine-token: ${{ secrets.PYPI_TOKEN }}
 
-  release-github:
-    name: "Release to GitHub"
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-    runs-on: ubuntu-latest
-    needs: [release-pypi-private]
-    steps:
       - name: "Release to GitHub"
         uses: ansys/actions/release-github@v7
         with:
@@ -364,7 +352,7 @@ jobs:
     name: "Deploy stable documentation"
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     runs-on: ubuntu-latest
-    needs: [release-pypi-private, release-github]
+    needs: release
     steps:
       - name: "Deploy stable documentation"
         uses: ansys/actions/doc-deploy-stable@v7
