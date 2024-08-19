@@ -155,7 +155,13 @@ Method detail
 -------------
     {% for method in all_visible_methods %}
     {% if 'processed by numpydoc' in method.render() -%}
-{{ method.render().replace("\n   \n", "   :no-index:\n\n") }}
+{% set no_newline_docstring = method.docstring | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") %}
+{% set newline_count = (no_newline_docstring | length) - (no_newline_docstring | replace("\n","") | length) %}
+    {% if newline_count == 3 or newline_count == 4 %}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") | replace("\n   \n", "   :no-index:\n\n") }}
+    {% else %}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ..", "\n..") | replace("\n   \n", "   :no-index:\n.. code-block:: text\n\n") }}
+    {% endif %}
     {% else -%}
 {{ method.render()+"   :no-index:\n" }}
     {% endif %}
