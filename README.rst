@@ -178,7 +178,6 @@ This code shows how to import PyMechanical Stubs and its basic capabilities:
    from typing import TYPE_CHECKING
    import ansys.mechanical.core as mech
 
-   TYPE_CHECKING = True
    if TYPE_CHECKING:
        import ansys.mechanical.stubs.v241.Ansys as Ansys
 
