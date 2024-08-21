@@ -6,6 +6,13 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.1](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.1) - 2024-08-21
+
+
+### Added
+
+- make PDF documentation [#48](https://github.com/ansys/pymechanical-stubs/pull/48)
+
 ## [0.1.0](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.0) - 2024-08-21
 
 
