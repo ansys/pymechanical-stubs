@@ -211,6 +211,7 @@ jobs:
     - name: "Generate html and markdown documentation"
       run: |
         make -C doc html
+        make -C doc pdf
         make -C doc markdown
 
     - name: "Clean ID in first row"
@@ -260,6 +261,14 @@ jobs:
       with:
         name: documentation-html
         path: doc/_build/html
+        retention-days: 7
+
+    - name: Upload PDF Documentation
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-pdf
+        path: doc/_build/latex/*.pdf
         retention-days: 7
 
   build-library:
