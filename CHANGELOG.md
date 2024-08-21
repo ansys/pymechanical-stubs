@@ -6,18 +6,13 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
-## [0.1.1](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.1) - 2024-08-21
-
-
-### Added
-
-- make PDF documentation [#48](https://github.com/ansys/pymechanical-stubs/pull/48)
-
 ## [0.1.0](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.0) - 2024-08-21
 
 
 ### Added
 
+- Mechanical stubs to sphinx documentation (#1)
+- Create workflow to create & post sphinx documentation (#7)
 - feat: generate pymechanical-stubs & its Sphinx documentation for 23.2 [#16](https://github.com/ansys/pymechanical-stubs/pull/16)
 - feat: generate mechanical stubs in setup.py & add 241 docs [#22](https://github.com/ansys/pymechanical-stubs/pull/22)
 - docs: generate documentation for 2024 R2 [#30](https://github.com/ansys/pymechanical-stubs/pull/30)
@@ -28,6 +23,8 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 ### Changed
 
+- toctree adjustments (#9)
+- Update landing page (#11)
 - maint: bump dependencies in workflow [#24](https://github.com/ansys/pymechanical-stubs/pull/24)
 - Bump actions/upload-artifact from 3 to 4 [#25](https://github.com/ansys/pymechanical-stubs/pull/25)
 
@@ -48,19 +45,3 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 - bump ansys/actions from 6 to 7 [#38](https://github.com/ansys/pymechanical-stubs/pull/38)
 - enable step for public release and use trusted publisher [#40](https://github.com/ansys/pymechanical-stubs/pull/40)
-
-## [Unreleased][]
-
-### Added
-
-- Mechanical stubs to sphinx documentation (#1)
-- Create workflow to create & post sphinx documentation (#7)
-
-### Changed
-
-- toctree adjustments (#9)
-- Update landing page (#11)
-
-### Fixed
-
-### Dependencies
