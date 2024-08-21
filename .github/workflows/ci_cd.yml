@@ -206,7 +206,7 @@ jobs:
 
     - name: "Install project & doc dependencies"
       run: |
-        apt install -y texlive-latex-extra latexmk
+        sudo apt install -y texlive-latex-extra latexmk
         python -m pip install -e .[doc]
 
     - name: "Generate html and markdown documentation"
