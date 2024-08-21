@@ -88,7 +88,7 @@ jobs:
           python --version
           python -m pip --version
 
-          python -m pip install -e .[doc]
+          python -m pip install -e .[build,doc]
           python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
           python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
