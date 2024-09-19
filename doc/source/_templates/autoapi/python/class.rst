@@ -136,7 +136,7 @@ Overview
 Property detail
 ---------------
     {% for property in visible_properties %}
-{{ property.render().replace(":type:", ":no-index:\n   :type:") }}
+{{ property.render() }}
     {% endfor %}
     {% endif %}
 
@@ -158,12 +158,12 @@ Method detail
 {% set no_newline_docstring = method.docstring | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") %}
 {% set newline_count = (no_newline_docstring | length) - (no_newline_docstring | replace("\n","") | length) %}
     {% if newline_count == 3 or newline_count == 4 %}
-{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") | replace("\n   \n", "   :no-index:\n\n") }}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") }}
     {% else %}
-{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ..", "\n..") | replace("\n   \n", "   :no-index:\n.. code-block:: text\n\n") }}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ..", "\n..") | replace("\n   \n", "   .. code-block:: text\n\n") }}
     {% endif %}
     {% else -%}
-{{ method.render()+"   :no-index:\n" }}
+{{ method.render()+"   \n" }}
     {% endif %}
     {% endfor %}
     {% endif %}
