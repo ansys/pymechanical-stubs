@@ -231,6 +231,10 @@ jobs:
         path: doc/_build/html
         retention-days: 7
 
+    - name: "Make all hrefs local in HTML"
+      run: |
+        python scripts/fix-href-html.py
+
     - name: "Clean ID in first row"
       run: |
         python scripts/01-clean-id.py
