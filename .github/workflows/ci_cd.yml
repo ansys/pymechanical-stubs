@@ -215,6 +215,22 @@ jobs:
         make -C doc pdf
         make -C doc markdown
 
+    - name: "Upload original markdown documentation"
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: original-documentation-md
+        path: doc/_build/markdown
+        retention-days: 7
+
+    - name: "Upload original Sphinx HTML documentation"
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: original-documentation-html
+        path: doc/_build/html
+        retention-days: 7
+
     - name: "Clean ID in first row"
       run: |
         python scripts/01-clean-id.py

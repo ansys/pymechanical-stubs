@@ -60,10 +60,10 @@ suppress_warnings = [
     "autoapi.python_import_resolution",
     "design.grid",
     "config.cache",
-    # "ref.python",
+    "ref.python",
 ]
-# show_warning_types = True
-# exclude_patterns = ["api/ansys/mechanical/stubs/index.rst"]  # Intentionally excluded from toctree
+show_warning_types = True
+exclude_patterns = ["api/ansys/mechanical/stubs/index.rst"]  # Intentionally excluded from toctree
 
 
 # numpydoc configuration
