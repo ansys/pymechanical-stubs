@@ -179,11 +179,11 @@ jobs:
         files: wheelhouse
         dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
 
-    - name: "Upload the wheelhouse files"
+    - name: "Upload the compressed wheelhouse"
       uses: actions/upload-artifact@v4
       with:
         name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}
-        path: wheelhouse/*
+        path: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
         retention-days: 7
 
   doc-build:
