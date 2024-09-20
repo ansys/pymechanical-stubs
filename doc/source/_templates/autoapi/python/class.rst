@@ -160,7 +160,7 @@ Method detail
     {% if newline_count == 3 or newline_count == 4 %}
 {{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "\n") }}
     {% else %}
-{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ..", "\n..") | replace("\n   \n", "   .. code-block:: text\n\n") }}
+{{ method.render() | replace("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ..", "\n..") | replace("\n   \n", "\n.. code-block:: text\n\n") }}
     {% endif %}
     {% else -%}
 {{ method.render()+"   \n" }}
