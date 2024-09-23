@@ -265,6 +265,10 @@ jobs:
       run: |
         python scripts/fix-href-md.py
 
+    - name: "Replace Windows apostrophes with single quotes"
+      run: |
+        python scripts/replace-windows-apostrophes.py
+
     - name: "Upload to GitHub Artifacts"
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
