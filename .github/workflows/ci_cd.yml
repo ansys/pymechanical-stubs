@@ -231,6 +231,10 @@ jobs:
         path: doc/_build/html
         retention-days: 7
 
+    - name: "Replace Windows apostrophes with single quotes"
+      run: |
+        python scripts/replace-windows-apostrophes.py
+
     - name: "Make all hrefs local in HTML"
       run: |
         python scripts/fix-href-html.py
@@ -264,10 +268,6 @@ jobs:
     - name: "Make all hrefs local in Markdown"
       run: |
         python scripts/fix-href-md.py
-
-    - name: "Replace Windows apostrophes with single quotes"
-      run: |
-        python scripts/replace-windows-apostrophes.py
 
     - name: "Upload to GitHub Artifacts"
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
