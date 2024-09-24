@@ -211,7 +211,7 @@ jobs:
 
     - name: "Generate PDF documentation"
       run: |
-        make -C doc pdf --pool-size=6000000
+        make -C doc pdf
 
     - name: Upload PDF documentation
       uses: actions/upload-artifact@v4
