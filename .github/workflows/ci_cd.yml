@@ -209,10 +209,20 @@ jobs:
         sudo apt install -y texlive-latex-extra latexmk
         python -m pip install -e .[doc]
 
-    - name: "Generate html and markdown documentation"
+    - name: "Generate HTML documentation"
       run: |
         make -C doc html
-        make -C doc pdf
+
+    - name: "Upload original Sphinx HTML documentation"
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: original-documentation-html
+        path: doc/_build/html
+        retention-days: 7
+
+    - name: "Generate Markdown documentation"
+      run: |
         make -C doc markdown
 
     - name: "Upload original markdown documentation"
@@ -223,13 +233,9 @@ jobs:
         path: doc/_build/markdown
         retention-days: 7
 
-    - name: "Upload original Sphinx HTML documentation"
-      uses: actions/upload-artifact@v4
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
-      with:
-        name: original-documentation-html
-        path: doc/_build/html
-        retention-days: 7
+    - name: "Generate PDF documentation"
+      run: |
+        make -C doc pdf
 
     - name: "Replace Windows apostrophes with single quotes"
       run: |
@@ -276,7 +282,7 @@ jobs:
         name: toc-file
         path: output/
 
-    - name: "Upload markdown documentation"
+    - name: "Upload Markdown documentation"
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
@@ -284,7 +290,7 @@ jobs:
         path: doc/_build/markdown
         retention-days: 7
 
-    - name: "Upload Sphinx HTML documentation"
+    - name: "Upload HTML documentation"
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
@@ -292,7 +298,7 @@ jobs:
         path: doc/_build/html
         retention-days: 7
 
-    - name: Upload PDF Documentation
+    - name: Upload PDF documentation
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
