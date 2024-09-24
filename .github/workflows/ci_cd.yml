@@ -209,6 +209,18 @@ jobs:
         sudo apt install -y texlive-latex-extra latexmk
         python -m pip install -e .[doc]
 
+    - name: "Generate PDF documentation"
+      run: |
+        make -C doc pdf --pool-size=6000000
+
+    - name: Upload PDF documentation
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-pdf
+        path: doc/_build/latex/*.pdf
+        retention-days: 7
+
     - name: "Generate HTML documentation"
       run: |
         make -C doc html
@@ -232,10 +244,6 @@ jobs:
         name: original-documentation-md
         path: doc/_build/markdown
         retention-days: 7
-
-    - name: "Generate PDF documentation"
-      run: |
-        make -C doc pdf
 
     - name: "Replace Windows apostrophes with single quotes"
       run: |
@@ -296,14 +304,6 @@ jobs:
       with:
         name: documentation-html
         path: doc/_build/html
-        retention-days: 7
-
-    - name: Upload PDF documentation
-      uses: actions/upload-artifact@v4
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
-      with:
-        name: documentation-pdf
-        path: doc/_build/latex/*.pdf
         retention-days: 7
 
   build-library:
