@@ -210,6 +210,9 @@ jobs:
         python -m pip install -e .[doc]
 
     - name: "Generate PDF documentation"
+      env:
+          extra_mem_bot: 20000000
+          extra_mem_top: 30000000
       run: |
         make -C doc pdf
 
