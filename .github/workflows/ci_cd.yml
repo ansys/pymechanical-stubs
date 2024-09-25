@@ -206,7 +206,7 @@ jobs:
 
     - name: "Install project & doc dependencies"
       run: |
-        sudo apt install -y texlive-latex-extra latexmk
+        sudo apt install -y texlive-latex-extra latexmk texlive-xetex texlive-fonts-extra qpdf xindy
         python -m pip install -e .[doc]
 
     - name: "Generate PDF documentation"
