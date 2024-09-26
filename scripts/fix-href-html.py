@@ -32,8 +32,10 @@ DEFAULT_API_FOLDER = "doc/_build/html/api"
 
 def update_soup(file_updates, soup):
     """Replace each original href line with a local href line in the HTML."""
+    print(len(file_updates))
     if file_updates:
         for href, local_href in file_updates.items():
+            print(f"Replacing {href} with {local_href}")
             # Replace the original href with the local href
             # For example, replace
             # '../../../../v242/Ansys/Mechanical/Interfaces/IVariable.html#IVariable.QuantityName'
@@ -56,6 +58,7 @@ def fix_hrefs(api_dir):
                 file_updates = {}
                 # The full path to the html file
                 full_file_path = Path(root) / Path(file)
+                print(full_file_path)
 
                 with Path.open(full_file_path, encoding="utf-8") as f:
                     # Parse HTML file
