@@ -214,7 +214,7 @@ jobs:
         sudo apt install -y texlive-latex-extra latexmk texlive-xetex texlive-fonts-extra qpdf xindy
         make -C doc pdf SPHINXERRWARN=""
       env:
-        pool_size: 7000000
+        pool_size: 10000000
 
     - name: Upload PDF documentation
       uses: actions/upload-artifact@v4
