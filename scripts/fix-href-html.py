@@ -40,7 +40,7 @@ def fix_hrefs(api_dir):
                 print(full_file_path)
 
                 pattern = re.compile(
-                    r"\<tr class\=\".*\"\>\<td\>\<p\>\<a class\=\"reference internal\" href\=\"\.\.\/.*\" "
+                    r"\<tr class\=\"[^\"]*\"\>\<td\>\<p\>\<a class\=\"reference internal\" href\=\"\.\.\/[^\"]*\""
                 )
                 with Path.open(full_file_path, encoding="utf-8") as f:
                     lines = f.readlines()

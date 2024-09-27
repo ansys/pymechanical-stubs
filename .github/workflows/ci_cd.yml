@@ -206,23 +206,7 @@ jobs:
 
     - name: "Install project & doc dependencies"
       run: |
-        sudo apt install -y texlive-latex-extra latexmk texlive-xetex texlive-fonts-extra qpdf xindy
         python -m pip install -e .[doc]
-
-    # - name: "Generate PDF documentation"
-    #   env:
-    #       extra_mem_bot: 20000000
-    #       extra_mem_top: 30000000
-    #   run: |
-    #     make -C doc pdf
-
-    # - name: Upload PDF documentation
-    #   uses: actions/upload-artifact@v4
-    #   if: matrix.python-version == env.MAIN_PYTHON_VERSION
-    #   with:
-    #     name: documentation-pdf
-    #     path: doc/_build/latex/*.pdf
-    #     retention-days: 7
 
     - name: "Generate HTML documentation"
       run: |
@@ -308,6 +292,24 @@ jobs:
         name: documentation-html
         path: doc/_build/html
         retention-days: 7
+
+    - name: "Generate PDF documentation"
+      run: |
+        sudo apt update
+        sudo apt install -y texlive-latex-extra latexmk texlive-xetex texlive-fonts-extra qpdf xindy
+        make -C doc pdf SPHINXERRWARN=""
+      env:
+        extra_mem_bot: 20000000
+        extra_mem_top: 30000000
+
+    - name: Upload PDF documentation
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-pdf
+        path: doc/_build/latex/*.pdf
+        retention-days: 7
+
 
   build-library:
     name: Build library
