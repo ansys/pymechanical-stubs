@@ -252,6 +252,10 @@ jobs:
       run: |
         python scripts/replace-windows-apostrophes.py
 
+    - name: "Make all hrefs local in Markdown"
+      run: |
+        python scripts/fix-href-md.py
+
     - name: "Make all hrefs local in HTML"
       run: |
         python scripts/fix-href-html.py
@@ -281,10 +285,6 @@ jobs:
     - name: "Remove links in heading"
       run: |
         python scripts/05-remove-link-in-heading.py
-
-    - name: "Make all hrefs local in Markdown"
-      run: |
-        python scripts/fix-href-md.py
 
     - name: "Upload to GitHub Artifacts"
       if: matrix.python-version == env.MAIN_PYTHON_VERSION

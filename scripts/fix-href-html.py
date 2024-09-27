@@ -24,69 +24,45 @@
 import argparse
 import os
 from pathlib import Path
-
-from bs4 import BeautifulSoup
+import re
 
 DEFAULT_API_FOLDER = "doc/_build/html/api"
 
 
-def update_soup(file_updates, soup):
-    """Replace each original href line with a local href line in the HTML."""
-    print(len(file_updates))
-    if file_updates:
-        for href, local_href in file_updates.items():
-            print(f"Replacing {href} with {local_href}")
-            # Replace the original href with the local href
-            # For example, replace
-            # '../../../../v242/Ansys/Mechanical/Interfaces/IVariable.html#IVariable.QuantityName'
-            # with '#IVariable.QuantityName'
-            soup = BeautifulSoup(str(soup).replace(href, local_href))
-            # Remove the href from the file_updates dictionary
-            file_updates.pop(href)
-            return update_soup(file_updates, soup)
-    else:
-        return soup
-
-
 def fix_hrefs(api_dir):
-    """Update the html file with local href paths if necessary."""
+    """Update the markdown file with local href paths if necessary."""
     for root, dirs, files in os.walk(api_dir, topdown=True):
         for file in files:
             # If the html file is not index.html
             if ("index.html" not in file) and ("html" in file):
-                # Dictionary that keeps track of the original href and local href
-                file_updates = {}
                 # The full path to the html file
                 full_file_path = Path(root) / Path(file)
                 print(full_file_path)
 
+                pattern = re.compile(
+                    r"\<tr class\=\".*\"\>\<td\>\<p\>\<a class\=\"reference internal\" href\=\"\.\.\/.*\" "
+                )
                 with Path.open(full_file_path, encoding="utf-8") as f:
-                    # Parse HTML file
-                    soup = BeautifulSoup(f, "html.parser")
-                    # Find all tables
-                    tables = soup.find_all("table")
-                    for table in tables:
-                        # Find all rows in the table
-                        rows = table.find_all("tr")
-                        # For each row, create a local href for the <a> tag if applicable
-                        for row in rows:
-                            # '../../../../v242/Ansys/Mechanical/Interfaces/IVariable.html#IVariable.QuantityName'
-                            href = row.a["href"]
-                            if href[0] != "#":
-                                # Get the index of the # symbol
-                                hash_index = href.index("#")
-                                # Create a string only containing the local href path. For example, #IVariable.QuantityName
-                                local_href = href[hash_index:]
-                                # {'../../../../v242/Ansys/Mechanical/Interfaces/IVariable.html#IVariable.QuantityName': '#IVariable.QuantityName', ...}
-                                file_updates[href] = local_href
+                    lines = f.readlines()
+                    # Join all lines in the file into one string
+                    joined_lines = "".join(lines)
+                    # Check if the string contains the regex pattern
+                    matches = pattern.findall(joined_lines)
+                    if matches:
+                        for match in matches:
+                            # '<tr class="row-odd"><td><p><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/VectorDeformation.html#VectorDeformation.Activate"
+                            # get index of href="
+                            href_eq = match.index("href=") + 6
+                            # get index of #
+                            pound = match.index("#")
+                            # remove href= to #
+                            new_match = match[0:href_eq] + match[pound:]
+                            print(f"Replacing {match} with {new_match}")
+                            # Replace original matched regex (match) with fixed href using local references (new_match)
+                            joined_lines = joined_lines.replace(match, new_match)
 
-                # If the href could be updated with local paths, update the HTML and write to the file
-                if file_updates:
-                    # Update the HTML for each href that has to be updated
-                    local_href_soup = update_soup(file_updates, soup)
-                    # Overwrite the updated HTML to the file
-                    with Path.open(full_file_path, "w", encoding="utf-8") as file:
-                        file.write(str(local_href_soup))
+                with Path.open(full_file_path, "w", encoding="utf-8") as myfile:
+                    myfile.write(joined_lines)
 
 
 def main():
@@ -103,6 +79,7 @@ def main():
     repo_dir = Path(__file__).parent.parent
     api_folder = Path(args.api_folder)
     full_api_dir_path = repo_dir / api_folder
+    print(full_api_dir_path)
 
     if full_api_dir_path.exists():
         fix_hrefs(full_api_dir_path)
