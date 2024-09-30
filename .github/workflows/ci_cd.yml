@@ -208,21 +208,10 @@ jobs:
       run: |
         python -m pip install -e .[doc]
 
-    - name: "Fake generate PDF"
-      run: |
-        mkdir -p doc/_build/latex
-        touch doc/_build/latex/doc.pdf
-
-    - name: Upload PDF Documentation
-      uses: actions/upload-artifact@v4
-      with:
-        name: documentation-pdf
-        path: doc/_build/latex/doc.pdf
-        retention-days: 7
-
     - name: "Generate HTML documentation"
       run: |
         make -C doc html
+        make -C doc pdf
 
     - name: "Upload original Sphinx HTML documentation"
       uses: actions/upload-artifact@v4
@@ -303,6 +292,13 @@ jobs:
       with:
         name: documentation-html
         path: doc/_build/html
+        retention-days: 7
+
+    - name: Upload PDF Documentation
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation-pdf
+        path: doc/_build/latex/*.pdf
         retention-days: 7
 
   build-library:
