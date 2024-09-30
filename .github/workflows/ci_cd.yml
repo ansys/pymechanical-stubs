@@ -295,6 +295,7 @@ jobs:
         retention-days: 7
 
     - name: Upload PDF Documentation
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
         name: documentation-pdf
