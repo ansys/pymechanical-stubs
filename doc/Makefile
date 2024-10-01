@@ -31,7 +31,8 @@ help:
 # pdf: .install-deps
 pdf:
 	mkdir -p doc/_build/latex
-    touch doc/_build/latex/doc.pdf
+	touch doc/_build/latex/doc.pdf
+
 
 # Customized clean due to examples gallery
 # clean: .install-deps
