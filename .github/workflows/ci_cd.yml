@@ -206,14 +206,44 @@ jobs:
 
     - name: "Install project & doc dependencies"
       run: |
-        sudo apt install -y texlive-latex-extra latexmk
         python -m pip install -e .[doc]
 
-    - name: "Generate html and markdown documentation"
+    - name: "Generate HTML documentation"
       run: |
         make -C doc html
         make -C doc pdf
+
+    - name: "Upload original Sphinx HTML documentation"
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: original-documentation-html
+        path: doc/_build/html
+        retention-days: 7
+
+    - name: "Generate Markdown documentation"
+      run: |
         make -C doc markdown
+
+    - name: "Upload original markdown documentation"
+      uses: actions/upload-artifact@v4
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: original-documentation-md
+        path: doc/_build/markdown
+        retention-days: 7
+
+    - name: "Replace Windows apostrophes with single quotes"
+      run: |
+        python scripts/replace-windows-apostrophes.py
+
+    - name: "Make all hrefs local in Markdown"
+      run: |
+        python scripts/fix-href-md.py
+
+    - name: "Make all hrefs local in HTML"
+      run: |
+        python scripts/fix-href-html.py
 
     - name: "Clean ID in first row"
       run: |
@@ -241,14 +271,14 @@ jobs:
       run: |
         python scripts/05-remove-link-in-heading.py
 
-    - name: "Upload to GitHub Artifacts"
+    - name: "Upload toc.yml"
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
         name: toc-file
         path: output/
 
-    - name: "Upload markdown documentation"
+    - name: "Upload Markdown documentation"
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
@@ -256,7 +286,7 @@ jobs:
         path: doc/_build/markdown
         retention-days: 7
 
-    - name: "Upload Sphinx HTML documentation"
+    - name: "Upload HTML documentation"
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
@@ -265,8 +295,8 @@ jobs:
         retention-days: 7
 
     - name: Upload PDF Documentation
-      uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      uses: actions/upload-artifact@v4
       with:
         name: documentation-pdf
         path: doc/_build/latex/*.pdf
