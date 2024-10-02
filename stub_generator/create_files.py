@@ -158,7 +158,7 @@ def make(base_dir, outdir, assemblies, str_version):
                     # Only add docstring if the init file is empty
                     # This is for init files that only contain import statements
                     if pathlib.Path.stat(init_path).st_size == 0:
-                        f.write(f'"""{pathlib.Path(full_path).name} submodule."""\n')
+                        f.write(f'"""{pathlib.Path(full_path).name} module."""\n')
                     for module in module_list:
                         if module != "__init__.py":
                             f.write(f"import {import_str}.{module} as {module}\n")
@@ -206,9 +206,9 @@ def main():
 
     # Assembly files to read from the Ansys Mechanical install.
     assemblies = [
-        "Ansys.Mechanical.DataModel",
+        # "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
-        "Ansys.ACT.WB1",
+        # "Ansys.ACT.WB1",
     ]
 
     resolve()
