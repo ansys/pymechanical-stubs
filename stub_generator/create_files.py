@@ -130,7 +130,7 @@ def make(base_dir, outdir, assemblies, str_version):
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
     get_dirs = os.listdir(path)
     with pathlib.Path.open(path_init, "w") as f:
-        f.write('"""Ansys subpackage."""\n')
+        f.write('"""Ansys module."""\n')
         for dir in get_dirs:
             full_dir_path = path / dir
             if pathlib.Path.is_dir(full_dir_path):
@@ -158,7 +158,7 @@ def make(base_dir, outdir, assemblies, str_version):
                     # Only add docstring if the init file is empty
                     # This is for init files that only contain import statements
                     if pathlib.Path.stat(init_path).st_size == 0:
-                        f.write(f'"""{pathlib.Path(full_path).name} submodule."""\n')
+                        f.write(f'"""{pathlib.Path(full_path).name} module."""\n')
                     for module in module_list:
                         if module != "__init__.py":
                             f.write(f"import {import_str}.{module} as {module}\n")
