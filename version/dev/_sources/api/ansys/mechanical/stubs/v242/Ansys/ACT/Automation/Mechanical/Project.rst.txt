@@ -1,0 +1,964 @@
+.. vale off
+
+
+
+:class:`Project`
+================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Project
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Project
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~Archive`
+            - For Mechanical opened independently, without Workbench. Archive a Mechanical project.
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CombineTextFiles`
+            - Combines two text(.txt / .dmig / .inp / .dat) files. The secondary file will be appened to the primary file
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~New`
+            - For Mechanical opened independently, without Workbench. Start a new Mechanical project.
+          * - :py:attr:`~Open`
+            - For Mechanical opened independently, without Workbench. Open an existing Mechanical project.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~Save`
+            - For Mechanical opened independently, without Workbench. Save current Mechanical project.
+          * - :py:attr:`~SaveAs`
+            - For Mechanical opened independently, without Workbench. Save current Mechanical project to given filePath.
+          * - :py:attr:`~SpecifyMetricTemperatureInCelsius`
+            - Specify the use of Celsius thermal units for metric unit systems.
+          * - :py:attr:`~SpecifyMetricTemperatureInKelvin`
+            - Specify the use of Kelvin thermal units for metric unit systems.
+          * - :py:attr:`~Unarchive`
+            - For Mechanical opened independently, without Workbench. Unarchive a Mechanical project and open it.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Author`
+            - Gets or sets the Author.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CreationDate`
+            - Gets the CreationDate.
+          * - :py:attr:`~CreationTime`
+            - Gets the CreationTime.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~FilePath`
+            - Gets the Mechanical Project file path of current Mechanical session.
+          * - :py:attr:`~FirstSaved`
+            - Gets the FirstSaved.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~ImportedSource`
+            - Gets the ImportedSource.
+          * - :py:attr:`~ImportedVersion`
+            - Gets the ImportedVersion.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LastSaved`
+            - Gets the LastSaved.
+          * - :py:attr:`~Model`
+            - Gets the Model.
+          * - :py:attr:`~Models`
+            - Gets the Model.
+          * - :py:attr:`~PreparedFor`
+            - Gets or sets the PreparedFor.
+          * - :py:attr:`~ProductVersion`
+            - Gets the ProductVersion.
+          * - :py:attr:`~ProjectDirectory`
+            - Gets the Project Directory
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~SaveProjectAfterSolution`
+            - Gets or sets the SaveProjectAfterSolution.
+          * - :py:attr:`~SaveProjectBeforeSolution`
+            - Gets or sets the SaveProjectBeforeSolution.
+          * - :py:attr:`~Subject`
+            - Gets or sets the Subject.
+          * - :py:attr:`~UnitSystem`
+            - Change the Unit System.
+          * - :py:attr:`~UserFiles`
+            - Gets the path of the user files folder of current project.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Author
+   :type: Optional[System.String]
+
+   
+   Gets or sets the Author.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[System.Collections.Generic.IList[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[System.Collections.Generic.IEnumerable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreationDate
+   :type: Optional[System.String]
+
+   
+   Gets the CreationDate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreationTime
+   :type: Optional[System.String]
+
+   
+   Gets the CreationTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilePath
+   :type: Optional[System.String]
+
+   
+   Gets the Mechanical Project file path of current Mechanical session.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FirstSaved
+   :type: Optional[System.String]
+
+   
+   Gets the FirstSaved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[System.Collections.Generic.IEnumerable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportedSource
+   :type: Optional[System.String]
+
+   
+   Gets the ImportedSource.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportedVersion
+   :type: Optional[System.String]
+
+   
+   Gets the ImportedVersion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSProjectAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LastSaved
+   :type: Optional[System.String]
+
+   
+   Gets the LastSaved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Model
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Model]
+
+   
+   Gets the Model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Models
+   :type: Optional[System.Collections.Generic.IEnumerable[Ansys.ACT.Automation.Mechanical.Model]]
+
+   
+   Gets the Model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreparedFor
+   :type: Optional[System.String]
+
+   
+   Gets or sets the PreparedFor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProductVersion
+   :type: Optional[System.String]
+
+   
+   Gets the ProductVersion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProjectDirectory
+   :type: Optional[System.String]
+
+   
+   Gets the Project Directory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[System.Collections.Generic.IReadOnlyList[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveProjectAfterSolution
+   :type: Optional[System.Boolean]
+
+   
+   Gets or sets the SaveProjectAfterSolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveProjectBeforeSolution
+   :type: Optional[System.Boolean]
+
+   
+   Gets or sets the SaveProjectBeforeSolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Subject
+   :type: Optional[System.String]
+
+   
+   Gets or sets the Subject.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.UserUnitSystemType]
+
+   
+   Change the Unit System.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserFiles
+   :type: Optional[System.String]
+
+   
+   Gets the path of the user files folder of current project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[System.Collections.Generic.IReadOnlyList[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> System.Void
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: System.String) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Archive(archivePath: System.String, overwrite: System.Boolean, settings: Ansys.ACT.Automation.Mechanical.ArchiveSettings) -> System.Void
+
+   
+   For Mechanical opened independently, without Workbench. Archive a Mechanical project.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> System.Void
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CombineTextFiles(PrimaryFileName: System.String, SecondaryFileName: System.String) -> System.Void
+
+   
+   Combines two text(.txt / .dmig / .inp / .dat) files. The secondary file will be appened to the primary file
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> System.Void
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: System.String) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: System.Boolean, children: System.Collections.Generic.IList[ChildrenType]) -> System.Collections.Generic.IList[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: System.String) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> System.Void
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: New() -> System.Void
+
+   
+   For Mechanical opened independently, without Workbench. Start a new Mechanical project.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Open(filePath: System.String) -> System.Void
+
+   
+   For Mechanical opened independently, without Workbench. Open an existing Mechanical project.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: System.String) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: System.String) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: System.String) -> System.Void
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Save() -> System.Void
+
+   
+   For Mechanical opened independently, without Workbench. Save current Mechanical project.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveAs(filePath: System.String, overwrite: System.Boolean) -> System.Void
+
+   
+   For Mechanical opened independently, without Workbench. Save current Mechanical project to given filePath.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SpecifyMetricTemperatureInCelsius() -> System.Void
+
+   
+   Specify the use of Celsius thermal units for metric unit systems.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SpecifyMetricTemperatureInKelvin() -> System.Void
+
+   
+   Specify the use of Kelvin thermal units for metric unit systems.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Unarchive(archivePath: System.String, projectPath: System.String, overwrite: System.Boolean) -> System.String
+
+.. code-block:: text
+
+   For Mechanical opened independently, without Workbench. Unarchive a Mechanical project and open it.
+   If projectPath is provided, the project will be unarchived to this given projectPath.
+   If projectPath is not provided or is null or empty, the project will be unarchived to a temporary folder.
+   Returns a path to the unarchived project database file.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

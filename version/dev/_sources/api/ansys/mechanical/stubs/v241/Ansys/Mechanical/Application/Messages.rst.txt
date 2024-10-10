@@ -1,0 +1,151 @@
+.. vale off
+
+
+
+:class:`Messages`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Application.Messages
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the collection of Mechanical's messages.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Messages
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Add a new message.
+          * - :py:attr:`~Clear`
+            - Clear the list of the messages.
+          * - :py:attr:`~Contains`
+            - Check if a message is in the current list of messages.
+          * - :py:attr:`~Remove`
+            - Remove a specific message in the list.
+          * - :py:attr:`~ShowErrors`
+            - Shows errors with current project.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Get the number of messages.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[System.Int32]
+
+   
+   Get the number of messages.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(item: Ansys.Mechanical.Application.Message) -> System.Void
+
+   
+   Add a new message.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> System.Void
+
+   
+   Clear the list of the messages.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Contains(item: Ansys.Mechanical.Application.Message) -> System.Boolean
+
+   
+   Check if a message is in the current list of messages.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(item: Ansys.Mechanical.Application.Message) -> System.Boolean
+
+   
+   Remove a specific message in the list.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ShowErrors() -> System.Void
+
+   
+   Shows errors with current project.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

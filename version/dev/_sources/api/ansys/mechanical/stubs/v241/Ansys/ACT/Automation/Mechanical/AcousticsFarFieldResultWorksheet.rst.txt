@@ -1,0 +1,221 @@
+.. vale off
+
+
+
+:class:`AcousticsFarFieldResultWorksheet`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.AcousticsFarFieldResultWorksheet
+
+   Bases: :py:obj:`object`
+
+
+   
+   AcousticsFarFieldResultWorksheet class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AcousticsFarFieldResultWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Adds a Row to the worksheet.
+          * - :py:attr:`~DeleteRow`
+            - Deletes a row from the worksheet at index.
+          * - :py:attr:`~DuplicateRow`
+            - Insert a row from the worksheet at index.
+          * - :py:attr:`~GetCoordinateSystemSelection`
+            - Gets the worksheet CoordinateSystemSelection property at index.
+          * - :py:attr:`~GetXCoordinate`
+            - Gets the worksheet Mic X property at index.
+          * - :py:attr:`~GetYCoordinate`
+            - Gets the worksheet Mic Y property at index.
+          * - :py:attr:`~GetZCoordinate`
+            - Gets the worksheet Mic Z property at index.
+          * - :py:attr:`~InsertRow`
+            - Insert a row from the worksheet at index.
+          * - :py:attr:`~SetCoordinateSystemSelection`
+            - Sets the worksheet CoordinateSystemSelection property at index.
+          * - :py:attr:`~SetXCoordinate`
+            - Sets the worksheet Mic X property at index.
+          * - :py:attr:`~SetYCoordinate`
+            - Sets the worksheet Mic Y property at index.
+          * - :py:attr:`~SetZCoordinate`
+            - Sets the worksheet Mic Z property at index.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Return the number of entries.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[System.Int32]
+
+   
+   Return the number of entries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> System.Int32
+
+   
+   Adds a Row to the worksheet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: System.Int32) -> System.Void
+
+   
+   Deletes a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DuplicateRow(fromIndex: System.Int32, toIndex: System.Int32) -> System.Int32
+
+   
+   Insert a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCoordinateSystemSelection(index: System.Int32) -> System.UInt32
+
+   
+   Gets the worksheet CoordinateSystemSelection property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetXCoordinate(index: System.Int32) -> System.Double
+
+   
+   Gets the worksheet Mic X property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetYCoordinate(index: System.Int32) -> System.Double
+
+   
+   Gets the worksheet Mic Y property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetZCoordinate(index: System.Int32) -> System.Double
+
+   
+   Gets the worksheet Mic Z property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InsertRow(index: System.Int32) -> System.Int32
+
+   
+   Insert a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCoordinateSystemSelection(index: System.Int32, newVal: System.UInt32) -> System.Void
+
+   
+   Sets the worksheet CoordinateSystemSelection property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetXCoordinate(index: System.Int32, newVal: System.Double) -> System.Void
+
+   
+   Sets the worksheet Mic X property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetYCoordinate(index: System.Int32, newVal: System.Double) -> System.Void
+
+   
+   Sets the worksheet Mic Y property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetZCoordinate(index: System.Int32, newVal: System.Double) -> System.Void
+
+   
+   Sets the worksheet Mic Z property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

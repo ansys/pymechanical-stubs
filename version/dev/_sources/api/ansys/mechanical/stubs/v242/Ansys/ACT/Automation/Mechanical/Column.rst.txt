@@ -1,0 +1,494 @@
+.. vale off
+
+
+
+:class:`Column`
+===============
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Column
+
+   Bases: :py:obj:`object`
+
+
+   
+   Column class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Column
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - 
+          * - :py:attr:`~ChangeVariableType`
+            - Contains the business logic for changing the variable type.
+          * - :py:attr:`~Clear`
+            - 
+          * - :py:attr:`~Contains`
+            - 
+          * - :py:attr:`~CopyTo`
+            - 
+          * - :py:attr:`~GetEnumerator`
+            - 
+          * - :py:attr:`~IndexOf`
+            - 
+          * - :py:attr:`~Insert`
+            - 
+          * - :py:attr:`~Remove`
+            - 
+          * - :py:attr:`~RemoveAt`
+            - 
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+          * - :py:attr:`~DataType`
+            - DataType property.
+          * - :py:attr:`~IsFixedSize`
+            - IsFixedSize property.
+          * - :py:attr:`~IsIndependent`
+            - IsIndependent property.
+          * - :py:attr:`~IsReadOnly`
+            - IsReadOnly property.
+          * - :py:attr:`~IsSynchronized`
+            - IsSynchronized property.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~QuantityName`
+            - QuantityName property.
+          * - :py:attr:`~SyncRoot`
+            - SyncRoot property.
+          * - :py:attr:`~Unit`
+            - Unit property.
+          * - :py:attr:`~Values`
+            - Values property.
+          * - :py:attr:`~VariableClassification`
+            - VariableClassification property.
+          * - :py:attr:`~VariableType`
+            - VariableType property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[System.Int32]
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataType
+   :type: Optional[System.Type]
+
+   
+   DataType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsFixedSize
+   :type: Optional[System.Boolean]
+
+   
+   IsFixedSize property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsIndependent
+   :type: Optional[System.Boolean]
+
+   
+   IsIndependent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsReadOnly
+   :type: Optional[System.Boolean]
+
+   
+   IsReadOnly property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsSynchronized
+   :type: Optional[System.Boolean]
+
+   
+   IsSynchronized property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[System.Object]
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[System.String]
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuantityName
+   :type: Optional[System.String]
+
+   
+   QuantityName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SyncRoot
+   :type: Optional[System.Object]
+
+   
+   SyncRoot property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[System.String]
+
+   
+   Unit property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[System.Collections.ICollection]
+
+   
+   Values property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableClassification
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification]
+
+   
+   VariableClassification property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType]
+
+   
+   VariableType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(value: System.Object) -> System.Int32
+   
+
+.. py:method:: ChangeVariableType(newVariableType: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType, newVariableClassification: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification, newUnit: System.String) -> System.Boolean
+
+   
+   Contains the business logic for changing the variable type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> System.Void
+   
+
+.. py:method:: Contains(value: System.Object) -> System.Boolean
+   
+
+.. py:method:: CopyTo(array: System.Array, destinationStartIndex: System.Int32) -> System.Void
+   
+
+.. py:method:: GetEnumerator() -> System.Collections.IEnumerator
+   
+
+.. py:method:: IndexOf(value: System.Object) -> System.Int32
+   
+
+.. py:method:: Insert(index: System.Int32, value: System.Object) -> System.Void
+   
+
+.. py:method:: Remove(value: System.Object) -> System.Void
+   
+
+.. py:method:: RemoveAt(index: System.Int32) -> System.Void
+   
+
+
+
+.. vale on

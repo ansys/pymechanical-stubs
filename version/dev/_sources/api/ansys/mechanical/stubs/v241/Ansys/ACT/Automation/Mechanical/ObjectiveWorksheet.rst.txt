@@ -1,0 +1,381 @@
+.. vale off
+
+
+
+:class:`ObjectiveWorksheet`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.ObjectiveWorksheet
+
+   Bases: :py:obj:`object`
+
+
+   
+   ObjectiveWorksheet class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ObjectiveWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Adds a Row to the worksheet.
+          * - :py:attr:`~DeleteRow`
+            - Deletes a row from the worksheet at index.
+          * - :py:attr:`~GetCriterion`
+            - Gets the worksheet Environment property at index.
+          * - :py:attr:`~GetEnabled`
+            - Gets the worksheet Enabled property at row index
+          * - :py:attr:`~GetEndMode`
+            - Gets the worksheet End Mode property at index.
+          * - :py:attr:`~GetEndStep`
+            - Gets the worksheet End Step property at index.
+          * - :py:attr:`~GetEnvironment`
+            - Gets the worksheet Environment property at index.
+          * - :py:attr:`~GetFormulation`
+            - Gets the worksheet Formulation property at index.
+          * - :py:attr:`~GetMode`
+            - Gets the worksheet Mode property at index.
+          * - :py:attr:`~GetMultipleSets`
+            - Gets the worksheet Multiple Sets property at row index
+          * - :py:attr:`~GetObjectiveType`
+            - Gets the Objective Type property at index.
+          * - :py:attr:`~GetStartMode`
+            - Gets the worksheet Start Mode property at index.
+          * - :py:attr:`~GetStartStep`
+            - Gets the worksheet Start Step property at index.
+          * - :py:attr:`~GetStep`
+            - Gets the worksheet Step property at index.
+          * - :py:attr:`~GetWeight`
+            - Gets the worksheet Weight property at index.
+          * - :py:attr:`~SetCriterion`
+            - Sets the worksheet Environment property at index.
+          * - :py:attr:`~SetEnabled`
+            - Sets the worksheet Enabled property at row index.
+          * - :py:attr:`~SetEndMode`
+            - Sets the worksheet End Mode property at index.
+          * - :py:attr:`~SetEndStep`
+            - Sets the worksheet End Step property at index.
+          * - :py:attr:`~SetEnvironment`
+            - Sets the worksheet Environment property at index.
+          * - :py:attr:`~SetFormulation`
+            - Sets the worksheet Formulation property at index.
+          * - :py:attr:`~SetMode`
+            - Sets the worksheet Mode property at index.
+          * - :py:attr:`~SetMultipleSets`
+            - Sets the worksheet Multiple Sets property at row index.
+          * - :py:attr:`~SetObjectiveType`
+            - Sets the ObjectiveType property at index.
+          * - :py:attr:`~SetStartMode`
+            - Sets the worksheet Start Mode property at index.
+          * - :py:attr:`~SetStartStep`
+            - Sets the worksheet Start Step property at index.
+          * - :py:attr:`~SetStep`
+            - Sets the worksheet Step property at index.
+          * - :py:attr:`~SetWeight`
+            - Sets the worksheet Weight property at index.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Deletes a row from the worksheet at index.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[System.Int32]
+
+   
+   Deletes a row from the worksheet at index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> System.Int32
+
+   
+   Adds a Row to the worksheet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: System.Int32) -> System.Void
+
+   
+   Deletes a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCriterion(index: System.Int32) -> Ansys.ACT.Automation.Mechanical.Criterion
+
+   
+   Gets the worksheet Environment property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnabled(index: System.Int32) -> System.Boolean
+
+   
+   Gets the worksheet Enabled property at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEndMode(index: System.Int32) -> System.Int32
+
+   
+   Gets the worksheet End Mode property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEndStep(index: System.Int32) -> System.Int32
+
+   
+   Gets the worksheet End Step property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnvironment(index: System.Int32) -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Gets the worksheet Environment property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFormulation(index: System.Int32) -> Ansys.Mechanical.DataModel.Enums.TopoObjectiveFormulation
+
+   
+   Gets the worksheet Formulation property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMode(index: System.Int32) -> System.Int32
+
+   
+   Gets the worksheet Mode property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMultipleSets(index: System.Int32) -> System.Boolean
+
+   
+   Gets the worksheet Multiple Sets property at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectiveType(index: System.Int32) -> Ansys.Mechanical.DataModel.Enums.ObjectiveType
+
+   
+   Gets the Objective Type property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStartMode(index: System.Int32) -> System.Int32
+
+   
+   Gets the worksheet Start Mode property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStartStep(index: System.Int32) -> System.Int32
+
+   
+   Gets the worksheet Start Step property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStep(index: System.Int32) -> System.Int32
+
+   
+   Gets the worksheet Step property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeight(index: System.Int32) -> System.Double
+
+   
+   Gets the worksheet Weight property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCriterion(index: System.Int32, newVal: Ansys.ACT.Automation.Mechanical.Criterion) -> System.Void
+
+   
+   Sets the worksheet Environment property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEnabled(index: System.Int32, value: System.Boolean) -> System.Void
+
+   
+   Sets the worksheet Enabled property at row index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEndMode(index: System.Int32, newVal: System.Int32) -> System.Void
+
+   
+   Sets the worksheet End Mode property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEndStep(index: System.Int32, newVal: System.Int32) -> System.Void
+
+   
+   Sets the worksheet End Step property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEnvironment(index: System.Int32, newVal: Ansys.ACT.Automation.Mechanical.Analysis) -> System.Void
+
+   
+   Sets the worksheet Environment property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFormulation(index: System.Int32, value: Ansys.Mechanical.DataModel.Enums.TopoObjectiveFormulation) -> System.Void
+
+   
+   Sets the worksheet Formulation property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMode(index: System.Int32, newVal: System.Int32) -> System.Void
+
+   
+   Sets the worksheet Mode property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMultipleSets(index: System.Int32, value: System.Boolean) -> System.Void
+
+   
+   Sets the worksheet Multiple Sets property at row index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetObjectiveType(index: System.Int32, value: Ansys.Mechanical.DataModel.Enums.ObjectiveType) -> System.Void
+
+   
+   Sets the ObjectiveType property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStartMode(index: System.Int32, newVal: System.Int32) -> System.Void
+
+   
+   Sets the worksheet Start Mode property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStartStep(index: System.Int32, newVal: System.Int32) -> System.Void
+
+   
+   Sets the worksheet Start Step property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStep(index: System.Int32, newVal: System.Int32) -> System.Void
+
+   
+   Sets the worksheet Step property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeight(index: System.Int32, newVal: System.Double) -> System.Void
+
+   
+   Sets the worksheet Weight property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

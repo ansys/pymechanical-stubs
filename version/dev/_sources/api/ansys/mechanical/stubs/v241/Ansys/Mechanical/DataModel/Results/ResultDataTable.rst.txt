@@ -1,0 +1,189 @@
+.. vale off
+
+
+
+:class:`ResultDataTable`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Results.ResultDataTable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Specifies the Result Table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ResultDataTable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ContainsKey`
+            - ContainsKey method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Keys`
+            - Keys property.
+          * - :py:attr:`~Values`
+            - Values property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[System.Int32]
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[System.Collections.IEnumerable]
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Keys
+   :type: Optional[System.Collections.Generic.IEnumerable[System.String]]
+
+   
+   Keys property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[System.Collections.Generic.IEnumerable[System.Collections.IEnumerable]]
+
+   
+   Values property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: ContainsKey(key: System.String) -> System.Boolean
+
+   
+   ContainsKey method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

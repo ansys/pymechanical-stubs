@@ -1,0 +1,83 @@
+.. vale off
+
+
+
+:class:`EXDSaveResultsOnType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDSaveResultsOnType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDSaveResultsOnType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EquallySpaced`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~TimeSteps`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EquallySpaced
+   :value: 2
+
+
+.. py:attribute:: Time
+   :value: 1
+
+
+.. py:attribute:: TimeSteps
+   :value: 0
+
+
+
+
+
+
+.. vale on

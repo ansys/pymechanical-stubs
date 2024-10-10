@@ -1,0 +1,261 @@
+.. vale off
+
+
+
+:class:`BatchConnectionsWorksheet`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.BatchConnectionsWorksheet
+
+   Bases: :py:obj:`object`
+
+
+   
+   BatchConnectionsWorksheet class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BatchConnectionsWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Add a row to the MeshControlWorksheet
+          * - :py:attr:`~ClearGenerateMesh`
+            - Clear Mesh
+          * - :py:attr:`~DeleteAllRows`
+            - Delete All Rows
+          * - :py:attr:`~DeleteRow`
+            - Delete a row from the MeshControlWorksheet
+          * - :py:attr:`~GenerateAtRow`
+            - Generate Mesh At Row
+          * - :py:attr:`~GenerateMesh`
+            - Geneate Mesh
+          * - :py:attr:`~GetActiveState`
+            - Gets the Active State property at row index
+          * - :py:attr:`~GetConnectionOption`
+            - Gets the current set cconnection option at the row index
+          * - :py:attr:`~GetConnectionTolerances`
+            - Gets the list of connection tolerances at the row index
+          * - :py:attr:`~GetNamedSelection`
+            - Gets the NamedSelection at row index
+          * - :py:attr:`~GetNamedSelectionId`
+            - Gets the ID of the NamedSelection at row index
+          * - :py:attr:`~SetActiveState`
+            - Sets the Active State property at row index
+          * - :py:attr:`~SetConnectionOption`
+            - Sets the connection option at row index
+          * - :py:attr:`~SetConnectionTolerances`
+            - Sets the connection tolerance list at row index
+          * - :py:attr:`~SetNamedSelection`
+            - Sets the NamedSelection at row index
+          * - :py:attr:`~SetNamedSelectionId`
+            - Sets the NamedSelection by ID at row index
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Gets the number of entries
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[System.Int32]
+
+   
+   Gets the number of entries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> System.Int32
+
+   
+   Add a row to the MeshControlWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGenerateMesh() -> System.Void
+
+   
+   Clear Mesh
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllRows() -> System.Void
+
+   
+   Delete All Rows
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: System.Int32) -> System.Void
+
+   
+   Delete a row from the MeshControlWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateAtRow(index: System.Int32) -> System.Void
+
+   
+   Generate Mesh At Row
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateMesh() -> System.Void
+
+   
+   Geneate Mesh
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetActiveState(index: System.Int32) -> System.Boolean
+
+   
+   Gets the Active State property at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetConnectionOption(index: System.Int32) -> System.Int32
+
+   
+   Gets the current set cconnection option at the row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetConnectionTolerances(index: System.Int32) -> System.String
+
+   
+   Gets the list of connection tolerances at the row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNamedSelection(index: System.Int32) -> Ansys.ACT.Automation.Mechanical.NamedSelection
+
+   
+   Gets the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNamedSelectionId(index: System.Int32) -> System.UInt32
+
+   
+   Gets the ID of the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetActiveState(index: System.Int32, value: System.Boolean) -> System.Void
+
+   
+   Sets the Active State property at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetConnectionOption(index: System.Int32, value: System.Int32) -> System.Void
+
+   
+   Sets the connection option at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetConnectionTolerances(index: System.Int32, value: System.String) -> System.Void
+
+   
+   Sets the connection tolerance list at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetNamedSelection(index: System.Int32, value: Ansys.ACT.Automation.Mechanical.NamedSelection) -> System.Void
+
+   
+   Sets the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetNamedSelectionId(index: System.Int32, value: System.UInt32) -> System.Void
+
+   
+   Sets the NamedSelection by ID at row index
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

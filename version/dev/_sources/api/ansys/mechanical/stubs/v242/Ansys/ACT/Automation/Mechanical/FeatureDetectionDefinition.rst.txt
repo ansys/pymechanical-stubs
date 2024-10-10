@@ -1,0 +1,345 @@
+.. vale off
+
+
+
+:class:`FeatureDetectionDefinition`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FeatureDetectionDefinition
+
+   Bases: :py:obj:`object`
+
+
+   
+   FeatureDetectionDefinition class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FeatureDetectionDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddFeatureDetection`
+            - Add a FeatureDetection to the FeatureDetection Definition
+          * - :py:attr:`~DeleteFeatureDetection`
+            - Delete a FeatureDetection from the Feature Detection Definition
+          * - :py:attr:`~ExecuteDetectFeatures`
+            - ExecuteDetectFeatures method.
+          * - :py:attr:`~Export`
+            - Export Feature Detection Definition data to Comma Separated Value (CSV) files
+          * - :py:attr:`~GetFeatureCriteriaAngle`
+            - Gets the Angle property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~GetFeatureCriteriaMaxBound`
+            - Gets the Max-Bound property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~GetFeatureCriteriaMinBound`
+            - Gets the Min Bound property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~GetFeatureCriteriaValue`
+            - Gets the Value property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~GetFeatureDetectionCriteria`
+            - Gets the Feature Detection Criteria property at given index
+          * - :py:attr:`~GetFeatureDetectionName`
+            - Gets the FeatureDetection Name property at given index
+          * - :py:attr:`~GetFeatureDetectionOperator`
+            - Gets the Feature Detection Operator property at given index
+          * - :py:attr:`~GetFeatureDetectionTreatment`
+            - Gets the Feature Detection Criteria property at given index
+          * - :py:attr:`~GetFeatureDetectionType`
+            - Gets the Feature Detection Type property at given index
+          * - :py:attr:`~Import`
+            - Import Feature Detection Definition data from Comma Separated Value (CSV) files
+          * - :py:attr:`~SetFeatureCriteriaAngle`
+            - Sets  the Angle property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~SetFeatureCriteriaMaxBound`
+            - Sets  the Max Bound property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~SetFeatureCriteriaMinBound`
+            - Sets  the Min Bound property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~SetFeatureCriteriaValue`
+            - Sets  the Value property at given FeatureDetection index and BaseCase index
+          * - :py:attr:`~SetFeatureDetectionCriteria`
+            - Sets the Feature Detection Criteria property at given index
+          * - :py:attr:`~SetFeatureDetectionName`
+            - Sets the FeatureDetection Name property at given index
+          * - :py:attr:`~SetFeatureDetectionOperator`
+            - Sets the Feature Detection Operator property at given index
+          * - :py:attr:`~SetFeatureDetectionOptions`
+            - Set Feature Detection Solid / Sheet / Beta settings
+          * - :py:attr:`~SetFeatureDetectionTreatment`
+            - Sets the Feature Detection Criteria property at given index
+          * - :py:attr:`~SetFeatureDetectionType`
+            - Sets the Feature Detection Type property at given index
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FeatureDetectionCount`
+            - Gets the number of Feature Detections
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: FeatureDetectionCount
+   :type: Optional[System.UInt32]
+
+   
+   Gets the number of Feature Detections
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddFeatureDetection(name: System.String, type: System.Int32, criteria: System.Int32, fdOperator: System.Int32, critValue: System.Double, angleValue: System.Double, minBound: System.Double, maxBound: System.Double, meshTreatment: System.Int32) -> System.Void
+
+   
+   Add a FeatureDetection to the FeatureDetection Definition
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteFeatureDetection(index: System.UInt32) -> System.Void
+
+   
+   Delete a FeatureDetection from the Feature Detection Definition
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExecuteDetectFeatures() -> System.Void
+
+   
+   ExecuteDetectFeatures method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Export(filepath: System.String) -> System.Void
+
+   
+   Export Feature Detection Definition data to Comma Separated Value (CSV) files
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureCriteriaAngle(index: System.UInt32) -> System.Double
+
+   
+   Gets the Angle property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureCriteriaMaxBound(index: System.UInt32) -> System.Double
+
+   
+   Gets the Max-Bound property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureCriteriaMinBound(index: System.UInt32) -> System.Double
+
+   
+   Gets the Min Bound property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureCriteriaValue(index: System.UInt32) -> System.Double
+
+   
+   Gets the Value property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureDetectionCriteria(index: System.UInt32) -> Ansys.Mechanical.DataModel.Enums.FeatureDetectionCriteria
+
+   
+   Gets the Feature Detection Criteria property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureDetectionName(index: System.UInt32) -> System.String
+
+   
+   Gets the FeatureDetection Name property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureDetectionOperator(index: System.UInt32) -> Ansys.Mechanical.DataModel.Enums.FeatureDetectionOperator
+
+   
+   Gets the Feature Detection Operator property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureDetectionTreatment(index: System.UInt32) -> Ansys.Mechanical.DataModel.Enums.FeatureDetectionTreatment
+
+   
+   Gets the Feature Detection Criteria property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFeatureDetectionType(index: System.UInt32) -> Ansys.Mechanical.DataModel.Enums.FeatureDetectionType
+
+   
+   Gets the Feature Detection Type property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Import(filepath: System.String) -> System.Void
+
+   
+   Import Feature Detection Definition data from Comma Separated Value (CSV) files
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureCriteriaAngle(index: System.UInt32, value: System.Double) -> System.Void
+
+   
+   Sets  the Angle property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureCriteriaMaxBound(index: System.UInt32, value: System.Double) -> System.Void
+
+   
+   Sets  the Max Bound property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureCriteriaMinBound(index: System.UInt32, value: System.Double) -> System.Void
+
+   
+   Sets  the Min Bound property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureCriteriaValue(index: System.UInt32, value: System.Double) -> System.Void
+
+   
+   Sets  the Value property at given FeatureDetection index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureDetectionCriteria(index: System.UInt32, value: Ansys.Mechanical.DataModel.Enums.FeatureDetectionCriteria) -> System.Void
+
+   
+   Sets the Feature Detection Criteria property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureDetectionName(index: System.UInt32, name: System.String) -> System.Void
+
+   
+   Sets the FeatureDetection Name property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureDetectionOperator(index: System.UInt32, value: Ansys.Mechanical.DataModel.Enums.FeatureDetectionOperator) -> System.Void
+
+   
+   Sets the Feature Detection Operator property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureDetectionOptions(isSolid: System.Boolean, isSheet: System.Boolean, isBeta: System.Boolean) -> System.Void
+
+.. code-block:: text
+
+   Set Feature Detection Solid / Sheet / Beta settings
+   isSolid>
+   isSheet>
+   isBeta>
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureDetectionTreatment(index: System.UInt32, value: Ansys.Mechanical.DataModel.Enums.FeatureDetectionTreatment) -> System.Void
+
+   
+   Sets the Feature Detection Criteria property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFeatureDetectionType(index: System.UInt32, value: Ansys.Mechanical.DataModel.Enums.FeatureDetectionType) -> System.Void
+
+   
+   Sets the Feature Detection Type property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

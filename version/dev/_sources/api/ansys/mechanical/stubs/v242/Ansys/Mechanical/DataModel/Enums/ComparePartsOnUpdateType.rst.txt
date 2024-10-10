@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ComparePartsOnUpdateType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ComparePartsOnUpdateType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ComparePartsOnUpdateType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ComparePartsOnUpdateType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Associatively`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~NonAssociatively`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Associatively
+   :value: 1
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: NonAssociatively
+   :value: 2
+
+
+
+
+
+
+.. vale on
