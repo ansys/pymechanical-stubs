@@ -32,6 +32,46 @@ import xml.etree.ElementTree as ElementTree
 import clr
 import System
 
+C_TO_PYTHON = {
+    "System.Boolean": "bool",
+    "System.Collections.Generic.IDictionary": "dict",
+    "System.Collections.Generic.IEnumerable": "typing.Iterable",
+    "System.Collections.Generic.IEnumerator": "typing.Iterator",
+    "System.Collections.Generic.IList": "list",
+    "System.Collections.Generic.IReadOnlyDictionary": "dict",
+    "System.Collections.Generic.IReadOnlyList": "tuple",
+    "System.Collections.Generic.KeyValuePair": "dict",
+    "System.Collections.Generic.List": "list",
+    "System.Collections.ICollection": "typing.Collection",
+    "System.Collections.IEnumerable": "typing.Iterable",
+    "System.Collections.IEnumerator": "typing.Iterator",
+    "System.DateTime": "typing.Any",
+    "System.Double": "float",
+    # "System.IAsyncResult": "",
+    # "System.IDisposable": "",
+    "System.Int32": "int",
+    "System.Object": "typing.Any",
+    "System.String": "str",
+    "System.Tuple": "tuple",
+    "System.Type": "type",
+    "System.UInt32": "int",
+    "System.Void": "None",
+}
+
+
+def c_types_to_python(type_str):
+    """Replace C# types with Python types.
+
+    Parameters
+    ----------
+    type_str: str
+        String containing C# type.
+    """
+    for key, value in C_TO_PYTHON.items():
+        type_str = type_str.replace(key, value)
+
+    return type_str
+
 
 def is_namespace(something):
     """Check if an object is a namespace.
@@ -195,7 +235,7 @@ def write_docstring(
     if doc_member is None:
         return
     summary = doc_member.summary
-    print(summary)
+    # print(summary)
     if summary is None:
         return
     indent = "    " * indent_level
@@ -220,7 +260,7 @@ def write_enum_field(buffer: typing.TextIO, field: typing.Any, indent_level: int
         ``1`` to write one indent
     """
     name = field.Name
-    logging.debug(f"        writing enum value {name}")
+    # logging.debug(f"        writing enum value {name}")
     int_value = field.GetRawConstantValue()
     str_value = ENUM_VALUE_REPLACEMENTS.get(name, name)
     indent = "    " * indent_level
@@ -249,7 +289,7 @@ def write_enum(
     type_filter: typing.Callable = None
         Whether or not the type is published.
     """
-    logging.debug(f"    writing enum {enum_type.Name}")
+    # logging.debug(f"    writing enum {enum_type.Name}")
     fields = [
         field
         for field in enum_type.GetFields()
@@ -425,14 +465,18 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     indent_level: int
         ``1`` to write one indent
     """
-    logging.debug(f"        writing property {prop.name}")
+    # logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
     if prop.static:
         # this only works for autocomplete for python 3.9+
         assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
+
+        prop_type = fix_str(prop.type)
+        prop_type = c_types_to_python(prop_type)
+
+        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
         indent = "    " * (1 + indent_level)
         if prop.doc is None:
             write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
@@ -463,9 +507,11 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         else:
             assert prop.getter
             buffer.write(f"{indent}@property\n")
-            buffer.write(
-                f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type)}]:\n"
-            )
+
+            prop_type = fix_str(prop.type)
+            prop_type = c_types_to_python(prop_type)
+
+            buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
@@ -540,7 +586,10 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
         first_arg = "self"
     args = [first_arg] + [f'{arg.name}: "{arg.type}"' for arg in method.args]
     args = f"({', '.join(args)})"
-    buffer.write(f"{indent}def {method.name}{args} -> {method.return_type}:\n")
+
+    method_type = c_types_to_python(method.return_type)
+
+    buffer.write(f"{indent}def {method.name}{args} -> {method_type}:\n")
     indent = "    " * (1 + indent_level)
     if method.doc is None:
         write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
@@ -654,7 +703,7 @@ def write_class(
     type_filter: typing.Callable = None
         Whether or not the type is published
     """
-    logging.debug(f"    writing class {class_type.Name}")
+    # logging.debug(f"    writing class {class_type.Name}")
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
     if class_doc is None:
@@ -695,22 +744,22 @@ def write_module(
     outdir = pathlib.Path(outdir)
     for token in namespace.split("."):
         outdir = outdir / token
-    logging.info(f"Writing to {str(outdir.resolve())}")
+    # logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
     class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
-    logging.info(f"Writing to {str(outdir.resolve())}")
+    # logging.info(f"Writing to {str(outdir.resolve())}")
     with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
         f.write(f'"""{pathlib.PurePath(outdir).name} subpackage."""\n')
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")
         f.write("import typing\n\n")
-        logging.info(f"    {len(enum_types)} enum types")
+        # logging.info(f"    {len(enum_types)} enum types")
         for enum_type in enum_types:
             write_enum(f, enum_type, namespace, doc, type_filter)
         for class_type in class_types:
             write_class(f, class_type, namespace, doc, type_filter)
-    logging.info(f"Done processing {namespace}")
+    # logging.info(f"Done processing {namespace}")
 
 
 def load_doc(xml_path: str) -> ElementTree:
@@ -748,11 +797,11 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
     directory = System.IO.Path.GetDirectoryName(path)
     xml_path = System.IO.Path.Combine(directory, assembly.GetName().Name + ".xml")
     if System.IO.File.Exists(xml_path):
-        logging.info(f"Loading xml doc from {xml_path}")
+        # logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
     else:
-        logging.warning("XML Doc file does not exist, skipping")
+        # logging.warning("XML Doc file does not exist, skipping")
         return None
 
 
@@ -773,7 +822,7 @@ def get_namespaces(
     typing.Dict
         A dictionary of published namespaces within the assembly
     """
-    logging.info(f"    Getting types from the {pathlib.PurePath(assembly.CodeBase).name} assembly")
+    # logging.info(f"    Getting types from the {pathlib.PurePath(assembly.CodeBase).name} assembly")
     namespaces = crawl_loaded_references(assembly, type_filter)
     return namespaces
 
@@ -790,18 +839,18 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     type_filter: typing.Callable
         Whether or not a type is published
     """
-    logging.info(f"Loading assembly {assembly_name}")
+    # logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
-    if type_filter is not None:
-        logging.info(f"   Using a type_filter: {str(type_filter)}")
+    # if type_filter is not None:
+    # logging.info(f"   Using a type_filter: {str(type_filter)}")
     # Type filter is what gets messed up
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
     doc = get_doc(assembly)
-    logging.info(f"    {len(namespaces.items())} namespaces")
+    # logging.info(f"    {len(namespaces.items())} namespaces")
     for namespace, mod_types in namespaces.items():
         if "DesignModeler" not in namespace:
-            logging.info(f"Processing {namespace}")
-            logging.info(f"   {len(namespaces.items())} namespaces")
+            # logging.info(f"Processing {namespace}")
+            # logging.info(f"   {len(namespaces.items())} namespaces")
             write_module(namespace, mod_types, doc, outdir, type_filter)
-            logging.info(f"Done processing {namespace}")
+            # logging.info(f"Done processing {namespace}")
