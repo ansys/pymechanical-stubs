@@ -34,6 +34,8 @@ import clr
 import System
 
 C_TO_PYTHON = {
+    "IronPython.Runtime.PythonTuple": "tuple",
+    "System.Array": "list",
     "System.Boolean": "bool",
     "System.Collections.Generic.IDictionary": "dict",
     "System.Collections.Generic.IEnumerable": "typing.Iterable",
@@ -48,9 +50,6 @@ C_TO_PYTHON = {
     "System.Collections.IEnumerator": "typing.Iterator",
     "System.DateTime": "typing.Any",
     "System.Double": "float",
-    # "System.IAsyncResult": "",
-    # "System.IDisposable": "",
-    # "System.Func": "",
     "System.Int32": "int",
     "System.Object": "typing.Any",
     "System.String": "str",
@@ -59,6 +58,13 @@ C_TO_PYTHON = {
     "System.UInt32": "int",
     "System.Void": "None",
 }
+
+EXCLUDED_TYPES_LIST = [
+    "System.IAsyncResult",
+    "System.IDisposable",
+    "System.Func",
+    "System.Delegate",
+]
 
 
 def c_types_to_python(type_str):
@@ -69,6 +75,9 @@ def c_types_to_python(type_str):
     type_str: str
         String containing C# type.
     """
+    # if ("Quantity" and "[") in type_str:
+    #     print(type_str)
+
     for key, value in C_TO_PYTHON.items():
         # Replace C# type with Python type
         type_str = type_str.replace(key, value)
@@ -82,6 +91,18 @@ def c_types_to_python(type_str):
     matches = ansys_regex.findall(type_str)
     for match in matches:
         type_str = re.sub(ansys_regex, f'"{match}"', type_str)
+
+    # If System.x doesn't have a replacement, wrap quotes around it
+    if "System." in type_str:
+        for excluded_type in EXCLUDED_TYPES_LIST:
+            if excluded_type in type_str:
+                # print(type_str)
+                type_str = type_str.replace('"', "")
+                type_str = f'"{type_str}"'
+                break
+
+    # if ("Quantity" and "[") in type_str:
+    #     print(type_str+"\n")
 
     return type_str
 
@@ -248,7 +269,6 @@ def write_docstring(
     if doc_member is None:
         return
     summary = doc_member.summary
-    # print(summary)
     if summary is None:
         return
     indent = "    " * indent_level
