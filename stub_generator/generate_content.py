@@ -26,6 +26,7 @@ from dataclasses import dataclass
 import json
 import logging
 import pathlib
+import re
 import typing
 import xml.etree.ElementTree as ElementTree
 
@@ -49,6 +50,7 @@ C_TO_PYTHON = {
     "System.Double": "float",
     # "System.IAsyncResult": "",
     # "System.IDisposable": "",
+    # "System.Func": "",
     "System.Int32": "int",
     "System.Object": "typing.Any",
     "System.String": "str",
@@ -68,7 +70,18 @@ def c_types_to_python(type_str):
         String containing C# type.
     """
     for key, value in C_TO_PYTHON.items():
+        # Replace C# type with Python type
         type_str = type_str.replace(key, value)
+
+        if '"' in type_str:
+            # Remove double quotes from type
+            type_str = type_str.replace('"', "")
+
+    # Wrap strings that contain Ansys or ChildrenType in quotes
+    ansys_regex = re.compile("(Ansys[^],]*|ChildrenType)")
+    matches = ansys_regex.findall(type_str)
+    for match in matches:
+        type_str = re.sub(ansys_regex, f'"{match}"', type_str)
 
     return type_str
 
@@ -467,15 +480,15 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     """
     # logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
+
+    prop_type = fix_str(prop.type)
+    prop_type = c_types_to_python(prop_type)
+
     if prop.static:
         # this only works for autocomplete for python 3.9+
         assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-
-        prop_type = fix_str(prop.type)
-        prop_type = c_types_to_python(prop_type)
-
         buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
         indent = "    " * (1 + indent_level)
         if prop.doc is None:
@@ -493,7 +506,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         if prop.setter and not prop.getter:
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type)}]) -> None:\n"
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop_type}]) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
@@ -507,10 +520,6 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         else:
             assert prop.getter
             buffer.write(f"{indent}@property\n")
-
-            prop_type = fix_str(prop.type)
-            prop_type = c_types_to_python(prop_type)
-
             buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
@@ -584,9 +593,8 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
         first_arg = "cls"
     else:
         first_arg = "self"
-    args = [first_arg] + [f'{arg.name}: "{arg.type}"' for arg in method.args]
+    args = [first_arg] + [f"{arg.name}: {c_types_to_python(arg.type)}" for arg in method.args]
     args = f"({', '.join(args)})"
-
     method_type = c_types_to_python(method.return_type)
 
     buffer.write(f"{indent}def {method.name}{args} -> {method_type}:\n")
