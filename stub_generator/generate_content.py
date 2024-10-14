@@ -75,9 +75,6 @@ def c_types_to_python(type_str):
     type_str: str
         String containing C# type.
     """
-    # if ("Quantity" and "[") in type_str:
-    #     print(type_str)
-
     for key, value in C_TO_PYTHON.items():
         # Replace C# type with Python type
         type_str = type_str.replace(key, value)
@@ -88,7 +85,8 @@ def c_types_to_python(type_str):
 
     # Wrap strings that contain Ansys or ChildrenType in quotes
     ansys_regex = re.compile("(Ansys[^],]*|ChildrenType)")
-    matches = ansys_regex.findall(type_str)
+    matches = set(ansys_regex.findall(type_str))
+
     for match in matches:
         type_str = re.sub(ansys_regex, f'"{match}"', type_str)
 
@@ -100,9 +98,6 @@ def c_types_to_python(type_str):
                 type_str = type_str.replace('"', "")
                 type_str = f'"{type_str}"'
                 break
-
-    # if ("Quantity" and "[") in type_str:
-    #     print(type_str+"\n")
 
     return type_str
 
