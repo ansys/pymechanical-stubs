@@ -107,8 +107,8 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          cd ../
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py > results.txt
+          find . -type d -name src
+          python stub_generator/create_files.py > results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
