@@ -199,7 +199,7 @@ def main():
 
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent
-    outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs" / version
+    outdir = base_dir / version
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
