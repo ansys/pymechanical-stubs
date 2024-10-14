@@ -146,7 +146,9 @@ def make(base_dir, outdir, assemblies, str_version):
             if "__pycache__" not in str(init_path):
                 module_list = []
                 original_str = f"{pathlib.Path(base_dir)}{os.sep}"
-                import_str = full_path.replace(original_str, "ansys.mechanical.stubs.").replace(os.sep, ".")
+                import_str = full_path.replace(original_str, "ansys.mechanical.stubs.").replace(
+                    os.sep, "."
+                )
                 [
                     module_list.append(pathlib.Path(dir.path).name)
                     for dir in os.scandir(pathlib.Path(init_path).parent)
