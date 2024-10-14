@@ -62,6 +62,9 @@ Documentation = "https://scripting.mechanical.docs.pyansys.com"
 [tool.flit.module]
 name = "ansys.mechanical.stubs"
 
+[tool.flit.sdist]
+exclude = ["src/ansys/mechanical/stubs/stub_generator/*"]
+
 [tool.ruff]
 line-length = 100
 
