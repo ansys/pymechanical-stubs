@@ -48,6 +48,10 @@ doc = [
     "sphinx-markdown-builder==0.6.6",
     "sphinxnotes-strike==1.2.1",
 ]
+tests = [
+    "pytest==8.3.3",
+    "pytest-cov==5.0.0",
+]
 
 [project.urls]
 Source = "https://github.com/ansys/mechanical-stubs/"
