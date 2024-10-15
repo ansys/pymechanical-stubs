@@ -869,7 +869,7 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
     doc = get_doc(assembly)
-    # logging.info(f"    {len(namespaces.items())} namespaces")
+    logging.info(f"    {len(namespaces.items())} namespaces")
     for namespace, mod_types in namespaces.items():
         if "DesignModeler" not in namespace:
             logging.info(f"Processing {namespace}")

@@ -30,8 +30,8 @@ help:
 
 # pdf: .install-deps
 pdf:
-	mkdir -p doc/_build/latex
-	touch doc/_build/latex/doc.pdf
+	mkdir -p _build/latex
+	touch _build/latex/doc.pdf
 
 
 # Customized clean due to examples gallery

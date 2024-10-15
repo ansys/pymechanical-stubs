@@ -301,7 +301,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: documentation-pdf
-        path: doc/_build/latex/*.pdf
+        path: doc/_build/latex/doc.pdf
         retention-days: 7
 
   build-library:
