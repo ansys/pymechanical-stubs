@@ -863,8 +863,8 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     """
     logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
-    # if type_filter is not None:
-    logging.info(f"   Using a type_filter: {str(type_filter)}")
+    if type_filter is not None:
+        logging.info(f"   Using a type_filter: {str(type_filter)}")
     # Type filter is what gets messed up
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
