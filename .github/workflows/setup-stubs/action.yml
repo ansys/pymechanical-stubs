@@ -75,8 +75,6 @@ runs:
         __version__ = importlib_metadata.version("ansys-mechanical-stubs")
         """Patch version for the ansys-mechanical-stubs package."""\n\n''')
 
-            f.write("from .stub_generator import *\n")
-
             for folder in subfolders:
                 f.write(f"from .{folder} import *\n")
                 f.write('"""Mechanical installation version."""\n')

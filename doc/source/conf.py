@@ -65,7 +65,7 @@ suppress_warnings = [
 show_warning_types = True
 exclude_patterns = [
     "api/ansys/mechanical/stubs/index.rst",
-    "api/ansys/mechanical/stubs/stub_generator/*",
+    "api/ansys/mechanical/stubs/stub_generator/index.rst",
 ]  # Intentionally excluded from toctree
 
 
