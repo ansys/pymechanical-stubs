@@ -287,7 +287,7 @@ def write_enum_field(buffer: typing.TextIO, field: typing.Any, indent_level: int
         ``1`` to write one indent
     """
     name = field.Name
-    # logging.debug(f"        writing enum value {name}")
+    logging.debug(f"        writing enum value {name}")
     int_value = field.GetRawConstantValue()
     str_value = ENUM_VALUE_REPLACEMENTS.get(name, name)
     indent = "    " * indent_level
@@ -316,7 +316,7 @@ def write_enum(
     type_filter: typing.Callable = None
         Whether or not the type is published.
     """
-    # logging.debug(f"    writing enum {enum_type.Name}")
+    logging.debug(f"    writing enum {enum_type.Name}")
     fields = [
         field
         for field in enum_type.GetFields()
@@ -492,7 +492,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     indent_level: int
         ``1`` to write one indent
     """
-    # logging.debug(f"        writing property {prop.name}")
+    logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
 
     prop_type = fix_str(prop.type)
@@ -725,7 +725,7 @@ def write_class(
     type_filter: typing.Callable = None
         Whether or not the type is published
     """
-    # logging.debug(f"    writing class {class_type.Name}")
+    logging.debug(f"    writing class {class_type.Name}")
     buffer.write(f"class {class_type.Name}(object):\n")
     class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
     if class_doc is None:
@@ -766,22 +766,22 @@ def write_module(
     outdir = pathlib.Path(outdir)
     for token in namespace.split("."):
         outdir = outdir / token
-    # logging.info(f"Writing to {str(outdir.resolve())}")
+    logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
     class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
-    # logging.info(f"Writing to {str(outdir.resolve())}")
+    logging.info(f"Writing to {str(outdir.resolve())}")
     with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
         f.write(f'"""{pathlib.PurePath(outdir).name} subpackage."""\n')
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")
         f.write("import typing\n\n")
-        # logging.info(f"    {len(enum_types)} enum types")
+        logging.info(f"    {len(enum_types)} enum types")
         for enum_type in enum_types:
             write_enum(f, enum_type, namespace, doc, type_filter)
         for class_type in class_types:
             write_class(f, class_type, namespace, doc, type_filter)
-    # logging.info(f"Done processing {namespace}")
+    logging.info(f"Done processing {namespace}")
 
 
 def load_doc(xml_path: str) -> ElementTree:
@@ -819,11 +819,11 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
     directory = System.IO.Path.GetDirectoryName(path)
     xml_path = System.IO.Path.Combine(directory, assembly.GetName().Name + ".xml")
     if System.IO.File.Exists(xml_path):
-        # logging.info(f"Loading xml doc from {xml_path}")
+        logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
     else:
-        # logging.warning("XML Doc file does not exist, skipping")
+        logging.warning("XML Doc file does not exist, skipping")
         return None
 
 
@@ -844,7 +844,7 @@ def get_namespaces(
     typing.Dict
         A dictionary of published namespaces within the assembly
     """
-    # logging.info(f"    Getting types from the {pathlib.PurePath(assembly.CodeBase).name} assembly")
+    logging.info(f"    Getting types from the {pathlib.PurePath(assembly.CodeBase).name} assembly")
     namespaces = crawl_loaded_references(assembly, type_filter)
     return namespaces
 
@@ -861,10 +861,10 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     type_filter: typing.Callable
         Whether or not a type is published
     """
-    # logging.info(f"Loading assembly {assembly_name}")
+    logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
     # if type_filter is not None:
-    # logging.info(f"   Using a type_filter: {str(type_filter)}")
+    logging.info(f"   Using a type_filter: {str(type_filter)}")
     # Type filter is what gets messed up
     namespaces = get_namespaces(assembly, type_filter)
     dump_types(namespaces)
@@ -872,7 +872,7 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     # logging.info(f"    {len(namespaces.items())} namespaces")
     for namespace, mod_types in namespaces.items():
         if "DesignModeler" not in namespace:
-            # logging.info(f"Processing {namespace}")
-            # logging.info(f"   {len(namespaces.items())} namespaces")
+            logging.info(f"Processing {namespace}")
+            logging.info(f"   {len(namespaces.items())} namespaces")
             write_module(namespace, mod_types, doc, outdir, type_filter)
-            # logging.info(f"Done processing {namespace}")
+            logging.info(f"Done processing {namespace}")
