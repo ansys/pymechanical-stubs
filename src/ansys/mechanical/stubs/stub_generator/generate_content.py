@@ -772,7 +772,7 @@ def write_module(
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
     with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
-        f.write(f'"""{pathlib.PurePath(outdir).name} subpackage."""\n')
+        f.write(f'"""{pathlib.PurePath(outdir).name} module."""\n')
         if len(enum_types) > 0:
             f.write("from enum import Enum\n")
         f.write("import typing\n\n")

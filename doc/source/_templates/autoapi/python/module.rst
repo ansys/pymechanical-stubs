@@ -133,7 +133,7 @@ Summary
 .. tab-set::
 
 {% if visible_subpackages %}
-    {{ tab_item_from_objects_list(visible_subpackages, "Subpackages") }}
+    {{ tab_item_from_objects_list(visible_subpackages, "Modules") }}
 {% endif %}
 
 {% if visible_submodules %}

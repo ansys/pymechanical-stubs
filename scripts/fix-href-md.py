@@ -31,7 +31,7 @@ DEFAULT_API_FOLDER = "doc/_build/markdown/api"
 
 
 def fix_hrefs(api_dir):
-    """Update the markdown file with local href paths if necessary."""
+    """Update the markdown file with local href paths and remove ansys.mechanical.stubs from class name."""
     for root, dirs, files in os.walk(api_dir, topdown=True):
         for file in files:
             # If the html file is not index.html
@@ -39,8 +39,13 @@ def fix_hrefs(api_dir):
                 # The full path to the html file
                 full_file_path = Path(root) / Path(file)
 
+                # | [`DataType`](../../../../v241/Ansys/Mechanical/Interfaces/IReadOnlyDataSeries.md#IReadOnlyDataSeries.DataType)
                 link_regex = r"\| \[\`.*\`\]\(\.\.\/.*\)"
+                # #### *class* ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings
+                class_regex = r"\#\#\#\# \*class\* ansys\.mechanical\.stubs\.v[0-9][0-9][0-9]\."
+
                 for line in fileinput.input(full_file_path, inplace=True, encoding="utf-8"):
+                    # Make the href local
                     if re.match(link_regex, line):
                         open_paren = line.index("(")
                         pound = line.index("#")
@@ -48,6 +53,9 @@ def fix_hrefs(api_dir):
                         line = (
                             line[0 : open_paren + 1] + line[pound:close_paren] + line[close_paren:]
                         )
+                    # Remove ansys.mechanical.stubs.v### from class name
+                    if re.match(class_regex, line):
+                        line = re.sub(class_regex, "#### *class* ", line)
                     print(line, end="")
 
 
