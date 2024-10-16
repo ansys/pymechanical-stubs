@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CacheResultsInMemory`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.CacheResultsInMemory
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CacheResultsInMemory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CacheResultsInMemory
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AsRequested`
+            - 
+          * - :py:attr:`~DuringSolution`
+            - 
+          * - :py:attr:`~Never`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AsRequested
+   :value: 2
+
+
+.. py:attribute:: DuringSolution
+   :value: 1
+
+
+.. py:attribute:: Never
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`StitchSurfacesOnImport`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.StitchSurfacesOnImport
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Used to specify if and how to join surfaces when imported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StitchSurfacesOnImport
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Program`
+            - 
+          * - :py:attr:`~User`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Program
+   :value: 1
+
+
+.. py:attribute:: User
+   :value: 2
+
+
+
+
+
+
+.. vale on

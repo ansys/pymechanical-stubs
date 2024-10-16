@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ShellThicknessUpdate`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ShellThicknessUpdate
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ShellThicknessUpdate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShellThicknessUpdate
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Elemental`
+            - 
+          * - :py:attr:`~Nodal`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Elemental
+   :value: 1
+
+
+.. py:attribute:: Nodal
+   :value: 0
+
+
+
+
+
+
+.. vale on

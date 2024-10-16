@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`DampingDefineBy`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.DampingDefineBy
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DampingDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DampingDefineBy
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConstantStructuralDampingCoefficient`
+            - 
+          * - :py:attr:`~DampingRatio`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ConstantStructuralDampingCoefficient
+   :value: 1
+
+
+.. py:attribute:: DampingRatio
+   :value: 0
+
+
+
+
+
+
+.. vale on

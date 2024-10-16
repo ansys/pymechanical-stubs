@@ -1,0 +1,189 @@
+.. vale off
+
+
+
+:class:`ISolveConfiguration`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveConfiguration
+
+   Bases: :py:obj:`object`
+
+
+   
+   ISolveConfiguration interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISolveConfiguration
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SetAsDefault`
+            - Sets 'this' to be the default configuration to solve with.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Default`
+            - Gets whether or not this SolveConfiguration is the default configuration.
+          * - :py:attr:`~Name`
+            - Gets or sets the name of the SolveConfiguraiton Object
+          * - :py:attr:`~Settings`
+            - Gets the QueueSettings object for the configuration.
+          * - :py:attr:`~SolveProcessSettings`
+            - Gets the SolveProcessSettings for the current object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Default
+   :type: Optional[bool]
+
+   
+   Gets whether or not this SolveConfiguration is the default configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets or sets the name of the SolveConfiguraiton Object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Settings
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.IQueueSettings]
+
+   
+   Gets the QueueSettings object for the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolveProcessSettings
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveProcessSettings]
+
+   
+   Gets the SolveProcessSettings for the current object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: SetAsDefault() -> None
+
+   
+   Sets 'this' to be the default configuration to solve with.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

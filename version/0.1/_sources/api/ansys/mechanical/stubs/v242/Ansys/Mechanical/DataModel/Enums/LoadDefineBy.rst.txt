@@ -1,0 +1,124 @@
+.. vale off
+
+
+
+:class:`LoadDefineBy`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.LoadDefineBy
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadDefineBy
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ComplexComponents`
+            - 
+          * - :py:attr:`~ComplexNormalTo`
+            - 
+          * - :py:attr:`~ComplexVector`
+            - 
+          * - :py:attr:`~ComponentX`
+            - 
+          * - :py:attr:`~ComponentY`
+            - 
+          * - :py:attr:`~ComponentZ`
+            - 
+          * - :py:attr:`~Components`
+            - 
+          * - :py:attr:`~NormalToOrTangential`
+            - 
+          * - :py:attr:`~UnknownDefined`
+            - 
+          * - :py:attr:`~Vector`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ComplexComponents
+   :value: 6
+
+
+.. py:attribute:: ComplexNormalTo
+   :value: 8
+
+
+.. py:attribute:: ComplexVector
+   :value: 7
+
+
+.. py:attribute:: ComponentX
+   :value: 3
+
+
+.. py:attribute:: ComponentY
+   :value: 4
+
+
+.. py:attribute:: ComponentZ
+   :value: 5
+
+
+.. py:attribute:: Components
+   :value: 0
+
+
+.. py:attribute:: NormalToOrTangential
+   :value: 2
+
+
+.. py:attribute:: UnknownDefined
+
+.. py:attribute:: Vector
+   :value: 1
+
+
+
+
+
+
+.. vale on

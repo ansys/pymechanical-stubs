@@ -1,0 +1,83 @@
+.. vale off
+
+
+
+:class:`EXDEulerResolutionDefType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDEulerResolutionDefType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDEulerResolutionDefType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~eCellSize`
+            - 
+          * - :py:attr:`~eComponentCells`
+            - 
+          * - :py:attr:`~eTotalCells`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: eCellSize
+   :value: 1
+
+
+.. py:attribute:: eComponentCells
+   :value: 2
+
+
+.. py:attribute:: eTotalCells
+   :value: 0
+
+
+
+
+
+
+.. vale on

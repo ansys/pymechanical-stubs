@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Utilities``
+=============================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Utilities
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Utilities
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences`
+            - ..
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> GeometryImportPreferences</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Utilities/GeometryImportPreferences>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Utilities module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

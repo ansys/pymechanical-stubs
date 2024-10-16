@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`MAPDLBodyData`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.SolverData.MAPDLBodyData
+
+   Bases: :py:obj:`object`
+
+
+   
+   MAPDLBodyData class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MAPDLBodyData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementTypeIds`
+            - Gets the Element Type Ids for the body.
+          * - :py:attr:`~MaterialIds`
+            - Gets the Material Ids for the body.
+          * - :py:attr:`~RealConstantId`
+            - Gets the Real Constant Id for the body.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementTypeIds
+   :type: Optional[Iterable[int]]
+
+   
+   Gets the Element Type Ids for the body.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialIds
+   :type: Optional[Iterable[int]]
+
+   
+   Gets the Material Ids for the body.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RealConstantId
+   :type: Optional[int]
+
+   
+   Gets the Real Constant Id for the body.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

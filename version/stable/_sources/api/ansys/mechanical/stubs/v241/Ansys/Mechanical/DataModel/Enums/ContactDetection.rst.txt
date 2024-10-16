@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ContactDetection`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactDetection
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactDetection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactDetection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ProximityBased`
+            - 
+          * - :py:attr:`~Trajectory`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ProximityBased
+   :value: 1
+
+
+.. py:attribute:: Trajectory
+   :value: 0
+
+
+
+
+
+
+.. vale on

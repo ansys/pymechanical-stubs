@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`SubScopingDefineByType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SubScopingDefineByType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SubScopingDefineByType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SubScopingDefineByType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Layer`
+            - 
+          * - :py:attr:`~Plies`
+            - 
+          * - :py:attr:`~Ply`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Layer
+   :value: 0
+
+
+.. py:attribute:: Plies
+   :value: 3
+
+
+.. py:attribute:: Ply
+   :value: 1
+
+
+
+
+
+
+.. vale on

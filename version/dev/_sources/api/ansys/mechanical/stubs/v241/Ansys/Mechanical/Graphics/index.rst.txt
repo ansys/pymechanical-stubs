@@ -1,0 +1,211 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Graphics``
+============================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Graphics
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.Tools`
+            - Tools module.
+
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.AnalysisSettingsGraph`
+            - AnalysisSettingsGraph class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.AnimationExportSettings`
+            - AnimationExportSettings class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.AnnotationPreferences`
+            - AnnotationPreferences class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.GlobalLegendSettings`
+            - Defines global legend settings.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.Graphics3DExportSettings`
+            - Graphics3DExportSettings class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.GraphicsImageExportSettings`
+            - GraphicsImageExportSettings class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.GraphicsViewportsExportSettings`
+            - Settings object to control Graphics.ExportViewports behavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.Point`
+            - Point class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.ResultAnimationOptions`
+            - ResultAnimationOptions class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.ResultPreference`
+            - ResultPreference class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.SectionPlane`
+            - Represents a SectionPlane object. This object holds properties of the Plane.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.SectionPlanes`
+            - Represents the collection of section planes used by graphics
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.VectorDisplay`
+            - VectorDisplay class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.ViewOptions`
+            - ViewOptions class.
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Tools</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/Tools/index>
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AnalysisSettingsGraph</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/AnalysisSettingsGraph>
+    <span class="nf nf-cod-symbol_class"></span> AnimationExportSettings</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/AnimationExportSettings>
+    <span class="nf nf-cod-symbol_class"></span> AnnotationPreferences</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/AnnotationPreferences>
+    <span class="nf nf-cod-symbol_class"></span> GlobalLegendSettings</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/GlobalLegendSettings>
+    <span class="nf nf-cod-symbol_class"></span> Graphics3DExportSettings</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/Graphics3DExportSettings>
+    <span class="nf nf-cod-symbol_class"></span> GraphicsImageExportSettings</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/GraphicsImageExportSettings>
+    <span class="nf nf-cod-symbol_class"></span> GraphicsViewportsExportSettings</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/GraphicsViewportsExportSettings>
+    <span class="nf nf-cod-symbol_class"></span> Point</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/Point>
+    <span class="nf nf-cod-symbol_class"></span> ResultAnimationOptions</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/ResultAnimationOptions>
+    <span class="nf nf-cod-symbol_class"></span> ResultPreference</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/ResultPreference>
+    <span class="nf nf-cod-symbol_class"></span> SectionPlane</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/SectionPlane>
+    <span class="nf nf-cod-symbol_class"></span> SectionPlanes</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/SectionPlanes>
+    <span class="nf nf-cod-symbol_class"></span> VectorDisplay</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/VectorDisplay>
+    <span class="nf nf-cod-symbol_class"></span> ViewOptions</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Graphics/ViewOptions>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Graphics module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

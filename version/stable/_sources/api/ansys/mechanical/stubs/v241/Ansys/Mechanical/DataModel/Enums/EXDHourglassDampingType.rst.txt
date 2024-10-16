@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDHourglassDampingType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDHourglassDampingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDHourglassDampingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ADStandard`
+            - 
+          * - :py:attr:`~FlanaganBelytschko`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ADStandard
+   :value: 0
+
+
+.. py:attribute:: FlanaganBelytschko
+   :value: 1
+
+
+
+
+
+
+.. vale on

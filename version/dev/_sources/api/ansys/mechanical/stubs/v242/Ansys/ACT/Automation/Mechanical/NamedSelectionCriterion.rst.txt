@@ -1,0 +1,300 @@
+.. vale off
+
+
+
+:class:`NamedSelectionCriterion`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion
+
+   Bases: :py:obj:`object`
+
+
+   
+   NamedSelectionCriterion class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NamedSelectionCriterion
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Action`
+            - Action property.
+          * - :py:attr:`~Active`
+            - Active property.
+          * - :py:attr:`~CoordinateSystem`
+            - CoordinateSystem property.
+          * - :py:attr:`~Criterion`
+            - Criterion property.
+          * - :py:attr:`~EntityType`
+            - EntityType property.
+          * - :py:attr:`~LowerBound`
+            - LowerBound property.
+          * - :py:attr:`~Operator`
+            - Operator property.
+          * - :py:attr:`~UpperBound`
+            - UpperBound property.
+          * - :py:attr:`~Value`
+            - Value property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Action
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionActionType]
+
+   
+   Action property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Active
+   :type: Optional[bool]
+
+   
+   Active property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+   
+   CoordinateSystem property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Criterion
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionCriterionType]
+
+   
+   Criterion property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EntityType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionType]
+
+   
+   EntityType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowerBound
+   :type: Optional[Any]
+
+   
+   LowerBound property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Operator
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionOperatorType]
+
+   
+   Operator property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UpperBound
+   :type: Optional[Any]
+
+   
+   UpperBound property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Value
+   :type: Optional[Any]
+
+   
+   Value property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

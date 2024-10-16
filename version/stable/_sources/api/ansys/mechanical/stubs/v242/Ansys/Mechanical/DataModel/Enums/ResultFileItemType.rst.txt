@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`ResultFileItemType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ResultFileItemType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ResultFileItemType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ResultFileItemType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ComponentName`
+            - 
+          * - :py:attr:`~ElementIDs`
+            - 
+          * - :py:attr:`~ElementNameIDs`
+            - 
+          * - :py:attr:`~ElementTypeIDs`
+            - 
+          * - :py:attr:`~MaterialIDs`
+            - 
+          * - :py:attr:`~NodeIDs`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ComponentName
+   :value: 3
+
+
+.. py:attribute:: ElementIDs
+   :value: 4
+
+
+.. py:attribute:: ElementNameIDs
+   :value: 1
+
+
+.. py:attribute:: ElementTypeIDs
+   :value: 2
+
+
+.. py:attribute:: MaterialIDs
+   :value: 0
+
+
+.. py:attribute:: NodeIDs
+   :value: 5
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`NastranOption`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NastranOption
+
+   Bases: :py:obj:`object`
+
+
+   
+   Option.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`PullOutConstraintSubtype`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PullOutConstraintSubtype
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PullOutConstraintSubtype.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PullOutConstraintSubtype
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NoHole`
+            - 
+          * - :py:attr:`~NoOption`
+            - 
+          * - :py:attr:`~Stamping`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NoHole
+   :value: 2
+
+
+.. py:attribute:: NoOption
+   :value: 0
+
+
+.. py:attribute:: Stamping
+   :value: 1
+
+
+
+
+
+
+.. vale on

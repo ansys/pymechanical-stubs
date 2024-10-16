@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`ContactSideScopingType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ContactSideScopingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactSideScopingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactSideScopingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - 
+          * - :py:attr:`~ContactSideBoth`
+            - 
+          * - :py:attr:`~ContactSourceUnderlying`
+            - 
+          * - :py:attr:`~ContactTargetUnderlying`
+            - 
+          * - :py:attr:`~SourceContactForcesProperty`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Active
+   :value: 4
+
+
+.. py:attribute:: ContactSideBoth
+   :value: 3
+
+
+.. py:attribute:: ContactSourceUnderlying
+   :value: 1
+
+
+.. py:attribute:: ContactTargetUnderlying
+   :value: 2
+
+
+.. py:attribute:: SourceContactForcesProperty
+   :value: 5
+
+
+
+
+
+
+.. vale on

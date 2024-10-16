@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CondensedPartExpansionType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CondensedPartExpansionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CondensedPartExpansionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartExpansionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MechanicalAPDL`
+            - 
+          * - :py:attr:`~OnDemand`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MechanicalAPDL
+   :value: 2
+
+
+.. py:attribute:: OnDemand
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

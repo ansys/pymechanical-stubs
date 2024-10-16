@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`LimitBCDirection`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.LimitBCDirection
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LimitBCDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LimitBCDirection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~X`
+            - 
+          * - :py:attr:`~Y`
+            - 
+          * - :py:attr:`~Z`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 3
+
+
+.. py:attribute:: X
+   :value: 0
+
+
+.. py:attribute:: Y
+   :value: 1
+
+
+.. py:attribute:: Z
+   :value: 2
+
+
+
+
+
+
+.. vale on

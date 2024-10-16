@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`MeshRestartSaveAtSubstep`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeshRestartSaveAtSubstep
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MeshRestartSaveAtSubstep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshRestartSaveAtSubstep
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Last`
+            - 
+          * - :py:attr:`~SaveAtSubstepSpecified`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: Last
+   :value: 1
+
+
+.. py:attribute:: SaveAtSubstepSpecified
+   :value: 3
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`MAPDLBeamData`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.SolverData.MAPDLBeamData
+
+   Bases: :py:obj:`object`
+
+
+   
+   MAPDLBeamData class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MAPDLBeamData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementId`
+            - Gets the Element number for the object.
+          * - :py:attr:`~MaterialId`
+            - Gets the Material Id number for the beam connection.
+          * - :py:attr:`~RealConstantId`
+            - Gets the Real Constant Id number for the object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementId
+   :type: Optional[int]
+
+   
+   Gets the Element number for the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialId
+   :type: Optional[int]
+
+   
+   Gets the Material Id number for the beam connection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RealConstantId
+   :type: Optional[int]
+
+   
+   Gets the Real Constant Id number for the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

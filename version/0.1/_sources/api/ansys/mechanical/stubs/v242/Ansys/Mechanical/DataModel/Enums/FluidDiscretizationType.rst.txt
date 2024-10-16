@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FluidDiscretizationType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.FluidDiscretizationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Fluid Discretization Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FluidDiscretizationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FluidCentralLinear`
+            - 
+          * - :py:attr:`~FluidUpwindExponential`
+            - 
+          * - :py:attr:`~FluidUpwindLinear`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FluidCentralLinear
+   :value: 1
+
+
+.. py:attribute:: FluidUpwindExponential
+   :value: 2
+
+
+.. py:attribute:: FluidUpwindLinear
+   :value: 0
+
+
+
+
+
+
+.. vale on

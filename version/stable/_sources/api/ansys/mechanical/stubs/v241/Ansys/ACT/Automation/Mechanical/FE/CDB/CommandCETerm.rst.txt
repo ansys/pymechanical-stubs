@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`CommandCETerm`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandCETerm
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a term associated to a CE command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandCETerm
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Coefficient`
+            - Gets the coefficient.
+          * - :py:attr:`~Dof`
+            - Gets the degree of freedom.
+          * - :py:attr:`~Node`
+            - Gets the node number.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Coefficient
+   :type: Optional[float]
+
+   
+   Gets the coefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Dof
+   :type: Optional[str]
+
+   
+   Gets the degree of freedom.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Node
+   :type: Optional[int]
+
+   
+   Gets the node number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

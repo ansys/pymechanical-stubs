@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ShellInertiaUpdate`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ShellInertiaUpdate
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ShellInertiaUpdate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShellInertiaUpdate
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Recompute`
+            - 
+          * - :py:attr:`~Rotate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Recompute
+   :value: 0
+
+
+.. py:attribute:: Rotate
+   :value: 1
+
+
+
+
+
+
+.. vale on

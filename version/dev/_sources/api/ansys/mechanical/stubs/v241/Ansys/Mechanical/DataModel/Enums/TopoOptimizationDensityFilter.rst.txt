@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`TopoOptimizationDensityFilter`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.TopoOptimizationDensityFilter
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TopoOptimizationDensityFilter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoOptimizationDensityFilter
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Linear`
+            - 
+          * - :py:attr:`~NonLinear`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Linear
+   :value: 1
+
+
+.. py:attribute:: NonLinear
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on
