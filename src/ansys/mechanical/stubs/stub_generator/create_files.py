@@ -145,8 +145,10 @@ def make(base_dir, outdir, assemblies, str_version):
 
             if "__pycache__" not in str(init_path):
                 module_list = []
-                original_str = f"{pathlib.Path(base_dir, 'src')}{os.sep}"
-                import_str = full_path.replace(original_str, "").replace(os.sep, ".")
+                original_str = f"{pathlib.Path(base_dir)}{os.sep}"
+                import_str = full_path.replace(original_str, "ansys.mechanical.stubs.").replace(
+                    os.sep, "."
+                )
                 [
                     module_list.append(pathlib.Path(dir.path).name)
                     for dir in os.scandir(pathlib.Path(init_path).parent)
@@ -199,7 +201,7 @@ def main():
 
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent
-    outdir = base_dir / "src" / "ansys" / "mechanical" / "stubs" / version
+    outdir = base_dir / version
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)

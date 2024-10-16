@@ -63,7 +63,10 @@ suppress_warnings = [
     "ref.python",
 ]
 show_warning_types = True
-exclude_patterns = ["api/ansys/mechanical/stubs/index.rst"]  # Intentionally excluded from toctree
+exclude_patterns = [
+    "api/ansys/mechanical/stubs/index.rst",
+    "api/ansys/mechanical/stubs/stub_generator/index.rst",
+]  # Intentionally excluded from toctree
 
 
 # numpydoc configuration

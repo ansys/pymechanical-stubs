@@ -26,11 +26,79 @@ from dataclasses import dataclass
 import json
 import logging
 import pathlib
+import re
 import typing
 import xml.etree.ElementTree as ElementTree
 
 import clr
 import System
+
+C_TO_PYTHON = {
+    "IronPython.Runtime.PythonTuple": "tuple",
+    "System.Array": "list",
+    "System.Boolean": "bool",
+    "System.Collections.Generic.IDictionary": "dict",
+    "System.Collections.Generic.IEnumerable": "typing.Iterable",
+    "System.Collections.Generic.IEnumerator": "typing.Iterator",
+    "System.Collections.Generic.IList": "list",
+    "System.Collections.Generic.IReadOnlyDictionary": "dict",
+    "System.Collections.Generic.IReadOnlyList": "tuple",
+    "System.Collections.Generic.KeyValuePair": "dict",
+    "System.Collections.Generic.List": "list",
+    "System.Collections.ICollection": "typing.Collection",
+    "System.Collections.IEnumerable": "typing.Iterable",
+    "System.Collections.IEnumerator": "typing.Iterator",
+    "System.DateTime": "typing.Any",
+    "System.Double": "float",
+    "System.Int32": "int",
+    "System.Object": "typing.Any",
+    "System.String": "str",
+    "System.Tuple": "tuple",
+    "System.Type": "type",
+    "System.UInt32": "int",
+    "System.Void": "None",
+}
+
+EXCLUDED_TYPES_LIST = [
+    "System.IAsyncResult",
+    "System.IDisposable",
+    "System.Func",
+    "System.Delegate",
+]
+
+
+def c_types_to_python(type_str):
+    """Replace C# types with Python types.
+
+    Parameters
+    ----------
+    type_str: str
+        String containing C# type.
+    """
+    for key, value in C_TO_PYTHON.items():
+        # Replace C# type with Python type
+        type_str = type_str.replace(key, value)
+
+        if '"' in type_str:
+            # Remove double quotes from type
+            type_str = type_str.replace('"', "")
+
+    # Wrap strings that contain Ansys or ChildrenType in quotes
+    ansys_regex = re.compile("(Ansys[^],]*|ChildrenType)")
+    matches = set(ansys_regex.findall(type_str))
+
+    for match in matches:
+        type_str = re.sub(ansys_regex, f'"{match}"', type_str)
+
+    # If System.x doesn't have a replacement, wrap quotes around it
+    if "System." in type_str:
+        for excluded_type in EXCLUDED_TYPES_LIST:
+            if excluded_type in type_str:
+                type_str = type_str.replace('"', "")
+                type_str = f'"{type_str}"'
+                break
+
+    return type_str
 
 
 def is_namespace(something):
@@ -195,7 +263,6 @@ def write_docstring(
     if doc_member is None:
         return
     summary = doc_member.summary
-    print(summary)
     if summary is None:
         return
     indent = "    " * indent_level
@@ -427,12 +494,16 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     """
     logging.debug(f"        writing property {prop.name}")
     indent = "    " * indent_level
+
+    prop_type = fix_str(prop.type)
+    prop_type = c_types_to_python(prop_type)
+
     if prop.static:
         # this only works for autocomplete for python 3.9+
         assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
         buffer.write(f"{indent}@classmethod\n")
         buffer.write(f"{indent}@property\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{fix_str(prop.type)}]:\n")
+        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
         indent = "    " * (1 + indent_level)
         if prop.doc is None:
             write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
@@ -449,7 +520,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         if prop.setter and not prop.getter:
             # setter only, can't use @property, use python builtin-property feature
             buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{fix_str(prop.type)}]) -> None:\n"
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop_type}]) -> None:\n"
             )
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
@@ -463,9 +534,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
         else:
             assert prop.getter
             buffer.write(f"{indent}@property\n")
-            buffer.write(
-                f"{indent}def {prop.name}(self) -> typing.Optional[{fix_str(prop.type)}]:\n"
-            )
+            buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
             indent = "    " * (1 + indent_level)
             if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
@@ -538,9 +607,11 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
         first_arg = "cls"
     else:
         first_arg = "self"
-    args = [first_arg] + [f'{arg.name}: "{arg.type}"' for arg in method.args]
+    args = [first_arg] + [f"{arg.name}: {c_types_to_python(arg.type)}" for arg in method.args]
     args = f"({', '.join(args)})"
-    buffer.write(f"{indent}def {method.name}{args} -> {method.return_type}:\n")
+    method_type = c_types_to_python(method.return_type)
+
+    buffer.write(f"{indent}def {method.name}{args} -> {method_type}:\n")
     indent = "    " * (1 + indent_level)
     if method.doc is None:
         write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
