@@ -6,6 +6,25 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.2](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.2) - 2024-10-16
+
+
+### Fixed
+
+- wheelhouse steps and changelog files [#63](https://github.com/ansys/pymechanical-stubs/pull/63)
+- alphabetize documentation and adjust references [#68](https://github.com/ansys/pymechanical-stubs/pull/68)
+- remove `ansys.mechanical.stubs.v###` from class name [#72](https://github.com/ansys/pymechanical-stubs/pull/72)
+- replace `submodule` and `subpackage` with `module` [#73](https://github.com/ansys/pymechanical-stubs/pull/73)
+- Change C# types to Python [#75](https://github.com/ansys/pymechanical-stubs/pull/75)
+
+
+### Maintenance
+
+- update CHANGELOG for v0.1.1 [#62](https://github.com/ansys/pymechanical-stubs/pull/62)
+- update messages for pre-commit.ci [#65](https://github.com/ansys/pymechanical-stubs/pull/65)
+- pre-commit automatic update [#66](https://github.com/ansys/pymechanical-stubs/pull/66), [#67](https://github.com/ansys/pymechanical-stubs/pull/67), [#69](https://github.com/ansys/pymechanical-stubs/pull/69), [#70](https://github.com/ansys/pymechanical-stubs/pull/70), [#74](https://github.com/ansys/pymechanical-stubs/pull/74)
+- bump ansys/actions from 7 to 8 [#71](https://github.com/ansys/pymechanical-stubs/pull/71)
+
 ## [0.1.1](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.1) - 2024-08-21
 
 
