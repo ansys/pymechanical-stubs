@@ -62,8 +62,11 @@ suppress_warnings = [
     "config.cache",
     "ref.python",
 ]
-# show_warning_types = True
-# exclude_patterns = ["api/ansys/mechanical/stubs/index.rst"]  # Intentionally excluded from toctree
+show_warning_types = True
+exclude_patterns = [
+    "api/ansys/mechanical/stubs/index.rst",
+    "api/ansys/mechanical/stubs/stub_generator/index.rst",
+]  # Intentionally excluded from toctree
 
 
 # numpydoc configuration
@@ -98,6 +101,8 @@ html_favicon = ansys_favicon
 templates_path = ["_templates"]
 # The suffix(es) of source filenames.
 source_suffix = ".rst"
+
+latex_engine = "xelatex"
 
 # The master toctree document.
 master_doc = "index"
@@ -162,7 +167,11 @@ html_theme_options = {
             f"pymechanical-stubs-v{get_version_match(version).replace('.', '-')}": "PyMechanical Stubs",
         },
     },
-    "ansys_sphinx_theme_autoapi": {"project": project, "templates": "_templates/autoapi"},
+    "ansys_sphinx_theme_autoapi": {
+        "project": project,
+        "templates": "_templates/autoapi",
+        "member_order": "alphabetical",
+    },
     "navigation_depth": 10,
 }
 

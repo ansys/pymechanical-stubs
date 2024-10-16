@@ -12,9 +12,11 @@ descriptions of the objects, methods, and properties for all namespaces.
 
    {% for page in pages %}
    {% if (page.top_level_object or page.name.split('.') | length == 4) and page.display %}
+   {% if page.name.startswith("ansys.mechanical.stubs.v") %}
    {% set page_name = page.name.split('.')|list %}
    {% set version = page_name[-1] %}
    <span class="nf nf-md-package"></span>Mechanical 20{{ version[1:3] }} R{{ version[3] }}<{{ page.include_path }}>
+   {% endif %}
    {% endif %}
    {% endfor %}
 

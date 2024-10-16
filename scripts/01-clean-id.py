@@ -22,7 +22,6 @@
 """Clean markdown files by removing vale and <a> tags."""
 
 import argparse
-import fileinput
 import os
 import pathlib
 import re
@@ -32,33 +31,28 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 def remove_links_from_markdown_files(directory_path):
     """Remove <a> tags and vale comments from markdown files."""
-    # Define the regular expression pattern to match <a id="..."></a> tags at the beginning of the file
-    tag_pattern = r'^<a id=".*?"></a>'
-    # Define the regular expression pattern to remove vale on/off comments
-    vale_pattern = r"^<!-- vale .*? -->"
+    # Get all text before the first "# <Title>"
+    pattern = re.compile("^[^#]*# ")
 
     # Iterate over all files and subdirectories in the specified directory
     for root, _, files in os.walk(directory_path):
         for file in files:
             if file.endswith(".md"):
-                file_path = str(pathlib.Path(root, file))
+                file_path = pathlib.Path(root, file)
                 print(f"Processing {file_path}")
-                # Only want to remove first <a></a> tag
-                first_a_tag = False
+                with pathlib.Path.open(file_path, encoding="utf-8") as f:
+                    lines = f.readlines()
+                    joined_lines = "".join(lines)
+                    matches = pattern.findall(joined_lines)
+                    if matches:
+                        # Delete all lines before "# <Title>"
+                        joined_lines = joined_lines.replace(matches[0], "# ")
+                    if "vale on" in joined_lines:
+                        # Delete the <!-- vale on --> comment
+                        joined_lines = joined_lines.replace("<!-- vale on -->", "")
 
-                with fileinput.FileInput(file_path, inplace=True, encoding="utf-8") as f:
-                    for line in f:
-                        # Remove vale on/off comments
-                        if bool(re.match(rf"{vale_pattern}", line)):
-                            line = line.replace(line, "")
-                            print(line, end="\n")
-                        # Remove first <a></a> tag
-                        elif not first_a_tag and bool(re.match(rf"{tag_pattern}", line)):
-                            line = line.replace(line, "")
-                            print(line)
-                            first_a_tag = True
-                        else:
-                            print(line, end="")
+                with pathlib.Path.open(file_path, "w") as myfile:
+                    myfile.write(joined_lines)
 
 
 if __name__ == "__main__":
