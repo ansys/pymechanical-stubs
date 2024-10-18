@@ -76,5 +76,6 @@ runs:
         """Patch version for the ansys-mechanical-stubs package."""\n\n''')
 
             for folder in subfolders:
-                f.write(f"from .{folder} import *\n")
-                f.write('"""Mechanical installation version."""\n')
+                if "v" in folder:
+                    f.write(f"from .{folder} import *\n")
+                    f.write('"""Mechanical installation version."""\n')
