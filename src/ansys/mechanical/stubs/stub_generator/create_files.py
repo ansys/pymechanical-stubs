@@ -164,7 +164,9 @@ def make(base_dir, outdir, assemblies, str_version):
 
                 # If __init__ file is empty, add a docstring to the top of the file and
                 # write module import statements. For example, Ansys/ACT/__init__.py
-                if pathlib.Path.stat(init_path).st_size == 0:
+                if (not pathlib.Path.is_file(init_path)) or (
+                    pathlib.Path.stat(init_path).st_size == 0
+                ):
                     with pathlib.Path.open(init_path, "a") as f:
                         f.write(f'"""{pathlib.Path(full_path).name} module."""\n')
                         f.write("".join(import_statements))
