@@ -43,7 +43,7 @@ def get_version():
     int
         The version of the Ansys install set in the AWP_ROOTDV_DEV environment variable.
     """
-    install_dir = os.environ["AWP_ROOTDV_DEV"]
+    install_dir = os.environ["AWP_ROOT241"]  # ["AWP_ROOTDV_DEV"]
     version = int(install_dir[-3:])
 
     return install_dir, version
@@ -121,7 +121,7 @@ def make(base_dir, outdir, assemblies, str_version):
 
     outdir_init = outdir / "__init__.py"
     with pathlib.Path.open(outdir_init, "w") as f:
-        f.write(f'"""Ansys Mechanical {str_version} subpackage."""\n')
+        f.write(f'"""Ansys Mechanical {str_version} module."""\n')
         f.write(f"""import ansys.mechanical.stubs.{str_version}.Ansys as Ansys""")
 
     path = outdir / "Ansys"
@@ -172,11 +172,16 @@ def make(base_dir, outdir, assemblies, str_version):
                         f.write("".join(import_statements))
                 else:
                     # Add "import Ansys" to the top of __init__ files
-                    import_statements.insert(0, "import Ansys\n")
+                    import_statements.insert(0, "if typing.TYPE_CHECKING:\n    import Ansys\n")
 
                     # Read the __init__ file contents
                     with pathlib.Path.open(init_path, "r", encoding="utf-8") as f:
-                        contents = f.read()
+                        content_list = f.readlines()
+                        if '"' in content_list[0]:
+                            content_list.insert(1, "from __future__ import annotations\n")
+                        else:
+                            content_list.insert(0, "from __future__ import annotations\n")
+                        contents = "".join(content_list)
 
                     # Add all module import statements from import_statements to the top of the file
                     # For example, Ansys/ACT/Automation/Mechanical
