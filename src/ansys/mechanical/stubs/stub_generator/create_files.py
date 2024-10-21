@@ -154,17 +154,36 @@ def make(base_dir, outdir, assemblies, str_version):
                     for dir in os.scandir(pathlib.Path(init_path).parent)
                 ]
 
-                # Make missing init files
-                # if not os.path.isfile(init_path):
-                with pathlib.Path.open(init_path, "a") as f:
-                    # Only add docstring if the init file is empty
-                    # This is for init files that only contain import statements
-                    if pathlib.Path.stat(init_path).st_size == 0:
+                # Create list of import statements for each submodule. For example,
+                # "import ansys.mechanical.stubs.v241.Ansys.ACT.Common as Common"
+                # in Ansys/ACT/__init__.py
+                import_statements = []
+                for module in module_list:
+                    if module != "__init__.py":
+                        import_statements.append(f"import {import_str}.{module} as {module}\n")
+
+                # If __init__ file is empty, add a docstring to the top of the file and
+                # write module import statements. For example, Ansys/ACT/__init__.py
+                if pathlib.Path.stat(init_path).st_size == 0:
+                    with pathlib.Path.open(init_path, "a") as f:
                         f.write(f'"""{pathlib.Path(full_path).name} module."""\n')
-                    for module in module_list:
-                        if module != "__init__.py":
-                            f.write(f"import {import_str}.{module} as {module}\n")
-                    f.close()
+                        f.write("".join(import_statements))
+                else:
+                    # Add "import Ansys" to the top of __init__ files
+                    import_statements.insert(0, "import Ansys\n")
+
+                    # Read the __init__ file contents
+                    with pathlib.Path.open(init_path, "r", encoding="utf-8") as f:
+                        contents = f.read()
+
+                    # Add all module import statements from import_statements to the top of the file
+                    # For example, Ansys/ACT/Automation/Mechanical
+                    with pathlib.Path.open(init_path, "w", encoding="utf-8") as f:
+                        contents = contents.replace(
+                            "import typing", f"import typing\n{''.join(import_statements)}"
+                        )
+                        f.write(contents)
+
     print("Done processing all mechanical stubs.")
 
 

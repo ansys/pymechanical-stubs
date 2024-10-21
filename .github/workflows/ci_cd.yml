@@ -153,14 +153,17 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install build requirements
+      shell: cmd
       run: |
         pip install -U pip
         pip install build
 
     - name: Build
+      shell: cmd
       run: python -m build
 
     - name: Install
+      shell: cmd
       run: pip install dist/*.whl
 
     - name: "Retrieve Mechanical version"
