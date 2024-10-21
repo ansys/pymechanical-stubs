@@ -76,7 +76,7 @@ jobs:
           { image: '24.1.0', version: '241' },
           { image: '24.2.0', version: '242' },
         ]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
@@ -140,7 +140,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
@@ -191,7 +191,7 @@ jobs:
     - name: "Compress the wheelhouse"
       uses: vimtor/action-zip@v1.2
       with:
-        files: wheelhouse
+        files: dist/*.whl
         dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
 
     - name: "Upload the compressed wheelhouse"
