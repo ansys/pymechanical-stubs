@@ -152,9 +152,16 @@ jobs:
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
 
-    - name: "Install project"
+    - name: Install build requirements
       run: |
-        python -m pip install -e .
+        pip install -U pip
+        pip install build
+
+    - name: Build
+      run: python -m build
+
+    - name: Install
+      run: pip install dist/*.whl
 
     - name: "Retrieve Mechanical version"
       shell: python
@@ -169,11 +176,6 @@ jobs:
             f.write(f"MECHANICAL_VERSION={__version__}")
 
         print(f"Mechanical version is {__version__}")
-
-    - name: "Install package and create wheelhouse"
-      run: |
-        python -m pip install importlib-metadata
-        python -m pip wheel . -w wheelhouse
 
     - name: "Compress the wheelhouse"
       uses: vimtor/action-zip@v1.2
