@@ -153,17 +153,25 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install build requirements
-      shell: cmd
       run: |
         pip install -U pip
         pip install build
 
-    - name: Build
-      shell: cmd
-      run: python -m build
+    - name: Build project
+      run: |
+        python -m build
 
-    - name: Install
-      shell: cmd
+    - name: Install on Windows
+      if: matrix.os == 'windows-latest'
+      run: |
+        cd dist
+        $files = Get-ChildItem -Path $PWD | Where-Object { $_.Extension -eq '.whl' }
+        foreach ($file in $files) {
+          pip install $file
+        }
+
+    - name: Install on Ubuntu
+      if: matrix.os == 'ubuntu-latest'
       run: pip install dist/*.whl
 
     - name: "Retrieve Mechanical version"
