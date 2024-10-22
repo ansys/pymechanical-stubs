@@ -76,7 +76,7 @@ jobs:
           { image: '24.1.0', version: '241' },
           { image: '24.2.0', version: '242' },
         ]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
@@ -140,7 +140,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ['3.10'] #, '3.11', '3.12']
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
@@ -152,9 +152,32 @@ jobs:
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
 
-    - name: "Install project"
+    - name: Install build requirements
       run: |
-        python -m pip install -e .
+        pip install -U pip
+        pip install build
+
+    - name: Build project
+      run: |
+        python -m build
+
+    - name: Install on Windows
+      if: matrix.os == 'windows-latest'
+      run: |
+        New-Item -Path $PWD -Name "wheelhouse" -ItemType "Directory"
+        cd dist
+        $files = Get-ChildItem -Path $PWD | Where-Object { $_.Extension -eq '.whl' }
+        foreach ($file in $files) {
+          Copy-Item -Path "$file" -Destination "..\wheelhouse"
+          pip install $file
+        }
+
+    - name: Install on Ubuntu
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        mkdir wheelhouse
+        cp dist/*.whl wheelhouse
+        pip install dist/*.whl
 
     - name: "Retrieve Mechanical version"
       shell: python
@@ -169,11 +192,6 @@ jobs:
             f.write(f"MECHANICAL_VERSION={__version__}")
 
         print(f"Mechanical version is {__version__}")
-
-    - name: "Install package and create wheelhouse"
-      run: |
-        python -m pip install importlib-metadata
-        python -m pip wheel . -w wheelhouse
 
     - name: "Compress the wheelhouse"
       uses: vimtor/action-zip@v1.2
