@@ -6,6 +6,18 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.4](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.4) - 2024-10-22
+
+
+### Fixed
+
+- rework ci_cd and add `import Ansys` to `__init__.py` files [#81](https://github.com/ansys/pymechanical-stubs/pull/81)
+
+
+### Maintenance
+
+- update CHANGELOG for v0.1.3 [#79](https://github.com/ansys/pymechanical-stubs/pull/79)
+
 ## [0.1.3](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.3) - 2024-10-21
 
 
