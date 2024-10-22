@@ -35,16 +35,16 @@ import System
 
 C_TO_PYTHON = {
     "IronPython.Runtime.PythonTuple": "tuple",
-    "System.Array": "list",
+    "System.Array": "typing.List",
     "System.Boolean": "bool",
     "System.Collections.Generic.IDictionary": "dict",
     "System.Collections.Generic.IEnumerable": "typing.Iterable",
     "System.Collections.Generic.IEnumerator": "typing.Iterator",
-    "System.Collections.Generic.IList": "list",
+    "System.Collections.Generic.IList": "typing.List",
     "System.Collections.Generic.IReadOnlyDictionary": "dict",
     "System.Collections.Generic.IReadOnlyList": "tuple",
     "System.Collections.Generic.KeyValuePair": "dict",
-    "System.Collections.Generic.List": "list",
+    "System.Collections.Generic.List": "typing.List",
     "System.Collections.ICollection": "typing.Collection",
     "System.Collections.IEnumerable": "typing.Iterable",
     "System.Collections.IEnumerator": "typing.Iterator",
@@ -88,7 +88,7 @@ def c_types_to_python(type_str):
     matches = set(ansys_regex.findall(type_str))
 
     for match in matches:
-        type_str = re.sub(ansys_regex, f'"{match}"', type_str)
+        type_str = re.sub(ansys_regex, match, type_str)
 
     # If System.x doesn't have a replacement, wrap quotes around it
     if "System." in type_str:
