@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FEConnectionDisplayType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.FEConnectionDisplayType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FEConnectionDisplayType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FEConnectionDisplayType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Lines`
+            - 
+          * - :py:attr:`~LinesAndPoints`
+            - 
+          * - :py:attr:`~Points`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Lines
+   :value: 0
+
+
+.. py:attribute:: LinesAndPoints
+   :value: 2
+
+
+.. py:attribute:: Points
+   :value: 1
+
+
+
+
+
+
+.. vale on

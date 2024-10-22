@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`BaseRemoval`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval
+
+   Bases: :py:obj:`object`
+
+
+   
+   BaseRemoval class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,89 @@
+.. vale off
+
+
+
+:class:`EXDSolveUnitsType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDSolveUnitsType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDSolveUnitsType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~cmgus`
+            - 
+          * - :py:attr:`~mkgs`
+            - 
+          * - :py:attr:`~mmmgms`
+            - 
+          * - :py:attr:`~umpgms`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: cmgus
+   :value: 2
+
+
+.. py:attribute:: mkgs
+   :value: 1
+
+
+.. py:attribute:: mmmgms
+   :value: 3
+
+
+.. py:attribute:: umpgms
+   :value: 0
+
+
+
+
+
+
+.. vale on

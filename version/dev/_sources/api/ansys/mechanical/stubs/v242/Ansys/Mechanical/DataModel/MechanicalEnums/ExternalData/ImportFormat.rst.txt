@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`ImportFormat`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies how to interpret the variable data source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AXDT`
+            - 
+          * - :py:attr:`~CGNS`
+            - 
+          * - :py:attr:`~Delimited`
+            - 
+          * - :py:attr:`~ECAD`
+            - 
+          * - :py:attr:`~FixedWidth`
+            - 
+          * - :py:attr:`~H5`
+            - 
+          * - :py:attr:`~ICEPAK`
+            - 
+          * - :py:attr:`~MAPDL`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AXDT
+   :value: 3
+
+
+.. py:attribute:: CGNS
+   :value: 6
+
+
+.. py:attribute:: Delimited
+   :value: 0
+
+
+.. py:attribute:: ECAD
+   :value: 4
+
+
+.. py:attribute:: FixedWidth
+   :value: 1
+
+
+.. py:attribute:: H5
+   :value: 7
+
+
+.. py:attribute:: ICEPAK
+   :value: 5
+
+
+.. py:attribute:: MAPDL
+   :value: 2
+
+
+
+
+
+
+.. vale on

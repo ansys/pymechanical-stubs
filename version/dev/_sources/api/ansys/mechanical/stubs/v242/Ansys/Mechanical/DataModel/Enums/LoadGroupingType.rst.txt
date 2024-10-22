@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`LoadGroupingType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.LoadGroupingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadGroupingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadGroupingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ByLocation`
+            - 
+          * - :py:attr:`~No`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ByLocation
+   :value: 1
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`SelectionType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SelectionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the selection type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SelectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GeoBody`
+            - 
+          * - :py:attr:`~GeoEdge`
+            - 
+          * - :py:attr:`~GeoFace`
+            - 
+          * - :py:attr:`~GeoVertex`
+            - 
+          * - :py:attr:`~MeshElement`
+            - 
+          * - :py:attr:`~MeshElementFace`
+            - 
+          * - :py:attr:`~MeshFace`
+            - 
+          * - :py:attr:`~MeshNode`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: GeoBody
+   :value: 1
+
+
+.. py:attribute:: GeoEdge
+   :value: 3
+
+
+.. py:attribute:: GeoFace
+   :value: 2
+
+
+.. py:attribute:: GeoVertex
+   :value: 4
+
+
+.. py:attribute:: MeshElement
+   :value: 6
+
+
+.. py:attribute:: MeshElementFace
+   :value: 9
+
+
+.. py:attribute:: MeshFace
+   :value: 7
+
+
+.. py:attribute:: MeshNode
+   :value: 5
+
+
+
+
+
+
+.. vale on

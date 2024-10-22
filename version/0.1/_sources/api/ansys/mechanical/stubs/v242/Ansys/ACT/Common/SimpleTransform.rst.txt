@@ -1,0 +1,226 @@
+.. vale off
+
+
+
+:class:`SimpleTransform`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Common.SimpleTransform
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes simple getters and setters for rigid body transformations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SimpleTransform
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IsOrthonormal`
+            - Returns `true` if the provided axis vectors are all normalized and orthogonal.
+          * - :py:attr:`~TransformationMatrix`
+            - TransformationMatrix property.
+          * - :py:attr:`~Translation`
+            - The translation of the transformation with respect to the global/world coordinate
+          * - :py:attr:`~XAxis`
+            - The X-axis orientation of the transformation with respect to the global/world
+          * - :py:attr:`~YAxis`
+            - The Y-axis orientation of the transformation with respect to the global/world
+          * - :py:attr:`~ZAxis`
+            - The X-axis orientation of the transformation with respect to the global/world
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: IsOrthonormal
+   :type: Optional[bool]
+
+   
+   Returns `true` if the provided axis vectors are all normalized and orthogonal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransformationMatrix
+   :type: Optional[Ansys.Mechanical.DataModel.Utilities.RigidBodyTransformationMatrix]
+
+   
+   TransformationMatrix property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Translation
+   :type: Optional[Ansys.ACT.Core.Math.Point3D]
+
+   
+   The translation of the transformation with respect to the global/world coordinate
+   system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XAxis
+   :type: Optional[Ansys.ACT.Core.Math.Vector3D]
+
+   
+   The X-axis orientation of the transformation with respect to the global/world
+   coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YAxis
+   :type: Optional[Ansys.ACT.Core.Math.Vector3D]
+
+   
+   The Y-axis orientation of the transformation with respect to the global/world
+   coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZAxis
+   :type: Optional[Ansys.ACT.Core.Math.Vector3D]
+
+   
+   The X-axis orientation of the transformation with respect to the global/world
+   coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

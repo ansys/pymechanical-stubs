@@ -1,0 +1,85 @@
+.. vale off
+
+
+
+:class:`GraphicsViewportsExportBorderStyle`
+===========================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GraphicsViewportsExportBorderStyle
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies which borders to add, if any, to the images produced by MechanicalGraphicsWrapper.ExportViewports.
+   Border style enum values can be combined via bitwise-or ( | ).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GraphicsViewportsExportBorderStyle
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Exterior`
+            - 
+          * - :py:attr:`~Interior`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Exterior
+   :value: 2
+
+
+.. py:attribute:: Interior
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+
+
+
+
+.. vale on

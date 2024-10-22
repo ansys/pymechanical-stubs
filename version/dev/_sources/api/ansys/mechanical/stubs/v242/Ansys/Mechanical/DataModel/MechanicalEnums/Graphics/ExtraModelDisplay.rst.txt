@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ExtraModelDisplay`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ExtraModelDisplay
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExtraModelDisplay.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExtraModelDisplay
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NoWireframe`
+            - 
+          * - :py:attr:`~ShowElements`
+            - 
+          * - :py:attr:`~UndeformedModel`
+            - 
+          * - :py:attr:`~UndeformedWireframe`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NoWireframe
+   :value: 0
+
+
+.. py:attribute:: ShowElements
+   :value: 3
+
+
+.. py:attribute:: UndeformedModel
+   :value: 2
+
+
+.. py:attribute:: UndeformedWireframe
+   :value: 1
+
+
+
+
+
+
+.. vale on

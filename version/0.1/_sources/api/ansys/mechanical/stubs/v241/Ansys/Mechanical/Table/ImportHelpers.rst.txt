@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`ImportHelpers`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Table.ImportHelpers
+
+   Bases: :py:obj:`object`
+
+
+   
+   ImportHelpers interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

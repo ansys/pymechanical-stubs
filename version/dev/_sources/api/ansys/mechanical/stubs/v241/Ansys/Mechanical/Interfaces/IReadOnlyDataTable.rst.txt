@@ -1,0 +1,242 @@
+.. vale off
+
+
+
+:class:`IReadOnlyDataTable`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Interfaces.IReadOnlyDataTable
+
+   Bases: :py:obj:`object`
+
+
+   
+   IReadOnlyDataTable interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IReadOnlyDataTable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetRow`
+            - Returns an enumerable to iterate over the values in a row.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ColumnNames`
+            - Gets a list of the column names.
+          * - :py:attr:`~Columns`
+            - Explicitly get the columns of the table.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Metadata`
+            - Gets a dictionary with additional information that may be useful to understanding the
+          * - :py:attr:`~Name`
+            - Get the name of the table.
+          * - :py:attr:`~RowCount`
+            - Gets the maximum number of data points (rows) among all columns in the table
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ColumnNames
+   :type: Optional[tuple[str]]
+
+   
+   Gets a list of the column names.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Columns
+   :type: Optional[tuple[Ansys.Mechanical.Interfaces.IReadOnlyDataSeries]]
+
+   
+   Explicitly get the columns of the table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[Ansys.Mechanical.Interfaces.IReadOnlyDataSeries]
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Metadata
+   :type: Optional[dict[str, Any]]
+
+   
+   Gets a dictionary with additional information that may be useful to understanding the
+   context of data in the table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Get the name of the table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RowCount
+   :type: Optional[int]
+
+   
+   Gets the maximum number of data points (rows) among all columns in the table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetRow(rowIndex: int) -> Iterable
+
+   
+   Returns an enumerable to iterate over the values in a row.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

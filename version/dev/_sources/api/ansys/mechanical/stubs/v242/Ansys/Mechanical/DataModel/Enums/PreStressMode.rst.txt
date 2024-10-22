@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PreStressMode`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PreStressMode
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PreStressMode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PreStressMode
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Displacements`
+            - 
+          * - :py:attr:`~MaterialState`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Displacements
+   :value: 1
+
+
+.. py:attribute:: MaterialState
+   :value: 0
+
+
+
+
+
+
+.. vale on

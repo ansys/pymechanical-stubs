@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`AMBuildMachineType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMBuildMachineType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMBuildMachineType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMBuildMachineType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Ai`
+            - 
+          * - :py:attr:`~Eos`
+            - 
+          * - :py:attr:`~Hb3d`
+            - 
+          * - :py:attr:`~Renishaw`
+            - 
+          * - :py:attr:`~Sisma`
+            - 
+          * - :py:attr:`~Slm`
+            - 
+          * - :py:attr:`~Trumpf`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Ai
+   :value: 1
+
+
+.. py:attribute:: Eos
+   :value: 4
+
+
+.. py:attribute:: Hb3d
+   :value: 6
+
+
+.. py:attribute:: Renishaw
+   :value: 3
+
+
+.. py:attribute:: Sisma
+   :value: 7
+
+
+.. py:attribute:: Slm
+   :value: 2
+
+
+.. py:attribute:: Trumpf
+   :value: 5
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+
+
+
+
+.. vale on

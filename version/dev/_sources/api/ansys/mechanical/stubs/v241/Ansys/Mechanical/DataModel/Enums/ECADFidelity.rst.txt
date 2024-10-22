@@ -1,0 +1,113 @@
+.. vale off
+
+
+
+:class:`ECADFidelity`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ECADFidelity
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ECADFidelity
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BGABarrel`
+            - 
+          * - :py:attr:`~BGABlock`
+            - 
+          * - :py:attr:`~BGAFullFidelity`
+            - 
+          * - :py:attr:`~BGAWire`
+            - 
+          * - :py:attr:`~MCADBlock`
+            - 
+          * - :py:attr:`~MCADFullFidelity`
+            - 
+          * - :py:attr:`~PCBBlock`
+            - 
+          * - :py:attr:`~PCBLayers`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BGABarrel
+   :value: 3
+
+
+.. py:attribute:: BGABlock
+   :value: 1
+
+
+.. py:attribute:: BGAFullFidelity
+   :value: 0
+
+
+.. py:attribute:: BGAWire
+   :value: 2
+
+
+.. py:attribute:: MCADBlock
+   :value: 1
+
+
+.. py:attribute:: MCADFullFidelity
+   :value: 0
+
+
+.. py:attribute:: PCBBlock
+   :value: 2
+
+
+.. py:attribute:: PCBLayers
+   :value: 1
+
+
+
+
+
+
+.. vale on

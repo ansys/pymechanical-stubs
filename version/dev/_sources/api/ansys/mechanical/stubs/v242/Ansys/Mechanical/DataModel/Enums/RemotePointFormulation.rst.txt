@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`RemotePointFormulation`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.RemotePointFormulation
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RemotePointFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RemotePointFormulation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LagrangeMultiplier`
+            - 
+          * - :py:attr:`~MPC`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: LagrangeMultiplier
+   :value: 1
+
+
+.. py:attribute:: MPC
+   :value: 0
+
+
+
+
+
+
+.. vale on

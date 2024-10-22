@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDSavePrintSummaryOnType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDSavePrintSummaryOnType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDSavePrintSummaryOnType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~TimeSteps`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Time
+   :value: 1
+
+
+.. py:attribute:: TimeSteps
+   :value: 0
+
+
+
+
+
+
+.. vale on

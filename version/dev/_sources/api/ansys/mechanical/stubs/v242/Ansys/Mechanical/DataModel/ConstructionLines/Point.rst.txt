@@ -1,0 +1,215 @@
+.. vale off
+
+
+
+:class:`Point`
+==============
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.Point
+
+   Bases: :py:obj:`object`
+
+
+   
+   A point in a ConstructionLine instance, may have an associated edge vertex.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Point
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equivalent`
+            - Checks to see if another point is equivalent to this one.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Definition`
+            - Definition property.
+          * - :py:attr:`~IsRepresentation`
+            - Check to see if there is a valid entity that this instance represents.
+          * - :py:attr:`~Location`
+            - Get the global location of this point.
+          * - :py:attr:`~ObjectId`
+            - Get the ID of the represented entity.
+          * - :py:attr:`~Type`
+            - Type property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Definition
+   :type: Optional[Any]
+
+   
+   Definition property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsRepresentation
+   :type: Optional[bool]
+
+   
+   Check to see if there is a valid entity that this instance represents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Core.Math.Point3D]
+
+   
+   Get the global location of this point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+   
+   Get the ID of the represented entity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[Ansys.Mechanical.DataModel.ConstructionLines.PointType]
+
+   
+   Type property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equivalent(other: Ansys.Mechanical.DataModel.ConstructionLines.Point) -> bool
+
+   
+   Checks to see if another point is equivalent to this one.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

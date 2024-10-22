@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`TopoOptimizationOutputLog`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.TopoOptimizationOutputLog
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TopoOptimizationOutputLog.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoOptimizationOutputLog
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~High`
+            - 
+          * - :py:attr:`~Low`
+            - 
+          * - :py:attr:`~Medium`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: High
+   :value: 3
+
+
+.. py:attribute:: Low
+   :value: 1
+
+
+.. py:attribute:: Medium
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

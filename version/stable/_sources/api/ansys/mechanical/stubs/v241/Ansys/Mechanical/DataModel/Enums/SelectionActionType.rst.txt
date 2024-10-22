@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`SelectionActionType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SelectionActionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the selction action type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SelectionActionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - 
+          * - :py:attr:`~Convert`
+            - 
+          * - :py:attr:`~Diagnostics`
+            - 
+          * - :py:attr:`~Filter`
+            - 
+          * - :py:attr:`~Invert`
+            - 
+          * - :py:attr:`~Remove`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Add
+   :value: 4
+
+
+.. py:attribute:: Convert
+   :value: 5
+
+
+.. py:attribute:: Diagnostics
+   :value: 6
+
+
+.. py:attribute:: Filter
+   :value: 1
+
+
+.. py:attribute:: Invert
+   :value: 3
+
+
+.. py:attribute:: Remove
+   :value: 2
+
+
+
+
+
+
+.. vale on
