@@ -20,9 +20,9 @@ from ansys.mechanical.stubs import __version__
 project = "ansys.mechanical.stubs"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS Inc."
-release = version = __version__
 cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com")
-
+switcher_version = get_version_match(__version__)
+release = version = __version__
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -142,7 +142,7 @@ html_context = {
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": get_version_match(version),
+        "version_match": switcher_version,
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
@@ -161,12 +161,6 @@ html_theme_options = {
             "icon": "fa fa-comment fa-fw",
         },
     ],
-    "use_meilisearch": {
-        "api_key": os.getenv("MEILISEARCH_PUBLIC_API_KEY", ""),
-        "index_uids": {
-            f"pymechanical-stubs-v{get_version_match(version).replace('.', '-')}": "PyMechanical Stubs",
-        },
-    },
     "ansys_sphinx_theme_autoapi": {
         "project": project,
         "templates": "_templates/autoapi",

@@ -1,7 +1,16 @@
 name: GitHub CI
 on:
   pull_request:
-  workflow_dispatch:
+  workflow_dispatch: # or workflow_call
+    inputs:
+      mechanical-version:
+        description: "Create stubs for the following Mechanical version:"
+        type: choice
+        options:
+          - '251'
+          - '242'
+          - '241'
+        default: "241" # Make same as DEFAULT_MECHANICAL_VERSION
   push:
     tags:
       - "*"
@@ -10,6 +19,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.10'
+  DEFAULT_MECHANICAL_VERSION: '241'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
   PACKAGE_PATH: src/ansys/mechanical/stubs
@@ -62,20 +72,41 @@ jobs:
           vale-config: doc/.vale.ini
           token: ${{ secrets.GITHUB_TOKEN }}
 
+  set-mechanical-versions:
+    name: Set Mechanical image and version variables
+    runs-on: ubuntu-latest
+    outputs:
+      # '24.2.0'
+      image: ${{ steps.save-versions.outputs.image }}
+      # '242'
+      version: '${{ steps.save-versions.outputs.version }}'
+    steps:
+      - id: save-versions
+        run: |
+          if [[ -z "${{ inputs.mechanical-version }}" ]]; then
+            export mech_version=${{ env.DEFAULT_MECHANICAL_VERSION }}
+          else
+            export mech_version=${{ inputs.mechanical-version }}
+          fi
+          # Create the image version from the Mechanical version (242 -> 24.2.0)
+          export mech_image_version=${mech_version:0:2}.${mech_version:2}.0
+
+          # Set the image and version variables
+          echo "image=$mech_image_version" >> $GITHUB_OUTPUT
+          echo "version=$mech_version" >> $GITHUB_OUTPUT
+
   gen-stubs:
     name: Generate Mechanical stubs
-    needs: [style, doc-style]
+    needs: [style, doc-style, set-mechanical-versions]
     runs-on: ${{ matrix.os }}
     container:
-      image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
+      image: ghcr.io/ansys/mechanical:${{ matrix.image }}
       options: --entrypoint /bin/bash
     strategy:
       matrix:
         os: [public-ubuntu-latest-8-cores]
-        mechanical: [
-          { image: '24.1.0', version: '241' },
-          { image: '24.2.0', version: '242' },
-        ]
+        image: ['${{ needs.set-mechanical-versions.outputs.image }}']
+        version: ['${{ needs.set-mechanical-versions.outputs.version }}']
         python-version: ['3.10', '3.11', '3.12']
     steps:
       - name: "Install Git and clone project"
@@ -83,8 +114,8 @@ jobs:
 
       - name: "Install dependencies"
         env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.version }}
+          ANSYSCL${{ matrix.version }}_DIR: /install/ansys_inc/v${{ matrix.version }}/licensingclient
         run: |
           apt update
           apt install --reinstall ca-certificates
@@ -106,8 +137,8 @@ jobs:
 
       - name: "Generate the Mechanical stub files"
         env:
-          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.version }}
+          ANSYSCL${{ matrix.version }}_DIR: /install/ansys_inc/v${{ matrix.version }}/licensingclient
         run: |
           python src/ansys/mechanical/stubs/stub_generator/create_files.py > results.txt
         continue-on-error: True
@@ -126,11 +157,11 @@ jobs:
             exit 1
           fi
 
-      - name: "Upload v${{ matrix.mechanical.version }} stubs"
+      - name: "Upload v${{ matrix.version }} stubs"
         uses: actions/upload-artifact@v4
         with:
-          name: v${{ matrix.mechanical.version }}-${{ matrix.python-version }}
-          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
+          name: v${{ matrix.version }}-${{ matrix.python-version }}
+          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.version }}
           retention-days: 7
 
   smoke-tests:
