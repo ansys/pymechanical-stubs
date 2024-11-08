@@ -6,6 +6,19 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [2024.2.0](https://github.com/ansys/pymechanical-stubs/releases/tag/v2024.2.0) - 2024-11-08
+
+
+### Added
+
+- Make 2024 R2 stubs [#86](https://github.com/ansys/pymechanical-stubs/pull/86)
+
+
+### Maintenance
+
+- pre-commit automatic update [#82](https://github.com/ansys/pymechanical-stubs/pull/82)
+- update CHANGELOG for v2024.1.0 [#85](https://github.com/ansys/pymechanical-stubs/pull/85)
+
 ## [2024.1.0](https://github.com/ansys/pymechanical-stubs/releases/tag/v2024.1.0) - 2024-11-08
 
 
