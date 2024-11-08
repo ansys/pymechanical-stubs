@@ -10,7 +10,7 @@ on:
           - '251'
           - '242'
           - '241'
-        default: "241" # Make same as DEFAULT_MECHANICAL_VERSION
+        default: "242" # Make same as DEFAULT_MECHANICAL_VERSION
   push:
     tags:
       - "*"
@@ -19,7 +19,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.10'
-  DEFAULT_MECHANICAL_VERSION: '241'
+  DEFAULT_MECHANICAL_VERSION: '242'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
   PACKAGE_PATH: src/ansys/mechanical/stubs
