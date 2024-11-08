@@ -1,0 +1,93 @@
+.. vale off
+
+
+
+:class:`ExportSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Substructure.ExportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   ExportSettings class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ForExpansion`
+            - Specifies whether to prepare the export for expansion. That allows for postprocessing results on physical nodes of an imported condensed part.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ForExpansion
+   :type: Optional[bool]
+
+   
+   Specifies whether to prepare the export for expansion. That allows for postprocessing results on physical nodes of an imported condensed part. 
+   Default: false. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`RotationPlane`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.RotationPlane
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RotationPlane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RotationPlane
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~XY`
+            - 
+          * - :py:attr:`~XZ`
+            - 
+          * - :py:attr:`~YZ`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: XY
+   :value: 1
+
+
+.. py:attribute:: XZ
+   :value: 3
+
+
+.. py:attribute:: YZ
+   :value: 2
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDEulerDomainType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDEulerDomainType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDEulerDomainType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~eGrid`
+            - 
+          * - :py:attr:`~eWedge`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: eGrid
+   :value: 1
+
+
+.. py:attribute:: eWedge
+   :value: 0
+
+
+
+
+
+
+.. vale on

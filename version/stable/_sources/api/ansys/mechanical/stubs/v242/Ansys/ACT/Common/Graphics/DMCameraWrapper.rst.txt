@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`DMCameraWrapper`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Common.Graphics.DMCameraWrapper
+
+   Bases: :py:obj:`object`
+
+
+   
+   Wrapper for Camera in Design Modeler.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

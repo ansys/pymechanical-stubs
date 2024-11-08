@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`HeatTreatmentStep`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.HeatTreatmentStep
+
+   Bases: :py:obj:`object`
+
+
+   
+   HeatTreatmentStep class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

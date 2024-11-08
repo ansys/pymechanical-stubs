@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`PSDBoundaryConditionSelectionType`
+==========================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PSDBoundaryConditionSelectionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PSDBoundaryConditionSelectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PSDBoundaryConditionSelectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllFixedSupports`
+            - 
+          * - :py:attr:`~AllFixedSupportsAndRemoteDisplacements`
+            - 
+          * - :py:attr:`~AllRemoteDisplacements`
+            - 
+          * - :py:attr:`~AllSupports`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllFixedSupports
+   :value: 1
+
+
+.. py:attribute:: AllFixedSupportsAndRemoteDisplacements
+   :value: 3
+
+
+.. py:attribute:: AllRemoteDisplacements
+   :value: 2
+
+
+.. py:attribute:: AllSupports
+   :value: 4
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+
+
+
+
+.. vale on

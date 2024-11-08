@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`GrowElbowElementsBy`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GrowElbowElementsBy
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GrowElbowElementsBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GrowElbowElementsBy
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Factor`
+            - 
+          * - :py:attr:`~Length`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~NumberOfElements`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Factor
+   :value: 1
+
+
+.. py:attribute:: Length
+   :value: 2
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: NumberOfElements
+   :value: 3
+
+
+
+
+
+
+.. vale on

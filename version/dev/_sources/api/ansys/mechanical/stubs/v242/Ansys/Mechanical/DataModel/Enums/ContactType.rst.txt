@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`ContactType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ContactType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bonded`
+            - 
+          * - :py:attr:`~BondedInitial`
+            - 
+          * - :py:attr:`~ForcedFrictionalSliding`
+            - 
+          * - :py:attr:`~Frictional`
+            - 
+          * - :py:attr:`~Frictionless`
+            - 
+          * - :py:attr:`~GeneralWeld`
+            - 
+          * - :py:attr:`~InterStage`
+            - 
+          * - :py:attr:`~NoSeparation`
+            - 
+          * - :py:attr:`~NoSeparationSliding`
+            - 
+          * - :py:attr:`~Reinforcement`
+            - 
+          * - :py:attr:`~Rough`
+            - 
+          * - :py:attr:`~SpotWeld`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bonded
+   :value: 1
+
+
+.. py:attribute:: BondedInitial
+   :value: 9
+
+
+.. py:attribute:: ForcedFrictionalSliding
+   :value: 11
+
+
+.. py:attribute:: Frictional
+   :value: 3
+
+
+.. py:attribute:: Frictionless
+   :value: 2
+
+
+.. py:attribute:: GeneralWeld
+   :value: 7
+
+
+.. py:attribute:: InterStage
+   :value: 12
+
+
+.. py:attribute:: NoSeparation
+   :value: 5
+
+
+.. py:attribute:: NoSeparationSliding
+   :value: 8
+
+
+.. py:attribute:: Reinforcement
+   :value: 10
+
+
+.. py:attribute:: Rough
+   :value: 4
+
+
+.. py:attribute:: SpotWeld
+   :value: 6
+
+
+
+
+
+
+.. vale on

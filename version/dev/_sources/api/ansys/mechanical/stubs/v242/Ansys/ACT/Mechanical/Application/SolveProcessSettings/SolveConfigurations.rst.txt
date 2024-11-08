@@ -1,0 +1,121 @@
+.. vale off
+
+
+
+:class:`SolveConfigurations`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfigurations
+
+   Bases: :py:obj:`object`
+
+
+   
+   The application's collection of solve configurations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolveConfigurations
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Adds the given SolveConfiguration object to the collection.
+          * - :py:attr:`~Remove`
+            - Removes the given SolveConfiguration from the collection.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - The number of solve configurations in the collection.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+   
+   The number of solve configurations in the collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(item: Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration) -> None
+
+   
+   Adds the given SolveConfiguration object to the collection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(item: Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration) -> bool
+
+   
+   Removes the given SolveConfiguration from the collection.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

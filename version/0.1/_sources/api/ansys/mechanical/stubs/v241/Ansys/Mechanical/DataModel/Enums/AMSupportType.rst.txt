@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMSupportType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMSupportType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMSupportType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMSupportType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Block`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Block
+   :value: 1
+
+
+.. py:attribute:: UserDefined
+   :value: 2
+
+
+
+
+
+
+.. vale on

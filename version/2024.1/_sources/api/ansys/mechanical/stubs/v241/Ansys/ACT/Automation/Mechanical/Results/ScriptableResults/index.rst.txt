@@ -1,0 +1,109 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ScriptableResults``
+=====================================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.ScriptableResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ScriptableResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.ScriptableResults.PythonResult`
+            - Defines a PythonResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.ScriptableResults.ScriptDefinedResultFolder`
+            - Defines a ScriptDefinedResultFolder.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> PythonResult</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/ScriptableResults/PythonResult>
+    <span class="nf nf-cod-symbol_class"></span> ScriptDefinedResultFolder</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/ScriptableResults/ScriptDefinedResultFolder>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ScriptableResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

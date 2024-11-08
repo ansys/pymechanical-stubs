@@ -1,0 +1,173 @@
+.. vale off
+
+
+
+:class:`DMGraphicsWrapper`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Common.Graphics.DMGraphicsWrapper
+
+   Bases: :py:obj:`object`
+
+
+   
+   Wrapper for Graphics in Design Modeler.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DMGraphicsWrapper
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CreatePixelPoint`
+            - Creates a point from pixel coordinates (ie. window coordinates).
+          * - :py:attr:`~CreateVector3D`
+            - Create a 3D vector from world coordinates.
+          * - :py:attr:`~CreateWorldPoint`
+            - Create a point from world coordinates.
+          * - :py:attr:`~ExportScreenToImage`
+            - Exports the current Graphics screen to a file.
+          * - :py:attr:`~ForceResume`
+            - Forces the scene to resume. Useful in interactive context (console) if a reference on an
+          * - :py:attr:`~Redraw`
+            - Forces the scene to redraw its content.
+          * - :py:attr:`~Suspend`
+            - Prevents the scene to redraw until the Resume controller method was called.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Scene`
+            - Gets the scene.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Scene
+   :type: Optional[Ansys.ACT.Interfaces.Graphics.IGraphicsCollection]
+
+   
+   Gets the scene.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CreatePixelPoint(x: int, y: int) -> Ansys.ACT.Interfaces.Graphics.IPixelPoint
+
+   
+   Creates a point from pixel coordinates (ie. window coordinates).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateVector3D(x: float, y: float, z: float) -> Ansys.ACT.Interfaces.Graphics.IVector3D
+
+   
+   Create a 3D vector from world coordinates.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateWorldPoint(x: float, y: float, z: float) -> Ansys.ACT.Interfaces.Graphics.IWorldPoint
+
+   
+   Create a point from world coordinates.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportScreenToImage(filePath: str) -> None
+
+   
+   Exports the current Graphics screen to a file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ForceResume() -> None
+
+.. code-block:: text
+
+   Forces the scene to resume. Useful in interactive context (console) if a reference on an
+   operation has been lost.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Redraw() -> None
+
+   
+   Forces the scene to redraw its content.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Suspend() -> Ansys.ACT.Interfaces.Graphics.ISuspendController
+
+   
+   Prevents the scene to redraw until the Resume controller method was called.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

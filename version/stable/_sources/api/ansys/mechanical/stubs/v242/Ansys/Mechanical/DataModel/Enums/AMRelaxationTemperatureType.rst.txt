@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMRelaxationTemperatureType`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMRelaxationTemperatureType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMRelaxationTemperatureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMRelaxationTemperatureType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~UserSpecified`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: UserSpecified
+   :value: 1
+
+
+
+
+
+
+.. vale on

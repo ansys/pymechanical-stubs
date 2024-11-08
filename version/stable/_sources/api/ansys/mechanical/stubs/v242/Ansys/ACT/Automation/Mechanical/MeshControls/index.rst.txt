@@ -1,0 +1,235 @@
+.. vale off
+
+
+
+
+
+
+
+
+``MeshControls``
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: MeshControls
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.AutomaticMethod`
+            - Defines a AutomaticMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Connect`
+            - Defines a Connect.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.ContactSizing`
+            - Defines a ContactSizing.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Deviation`
+            - Defines a Deviation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.FaceMeshing`
+            - Defines a FaceMeshing.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.FeatureSuppress`
+            - Defines a FeatureSuppress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.GeometryFidelity`
+            - Defines a GeometryFidelity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Inflation`
+            - Defines a Inflation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.MatchControl`
+            - Defines a MatchControl.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Mesh`
+            - Defines a Mesh.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.MeshControl`
+            - Defines a MeshControl.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.MeshCopy`
+            - Defines a MeshCopy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Pinch`
+            - Defines a Pinch.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Refinement`
+            - Defines a Refinement.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Relevance`
+            - Defines a Relevance.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.RepairTopology`
+            - Defines a RepairTopology.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Sizing`
+            - Defines a Sizing.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.TopologySuppressControl`
+            - Defines a TopologySuppressControl.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Washer`
+            - Defines a Washer.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshControls.Weld`
+            - Defines a Weld.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AutomaticMethod</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/AutomaticMethod>
+    <span class="nf nf-cod-symbol_class"></span> Connect</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Connect>
+    <span class="nf nf-cod-symbol_class"></span> ContactSizing</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/ContactSizing>
+    <span class="nf nf-cod-symbol_class"></span> Deviation</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Deviation>
+    <span class="nf nf-cod-symbol_class"></span> FaceMeshing</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/FaceMeshing>
+    <span class="nf nf-cod-symbol_class"></span> FeatureSuppress</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/FeatureSuppress>
+    <span class="nf nf-cod-symbol_class"></span> GeometryFidelity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/GeometryFidelity>
+    <span class="nf nf-cod-symbol_class"></span> Inflation</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Inflation>
+    <span class="nf nf-cod-symbol_class"></span> MatchControl</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/MatchControl>
+    <span class="nf nf-cod-symbol_class"></span> Mesh</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Mesh>
+    <span class="nf nf-cod-symbol_class"></span> MeshControl</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/MeshControl>
+    <span class="nf nf-cod-symbol_class"></span> MeshCopy</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/MeshCopy>
+    <span class="nf nf-cod-symbol_class"></span> Pinch</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Pinch>
+    <span class="nf nf-cod-symbol_class"></span> Refinement</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Refinement>
+    <span class="nf nf-cod-symbol_class"></span> Relevance</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Relevance>
+    <span class="nf nf-cod-symbol_class"></span> RepairTopology</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/RepairTopology>
+    <span class="nf nf-cod-symbol_class"></span> Sizing</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Sizing>
+    <span class="nf nf-cod-symbol_class"></span> TopologySuppressControl</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/TopologySuppressControl>
+    <span class="nf nf-cod-symbol_class"></span> Washer</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Washer>
+    <span class="nf nf-cod-symbol_class"></span> Weld</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/MeshControls/Weld>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+MeshControls module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,722 @@
+.. vale off
+
+
+
+:class:`Connections`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Connections.Connections
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Connections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Connections
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddAMBondConnection`
+            - Creates a new AMBondConnection
+          * - :py:attr:`~AddBeam`
+            - Creates a new Beam
+          * - :py:attr:`~AddBearing`
+            - Creates a new Bearing
+          * - :py:attr:`~AddBodyInteraction`
+            - Creates a new child BodyInteraction.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddConnectionGroup`
+            - Creates a new ConnectionGroup
+          * - :py:attr:`~AddContactRegion`
+            - Creates a new child ContactRegion.
+          * - :py:attr:`~AddContactSolutionInformation`
+            - Creates a new ContactSolutionInformation
+          * - :py:attr:`~AddContactTool`
+            - Creates a new ContactTool
+          * - :py:attr:`~AddEndRelease`
+            - Creates a new EndRelease
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddInterStage`
+            - Creates a new child InterStage.
+          * - :py:attr:`~AddJoint`
+            - Creates a new child Joint.
+          * - :py:attr:`~AddSpotWeld`
+            - Creates a new child SpotWeld.
+          * - :py:attr:`~AddSpotWeldGroup`
+            - Creates a new child SpotWeldGroup.
+          * - :py:attr:`~AddSpring`
+            - Creates a new Spring
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateAutomaticConnections`
+            - Run the CreateAutomaticConnections action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~ExportModelTopology`
+            - ExportModelTopology method.
+          * - :py:attr:`~GenerateInitialContactResults`
+            - Generate Initial Contact Results and Mesh Parts
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RepairOverlappingContactRegions`
+            - Check for Overlapping Contact Regions. However, please note that this action does not result in any actual repair being performed.
+          * - :py:attr:`~SearchConnectionsForDuplicatePairs`
+            - Run the SearchConnectionsForDuplicatePairs action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FixedJoints`
+            - Gets or sets the FixedJoints.
+          * - :py:attr:`~GenerateAutomaticConnectionOnRefresh`
+            - Gets or sets the GenerateAutomaticConnectionOnRefresh.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~SolverFilesDirectory`
+            - Gets or sets the SolverFilesDirectory.
+          * - :py:attr:`~TransparencyEnabled`
+            - Gets or sets the TransparencyEnabled.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FixedJoints
+   :type: Optional[bool]
+
+   
+   Gets or sets the FixedJoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateAutomaticConnectionOnRefresh
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutomaticOrManual]
+
+   
+   Gets or sets the GenerateAutomaticConnectionOnRefresh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSContactGroupAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+   
+   Gets or sets the SolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransparencyEnabled
+   :type: Optional[bool]
+
+   
+   Gets or sets the TransparencyEnabled.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAMBondConnection() -> Ansys.ACT.Automation.Mechanical.Connections.AMBondConnection
+
+   
+   Creates a new AMBondConnection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBeam() -> Ansys.ACT.Automation.Mechanical.Connections.Beam
+
+   
+   Creates a new Beam
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBearing() -> Ansys.ACT.Automation.Mechanical.Connections.Bearing
+
+   
+   Creates a new Bearing
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBodyInteraction() -> Ansys.ACT.Automation.Mechanical.Connections.BodyInteraction
+
+   
+   Creates a new child BodyInteraction.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddConnectionGroup() -> Ansys.ACT.Automation.Mechanical.Connections.ConnectionGroup
+
+   
+   Creates a new ConnectionGroup
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactRegion() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Creates a new child ContactRegion.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactSolutionInformation() -> Ansys.ACT.Automation.Mechanical.ContactSolutionInformation
+
+   
+   Creates a new ContactSolutionInformation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactTool() -> Ansys.ACT.Automation.Mechanical.PreContactTool
+
+   
+   Creates a new ContactTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEndRelease() -> Ansys.ACT.Automation.Mechanical.EndRelease
+
+   
+   Creates a new EndRelease
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInterStage() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Creates a new child InterStage.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJoint() -> Ansys.ACT.Automation.Mechanical.Connections.Joint
+
+   
+   Creates a new child Joint.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpotWeld() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Creates a new child SpotWeld.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpotWeldGroup() -> Ansys.ACT.Automation.Mechanical.Connections.SpotWeldGroup
+
+   
+   Creates a new child SpotWeldGroup.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpring() -> Ansys.ACT.Automation.Mechanical.Connections.Spring
+
+   
+   Creates a new Spring
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateAutomaticConnections() -> None
+
+   
+   Run the CreateAutomaticConnections action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportModelTopology(filename: str) -> None
+
+   
+   ExportModelTopology method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateInitialContactResults() -> None
+
+   
+   Generate Initial Contact Results and Mesh Parts
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RepairOverlappingContactRegions() -> None
+
+   
+   Check for Overlapping Contact Regions. However, please note that this action does not result in any actual repair being performed.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SearchConnectionsForDuplicatePairs() -> None
+
+   
+   Run the SearchConnectionsForDuplicatePairs action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

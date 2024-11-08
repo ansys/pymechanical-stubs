@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`HarmonicMSUPStorage`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.HarmonicMSUPStorage
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the HarmonicMSUPStorage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HarmonicMSUPStorage
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllFrequencies`
+            - 
+          * - :py:attr:`~SelectedFrequencies`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllFrequencies
+   :value: 0
+
+
+.. py:attribute:: SelectedFrequencies
+   :value: 1
+
+
+
+
+
+
+.. vale on

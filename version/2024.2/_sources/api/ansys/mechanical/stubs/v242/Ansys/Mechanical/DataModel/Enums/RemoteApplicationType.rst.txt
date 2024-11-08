@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`RemoteApplicationType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.RemoteApplicationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RemoteApplicationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RemoteApplicationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DirectAttachment`
+            - 
+          * - :py:attr:`~RemoteAttachment`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DirectAttachment
+   :value: 1
+
+
+.. py:attribute:: RemoteAttachment
+   :value: 2
+
+
+
+
+
+
+.. vale on

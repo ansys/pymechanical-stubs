@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`LatticeType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.LatticeType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LatticeType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LatticeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Crossed`
+            - 
+          * - :py:attr:`~Cubic`
+            - 
+          * - :py:attr:`~Diagonal`
+            - 
+          * - :py:attr:`~Midpoint`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Octahedral1`
+            - 
+          * - :py:attr:`~Octahedral2`
+            - 
+          * - :py:attr:`~Octet`
+            - 
+          * - :py:attr:`~Sphere`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Crossed
+   :value: 6
+
+
+.. py:attribute:: Cubic
+   :value: 1
+
+
+.. py:attribute:: Diagonal
+   :value: 5
+
+
+.. py:attribute:: Midpoint
+   :value: 3
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Octahedral1
+   :value: 7
+
+
+.. py:attribute:: Octahedral2
+   :value: 8
+
+
+.. py:attribute:: Octet
+   :value: 4
+
+
+.. py:attribute:: Sphere
+   :value: 2
+
+
+
+
+
+
+.. vale on

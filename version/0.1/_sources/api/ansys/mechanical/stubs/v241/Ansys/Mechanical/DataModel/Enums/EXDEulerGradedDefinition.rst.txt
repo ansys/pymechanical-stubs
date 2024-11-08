@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDEulerGradedDefinition`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDEulerGradedDefinition
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDEulerGradedDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~eGraded`
+            - 
+          * - :py:attr:`~eNotGraded`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: eGraded
+   :value: 1
+
+
+.. py:attribute:: eNotGraded
+   :value: 0
+
+
+
+
+
+
+.. vale on

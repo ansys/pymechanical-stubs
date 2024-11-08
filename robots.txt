@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: /version/2024.1
+Disallow: /version/0.1
+
+Sitemap: https://scripting.mechanical.docs.pyansys.com/sitemap.xml

@@ -1,0 +1,116 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Materials``
+=============================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Materials
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Materials
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Materials.ExistingMaterialOperation`
+            - Specifies what should occur when a material being imported has the same identifiers as
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Materials.IdentifierType`
+            - The primary identifier to use when searching for existing materials. The name and the uuid must
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Materials.ImportFormat`
+            - Specifies how to interpret the material URI when importing.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> ExistingMaterialOperation</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Materials/ExistingMaterialOperation>
+    <span class="nf nf-cod-symbol_enum"></span> IdentifierType</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Materials/IdentifierType>
+    <span class="nf nf-cod-symbol_enum"></span> ImportFormat</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Materials/ImportFormat>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Materials module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

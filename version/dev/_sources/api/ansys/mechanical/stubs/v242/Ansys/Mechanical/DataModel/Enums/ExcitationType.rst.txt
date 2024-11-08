@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ExcitationType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ExcitationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExcitationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExcitationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Pressure
+   :value: 0
+
+
+.. py:attribute:: Velocity
+   :value: 1
+
+
+
+
+
+
+.. vale on

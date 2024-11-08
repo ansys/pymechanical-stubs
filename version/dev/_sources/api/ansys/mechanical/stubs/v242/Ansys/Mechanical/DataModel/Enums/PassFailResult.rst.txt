@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`PassFailResult`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PassFailResult
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PassFailResult.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PassFailResult
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FailedAbove`
+            - 
+          * - :py:attr:`~FailedBelow`
+            - 
+          * - :py:attr:`~PassedAbove`
+            - 
+          * - :py:attr:`~PassedBelow`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FailedAbove
+   :value: 1
+
+
+.. py:attribute:: FailedBelow
+   :value: 0
+
+
+.. py:attribute:: PassedAbove
+   :value: 3
+
+
+.. py:attribute:: PassedBelow
+   :value: 2
+
+
+.. py:attribute:: Unknown
+   :value: 4
+
+
+
+
+
+
+.. vale on

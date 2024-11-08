@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SlidingContactType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SlidingContactType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SlidingContactType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SlidingContactType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConnectedSurface`
+            - 
+          * - :py:attr:`~DiscreteSurface`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ConnectedSurface
+   :value: 1
+
+
+.. py:attribute:: DiscreteSurface
+   :value: 0
+
+
+
+
+
+
+.. vale on

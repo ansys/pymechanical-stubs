@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`NonlinearAdaptivityUpdateType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityUpdateType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NonlinearAdaptivityUpdateType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NonlinearAdaptivityUpdateType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EquallySpacedPoints`
+            - 
+          * - :py:attr:`~SpecifiedRecurrenceRate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EquallySpacedPoints
+   :value: 2
+
+
+.. py:attribute:: SpecifiedRecurrenceRate
+   :value: 1
+
+
+
+
+
+
+.. vale on

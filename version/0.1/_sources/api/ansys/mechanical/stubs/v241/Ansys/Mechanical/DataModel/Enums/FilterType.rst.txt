@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FilterType`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.FilterType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FilterType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FilterType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Butterworth`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~SAE`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Butterworth
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: SAE
+   :value: 2
+
+
+
+
+
+
+.. vale on

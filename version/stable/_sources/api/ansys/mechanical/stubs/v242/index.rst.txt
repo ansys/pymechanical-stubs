@@ -1,0 +1,98 @@
+.. vale off
+
+
+
+
+
+
+
+
+Mechanical 2024 R2 API Reference
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: v242
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys`
+            - Ansys module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Ansys</api/ansys/mechanical/stubs/v242/Ansys/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Ansys Mechanical v242 module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

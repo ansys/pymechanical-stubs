@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`CrackSurfaceLoadApplyTo`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CrackSurfaceLoadApplyTo
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CrackSurfaceLoadApplyTo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CrackSurfaceLoadApplyTo
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~InitialAndNewCrackFaces`
+            - 
+          * - :py:attr:`~NewCrackFacesOnly`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: InitialAndNewCrackFaces
+   :value: 1
+
+
+.. py:attribute:: NewCrackFacesOnly
+   :value: 0
+
+
+
+
+
+
+.. vale on

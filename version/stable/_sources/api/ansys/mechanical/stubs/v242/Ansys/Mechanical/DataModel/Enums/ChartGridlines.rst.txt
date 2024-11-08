@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ChartGridlines`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ChartGridlines
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ChartGridlines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ChartGridlines
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BothAxis`
+            - 
+          * - :py:attr:`~NoAxis`
+            - 
+          * - :py:attr:`~XAxis`
+            - 
+          * - :py:attr:`~YAxis`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BothAxis
+   :value: 0
+
+
+.. py:attribute:: NoAxis
+   :value: 3
+
+
+.. py:attribute:: XAxis
+   :value: 1
+
+
+.. py:attribute:: YAxis
+   :value: 2
+
+
+
+
+
+
+.. vale on

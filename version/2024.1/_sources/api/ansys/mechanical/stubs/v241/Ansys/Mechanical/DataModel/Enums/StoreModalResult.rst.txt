@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`StoreModalResult`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.StoreModalResult
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the StoreModalResult.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StoreModalResult
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ForFutureAnalysis`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ForFutureAnalysis
+   :value: 2
+
+
+.. py:attribute:: No
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

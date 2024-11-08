@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMScanPatternDefinition`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMScanPatternDefinition
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMScanPatternDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMScanPatternDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BuildFile`
+            - 
+          * - :py:attr:`~Generated`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BuildFile
+   :value: 1
+
+
+.. py:attribute:: Generated
+   :value: 0
+
+
+
+
+
+
+.. vale on

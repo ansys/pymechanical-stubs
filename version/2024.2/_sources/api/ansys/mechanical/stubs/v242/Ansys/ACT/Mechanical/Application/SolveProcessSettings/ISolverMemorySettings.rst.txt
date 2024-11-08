@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`ISolverMemorySettings`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolverMemorySettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   ISolverMemorySettings interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISolverMemorySettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - Gets or sets whether or not manual memory settings are active in the current configuration.
+          * - :py:attr:`~Database`
+            - Gets or sets the database memory amount (MB).
+          * - :py:attr:`~Workspace`
+            - Gets or sets the workspace memory amount (megabytes).
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+   
+   Gets or sets whether or not manual memory settings are active in the current configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Database
+   :type: Optional[int]
+
+   
+   Gets or sets the database memory amount (MB).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Workspace
+   :type: Optional[int]
+
+   
+   Gets or sets the workspace memory amount (megabytes).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

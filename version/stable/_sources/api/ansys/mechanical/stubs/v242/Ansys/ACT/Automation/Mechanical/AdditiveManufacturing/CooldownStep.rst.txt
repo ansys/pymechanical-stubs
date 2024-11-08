@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`CooldownStep`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.CooldownStep
+
+   Bases: :py:obj:`object`
+
+
+   
+   CooldownStep class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

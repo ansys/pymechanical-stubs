@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`FaceMeshingMethod`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.FaceMeshingMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FaceMeshingMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Quadrilaterals`
+            - 
+          * - :py:attr:`~TrianglesBestSplit`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Quadrilaterals
+   :value: 0
+
+
+.. py:attribute:: TrianglesBestSplit
+   :value: 1
+
+
+
+
+
+
+.. vale on

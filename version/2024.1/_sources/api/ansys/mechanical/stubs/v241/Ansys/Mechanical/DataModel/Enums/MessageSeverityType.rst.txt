@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`MessageSeverityType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.MessageSeverityType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Message Severity Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MessageSeverityType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Error`
+            - 
+          * - :py:attr:`~Info`
+            - 
+          * - :py:attr:`~Warning`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Error
+   :value: 1
+
+
+.. py:attribute:: Info
+   :value: 2
+
+
+.. py:attribute:: Warning
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,274 @@
+.. vale off
+
+
+
+:class:`VectorDisplay`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Graphics.VectorDisplay
+
+   Bases: :py:obj:`object`
+
+
+   
+   VectorDisplay class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VectorDisplay
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ControlDisplayDensity`
+            - Allows control of the vector display density.
+          * - :py:attr:`~DisplayDensity`
+            - Sets the vector display density in percentage.
+          * - :py:attr:`~DisplayType`
+            - Sets the vector display type.
+          * - :py:attr:`~LengthMultiplier`
+            - Sets the vector length multiplier.
+          * - :py:attr:`~LengthType`
+            - Sets the result vector length type.
+          * - :py:attr:`~ShowTriadXAxis`
+            - Displays the X axis vector of the triad/tensor.
+          * - :py:attr:`~ShowTriadYAxis`
+            - Displays the Y axis vector of the triad/tensor.
+          * - :py:attr:`~ShowTriadZAxis`
+            - Displays the Z axis vector of the triad/tensor.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ControlDisplayDensity
+   :type: Optional[bool]
+
+   
+   Allows control of the vector display density.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayDensity
+   :type: Optional[float]
+
+   
+   Sets the vector display density in percentage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.VectorDisplayType]
+
+   
+   Sets the vector display type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthMultiplier
+   :type: Optional[float]
+
+   
+   Sets the vector length multiplier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.VectorLengthType]
+
+   
+   Sets the result vector length type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowTriadXAxis
+   :type: Optional[bool]
+
+   
+   Displays the X axis vector of the triad/tensor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowTriadYAxis
+   :type: Optional[bool]
+
+   
+   Displays the Y axis vector of the triad/tensor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowTriadZAxis
+   :type: Optional[bool]
+
+   
+   Displays the Z axis vector of the triad/tensor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

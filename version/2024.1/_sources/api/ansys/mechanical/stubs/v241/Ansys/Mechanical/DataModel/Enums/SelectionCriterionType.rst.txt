@@ -1,0 +1,504 @@
+.. vale off
+
+
+
+:class:`SelectionCriterionType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SelectionCriterionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the selection criterion type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SelectionCriterionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllEdges`
+            - 
+          * - :py:attr:`~AllNodes`
+            - 
+          * - :py:attr:`~AllVertices`
+            - 
+          * - :py:attr:`~AnalysisPly`
+            - 
+          * - :py:attr:`~AnyEdge`
+            - 
+          * - :py:attr:`~AnyNode`
+            - 
+          * - :py:attr:`~AnyVertex`
+            - 
+          * - :py:attr:`~Area`
+            - 
+          * - :py:attr:`~AspectRatio`
+            - 
+          * - :py:attr:`~AspectRatioExplicit`
+            - 
+          * - :py:attr:`~BodyInterferenceMesh`
+            - 
+          * - :py:attr:`~CADAttribute`
+            - 
+          * - :py:attr:`~CrossSection`
+            - 
+          * - :py:attr:`~Distance`
+            - 
+          * - :py:attr:`~EdgeConnections`
+            - 
+          * - :py:attr:`~ElementConnections`
+            - 
+          * - :py:attr:`~ElementNumber`
+            - 
+          * - :py:attr:`~ElementQuality`
+            - 
+          * - :py:attr:`~ExcludeSharedFaces`
+            - 
+          * - :py:attr:`~ExtEdgeFaceLoop`
+            - 
+          * - :py:attr:`~ExtEdgeNodeLoop`
+            - 
+          * - :py:attr:`~FaceConnections`
+            - 
+          * - :py:attr:`~FullyDefeaturedEdges`
+            - 
+          * - :py:attr:`~FullyDefeaturedFaces`
+            - 
+          * - :py:attr:`~FullyDefeaturedVertices`
+            - 
+          * - :py:attr:`~ImportedTrace`
+            - 
+          * - :py:attr:`~IncludeSharedFaces`
+            - 
+          * - :py:attr:`~JacobianRatio`
+            - 
+          * - :py:attr:`~JacobianRatioCornerNodes`
+            - 
+          * - :py:attr:`~JacobianRatioGaussPoints`
+            - 
+          * - :py:attr:`~LocationX`
+            - 
+          * - :py:attr:`~LocationY`
+            - 
+          * - :py:attr:`~LocationZ`
+            - 
+          * - :py:attr:`~Material`
+            - 
+          * - :py:attr:`~MaximumCornerAngle`
+            - 
+          * - :py:attr:`~MaximumMeshEdgeLength`
+            - 
+          * - :py:attr:`~MaximumQuadAngle`
+            - 
+          * - :py:attr:`~MaximumTriAngle`
+            - 
+          * - :py:attr:`~MinimumLength`
+            - 
+          * - :py:attr:`~MinimumLengthLSDyna`
+            - 
+          * - :py:attr:`~MinimumMeshEdgeLength`
+            - 
+          * - :py:attr:`~MinimumQuadAngle`
+            - 
+          * - :py:attr:`~MinimumTriAngle`
+            - 
+          * - :py:attr:`~Name`
+            - 
+          * - :py:attr:`~NamedSelection`
+            - 
+          * - :py:attr:`~NodeNumber`
+            - 
+          * - :py:attr:`~NormalTo`
+            - 
+          * - :py:attr:`~OffsetMode`
+            - 
+          * - :py:attr:`~OrthogonalQuality`
+            - 
+          * - :py:attr:`~ParallelDeviation`
+            - 
+          * - :py:attr:`~PartiallyDefeaturedEdges`
+            - 
+          * - :py:attr:`~Radius`
+            - 
+          * - :py:attr:`~SeamWeld`
+            - 
+          * - :py:attr:`~SeamWeldAngle`
+            - 
+          * - :py:attr:`~SeamWeldHAZ1`
+            - 
+          * - :py:attr:`~SeamWeldHAZ2`
+            - 
+          * - :py:attr:`~SeamWeldHAZ3`
+            - 
+          * - :py:attr:`~SeamWeldHAZAll`
+            - 
+          * - :py:attr:`~SeamWeldNormal`
+            - 
+          * - :py:attr:`~SelfIntersectingMesh`
+            - 
+          * - :py:attr:`~SharedAcrossBodies`
+            - 
+          * - :py:attr:`~SharedAcrossParts`
+            - 
+          * - :py:attr:`~SharpAngleMesh`
+            - 
+          * - :py:attr:`~Size`
+            - 
+          * - :py:attr:`~Skewness`
+            - 
+          * - :py:attr:`~TetCollapse`
+            - 
+          * - :py:attr:`~Thickness`
+            - 
+          * - :py:attr:`~Type`
+            - 
+          * - :py:attr:`~Volume`
+            - 
+          * - :py:attr:`~WarpingAngle`
+            - 
+          * - :py:attr:`~WarpingFactor`
+            - 
+          * - :py:attr:`~WeldFeatures`
+            - 
+          * - :py:attr:`~WithinBody`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllEdges
+   :value: 35
+
+
+.. py:attribute:: AllNodes
+   :value: 18
+
+
+.. py:attribute:: AllVertices
+   :value: 33
+
+
+.. py:attribute:: AnalysisPly
+   :value: 27
+
+
+.. py:attribute:: AnyEdge
+   :value: 34
+
+
+.. py:attribute:: AnyNode
+   :value: 17
+
+
+.. py:attribute:: AnyVertex
+   :value: 32
+
+
+.. py:attribute:: Area
+   :value: 26
+
+
+.. py:attribute:: AspectRatio
+   :value: 19
+
+
+.. py:attribute:: AspectRatioExplicit
+   :value: 64
+
+
+.. py:attribute:: BodyInterferenceMesh
+   :value: 54
+
+
+.. py:attribute:: CADAttribute
+   :value: 7
+
+
+.. py:attribute:: CrossSection
+   :value: 42
+
+
+.. py:attribute:: Distance
+   :value: 14
+
+
+.. py:attribute:: EdgeConnections
+   :value: 31
+
+
+.. py:attribute:: ElementConnections
+   :value: 30
+
+
+.. py:attribute:: ElementNumber
+   :value: 15
+
+
+.. py:attribute:: ElementQuality
+   :value: 16
+
+
+.. py:attribute:: ExcludeSharedFaces
+   :value: 44
+
+
+.. py:attribute:: ExtEdgeFaceLoop
+   :value: 55
+
+
+.. py:attribute:: ExtEdgeNodeLoop
+   :value: 56
+
+
+.. py:attribute:: FaceConnections
+   :value: 6
+
+
+.. py:attribute:: FullyDefeaturedEdges
+   :value: 70
+
+
+.. py:attribute:: FullyDefeaturedFaces
+   :value: 71
+
+
+.. py:attribute:: FullyDefeaturedVertices
+   :value: 69
+
+
+.. py:attribute:: ImportedTrace
+   :value: 36
+
+
+.. py:attribute:: IncludeSharedFaces
+   :value: 45
+
+
+.. py:attribute:: JacobianRatio
+   :value: 20
+
+
+.. py:attribute:: JacobianRatioCornerNodes
+   :value: 40
+
+
+.. py:attribute:: JacobianRatioGaussPoints
+   :value: 41
+
+
+.. py:attribute:: LocationX
+   :value: 3
+
+
+.. py:attribute:: LocationY
+   :value: 4
+
+
+.. py:attribute:: LocationZ
+   :value: 5
+
+
+.. py:attribute:: Material
+   :value: 11
+
+
+.. py:attribute:: MaximumCornerAngle
+   :value: 38
+
+
+.. py:attribute:: MaximumMeshEdgeLength
+   :value: 66
+
+
+.. py:attribute:: MaximumQuadAngle
+   :value: 61
+
+
+.. py:attribute:: MaximumTriAngle
+   :value: 59
+
+
+.. py:attribute:: MinimumLength
+   :value: 39
+
+
+.. py:attribute:: MinimumLengthLSDyna
+   :value: 67
+
+
+.. py:attribute:: MinimumMeshEdgeLength
+   :value: 65
+
+
+.. py:attribute:: MinimumQuadAngle
+   :value: 60
+
+
+.. py:attribute:: MinimumTriAngle
+   :value: 58
+
+
+.. py:attribute:: Name
+   :value: 29
+
+
+.. py:attribute:: NamedSelection
+   :value: 9
+
+
+.. py:attribute:: NodeNumber
+   :value: 10
+
+
+.. py:attribute:: NormalTo
+   :value: 43
+
+
+.. py:attribute:: OffsetMode
+   :value: 13
+
+
+.. py:attribute:: OrthogonalQuality
+   :value: 24
+
+
+.. py:attribute:: ParallelDeviation
+   :value: 22
+
+
+.. py:attribute:: PartiallyDefeaturedEdges
+   :value: 68
+
+
+.. py:attribute:: Radius
+   :value: 8
+
+
+.. py:attribute:: SeamWeld
+   :value: 48
+
+
+.. py:attribute:: SeamWeldAngle
+   :value: 73
+
+
+.. py:attribute:: SeamWeldHAZ1
+   :value: 49
+
+
+.. py:attribute:: SeamWeldHAZ2
+   :value: 50
+
+
+.. py:attribute:: SeamWeldHAZ3
+   :value: 51
+
+
+.. py:attribute:: SeamWeldHAZAll
+   :value: 52
+
+
+.. py:attribute:: SeamWeldNormal
+   :value: 72
+
+
+.. py:attribute:: SelfIntersectingMesh
+   :value: 53
+
+
+.. py:attribute:: SharedAcrossBodies
+   :value: 37
+
+
+.. py:attribute:: SharedAcrossParts
+   :value: 28
+
+
+.. py:attribute:: SharpAngleMesh
+   :value: 57
+
+
+.. py:attribute:: Size
+   :value: 1
+
+
+.. py:attribute:: Skewness
+   :value: 23
+
+
+.. py:attribute:: TetCollapse
+   :value: 63
+
+
+.. py:attribute:: Thickness
+   :value: 12
+
+
+.. py:attribute:: Type
+   :value: 2
+
+
+.. py:attribute:: Volume
+   :value: 25
+
+
+.. py:attribute:: WarpingAngle
+   :value: 62
+
+
+.. py:attribute:: WarpingFactor
+   :value: 21
+
+
+.. py:attribute:: WeldFeatures
+   :value: 46
+
+
+.. py:attribute:: WithinBody
+   :value: 47
+
+
+
+
+
+
+.. vale on

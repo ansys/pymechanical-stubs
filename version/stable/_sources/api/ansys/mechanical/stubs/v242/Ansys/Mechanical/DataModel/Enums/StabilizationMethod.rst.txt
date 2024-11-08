@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`StabilizationMethod`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.StabilizationMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the StabilizationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StabilizationMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Damping`
+            - 
+          * - :py:attr:`~Energy`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Damping
+   :value: 1
+
+
+.. py:attribute:: Energy
+   :value: 0
+
+
+
+
+
+
+.. vale on

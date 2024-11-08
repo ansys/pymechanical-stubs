@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`BeamToolStressResultType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.BeamToolStressResultType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the BeamToolStressResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BeamToolStressResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DirectStress`
+            - 
+          * - :py:attr:`~MaximumBendingStress`
+            - 
+          * - :py:attr:`~MaximumCombinedStress`
+            - 
+          * - :py:attr:`~MinimumBendingStress`
+            - 
+          * - :py:attr:`~MinimumCombinedStress`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DirectStress
+   :value: 0
+
+
+.. py:attribute:: MaximumBendingStress
+   :value: 2
+
+
+.. py:attribute:: MaximumCombinedStress
+   :value: 4
+
+
+.. py:attribute:: MinimumBendingStress
+   :value: 1
+
+
+.. py:attribute:: MinimumCombinedStress
+   :value: 3
+
+
+
+
+
+
+.. vale on

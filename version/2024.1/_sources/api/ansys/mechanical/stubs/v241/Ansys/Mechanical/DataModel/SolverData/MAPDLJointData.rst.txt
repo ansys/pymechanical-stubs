@@ -1,0 +1,118 @@
+.. vale off
+
+
+
+:class:`MAPDLJointData`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.SolverData.MAPDLJointData
+
+   Bases: :py:obj:`object`
+
+
+   
+   MAPDLJointData class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MAPDLJointData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementId`
+            - Gets the Element number for the object.
+          * - :py:attr:`~RealConstantId`
+            - Gets the Real Constant Id number for the object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementId
+   :type: Optional[int]
+
+   
+   Gets the Element number for the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RealConstantId
+   :type: Optional[int]
+
+   
+   Gets the Real Constant Id number for the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

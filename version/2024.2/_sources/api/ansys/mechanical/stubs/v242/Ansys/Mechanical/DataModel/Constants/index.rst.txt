@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Constants``
+=============================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Constants
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Constants
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Constants.Colors`
+            - Color constants, in BGR bitfield layout.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> Colors</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/Constants/Colors>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Constants module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

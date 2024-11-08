@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`TopoConstraintStressType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.TopoConstraintStressType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TopoConstraintStressType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoConstraintStressType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LocalStrainEnergy`
+            - 
+          * - :py:attr:`~MaximumPrincipalStress`
+            - 
+          * - :py:attr:`~VonMisesStress`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: LocalStrainEnergy
+   :value: 2
+
+
+.. py:attribute:: MaximumPrincipalStress
+   :value: 1
+
+
+.. py:attribute:: VonMisesStress
+   :value: 0
+
+
+
+
+
+
+.. vale on

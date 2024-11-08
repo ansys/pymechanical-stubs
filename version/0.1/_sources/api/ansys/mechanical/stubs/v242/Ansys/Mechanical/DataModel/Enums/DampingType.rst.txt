@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`DampingType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.DampingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DampingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DampingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DampingVsFrequency`
+            - 
+          * - :py:attr:`~DirectInput`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DampingVsFrequency
+   :value: 1
+
+
+.. py:attribute:: DirectInput
+   :value: 0
+
+
+
+
+
+
+.. vale on

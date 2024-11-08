@@ -1,0 +1,134 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Common``
+==========================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Common
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Common
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Common.Graphics`
+            - Graphics module.
+
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Common.BrowserQt`
+            - BrowserQt class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Common.CoordinateSystem`
+            - CoordinateSystem class
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Common.SimpleTransform`
+            - Exposes simple getters and setters for rigid body transformations.
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Graphics</api/ansys/mechanical/stubs/v242/Ansys/ACT/Common/Graphics/index>
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> BrowserQt</api/ansys/mechanical/stubs/v242/Ansys/ACT/Common/BrowserQt>
+    <span class="nf nf-cod-symbol_class"></span> CoordinateSystem</api/ansys/mechanical/stubs/v242/Ansys/ACT/Common/CoordinateSystem>
+    <span class="nf nf-cod-symbol_class"></span> SimpleTransform</api/ansys/mechanical/stubs/v242/Ansys/ACT/Common/SimpleTransform>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Common module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,196 @@
+.. vale off
+
+
+
+:class:`ETCommand`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.CDB.ETCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents an ET command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ETCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Ename`
+            - Gets the element name.
+          * - :py:attr:`~Id`
+            - Gets the element number.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Keyopts`
+            - Gets the key options.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Ename
+   :type: Optional[int]
+
+   
+   Gets the element name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+   
+   Gets the element number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Keyopts
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandKeyOpt]]
+
+   
+   Gets the key options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

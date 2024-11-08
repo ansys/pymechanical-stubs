@@ -1,0 +1,1217 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The generate_content.py module &#8212; PyMechanical Stubs</title>
+
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/ansys_sphinx_theme.css?v=d2ac875c" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+ 
+<link href="../../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
+
+    <script src="../../../../../../_static/documentation_options.js?v=de69aaeb"></script>
+    <script src="../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../../_static/thebelab-helper.js"></script>
+    <script src="../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../_static/copybutton.js?v=49e1bf35"></script>
+    <script src="../../../../../../_static/js/table.js?v=b64f5182"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/ansys/mechanical/stubs/stub_generator/generate_content/index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="icon" href="../../../../../../_static/ansys-favicon.png"/>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <link rel="canonical" href="https://scripting.mechanical.docs.pyansys.com/version/stable/api/ansys/mechanical/stubs/stub_generator/generate_content/index.html" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container"><!-- Debugging: html_theme_options =  -->
+
+  <!-- If there is no MeiliSearch enabled, use the PyData search -->
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+   
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../_static/pyansys_logo_transparent_black.png" class="logo__image only-light" alt="PyMechanical Stubs - Home"/>
+    <script>document.write(`<img src="../../../../../../_static/pyansys_logo_transparent_white.png" class="logo__image only-dark" alt="PyMechanical Stubs - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+    <div id="announcement_msg"></div>
+<script>
+  fetch("announcement.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(
+      (text) => (document.getElementById("announcement_msg").innerHTML = text),
+    )
+    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+</script>  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../create_files/index.html"> <span class="nf nf-fa-file"></span> create_files</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"> <span class="nf nf-fa-file"></span> generate_content</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="DocMember.html"> <span class="nf nf-cod-symbol_class"></span> DocMember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Method.html"> <span class="nf nf-cod-symbol_class"></span> Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Param.html"> <span class="nf nf-cod-symbol_class"></span> Param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Property.html"> <span class="nf nf-cod-symbol_class"></span> Property</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+         
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="https://docs.pyansys.com/" class="nav-link">PyAnsys</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a
+        href="../../../../../../index.html"
+        class="nav-link"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+      
+    <li class="breadcrumb-item active" aria-current="page">The <code class="docutils literal notranslate"><span class="pre">generate_content.py</span></code> module</li>
+    
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-ansys.mechanical.stubs.stub_generator.generate_content">
+<span id="the-generate-content-py-module"></span><h1>The <code class="docutils literal notranslate"><span class="pre">generate_content.py</span></code> module<a class="headerlink" href="#module-ansys.mechanical.stubs.stub_generator.generate_content" title="Link to this heading">#</a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Classes</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DocMember</span></code></a></p></td>
+<td><p>Docstring member.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Method.html#ansys.mechanical.stubs.stub_generator.generate_content.Method" title="ansys.mechanical.stubs.stub_generator.generate_content.Method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Method</span></code></a></p></td>
+<td><p>Method class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Param.html#ansys.mechanical.stubs.stub_generator.generate_content.Param" title="ansys.mechanical.stubs.stub_generator.generate_content.Param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Param</span></code></a></p></td>
+<td><p>Param class.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Property.html#ansys.mechanical.stubs.stub_generator.generate_content.Property" title="ansys.mechanical.stubs.stub_generator.generate_content.Property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Property</span></code></a></p></td>
+<td><p>Property class.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Functions</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.adjust_method_name_xml" title="generate_content.adjust_method_name_xml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjust_method_name_xml</span></code></a></p></td>
+<td><p>Adjust the method name to find docstring in XML.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.c_types_to_python" title="generate_content.c_types_to_python"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_types_to_python</span></code></a></p></td>
+<td><p>Replace C# types with Python types.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.crawl_loaded_references" title="generate_content.crawl_loaded_references"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crawl_loaded_references</span></code></a></p></td>
+<td><p>Crawl Loaded assemblies to get Namespaces.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.dump_types" title="generate_content.dump_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dump_types</span></code></a></p></td>
+<td><p>Crawl Loaded assemblies to get Namespaces.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.fix_str" title="generate_content.fix_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_str</span></code></a></p></td>
+<td><p>Replace incorrect special characters in strings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.get_doc" title="generate_content.get_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_doc</span></code></a></p></td>
+<td><p>Get the documentation file from assembly, or None if it doesn't exist.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.get_methods" title="generate_content.get_methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_methods</span></code></a></p></td>
+<td><p>Get information from methods and store it in the Method object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.get_namespaces" title="generate_content.get_namespaces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_namespaces</span></code></a></p></td>
+<td><p>Get all the namespaces and filtered types in the assembly given by assembly_name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.get_properties" title="generate_content.get_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_properties</span></code></a></p></td>
+<td><p>Get information from properties and store it in the Property object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.is_namespace" title="generate_content.is_namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_namespace</span></code></a></p></td>
+<td><p>Check if an object is a namespace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.iter_module" title="generate_content.iter_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_module</span></code></a></p></td>
+<td><p>Recursively iterates through all namespaces in assembly.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.load_doc" title="generate_content.load_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_doc</span></code></a></p></td>
+<td><p>Get a dictionary of doc entities from the Assembly documentation file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.make" title="generate_content.make"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make</span></code></a></p></td>
+<td><p>Generate Python stubs for an assembly.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.remove_backtick" title="generate_content.remove_backtick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_backtick</span></code></a></p></td>
+<td><p>Remove backticks from a given string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_class" title="generate_content.write_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_class</span></code></a></p></td>
+<td><p>Write a class.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_docstring" title="generate_content.write_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_docstring</span></code></a></p></td>
+<td><p>Write docstring of class or enum with the given indentation level, if available.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_enum" title="generate_content.write_enum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_enum</span></code></a></p></td>
+<td><p>Write an enum.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_enum_field" title="generate_content.write_enum_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_enum_field</span></code></a></p></td>
+<td><p>Write an enum field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_method" title="generate_content.write_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_method</span></code></a></p></td>
+<td><p>Write a method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_missing_class_enum_docstring" title="generate_content.write_missing_class_enum_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_missing_class_enum_docstring</span></code></a></p></td>
+<td><p>Write a docstring for classes and enums that do not contain a docstring in the XML file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_missing_prop_method_docstring" title="generate_content.write_missing_prop_method_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_missing_prop_method_docstring</span></code></a></p></td>
+<td><p>Write a docstring for methods and properties that do not contain a docstring in the XML file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_module" title="generate_content.write_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_module</span></code></a></p></td>
+<td><p>Write a module.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_property" title="generate_content.write_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_property</span></code></a></p></td>
+<td><p>Write a property.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Constants</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.C_TO_PYTHON" title="generate_content.C_TO_PYTHON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">C_TO_PYTHON</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.ENUM_VALUE_REPLACEMENTS" title="generate_content.ENUM_VALUE_REPLACEMENTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ENUM_VALUE_REPLACEMENTS</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.EXCLUDED_TYPES_LIST" title="generate_content.EXCLUDED_TYPES_LIST"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXCLUDED_TYPES_LIST</span></code></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
+<p>Module containing routine to generate python stubs for an assembly.</p>
+</section>
+<section id="module-detail">
+<h2>Module detail<a class="headerlink" href="#module-detail" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.adjust_method_name_xml">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">adjust_method_name_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.adjust_method_name_xml" title="Link to this definition">#</a></dt>
+<dd><p>Adjust the method name to find docstring in XML.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>method_name: str</strong></dt><dd><p>The method name</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.c_types_to_python">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">c_types_to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.c_types_to_python" title="Link to this definition">#</a></dt>
+<dd><p>Replace C# types with Python types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>type_str: str</strong></dt><dd><p>String containing C# type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.crawl_loaded_references">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">crawl_loaded_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">System.Reflection.RuntimeAssembly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></span><a class="headerlink" href="#generate_content.crawl_loaded_references" title="Link to this definition">#</a></dt>
+<dd><p>Crawl Loaded assemblies to get Namespaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>assembly: System.Reflection.RuntimeAssembly</strong></dt><dd><p>An assembly. For example, Ansys.ACT.WB1.</p>
+</dd>
+<dt><strong>type_filter: typing.Callable</strong></dt><dd><p>Whether or not the type is published</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></dt><dd><p>Dictionary of namespaces in the assembly</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.dump_types">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">dump_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.dump_types" title="Link to this definition">#</a></dt>
+<dd><p>Crawl Loaded assemblies to get Namespaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>namespaces: dict</strong></dt><dd><p>Dictionary of namespaces in the assembly</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.fix_str">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">fix_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.fix_str" title="Link to this definition">#</a></dt>
+<dd><p>Replace incorrect special characters in strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_str: str</strong></dt><dd><p>A string that could contain backticks</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>A string that doesn't have special characters</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.get_doc">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">System.Reflection.RuntimeAssembly</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.get_doc" title="Link to this definition">#</a></dt>
+<dd><p>Get the documentation file from assembly, or None if it doesn't exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>assembly: “System.Reflection.RuntimeAssembly”</strong></dt><dd><p>An assembly. For example, Ansys.ACT.WB1.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.get_methods">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_methods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><span class="pre">DocMember</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Method.html#ansys.mechanical.stubs.stub_generator.generate_content.Method" title="ansys.mechanical.stubs.stub_generator.generate_content.Method"><span class="pre">Method</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#generate_content.get_methods" title="Link to this definition">#</a></dt>
+<dd><p>Get information from methods and store it in the Method object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>class_type: typing.Any</strong></dt><dd><p>The class type.</p>
+</dd>
+<dt><strong>doc: typing.Dict[str, DocMember]</strong></dt><dd><p>A DocMember or string that holds information about the method.</p>
+</dd>
+<dt><strong>type_filter: typing.Callable = None</strong></dt><dd><p>Whether or not the type is published.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typing.List</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Method</span></code>]</dt><dd><p>A list of methods</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.get_namespaces">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_namespaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">System.Reflection.RuntimeAssembly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#generate_content.get_namespaces" title="Link to this definition">#</a></dt>
+<dd><p>Get all the namespaces and filtered types in the assembly given by assembly_name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>assembly: “System.Reflection.RuntimeAssembly”</strong></dt><dd><p>An assembly</p>
+</dd>
+<dt><strong>type_filter:</strong></dt><dd><p>Whether or not the type is published</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typing.Dict</span></code></a></dt><dd><p>A dictionary of published namespaces within the assembly</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.get_properties">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><span class="pre">DocMember</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Property.html#ansys.mechanical.stubs.stub_generator.generate_content.Property" title="ansys.mechanical.stubs.stub_generator.generate_content.Property"><span class="pre">Property</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#generate_content.get_properties" title="Link to this definition">#</a></dt>
+<dd><p>Get information from properties and store it in the Property object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>class_type: typing.Any</strong></dt><dd><p>The class type.</p>
+</dd>
+<dt><strong>doc: typing.Dict[str, DocMember]</strong></dt><dd><p>A DocMember or string that holds information about the property.</p>
+</dd>
+<dt><strong>type_filter: typing.Callable = None</strong></dt><dd><p>Whether or not the type is published.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typing.List</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Property</span></code>]</dt><dd><p>A list of properties</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.is_namespace">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">is_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">something</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.is_namespace" title="Link to this definition">#</a></dt>
+<dd><p>Check if an object is a namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>something: object</strong></dt><dd><p>Object to check if it's a namespace</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a></dt><dd><p>True if object is Namespace: Module
+False if object is not Namespace: Module</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.iter_module">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">iter_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.iter_module" title="Link to this definition">#</a></dt>
+<dd><p>Recursively iterates through all namespaces in assembly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>module: System.Reflection.RuntimeAssembly</strong></dt><dd><p>An assembly module</p>
+</dd>
+<dt><strong>type_filter: typing.Callable</strong></dt><dd><p>Whether or not the type is published</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>The namespace in the assembly file</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.load_doc">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">load_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xml.etree.ElementTree</span></span></span><a class="headerlink" href="#generate_content.load_doc" title="Link to this definition">#</a></dt>
+<dd><p>Get a dictionary of doc entities from the Assembly documentation file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>xml_path: str</strong></dt><dd><p>The path to the XML file</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementTree</span></code></dt><dd><p>An element tree of the information from the assembly XML file</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.make">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">assembly_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.make" title="Link to this definition">#</a></dt>
+<dd><p>Generate Python stubs for an assembly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>outdir: str</strong></dt><dd><p>The directory where modules are being written to.</p>
+</dd>
+<dt><strong>assembly_name: str</strong></dt><dd><p>The name of the assembly</p>
+</dd>
+<dt><strong>type_filter: typing.Callable</strong></dt><dd><p>Whether or not a type is published</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.remove_backtick">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">remove_backtick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.remove_backtick" title="Link to this definition">#</a></dt>
+<dd><p>Remove backticks from a given string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_str: str</strong></dt><dd><p>A string that could contain backticks</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>A string without backticks</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_class">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TextIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><span class="pre">DocMember</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_class" title="Link to this definition">#</a></dt>
+<dd><p>Write a class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the class</p>
+</dd>
+<dt><strong>class_type: typing.Any</strong></dt><dd><p>The class type object</p>
+</dd>
+<dt><strong>namespace: str</strong></dt><dd><p>The namespace of the class being written</p>
+</dd>
+<dt><strong>doc: typing.Dict[str, DocMember]</strong></dt><dd><p>A DocMember or string that holds information about the class.</p>
+</dd>
+<dt><strong>type_filter: typing.Callable = None</strong></dt><dd><p>Whether or not the type is published</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_docstring">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TextIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc_member</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><span class="pre">DocMember</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_docstring" title="Link to this definition">#</a></dt>
+<dd><p>Write docstring of class or enum with the given indentation level, if available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the docstring</p>
+</dd>
+<dt><strong>doc_member: typing.Optional[DocMember]</strong></dt><dd><p>A member's name, summary, params, remarks, and examples</p>
+</dd>
+<dt><strong>indent_level: int</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">1</span></code> to write one indent</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_enum">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_enum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TextIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enum_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><span class="pre">DocMember</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_enum" title="Link to this definition">#</a></dt>
+<dd><p>Write an enum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the docstring</p>
+</dd>
+<dt><strong>enum_type: typing.Any</strong></dt><dd><p>The enum type</p>
+</dd>
+<dt><strong>namespace: str</strong></dt><dd><p>The namespace of the enum</p>
+</dd>
+<dt><strong>doc: typing.Dict[str, DocMember]</strong></dt><dd><p>A DocMember or string that holds information about the enum.</p>
+</dd>
+<dt><strong>type_filter: typing.Callable = None</strong></dt><dd><p>Whether or not the type is published.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_enum_field">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_enum_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TextIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_enum_field" title="Link to this definition">#</a></dt>
+<dd><p>Write an enum field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the docstring</p>
+</dd>
+<dt><strong>field: typing.Any</strong></dt><dd><p>The field information from System.Reflection.MdFieldInfo</p>
+</dd>
+<dt><strong>indent_level: int</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">1</span></code> to write one indent</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_method">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TextIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="Method.html#ansys.mechanical.stubs.stub_generator.generate_content.Method" title="ansys.mechanical.stubs.stub_generator.generate_content.Method"><span class="pre">Method</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_method" title="Link to this definition">#</a></dt>
+<dd><p>Write a method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the method</p>
+</dd>
+<dt><strong>method: Method</strong></dt><dd><p>A Method object</p>
+</dd>
+<dt><strong>indent_level: int</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">1</span></code> to indent a line once</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_missing_class_enum_docstring">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_missing_class_enum_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.write_missing_class_enum_docstring" title="Link to this definition">#</a></dt>
+<dd><p>Write a docstring for classes and enums that do not contain a docstring in the XML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the docstring</p>
+</dd>
+<dt><strong>name: str</strong></dt><dd><p>The name of an interface</p>
+</dd>
+<dt><strong>obj_type: str</strong></dt><dd><p>The object type of the interface</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_missing_prop_method_docstring">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_missing_prop_method_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent_level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.write_missing_prop_method_docstring" title="Link to this definition">#</a></dt>
+<dd><p>Write a docstring for methods and properties that do not contain a docstring in the XML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the docstring</p>
+</dd>
+<dt><strong>obj: generate_content.Method or generate_content.Property</strong></dt><dd><p>A method or property object</p>
+</dd>
+<dt><strong>obj_type: type</strong></dt><dd><p>The object type of the interface</p>
+</dd>
+<dt><strong>indent_level: int</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">1</span></code> to indent a line once</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_module">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DocMember.html#ansys.mechanical.stubs.stub_generator.generate_content.DocMember" title="ansys.mechanical.stubs.stub_generator.generate_content.DocMember"><span class="pre">DocMember</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_module" title="Link to this definition">#</a></dt>
+<dd><p>Write a module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>mod_type: typing.Any</strong></dt><dd><p>The module type object</p>
+</dd>
+<dt><strong>doc: typing.Dict[str, DocMember]</strong></dt><dd><p>A DocMember or string that holds information about the class.</p>
+</dd>
+<dt><strong>outdir: str</strong></dt><dd><p>The path of the file that contains the module.</p>
+</dd>
+<dt><strong>type_filter: typing.Callable = None</strong></dt><dd><p>Whether or not the type is published</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.write_property">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">write_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TextIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="Property.html#ansys.mechanical.stubs.stub_generator.generate_content.Property" title="ansys.mechanical.stubs.stub_generator.generate_content.Property"><span class="pre">Property</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#generate_content.write_property" title="Link to this definition">#</a></dt>
+<dd><p>Write a property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>buffer: typing.TextIO</strong></dt><dd><p>The buffer for writing the docstring</p>
+</dd>
+<dt><strong>prop: Property</strong></dt><dd><p>A Property object containing information about the property</p>
+</dd>
+<dt><strong>indent_level: int</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">1</span></code> to write one indent</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="generate_content.C_TO_PYTHON">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">C_TO_PYTHON</span></span><a class="headerlink" href="#generate_content.C_TO_PYTHON" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="generate_content.ENUM_VALUE_REPLACEMENTS">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">ENUM_VALUE_REPLACEMENTS</span></span><a class="headerlink" href="#generate_content.ENUM_VALUE_REPLACEMENTS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="generate_content.EXCLUDED_TYPES_LIST">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">EXCLUDED_TYPES_LIST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['System.IAsyncResult',</span> <span class="pre">'System.IDisposable',</span> <span class="pre">'System.Func',</span> <span class="pre">'System.Delegate']</span></em><a class="headerlink" href="#generate_content.EXCLUDED_TYPES_LIST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-detail">Module detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.adjust_method_name_xml"><code class="docutils literal notranslate"><span class="pre">adjust_method_name_xml()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.c_types_to_python"><code class="docutils literal notranslate"><span class="pre">c_types_to_python()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.crawl_loaded_references"><code class="docutils literal notranslate"><span class="pre">crawl_loaded_references()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.dump_types"><code class="docutils literal notranslate"><span class="pre">dump_types()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.fix_str"><code class="docutils literal notranslate"><span class="pre">fix_str()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.get_doc"><code class="docutils literal notranslate"><span class="pre">get_doc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.get_methods"><code class="docutils literal notranslate"><span class="pre">get_methods()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.get_namespaces"><code class="docutils literal notranslate"><span class="pre">get_namespaces()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.get_properties"><code class="docutils literal notranslate"><span class="pre">get_properties()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.is_namespace"><code class="docutils literal notranslate"><span class="pre">is_namespace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.iter_module"><code class="docutils literal notranslate"><span class="pre">iter_module()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.load_doc"><code class="docutils literal notranslate"><span class="pre">load_doc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.make"><code class="docutils literal notranslate"><span class="pre">make()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.remove_backtick"><code class="docutils literal notranslate"><span class="pre">remove_backtick()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_class"><code class="docutils literal notranslate"><span class="pre">write_class()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_docstring"><code class="docutils literal notranslate"><span class="pre">write_docstring()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_enum"><code class="docutils literal notranslate"><span class="pre">write_enum()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_enum_field"><code class="docutils literal notranslate"><span class="pre">write_enum_field()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_method"><code class="docutils literal notranslate"><span class="pre">write_method()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_missing_class_enum_docstring"><code class="docutils literal notranslate"><span class="pre">write_missing_class_enum_docstring()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_missing_prop_method_docstring"><code class="docutils literal notranslate"><span class="pre">write_missing_prop_method_docstring()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_module"><code class="docutils literal notranslate"><span class="pre">write_module()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.write_property"><code class="docutils literal notranslate"><span class="pre">write_property()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.C_TO_PYTHON"><code class="docutils literal notranslate"><span class="pre">C_TO_PYTHON</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.ENUM_VALUE_REPLACEMENTS"><code class="docutils literal notranslate"><span class="pre">ENUM_VALUE_REPLACEMENTS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.EXCLUDED_TYPES_LIST"><code class="docutils literal notranslate"><span class="pre">EXCLUDED_TYPES_LIST</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item"> 
+<div class="tocsection editthispage">
+  <a href="http://github.com/ansys/pymechanical-stubs/edit/main/adjust_method_name_xml.py">
+    <i class="fa-solid fa-pencil"></i>
+       Edit
+    on GitHub  
+  </a>
+</div>
+
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../../../../_sources/api/ansys/mechanical/stubs/stub_generator/generate_content/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the
+  <a href="https://sphinxdocs.ansys.com/version/stable/index.html"
+    >Ansys Sphinx Theme</a
+  >
+  1.0.11. <br />Last updated on
+  <span id="date"></span>
+</p>
+<script>
+  var options = { day: "numeric", month: "long", year: "numeric" };
+  var lastModifiedDate = new Date(document.lastModified);
+  var date = lastModifiedDate.toLocaleDateString("en-US", options);
+  document.getElementById("date").innerHTML = date;
+</script></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

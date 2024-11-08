@@ -1,0 +1,228 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CompositeFailureResults``
+===========================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CompositeFailureResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureCriteria`
+            - Defines a CompositeFailureCriteria.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureCriterionSettings`
+            - Base class for settings objects which contain the configuration of a single failure criterion.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureResult`
+            - CompositeFailureResult class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureTool`
+            - Defines a CompositeFailureTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeSamplingPoint`
+            - Defines a CompositeSamplingPoint.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeSamplingPointTool`
+            - Defines a CompositeSamplingPointTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CoreFailureSettings`
+            - Defines the configuration for the Core failure criterion for sandwich structures.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CuntzeSettings`
+            - Defines the configuration for the Cuntze failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.FaceSheetWrinklingSettings`
+            - Defines the configuration for the Face Sheet Wrinkling failure criterion for sandwich structures.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.HashinSettings`
+            - Defines the configuration for the Hashin failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.HoffmanSettings`
+            - Defines the configuration for the Hoffman failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.LaRCSettings`
+            - Defines the configuration for the LaRC failure criterion for reinforced materials
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.MaximumStrainSettings`
+            - Defines the configuration for the Maximum Strain failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.MaximumStressSettings`
+            - Defines the configuration for the Maximum Stress failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.PuckSettings`
+            - Defines the configuration for the Puck failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.ShearCrimpingSettings`
+            - Defines the configuration for the Face Sheet Crimping failure criterion for sandwich structures.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.TsaiHillSettings`
+            - Defines the configuration for the Tsai-Hill failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.TsaiWuSettings`
+            - Defines the configuration for the Tsai-Wu failure criterion for reinforced materials.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.VonMisesSettings`
+            - Defines the configuration for the Von Mises failure criterion for isotropic materials.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CompositeFailureCriteria</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeFailureCriteria>
+    <span class="nf nf-cod-symbol_class"></span> CompositeFailureCriterionSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeFailureCriterionSettings>
+    <span class="nf nf-cod-symbol_class"></span> CompositeFailureResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeFailureResult>
+    <span class="nf nf-cod-symbol_class"></span> CompositeFailureTool</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeFailureTool>
+    <span class="nf nf-cod-symbol_class"></span> CompositeSamplingPoint</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeSamplingPoint>
+    <span class="nf nf-cod-symbol_class"></span> CompositeSamplingPointTool</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeSamplingPointTool>
+    <span class="nf nf-cod-symbol_class"></span> CoreFailureSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CoreFailureSettings>
+    <span class="nf nf-cod-symbol_class"></span> CuntzeSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CuntzeSettings>
+    <span class="nf nf-cod-symbol_class"></span> FaceSheetWrinklingSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/FaceSheetWrinklingSettings>
+    <span class="nf nf-cod-symbol_class"></span> HashinSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/HashinSettings>
+    <span class="nf nf-cod-symbol_class"></span> HoffmanSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/HoffmanSettings>
+    <span class="nf nf-cod-symbol_class"></span> LaRCSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/LaRCSettings>
+    <span class="nf nf-cod-symbol_class"></span> MaximumStrainSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/MaximumStrainSettings>
+    <span class="nf nf-cod-symbol_class"></span> MaximumStressSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/MaximumStressSettings>
+    <span class="nf nf-cod-symbol_class"></span> PuckSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/PuckSettings>
+    <span class="nf nf-cod-symbol_class"></span> ShearCrimpingSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/ShearCrimpingSettings>
+    <span class="nf nf-cod-symbol_class"></span> TsaiHillSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/TsaiHillSettings>
+    <span class="nf nf-cod-symbol_class"></span> TsaiWuSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/TsaiWuSettings>
+    <span class="nf nf-cod-symbol_class"></span> VonMisesSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/VonMisesSettings>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CompositeFailureResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

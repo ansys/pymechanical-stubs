@@ -1,0 +1,113 @@
+.. vale off
+
+
+
+:class:`KrigingCorrFuncType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.KrigingCorrFuncType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: KrigingCorrFuncType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CorrFuncCubic`
+            - 
+          * - :py:attr:`~CorrFuncExp`
+            - 
+          * - :py:attr:`~CorrFuncGauss`
+            - 
+          * - :py:attr:`~CorrFuncLin`
+            - 
+          * - :py:attr:`~CorrFuncMultiQuadratic`
+            - 
+          * - :py:attr:`~CorrFuncNone`
+            - 
+          * - :py:attr:`~CorrFuncSpherical`
+            - 
+          * - :py:attr:`~CorrFuncThinPlateSpine`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CorrFuncCubic
+   :value: 5
+
+
+.. py:attribute:: CorrFuncExp
+   :value: 1
+
+
+.. py:attribute:: CorrFuncGauss
+   :value: 2
+
+
+.. py:attribute:: CorrFuncLin
+   :value: 3
+
+
+.. py:attribute:: CorrFuncMultiQuadratic
+   :value: 6
+
+
+.. py:attribute:: CorrFuncNone
+   :value: 0
+
+
+.. py:attribute:: CorrFuncSpherical
+   :value: 4
+
+
+.. py:attribute:: CorrFuncThinPlateSpine
+   :value: 7
+
+
+
+
+
+
+.. vale on

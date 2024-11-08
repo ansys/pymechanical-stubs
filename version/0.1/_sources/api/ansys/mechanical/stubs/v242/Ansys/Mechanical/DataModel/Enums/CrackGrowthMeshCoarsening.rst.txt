@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CrackGrowthMeshCoarsening`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CrackGrowthMeshCoarsening
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CrackGrowthMeshCoarsening.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CrackGrowthMeshCoarsening
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Aggressive`
+            - 
+          * - :py:attr:`~Conservative`
+            - 
+          * - :py:attr:`~Moderate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Aggressive
+   :value: 2
+
+
+.. py:attribute:: Conservative
+   :value: 0
+
+
+.. py:attribute:: Moderate
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`EnclosureType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EnclosureType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the EnclosureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EnclosureType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Open`
+            - 
+          * - :py:attr:`~Perfect`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Open
+   :value: 0
+
+
+.. py:attribute:: Perfect
+   :value: 1
+
+
+
+
+
+
+.. vale on

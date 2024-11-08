@@ -1,0 +1,306 @@
+.. vale off
+
+
+
+:class:`SolutionOutputType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SolutionOutputType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SolutionOutputType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolutionOutputType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CSGConvergence`
+            - 
+          * - :py:attr:`~ChargeConvergence`
+            - 
+          * - :py:attr:`~ContactOutput`
+            - 
+          * - :py:attr:`~CurrentConvergence`
+            - 
+          * - :py:attr:`~DisplacementConvergence`
+            - 
+          * - :py:attr:`~EnergyConservation`
+            - 
+          * - :py:attr:`~EnergySummary`
+            - 
+          * - :py:attr:`~EvaluateScriptOutput`
+            - 
+          * - :py:attr:`~ForceConvergence`
+            - 
+          * - :py:attr:`~FrequencyConvergence`
+            - 
+          * - :py:attr:`~HeatConvergence`
+            - 
+          * - :py:attr:`~KineticEnergy`
+            - 
+          * - :py:attr:`~LineSearch`
+            - 
+          * - :py:attr:`~MaximumDOFIncrement`
+            - 
+          * - :py:attr:`~MaximumDOFNodeAndIncrement`
+            - 
+          * - :py:attr:`~MomentConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndAllConstraintConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndDisplacementResponseConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndGlobalStressResponseConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndLocalStressResponseConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndManufacturingConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndMassResponseConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndNaturalFrequencyResponseConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndReactionForceResponseConvergence`
+            - 
+          * - :py:attr:`~ObjectiveAndVolumeResponseConvergence`
+            - 
+          * - :py:attr:`~OptimizationOutput`
+            - 
+          * - :py:attr:`~ParticipationFactor`
+            - 
+          * - :py:attr:`~PostOutput`
+            - 
+          * - :py:attr:`~PropertyChange`
+            - 
+          * - :py:attr:`~RotationConvergence`
+            - 
+          * - :py:attr:`~SolutionStatistics`
+            - 
+          * - :py:attr:`~SolutionTracking`
+            - 
+          * - :py:attr:`~SolveScriptOutput`
+            - 
+          * - :py:attr:`~SolverOutput`
+            - 
+          * - :py:attr:`~StiffnessEnergy`
+            - 
+          * - :py:attr:`~TemperatureChange`
+            - 
+          * - :py:attr:`~TemperatureConvergence`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~TimeIncrement`
+            - 
+          * - :py:attr:`~TimeIncrementVSTime`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CSGConvergence
+   :value: 13
+
+
+.. py:attribute:: ChargeConvergence
+   :value: 51
+
+
+.. py:attribute:: ContactOutput
+   :value: 22
+
+
+.. py:attribute:: CurrentConvergence
+   :value: 21
+
+
+.. py:attribute:: DisplacementConvergence
+   :value: 2
+
+
+.. py:attribute:: EnergyConservation
+   :value: 18
+
+
+.. py:attribute:: EnergySummary
+   :value: 20
+
+
+.. py:attribute:: EvaluateScriptOutput
+   :value: 23
+
+
+.. py:attribute:: ForceConvergence
+   :value: 1
+
+
+.. py:attribute:: FrequencyConvergence
+   :value: 27
+
+
+.. py:attribute:: HeatConvergence
+   :value: 3
+
+
+.. py:attribute:: KineticEnergy
+   :value: 52
+
+
+.. py:attribute:: LineSearch
+   :value: 7
+
+
+.. py:attribute:: MaximumDOFIncrement
+   :value: 5
+
+
+.. py:attribute:: MaximumDOFNodeAndIncrement
+   :value: 54
+
+
+.. py:attribute:: MomentConvergence
+   :value: 16
+
+
+.. py:attribute:: ObjectiveAndAllConstraintConvergence
+   :value: 42
+
+
+.. py:attribute:: ObjectiveAndDisplacementResponseConvergence
+   :value: 36
+
+
+.. py:attribute:: ObjectiveAndGlobalStressResponseConvergence
+   :value: 34
+
+
+.. py:attribute:: ObjectiveAndLocalStressResponseConvergence
+   :value: 37
+
+
+.. py:attribute:: ObjectiveAndManufacturingConvergence
+   :value: 32
+
+
+.. py:attribute:: ObjectiveAndMassResponseConvergence
+   :value: 31
+
+
+.. py:attribute:: ObjectiveAndNaturalFrequencyResponseConvergence
+   :value: 35
+
+
+.. py:attribute:: ObjectiveAndReactionForceResponseConvergence
+   :value: 38
+
+
+.. py:attribute:: ObjectiveAndVolumeResponseConvergence
+   :value: 33
+
+
+.. py:attribute:: OptimizationOutput
+   :value: 29
+
+
+.. py:attribute:: ParticipationFactor
+   :value: 28
+
+
+.. py:attribute:: PostOutput
+   :value: 25
+
+
+.. py:attribute:: PropertyChange
+   :value: 15
+
+
+.. py:attribute:: RotationConvergence
+   :value: 17
+
+
+.. py:attribute:: SolutionStatistics
+   :value: 40
+
+
+.. py:attribute:: SolutionTracking
+   :value: 44
+
+
+.. py:attribute:: SolveScriptOutput
+   :value: 24
+
+
+.. py:attribute:: SolverOutput
+   :value: 0
+
+
+.. py:attribute:: StiffnessEnergy
+   :value: 53
+
+
+.. py:attribute:: TemperatureChange
+   :value: 14
+
+
+.. py:attribute:: TemperatureConvergence
+   :value: 4
+
+
+.. py:attribute:: Time
+   :value: 8
+
+
+.. py:attribute:: TimeIncrement
+   :value: 10
+
+
+.. py:attribute:: TimeIncrementVSTime
+   :value: 6
+
+
+
+
+
+
+.. vale on

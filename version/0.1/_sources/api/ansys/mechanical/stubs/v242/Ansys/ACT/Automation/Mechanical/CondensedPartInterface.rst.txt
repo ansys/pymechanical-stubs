@@ -1,0 +1,170 @@
+.. vale off
+
+
+
+:class:`CondensedPartInterface`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CondensedPartInterface
+
+   Bases: :py:obj:`object`
+
+
+   
+   CondensedPartInterface class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartInterface
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllSelection`
+            - AllSelection property.
+          * - :py:attr:`~NamedSelection`
+            - Gets or Sets NamedSelection
+          * - :py:attr:`~RemotePointSelection`
+            - Gets or Sets RemotePointSelection
+          * - :py:attr:`~Type`
+            - Gets or Sets Condensed part interface type
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AllSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.ImportedDataModelObject]
+
+   
+   AllSelection property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or Sets NamedSelection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemotePointSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.RemotePoint]
+
+   
+   Gets or Sets RemotePointSelection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartInterfaceType]
+
+   
+   Gets or Sets Condensed part interface type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

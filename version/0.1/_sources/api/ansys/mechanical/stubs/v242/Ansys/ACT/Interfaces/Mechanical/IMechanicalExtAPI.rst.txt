@@ -1,0 +1,89 @@
+.. vale off
+
+
+
+:class:`IMechanicalExtAPI`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Mechanical.IMechanicalExtAPI
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes the main entry point of all ATC APIs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalExtAPI
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LockPrePostLicense`
+            - Locks the license used by the PRE/POST application.
+          * - :py:attr:`~UnlockPrePostLicense`
+            - R
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: LockPrePostLicense() -> None
+
+   
+   Locks the license used by the PRE/POST application.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnlockPrePostLicense() -> None
+
+.. code-block:: text
+
+   R
+       Unlocks the license used by the PRE/POST application. This is required if you want to manually launch the Ansys solver.
+       You must relock the license after its use. If you don't relock the license, the PRE/POST application will be in read-only mode.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

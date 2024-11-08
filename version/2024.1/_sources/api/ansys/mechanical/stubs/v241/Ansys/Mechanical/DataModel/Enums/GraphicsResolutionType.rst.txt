@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`GraphicsResolutionType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GraphicsResolutionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Graphics Image Resolution Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GraphicsResolutionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EnhancedResolution`
+            - 
+          * - :py:attr:`~HighResolution`
+            - 
+          * - :py:attr:`~NormalResolution`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EnhancedResolution
+   :value: 1
+
+
+.. py:attribute:: HighResolution
+   :value: 2
+
+
+.. py:attribute:: NormalResolution
+   :value: 0
+
+
+
+
+
+
+.. vale on

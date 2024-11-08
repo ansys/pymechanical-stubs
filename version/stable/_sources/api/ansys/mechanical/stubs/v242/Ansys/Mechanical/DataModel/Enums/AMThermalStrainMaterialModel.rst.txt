@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`AMThermalStrainMaterialModel`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMThermalStrainMaterialModel
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMThermalStrainMaterialModel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMThermalStrainMaterialModel
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Al357`
+            - 
+          * - :py:attr:`~AlSi10Mg`
+            - 
+          * - :py:attr:`~CoCr`
+            - 
+          * - :py:attr:`~Inconel625`
+            - 
+          * - :py:attr:`~Inconel718`
+            - 
+          * - :py:attr:`~SS17_4`
+            - 
+          * - :py:attr:`~SS316L`
+            - 
+          * - :py:attr:`~Ti6Al4V`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Al357
+   :value: 3
+
+
+.. py:attribute:: AlSi10Mg
+   :value: 4
+
+
+.. py:attribute:: CoCr
+   :value: 5
+
+
+.. py:attribute:: Inconel625
+   :value: 6
+
+
+.. py:attribute:: Inconel718
+   :value: 7
+
+
+.. py:attribute:: SS17_4
+   :value: 1
+
+
+.. py:attribute:: SS316L
+   :value: 2
+
+
+.. py:attribute:: Ti6Al4V
+   :value: 8
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,101 @@
+.. vale off
+
+
+
+:class:`MappingAlgorithm`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MappingAlgorithm
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MappingAlgorithm
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BucketSurface`
+            - 
+          * - :py:attr:`~BucketVolume`
+            - 
+          * - :py:attr:`~GGI`
+            - 
+          * - :py:attr:`~PointCloud`
+            - 
+          * - :py:attr:`~UV`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BucketSurface
+   :value: 2
+
+
+.. py:attribute:: BucketVolume
+   :value: 4
+
+
+.. py:attribute:: GGI
+   :value: 3
+
+
+.. py:attribute:: PointCloud
+   :value: 1
+
+
+.. py:attribute:: UV
+   :value: 5
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+
+
+
+
+.. vale on

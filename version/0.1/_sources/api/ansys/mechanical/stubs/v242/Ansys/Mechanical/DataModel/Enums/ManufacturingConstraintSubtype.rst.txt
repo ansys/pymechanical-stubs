@@ -1,0 +1,126 @@
+.. vale off
+
+
+
+:class:`ManufacturingConstraintSubtype`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ManufacturingConstraintSubtype
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ManufacturingConstraintSubtype.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ManufacturingConstraintSubtype
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ComplexityIndexConstraint`
+            - 
+          * - :py:attr:`~CyclicManufacturingConstraint`
+            - 
+          * - :py:attr:`~ExtrusionManufacturingConstraint`
+            - 
+          * - :py:attr:`~HousingConstraint`
+            - 
+          * - :py:attr:`~MemberSizeManufacturingConstraint`
+            - 
+          * - :py:attr:`~OverhangAngleManufacturingConstraint`
+            - 
+          * - :py:attr:`~PatternRepetitionConstraint`
+            - 
+          * - :py:attr:`~PullOutDirectionManufacturingConstraint`
+            - 
+          * - :py:attr:`~SymmetryManufacturingConstraint`
+            - 
+          * - :py:attr:`~UniformConstraint`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ComplexityIndexConstraint
+   :value: 9
+
+
+.. py:attribute:: CyclicManufacturingConstraint
+   :value: 3
+
+
+.. py:attribute:: ExtrusionManufacturingConstraint
+   :value: 2
+
+
+.. py:attribute:: HousingConstraint
+   :value: 8
+
+
+.. py:attribute:: MemberSizeManufacturingConstraint
+   :value: 0
+
+
+.. py:attribute:: OverhangAngleManufacturingConstraint
+   :value: 5
+
+
+.. py:attribute:: PatternRepetitionConstraint
+   :value: 7
+
+
+.. py:attribute:: PullOutDirectionManufacturingConstraint
+   :value: 1
+
+
+.. py:attribute:: SymmetryManufacturingConstraint
+   :value: 4
+
+
+.. py:attribute:: UniformConstraint
+   :value: 6
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,116 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ExternalData``
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ExternalData
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat`
+            - Specifies how to interpret the variable data source.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.LengthUnit`
+            - Specifies how to interpret the variable data source.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.VariableType`
+            - An enumeration of the different variable types supported by the tabular data
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> ImportFormat</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/ImportFormat>
+    <span class="nf nf-cod-symbol_enum"></span> LengthUnit</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/LengthUnit>
+    <span class="nf nf-cod-symbol_enum"></span> VariableType</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/VariableType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ExternalData module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

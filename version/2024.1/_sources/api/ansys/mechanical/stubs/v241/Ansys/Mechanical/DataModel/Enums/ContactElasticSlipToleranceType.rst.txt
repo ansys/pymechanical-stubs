@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ContactElasticSlipToleranceType`
+========================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactElasticSlipToleranceType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactElasticSlipToleranceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactElasticSlipToleranceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Factor`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Value`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Factor
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Value
+   :value: 1
+
+
+
+
+
+
+.. vale on

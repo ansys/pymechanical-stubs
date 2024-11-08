@@ -1,0 +1,143 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Mechanical``
+==============================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Mechanical
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Application`
+            - Application module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel`
+            - DataModel module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.ExternalData`
+            - ExternalData module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Graphics`
+            - Graphics module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Interfaces`
+            - Interfaces module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Materials`
+            - Materials module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Math`
+            - Math module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Selection`
+            - Selection module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.Table`
+            - Table module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.UI`
+            - UI module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Application</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Application/index>
+    <span class="nf nf-md-package"></span> DataModel</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/index>
+    <span class="nf nf-md-package"></span> ExternalData</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/ExternalData/index>
+    <span class="nf nf-md-package"></span> Graphics</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Graphics/index>
+    <span class="nf nf-md-package"></span> Interfaces</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Interfaces/index>
+    <span class="nf nf-md-package"></span> Materials</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Materials/index>
+    <span class="nf nf-md-package"></span> Math</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Math/index>
+    <span class="nf nf-md-package"></span> Selection</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Selection/index>
+    <span class="nf nf-md-package"></span> Table</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/Table/index>
+    <span class="nf nf-md-package"></span> UI</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/UI/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Mechanical module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

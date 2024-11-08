@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`CriterionDefinedByType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.FluidPenetrationPressure.CriterionDefinedByType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CriterionDefinedByType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CriterionDefinedByType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~UserSpecifiedCriterion`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ProgramControlled
+   :value: 1
+
+
+.. py:attribute:: UserSpecifiedCriterion
+   :value: 2
+
+
+
+
+
+
+.. vale on

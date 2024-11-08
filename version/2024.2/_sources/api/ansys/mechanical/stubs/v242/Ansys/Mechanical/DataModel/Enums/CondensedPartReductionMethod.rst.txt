@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`CondensedPartReductionMethod`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CondensedPartReductionMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CondensedPartReductionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartReductionMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CMS`
+            - 
+          * - :py:attr:`~Guyan`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CMS
+   :value: 0
+
+
+.. py:attribute:: Guyan
+   :value: 1
+
+
+
+
+
+
+.. vale on

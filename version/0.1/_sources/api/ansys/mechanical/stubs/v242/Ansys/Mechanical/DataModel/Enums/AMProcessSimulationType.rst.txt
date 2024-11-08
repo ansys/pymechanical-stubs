@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`AMProcessSimulationType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMProcessSimulationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMProcessSimulationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMProcessSimulationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: ProgramControlled
+   :value: 2
+
+
+.. py:attribute:: Yes
+   :value: 1
+
+
+
+
+
+
+.. vale on

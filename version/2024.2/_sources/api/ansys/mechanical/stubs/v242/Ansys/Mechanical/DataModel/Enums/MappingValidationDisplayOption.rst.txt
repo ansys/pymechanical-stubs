@@ -1,0 +1,107 @@
+.. vale off
+
+
+
+:class:`MappingValidationDisplayOption`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MappingValidationDisplayOption
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MappingValidationDisplayOption
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Boxes`
+            - 
+          * - :py:attr:`~ColoredDiamonds`
+            - 
+          * - :py:attr:`~ColoredPoints`
+            - 
+          * - :py:attr:`~ColoredSphere`
+            - 
+          * - :py:attr:`~Contours`
+            - 
+          * - :py:attr:`~Isolines`
+            - 
+          * - :py:attr:`~ScaledSphere`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Boxes
+   :value: 2
+
+
+.. py:attribute:: ColoredDiamonds
+   :value: 4
+
+
+.. py:attribute:: ColoredPoints
+   :value: 3
+
+
+.. py:attribute:: ColoredSphere
+   :value: 1
+
+
+.. py:attribute:: Contours
+   :value: 6
+
+
+.. py:attribute:: Isolines
+   :value: 5
+
+
+.. py:attribute:: ScaledSphere
+   :value: 0
+
+
+
+
+
+
+.. vale on

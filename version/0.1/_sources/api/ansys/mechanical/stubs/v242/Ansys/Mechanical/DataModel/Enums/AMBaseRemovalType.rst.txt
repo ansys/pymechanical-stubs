@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMBaseRemovalType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMBaseRemovalType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMBaseRemovalType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMBaseRemovalType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Directional`
+            - 
+          * - :py:attr:`~Instantaneous`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Directional
+   :value: 1
+
+
+.. py:attribute:: Instantaneous
+   :value: 0
+
+
+
+
+
+
+.. vale on

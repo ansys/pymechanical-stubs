@@ -1,0 +1,85 @@
+.. vale off
+
+
+
+:class:`BodyStackingType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.BodyStackingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BodyStackingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Combined`
+            - 
+          * - :py:attr:`~Independent`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Combined
+   :value: 1
+
+
+.. py:attribute:: Independent
+   :value: 0
+
+
+.. py:attribute:: ProgramControlled
+   :value: 2
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`DelaminationGenerationMethod`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.DelaminationGenerationMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DelaminationGenerationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DelaminationGenerationMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MatchedMeshing`
+            - 
+          * - :py:attr:`~NodeMatching`
+            - 
+          * - :py:attr:`~PregeneratedInterface`
+            - 
+          * - :py:attr:`~SurfaceSplitting`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MatchedMeshing
+   :value: 2
+
+
+.. py:attribute:: NodeMatching
+   :value: 1
+
+
+.. py:attribute:: PregeneratedInterface
+   :value: 4
+
+
+.. py:attribute:: SurfaceSplitting
+   :value: 3
+
+
+
+
+
+
+.. vale on

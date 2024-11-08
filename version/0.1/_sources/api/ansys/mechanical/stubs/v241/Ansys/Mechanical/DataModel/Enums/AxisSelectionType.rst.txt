@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`AxisSelectionType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AxisSelectionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AxisSelectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AxisSelectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~XAxis`
+            - 
+          * - :py:attr:`~YAxis`
+            - 
+          * - :py:attr:`~ZAxis`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 0
+
+
+.. py:attribute:: XAxis
+   :value: 1
+
+
+.. py:attribute:: YAxis
+   :value: 2
+
+
+.. py:attribute:: ZAxis
+   :value: 3
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,204 @@
+.. vale off
+
+
+
+:class:`MeshMetricType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.MeshMetricType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MeshMetricType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshMetricType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AspectRatio`
+            - 
+          * - :py:attr:`~AspectRatioEXD`
+            - 
+          * - :py:attr:`~CharacteristicLength`
+            - 
+          * - :py:attr:`~CharacteristicLengthLSD`
+            - 
+          * - :py:attr:`~ElementQuality`
+            - 
+          * - :py:attr:`~Hydrodynamics`
+            - 
+          * - :py:attr:`~JacobianRatio`
+            - 
+          * - :py:attr:`~JacobianRatioCornerNodes`
+            - 
+          * - :py:attr:`~JacobianRatioGaussPoints`
+            - 
+          * - :py:attr:`~MaxEdgeLength`
+            - 
+          * - :py:attr:`~MaxQuadAngle`
+            - 
+          * - :py:attr:`~MaxTriAngle`
+            - 
+          * - :py:attr:`~MaximumCornerAngle`
+            - 
+          * - :py:attr:`~MinEdgeLength`
+            - 
+          * - :py:attr:`~MinQuadAngle`
+            - 
+          * - :py:attr:`~MinTriAngle`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~OrthogonalAngle`
+            - 
+          * - :py:attr:`~ParallelDeviation`
+            - 
+          * - :py:attr:`~Skewness`
+            - 
+          * - :py:attr:`~TetCollapse`
+            - 
+          * - :py:attr:`~WarpingAngle`
+            - 
+          * - :py:attr:`~WarpingFactor`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AspectRatio
+   :value: 2
+
+
+.. py:attribute:: AspectRatioEXD
+   :value: 19
+
+
+.. py:attribute:: CharacteristicLength
+   :value: 9
+
+
+.. py:attribute:: CharacteristicLengthLSD
+   :value: 22
+
+
+.. py:attribute:: ElementQuality
+   :value: 1
+
+
+.. py:attribute:: Hydrodynamics
+   :value: 12
+
+
+.. py:attribute:: JacobianRatio
+   :value: 3
+
+
+.. py:attribute:: JacobianRatioCornerNodes
+   :value: 10
+
+
+.. py:attribute:: JacobianRatioGaussPoints
+   :value: 11
+
+
+.. py:attribute:: MaxEdgeLength
+   :value: 21
+
+
+.. py:attribute:: MaxQuadAngle
+   :value: 16
+
+
+.. py:attribute:: MaxTriAngle
+   :value: 14
+
+
+.. py:attribute:: MaximumCornerAngle
+   :value: 6
+
+
+.. py:attribute:: MinEdgeLength
+   :value: 20
+
+
+.. py:attribute:: MinQuadAngle
+   :value: 15
+
+
+.. py:attribute:: MinTriAngle
+   :value: 13
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: OrthogonalAngle
+   :value: 8
+
+
+.. py:attribute:: ParallelDeviation
+   :value: 5
+
+
+.. py:attribute:: Skewness
+   :value: 7
+
+
+.. py:attribute:: TetCollapse
+   :value: 18
+
+
+.. py:attribute:: WarpingAngle
+   :value: 17
+
+
+.. py:attribute:: WarpingFactor
+   :value: 4
+
+
+
+
+
+
+.. vale on

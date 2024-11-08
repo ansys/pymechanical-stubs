@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ContactToleranceType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactToleranceType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactToleranceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactToleranceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SheetThickness`
+            - 
+          * - :py:attr:`~Slider`
+            - 
+          * - :py:attr:`~Value`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: SheetThickness
+   :value: 2
+
+
+.. py:attribute:: Slider
+   :value: 0
+
+
+.. py:attribute:: Value
+   :value: 1
+
+
+
+
+
+
+.. vale on

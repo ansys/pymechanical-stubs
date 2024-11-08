@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CondensedParts``
+==================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CondensedParts
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CondensedParts
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CondensedParts.ExportFormat`
+            - Specifies the Condensed Part Export Format.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> ExportFormat</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CondensedParts/ExportFormat>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CondensedParts module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

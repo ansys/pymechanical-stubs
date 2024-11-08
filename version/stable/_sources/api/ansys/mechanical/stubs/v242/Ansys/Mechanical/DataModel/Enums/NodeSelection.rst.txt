@@ -1,0 +1,74 @@
+.. vale off
+
+
+
+:class:`NodeSelection`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.NodeSelection
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NodeSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NodeSelection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllNodes`
+            - 
+          * - :py:attr:`~VisibleNodes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllNodes
+
+.. py:attribute:: VisibleNodes
+
+
+
+
+
+.. vale on

@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`SpringPreloadType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SpringPreloadType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpringPreloadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpringPreloadType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Length`
+            - 
+          * - :py:attr:`~Load`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Rotation`
+            - 
+          * - :py:attr:`~Torque`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Length
+   :value: 3
+
+
+.. py:attribute:: Load
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Rotation
+   :value: 4
+
+
+.. py:attribute:: Torque
+   :value: 2
+
+
+
+
+
+
+.. vale on

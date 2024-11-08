@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`GraphicsCaptureType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GraphicsCaptureType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Graphics Image Capture Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GraphicsCaptureType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ImageAndLegend`
+            - 
+          * - :py:attr:`~ImageOnly`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ImageAndLegend
+   :value: 0
+
+
+.. py:attribute:: ImageOnly
+   :value: 1
+
+
+
+
+
+
+.. vale on

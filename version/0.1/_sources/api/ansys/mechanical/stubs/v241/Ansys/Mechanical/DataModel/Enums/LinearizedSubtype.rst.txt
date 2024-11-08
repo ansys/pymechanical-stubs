@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`LinearizedSubtype`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.LinearizedSubtype
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LinearizedSubtype.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LinearizedSubtype
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Bending`
+            - 
+          * - :py:attr:`~Membrane`
+            - 
+          * - :py:attr:`~MembraneBending`
+            - 
+          * - :py:attr:`~Peak`
+            - 
+          * - :py:attr:`~Total`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 0
+
+
+.. py:attribute:: Bending
+   :value: 2
+
+
+.. py:attribute:: Membrane
+   :value: 1
+
+
+.. py:attribute:: MembraneBending
+   :value: 3
+
+
+.. py:attribute:: Peak
+   :value: 4
+
+
+.. py:attribute:: Total
+   :value: 5
+
+
+
+
+
+
+.. vale on

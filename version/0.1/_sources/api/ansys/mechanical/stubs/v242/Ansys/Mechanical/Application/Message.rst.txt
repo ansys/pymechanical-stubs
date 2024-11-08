@@ -1,0 +1,248 @@
+.. vale off
+
+
+
+:class:`Message`
+================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Application.Message
+
+   Bases: :py:obj:`object`
+
+
+   
+   A message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Message
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DisplayString`
+            - The display string of the message.
+          * - :py:attr:`~Location`
+            - The location of the message.
+          * - :py:attr:`~RelatedObjects`
+            - The list of objects related to the message.
+          * - :py:attr:`~Severity`
+            - The severity of the message.
+          * - :py:attr:`~Source`
+            - The source object of the message.
+          * - :py:attr:`~StringID`
+            - The string ID of the message.
+          * - :py:attr:`~TimeStamp`
+            - The timestamp of the message.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DisplayString
+   :type: Optional[str]
+
+   
+   The display string of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   The location of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RelatedObjects
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   The list of objects related to the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Severity
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MessageSeverityType]
+
+   
+   The severity of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Source
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   The source object of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StringID
+   :type: Optional[str]
+
+   
+   The string ID of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeStamp
+   :type: Optional[Any]
+
+   
+   The timestamp of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

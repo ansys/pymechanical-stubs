@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ImportedSurfaceLoadType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ExternalModel.ImportedSurfaceLoadType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ImportedSurfaceLoadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportedSurfaceLoadType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Convection`
+            - 
+          * - :py:attr:`~HeatFlux`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Convection
+   :value: 23
+
+
+.. py:attribute:: HeatFlux
+   :value: 22
+
+
+.. py:attribute:: Pressure
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`RigidBodyTransformationType`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.RigidBodyTransformationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RigidBodyTransformationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CoordinateSystem`
+            - 
+          * - :py:attr:`~OriginAndEulerAngles`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CoordinateSystem
+   :value: 1
+
+
+.. py:attribute:: OriginAndEulerAngles
+   :value: 0
+
+
+
+
+
+
+.. vale on

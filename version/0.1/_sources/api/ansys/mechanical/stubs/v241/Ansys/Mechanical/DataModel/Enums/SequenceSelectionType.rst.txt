@@ -1,0 +1,126 @@
+.. vale off
+
+
+
+:class:`SequenceSelectionType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SequenceSelectionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SequenceSelectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SequenceSelectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~ByNumber`
+            - 
+          * - :py:attr:`~First`
+            - 
+          * - :py:attr:`~Identifier`
+            - 
+          * - :py:attr:`~Last`
+            - 
+          * - :py:attr:`~ModalSolution`
+            - 
+          * - :py:attr:`~MsupExpansion`
+            - 
+          * - :py:attr:`~MsupSolution`
+            - 
+          * - :py:attr:`~PSDPfact`
+            - 
+          * - :py:attr:`~Zero`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: ByNumber
+   :value: 3
+
+
+.. py:attribute:: First
+   :value: 0
+
+
+.. py:attribute:: Identifier
+   :value: 8
+
+
+.. py:attribute:: Last
+   :value: 1
+
+
+.. py:attribute:: ModalSolution
+   :value: 5
+
+
+.. py:attribute:: MsupExpansion
+   :value: 7
+
+
+.. py:attribute:: MsupSolution
+   :value: 6
+
+
+.. py:attribute:: PSDPfact
+   :value: 9
+
+
+.. py:attribute:: Zero
+   :value: 4
+
+
+
+
+
+
+.. vale on

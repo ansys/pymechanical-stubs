@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`TransferAdmittanceModelType`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.TransferAdmittanceModelType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TransferAdmittanceModelType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TransferAdmittanceModelType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HexagonalGridStructure`
+            - 
+          * - :py:attr:`~PerforatedPlate`
+            - 
+          * - :py:attr:`~SquareGridStructure`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HexagonalGridStructure
+   :value: 2
+
+
+.. py:attribute:: PerforatedPlate
+   :value: 0
+
+
+.. py:attribute:: SquareGridStructure
+   :value: 1
+
+
+
+
+
+
+.. vale on

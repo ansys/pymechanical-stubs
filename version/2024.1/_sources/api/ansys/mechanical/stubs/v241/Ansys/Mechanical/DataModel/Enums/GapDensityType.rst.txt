@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`GapDensityType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GapDensityType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GapDensityType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GapDensityType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Coarse`
+            - 
+          * - :py:attr:`~Fine`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Coarse
+   :value: 0
+
+
+.. py:attribute:: Fine
+   :value: 1
+
+
+
+
+
+
+.. vale on

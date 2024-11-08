@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`SweepAxisymmetricFallBackMeshType`
+==========================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SweepAxisymmetricFallBackMeshType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SweepAxisymmetricFallBackMeshType for Sweep method with Axisymmetric algorithm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SweepAxisymmetricFallBackMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MeshTypeTet`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MeshTypeTet
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

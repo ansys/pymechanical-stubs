@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`JointStopType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.JointStopType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointStopType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointStopType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Lock`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Stop`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Lock
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Stop
+   :value: 1
+
+
+
+
+
+
+.. vale on

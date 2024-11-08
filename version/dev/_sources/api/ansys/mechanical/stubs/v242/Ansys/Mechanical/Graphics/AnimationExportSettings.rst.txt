@@ -1,0 +1,118 @@
+.. vale off
+
+
+
+:class:`AnimationExportSettings`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Graphics.AnimationExportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   AnimationExportSettings class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AnimationExportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Height`
+            - Specifies the video height.
+          * - :py:attr:`~Width`
+            - Specifies the video width.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Height
+   :type: Optional[int]
+
+   
+   Specifies the video height.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Width
+   :type: Optional[int]
+
+   
+   Specifies the video width.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`VolumeMeshType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.VolumeMeshType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the 'Control' tree node and reflects the type of volume mesh being configured.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VolumeMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HexCore`
+            - 
+          * - :py:attr:`~Tetrahedral`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HexCore
+   :value: 3
+
+
+.. py:attribute:: Tetrahedral
+   :value: 1
+
+
+
+
+
+
+.. vale on

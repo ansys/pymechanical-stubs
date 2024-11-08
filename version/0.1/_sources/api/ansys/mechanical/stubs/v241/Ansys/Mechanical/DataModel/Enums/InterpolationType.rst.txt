@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`InterpolationType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.InterpolationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: InterpolationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Directional`
+            - 
+          * - :py:attr:`~Nondirectional`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Directional
+   :value: 1
+
+
+.. py:attribute:: Nondirectional
+   :value: 0
+
+
+
+
+
+
+.. vale on

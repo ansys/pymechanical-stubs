@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`TopoBoundType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.TopoBoundType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TopoBoundType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoBoundType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LowerBound`
+            - 
+          * - :py:attr:`~UpperBound`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: LowerBound
+   :value: 0
+
+
+.. py:attribute:: UpperBound
+   :value: 1
+
+
+
+
+
+
+.. vale on

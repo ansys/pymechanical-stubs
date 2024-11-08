@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDShellInertiaUpdateType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDShellInertiaUpdateType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDShellInertiaUpdateType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Recompute`
+            - 
+          * - :py:attr:`~Rotate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Recompute
+   :value: 0
+
+
+.. py:attribute:: Rotate
+   :value: 1
+
+
+
+
+
+
+.. vale on

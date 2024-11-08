@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`KrigingPolynomType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.KrigingPolynomType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Represents the various types of Polynomial which combines with Kriging model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: KrigingPolynomType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PolyConst`
+            - 
+          * - :py:attr:`~PolyCrossQuad`
+            - 
+          * - :py:attr:`~PolyLinear`
+            - 
+          * - :py:attr:`~PolyNone`
+            - 
+          * - :py:attr:`~PolyPureQuad`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: PolyConst
+   :value: 1
+
+
+.. py:attribute:: PolyCrossQuad
+   :value: 4
+
+
+.. py:attribute:: PolyLinear
+   :value: 2
+
+
+.. py:attribute:: PolyNone
+   :value: 0
+
+
+.. py:attribute:: PolyPureQuad
+   :value: 3
+
+
+
+
+
+
+.. vale on

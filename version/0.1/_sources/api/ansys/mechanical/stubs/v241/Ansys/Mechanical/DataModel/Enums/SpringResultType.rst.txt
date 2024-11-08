@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`SpringResultType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SpringResultType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpringResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpringResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DampingForce`
+            - 
+          * - :py:attr:`~ElasticForce`
+            - 
+          * - :py:attr:`~Elongation`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DampingForce
+   :value: 293
+
+
+.. py:attribute:: ElasticForce
+   :value: 292
+
+
+.. py:attribute:: Elongation
+   :value: 290
+
+
+.. py:attribute:: Velocity
+   :value: 291
+
+
+
+
+
+
+.. vale on

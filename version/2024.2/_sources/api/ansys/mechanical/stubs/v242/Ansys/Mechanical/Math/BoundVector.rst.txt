@@ -1,0 +1,119 @@
+.. vale off
+
+
+
+:class:`BoundVector`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Math.BoundVector
+
+   Bases: :py:obj:`object`
+
+
+   
+   A vector with fixed intial point and terminal point.
+   Or a vector with fixed initial point(origin) and a direction(vector).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BoundVector
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Origin`
+            - The location at the start of the BoundVector.
+          * - :py:attr:`~Vector`
+            - The direction of the BoundVector.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Origin
+   :type: Optional[Ansys.Mechanical.Graphics.Point]
+
+   
+   The location at the start of the BoundVector.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Vector
+   :type: Optional[Ansys.ACT.Math.Vector3D]
+
+   
+   The direction of the BoundVector.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

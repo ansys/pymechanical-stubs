@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`PinBehavior`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.PinBehavior
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PinBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PinBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PinAcceleration`
+            - 
+          * - :py:attr:`~PinForce`
+            - 
+          * - :py:attr:`~PinPosition`
+            - 
+          * - :py:attr:`~PinVelocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: PinAcceleration
+   :value: 2
+
+
+.. py:attribute:: PinForce
+   :value: 3
+
+
+.. py:attribute:: PinPosition
+   :value: 0
+
+
+.. py:attribute:: PinVelocity
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`GeometryView`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.GeometryView
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GeometryView.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GeometryView
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CappedIsosurface`
+            - 
+          * - :py:attr:`~Exterior`
+            - 
+          * - :py:attr:`~Isosurface`
+            - 
+          * - :py:attr:`~SlicePlane`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CappedIsosurface
+   :value: 2
+
+
+.. py:attribute:: Exterior
+   :value: 0
+
+
+.. py:attribute:: Isosurface
+   :value: 1
+
+
+.. py:attribute:: SlicePlane
+   :value: 3
+
+
+
+
+
+
+.. vale on

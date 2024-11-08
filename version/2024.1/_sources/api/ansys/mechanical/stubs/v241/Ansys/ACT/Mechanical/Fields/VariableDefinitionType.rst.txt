@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`VariableDefinitionType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Mechanical.Fields.VariableDefinitionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Defines the various ways to define the values of a variable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VariableDefinitionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Discrete`
+            - 
+          * - :py:attr:`~Formula`
+            - 
+          * - :py:attr:`~Free`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Discrete
+   :value: 1
+
+
+.. py:attribute:: Formula
+   :value: 2
+
+
+.. py:attribute:: Free
+   :value: 0
+
+
+
+
+
+
+.. vale on

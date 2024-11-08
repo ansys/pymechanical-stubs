@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDSolverPrecisionType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDSolverPrecisionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDSolverPrecisionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Double`
+            - 
+          * - :py:attr:`~Single`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Double
+   :value: 1
+
+
+.. py:attribute:: Single
+   :value: 0
+
+
+
+
+
+
+.. vale on

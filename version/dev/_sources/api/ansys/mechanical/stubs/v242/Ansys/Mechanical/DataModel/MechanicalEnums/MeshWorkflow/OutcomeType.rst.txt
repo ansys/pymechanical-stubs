@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`OutcomeType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the “Outcome” tree node and reflects the type of outcome being configured. Based on the type of an outcome different rules are applied which define the applicable list of outcome data to be used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OutcomeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EnclosureExternalScope`
+            - 
+          * - :py:attr:`~EnclosureInternalScope`
+            - 
+          * - :py:attr:`~ExtrusionEndScope`
+            - 
+          * - :py:attr:`~ExtrusionStartScope`
+            - 
+          * - :py:attr:`~FaceZoneScope`
+            - 
+          * - :py:attr:`~FailureInfo`
+            - 
+          * - :py:attr:`~InternalVolumeZoneScope`
+            - 
+          * - :py:attr:`~Scope`
+            - 
+          * - :py:attr:`~VolumeZoneScope`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EnclosureExternalScope
+   :value: 9
+
+
+.. py:attribute:: EnclosureInternalScope
+   :value: 8
+
+
+.. py:attribute:: ExtrusionEndScope
+   :value: 11
+
+
+.. py:attribute:: ExtrusionStartScope
+   :value: 10
+
+
+.. py:attribute:: FaceZoneScope
+   :value: 14
+
+
+.. py:attribute:: FailureInfo
+   :value: 6
+
+
+.. py:attribute:: InternalVolumeZoneScope
+   :value: 16
+
+
+.. py:attribute:: Scope
+   :value: 4
+
+
+.. py:attribute:: VolumeZoneScope
+   :value: 15
+
+
+
+
+
+
+.. vale on

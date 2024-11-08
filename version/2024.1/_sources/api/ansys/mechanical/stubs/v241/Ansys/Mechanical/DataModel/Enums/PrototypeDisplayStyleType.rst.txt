@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`PrototypeDisplayStyleType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.PrototypeDisplayStyleType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PrototypeDisplayStyleType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PrototypeDisplayStyleType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AssemblyColor`
+            - 
+          * - :py:attr:`~BodyColor`
+            - 
+          * - :py:attr:`~Material`
+            - 
+          * - :py:attr:`~NonLinearMaterialEffects`
+            - 
+          * - :py:attr:`~PartColor`
+            - 
+          * - :py:attr:`~ShellThickness`
+            - 
+          * - :py:attr:`~StiffnessBehavior`
+            - 
+          * - :py:attr:`~VisibleThickness`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AssemblyColor
+   :value: 7
+
+
+.. py:attribute:: BodyColor
+   :value: 0
+
+
+.. py:attribute:: Material
+   :value: 2
+
+
+.. py:attribute:: NonLinearMaterialEffects
+   :value: 3
+
+
+.. py:attribute:: PartColor
+   :value: 5
+
+
+.. py:attribute:: ShellThickness
+   :value: 1
+
+
+.. py:attribute:: StiffnessBehavior
+   :value: 4
+
+
+.. py:attribute:: VisibleThickness
+   :value: 6
+
+
+
+
+
+
+.. vale on

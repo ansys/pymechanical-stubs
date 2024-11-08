@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`LengthUnit`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.LengthUnit
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies how to interpret the variable data source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LengthUnit
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~centimeter`
+            - 
+          * - :py:attr:`~foot`
+            - 
+          * - :py:attr:`~inch`
+            - 
+          * - :py:attr:`~meter`
+            - 
+          * - :py:attr:`~micrometer`
+            - 
+          * - :py:attr:`~millimeter`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: centimeter
+   :value: 1
+
+
+.. py:attribute:: foot
+   :value: 2
+
+
+.. py:attribute:: inch
+   :value: 3
+
+
+.. py:attribute:: meter
+   :value: 0
+
+
+.. py:attribute:: micrometer
+   :value: 5
+
+
+.. py:attribute:: millimeter
+   :value: 4
+
+
+
+
+
+
+.. vale on

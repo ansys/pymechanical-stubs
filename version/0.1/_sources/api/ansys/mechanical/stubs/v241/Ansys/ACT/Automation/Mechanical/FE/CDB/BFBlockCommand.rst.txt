@@ -1,0 +1,196 @@
+.. vale off
+
+
+
+:class:`BFBlockCommand`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.CDB.BFBlockCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a BFBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BFBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Lab`
+            - Gets the label.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~NodalBodyForceCount`
+            - Gets the number of nodal body-force loads.
+          * - :py:attr:`~NodalBodyForces`
+            - Gets the nodal body-force loads.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+   
+   Gets the label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodalBodyForceCount
+   :type: Optional[int]
+
+   
+   Gets the number of nodal body-force loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodalBodyForces
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNodalBodyForce]]
+
+   
+   Gets the nodal body-force loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

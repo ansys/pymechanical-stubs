@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`RestartRetainFilesType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.RestartRetainFilesType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RestartRetainFilesType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RestartRetainFilesType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: No
+   :value: 1
+
+
+.. py:attribute:: Yes
+   :value: 0
+
+
+
+
+
+
+.. vale on

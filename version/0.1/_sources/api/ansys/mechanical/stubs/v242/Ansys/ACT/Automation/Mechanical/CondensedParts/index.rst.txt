@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CondensedParts``
+==================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CondensedParts
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CondensedParts
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CondensedParts.ExportSettings`
+            - ExportSettings class.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ExportSettings</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/CondensedParts/ExportSettings>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CondensedParts module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

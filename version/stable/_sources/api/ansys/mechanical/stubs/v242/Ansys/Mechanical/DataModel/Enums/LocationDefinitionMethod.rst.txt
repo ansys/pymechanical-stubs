@@ -1,0 +1,148 @@
+.. vale off
+
+
+
+:class:`LocationDefinitionMethod`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.LocationDefinitionMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LocationDefinitionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LocationDefinitionMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Beam`
+            - 
+          * - :py:attr:`~Bearing`
+            - 
+          * - :py:attr:`~BoundaryCondition`
+            - 
+          * - :py:attr:`~ContactRegion`
+            - 
+          * - :py:attr:`~CoordinateSystem`
+            - 
+          * - :py:attr:`~GeometrySelection`
+            - 
+          * - :py:attr:`~MeshConnection`
+            - 
+          * - :py:attr:`~NamedSelection`
+            - 
+          * - :py:attr:`~NoSelection`
+            - 
+          * - :py:attr:`~RemotePoint`
+            - 
+          * - :py:attr:`~Spring`
+            - 
+          * - :py:attr:`~Surface`
+            - 
+          * - :py:attr:`~UserDefinedCoordinates`
+            - 
+          * - :py:attr:`~WeakSprings`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Beam
+   :value: 7
+
+
+.. py:attribute:: Bearing
+   :value: 12
+
+
+.. py:attribute:: BoundaryCondition
+   :value: 3
+
+
+.. py:attribute:: ContactRegion
+   :value: 5
+
+
+.. py:attribute:: CoordinateSystem
+   :value: 1
+
+
+.. py:attribute:: GeometrySelection
+   :value: 0
+
+
+.. py:attribute:: MeshConnection
+   :value: 9
+
+
+.. py:attribute:: NamedSelection
+   :value: 2
+
+
+.. py:attribute:: NoSelection
+   :value: 4
+
+
+.. py:attribute:: RemotePoint
+   :value: 6
+
+
+.. py:attribute:: Spring
+   :value: 10
+
+
+.. py:attribute:: Surface
+   :value: 11
+
+
+.. py:attribute:: UserDefinedCoordinates
+   :value: 8
+
+
+.. py:attribute:: WeakSprings
+
+
+
+
+
+.. vale on

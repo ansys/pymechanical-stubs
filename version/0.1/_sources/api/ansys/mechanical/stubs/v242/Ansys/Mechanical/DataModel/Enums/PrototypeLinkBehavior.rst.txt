@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`PrototypeLinkBehavior`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PrototypeLinkBehavior
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PrototypeLinkBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PrototypeLinkBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Compression`
+            - 
+          * - :py:attr:`~Tension`
+            - 
+          * - :py:attr:`~TensionCompression`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Compression
+   :value: 2
+
+
+.. py:attribute:: Tension
+   :value: 1
+
+
+.. py:attribute:: TensionCompression
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ProximitySFSourcesType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ProximitySFSourcesType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ProximitySFSourcesType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ProximitySFSourcesType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Edges`
+            - 
+          * - :py:attr:`~Faces`
+            - 
+          * - :py:attr:`~FacesAndEdges`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Edges
+   :value: 2
+
+
+.. py:attribute:: Faces
+   :value: 1
+
+
+.. py:attribute:: FacesAndEdges
+   :value: 0
+
+
+
+
+
+
+.. vale on

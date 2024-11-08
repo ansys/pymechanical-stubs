@@ -1,0 +1,83 @@
+.. vale off
+
+
+
+:class:`EXDCharZoneDimensionType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDCharZoneDimensionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDCharZoneDimensionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Diagonals`
+            - 
+          * - :py:attr:`~NearFace`
+            - 
+          * - :py:attr:`~OppFace`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Diagonals
+   :value: 0
+
+
+.. py:attribute:: NearFace
+   :value: 2
+
+
+.. py:attribute:: OppFace
+   :value: 1
+
+
+
+
+
+
+.. vale on

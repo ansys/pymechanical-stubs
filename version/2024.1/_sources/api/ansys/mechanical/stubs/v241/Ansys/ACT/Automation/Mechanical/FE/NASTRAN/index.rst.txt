@@ -1,0 +1,137 @@
+.. vale off
+
+
+
+
+
+
+
+
+``NASTRAN``
+===========================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: NASTRAN
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.CaseControlCommand`
+            - Case control command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.GenericCommand`
+            - Generic command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NASTRANCommand`
+            - NASTRANCommand class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NastranOption`
+            - Option.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NastranOptionLine`
+            - Option line.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.OptionsControlCommand`
+            - Options control command.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CaseControlCommand</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/CaseControlCommand>
+    <span class="nf nf-cod-symbol_class"></span> GenericCommand</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/GenericCommand>
+    <span class="nf nf-cod-symbol_class"></span> NASTRANCommand</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/NASTRANCommand>
+    <span class="nf nf-cod-symbol_class"></span> NastranOption</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/NastranOption>
+    <span class="nf nf-cod-symbol_class"></span> NastranOptionLine</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/NastranOptionLine>
+    <span class="nf nf-cod-symbol_class"></span> OptionsControlCommand</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/OptionsControlCommand>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+NASTRAN module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PortBehavior`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.PortBehavior
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PortBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PortBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Transparent`
+            - 
+          * - :py:attr:`~Vibro`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Transparent
+   :value: 1
+
+
+.. py:attribute:: Vibro
+   :value: 0
+
+
+
+
+
+
+.. vale on

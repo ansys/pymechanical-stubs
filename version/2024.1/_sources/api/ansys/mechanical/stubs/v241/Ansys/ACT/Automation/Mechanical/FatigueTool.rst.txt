@@ -1,0 +1,1048 @@
+.. vale off
+
+
+
+:class:`FatigueTool`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FatigueTool
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a FatigueTool.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueTool
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddBiaxialityIndication`
+            - Creates a new FatigueBiaxialityIndication
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddDamage`
+            - Creates a new FatigueDamage
+          * - :py:attr:`~AddDamageMatrix`
+            - Creates a new FatigueDamageMatrix
+          * - :py:attr:`~AddEquivalentAlternativeStress`
+            - Creates a new FatigueEquivalentAlternativeStress
+          * - :py:attr:`~AddFatigueSensitivity`
+            - Creates a new FatigueSensitivity
+          * - :py:attr:`~AddHysteresis`
+            - Creates a new FatigueHysteresis
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddLife`
+            - Creates a new FatigueLife
+          * - :py:attr:`~AddRainflowMatrix`
+            - Creates a new FatigueRainflowMatrix
+          * - :py:attr:`~AddSafetyFactor`
+            - Creates a new FatigueSafetyFactor
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateAllResults`
+            - Run the EvaluateAllResults action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AnalysisType`
+            - Gets or sets the AnalysisType.
+          * - :py:attr:`~BinSize`
+            - Gets or sets the BinSize.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CustomUnitsName`
+            - Gets or sets the Custom Units Name.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DisplayTime`
+            - Gets or sets the DisplayTime.
+          * - :py:attr:`~ExposureDuration`
+            - Gets or sets the ExposureDuration.
+          * - :py:attr:`~FatigueStrengthFactor`
+            - Gets or sets the FatigueStrengthFactor.
+          * - :py:attr:`~Frequency`
+            - Gets or sets the Frequency.
+          * - :py:attr:`~FrequencySelection`
+            - Gets or sets the FrequencySelection.
+          * - :py:attr:`~HistoryDataLocation`
+            - Gets or sets the HistoryDataLocation.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InfiniteLife`
+            - Gets or sets the InfiniteLife.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LoadingRatio`
+            - Gets or sets the LoadingRatio.
+          * - :py:attr:`~LoadingType`
+            - Gets or sets the LoadingType.
+          * - :py:attr:`~MaximumDataPointsToPlot`
+            - Gets or sets the MaximumDataPointsToPlot.
+          * - :py:attr:`~MeanStressTheory`
+            - Gets or sets the MeanStressTheory.
+          * - :py:attr:`~MethodSelection`
+            - Gets or sets the MethodSelection.
+          * - :py:attr:`~OneCycleIsEqualTo`
+            - Gets or sets the OneCycleIsEqualTo.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ResultsInput`
+            - Gets or sets the ResultsInput.
+          * - :py:attr:`~ScaleFactor`
+            - Gets or sets the ScaleFactor.
+          * - :py:attr:`~StressComponent`
+            - Gets or sets the StressComponent.
+          * - :py:attr:`~UnitsName`
+            - Gets or sets the UnitsName.
+          * - :py:attr:`~UseQuickRainflowCounting`
+            - Gets or sets the UseQuickRainflowCounting.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AnalysisType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FatigueToolAnalysisType]
+
+   
+   Gets or sets the AnalysisType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BinSize
+   :type: Optional[int]
+
+   
+   Gets or sets the BinSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomUnitsName
+   :type: Optional[str]
+
+   
+   Gets or sets the Custom Units Name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the DisplayTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExposureDuration
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ExposureDuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FatigueStrengthFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the FatigueStrengthFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Frequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Frequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FrequencySelection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FatigueFrequencySelection]
+
+   
+   Gets or sets the FrequencySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HistoryDataLocation
+   :type: Optional[str]
+
+   
+   Gets or sets the HistoryDataLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InfiniteLife
+   :type: Optional[float]
+
+   
+   Gets or sets the InfiniteLife.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSFatigueToolAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadingRatio
+   :type: Optional[float]
+
+   
+   Gets or sets the LoadingRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadingType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FatigueLoadType]
+
+   
+   Gets or sets the LoadingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumDataPointsToPlot
+   :type: Optional[float]
+
+   
+   Gets or sets the MaximumDataPointsToPlot.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeanStressTheory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeanStressTheoryType]
+
+   
+   Gets or sets the MeanStressTheory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MethodSelection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FatigueToolMethod]
+
+   
+   Gets or sets the MethodSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OneCycleIsEqualTo
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the OneCycleIsEqualTo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultsInput
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FatigueToolResultsInputType]
+
+   
+   Gets or sets the ResultsInput.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScaleFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the ScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StressComponent
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FatigueStressComponentType]
+
+   
+   Gets or sets the StressComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnitsName
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LifeUnitsType]
+
+   
+   Gets or sets the UnitsName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseQuickRainflowCounting
+   :type: Optional[bool]
+
+   
+   Gets or sets the UseQuickRainflowCounting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBiaxialityIndication() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueBiaxialityIndication
+
+   
+   Creates a new FatigueBiaxialityIndication
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDamage() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueDamage
+
+   
+   Creates a new FatigueDamage
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDamageMatrix() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueDamageMatrix
+
+   
+   Creates a new FatigueDamageMatrix
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentAlternativeStress() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueEquivalentAlternativeStress
+
+   
+   Creates a new FatigueEquivalentAlternativeStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFatigueSensitivity() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueSensitivity
+
+   
+   Creates a new FatigueSensitivity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHysteresis() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueHysteresis
+
+   
+   Creates a new FatigueHysteresis
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLife() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueLife
+
+   
+   Creates a new FatigueLife
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRainflowMatrix() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueRainflowMatrix
+
+   
+   Creates a new FatigueRainflowMatrix
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSafetyFactor() -> Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults.FatigueSafetyFactor
+
+   
+   Creates a new FatigueSafetyFactor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllResults() -> None
+
+   
+   Run the EvaluateAllResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`MethodType`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MethodType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MethodType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MethodType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllQuad`
+            - 
+          * - :py:attr:`~AllTriAllTet`
+            - 
+          * - :py:attr:`~Automatic`
+            - 
+          * - :py:attr:`~CFXMesh`
+            - 
+          * - :py:attr:`~Cartesian`
+            - 
+          * - :py:attr:`~HexDominant`
+            - 
+          * - :py:attr:`~LayeredTet`
+            - 
+          * - :py:attr:`~MultiZone`
+            - 
+          * - :py:attr:`~Particle`
+            - 
+          * - :py:attr:`~Prime`
+            - 
+          * - :py:attr:`~QuadTri`
+            - 
+          * - :py:attr:`~Stacker`
+            - 
+          * - :py:attr:`~Sweep`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllQuad
+   :value: 4
+
+
+.. py:attribute:: AllTriAllTet
+   :value: 1
+
+
+.. py:attribute:: Automatic
+   :value: 0
+
+
+.. py:attribute:: CFXMesh
+   :value: 6
+
+
+.. py:attribute:: Cartesian
+   :value: 8
+
+
+.. py:attribute:: HexDominant
+   :value: 2
+
+
+.. py:attribute:: LayeredTet
+   :value: 12
+
+
+.. py:attribute:: MultiZone
+   :value: 7
+
+
+.. py:attribute:: Particle
+   :value: 13
+
+
+.. py:attribute:: Prime
+   :value: 14
+
+
+.. py:attribute:: QuadTri
+   :value: 3
+
+
+.. py:attribute:: Stacker
+   :value: 15
+
+
+.. py:attribute:: Sweep
+   :value: 5
+
+
+
+
+
+
+.. vale on

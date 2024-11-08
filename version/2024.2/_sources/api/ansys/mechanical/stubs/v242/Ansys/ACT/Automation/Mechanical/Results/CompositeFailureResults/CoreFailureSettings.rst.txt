@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`CoreFailureSettings`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CoreFailureSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Core failure criterion for sandwich structures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoreFailureSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConsiderInterlaminarNormalStresses`
+            - Gets or sets whether interlaminar normal stresses are included in the core failure evaluation.
+          * - :py:attr:`~WeightingFactor`
+            - Gets or sets the weighting factor for the core failure criterion. The corresponding failure label
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ConsiderInterlaminarNormalStresses
+   :type: Optional[bool]
+
+   
+   Gets or sets whether interlaminar normal stresses are included in the core failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeightingFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the weighting factor for the core failure criterion. The corresponding failure label
+       is 'cf'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

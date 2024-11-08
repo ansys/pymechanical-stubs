@@ -1,0 +1,93 @@
+.. vale off
+
+
+
+:class:`ImportSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Materials.ImportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   ImportSettings interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Filter`
+            - All materials will be imported if this list of the names of
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Filter
+   :type: Optional[List[str]]
+
+   
+   All materials will be imported if this list of the names of
+   specific materials to be imported is not specified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

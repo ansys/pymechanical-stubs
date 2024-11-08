@@ -1,0 +1,234 @@
+.. vale off
+
+
+
+:class:`ControlType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the mesh workflow control type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ControlType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Checkpoint`
+            - 
+          * - :py:attr:`~ConstantSizeSurfaceMesh`
+            - 
+          * - :py:attr:`~ConstantSizeVolumeMesh`
+            - 
+          * - :py:attr:`~ConstantSizeWrap`
+            - 
+          * - :py:attr:`~CustomNamesEnclosure`
+            - 
+          * - :py:attr:`~CustomNamesExtrusion`
+            - 
+          * - :py:attr:`~CustomNamesWrap`
+            - 
+          * - :py:attr:`~Extrusion`
+            - 
+          * - :py:attr:`~HemisphereEnclosure`
+            - 
+          * - :py:attr:`~HoleFilling`
+            - 
+          * - :py:attr:`~HolePatching`
+            - 
+          * - :py:attr:`~ImproveSurfaceMeshSecondOrderConversion`
+            - 
+          * - :py:attr:`~ImproveVolumeMeshAutoNodeMove`
+            - 
+          * - :py:attr:`~ImproveVolumeMeshSecondOrderConversion`
+            - 
+          * - :py:attr:`~IrregularShapeConvexEnclosure`
+            - 
+          * - :py:attr:`~IrregularShapeHemiConvexEnclosure`
+            - 
+          * - :py:attr:`~MaterialPoint`
+            - 
+          * - :py:attr:`~MeshExport`
+            - 
+          * - :py:attr:`~MeshImport`
+            - 
+          * - :py:attr:`~PartEnclosure`
+            - 
+          * - :py:attr:`~PartsMerging`
+            - 
+          * - :py:attr:`~SizeFieldWrap`
+            - 
+          * - :py:attr:`~SphericalEnclosure`
+            - 
+          * - :py:attr:`~TopologyCreation`
+            - 
+          * - :py:attr:`~VolumesMerging`
+            - 
+          * - :py:attr:`~WrapSpecificSurfaceMesh`
+            - 
+          * - :py:attr:`~ZoneMaterialAssignment`
+            - 
+          * - :py:attr:`~ZoneThicknessAssignment`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Checkpoint
+   :value: 3
+
+
+.. py:attribute:: ConstantSizeSurfaceMesh
+   :value: 48
+
+
+.. py:attribute:: ConstantSizeVolumeMesh
+   :value: 54
+
+
+.. py:attribute:: ConstantSizeWrap
+   :value: 61
+
+
+.. py:attribute:: CustomNamesEnclosure
+   :value: 14
+
+
+.. py:attribute:: CustomNamesExtrusion
+   :value: 28
+
+
+.. py:attribute:: CustomNamesWrap
+   :value: 64
+
+
+.. py:attribute:: Extrusion
+   :value: 27
+
+
+.. py:attribute:: HemisphereEnclosure
+   :value: 9
+
+
+.. py:attribute:: HoleFilling
+   :value: 29
+
+
+.. py:attribute:: HolePatching
+   :value: 30
+
+
+.. py:attribute:: ImproveSurfaceMeshSecondOrderConversion
+   :value: 58
+
+
+.. py:attribute:: ImproveVolumeMeshAutoNodeMove
+   :value: 59
+
+
+.. py:attribute:: ImproveVolumeMeshSecondOrderConversion
+   :value: 60
+
+
+.. py:attribute:: IrregularShapeConvexEnclosure
+   :value: 12
+
+
+.. py:attribute:: IrregularShapeHemiConvexEnclosure
+   :value: 13
+
+
+.. py:attribute:: MaterialPoint
+   :value: 66
+
+
+.. py:attribute:: MeshExport
+   :value: 5
+
+
+.. py:attribute:: MeshImport
+   :value: 4
+
+
+.. py:attribute:: PartEnclosure
+   :value: 7
+
+
+.. py:attribute:: PartsMerging
+   :value: 81
+
+
+.. py:attribute:: SizeFieldWrap
+   :value: 63
+
+
+.. py:attribute:: SphericalEnclosure
+   :value: 8
+
+
+.. py:attribute:: TopologyCreation
+   :value: 20
+
+
+.. py:attribute:: VolumesMerging
+   :value: 31
+
+
+.. py:attribute:: WrapSpecificSurfaceMesh
+   :value: 50
+
+
+.. py:attribute:: ZoneMaterialAssignment
+   :value: 15
+
+
+.. py:attribute:: ZoneThicknessAssignment
+   :value: 16
+
+
+
+
+
+
+.. vale on

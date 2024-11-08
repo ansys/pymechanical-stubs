@@ -1,0 +1,221 @@
+.. vale off
+
+
+
+:class:`AcousticsFarFieldResultWorksheet`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AcousticsFarFieldResultWorksheet
+
+   Bases: :py:obj:`object`
+
+
+   
+   AcousticsFarFieldResultWorksheet class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AcousticsFarFieldResultWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Adds a Row to the worksheet.
+          * - :py:attr:`~DeleteRow`
+            - Deletes a row from the worksheet at index.
+          * - :py:attr:`~DuplicateRow`
+            - Insert a row from the worksheet at index.
+          * - :py:attr:`~GetCoordinateSystemSelection`
+            - Gets the worksheet CoordinateSystemSelection property at index.
+          * - :py:attr:`~GetXCoordinate`
+            - Gets the worksheet Mic X property at index.
+          * - :py:attr:`~GetYCoordinate`
+            - Gets the worksheet Mic Y property at index.
+          * - :py:attr:`~GetZCoordinate`
+            - Gets the worksheet Mic Z property at index.
+          * - :py:attr:`~InsertRow`
+            - Insert a row from the worksheet at index.
+          * - :py:attr:`~SetCoordinateSystemSelection`
+            - Sets the worksheet CoordinateSystemSelection property at index.
+          * - :py:attr:`~SetXCoordinate`
+            - Sets the worksheet Mic X property at index.
+          * - :py:attr:`~SetYCoordinate`
+            - Sets the worksheet Mic Y property at index.
+          * - :py:attr:`~SetZCoordinate`
+            - Sets the worksheet Mic Z property at index.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Return the number of entries.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[int]
+
+   
+   Return the number of entries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> int
+
+   
+   Adds a Row to the worksheet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+   
+   Deletes a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DuplicateRow(fromIndex: int, toIndex: int) -> int
+
+   
+   Insert a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCoordinateSystemSelection(index: int) -> int
+
+   
+   Gets the worksheet CoordinateSystemSelection property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetXCoordinate(index: int) -> float
+
+   
+   Gets the worksheet Mic X property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetYCoordinate(index: int) -> float
+
+   
+   Gets the worksheet Mic Y property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetZCoordinate(index: int) -> float
+
+   
+   Gets the worksheet Mic Z property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InsertRow(index: int) -> int
+
+   
+   Insert a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCoordinateSystemSelection(index: int, newVal: int) -> None
+
+   
+   Sets the worksheet CoordinateSystemSelection property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetXCoordinate(index: int, newVal: float) -> None
+
+   
+   Sets the worksheet Mic X property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetYCoordinate(index: int, newVal: float) -> None
+
+   
+   Sets the worksheet Mic Y property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetZCoordinate(index: int, newVal: float) -> None
+
+   
+   Sets the worksheet Mic Z property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

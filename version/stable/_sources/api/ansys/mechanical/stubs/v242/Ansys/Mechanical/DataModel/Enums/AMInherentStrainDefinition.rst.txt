@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`AMInherentStrainDefinition`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMInherentStrainDefinition
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMInherentStrainDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMInherentStrainDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Anisotropic`
+            - 
+          * - :py:attr:`~Isotropic`
+            - 
+          * - :py:attr:`~ScanPattern`
+            - 
+          * - :py:attr:`~ThermalStrain`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Anisotropic
+   :value: 1
+
+
+.. py:attribute:: Isotropic
+   :value: 0
+
+
+.. py:attribute:: ScanPattern
+   :value: 2
+
+
+.. py:attribute:: ThermalStrain
+   :value: 3
+
+
+
+
+
+
+.. vale on

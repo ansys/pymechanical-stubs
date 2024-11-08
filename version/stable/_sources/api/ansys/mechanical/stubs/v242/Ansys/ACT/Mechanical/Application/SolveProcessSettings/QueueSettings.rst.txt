@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`QueueSettings`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Application.SolveProcessSettings.QueueSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   The class representing queue settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: QueueSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~JobName`
+            - The job name of the queue settings.
+          * - :py:attr:`~License`
+            - The license of the queue settings.  The setter will throw an exception if the given license is not valid.
+          * - :py:attr:`~Name`
+            - The name of the queue settings.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: JobName
+   :type: Optional[str]
+
+   
+   The job name of the queue settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: License
+   :type: Optional[str]
+
+   
+   The license of the queue settings.  The setter will throw an exception if the given license is not valid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   The name of the queue settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ContactPinballType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactPinballType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactPinballType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactPinballType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AutoDetectionValue`
+            - 
+          * - :py:attr:`~Factor`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Radius`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AutoDetectionValue
+   :value: 3
+
+
+.. py:attribute:: Factor
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Radius
+   :value: 1
+
+
+
+
+
+
+.. vale on

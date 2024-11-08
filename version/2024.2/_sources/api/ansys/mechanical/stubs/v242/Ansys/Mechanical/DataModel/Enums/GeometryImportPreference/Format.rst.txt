@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`Format`
+===============
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies how to interpret the geometry file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Format
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Automatic`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Automatic
+   :value: 0
+
+
+
+
+
+
+.. vale on

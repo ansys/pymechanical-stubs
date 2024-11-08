@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`StageBehavior`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.StageBehavior
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the StageBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StageBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Cyclic`
+            - 
+          * - :py:attr:`~Normal`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Cyclic
+   :value: 1
+
+
+.. py:attribute:: Normal
+   :value: 0
+
+
+
+
+
+
+.. vale on

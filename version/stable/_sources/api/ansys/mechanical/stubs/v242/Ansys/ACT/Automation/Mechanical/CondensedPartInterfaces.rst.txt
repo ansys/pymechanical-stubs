@@ -1,0 +1,131 @@
+.. vale off
+
+
+
+:class:`CondensedPartInterfaces`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CondensedPartInterfaces
+
+   Bases: :py:obj:`object`
+
+
+   
+   A collection of condensed part interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartInterfaces
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Add new condensed part interface
+          * - :py:attr:`~Clear`
+            - Clears all the condensed part interfaces
+          * - :py:attr:`~RemoveAt`
+            - Remove condensed part interface at the given index
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Item`
+            - Item property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Item
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CondensedPartInterface]
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add() -> None
+
+   
+   Add new condensed part interface
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> None
+
+   
+   Clears all the condensed part interfaces
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveAt(index: int) -> None
+
+   
+   Remove condensed part interface at the given index
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

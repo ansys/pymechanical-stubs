@@ -1,0 +1,113 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ACT``
+=======================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ACT
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation`
+            - Automation module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Common`
+            - Common module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces`
+            - Interfaces module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical`
+            - Mechanical module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Automation</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/index>
+    <span class="nf nf-md-package"></span> Common</api/ansys/mechanical/stubs/v242/Ansys/ACT/Common/index>
+    <span class="nf nf-md-package"></span> Interfaces</api/ansys/mechanical/stubs/v242/Ansys/ACT/Interfaces/index>
+    <span class="nf nf-md-package"></span> Mechanical</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ACT module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

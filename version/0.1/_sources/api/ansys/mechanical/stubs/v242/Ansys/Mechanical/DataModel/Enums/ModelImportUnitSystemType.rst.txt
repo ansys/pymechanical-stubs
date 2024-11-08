@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`ModelImportUnitSystemType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ModelImportUnitSystemType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the Unit System Type for the Model Import File being imported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModelImportUnitSystemType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~UnitSystemConsistentBFT`
+            - 
+          * - :py:attr:`~UnitSystemConsistentBIN`
+            - 
+          * - :py:attr:`~UnitSystemConsistentCGS`
+            - 
+          * - :py:attr:`~UnitSystemConsistentNMM`
+            - 
+          * - :py:attr:`~UnitSystemConsistentNMMKGMMMS`
+            - 
+          * - :py:attr:`~UnitSystemConsistentuMKS`
+            - 
+          * - :py:attr:`~UnitSystemMetricCGS`
+            - 
+          * - :py:attr:`~UnitSystemMetricMKS`
+            - 
+          * - :py:attr:`~UnitSystemMetricNMM`
+            - 
+          * - :py:attr:`~UnitSystemMetricNMMDton`
+            - 
+          * - :py:attr:`~UnitSystemMetricNMMton`
+            - 
+          * - :py:attr:`~UnitSystemMetricUMKS`
+            - 
+          * - :py:attr:`~UnitSystemSI`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: UnitSystemConsistentBFT
+   :value: 12
+
+
+.. py:attribute:: UnitSystemConsistentBIN
+   :value: 11
+
+
+.. py:attribute:: UnitSystemConsistentCGS
+   :value: 7
+
+
+.. py:attribute:: UnitSystemConsistentNMM
+   :value: 8
+
+
+.. py:attribute:: UnitSystemConsistentNMMKGMMMS
+   :value: 10
+
+
+.. py:attribute:: UnitSystemConsistentuMKS
+   :value: 9
+
+
+.. py:attribute:: UnitSystemMetricCGS
+   :value: 3
+
+
+.. py:attribute:: UnitSystemMetricMKS
+   :value: 1
+
+
+.. py:attribute:: UnitSystemMetricNMM
+   :value: 4
+
+
+.. py:attribute:: UnitSystemMetricNMMDton
+   :value: 6
+
+
+.. py:attribute:: UnitSystemMetricNMMton
+   :value: 2
+
+
+.. py:attribute:: UnitSystemMetricUMKS
+   :value: 5
+
+
+.. py:attribute:: UnitSystemSI
+   :value: 0
+
+
+
+
+
+
+.. vale on

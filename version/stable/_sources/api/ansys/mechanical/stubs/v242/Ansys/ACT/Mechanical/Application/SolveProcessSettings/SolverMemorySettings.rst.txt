@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`SolverMemorySettings`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolverMemorySettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   The class representing the solver memory settings portion of the solve process settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolverMemorySettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - Whether the solver memory settings are active.
+          * - :py:attr:`~Database`
+            - Database size.
+          * - :py:attr:`~Workspace`
+            - Workspace size.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+   
+   Whether the solver memory settings are active.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Database
+   :type: Optional[int]
+
+   
+   Database size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Workspace
+   :type: Optional[int]
+
+   
+   Workspace size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

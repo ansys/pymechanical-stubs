@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MeshNodeType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.MeshNodeType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MeshNodeType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshNodeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Corner`
+            - 
+          * - :py:attr:`~Midside`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Corner
+   :value: 1024
+
+
+.. py:attribute:: Midside
+   :value: 262144
+
+
+
+
+
+
+.. vale on

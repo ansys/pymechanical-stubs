@@ -1,0 +1,626 @@
+.. vale off
+
+
+
+:class:`ConstructionLine`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.ConstructionLines.ConstructionLine
+
+   Bases: :py:obj:`object`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConstructionLine
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddToGeometry`
+            - Add a part to Geometry with line bodies as contained in this ConstructionLine instance.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~CreatePlanarPoints`
+            - CreatePlanarPoints method.
+          * - :py:attr:`~CreatePlane`
+            - Create a plane.
+          * - :py:attr:`~CreatePoints`
+            - CreatePoints method.
+          * - :py:attr:`~CreateStraightLines`
+            - CreateStraightLines method.
+          * - :py:attr:`~DeleteEdges`
+            - DeleteEdges method.
+          * - :py:attr:`~DeletePlane`
+            - Delete a plane associated with this construction line.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~FlipEdges`
+            - FlipEdges method.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPartFromGeometry`
+            - Get the corresponding part for a ConstructionLine instance.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~Redo`
+            - Redo and undone operation in this Construction Line instance.
+          * - :py:attr:`~RemoveFromGeometry`
+            - Remove the corresponding part from the geometry.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~Undo`
+            - Undo the last operation in this Construction Line instance.
+          * - :py:attr:`~UpdateGeometry`
+            - Update the corresponding part with any changes made in this ConstructionLine instance.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Edges`
+            - Creates for the user an IEdge representation of each edge in this Construction Line.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Planes`
+            - Creates for the user an Plane representation of each plane in this Construction Line.
+          * - :py:attr:`~Points`
+            - Returns all points in this Construction Line, both those that have been created
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Edges
+   :type: Optional[List[Any]]
+
+   
+   Creates for the user an IEdge representation of each edge in this Construction Line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSLines.IDSLinesPythonInteraction]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Planes
+   :type: Optional[List[Any]]
+
+   
+   Creates for the user an Plane representation of each plane in this Construction Line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Points
+   :type: Optional[List[Any]]
+
+   
+   Returns all points in this Construction Line, both those that have been created
+   as well as virtual representations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddToGeometry() -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+   
+   Add a part to Geometry with line bodies as contained in this ConstructionLine instance.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreatePlanarPoints(plane: Ansys.Mechanical.DataModel.ConstructionLines.Plane, pointDefinitionCollection: Iterable[Any]) -> List[Any]
+
+   
+   CreatePlanarPoints method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreatePlane(sketchPlaneDefinition: Any) -> Ansys.Mechanical.DataModel.ConstructionLines.Plane
+
+   
+   Create a plane.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreatePoints(pointDefinitionCollection: Iterable[Any]) -> List[Any]
+
+   
+   CreatePoints method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateStraightLines(pointCollection: Iterable[Ansys.Mechanical.DataModel.ConstructionLines.Point]) -> List[Any]
+
+   
+   CreateStraightLines method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteEdges(edgeCollection: Iterable[Ansys.Mechanical.DataModel.ConstructionLines.Edges.IEdge]) -> None
+
+   
+   DeleteEdges method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeletePlane(plane: Ansys.Mechanical.DataModel.ConstructionLines.Plane, forceDelete: bool) -> None
+
+   
+   Delete a plane associated with this construction line.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FlipEdges(edgesToFlip: Iterable[Ansys.Mechanical.DataModel.ConstructionLines.Edges.IEdge]) -> None
+
+   
+   FlipEdges method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPartFromGeometry() -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+   
+   Get the corresponding part for a ConstructionLine instance.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Redo() -> None
+
+   
+   Redo and undone operation in this Construction Line instance.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveFromGeometry() -> None
+
+   
+   Remove the corresponding part from the geometry.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Undo() -> None
+
+   
+   Undo the last operation in this Construction Line instance.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UpdateGeometry() -> None
+
+   
+   Update the corresponding part with any changes made in this ConstructionLine instance.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

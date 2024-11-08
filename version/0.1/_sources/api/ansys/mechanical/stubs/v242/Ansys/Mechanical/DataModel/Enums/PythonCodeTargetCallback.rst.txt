@@ -1,0 +1,132 @@
+.. vale off
+
+
+
+:class:`PythonCodeTargetCallback`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PythonCodeTargetCallback
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PythonCodeTargetCallback.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PythonCodeTargetCallback
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetBodyCommands`
+            - 
+          * - :py:attr:`~GetContactCommands`
+            - 
+          * - :py:attr:`~GetPostCommands`
+            - 
+          * - :py:attr:`~GetSolveCommands`
+            - 
+          * - :py:attr:`~OnAfterGeometryChanged`
+            - 
+          * - :py:attr:`~OnAfterMeshGenerated`
+            - 
+          * - :py:attr:`~OnAfterObjectChanged`
+            - 
+          * - :py:attr:`~OnAfterPost`
+            - 
+          * - :py:attr:`~OnAfterSolve`
+            - 
+          * - :py:attr:`~OnBeforeSolve`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: GetBodyCommands
+   :value: 3
+
+
+.. py:attribute:: GetContactCommands
+   :value: 5
+
+
+.. py:attribute:: GetPostCommands
+   :value: 6
+
+
+.. py:attribute:: GetSolveCommands
+   :value: 4
+
+
+.. py:attribute:: OnAfterGeometryChanged
+   :value: 11
+
+
+.. py:attribute:: OnAfterMeshGenerated
+   :value: 9
+
+
+.. py:attribute:: OnAfterObjectChanged
+   :value: 8
+
+
+.. py:attribute:: OnAfterPost
+   :value: 7
+
+
+.. py:attribute:: OnAfterSolve
+   :value: 2
+
+
+.. py:attribute:: OnBeforeSolve
+   :value: 1
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+
+
+
+
+.. vale on

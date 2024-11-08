@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FeatureSuppressMethod`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.FeatureSuppressMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the method of FeatureSuppress.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FeatureSuppressMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Automatic`
+            - 
+          * - :py:attr:`~DefeatureFaces`
+            - 
+          * - :py:attr:`~ParentFaces`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Automatic
+   :value: 0
+
+
+.. py:attribute:: DefeatureFaces
+   :value: 1
+
+
+.. py:attribute:: ParentFaces
+   :value: 2
+
+
+
+
+
+
+.. vale on

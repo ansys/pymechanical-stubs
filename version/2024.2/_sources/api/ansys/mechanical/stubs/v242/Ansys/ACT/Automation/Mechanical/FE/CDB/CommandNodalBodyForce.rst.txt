@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`CommandNodalBodyForce`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNodalBodyForce
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a nodal body force associated to a BFBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandNodalBodyForce
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Node`
+            - Gets the node number.
+          * - :py:attr:`~ValCount`
+            - Gets the number of values.
+          * - :py:attr:`~Values`
+            - Gets the values.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Node
+   :type: Optional[int]
+
+   
+   Gets the node number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ValCount
+   :type: Optional[int]
+
+   
+   Gets the number of values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[tuple[Any]]
+
+   
+   Gets the values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

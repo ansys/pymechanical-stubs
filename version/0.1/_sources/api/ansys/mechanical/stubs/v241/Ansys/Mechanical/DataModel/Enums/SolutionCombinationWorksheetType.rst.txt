@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SolutionCombinationWorksheetType`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SolutionCombinationWorksheetType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SolutionCombinationWorksheetType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolutionCombinationWorksheetType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NewWorksheet`
+            - 
+          * - :py:attr:`~OldWorksheet`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NewWorksheet
+   :value: 1
+
+
+.. py:attribute:: OldWorksheet
+   :value: 0
+
+
+
+
+
+
+.. vale on

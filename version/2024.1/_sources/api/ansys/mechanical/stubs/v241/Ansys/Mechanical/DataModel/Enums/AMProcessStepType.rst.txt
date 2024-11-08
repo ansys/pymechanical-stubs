@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`AMProcessStepType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMProcessStepType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMProcessStepType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMProcessStepType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BaseRemovalStep`
+            - 
+          * - :py:attr:`~BaseUnboltStep`
+            - 
+          * - :py:attr:`~BuildStep`
+            - 
+          * - :py:attr:`~CooldownStep`
+            - 
+          * - :py:attr:`~HeatTreatmentStep`
+            - 
+          * - :py:attr:`~SupportRemovalStep`
+            - 
+          * - :py:attr:`~UserStep`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BaseRemovalStep
+   :value: 2
+
+
+.. py:attribute:: BaseUnboltStep
+   :value: 6
+
+
+.. py:attribute:: BuildStep
+   :value: 0
+
+
+.. py:attribute:: CooldownStep
+   :value: 1
+
+
+.. py:attribute:: HeatTreatmentStep
+   :value: 5
+
+
+.. py:attribute:: SupportRemovalStep
+   :value: 3
+
+
+.. py:attribute:: UserStep
+   :value: 4
+
+
+
+
+
+
+.. vale on

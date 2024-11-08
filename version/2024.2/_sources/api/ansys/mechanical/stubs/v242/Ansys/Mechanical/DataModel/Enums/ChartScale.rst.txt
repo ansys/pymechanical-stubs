@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ChartScale`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ChartScale
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ChartScale.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ChartScale
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Linear`
+            - 
+          * - :py:attr:`~LogLog`
+            - 
+          * - :py:attr:`~SemiLogX`
+            - 
+          * - :py:attr:`~SemiLogY`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Linear
+   :value: 0
+
+
+.. py:attribute:: LogLog
+   :value: 3
+
+
+.. py:attribute:: SemiLogX
+   :value: 1
+
+
+.. py:attribute:: SemiLogY
+   :value: 2
+
+
+
+
+
+
+.. vale on

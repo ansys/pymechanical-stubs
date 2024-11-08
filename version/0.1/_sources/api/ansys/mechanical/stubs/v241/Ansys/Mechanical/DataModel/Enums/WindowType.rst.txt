@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`WindowType`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.WindowType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the WindowType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: WindowType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bartlett`
+            - 
+          * - :py:attr:`~Blackman`
+            - 
+          * - :py:attr:`~Hamming`
+            - 
+          * - :py:attr:`~Hanning`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Rectangular`
+            - 
+          * - :py:attr:`~Triangular`
+            - 
+          * - :py:attr:`~Welch`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bartlett
+   :value: 3
+
+
+.. py:attribute:: Blackman
+   :value: 7
+
+
+.. py:attribute:: Hamming
+   :value: 5
+
+
+.. py:attribute:: Hanning
+   :value: 4
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Rectangular
+   :value: 1
+
+
+.. py:attribute:: Triangular
+   :value: 2
+
+
+.. py:attribute:: Welch
+   :value: 6
+
+
+
+
+
+
+.. vale on

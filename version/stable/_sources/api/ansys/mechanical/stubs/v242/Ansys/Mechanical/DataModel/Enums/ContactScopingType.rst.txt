@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ContactScopingType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ContactScopingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactScopingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactScopingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ContactSourceUnderlying`
+            - 
+          * - :py:attr:`~ContactTargetUnderlying`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ContactSourceUnderlying
+   :value: 1
+
+
+.. py:attribute:: ContactTargetUnderlying
+   :value: 2
+
+
+
+
+
+
+.. vale on

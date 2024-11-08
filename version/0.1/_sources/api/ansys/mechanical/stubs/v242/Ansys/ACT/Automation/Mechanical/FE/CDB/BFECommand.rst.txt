@@ -1,0 +1,248 @@
+.. vale off
+
+
+
+:class:`BFECommand`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.BFECommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a BFE command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BFECommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Elem`
+            - Gets the element number.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Lab`
+            - Gets the label.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Stloc`
+            - Gets the starting location.
+          * - :py:attr:`~ValCount`
+            - Gets the number of values.
+          * - :py:attr:`~Values`
+            - Gets the values.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Elem
+   :type: Optional[int]
+
+   
+   Gets the element number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+   
+   Gets the label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Stloc
+   :type: Optional[int]
+
+   
+   Gets the starting location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ValCount
+   :type: Optional[Any]
+
+   
+   Gets the number of values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[tuple[Any]]
+
+   
+   Gets the values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

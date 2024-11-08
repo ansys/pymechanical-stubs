@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`NamedSelectionWorksheetOperator`
+========================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Worksheet Enumeration Wrappers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

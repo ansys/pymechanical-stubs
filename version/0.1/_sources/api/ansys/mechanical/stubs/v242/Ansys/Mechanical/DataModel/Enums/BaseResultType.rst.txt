@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`BaseResultType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.BaseResultType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the BaseResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BaseResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Acceleration`
+            - 
+          * - :py:attr:`~CenterOfGravity`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~Frequencies`
+            - 
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~Mass`
+            - 
+          * - :py:attr:`~MomentOfInertia`
+            - 
+          * - :py:attr:`~ReactionForce`
+            - 
+          * - :py:attr:`~ReactionMoment`
+            - 
+          * - :py:attr:`~Rotation`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+          * - :py:attr:`~Volume`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Acceleration
+   :value: 12
+
+
+.. py:attribute:: CenterOfGravity
+   :value: 3
+
+
+.. py:attribute:: Displacement
+   :value: 0
+
+
+.. py:attribute:: Frequencies
+   :value: 10
+
+
+.. py:attribute:: Frequency
+   :value: 9
+
+
+.. py:attribute:: Mass
+   :value: 5
+
+
+.. py:attribute:: MomentOfInertia
+   :value: 4
+
+
+.. py:attribute:: ReactionForce
+   :value: 2
+
+
+.. py:attribute:: ReactionMoment
+   :value: 8
+
+
+.. py:attribute:: Rotation
+   :value: 7
+
+
+.. py:attribute:: Velocity
+   :value: 11
+
+
+.. py:attribute:: Volume
+   :value: 6
+
+
+
+
+
+
+.. vale on

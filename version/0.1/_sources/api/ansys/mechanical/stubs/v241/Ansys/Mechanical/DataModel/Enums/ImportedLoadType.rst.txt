@@ -1,0 +1,210 @@
+.. vale off
+
+
+
+:class:`ImportedLoadType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ImportedLoadType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ImportedLoadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportedLoadType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BodyForceDensity`
+            - 
+          * - :py:attr:`~ElementOrientation`
+            - 
+          * - :py:attr:`~FiberRatio`
+            - 
+          * - :py:attr:`~ImportedBodyTemperature`
+            - 
+          * - :py:attr:`~ImportedConvection`
+            - 
+          * - :py:attr:`~ImportedCutBoundaryRemoteConstraint`
+            - 
+          * - :py:attr:`~ImportedCutBoundaryRemoteForce`
+            - 
+          * - :py:attr:`~ImportedDisplacement`
+            - 
+          * - :py:attr:`~ImportedDisplacementAndRotation`
+            - 
+          * - :py:attr:`~ImportedForce`
+            - 
+          * - :py:attr:`~ImportedHeatFlux`
+            - 
+          * - :py:attr:`~ImportedHeatGeneration`
+            - 
+          * - :py:attr:`~ImportedInitialStrain`
+            - 
+          * - :py:attr:`~ImportedInitialStress`
+            - 
+          * - :py:attr:`~ImportedLatticeKnockdownFactor`
+            - 
+          * - :py:attr:`~ImportedMaterialField`
+            - 
+          * - :py:attr:`~ImportedPressure`
+            - 
+          * - :py:attr:`~ImportedTemperature`
+            - 
+          * - :py:attr:`~ImportedThickness`
+            - 
+          * - :py:attr:`~ImportedTrace`
+            - 
+          * - :py:attr:`~ImportedVelocity`
+            - 
+          * - :py:attr:`~SurfaceForceDensity`
+            - 
+          * - :py:attr:`~WarpWeftRatio`
+            - 
+          * - :py:attr:`~YarnAngle`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BodyForceDensity
+   :value: 8
+
+
+.. py:attribute:: ElementOrientation
+   :value: 9
+
+
+.. py:attribute:: FiberRatio
+   :value: 12
+
+
+.. py:attribute:: ImportedBodyTemperature
+   :value: 3
+
+
+.. py:attribute:: ImportedConvection
+   :value: 2
+
+
+.. py:attribute:: ImportedCutBoundaryRemoteConstraint
+   :value: 28
+
+
+.. py:attribute:: ImportedCutBoundaryRemoteForce
+   :value: 27
+
+
+.. py:attribute:: ImportedDisplacement
+   :value: 14
+
+
+.. py:attribute:: ImportedDisplacementAndRotation
+   :value: 18
+
+
+.. py:attribute:: ImportedForce
+   :value: 15
+
+
+.. py:attribute:: ImportedHeatFlux
+   :value: 7
+
+
+.. py:attribute:: ImportedHeatGeneration
+   :value: 4
+
+
+.. py:attribute:: ImportedInitialStrain
+   :value: 20
+
+
+.. py:attribute:: ImportedInitialStress
+   :value: 19
+
+
+.. py:attribute:: ImportedLatticeKnockdownFactor
+   :value: 31
+
+
+.. py:attribute:: ImportedMaterialField
+   :value: 30
+
+
+.. py:attribute:: ImportedPressure
+   :value: 0
+
+
+.. py:attribute:: ImportedTemperature
+   :value: 1
+
+
+.. py:attribute:: ImportedThickness
+   :value: 6
+
+
+.. py:attribute:: ImportedTrace
+   :value: 26
+
+
+.. py:attribute:: ImportedVelocity
+   :value: 16
+
+
+.. py:attribute:: SurfaceForceDensity
+   :value: 13
+
+
+.. py:attribute:: WarpWeftRatio
+   :value: 11
+
+
+.. py:attribute:: YarnAngle
+   :value: 10
+
+
+
+
+
+
+.. vale on

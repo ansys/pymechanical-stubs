@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`EigenSolverType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EigenSolverType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the EigenSolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EigenSolverType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BlockLanczos`
+            - 
+          * - :py:attr:`~Damped`
+            - 
+          * - :py:attr:`~Lanczos`
+            - 
+          * - :py:attr:`~PCGLanczos`
+            - 
+          * - :py:attr:`~Qrdamp`
+            - 
+          * - :py:attr:`~Reduced`
+            - 
+          * - :py:attr:`~Subspace`
+            - 
+          * - :py:attr:`~Supernode`
+            - 
+          * - :py:attr:`~Unsymmetric`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BlockLanczos
+   :value: 5
+
+
+.. py:attribute:: Damped
+   :value: 4
+
+
+.. py:attribute:: Lanczos
+   :value: 2
+
+
+.. py:attribute:: PCGLanczos
+   :value: 8
+
+
+.. py:attribute:: Qrdamp
+   :value: 6
+
+
+.. py:attribute:: Reduced
+   :value: 0
+
+
+.. py:attribute:: Subspace
+   :value: 1
+
+
+.. py:attribute:: Supernode
+   :value: 7
+
+
+.. py:attribute:: Unsymmetric
+   :value: 3
+
+
+
+
+
+
+.. vale on

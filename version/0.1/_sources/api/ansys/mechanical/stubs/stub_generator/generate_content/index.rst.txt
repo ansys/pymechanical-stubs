@@ -1,0 +1,992 @@
+.. vale off
+
+
+
+
+
+
+
+The ``generate_content.py`` module
+==================================
+
+.. py:module:: ansys.mechanical.stubs.stub_generator.generate_content
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: generate_content
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.stub_generator.generate_content.DocMember`
+            - Docstring member.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.stub_generator.generate_content.Method`
+            - Method class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.stub_generator.generate_content.Param`
+            - Param class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.stub_generator.generate_content.Property`
+            - Property class.
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~adjust_method_name_xml`
+            - Adjust the method name to find docstring in XML.
+
+
+          * - :py:obj:`~c_types_to_python`
+            - Replace C# types with Python types.
+
+
+          * - :py:obj:`~crawl_loaded_references`
+            - Crawl Loaded assemblies to get Namespaces.
+
+
+          * - :py:obj:`~dump_types`
+            - Crawl Loaded assemblies to get Namespaces.
+
+
+          * - :py:obj:`~fix_str`
+            - Replace incorrect special characters in strings.
+
+
+          * - :py:obj:`~get_doc`
+            - Get the documentation file from assembly, or None if it doesn't exist.
+
+
+          * - :py:obj:`~get_methods`
+            - Get information from methods and store it in the Method object.
+
+
+          * - :py:obj:`~get_namespaces`
+            - Get all the namespaces and filtered types in the assembly given by assembly_name.
+
+
+          * - :py:obj:`~get_properties`
+            - Get information from properties and store it in the Property object.
+
+
+          * - :py:obj:`~is_namespace`
+            - Check if an object is a namespace.
+
+
+          * - :py:obj:`~iter_module`
+            - Recursively iterates through all namespaces in assembly.
+
+
+          * - :py:obj:`~load_doc`
+            - Get a dictionary of doc entities from the Assembly documentation file.
+
+
+          * - :py:obj:`~make`
+            - Generate Python stubs for an assembly.
+
+
+          * - :py:obj:`~remove_backtick`
+            - Remove backticks from a given string.
+
+
+          * - :py:obj:`~write_class`
+            - Write a class.
+
+
+          * - :py:obj:`~write_docstring`
+            - Write docstring of class or enum with the given indentation level, if available.
+
+
+          * - :py:obj:`~write_enum`
+            - Write an enum.
+
+
+          * - :py:obj:`~write_enum_field`
+            - Write an enum field.
+
+
+          * - :py:obj:`~write_method`
+            - Write a method.
+
+
+          * - :py:obj:`~write_missing_class_enum_docstring`
+            - Write a docstring for classes and enums that do not contain a docstring in the XML file.
+
+
+          * - :py:obj:`~write_missing_prop_method_docstring`
+            - Write a docstring for methods and properties that do not contain a docstring in the XML file.
+
+
+          * - :py:obj:`~write_module`
+            - Write a module.
+
+
+          * - :py:obj:`~write_property`
+            - Write a property.
+
+
+
+
+    .. tab-item:: Constants
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~C_TO_PYTHON`
+            - 
+
+
+          * - :py:obj:`~ENUM_VALUE_REPLACEMENTS`
+            - 
+
+
+          * - :py:obj:`~EXCLUDED_TYPES_LIST`
+            - 
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> DocMember</api/ansys/mechanical/stubs/stub_generator/generate_content/DocMember>
+    <span class="nf nf-cod-symbol_class"></span> Method</api/ansys/mechanical/stubs/stub_generator/generate_content/Method>
+    <span class="nf nf-cod-symbol_class"></span> Param</api/ansys/mechanical/stubs/stub_generator/generate_content/Param>
+    <span class="nf nf-cod-symbol_class"></span> Property</api/ansys/mechanical/stubs/stub_generator/generate_content/Property>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+Module containing routine to generate python stubs for an assembly.
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: adjust_method_name_xml(method_name: str)
+
+   
+   Adjust the method name to find docstring in XML.
+
+
+   :Parameters:
+
+       **method_name: str**
+           The method name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: c_types_to_python(type_str)
+
+   
+   Replace C# types with Python types.
+
+
+   :Parameters:
+
+       **type_str: str**
+           String containing C# type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: crawl_loaded_references(assembly: System.Reflection.RuntimeAssembly, type_filter: Callable = None) -> dict
+
+   
+   Crawl Loaded assemblies to get Namespaces.
+
+
+   :Parameters:
+
+       **assembly: System.Reflection.RuntimeAssembly**
+           An assembly. For example, Ansys.ACT.WB1.
+
+       **type_filter: typing.Callable**
+           Whether or not the type is published
+
+   :Returns:
+
+       :class:`python:dict`
+           Dictionary of namespaces in the assembly
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: dump_types(namespaces: dict)
+
+   
+   Crawl Loaded assemblies to get Namespaces.
+
+
+   :Parameters:
+
+       **namespaces: dict**
+           Dictionary of namespaces in the assembly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: fix_str(input_str: str)
+
+   
+   Replace incorrect special characters in strings.
+
+
+   :Parameters:
+
+       **input_str: str**
+           A string that could contain backticks
+
+   :Returns:
+
+       :class:`python:str`
+           A string that doesn't have special characters
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_doc(assembly: System.Reflection.RuntimeAssembly)
+
+   
+   Get the documentation file from assembly, or None if it doesn't exist.
+
+
+   :Parameters:
+
+       **assembly: "System.Reflection.RuntimeAssembly"**
+           An assembly. For example, Ansys.ACT.WB1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_methods(class_type: Any, doc: Dict[str, DocMember], type_filter: Callable = None) -> List[Method]
+
+   
+   Get information from methods and store it in the Method object.
+
+
+   :Parameters:
+
+       **class_type: typing.Any**
+           The class type.
+
+       **doc: typing.Dict[str, DocMember]**
+           A DocMember or string that holds information about the method.
+
+       **type_filter: typing.Callable = None**
+           Whether or not the type is published.
+
+   :Returns:
+
+       :obj:`typing.List`\[:obj:`Method`]
+           A list of methods
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_namespaces(assembly: System.Reflection.RuntimeAssembly, type_filter: Callable = None) -> Dict
+
+   
+   Get all the namespaces and filtered types in the assembly given by assembly_name.
+
+
+   :Parameters:
+
+       **assembly: "System.Reflection.RuntimeAssembly"**
+           An assembly
+
+       **type_filter:**
+           Whether or not the type is published
+
+   :Returns:
+
+       :obj:`typing.Dict`
+           A dictionary of published namespaces within the assembly
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_properties(class_type: Any, doc: Dict[str, DocMember], type_filter: Callable = None) -> List[Property]
+
+   
+   Get information from properties and store it in the Property object.
+
+
+   :Parameters:
+
+       **class_type: typing.Any**
+           The class type.
+
+       **doc: typing.Dict[str, DocMember]**
+           A DocMember or string that holds information about the property.
+
+       **type_filter: typing.Callable = None**
+           Whether or not the type is published.
+
+   :Returns:
+
+       :obj:`typing.List`\[:obj:`Property`]
+           A list of properties
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: is_namespace(something)
+
+   
+   Check if an object is a namespace.
+
+
+   :Parameters:
+
+       **something: object**
+           Object to check if it's a namespace
+
+   :Returns:
+
+       :ref:`bool <python:bltin-boolean-values>`
+           True if object is Namespace: Module
+           False if object is not Namespace: Module
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: iter_module(module, type_filter: Callable = None)
+
+   
+   Recursively iterates through all namespaces in assembly.
+
+
+   :Parameters:
+
+       **module: System.Reflection.RuntimeAssembly**
+           An assembly module
+
+       **type_filter: typing.Callable**
+           Whether or not the type is published
+
+   :Returns:
+
+       :class:`python:str`
+           The namespace in the assembly file
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: load_doc(xml_path: str) -> xml.etree.ElementTree
+
+   
+   Get a dictionary of doc entities from the Assembly documentation file.
+
+
+   :Parameters:
+
+       **xml_path: str**
+           The path to the XML file
+
+   :Returns:
+
+       :obj:`ElementTree`
+           An element tree of the information from the assembly XML file
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: make(outdir: str, assembly_name: str, type_filter: Callable = None) -> None
+
+   
+   Generate Python stubs for an assembly.
+
+
+   :Parameters:
+
+       **outdir: str**
+           The directory where modules are being written to.
+
+       **assembly_name: str**
+           The name of the assembly
+
+       **type_filter: typing.Callable**
+           Whether or not a type is published
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: remove_backtick(input_str: str)
+
+   
+   Remove backticks from a given string.
+
+
+   :Parameters:
+
+       **input_str: str**
+           A string that could contain backticks
+
+   :Returns:
+
+       :class:`python:str`
+           A string without backticks
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_class(buffer: TextIO, class_type: Any, namespace: str, doc: Dict[str, DocMember], type_filter: Callable = None) -> None
+
+   
+   Write a class.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the class
+
+       **class_type: typing.Any**
+           The class type object
+
+       **namespace: str**
+           The namespace of the class being written
+
+       **doc: typing.Dict[str, DocMember]**
+           A DocMember or string that holds information about the class.
+
+       **type_filter: typing.Callable = None**
+           Whether or not the type is published
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_docstring(buffer: TextIO, doc_member: Optional[DocMember], indent_level=1) -> None
+
+   
+   Write docstring of class or enum with the given indentation level, if available.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the docstring
+
+       **doc_member: typing.Optional[DocMember]**
+           A member's name, summary, params, remarks, and examples
+
+       **indent_level: int**
+           ``1`` to write one indent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_enum(buffer: TextIO, enum_type: Any, namespace: str, doc: Dict[str, DocMember], type_filter: Callable = None) -> None
+
+   
+   Write an enum.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the docstring
+
+       **enum_type: typing.Any**
+           The enum type
+
+       **namespace: str**
+           The namespace of the enum
+
+       **doc: typing.Dict[str, DocMember]**
+           A DocMember or string that holds information about the enum.
+
+       **type_filter: typing.Callable = None**
+           Whether or not the type is published.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_enum_field(buffer: TextIO, field: Any, indent_level: int = 1) -> None
+
+   
+   Write an enum field.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the docstring
+
+       **field: typing.Any**
+           The field information from System.Reflection.MdFieldInfo
+
+       **indent_level: int**
+           ``1`` to write one indent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_method(buffer: TextIO, method: Method, indent_level: int = 1) -> None
+
+   
+   Write a method.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the method
+
+       **method: Method**
+           A Method object
+
+       **indent_level: int**
+           ``1`` to indent a line once
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_missing_class_enum_docstring(buffer, name, obj_type)
+
+   
+   Write a docstring for classes and enums that do not contain a docstring in the XML file.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the docstring
+
+       **name: str**
+           The name of an interface
+
+       **obj_type: str**
+           The object type of the interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level)
+
+   
+   Write a docstring for methods and properties that do not contain a docstring in the XML file.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the docstring
+
+       **obj: generate_content.Method or generate_content.Property**
+           A method or property object
+
+       **obj_type: type**
+           The object type of the interface
+
+       **indent_level: int**
+           ``1`` to indent a line once
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_module(namespace: str, mod_types: List, doc: Dict[str, DocMember], outdir: str, type_filter: Callable = None) -> None
+
+   
+   Write a module.
+
+
+   :Parameters:
+
+       **mod_type: typing.Any**
+           The module type object
+
+       **doc: typing.Dict[str, DocMember]**
+           A DocMember or string that holds information about the class.
+
+       **outdir: str**
+           The path of the file that contains the module.
+
+       **type_filter: typing.Callable = None**
+           Whether or not the type is published
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_property(buffer: TextIO, prop: Property, indent_level: int = 1) -> None
+
+   
+   Write a property.
+
+
+   :Parameters:
+
+       **buffer: typing.TextIO**
+           The buffer for writing the docstring
+
+       **prop: Property**
+           A Property object containing information about the property
+
+       **indent_level: int**
+           ``1`` to write one indent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:data:: C_TO_PYTHON
+
+.. py:data:: ENUM_VALUE_REPLACEMENTS
+
+.. py:data:: EXCLUDED_TYPES_LIST
+   :value: ['System.IAsyncResult', 'System.IDisposable', 'System.Func', 'System.Delegate']
+
+
+
+
+
+.. vale on

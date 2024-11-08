@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FEConnectionLineThicknessType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.FEConnectionLineThicknessType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FEConnectionLineThicknessType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FEConnectionLineThicknessType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Double`
+            - 
+          * - :py:attr:`~Single`
+            - 
+          * - :py:attr:`~Triple`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Double
+   :value: 1
+
+
+.. py:attribute:: Single
+   :value: 0
+
+
+.. py:attribute:: Triple
+   :value: 2
+
+
+
+
+
+
+.. vale on

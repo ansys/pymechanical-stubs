@@ -1,0 +1,1214 @@
+.. vale off
+
+
+
+:class:`ConnectionGroup`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Connections.ConnectionGroup
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ConnectionGroup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConnectionGroup
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddContactRegion`
+            - Creates a new child ContactRegion.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddInterStage`
+            - Creates a new child InterStage.
+          * - :py:attr:`~AddJoint`
+            - Creates a new child Joint.
+          * - :py:attr:`~AddSpotWeld`
+            - Creates a new child SpotWeld.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateAutomaticConnections`
+            - Run the CreateAutomaticConnections action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~DeleteChildren`
+            - Run the DeleteChildren action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnChildren`
+            - Rename the Connection group based on the children.
+          * - :py:attr:`~RepairOverlappingContactRegions`
+            - Check for Overlapping Contact Regions. However, please note that this action does not result in any actual repair being performed.
+          * - :py:attr:`~SearchConnectionsForDuplicatePairs`
+            - Run the SearchConnectionsForDuplicatePairs action.
+          * - :py:attr:`~SetDefaultAPDLNames`
+            - Loop over all the valid contact regions and set the default APDL names.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ActiveConnections`
+            - Gets the ActiveConnections.
+          * - :py:attr:`~AutomaticFixedJoints`
+            - Gets or sets the AutomaticFixedJoints.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConnectionType`
+            - Gets or sets the ConnectionType.
+          * - :py:attr:`~Connections`
+            - Gets the Connections.
+          * - :py:attr:`~CylindricalFaces`
+            - Gets or sets the CylindricalFaces.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~EdgeEdge`
+            - Gets or sets the EdgeEdge.
+          * - :py:attr:`~EdgeOverlapTolerance`
+            - Gets or sets the EdgeOverlapTolerance.
+          * - :py:attr:`~FaceAngleTolerance`
+            - Gets or sets the FaceAngleTolerance.
+          * - :py:attr:`~FaceEdge`
+            - Gets or sets the FaceEdge.
+          * - :py:attr:`~FaceFace`
+            - Gets or sets the FaceFace.
+          * - :py:attr:`~FaceFaceDetectionAngleTolerence`
+            - Gets or sets the FaceFaceDetectionAngleTolerence.
+          * - :py:attr:`~FaceOverlapTolerance`
+            - Gets or sets the FaceOverlapTolerance.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GroupBy`
+            - Gets or sets the GroupBy.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~MinimumDistancePercentage`
+            - Gets or sets the MinimumDistancePercentage.
+          * - :py:attr:`~MinimumDistanceValue`
+            - Gets the MinimumDistanceValue.
+          * - :py:attr:`~Priority`
+            - Gets or sets the Priority.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~RevoluteJoints`
+            - Gets or sets the RevoluteJoints.
+          * - :py:attr:`~SearchAcross`
+            - Gets or sets the SearchAcross.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~ThicknessScaleFactor`
+            - Gets or sets the ThicknessScaleFactor.
+          * - :py:attr:`~ToleranceSlider`
+            - Gets or sets the ToleranceSlider.
+          * - :py:attr:`~ToleranceType`
+            - Gets or sets the ToleranceType.
+          * - :py:attr:`~ToleranceValue`
+            - Gets or sets the ToleranceValue.
+          * - :py:attr:`~UseRange`
+            - Gets or sets the UseRange.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ActiveConnections
+   :type: Optional[int]
+
+   
+   Gets the ActiveConnections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticFixedJoints
+   :type: Optional[bool]
+
+   
+   Gets or sets the AutomaticFixedJoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutoDetectionType]
+
+   
+   Gets or sets the ConnectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Connections
+   :type: Optional[int]
+
+   
+   Gets the Connections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CylindricalFaces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CylindricalFacesOption]
+
+   
+   Gets or sets the CylindricalFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeEdge
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactEdgeEdgeOption]
+
+   
+   Gets or sets the EdgeEdge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeOverlapTolerance
+   :type: Optional[int]
+
+   
+   Gets or sets the EdgeOverlapTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FaceAngleTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the FaceAngleTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FaceEdge
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactFaceEdgeOption]
+
+   
+   Gets or sets the FaceEdge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FaceFace
+   :type: Optional[bool]
+
+   
+   Gets or sets the FaceFace.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FaceFaceDetectionAngleTolerence
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the FaceFaceDetectionAngleTolerence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FaceOverlapTolerance
+   :type: Optional[int]
+
+   
+   Gets or sets the FaceOverlapTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactGroupingType]
+
+   
+   Gets or sets the GroupBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSConnectionGroupAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumDistancePercentage
+   :type: Optional[int]
+
+   
+   Gets or sets the MinimumDistancePercentage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumDistanceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the MinimumDistanceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Priority
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactFaceEdgePriority]
+
+   
+   Gets or sets the Priority.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RevoluteJoints
+   :type: Optional[bool]
+
+   
+   Gets or sets the RevoluteJoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SearchAcross
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactSearchingType]
+
+   
+   Gets or sets the SearchAcross.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThicknessScaleFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the ThicknessScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToleranceSlider
+   :type: Optional[int]
+
+   
+   Gets or sets the ToleranceSlider.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToleranceType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactToleranceType]
+
+   
+   Gets or sets the ToleranceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseRange
+   :type: Optional[bool]
+
+   
+   Gets or sets the UseRange.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactRegion() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Creates a new child ContactRegion.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInterStage() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Creates a new child InterStage.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJoint() -> Ansys.ACT.Automation.Mechanical.Connections.Joint
+
+   
+   Creates a new child Joint.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpotWeld() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Creates a new child SpotWeld.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateAutomaticConnections() -> None
+
+   
+   Run the CreateAutomaticConnections action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteChildren() -> None
+
+   
+   Run the DeleteChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnChildren() -> bool
+
+   
+   Rename the Connection group based on the children.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RepairOverlappingContactRegions() -> None
+
+   
+   Check for Overlapping Contact Regions. However, please note that this action does not result in any actual repair being performed.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SearchConnectionsForDuplicatePairs() -> None
+
+   
+   Run the SearchConnectionsForDuplicatePairs action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDefaultAPDLNames() -> None
+
+   
+   Loop over all the valid contact regions and set the default APDL names.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

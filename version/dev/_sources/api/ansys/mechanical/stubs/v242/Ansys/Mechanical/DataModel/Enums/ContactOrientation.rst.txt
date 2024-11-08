@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ContactOrientation`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ContactOrientation
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactOrientation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Circle`
+            - 
+          * - :py:attr:`~Cylinder`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Sphere`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Circle
+   :value: 1
+
+
+.. py:attribute:: Cylinder
+   :value: 3
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Sphere
+   :value: 2
+
+
+
+
+
+
+.. vale on

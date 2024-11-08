@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+
+
+
+
+
+``EnergyResults``
+=================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.EnergyResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: EnergyResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.EnergyResults.ElementalStrainEnergy`
+            - Defines a ElementalStrainEnergy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.EnergyResults.EnergyResult`
+            - Defines a EnergyResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.EnergyResults.StabilizationEnergy`
+            - Defines a StabilizationEnergy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.EnergyResults.StructuralStrainEnergy`
+            - Defines a StructuralStrainEnergy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.EnergyResults.ThermalStrainEnergy`
+            - Defines a ThermalStrainEnergy.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ElementalStrainEnergy</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/EnergyResults/ElementalStrainEnergy>
+    <span class="nf nf-cod-symbol_class"></span> EnergyResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/EnergyResults/EnergyResult>
+    <span class="nf nf-cod-symbol_class"></span> StabilizationEnergy</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/EnergyResults/StabilizationEnergy>
+    <span class="nf nf-cod-symbol_class"></span> StructuralStrainEnergy</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/EnergyResults/StructuralStrainEnergy>
+    <span class="nf nf-cod-symbol_class"></span> ThermalStrainEnergy</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/EnergyResults/ThermalStrainEnergy>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+EnergyResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

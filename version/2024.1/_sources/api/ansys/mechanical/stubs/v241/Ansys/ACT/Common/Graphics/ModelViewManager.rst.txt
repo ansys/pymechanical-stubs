@@ -1,0 +1,207 @@
+.. vale off
+
+
+
+:class:`ModelViewManager`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Common.Graphics.ModelViewManager
+
+   Bases: :py:obj:`object`
+
+
+   
+   ModelViewManager class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModelViewManager
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ApplyModelView`
+            - Apply the view specified by index.
+          * - :py:attr:`~CreateView`
+            - Create a view from current graphics with default naming.
+          * - :py:attr:`~DeleteView`
+            - Delete the specified view by name.
+          * - :py:attr:`~ExportModelViews`
+            - Export model views to the specified file.
+          * - :py:attr:`~ImportModelViews`
+            - Import model views from the specified file.
+          * - :py:attr:`~RenameView`
+            - Rename the model view specified by viewIndex to newLabel.
+          * - :py:attr:`~SetActiveViewPort`
+            - Set the active of viewport.
+          * - :py:attr:`~SetViewPorts`
+            - Set the number of viewports displayed.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ActiveViewPort`
+            - ActiveViewPort property.
+          * - :py:attr:`~NumberOfViews`
+            - The number of views currently defined.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ActiveViewPort
+   :type: Optional[Ansys.ACT.Common.Graphics.MechanicalViewPort]
+
+   
+   ActiveViewPort property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfViews
+   :type: Optional[int]
+
+   
+   The number of views currently defined.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: ApplyModelView(viewIndex: int) -> None
+
+   
+   Apply the view specified by index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateView() -> None
+
+   
+   Create a view from current graphics with default naming.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteView(viewLabel: str) -> None
+
+   
+   Delete the specified view by name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportModelViews(viewfilepath: str) -> None
+
+   
+   Export model views to the specified file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportModelViews(viewfilepath: str) -> None
+
+   
+   Import model views from the specified file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameView(viewIndex: int, newLabel: str) -> None
+
+   
+   Rename the model view specified by viewIndex to newLabel.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetActiveViewPort(winRowIndex: int, winColIndex: int) -> None
+
+   
+   Set the active of viewport.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetViewPorts(numViewPorts: int, horizontal: bool) -> None
+
+   
+   Set the number of viewports displayed.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

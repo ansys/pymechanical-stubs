@@ -1,0 +1,1362 @@
+.. vale off
+
+
+
+:class:`Bearing`
+================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Connections.Bearing
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Bearing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Bearing
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PromoteToNamedSelection`
+            - Run the PromoteToNamedSelection action.
+          * - :py:attr:`~PromoteToRemotePoint`
+            - Run the PromoteToRemotePoint action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AnsBCType`
+            - Gets the AnsBCType.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConnectionType`
+            - Gets or sets the ConnectionType.
+          * - :py:attr:`~DampingC11`
+            - Gets the DampingC11.
+          * - :py:attr:`~DampingC12`
+            - Gets the DampingC12.
+          * - :py:attr:`~DampingC21`
+            - Gets the DampingC21.
+          * - :py:attr:`~DampingC22`
+            - Gets the DampingC22.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~MobileBeamMaterial`
+            - Gets or sets the MobileBeamMaterial.
+          * - :py:attr:`~MobileBeamRadius`
+            - Gets or sets the MobileBeamRadius.
+          * - :py:attr:`~MobileBehavior`
+            - Gets or sets the MobileBehavior.
+          * - :py:attr:`~MobileBody`
+            - Gets the MobileBody.
+          * - :py:attr:`~MobileCoordinateSystem`
+            - Gets or sets the MobileCoordinateSystem.
+          * - :py:attr:`~MobileLocation`
+            - Gets or sets the MobileLocation.
+          * - :py:attr:`~MobilePinballSize`
+            - Gets or sets the MobilePinballSize.
+          * - :py:attr:`~MobileXCoordinate`
+            - Gets or sets the MobileXCoordinate.
+          * - :py:attr:`~MobileYCoordinate`
+            - Gets or sets the MobileYCoordinate.
+          * - :py:attr:`~MobileZCoordinate`
+            - Gets or sets the MobileZCoordinate.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~ReferenceBeamMaterial`
+            - Gets or sets the ReferenceBeamMaterial.
+          * - :py:attr:`~ReferenceBeamRadius`
+            - Gets or sets the ReferenceBeamRadius.
+          * - :py:attr:`~ReferenceBehavior`
+            - Gets or sets the ReferenceBehavior.
+          * - :py:attr:`~ReferenceBodyName`
+            - Gets the ReferenceBodyName.
+          * - :py:attr:`~ReferenceCoordinateSystem`
+            - Gets or sets the ReferenceCoordinateSystem.
+          * - :py:attr:`~ReferenceLocation`
+            - Gets or sets the ReferenceLocation.
+          * - :py:attr:`~ReferencePinballRegion`
+            - Gets or sets the ReferencePinballRegion.
+          * - :py:attr:`~ReferenceRotationPlane`
+            - Gets or sets the ReferenceRotationPlane.
+          * - :py:attr:`~ReferenceSet`
+            - Gets the ReferenceSet.
+          * - :py:attr:`~ReferenceXCoordinate`
+            - Gets or sets the ReferenceXCoordinate.
+          * - :py:attr:`~ReferenceYCoordinate`
+            - Gets or sets the ReferenceYCoordinate.
+          * - :py:attr:`~ReferenceZCoordinate`
+            - Gets or sets the ReferenceZCoordinate.
+          * - :py:attr:`~StiffnessK11`
+            - Gets the StiffnessK11.
+          * - :py:attr:`~StiffnessK12`
+            - Gets the StiffnessK12.
+          * - :py:attr:`~StiffnessK21`
+            - Gets the StiffnessK21.
+          * - :py:attr:`~StiffnessK22`
+            - Gets the StiffnessK22.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AnsBCType
+   :type: Optional[int]
+
+   
+   Gets the AnsBCType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConnectionScopingType]
+
+   
+   Gets or sets the ConnectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DampingC11
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the DampingC11.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DampingC12
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the DampingC12.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DampingC21
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the DampingC21.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DampingC22
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the DampingC22.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSBearingAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBeamMaterial
+   :type: Optional[str]
+
+   
+   Gets or sets the MobileBeamMaterial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBeamRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MobileBeamRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadBehavior]
+
+   
+   Gets or sets the MobileBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBody
+   :type: Optional[str]
+
+   
+   Gets the MobileBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+   
+   Gets or sets the MobileCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the MobileLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobilePinballSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MobilePinballSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileXCoordinate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MobileXCoordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileYCoordinate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MobileYCoordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileZCoordinate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MobileZCoordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBeamMaterial
+   :type: Optional[str]
+
+   
+   Gets or sets the ReferenceBeamMaterial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBeamRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ReferenceBeamRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadBehavior]
+
+   
+   Gets or sets the ReferenceBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBodyName
+   :type: Optional[str]
+
+   
+   Gets the ReferenceBodyName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+   
+   Gets or sets the ReferenceCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the ReferenceLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferencePinballRegion
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ReferencePinballRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceRotationPlane
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RotationPlane]
+
+   
+   Gets or sets the ReferenceRotationPlane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceSet
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets the ReferenceSet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceXCoordinate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ReferenceXCoordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceYCoordinate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ReferenceYCoordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceZCoordinate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ReferenceZCoordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessK11
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the StiffnessK11.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessK12
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the StiffnessK12.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessK21
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the StiffnessK21.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessK22
+   :type: Optional[Ansys.ACT.Mechanical.Fields.Field]
+
+   
+   Gets the StiffnessK22.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToNamedSelection() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Run the PromoteToNamedSelection action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToRemotePoint() -> Iterable[Ansys.ACT.Automation.Mechanical.RemotePoint]
+
+   
+   Run the PromoteToRemotePoint action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

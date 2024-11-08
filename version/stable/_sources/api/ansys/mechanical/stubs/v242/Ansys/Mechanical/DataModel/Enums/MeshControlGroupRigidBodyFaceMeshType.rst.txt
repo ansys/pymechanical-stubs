@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MeshControlGroupRigidBodyFaceMeshType`
+==============================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeshControlGroupRigidBodyFaceMeshType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MeshControlGroupRigidBodyFaceMeshType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshControlGroupRigidBodyFaceMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllTri`
+            - 
+          * - :py:attr:`~QuadAndTri`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllTri
+   :value: 1
+
+
+.. py:attribute:: QuadAndTri
+   :value: 0
+
+
+
+
+
+
+.. vale on

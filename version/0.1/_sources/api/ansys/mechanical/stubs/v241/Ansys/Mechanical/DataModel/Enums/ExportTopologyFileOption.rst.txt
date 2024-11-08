@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ExportTopologyFileOption`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ExportTopologyFileOption
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExportTopologyFileOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExportTopologyFileOption
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GeometryOnly`
+            - 
+          * - :py:attr:`~Model`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: GeometryOnly
+   :value: 1
+
+
+.. py:attribute:: Model
+   :value: 3
+
+
+.. py:attribute:: No
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

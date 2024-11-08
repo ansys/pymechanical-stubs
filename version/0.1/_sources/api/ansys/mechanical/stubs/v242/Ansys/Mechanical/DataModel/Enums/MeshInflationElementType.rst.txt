@@ -1,0 +1,79 @@
+.. vale off
+
+
+
+:class:`MeshInflationElementType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeshInflationElementType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshInflationElementType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Tets`
+            - 
+          * - :py:attr:`~Wedges`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Tets
+   :value: 1
+
+
+.. py:attribute:: Wedges
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`PrototypeModelType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.PrototypeModelType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PrototypeModelType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PrototypeModelType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxisymmetricShell`
+            - 
+          * - :py:attr:`~Beam`
+            - 
+          * - :py:attr:`~Cable`
+            - 
+          * - :py:attr:`~Link`
+            - 
+          * - :py:attr:`~ModelPhysicsTypeFluid`
+            - 
+          * - :py:attr:`~Pipe`
+            - 
+          * - :py:attr:`~Reinforcement`
+            - 
+          * - :py:attr:`~Shell`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AxisymmetricShell
+   :value: 8
+
+
+.. py:attribute:: Beam
+   :value: 0
+
+
+.. py:attribute:: Cable
+   :value: 5
+
+
+.. py:attribute:: Link
+   :value: 3
+
+
+.. py:attribute:: ModelPhysicsTypeFluid
+   :value: 1
+
+
+.. py:attribute:: Pipe
+   :value: 2
+
+
+.. py:attribute:: Reinforcement
+   :value: 7
+
+
+.. py:attribute:: Shell
+   :value: 6
+
+
+
+
+
+
+.. vale on
