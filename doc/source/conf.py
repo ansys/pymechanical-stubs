@@ -161,12 +161,6 @@ html_theme_options = {
             "icon": "fa fa-comment fa-fw",
         },
     ],
-    "use_meilisearch": {
-        "api_key": os.getenv("MEILISEARCH_PUBLIC_API_KEY", ""),
-        "index_uids": {
-            f"pymechanical-stubs-v{get_version_match(version).replace('.', '-')}": "PyMechanical Stubs",
-        },
-    },
     "ansys_sphinx_theme_autoapi": {
         "project": project,
         "templates": "_templates/autoapi",
