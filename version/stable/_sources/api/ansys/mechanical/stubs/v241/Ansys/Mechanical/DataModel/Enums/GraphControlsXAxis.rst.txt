@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`GraphControlsXAxis`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GraphControlsXAxis
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GraphControlsXAxis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GraphControlsXAxis
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~Mode`
+            - 
+          * - :py:attr:`~Phase`
+            - 
+          * - :py:attr:`~S`
+            - 
+          * - :py:attr:`~Time`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Frequency
+   :value: 3
+
+
+.. py:attribute:: Mode
+   :value: 2
+
+
+.. py:attribute:: Phase
+   :value: 4
+
+
+.. py:attribute:: S
+   :value: 1
+
+
+.. py:attribute:: Time
+   :value: 0
+
+
+
+
+
+
+.. vale on

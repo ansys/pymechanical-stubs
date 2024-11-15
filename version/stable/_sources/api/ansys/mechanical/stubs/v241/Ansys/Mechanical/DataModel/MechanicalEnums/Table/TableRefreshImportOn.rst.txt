@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`TableRefreshImportOn`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Table.TableRefreshImportOn
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Allows control on when an import should be refreshed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TableRefreshImportOn
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BeforeSolve`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BeforeSolve
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+
+
+
+
+.. vale on

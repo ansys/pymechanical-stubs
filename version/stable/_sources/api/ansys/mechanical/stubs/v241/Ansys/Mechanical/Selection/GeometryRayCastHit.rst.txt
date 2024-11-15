@@ -1,0 +1,118 @@
+.. vale off
+
+
+
+:class:`GeometryRayCastHit`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Selection.GeometryRayCastHit
+
+   Bases: :py:obj:`object`
+
+
+   
+   GeometryRayCastHit, contains geoEntity and vector normal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GeometryRayCastHit
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Entity`
+            - Geometry entity hit by ray cast
+          * - :py:attr:`~HitVector`
+            - BoundVector with location and normal direction on geometry entity to ray cast
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Entity
+   :type: Optional[Ansys.ACT.Interfaces.Geometry.IGeoEntity]
+
+   
+   Geometry entity hit by ray cast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HitVector
+   :type: Optional[Ansys.Mechanical.Math.BoundVector]
+
+   
+   BoundVector with location and normal direction on geometry entity to ray cast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

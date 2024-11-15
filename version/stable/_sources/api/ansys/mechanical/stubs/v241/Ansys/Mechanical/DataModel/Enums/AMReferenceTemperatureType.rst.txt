@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMReferenceTemperatureType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMReferenceTemperatureType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMReferenceTemperatureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMReferenceTemperatureType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~UserSpecified`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: UserSpecified
+   :value: 1
+
+
+
+
+
+
+.. vale on

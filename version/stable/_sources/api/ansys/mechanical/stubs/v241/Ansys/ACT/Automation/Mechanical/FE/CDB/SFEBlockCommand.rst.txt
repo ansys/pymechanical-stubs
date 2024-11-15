@@ -1,0 +1,196 @@
+.. vale off
+
+
+
+:class:`SFEBlockCommand`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.CDB.SFEBlockCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a SFEBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SFEBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementSurfaceLoadCount`
+            - Gets the number of element surface loads.
+          * - :py:attr:`~ElementSurfaceLoads`
+            - Get the element surface loads.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Lab`
+            - Gets the surface load label.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementSurfaceLoadCount
+   :type: Optional[int]
+
+   
+   Gets the number of element surface loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementSurfaceLoads
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementSurfaceLoad]]
+
+   
+   Get the element surface loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+   
+   Gets the surface load label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

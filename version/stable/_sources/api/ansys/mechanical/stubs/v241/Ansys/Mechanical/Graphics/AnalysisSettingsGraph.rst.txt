@@ -1,0 +1,92 @@
+.. vale off
+
+
+
+:class:`AnalysisSettingsGraph`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Graphics.AnalysisSettingsGraph
+
+   Bases: :py:obj:`object`
+
+
+   
+   AnalysisSettingsGraph class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AnalysisSettingsGraph
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BoundaryConditionVisibility`
+            - BoundaryConditionVisibility property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BoundaryConditionVisibility
+   :type: Optional[Ansys.Mechanical.Graphics.BoundaryConditionVisibilityDictionary]
+
+   
+   BoundaryConditionVisibility property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

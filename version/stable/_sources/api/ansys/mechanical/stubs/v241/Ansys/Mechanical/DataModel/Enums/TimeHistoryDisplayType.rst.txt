@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`TimeHistoryDisplayType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.TimeHistoryDisplayType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Time History Display Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TimeHistoryDisplayType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Amplitude`
+            - 
+          * - :py:attr:`~Bode`
+            - 
+          * - :py:attr:`~Imaginary`
+            - 
+          * - :py:attr:`~PhaseAngle`
+            - 
+          * - :py:attr:`~Real`
+            - 
+          * - :py:attr:`~RealAndImaginary`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Amplitude
+   :value: 3
+
+
+.. py:attribute:: Bode
+   :value: 5
+
+
+.. py:attribute:: Imaginary
+   :value: 1
+
+
+.. py:attribute:: PhaseAngle
+   :value: 4
+
+
+.. py:attribute:: Real
+   :value: 0
+
+
+.. py:attribute:: RealAndImaginary
+   :value: 2
+
+
+
+
+
+
+.. vale on

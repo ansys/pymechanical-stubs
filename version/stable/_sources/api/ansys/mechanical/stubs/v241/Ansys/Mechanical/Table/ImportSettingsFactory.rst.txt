@@ -1,0 +1,81 @@
+.. vale off
+
+
+
+:class:`ImportSettingsFactory`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Table.ImportSettingsFactory
+
+   Bases: :py:obj:`object`
+
+
+   
+   ImportSettingsFactory interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: ImportSettingsFactory
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetSettingsForFormat`
+            - M:Ansys.Mechanical.Table.ImportSettingsFactory.GetSettingsForFormat(Ansys.Mechanical.DataModel.MechanicalEnums.Table.ImportFormat) constructs and returns the correct settings class
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetSettingsForFormat(format: Ansys.Mechanical.DataModel.MechanicalEnums.Table.ImportFormat) -> Ansys.Mechanical.Table.ImportSettingsBase
+   :classmethod:
+
+
+.. code-block:: text
+
+   M:Ansys.Mechanical.Table.ImportSettingsFactory.GetSettingsForFormat(Ansys.Mechanical.DataModel.MechanicalEnums.Table.ImportFormat) constructs and returns the correct settings class
+   instance based on the specified format.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`MappingInterpolationType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.MappingInterpolationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MappingInterpolationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Conservative`
+            - 
+          * - :py:attr:`~ProfilePreserving`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Conservative
+   :value: 1
+
+
+.. py:attribute:: ProfilePreserving
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`JointSolverElementType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.JointSolverElementType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointSolverElementType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointSolverElementType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ContactDirect`
+            - 
+          * - :py:attr:`~Element`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ContactDirect
+   :value: 2
+
+
+.. py:attribute:: Element
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

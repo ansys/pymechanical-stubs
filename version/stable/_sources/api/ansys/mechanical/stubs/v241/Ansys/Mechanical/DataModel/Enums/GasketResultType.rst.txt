@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`GasketResultType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GasketResultType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GasketResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GasketResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NormalGasket`
+            - 
+          * - :py:attr:`~ShearGasket`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NormalGasket
+   :value: 0
+
+
+.. py:attribute:: ShearGasket
+   :value: 1
+
+
+
+
+
+
+.. vale on

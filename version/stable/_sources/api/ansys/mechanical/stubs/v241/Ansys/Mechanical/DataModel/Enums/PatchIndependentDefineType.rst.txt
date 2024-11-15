@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PatchIndependentDefineType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.PatchIndependentDefineType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PatchIndependentDefineType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PatchIndependentDefineType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ApproxNumElements`
+            - 
+          * - :py:attr:`~MaxElementSize`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ApproxNumElements
+   :value: 1
+
+
+.. py:attribute:: MaxElementSize
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,82 @@
+.. vale off
+
+
+
+:class:`CappingType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.CappingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CappingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CappingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bottom`
+            - 
+          * - :py:attr:`~Iso`
+            - 
+          * - :py:attr:`~Top`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bottom
+   :value: 1
+
+
+.. py:attribute:: Iso
+   :value: 0
+
+
+.. py:attribute:: Top
+
+
+
+
+
+.. vale on

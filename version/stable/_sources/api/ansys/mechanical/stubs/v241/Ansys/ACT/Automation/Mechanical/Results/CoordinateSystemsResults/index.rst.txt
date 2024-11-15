@@ -1,0 +1,158 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CoordinateSystemsResults``
+============================================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CoordinateSystemsResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.CoordinateSystemsResult`
+            - Defines a CoordinateSystemsResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalEulerXYAngle`
+            - Defines a ElementalEulerXYAngle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalEulerXZAngle`
+            - Defines a ElementalEulerXZAngle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalEulerYZAngle`
+            - Defines a ElementalEulerYZAngle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalTriads`
+            - Defines a ElementalTriads.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalEulerXYAngle`
+            - Defines a NodalEulerXYAngle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalEulerXZAngle`
+            - Defines a NodalEulerXZAngle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalEulerYZAngle`
+            - Defines a NodalEulerYZAngle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalTriads`
+            - Defines a NodalTriads.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CoordinateSystemsResult</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/CoordinateSystemsResult>
+    <span class="nf nf-cod-symbol_class"></span> ElementalEulerXYAngle</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/ElementalEulerXYAngle>
+    <span class="nf nf-cod-symbol_class"></span> ElementalEulerXZAngle</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/ElementalEulerXZAngle>
+    <span class="nf nf-cod-symbol_class"></span> ElementalEulerYZAngle</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/ElementalEulerYZAngle>
+    <span class="nf nf-cod-symbol_class"></span> ElementalTriads</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/ElementalTriads>
+    <span class="nf nf-cod-symbol_class"></span> NodalEulerXYAngle</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/NodalEulerXYAngle>
+    <span class="nf nf-cod-symbol_class"></span> NodalEulerXZAngle</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/NodalEulerXZAngle>
+    <span class="nf nf-cod-symbol_class"></span> NodalEulerYZAngle</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/NodalEulerYZAngle>
+    <span class="nf nf-cod-symbol_class"></span> NodalTriads</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/NodalTriads>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CoordinateSystemsResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

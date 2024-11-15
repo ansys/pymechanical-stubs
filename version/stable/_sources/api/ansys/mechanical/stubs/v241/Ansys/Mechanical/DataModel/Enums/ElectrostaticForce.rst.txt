@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ElectrostaticForce`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ElectrostaticForce
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ElectrostaticForce.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ElectrostaticForce
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AppliedToAirStructureInterfaceSymmetric`
+            - 
+          * - :py:attr:`~AppliedToAirStructureInterfaceUnsymmetric`
+            - 
+          * - :py:attr:`~AppliedToAllNodes`
+            - 
+          * - :py:attr:`~Off`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AppliedToAirStructureInterfaceSymmetric
+   :value: 2
+
+
+.. py:attribute:: AppliedToAirStructureInterfaceUnsymmetric
+   :value: 3
+
+
+.. py:attribute:: AppliedToAllNodes
+   :value: 1
+
+
+.. py:attribute:: Off
+   :value: 0
+
+
+
+
+
+
+.. vale on

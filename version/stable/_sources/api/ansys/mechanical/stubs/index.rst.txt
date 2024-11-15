@@ -36,6 +36,10 @@ Summary
             - Init file for stub generator.
 
 
+          * - :py:obj:`~ansys.mechanical.stubs.v241`
+            - Ansys Mechanical v241 module.
+
+
           * - :py:obj:`~ansys.mechanical.stubs.v242`
             - Ansys Mechanical v242 module.
 
@@ -67,6 +71,7 @@ Summary
    :hidden:
 
     <span class="nf nf-md-package"></span> stub_generator</api/ansys/mechanical/stubs/stub_generator/index>
+    <span class="nf nf-md-package"></span> v241</api/ansys/mechanical/stubs/v241/index>
     <span class="nf nf-md-package"></span> v242</api/ansys/mechanical/stubs/v242/index>
 
 

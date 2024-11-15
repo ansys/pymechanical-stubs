@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ContactTrimType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactTrimType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactTrimType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactTrimType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FaceBased`
+            - 
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~On`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FaceBased
+   :value: 1
+
+
+.. py:attribute:: Off
+   :value: 2
+
+
+.. py:attribute:: On
+   :value: 3
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

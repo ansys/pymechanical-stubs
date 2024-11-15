@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`Graphics3DExportFormat`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.Graphics3DExportFormat
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the 3D Format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Graphics3DExportFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ASCIISTL`
+            - 
+          * - :py:attr:`~AVZ`
+            - 
+          * - :py:attr:`~BinarySTL`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ASCIISTL
+   :value: 2
+
+
+.. py:attribute:: AVZ
+   :value: 0
+
+
+.. py:attribute:: BinarySTL
+   :value: 1
+
+
+
+
+
+
+.. vale on

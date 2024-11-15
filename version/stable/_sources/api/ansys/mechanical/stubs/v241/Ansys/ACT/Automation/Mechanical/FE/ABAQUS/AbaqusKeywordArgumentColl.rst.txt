@@ -1,0 +1,92 @@
+.. vale off
+
+
+
+:class:`AbaqusKeywordArgumentColl`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgumentColl
+
+   Bases: :py:obj:`object`
+
+
+   
+   Collection of keyword arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AbaqusKeywordArgumentColl
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Items`
+            - Gets the list of arguments.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Items
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgument]]
+
+   
+   Gets the list of arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

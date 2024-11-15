@@ -46,7 +46,7 @@
  
 <link href="../../../../../../../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
 
-    <script src="../../../../../../../../../../../_static/documentation_options.js?v=e81d02b7"></script>
+    <script src="../../../../../../../../../../../_static/documentation_options.js?v=f024b623"></script>
     <script src="../../../../../../../../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../../../../../../../../_static/thebelab-helper.js"></script>
@@ -61,7 +61,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '2024.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
     <link rel="icon" href="../../../../../../../../../../../_static/ansys-favicon.png"/>
@@ -101,23 +101,68 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container"><!-- Debugging: html_theme_options =  -->
 
-  <!-- If there is no MeiliSearch enabled, use the PyData search -->
-<form class="bd-search d-flex align-items-center"
-      action="../../../../../../../../../../../search.html"
-      method="get">
+  
+  <!-- Include the MeiliSearch CSS stylesheet only if theme present -->
+  <link href="../../../../../../../../../../../_static/css/meilisearch.css" rel="stylesheet" />
+  <!-- Create a search bar form with a text input and a dropdown selector for the search index -->
+  <form class="bd-search d-flex align-items-center"
+  action="../../../../../../../../../../../search.html"
+  method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
+    class="form-control"
+    name="q"
+    placeholder="Search the docs ..."
+    aria-label="Search the docs ..."
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+  <!-- Conditionally display the dropdown selector if there are multiple indices -->
+  
+  <!-- Include the MeiliSearch JavaScript library for the search bar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  
+    
+  
+  <script>
+  var HOST_URL = "https://backend.search.pyansys.com/";
+  var API_KEY = "9fbccc76c147935ce2b562a9ee0c6669276987572dc1f22491cea72e9e99f35d";
+  // Iterates of the dictionary of index_uids and index_names to get the first child dicts
+  // and then the first key of the child dict to get the index_uid
+  var indexUid = "pymechanical-stubs-v0-1";
+
+  // Function to check if the MeiliSearch host URL is reachable
+  function checkMeiliSearchHost(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', url, true);
+    xhr.onload = function () {
+      if (xhr.status === 404) {
+        callback(false);
+      } else {
+        callback(true);
+      }
+    };
+    xhr.onerror = function () {
+      callback(false);
+    };
+    xhr.send();
+  }
+
+  // Check the MeiliSearch host URL and load the appropriate search script
+  checkMeiliSearchHost(HOST_URL, function (isReachable) {
+    if (isReachable) {
+      var script = document.createElement('script');
+      script.src = "../../../../../../../../../../../_static/js/meilisearch_theme_wrap.js";
+      document.head.appendChild(script);
+      // create an env value that the url is reachable to use in another script
+      const ACTIVE_MEILI_BACKEND = true;
+    }
+    });
+  </script>
+  </form>
+</div>
   </div>
 
   <div class="pst-async-banner-revealer d-none">
@@ -1118,13 +1163,13 @@ Properties</label><div class="sd-tab-content docutils">
 
 <dl class="py property">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.Comments">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">Comments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../Comment.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Comment" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Comment"><span class="pre">Ansys.ACT.Automation.Mechanical.Comment</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.Comments" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">Comments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Comment.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Comment" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Comment"><span class="pre">Ansys.ACT.Automation.Mechanical.Comment</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.Comments" title="Link to this definition">#</a></dt>
 <dd><p>Gets the list of associated comments.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.CoordinateSystem">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">CoordinateSystem</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../CoordinateSystem.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CoordinateSystem" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CoordinateSystem"><span class="pre">Ansys.ACT.Automation.Mechanical.CoordinateSystem</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.CoordinateSystem" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">CoordinateSystem</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/CoordinateSystem.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.CoordinateSystem" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.CoordinateSystem"><span class="pre">Ansys.ACT.Automation.Mechanical.CoordinateSystem</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.CoordinateSystem" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the Coordinate System.
 Accepts/Returns None for Solution Coordinate System in the general case (if applicable).
 Accepts/Returns None for Fiber Coordinate System for a result that is sub scoped by ply.</p>
@@ -1162,7 +1207,7 @@ Accepts/Returns None for Fiber Coordinate System for a result that is sub scoped
 
 <dl class="py property">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.Figures">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">Figures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../Figure.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Figure" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Figure"><span class="pre">Ansys.ACT.Automation.Mechanical.Figure</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.Figures" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">Figures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Figure.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Figure" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Figure"><span class="pre">Ansys.ACT.Automation.Mechanical.Figure</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.Figures" title="Link to this definition">#</a></dt>
 <dd><p>Gets the list of associated figures.</p>
 </dd></dl>
 
@@ -1192,7 +1237,7 @@ Accepts/Returns None for Fiber Coordinate System for a result that is sub scoped
 
 <dl class="py property">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.Images">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">Images</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../Image.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Image" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Image"><span class="pre">Ansys.ACT.Automation.Mechanical.Image</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.Images" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">Images</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Image.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Image" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Image"><span class="pre">Ansys.ACT.Automation.Mechanical.Image</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#NormalGasketTotalClosure.Images" title="Link to this definition">#</a></dt>
 <dd><p>Gets the list of associated images.</p>
 </dd></dl>
 
@@ -1441,7 +1486,7 @@ Accepts/Returns None for Fiber Coordinate System for a result that is sub scoped
 
 <dl class="py method">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.AddComment">
-<span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">AddComment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../Comment.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Comment" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Comment"><span class="pre">Ansys.ACT.Automation.Mechanical.Comment</span></a></span></span><a class="headerlink" href="#NormalGasketTotalClosure.AddComment" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">AddComment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Comment.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Comment" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Comment"><span class="pre">Ansys.ACT.Automation.Mechanical.Comment</span></a></span></span><a class="headerlink" href="#NormalGasketTotalClosure.AddComment" title="Link to this definition">#</a></dt>
 <dd><p>Creates a new child Comment.</p>
 </dd></dl>
 
@@ -1453,13 +1498,13 @@ Accepts/Returns None for Fiber Coordinate System for a result that is sub scoped
 
 <dl class="py method">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.AddFigure">
-<span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">AddFigure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../Figure.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Figure" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Figure"><span class="pre">Ansys.ACT.Automation.Mechanical.Figure</span></a></span></span><a class="headerlink" href="#NormalGasketTotalClosure.AddFigure" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">AddFigure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Figure.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Figure" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Figure"><span class="pre">Ansys.ACT.Automation.Mechanical.Figure</span></a></span></span><a class="headerlink" href="#NormalGasketTotalClosure.AddFigure" title="Link to this definition">#</a></dt>
 <dd><p>Creates a new child Figure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="NormalGasketTotalClosure.AddImage">
-<span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">AddImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../Image.html#ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Image" title="ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Image"><span class="pre">Ansys.ACT.Automation.Mechanical.Image</span></a></span></span><a class="headerlink" href="#NormalGasketTotalClosure.AddImage" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">NormalGasketTotalClosure.</span></span><span class="sig-name descname"><span class="pre">AddImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Image.html#ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Image" title="ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Image"><span class="pre">Ansys.ACT.Automation.Mechanical.Image</span></a></span></span><a class="headerlink" href="#NormalGasketTotalClosure.AddImage" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Creates a new child Image.

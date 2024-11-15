@@ -1,0 +1,9050 @@
+.. vale off
+
+
+
+:class:`ANSYSAnalysisSettings`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.AnalysisSettings.ANSYSAnalysisSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ANSYSAnalysisSettings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ANSYSAnalysisSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~DeleteAllRestartPoints`
+            - DeleteAllRestartPoints method.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetAMStepType`
+            - Gets the AM Process Step Type at a given step.
+          * - :py:attr:`~GetAutomaticTimeStepping`
+            - Gets the Automatic Time Stepping at a given solution step.
+          * - :py:attr:`~GetCarryOverTimeStep`
+            - Gets the Carry Over Time Step at a given solution step.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetCreepEffects`
+            - Gets the Creep Effects for a given solution step.
+          * - :py:attr:`~GetCreepLimitRatio`
+            - Gets the Creep Limit Ratio for a given solution step.
+          * - :py:attr:`~GetCurrentConvergenceMinimumReference`
+            - Gets the Current Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetCurrentConvergenceTolerance`
+            - Gets the Current Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetCurrentConvergenceType`
+            - Gets the Current Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetCurrentConvergenceValue`
+            - Gets the Current Convergence Value at a given solution step.
+          * - :py:attr:`~GetDefineBy`
+            - Gets the Define By at a given solution step.
+          * - :py:attr:`~GetDisplacementConvergenceMinimumReference`
+            - Gets the Displacement Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetDisplacementConvergenceTolerance`
+            - Gets the Displacement Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetDisplacementConvergenceType`
+            - Gets the Displacement Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetDisplacementConvergenceValue`
+            - Gets the Displacement Convergence Value at a given solution step.
+          * - :py:attr:`~GetEmagAMPSConvergenceMinimumReference`
+            - Gets the EmagAMPS Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetEmagAMPSConvergenceTolerance`
+            - Gets the EmagAMPS Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetEmagAMPSConvergenceType`
+            - Gets the EmagAMPS Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetEmagAMPSConvergenceValue`
+            - Gets the EmagAMPS Convergence Value at a given solution step.
+          * - :py:attr:`~GetEmagCSGConvergenceMinimumReference`
+            - Gets the EmagCSG Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetEmagCSGConvergenceTolerance`
+            - Gets the EmagCSG Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetEmagCSGConvergenceType`
+            - Gets the EmagCSG Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetEmagCSGConvergenceValue`
+            - Gets the EmagCSG Convergence Value at a given solution step.
+          * - :py:attr:`~GetEnergyConvergenceMinimumReference`
+            - Gets the Energy Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetEnergyConvergenceTolerance`
+            - Gets the Energy Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetEnergyConvergenceType`
+            - Gets the Energy Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetEnergyConvergenceValue`
+            - Gets the Energy Convergence Value at a given solution step.
+          * - :py:attr:`~GetForceConvergenceMinimumReference`
+            - Gets the Force Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetForceConvergenceTolerance`
+            - Gets the Force Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetForceConvergenceType`
+            - Gets the Force Convergence Tolerance Type at a given solution step.
+          * - :py:attr:`~GetForceConvergenceValue`
+            - Gets the Force Convergence Value at a given solution step.
+          * - :py:attr:`~GetHeatConvergenceMinimumReference`
+            - Gets the Heat Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetHeatConvergenceTolerance`
+            - Gets the Heat Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetHeatConvergenceType`
+            - Gets the Heat Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetHeatConvergenceValue`
+            - Gets the Heat Convergence Value at a given solution step.
+          * - :py:attr:`~GetInitialSubsteps`
+            - Gets the Initial Substeps at a given solution step.
+          * - :py:attr:`~GetInitialTimeStep`
+            - Gets the Initial Time Step at a given solution step.
+          * - :py:attr:`~GetLineSearch`
+            - Gets the Line Search at a given solution step.
+          * - :py:attr:`~GetMaximumSubsteps`
+            - Gets the Maximum Substeps at a given solution step.
+          * - :py:attr:`~GetMaximumTimeStep`
+            - Gets the Maximum Time Step at a given solution step.
+          * - :py:attr:`~GetMinimumSubsteps`
+            - Gets the Minimum Substeps at a given solution step.
+          * - :py:attr:`~GetMinimumTimeStep`
+            - Gets the Minimum Time Step at a given solution step.
+          * - :py:attr:`~GetMomentConvergenceMinimumReference`
+            - Gets the Moment Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetMomentConvergenceTolerance`
+            - Gets the Moment Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetMomentConvergenceType`
+            - Gets the Moment Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetMomentConvergenceValue`
+            - Gets the Moment Convergence Value at a given solution step.
+          * - :py:attr:`~GetNumberOfSubSteps`
+            - Gets the Number of Substeps for a given solution step.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetRotationConvergenceMinimumReference`
+            - Gets the Rotation Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetRotationConvergenceTolerance`
+            - Gets the Rotation Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetRotationConvergenceType`
+            - Gets the Rotation Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetRotationConvergenceValue`
+            - Gets the Rotation Convergence Value at a given solution step.
+          * - :py:attr:`~GetStabilization`
+            - Gets the Stabilization at a given solution step.
+          * - :py:attr:`~GetStabilizationDampingFactor`
+            - Gets the Stabilization Damping Factor at a given solution step.
+          * - :py:attr:`~GetStabilizationEnergyDissipationRatio`
+            - Gets the Stabilization Energy Dissipation Ratio at a given solution step.
+          * - :py:attr:`~GetStabilizationFirstSubstepOption`
+            - Gets the Stabilization First Substep Option at a given solution step.
+          * - :py:attr:`~GetStabilizationForceLimit`
+            - Gets the Stabilization Force Limit at a given solution step.
+          * - :py:attr:`~GetStabilizationMethod`
+            - Gets the Stabilization Method at a given solution step.
+          * - :py:attr:`~GetStepEndTime`
+            - Gets the Step End Time at a given solution step.
+          * - :py:attr:`~GetStepName`
+            - Gets the Step name at a given step.
+          * - :py:attr:`~GetStoreResulsAtValue`
+            - Gets the Store Results At Value at a given solution step.
+          * - :py:attr:`~GetStoreResultsAt`
+            - Gets the Store Results At at a given solution step.
+          * - :py:attr:`~GetStructuralOnly`
+            - Gets the TimeIntegration Structural for a given solution step.
+          * - :py:attr:`~GetTemperatureConvergenceInputValue`
+            - Gets the Temperature Convergence Input Value at a given solution step.
+          * - :py:attr:`~GetTemperatureConvergenceMinimumReference`
+            - Gets the Temperature Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetTemperatureConvergenceTolerance`
+            - Gets the Temperature Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetTemperatureConvergenceType`
+            - Gets the Temperature Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetTemperatureConvergenceValue`
+            - Gets the Temperature Convergence Value at a given solution step.
+          * - :py:attr:`~GetThermalOnly`
+            - Sets the TimeIntegration Thermal for a given solution step.
+          * - :py:attr:`~GetTimeIntegration`
+            - Gets the TimeIntegration for a given solution step.
+          * - :py:attr:`~GetTimeStep`
+            - Sets the Time Step for a given solution step.
+          * - :py:attr:`~GetVoltageConvergenceMinimumReference`
+            - Gets the Voltage Convergence Minimum Reference at a given solution step.
+          * - :py:attr:`~GetVoltageConvergenceTolerance`
+            - Gets the Voltage Convergence Tolerance as a percentage at a given solution step.
+          * - :py:attr:`~GetVoltageConvergenceType`
+            - Gets the Voltage Convergence Tolerance type at a given solution step.
+          * - :py:attr:`~GetVoltageConvergenceValue`
+            - Gets the Voltage Convergence Value at a given solution step.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SetAutomaticTimeStepping`
+            - Sets the Automatic Time Stepping for a given solution step.
+          * - :py:attr:`~SetCarryOverTimeStep`
+            - Sets the Carry Over Time Step for a given solution step.
+          * - :py:attr:`~SetChargeConvergenceMinimumReference`
+            - Sets the Charge Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetChargeConvergenceTolerance`
+            - Sets the Charge Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetChargeConvergenceType`
+            - Sets the Charge Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetChargeConvergenceValue`
+            - Sets the Charge Convergence Value for a given solution step.
+          * - :py:attr:`~SetCreepEffects`
+            - Sets the Creep Effects for a given solution step.
+          * - :py:attr:`~SetCreepLimitRatio`
+            - Sets the Creep Limit Ratio for a given solution step.
+          * - :py:attr:`~SetCurrentConvergenceMinimumReference`
+            - Sets the Current Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetCurrentConvergenceTolerance`
+            - Sets the Current Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetCurrentConvergenceType`
+            - Sets the Current Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetCurrentConvergenceValue`
+            - Sets the Current Convergence Value for a given solution step.
+          * - :py:attr:`~SetDefineBy`
+            - Sets the Define By for a given solution step.
+          * - :py:attr:`~SetDisplacementConvergenceMinimumReference`
+            - Sets the Displacement Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetDisplacementConvergenceTolerance`
+            - Sets the Displacement Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetDisplacementConvergenceType`
+            - Sets the Displacement Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetDisplacementConvergenceValue`
+            - Sets the Displacement Convergence Value for a given solution step.
+          * - :py:attr:`~SetEmagAMPSConvergenceMinimumReference`
+            - Sets the EmagAMPS Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetEmagAMPSConvergenceTolerance`
+            - Sets the EmagAMPS Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetEmagAMPSConvergenceType`
+            - Sets the EmagAMPS Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetEmagAMPSConvergenceValue`
+            - Sets the EmagAMPS Convergence Value for a given solution step.
+          * - :py:attr:`~SetEmagCSGConvergenceMinimumReference`
+            - Sets the EmagCSG Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetEmagCSGConvergenceTolerance`
+            - Sets the EmagCSG Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetEmagCSGConvergenceType`
+            - Sets the EmagCSG Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetEmagCSGConvergenceValue`
+            - Sets the EmagCSG Convergence Value for a given solution step.
+          * - :py:attr:`~SetEnergyConvergenceMinimumReference`
+            - Sets the Energy Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetEnergyConvergenceTolerance`
+            - Sets the Energy Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetEnergyConvergenceType`
+            - Sets the Energy Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetEnergyConvergenceValue`
+            - Sets the Energy Convergence Value for a given solution step.
+          * - :py:attr:`~SetForceConvergenceMinimumReference`
+            - Sets the Force Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetForceConvergenceTolerance`
+            - Sets the Force Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetForceConvergenceType`
+            - Sets the Force Convergence Tolerance Type for a given solution step.
+          * - :py:attr:`~SetForceConvergenceValue`
+            - Sets the Force Convergence Value for a given solution step.
+          * - :py:attr:`~SetHeatConvergenceMinimumReference`
+            - Sets the Heat Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetHeatConvergenceTolerance`
+            - Sets the Heat Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetHeatConvergenceType`
+            - Sets the Heat Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetHeatConvergenceValue`
+            - Sets the Heat Convergence Value for a given solution step.
+          * - :py:attr:`~SetInitialSubsteps`
+            - Sets the Initial Substeps for a given solution step.
+          * - :py:attr:`~SetInitialTimeStep`
+            - Sets the Initial Time Step for a given solution step.
+          * - :py:attr:`~SetLineSearch`
+            - Sets the Line Search for a given solution step.
+          * - :py:attr:`~SetMaximumSubsteps`
+            - Sets the Maximum Substeps for a given solution step.
+          * - :py:attr:`~SetMaximumTimeStep`
+            - Sets the Maximum Time Step for a given solution step.
+          * - :py:attr:`~SetMinimumSubsteps`
+            - Sets the Minimum Substeps for a given solution step.
+          * - :py:attr:`~SetMinimumTimeStep`
+            - Sets the Minimum Time Step for a given solution step.
+          * - :py:attr:`~SetMomentConvergenceMinimumReference`
+            - Sets the Moment Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetMomentConvergenceTolerance`
+            - Sets the Moment Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetMomentConvergenceType`
+            - Sets the Moment Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetMomentConvergenceValue`
+            - Sets the Moment Convergence Value for a given solution step.
+          * - :py:attr:`~SetNumberOfSubSteps`
+            - Sets the Number of Substeps for a given solution step.
+          * - :py:attr:`~SetRotationConvergenceMinimumReference`
+            - Sets the Rotation Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetRotationConvergenceTolerance`
+            - Sets the Rotation Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetRotationConvergenceType`
+            - Sets the Rotation Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetRotationConvergenceValue`
+            - Sets the Rotation Convergence Value for a given solution step.
+          * - :py:attr:`~SetStabilization`
+            - Sets the Stabilization for a given solution step.
+          * - :py:attr:`~SetStabilizationDampingFactor`
+            - Sets the Stabilization Damping Factor for a given solution step.
+          * - :py:attr:`~SetStabilizationEnergyDissipationRatio`
+            - Sets the Stabilization Energy Dissipation Ratio for a given solution step.
+          * - :py:attr:`~SetStabilizationFirstSubstepOption`
+            - Sets the Stabilization First Substep Option for a given solution step.
+          * - :py:attr:`~SetStabilizationForceLimit`
+            - Sets the Stabilization Force Limit for a given solution step.
+          * - :py:attr:`~SetStabilizationMethod`
+            - Sets the Stabilization Method for a given solution step.
+          * - :py:attr:`~SetStepEndTime`
+            - Sets the Step End Time for a given solution step.
+          * - :py:attr:`~SetStepName`
+            - Sets the Step name at a given step.
+          * - :py:attr:`~SetStoreResulsAtValue`
+            - Sets the Store Results At Value for a given solution step.
+          * - :py:attr:`~SetStoreResultsAt`
+            - Sets the Store Results At for a given solution step.
+          * - :py:attr:`~SetStructuralOnly`
+            - Sets the TimeIntegration Structural for a given solution step.
+          * - :py:attr:`~SetTemperatureConvergenceInputValue`
+            - Sets the Temperature Convergence Input Value for a given solution step.
+          * - :py:attr:`~SetTemperatureConvergenceMinimumReference`
+            - Sets the Temperature Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetTemperatureConvergenceTolerance`
+            - Sets the Temperature Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetTemperatureConvergenceType`
+            - Sets the Temperature Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetTemperatureConvergenceValue`
+            - Sets the Temperature Convergence Value for a given solution step.
+          * - :py:attr:`~SetThermalOnly`
+            - Sets the TimeIntegration Thermal for a given solution step.
+          * - :py:attr:`~SetTimeIntegration`
+            - Sets the TimeIntegration for a given solution step.
+          * - :py:attr:`~SetTimeStep`
+            - Sets the Time Step for a given solution step.
+          * - :py:attr:`~SetVoltageConvergenceMinimumReference`
+            - Sets the Voltage Convergence Minimum Reference for a given solution step.
+          * - :py:attr:`~SetVoltageConvergenceTolerance`
+            - Sets the Voltage Convergence Tolerance as a percentage for a given solution step.
+          * - :py:attr:`~SetVoltageConvergenceType`
+            - Sets the Voltage Convergence Tolerance type for a given solution step.
+          * - :py:attr:`~SetVoltageConvergenceValue`
+            - Sets the Voltage Convergence Value for a given solution step.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AMCooldownNumberOfSubsteps`
+            - Gets or sets the AM Cooldown Number of Substeps.
+          * - :py:attr:`~AMPSConvergence`
+            - Gets or sets the AMPSConvergence.
+          * - :py:attr:`~AMStepType`
+            - Gets or sets the AM Process Step Type.
+          * - :py:attr:`~AMSubstepsBetweenHeating`
+            - Gets or sets the AM Substeps Between Heating.
+          * - :py:attr:`~AMSubstepsToApplyHeats`
+            - Gets or sets the AM Substeps to Apply Heat.
+          * - :py:attr:`~AggressiveRemeshing`
+            - Gets or sets the AggressiveRemeshing.
+          * - :py:attr:`~AutomaticTimeStepping`
+            - Gets or sets the AutomaticTimeStepping.
+          * - :py:attr:`~AxisymmetryDivisions`
+            - Gets or sets the AxisymmetryDivisions.
+          * - :py:attr:`~BackStress`
+            - Gets or sets the BackStress.
+          * - :py:attr:`~BaseRemovalType`
+            - Gets or sets the BaseRemovalType.
+          * - :py:attr:`~BoundaryAngle`
+            - Gets or sets the BoundaryAngle.
+          * - :py:attr:`~CSGConvergence`
+            - Gets or sets the CSGConvergence.
+          * - :py:attr:`~CStarIntegral`
+            - Gets or sets the CStarIntegral.
+          * - :py:attr:`~CacheResultsInMemory`
+            - Gets or sets the CacheResultsInMemory.
+          * - :py:attr:`~CalculateAcceleration`
+            - Gets or sets the CalculateAcceleration.
+          * - :py:attr:`~CalculateEnergy`
+            - Gets or sets the CalculateEnergy.
+          * - :py:attr:`~CalculateEulerAngles`
+            - Gets or sets the CalculateEulerAngles.
+          * - :py:attr:`~CalculateReactions`
+            - Gets or sets the CalculateReactions.
+          * - :py:attr:`~CalculateThermalFlux`
+            - Gets or sets the CalculateThermalFlux.
+          * - :py:attr:`~CalculateVelocity`
+            - Gets or sets the CalculateVelocity.
+          * - :py:attr:`~CalculateVelocityAndAcceleration`
+            - Gets or sets the CalculateVelocityAndAcceleration.
+          * - :py:attr:`~CalculateVolumeEnergy`
+            - Gets or sets the CalculateVolumeEnergy.
+          * - :py:attr:`~CampbellDiagram`
+            - Gets or sets the CampbellDiagram.
+          * - :py:attr:`~CarryOverTimeStep`
+            - Gets or sets the CarryOverTimeStep.
+          * - :py:attr:`~CentralFrequency`
+            - Gets or sets the CentralFrequency.
+          * - :py:attr:`~ChargeConvergence`
+            - Gets or sets the ChargeConvergence.
+          * - :py:attr:`~ChargeConvergenceMinimumReference`
+            - Gets or sets the ChargeConvergenceMinimumReference.
+          * - :py:attr:`~ChargeConvergenceTolerance`
+            - Gets or sets the ChargeConvergenceTolerance.
+          * - :py:attr:`~ChargeConvergenceValue`
+            - Gets or sets the ChargeConvergenceValue.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~ClusterNumber`
+            - Gets or sets the ClusterNumber.
+          * - :py:attr:`~ClusterResults`
+            - Gets or sets the ClusterResults.
+          * - :py:attr:`~CombineRestartFiles`
+            - Gets or sets the CombineRestartFiles.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConstantDamping`
+            - Gets or sets the ConstantDamping.
+          * - :py:attr:`~ConstantDampingRatio`
+            - Gets or sets the ConstantDampingRatio.
+          * - :py:attr:`~ContactData`
+            - Gets or sets the ContactData.
+          * - :py:attr:`~ContactMiscellaneous`
+            - Gets or sets the ContactMiscellaneous.
+          * - :py:attr:`~ContactSplit`
+            - Gets or sets the ContactSplit.
+          * - :py:attr:`~ContactSplitMaxNum`
+            - Gets or sets the ContactSplitMaxNum.
+          * - :py:attr:`~ContactSummary`
+            - Gets or sets the ContactSummary.
+          * - :py:attr:`~CooldownTime`
+            - Gets or sets the AM Cooldown Time.
+          * - :py:attr:`~CooldownTimeType`
+            - Gets or sets the AM Cooldown Time Type.
+          * - :py:attr:`~CoriolisEffectApplied`
+            - Gets or sets the CoriolisEffectApplied.
+          * - :py:attr:`~CreepEffects`
+            - Gets or sets the CreepEffects.
+          * - :py:attr:`~CreepLimitRatio`
+            - Gets or sets the CreepLimitRatio.
+          * - :py:attr:`~CurrentConvergence`
+            - Gets or sets the CurrentConvergence.
+          * - :py:attr:`~CurrentConvergenceMinimumReference`
+            - Gets or sets the CurrentConvergenceMinimumReference.
+          * - :py:attr:`~CurrentConvergenceTolerance`
+            - Gets or sets the CurrentConvergenceTolerance.
+          * - :py:attr:`~CurrentConvergenceValue`
+            - Gets or sets the CurrentConvergenceValue.
+          * - :py:attr:`~CurrentRestartPoint`
+            - Gets or sets the Current Restart Point.
+          * - :py:attr:`~CurrentStepNumber`
+            - Gets or sets the CurrentStepNumber.
+          * - :py:attr:`~CurrentStepNumberHarmonic`
+            - Gets or sets the CurrentStepNumberHarmonic.
+          * - :py:attr:`~CyclicModeSuperposition`
+            - Gets or sets the CyclicModeSuperposition.
+          * - :py:attr:`~Damped`
+            - Gets or sets the Damped.
+          * - :py:attr:`~DampingDefineBy`
+            - Gets or sets the DampingDefineBy.
+          * - :py:attr:`~DampingRatio`
+            - Gets or sets the DampingRatio.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DefineBy`
+            - Gets or sets the DefineBy.
+          * - :py:attr:`~DeleteUnneededFiles`
+            - Gets or sets the DeleteUnneededFiles.
+          * - :py:attr:`~DisplacementConvergence`
+            - Gets or sets the DisplacementConvergence.
+          * - :py:attr:`~DisplacementConvergenceMinimumReference`
+            - Gets or sets the DisplacementConvergenceMinimumReference.
+          * - :py:attr:`~DisplacementConvergenceTolerance`
+            - Gets or sets the DisplacementConvergenceTolerance.
+          * - :py:attr:`~DisplacementConvergenceValue`
+            - Gets or sets the DisplacementConvergenceValue.
+          * - :py:attr:`~EdgeSplittingAngle`
+            - Gets or sets the EdgeSplittingAngle.
+          * - :py:attr:`~ElectricOnly`
+            - Gets or sets the ElectricOnly.
+          * - :py:attr:`~ElectromagneticNodalForces`
+            - Gets or sets the ElectromagneticNodalForces.
+          * - :py:attr:`~ElementCurrentDensity`
+            - Gets or sets the ElementCurrentDensity.
+          * - :py:attr:`~EmagAMPSConvergenceMinimumReference`
+            - Gets or sets the EmagAMPSConvergenceMinimumReference.
+          * - :py:attr:`~EmagAMPSConvergenceTolerance`
+            - Gets or sets the EmagAMPSConvergenceTolerance.
+          * - :py:attr:`~EmagAMPSConvergenceValue`
+            - Gets or sets the EmagAMPSConvergenceValue.
+          * - :py:attr:`~EmagCSGConvergenceMinimumReference`
+            - Gets or sets the EmagCSGConvergenceMinimumReference.
+          * - :py:attr:`~EmagCSGConvergenceTolerance`
+            - Gets or sets the EmagCSGConvergenceTolerance.
+          * - :py:attr:`~EmagCSGConvergenceValue`
+            - Gets or sets the EmagCSGConvergenceValue.
+          * - :py:attr:`~EnergyConvergence`
+            - Gets or sets the EnergyConvergence.
+          * - :py:attr:`~EnergyConvergenceMinimumReference`
+            - Gets or sets the EnergyConvergenceMinimumReference.
+          * - :py:attr:`~EnergyConvergenceTolerance`
+            - Gets or sets the EnergyConvergenceTolerance.
+          * - :py:attr:`~EnergyConvergenceValue`
+            - Gets or sets the EnergyConvergenceValue.
+          * - :py:attr:`~EngineOrderofExcitation`
+            - Gets or sets the EngineOrderofExcitation.
+          * - :py:attr:`~EqvDampingRatioFromModal`
+            - Gets or sets the EqvDampingRatioFromModal.
+          * - :py:attr:`~ExcludeInsignificantModes`
+            - Gets or sets the ExcludeInsignificantModes.
+          * - :py:attr:`~ExpandResultsFrom`
+            - Gets or sets the ExpandResultsFrom.
+          * - :py:attr:`~Expansion`
+            - Gets the Expansion.
+          * - :py:attr:`~ExportHighStrains`
+            - Gets or sets the ExportHighStrains.
+          * - :py:attr:`~ExportLayerEndTemperature`
+            - Gets or sets the ExportLayerEndTemperature.
+          * - :py:attr:`~ExportRecoaterInterference`
+            - Gets or sets the ExportRecoaterInterference.
+          * - :py:attr:`~FarFieldRadiationSurface`
+            - Gets or sets the FarFieldRadiationSurface.
+          * - :py:attr:`~FieldIntensityandFluxDensity`
+            - Gets or sets the FieldIntensityandFluxDensity.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FluxConvergence`
+            - Gets or sets the FluxConvergence.
+          * - :py:attr:`~ForceConvergence`
+            - Gets or sets the ForceConvergence.
+          * - :py:attr:`~ForceConvergenceMinimumReference`
+            - Gets or sets the ForceConvergenceMinimumReference.
+          * - :py:attr:`~ForceConvergenceTolerance`
+            - Gets or sets the ForceConvergenceTolerance.
+          * - :py:attr:`~ForceConvergenceValue`
+            - Gets or sets the ForceConvergenceValue.
+          * - :py:attr:`~FractureSolverControls`
+            - Gets or sets the FractureSolverControls.
+          * - :py:attr:`~Frequency`
+            - Gets or sets the Frequency.
+          * - :py:attr:`~FrequencySpacing`
+            - Gets or sets the FrequencySpacing.
+          * - :py:attr:`~FutureAnalysis`
+            - Gets or sets the FutureAnalysis.
+          * - :py:attr:`~GeneralMiscellaneous`
+            - Gets or sets the GeneralMiscellaneous.
+          * - :py:attr:`~GeneralMiscellaneousOption`
+            - Gets or sets the GeneralMiscellaneousOption.
+          * - :py:attr:`~GenerateMeshRestartPoints`
+            - Gets or sets the GenerateMeshRestartPoints.
+          * - :py:attr:`~GenerateRestartPoints`
+            - Gets or sets the GenerateRestartPoints.
+          * - :py:attr:`~GlobalSizeRatioQualityImprovement`
+            - Gets or sets the GlobalSizeRatioQualityImprovement.
+          * - :py:attr:`~GlobalSizeRatioQualityRefinement`
+            - Gets or sets the GlobalSizeRatioQualityRefinement.
+          * - :py:attr:`~Graph`
+            - Graph property.
+          * - :py:attr:`~HarmonicIndexInterval`
+            - Gets or sets the HarmonicIndexInterval.
+          * - :py:attr:`~HarmonicIndexRange`
+            - Gets or sets the HarmonicIndexRange.
+          * - :py:attr:`~HarmonicOrders`
+            - Gets or sets the HarmonicOrders.
+          * - :py:attr:`~HeatConvergence`
+            - Gets or sets the HeatConvergence.
+          * - :py:attr:`~HeatConvergenceMinimumReference`
+            - Gets or sets the HeatConvergenceMinimumReference.
+          * - :py:attr:`~HeatConvergenceTolerance`
+            - Gets or sets the HeatConvergenceTolerance.
+          * - :py:attr:`~HeatConvergenceValue`
+            - Gets or sets the HeatConvergenceValue.
+          * - :py:attr:`~HeatGenerationRate`
+            - Gets or sets the HeatGenerationRate.
+          * - :py:attr:`~HemicubeResolution`
+            - Gets or sets the HemicubeResolution.
+          * - :py:attr:`~IgnoreAcousticDamping`
+            - Gets or sets the IgnoreAcousticDamping.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~IncludeNegativeLoadMultiplier`
+            - Gets or sets the IncludeNegativeLoadMultiplier.
+          * - :py:attr:`~IncludeResidualVector`
+            - Gets or sets the IncludeResidualVector.
+          * - :py:attr:`~InertiaRelief`
+            - Gets or sets the InertiaRelief.
+          * - :py:attr:`~InitialSubsteps`
+            - Gets or sets the InitialSubsteps.
+          * - :py:attr:`~InitialTimeStep`
+            - Gets or sets the InitialTimeStep.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~InverseOption`
+            - Gets or sets the InverseOption.
+          * - :py:attr:`~InverseOptionEndStep`
+            - Gets or sets the InverseOptionEndStep.
+          * - :py:attr:`~JIntegral`
+            - Gets or sets the JIntegral.
+          * - :py:attr:`~KeepModalResults`
+            - Gets or sets the KeepModalResults.
+          * - :py:attr:`~KeepPreStressLoadPattern`
+            - Gets or sets the KeepPreStressLoadPattern.
+          * - :py:attr:`~KrylovResidualTolerance`
+            - Gets or sets the KrylovResidualTolerance.
+          * - :py:attr:`~KrylovSubspaceDimension`
+            - Gets or sets the KrylovSubspaceDimension.
+          * - :py:attr:`~KrylovSubspaceFrequency`
+            - Gets or sets the KrylovSubspaceFrequency.
+          * - :py:attr:`~LargeDeflection`
+            - Gets or sets the LargeDeflection.
+          * - :py:attr:`~LayersToBuild`
+            - Gets or sets the AM Layers to Build.
+          * - :py:attr:`~LimitSearchToRange`
+            - Gets or sets the LimitSearchToRange.
+          * - :py:attr:`~LineSearch`
+            - Gets or sets the LineSearch.
+          * - :py:attr:`~LoadStepValue`
+            - Gets or sets the LoadStepValue.
+          * - :py:attr:`~MassCoefficient`
+            - Gets or sets the MassCoefficient.
+          * - :py:attr:`~MaterialForce`
+            - Gets or sets the MaterialForce.
+          * - :py:attr:`~MaximumHarmonicIndex`
+            - Gets or sets the MaximumHarmonicIndex.
+          * - :py:attr:`~MaximumIteration`
+            - Gets or sets the MaximumIteration.
+          * - :py:attr:`~MaximumModesToFind`
+            - Gets or sets the MaximumModesToFind.
+          * - :py:attr:`~MaximumPointsToSavePerStep`
+            - Gets or sets the MaximumPointsToSavePerStep.
+          * - :py:attr:`~MaximumSubsteps`
+            - Gets or sets the MaximumSubsteps.
+          * - :py:attr:`~MaximumTimeStep`
+            - Gets or sets the MaximumTimeStep.
+          * - :py:attr:`~MeshLoadStepValue`
+            - Gets or sets the MeshLoadStepValue.
+          * - :py:attr:`~MeshRetainFilesAfterFullSolve`
+            - Gets or sets the MeshRetainFilesAfterFullSolve.
+          * - :py:attr:`~MeshSaveAtLoadStep`
+            - Gets or sets the MeshSaveAtLoadStep.
+          * - :py:attr:`~MeshSaveAtSubstep`
+            - Gets or sets the MeshSaveAtSubstep.
+          * - :py:attr:`~MinimumElementSize`
+            - Gets or sets the Minimum Element Size property for Geometry Based Adaptivity.
+          * - :py:attr:`~MinimumHarmonicIndex`
+            - Gets or sets the MinimumHarmonicIndex.
+          * - :py:attr:`~MinimumSubsteps`
+            - Gets or sets the MinimumSubsteps.
+          * - :py:attr:`~MinimumTimeStep`
+            - Gets or sets the MinimumTimeStep.
+          * - :py:attr:`~ModalFrequencyRange`
+            - Gets or sets the ModalFrequencyRange.
+          * - :py:attr:`~ModalNumberOfPoints`
+            - Gets or sets the ModalNumberOfPoints.
+          * - :py:attr:`~ModalRangeMaximum`
+            - Gets or sets the ModalRangeMaximum.
+          * - :py:attr:`~ModalRangeMinimum`
+            - Gets or sets the ModalRangeMinimum.
+          * - :py:attr:`~ModeReuse`
+            - Gets or sets the ModeReuse.
+          * - :py:attr:`~ModeSelectionMethod`
+            - Gets or sets the ModeSelectionMethod.
+          * - :py:attr:`~ModeSignificanceLevel`
+            - Gets or sets the ModeSignificanceLevel.
+          * - :py:attr:`~ModesCombinationType`
+            - Gets or sets the ModesCombinationType.
+          * - :py:attr:`~MomentConvergence`
+            - Gets or sets the MomentConvergence.
+          * - :py:attr:`~MomentConvergenceMinimumReference`
+            - Gets or sets the MomentConvergenceMinimumReference.
+          * - :py:attr:`~MomentConvergenceTolerance`
+            - Gets or sets the MomentConvergenceTolerance.
+          * - :py:attr:`~MomentConvergenceValue`
+            - Gets or sets the MomentConvergenceValue.
+          * - :py:attr:`~Multistep`
+            - Gets or sets the Multistep.
+          * - :py:attr:`~MultistepType`
+            - Gets or sets the MultistepType.
+          * - :py:attr:`~NewtonRaphsonOption`
+            - Gets or sets the NewtonRaphsonOption.
+          * - :py:attr:`~NodalForces`
+            - Gets or sets the NodalForces.
+          * - :py:attr:`~NonLinearFormulation`
+            - Gets or sets the NonLinearFormulation.
+          * - :py:attr:`~NonLinearSolution`
+            - Gets the NonLinearSolution.
+          * - :py:attr:`~NonlinearData`
+            - Gets or sets the NonlinearData.
+          * - :py:attr:`~NumLoadVectors`
+            - Gets or sets the NumLoadVectors.
+          * - :py:attr:`~NumberOfModesToUse`
+            - Gets or sets the NumberOfModesToUse.
+          * - :py:attr:`~NumberOfRPMs`
+            - Gets or sets the NumberOfRPMs.
+          * - :py:attr:`~NumberOfRestartPoints`
+            - Gets Number of Restart Points.
+          * - :py:attr:`~NumberOfSculptedLayersQualityImprovement`
+            - Gets or sets the NumberOfSculptedLayersQualityImprovement.
+          * - :py:attr:`~NumberOfSculptedLayersRefinement`
+            - Gets or sets the NumberOfSculptedLayersRefinement.
+          * - :py:attr:`~NumberOfSteps`
+            - Gets or sets the NumberOfSteps.
+          * - :py:attr:`~NumberOfSubSteps`
+            - Gets or sets the NumberOfSubSteps.
+          * - :py:attr:`~NumberOfZones`
+            - Gets or sets the NumberOfZones.
+          * - :py:attr:`~NumericalDamping`
+            - Gets or sets the NumericalDamping.
+          * - :py:attr:`~NumericalDampingValue`
+            - Gets or sets the NumericalDampingValue.
+          * - :py:attr:`~OnDemandExpansionOption`
+            - Gets or sets the OnDemandExpansionOption.
+          * - :py:attr:`~OverRelaxation`
+            - Gets or sets the OverRelaxation.
+          * - :py:attr:`~ParticipationFactor`
+            - Gets or sets the ParticipationFactor.
+          * - :py:attr:`~ProjectToGeometry`
+            - Gets or sets the ProjectToGeometry.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~QuasiStaticSolution`
+            - Gets or sets the QuasiStaticSolution.
+          * - :py:attr:`~RadiositySolver`
+            - Gets or sets the RadiositySolver.
+          * - :py:attr:`~RangeMaximum`
+            - Gets or sets the Range Maximum property in Options group of Analysis Settings in Harmonic Analysis.
+          * - :py:attr:`~RangeMinimum`
+            - Gets or sets the Range Minimum property in Options group of Analysis Settings in Harmonic Analysis.
+          * - :py:attr:`~ReferenceTemperature`
+            - Gets or sets the AM Reference Temperature.
+          * - :py:attr:`~ReferenceTemperatureType`
+            - Gets or sets the AM Reference Temperature Type.
+          * - :py:attr:`~RefinementAlgorithm`
+            - Gets or sets the RefinementAlgorithm.
+          * - :py:attr:`~ReformulationTolerance`
+            - Gets or sets the ReformulationTolerance.
+          * - :py:attr:`~RelaxationTemperature`
+            - Gets or sets the RelaxationTemperature.
+          * - :py:attr:`~RelaxationTemperatureType`
+            - Gets or sets the AM Relaxation Temperature Type.
+          * - :py:attr:`~RemeshingGradient`
+            - Gets or sets the RemeshingGradient.
+          * - :py:attr:`~RemeshingToleranceQualityImprovement`
+            - Gets or sets the RemeshingToleranceQualityImprovement.
+          * - :py:attr:`~RemeshingToleranceRefinement`
+            - Gets or sets the RemeshingToleranceRefinement.
+          * - :py:attr:`~RemovalDirection`
+            - Gets or sets the RemovalDirection.
+          * - :py:attr:`~RemovalStepSize`
+            - Gets or sets the RemovalStepSize.
+          * - :py:attr:`~RestartAtLoadStep`
+            - Gets the RestartAtLoadStep.
+          * - :py:attr:`~RestartAtSubstep`
+            - Gets the RestartAtSubstep.
+          * - :py:attr:`~RestartAtTime`
+            - Gets the RestartAtTime.
+          * - :py:attr:`~RestartType`
+            - Gets or sets the RestartType.
+          * - :py:attr:`~ResultFileCompression`
+            - Gets or sets the ResultFileCompression.
+          * - :py:attr:`~RetainFilesAfterFullSolve`
+            - Gets or sets the RetainFilesAfterFullSolve.
+          * - :py:attr:`~RetainModesymFileAfterSolve`
+            - Gets or sets the RetainModesymFileAfterSolve.
+          * - :py:attr:`~RotationConvergence`
+            - Gets or sets the RotationConvergence.
+          * - :py:attr:`~RotationConvergenceMinimumReference`
+            - Gets or sets the RotationConvergenceMinimumReference.
+          * - :py:attr:`~RotationConvergenceTolerance`
+            - Gets or sets the RotationConvergenceTolerance.
+          * - :py:attr:`~RpmCentralFrequency`
+            - Gets or sets the RpmCentralFrequency.
+          * - :py:attr:`~RpmClusterNumber`
+            - Gets or sets the RpmClusterNumber.
+          * - :py:attr:`~RpmFrequencySpacing`
+            - Gets or sets the RpmFrequencySpacing.
+          * - :py:attr:`~RpmRangeMaximum`
+            - Gets or sets the RpmRangeMaximum.
+          * - :py:attr:`~RpmRangeMinimum`
+            - Gets or sets the RpmRangeMinimum.
+          * - :py:attr:`~RpmSolutionIntervals`
+            - Gets or sets the RpmSolutionIntervals.
+          * - :py:attr:`~RpmValue`
+            - Gets or sets the RpmValue.
+          * - :py:attr:`~SIFS`
+            - Gets or sets the SIFS.
+          * - :py:attr:`~SaveAtLoadStep`
+            - Gets or sets the SaveAtLoadStep.
+          * - :py:attr:`~SaveAtSubstep`
+            - Gets or sets the SaveAtSubstep.
+          * - :py:attr:`~SaveMAPDLDB`
+            - Gets or sets the SaveMAPDLDB.
+          * - :py:attr:`~SaveSpecifiedLoadStep`
+            - Gets or sets the SaveSpecifiedLoadStep.
+          * - :py:attr:`~ScatteredFieldFormulation`
+            - Gets or sets the ScatteredFieldFormulation.
+          * - :py:attr:`~ScatteringOutputType`
+            - Gets or sets the ScatteringOutputType.
+          * - :py:attr:`~ScratchSolverFilesDirectory`
+            - Gets the ScratchSolverFilesDirectory.
+          * - :py:attr:`~SearchRangeMaximum`
+            - Gets or sets the Range Maximum property in Options group of Analysis Settings in Modal Analysis.
+          * - :py:attr:`~SearchRangeMinimum`
+            - Gets or sets the Range Minimum property in Options group of Analysis Settings in Modal Analysis.
+          * - :py:attr:`~SignificanceThreshold`
+            - Gets or sets the SignificanceThreshold.
+          * - :py:attr:`~SolutionIntervals`
+            - Gets or sets the SolutionIntervals.
+          * - :py:attr:`~SolutionMethod`
+            - Gets or sets the SolutionMethod.
+          * - :py:attr:`~SolverFilesDirectory`
+            - Gets the SolverFilesDirectory.
+          * - :py:attr:`~SolverPivotChecking`
+            - Gets or sets the SolverPivotChecking.
+          * - :py:attr:`~SolverTolerance`
+            - Gets or sets the SolverTolerance.
+          * - :py:attr:`~SolverType`
+            - Gets or sets the SolverType.
+          * - :py:attr:`~SolverUnitSystem`
+            - Gets or sets the SolverUnitSystem.
+          * - :py:attr:`~SolverUnits`
+            - Gets or sets the SolverUnits.
+          * - :py:attr:`~SpectrumType`
+            - Gets or sets the SpectrumType.
+          * - :py:attr:`~SpinSoftening`
+            - Gets or sets the SpinSoftening.
+          * - :py:attr:`~SpringStiffness`
+            - Gets or sets the SpringStiffness.
+          * - :py:attr:`~SpringStiffnessFactor`
+            - Gets or sets the SpringStiffnessFactor.
+          * - :py:attr:`~SpringStiffnessValue`
+            - Gets or sets the SpringStiffnessValue.
+          * - :py:attr:`~Stabilization`
+            - Gets or sets the Stabilization.
+          * - :py:attr:`~StabilizationActivationForFirstSubstep`
+            - Gets or sets the StabilizationActivationForFirstSubstep.
+          * - :py:attr:`~StabilizationDampingFactor`
+            - Gets or sets the StabilizationDampingFactor.
+          * - :py:attr:`~StabilizationEnergyDissipationRatio`
+            - Gets or sets the StabilizationEnergyDissipationRatio.
+          * - :py:attr:`~StabilizationForceLimit`
+            - Gets or sets the StabilizationForceLimit.
+          * - :py:attr:`~StabilizationMethod`
+            - Gets or sets the StabilizationMethod.
+          * - :py:attr:`~StepEndTime`
+            - Gets or sets the StepEndTime.
+          * - :py:attr:`~StepName`
+            - Gets or sets the Step Name.
+          * - :py:attr:`~StiffnessCoefficient`
+            - Gets or sets the StiffnessCoefficient.
+          * - :py:attr:`~StiffnessCoefficientDefineBy`
+            - Gets or sets the StiffnessCoefficientDefineBy.
+          * - :py:attr:`~StoreComplexSolution`
+            - Gets or sets the StoreComplexSolution.
+          * - :py:attr:`~StoreModalResults`
+            - Gets or sets the StoreModalResults.
+          * - :py:attr:`~StoreResulsAtValue`
+            - Gets or sets the StoreResulsAtValue.
+          * - :py:attr:`~StoreResultsAt`
+            - Gets or sets the StoreResultsAt.
+          * - :py:attr:`~StoreResultsAtAllFrequencies`
+            - Gets or sets the StoreResultsAtAllFrequencies.
+          * - :py:attr:`~Strain`
+            - Gets or sets the Strain.
+          * - :py:attr:`~Stress`
+            - Gets or sets the Stress.
+          * - :py:attr:`~StructuralDampingCoefficient`
+            - Gets or sets the StructuralDampingCoefficient.
+          * - :py:attr:`~StructuralOnly`
+            - Gets or sets the StructuralOnly.
+          * - :py:attr:`~TStress`
+            - Gets or sets the TStress.
+          * - :py:attr:`~TemperatureConvergence`
+            - Gets or sets the TemperatureConvergence.
+          * - :py:attr:`~TemperatureConvergenceInputValue`
+            - Gets or sets the TemperatureConvergenceInputValue.
+          * - :py:attr:`~TemperatureConvergenceMinimumReference`
+            - Gets or sets the TemperatureConvergenceMinimumReference.
+          * - :py:attr:`~TemperatureConvergenceTolerance`
+            - Gets or sets the TemperatureConvergenceTolerance.
+          * - :py:attr:`~TemperatureConvergenceValue`
+            - Gets or sets the TemperatureConvergenceValue.
+          * - :py:attr:`~ThermalOnly`
+            - Gets or sets the ThermalOnly.
+          * - :py:attr:`~TimeIntegration`
+            - Gets or sets the TimeIntegration.
+          * - :py:attr:`~TimeStep`
+            - Gets or sets the TimeStep.
+          * - :py:attr:`~TransientApplication`
+            - Gets or sets the TransientApplication.
+          * - :py:attr:`~TransientApplicationUserDefined`
+            - Gets or sets the TransientApplicationUserDefined.
+          * - :py:attr:`~UserDefinedFrequencies`
+            - Gets or sets the UserDefinedFrequencies.
+          * - :py:attr:`~UserDefinedFrequencySteps`
+            - Gets or sets the UserDefinedFrequencySteps.
+          * - :py:attr:`~ViewFactorMethod`
+            - Gets or sets the ViewFactorMethod.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~VoltageConvergence`
+            - Gets or sets the VoltageConvergence.
+          * - :py:attr:`~VoltageConvergenceMinimumReference`
+            - Gets or sets the VoltageConvergenceMinimumReference.
+          * - :py:attr:`~VoltageConvergenceTolerance`
+            - Gets or sets the VoltageConvergenceTolerance.
+          * - :py:attr:`~VoltageConvergenceValue`
+            - Gets or sets the VoltageConvergenceValue.
+          * - :py:attr:`~WeakSprings`
+            - Gets or sets the WeakSprings.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AMCooldownNumberOfSubsteps
+   :type: Optional[int]
+
+   
+   Gets or sets the AM Cooldown Number of Substeps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AMPSConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the AMPSConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AMStepType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessStepType]
+
+   
+   Gets or sets the AM Process Step Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AMSubstepsBetweenHeating
+   :type: Optional[int]
+
+   
+   Gets or sets the AM Substeps Between Heating.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AMSubstepsToApplyHeats
+   :type: Optional[int]
+
+   
+   Gets or sets the AM Substeps to Apply Heat.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AggressiveRemeshing
+   :type: Optional[bool]
+
+   
+   Gets or sets the AggressiveRemeshing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticTimeStepping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutomaticTimeStepping]
+
+   
+   Gets or sets the AutomaticTimeStepping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AxisymmetryDivisions
+   :type: Optional[int]
+
+   
+   Gets or sets the AxisymmetryDivisions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BackStress
+   :type: Optional[bool]
+
+   
+   Gets or sets the BackStress.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BaseRemovalType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMBaseRemovalType]
+
+   
+   Gets or sets the BaseRemovalType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BoundaryAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the BoundaryAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CSGConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the CSGConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CStarIntegral
+   :type: Optional[bool]
+
+   
+   Gets or sets the CStarIntegral.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CacheResultsInMemory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CacheResultsInMemory]
+
+   
+   Gets or sets the CacheResultsInMemory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateAcceleration
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateAcceleration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateEnergy
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateEnergy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateEulerAngles
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateEulerAngles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateReactions
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateReactions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateThermalFlux
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateThermalFlux.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateVelocity
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateVelocity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateVelocityAndAcceleration
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateVelocityAndAcceleration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateVolumeEnergy
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateVolumeEnergy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CampbellDiagram
+   :type: Optional[bool]
+
+   
+   Gets or sets the CampbellDiagram.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CarryOverTimeStep
+   :type: Optional[bool]
+
+   
+   Gets or sets the CarryOverTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CentralFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the CentralFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ChargeConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the ChargeConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ChargeConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ChargeConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ChargeConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the ChargeConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ChargeConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ChargeConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClusterNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the ClusterNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClusterResults
+   :type: Optional[bool]
+
+   
+   Gets or sets the ClusterResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CombineRestartFiles
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CombineRestartFilesType]
+
+   
+   Gets or sets the CombineRestartFiles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConstantDamping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConstantDampingType]
+
+   
+   Gets or sets the ConstantDamping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConstantDampingRatio
+   :type: Optional[float]
+
+   
+   Gets or sets the ConstantDampingRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactData
+   :type: Optional[bool]
+
+   
+   Gets or sets the ContactData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactMiscellaneous
+   :type: Optional[bool]
+
+   
+   Gets or sets the ContactMiscellaneous.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactSplit
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactSplitType]
+
+   
+   Gets or sets the ContactSplit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactSplitMaxNum
+   :type: Optional[int]
+
+   
+   Gets or sets the ContactSplitMaxNum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactSummary
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactSummaryType]
+
+   
+   Gets or sets the ContactSummary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the AM Cooldown Time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownTimeType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMCooldownTimeType]
+
+   
+   Gets or sets the AM Cooldown Time Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoriolisEffectApplied
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CoriolisEffectType]
+
+   
+   Gets or sets the CoriolisEffectApplied.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreepEffects
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Creep]
+
+   
+   Gets or sets the CreepEffects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreepLimitRatio
+   :type: Optional[float]
+
+   
+   Gets or sets the CreepLimitRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the CurrentConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the CurrentConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the CurrentConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the CurrentConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentRestartPoint
+   :type: Optional[int]
+
+   
+   Gets or sets the Current Restart Point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentStepNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the CurrentStepNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentStepNumberHarmonic
+   :type: Optional[int]
+
+   
+   Gets or sets the CurrentStepNumberHarmonic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CyclicModeSuperposition
+   :type: Optional[bool]
+
+   
+   Gets or sets the CyclicModeSuperposition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Damped
+   :type: Optional[bool]
+
+   
+   Gets or sets the Damped.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DampingDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DampingDefineBy]
+
+   
+   Gets or sets the DampingDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DampingRatio
+   :type: Optional[float]
+
+   
+   Gets or sets the DampingRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TimeStepDefineByType]
+
+   
+   Gets or sets the DefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeleteUnneededFiles
+   :type: Optional[bool]
+
+   
+   Gets or sets the DeleteUnneededFiles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplacementConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the DisplacementConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplacementConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the DisplacementConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplacementConvergenceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the DisplacementConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplacementConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the DisplacementConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeSplittingAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EdgeSplittingAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElectricOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the ElectricOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElectromagneticNodalForces
+   :type: Optional[bool]
+
+   
+   Gets or sets the ElectromagneticNodalForces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementCurrentDensity
+   :type: Optional[bool]
+
+   
+   Gets or sets the ElementCurrentDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EmagAMPSConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EmagAMPSConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EmagAMPSConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the EmagAMPSConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EmagAMPSConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EmagAMPSConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EmagCSGConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EmagCSGConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EmagCSGConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the EmagCSGConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EmagCSGConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EmagCSGConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnergyConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the EnergyConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnergyConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EnergyConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnergyConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the EnergyConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnergyConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EnergyConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EngineOrderofExcitation
+   :type: Optional[int]
+
+   
+   Gets or sets the EngineOrderofExcitation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EqvDampingRatioFromModal
+   :type: Optional[bool]
+
+   
+   Gets or sets the EqvDampingRatioFromModal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExcludeInsignificantModes
+   :type: Optional[bool]
+
+   
+   Gets or sets the ExcludeInsignificantModes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExpandResultsFrom
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExpandResultFrom]
+
+   
+   Gets or sets the ExpandResultsFrom.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Expansion
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExpandResultsSubType]
+
+   
+   Gets the Expansion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportHighStrains
+   :type: Optional[bool]
+
+   
+   Gets or sets the ExportHighStrains.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportLayerEndTemperature
+   :type: Optional[bool]
+
+   
+   Gets or sets the ExportLayerEndTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportRecoaterInterference
+   :type: Optional[bool]
+
+   
+   Gets or sets the ExportRecoaterInterference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FarFieldRadiationSurface
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FarFieldRadiationSurfaceType]
+
+   
+   Gets or sets the FarFieldRadiationSurface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FieldIntensityandFluxDensity
+   :type: Optional[bool]
+
+   
+   Gets or sets the FieldIntensityandFluxDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FluxConvergence
+   :type: Optional[float]
+
+   
+   Gets or sets the FluxConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ForceConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the ForceConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ForceConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ForceConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ForceConvergenceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ForceConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ForceConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ForceConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FractureSolverControls
+   :type: Optional[bool]
+
+   
+   Gets or sets the FractureSolverControls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Frequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Frequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FrequencySpacing
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FrequencySpacingType]
+
+   
+   Gets or sets the FrequencySpacing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FutureAnalysis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FutureIntentType]
+
+   
+   Gets or sets the FutureAnalysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeneralMiscellaneous
+   :type: Optional[bool]
+
+   
+   Gets or sets the GeneralMiscellaneous.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeneralMiscellaneousOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeneralMiscellaneousOptionType]
+
+   
+   Gets or sets the GeneralMiscellaneousOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateMeshRestartPoints
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshRestartControlsType]
+
+   
+   Gets or sets the GenerateMeshRestartPoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateRestartPoints
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RestartControlsType]
+
+   
+   Gets or sets the GenerateRestartPoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalSizeRatioQualityImprovement
+   :type: Optional[float]
+
+   
+   Gets or sets the GlobalSizeRatioQualityImprovement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalSizeRatioQualityRefinement
+   :type: Optional[float]
+
+   
+   Gets or sets the GlobalSizeRatioQualityRefinement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Graph
+   :type: Optional[Ansys.Mechanical.Graphics.AnalysisSettingsGraph]
+
+   
+   Graph property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HarmonicIndexInterval
+   :type: Optional[int]
+
+   
+   Gets or sets the HarmonicIndexInterval.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HarmonicIndexRange
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CyclicHarmonicIndex]
+
+   
+   Gets or sets the HarmonicIndexRange.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HarmonicOrders
+   :type: Optional[str]
+
+   
+   Gets or sets the HarmonicOrders.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the HeatConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the HeatConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the HeatConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the HeatConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatGenerationRate
+   :type: Optional[bool]
+
+   
+   Gets or sets the HeatGenerationRate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HemicubeResolution
+   :type: Optional[int]
+
+   
+   Gets or sets the HemicubeResolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IgnoreAcousticDamping
+   :type: Optional[bool]
+
+   
+   Gets or sets the IgnoreAcousticDamping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IncludeNegativeLoadMultiplier
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverControlsIncludeNegativeLoadMultiplier]
+
+   
+   Gets or sets the IncludeNegativeLoadMultiplier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IncludeResidualVector
+   :type: Optional[bool]
+
+   
+   Gets or sets the IncludeResidualVector.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InertiaRelief
+   :type: Optional[bool]
+
+   
+   Gets or sets the InertiaRelief.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialSubsteps
+   :type: Optional[int]
+
+   
+   Gets or sets the InitialSubsteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the InitialTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAnalysisSettings]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InverseOption
+   :type: Optional[bool]
+
+   
+   Gets or sets the InverseOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InverseOptionEndStep
+   :type: Optional[int]
+
+   
+   Gets or sets the InverseOptionEndStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: JIntegral
+   :type: Optional[bool]
+
+   
+   Gets or sets the JIntegral.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KeepModalResults
+   :type: Optional[bool]
+
+   
+   Gets or sets the KeepModalResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KeepPreStressLoadPattern
+   :type: Optional[bool]
+
+   
+   Gets or sets the KeepPreStressLoadPattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KrylovResidualTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the KrylovResidualTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KrylovSubspaceDimension
+   :type: Optional[int]
+
+   
+   Gets or sets the KrylovSubspaceDimension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KrylovSubspaceFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the KrylovSubspaceFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LargeDeflection
+   :type: Optional[bool]
+
+   
+   Gets or sets the LargeDeflection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LayersToBuild
+   :type: Optional[int]
+
+   
+   Gets or sets the AM Layers to Build.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LimitSearchToRange
+   :type: Optional[bool]
+
+   
+   Gets or sets the LimitSearchToRange.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineSearch
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LineSearchType]
+
+   
+   Gets or sets the LineSearch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepValue
+   :type: Optional[int]
+
+   
+   Gets or sets the LoadStepValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MassCoefficient
+   :type: Optional[float]
+
+   
+   Gets or sets the MassCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialForce
+   :type: Optional[bool]
+
+   
+   Gets or sets the MaterialForce.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumHarmonicIndex
+   :type: Optional[int]
+
+   
+   Gets or sets the MaximumHarmonicIndex.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumIteration
+   :type: Optional[int]
+
+   
+   Gets or sets the MaximumIteration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumModesToFind
+   :type: Optional[int]
+
+   
+   Gets or sets the MaximumModesToFind.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumPointsToSavePerStep
+   :type: Optional[int]
+
+   
+   Gets or sets the MaximumPointsToSavePerStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumSubsteps
+   :type: Optional[int]
+
+   
+   Gets or sets the MaximumSubsteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MaximumTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshLoadStepValue
+   :type: Optional[int]
+
+   
+   Gets or sets the MeshLoadStepValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshRetainFilesAfterFullSolve
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshRestartRetainFilesType]
+
+   
+   Gets or sets the MeshRetainFilesAfterFullSolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshSaveAtLoadStep
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshRestartSaveAtLoadStep]
+
+   
+   Gets or sets the MeshSaveAtLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshSaveAtSubstep
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshRestartSaveAtSubstep]
+
+   
+   Gets or sets the MeshSaveAtSubstep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumElementSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Minimum Element Size property for Geometry Based Adaptivity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumHarmonicIndex
+   :type: Optional[int]
+
+   
+   Gets or sets the MinimumHarmonicIndex.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumSubsteps
+   :type: Optional[int]
+
+   
+   Gets or sets the MinimumSubsteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MinimumTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalFrequencyRange
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ModalFrequencyRangeType]
+
+   
+   Gets or sets the ModalFrequencyRange.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalNumberOfPoints
+   :type: Optional[int]
+
+   
+   Gets or sets the ModalNumberOfPoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalRangeMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ModalRangeMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalRangeMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ModalRangeMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModeReuse
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverControlsModeReuse]
+
+   
+   Gets or sets the ModeReuse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModeSelectionMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ModeSelectionMethod]
+
+   
+   Gets or sets the ModeSelectionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModeSignificanceLevel
+   :type: Optional[float]
+
+   
+   Gets or sets the ModeSignificanceLevel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModesCombinationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ModesCombinationType]
+
+   
+   Gets or sets the ModesCombinationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MomentConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the MomentConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MomentConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MomentConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MomentConvergenceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MomentConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MomentConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MomentConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Multistep
+   :type: Optional[bool]
+
+   
+   Gets or sets the Multistep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultistepType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.HarmonicMultiStepType]
+
+   
+   Gets or sets the MultistepType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NewtonRaphsonOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NewtonRaphsonType]
+
+   
+   Gets or sets the NewtonRaphsonOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodalForces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.OutputControlsNodalForcesType]
+
+   
+   Gets or sets the NodalForces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NonLinearFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NonLinearFormulationType]
+
+   
+   Gets or sets the NonLinearFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NonLinearSolution
+   :type: Optional[bool]
+
+   
+   Gets the NonLinearSolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NonlinearData
+   :type: Optional[bool]
+
+   
+   Gets or sets the NonlinearData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumLoadVectors
+   :type: Optional[int]
+
+   
+   Gets or sets the NumLoadVectors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfModesToUse
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfModesToUse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfRPMs
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfRPMs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfRestartPoints
+   :type: Optional[int]
+
+   
+   Gets Number of Restart Points.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSculptedLayersQualityImprovement
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfSculptedLayersQualityImprovement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSculptedLayersRefinement
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfSculptedLayersRefinement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSteps
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSubSteps
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfSubSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfZones
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberOfZones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumericalDamping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TransientDampingType]
+
+   
+   Gets or sets the NumericalDamping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumericalDampingValue
+   :type: Optional[float]
+
+   
+   Gets or sets the NumericalDampingValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OnDemandExpansionOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.OnDemandExpansionType]
+
+   
+   Gets or sets the OnDemandExpansionOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OverRelaxation
+   :type: Optional[float]
+
+   
+   Gets or sets the OverRelaxation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ParticipationFactor
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CalculateParticipationFactorResult]
+
+   
+   Gets or sets the ParticipationFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProjectToGeometry
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NLADControlProjectToGeometry]
+
+   
+   Gets or sets the ProjectToGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuasiStaticSolution
+   :type: Optional[bool]
+
+   
+   Gets or sets the QuasiStaticSolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RadiositySolver
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RadiositySolverType]
+
+   
+   Gets or sets the RadiositySolver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RangeMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Range Maximum property in Options group of Analysis Settings in Harmonic Analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RangeMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Range Minimum property in Options group of Analysis Settings in Harmonic Analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the AM Reference Temperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceTemperatureType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMReferenceTemperatureType]
+
+   
+   Gets or sets the AM Reference Temperature Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RefinementAlgorithm
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityControlsRefinementAlgorithmType]
+
+   
+   Gets or sets the RefinementAlgorithm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReformulationTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the ReformulationTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RelaxationTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RelaxationTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RelaxationTemperatureType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMRelaxationTemperatureType]
+
+   
+   Gets or sets the AM Relaxation Temperature Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemeshingGradient
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityControlsRemeshingGradientType]
+
+   
+   Gets or sets the RemeshingGradient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemeshingToleranceQualityImprovement
+   :type: Optional[float]
+
+   
+   Gets or sets the RemeshingToleranceQualityImprovement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemeshingToleranceRefinement
+   :type: Optional[float]
+
+   
+   Gets or sets the RemeshingToleranceRefinement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemovalDirection
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RemovalDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemovalStepSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RemovalStepSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RestartAtLoadStep
+   :type: Optional[int]
+
+   
+   Gets the RestartAtLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RestartAtSubstep
+   :type: Optional[int]
+
+   
+   Gets the RestartAtSubstep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RestartAtTime
+   :type: Optional[float]
+
+   
+   Gets the RestartAtTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RestartType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RestartType]
+
+   
+   Gets or sets the RestartType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileCompression
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ResultFileCompressionType]
+
+   
+   Gets or sets the ResultFileCompression.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RetainFilesAfterFullSolve
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RestartRetainFilesType]
+
+   
+   Gets or sets the RetainFilesAfterFullSolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RetainModesymFileAfterSolve
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.UseExistingModesymFile]
+
+   
+   Gets or sets the RetainModesymFileAfterSolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RotationConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the RotationConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RotationConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RotationConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RotationConvergenceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RotationConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmCentralFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RpmCentralFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmClusterNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the RpmClusterNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmFrequencySpacing
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FrequencySpacingType]
+
+   
+   Gets or sets the RpmFrequencySpacing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmRangeMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RpmRangeMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmRangeMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RpmRangeMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmSolutionIntervals
+   :type: Optional[int]
+
+   
+   Gets or sets the RpmSolutionIntervals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the RpmValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SIFS
+   :type: Optional[bool]
+
+   
+   Gets or sets the SIFS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveAtLoadStep
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RestartSaveAtLoadStep]
+
+   
+   Gets or sets the SaveAtLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveAtSubstep
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RestartSaveAtSubstep]
+
+   
+   Gets or sets the SaveAtSubstep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveMAPDLDB
+   :type: Optional[bool]
+
+   
+   Gets or sets the SaveMAPDLDB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveSpecifiedLoadStep
+   :type: Optional[int]
+
+   
+   Gets or sets the SaveSpecifiedLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScatteredFieldFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ScatteredFieldFormulation]
+
+   
+   Gets or sets the ScatteredFieldFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScatteringOutputType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ScatteringOutputType]
+
+   
+   Gets or sets the ScatteringOutputType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScratchSolverFilesDirectory
+   :type: Optional[str]
+
+   
+   Gets the ScratchSolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SearchRangeMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Range Maximum property in Options group of Analysis Settings in Modal Analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SearchRangeMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Range Minimum property in Options group of Analysis Settings in Modal Analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SignificanceThreshold
+   :type: Optional[float]
+
+   
+   Gets or sets the SignificanceThreshold.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionIntervals
+   :type: Optional[int]
+
+   
+   Gets or sets the SolutionIntervals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.HarmonicMethod]
+
+   
+   Gets or sets the SolutionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+   
+   Gets the SolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverPivotChecking
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverPivotChecking]
+
+   
+   Gets or sets the SolverPivotChecking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the SolverTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverType]
+
+   
+   Gets or sets the SolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverUnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+   
+   Gets or sets the SolverUnitSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverUnits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverUnitsControlType]
+
+   
+   Gets or sets the SolverUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpectrumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SpectrumType]
+
+   
+   Gets or sets the SpectrumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpinSoftening
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SpinSofteningType]
+
+   
+   Gets or sets the SpinSoftening.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpringStiffness
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SpringsStiffnessType]
+
+   
+   Gets or sets the SpringStiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpringStiffnessFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the SpringStiffnessFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpringStiffnessValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the SpringStiffnessValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Stabilization
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.StabilizationType]
+
+   
+   Gets or sets the Stabilization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StabilizationActivationForFirstSubstep
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.StabilizationFirstSubstepOption]
+
+   
+   Gets or sets the StabilizationActivationForFirstSubstep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StabilizationDampingFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the StabilizationDampingFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StabilizationEnergyDissipationRatio
+   :type: Optional[float]
+
+   
+   Gets or sets the StabilizationEnergyDissipationRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StabilizationForceLimit
+   :type: Optional[float]
+
+   
+   Gets or sets the StabilizationForceLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StabilizationMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.StabilizationMethod]
+
+   
+   Gets or sets the StabilizationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepEndTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the StepEndTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepName
+   :type: Optional[str]
+
+   
+   Gets or sets the Step Name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessCoefficient
+   :type: Optional[float]
+
+   
+   Gets or sets the StiffnessCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessCoefficientDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DampingType]
+
+   
+   Gets or sets the StiffnessCoefficientDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreComplexSolution
+   :type: Optional[bool]
+
+   
+   Gets or sets the StoreComplexSolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreModalResults
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.StoreModalResult]
+
+   
+   Gets or sets the StoreModalResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreResulsAtValue
+   :type: Optional[int]
+
+   
+   Gets or sets the StoreResulsAtValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreResultsAt
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TimePointsOptions]
+
+   
+   Gets or sets the StoreResultsAt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreResultsAtAllFrequencies
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.HarmonicMSUPStorage]
+
+   
+   Gets or sets the StoreResultsAtAllFrequencies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Strain
+   :type: Optional[bool]
+
+   
+   Gets or sets the Strain.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Stress
+   :type: Optional[bool]
+
+   
+   Gets or sets the Stress.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StructuralDampingCoefficient
+   :type: Optional[float]
+
+   
+   Gets or sets the StructuralDampingCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StructuralOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the StructuralOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TStress
+   :type: Optional[bool]
+
+   
+   Gets or sets the TStress.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemperatureConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the TemperatureConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemperatureConvergenceInputValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the TemperatureConvergenceInputValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemperatureConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the TemperatureConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemperatureConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the TemperatureConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemperatureConvergenceValue
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NonLinearValueType]
+
+   
+   Gets or sets the TemperatureConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the ThermalOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeIntegration
+   :type: Optional[bool]
+
+   
+   Gets or sets the TimeIntegration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the TimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransientApplication
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TransientApplicationType]
+
+   
+   Gets or sets the TransientApplication.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransientApplicationUserDefined
+   :type: Optional[float]
+
+   
+   Gets or sets the TransientApplicationUserDefined.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserDefinedFrequencies
+   :type: Optional[bool]
+
+   
+   Gets or sets the UserDefinedFrequencies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserDefinedFrequencySteps
+   :type: Optional[List[Ansys.Core.Units.Quantity]]
+
+   
+   Gets or sets the UserDefinedFrequencySteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ViewFactorMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RadiosityViewFactorType]
+
+   
+   Gets or sets the ViewFactorMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VoltageConvergence
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType]
+
+   
+   Gets or sets the VoltageConvergence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VoltageConvergenceMinimumReference
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the VoltageConvergenceMinimumReference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VoltageConvergenceTolerance
+   :type: Optional[float]
+
+   
+   Gets or sets the VoltageConvergenceTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VoltageConvergenceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the VoltageConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeakSprings
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeakSpringsType]
+
+   
+   Gets or sets the WeakSprings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllRestartPoints() -> None
+
+   
+   DeleteAllRestartPoints method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAMStepType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.AMProcessStepType
+
+   
+   Gets the AM Process Step Type at a given step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAutomaticTimeStepping(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.AutomaticTimeStepping
+
+   
+   Gets the Automatic Time Stepping at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCarryOverTimeStep(stepNumber: int) -> bool
+
+   
+   Gets the Carry Over Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCreepEffects(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.Creep
+
+   
+   Gets the Creep Effects for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCreepLimitRatio(stepNumber: int) -> float
+
+   
+   Gets the Creep Limit Ratio for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCurrentConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Current Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCurrentConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Current Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCurrentConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Current Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCurrentConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Current Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDefineBy(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.TimeStepDefineByType
+
+   
+   Gets the Define By at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDisplacementConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Displacement Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDisplacementConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Displacement Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDisplacementConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Displacement Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDisplacementConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Displacement Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagAMPSConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the EmagAMPS Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagAMPSConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the EmagAMPS Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagAMPSConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the EmagAMPS Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagAMPSConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the EmagAMPS Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagCSGConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the EmagCSG Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagCSGConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the EmagCSG Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagCSGConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the EmagCSG Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEmagCSGConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the EmagCSG Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnergyConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Energy Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnergyConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Energy Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnergyConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Energy Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnergyConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Energy Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetForceConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Force Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetForceConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Force Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetForceConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Force Convergence Tolerance Type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetForceConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Force Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHeatConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Heat Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHeatConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Heat Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHeatConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Heat Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHeatConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Heat Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetInitialSubsteps(stepNumber: int) -> int
+
+   
+   Gets the Initial Substeps at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetInitialTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Initial Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLineSearch(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.LineSearchType
+
+   
+   Gets the Line Search at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMaximumSubsteps(stepNumber: int) -> int
+
+   
+   Gets the Maximum Substeps at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMaximumTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Maximum Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMinimumSubsteps(stepNumber: int) -> int
+
+   
+   Gets the Minimum Substeps at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMinimumTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Minimum Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMomentConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Moment Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMomentConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Moment Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMomentConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Moment Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMomentConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Moment Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNumberOfSubSteps(stepNumber: int) -> int
+
+   
+   Gets the Number of Substeps for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetRotationConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Rotation Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetRotationConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Rotation Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetRotationConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Rotation Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetRotationConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Rotation Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStabilization(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.StabilizationType
+
+   
+   Gets the Stabilization at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStabilizationDampingFactor(stepNumber: int) -> float
+
+   
+   Gets the Stabilization Damping Factor at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStabilizationEnergyDissipationRatio(stepNumber: int) -> float
+
+   
+   Gets the Stabilization Energy Dissipation Ratio at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStabilizationFirstSubstepOption(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.StabilizationFirstSubstepOption
+
+   
+   Gets the Stabilization First Substep Option at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStabilizationForceLimit(stepNumber: int) -> float
+
+   
+   Gets the Stabilization Force Limit at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStabilizationMethod(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.StabilizationMethod
+
+   
+   Gets the Stabilization Method at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStepEndTime(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Step End Time at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStepName(stepNumber: int) -> str
+
+   
+   Gets the Step name at a given step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStoreResulsAtValue(stepNumber: int) -> int
+
+   
+   Gets the Store Results At Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStoreResultsAt(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.TimePointsOptions
+
+   
+   Gets the Store Results At at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStructuralOnly(stepNumber: int) -> bool
+
+   
+   Gets the TimeIntegration Structural for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTemperatureConvergenceInputValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Temperature Convergence Input Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTemperatureConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Temperature Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTemperatureConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Temperature Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTemperatureConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Temperature Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTemperatureConvergenceValue(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.NonLinearValueType
+
+   
+   Gets the Temperature Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetThermalOnly(stepNumber: int) -> bool
+
+   
+   Sets the TimeIntegration Thermal for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTimeIntegration(stepNumber: int) -> bool
+
+   
+   Gets the TimeIntegration for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Sets the Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVoltageConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Voltage Convergence Minimum Reference at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVoltageConvergenceTolerance(stepNumber: int) -> float
+
+   
+   Gets the Voltage Convergence Tolerance as a percentage at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVoltageConvergenceType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType
+
+   
+   Gets the Voltage Convergence Tolerance type at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVoltageConvergenceValue(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Voltage Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetAutomaticTimeStepping(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.AutomaticTimeStepping) -> None
+
+   
+   Sets the Automatic Time Stepping for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCarryOverTimeStep(stepNumber: int, value: bool) -> None
+
+   
+   Sets the Carry Over Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetChargeConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Charge Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetChargeConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Charge Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetChargeConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Charge Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetChargeConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Charge Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCreepEffects(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.Creep) -> None
+
+   
+   Sets the Creep Effects for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCreepLimitRatio(stepNumber: int, value: float) -> None
+
+   
+   Sets the Creep Limit Ratio for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCurrentConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Current Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCurrentConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Current Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCurrentConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Current Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCurrentConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Current Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDefineBy(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.TimeStepDefineByType) -> None
+
+   
+   Sets the Define By for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDisplacementConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Displacement Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDisplacementConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Displacement Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDisplacementConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Displacement Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDisplacementConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Displacement Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagAMPSConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the EmagAMPS Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagAMPSConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the EmagAMPS Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagAMPSConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the EmagAMPS Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagAMPSConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the EmagAMPS Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagCSGConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the EmagCSG Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagCSGConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the EmagCSG Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagCSGConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the EmagCSG Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEmagCSGConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the EmagCSG Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEnergyConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Energy Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEnergyConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Energy Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEnergyConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Energy Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEnergyConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Energy Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetForceConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Force Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetForceConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Force Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetForceConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Force Convergence Tolerance Type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetForceConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Force Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetHeatConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Heat Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetHeatConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Heat Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetHeatConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Heat Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetHeatConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Heat Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetInitialSubsteps(stepNumber: int, value: int) -> None
+
+   
+   Sets the Initial Substeps for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetInitialTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Initial Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetLineSearch(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.LineSearchType) -> None
+
+   
+   Sets the Line Search for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMaximumSubsteps(stepNumber: int, value: int) -> None
+
+   
+   Sets the Maximum Substeps for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMaximumTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Maximum Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMinimumSubsteps(stepNumber: int, value: int) -> None
+
+   
+   Sets the Minimum Substeps for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMinimumTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Minimum Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMomentConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Moment Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMomentConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Moment Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMomentConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Moment Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMomentConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Moment Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetNumberOfSubSteps(stepNumber: int, value: int) -> None
+
+   
+   Sets the Number of Substeps for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetRotationConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Rotation Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetRotationConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Rotation Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetRotationConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Rotation Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetRotationConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Rotation Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStabilization(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.StabilizationType) -> None
+
+   
+   Sets the Stabilization for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStabilizationDampingFactor(stepNumber: int, value: float) -> None
+
+   
+   Sets the Stabilization Damping Factor for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStabilizationEnergyDissipationRatio(stepNumber: int, value: float) -> None
+
+   
+   Sets the Stabilization Energy Dissipation Ratio for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStabilizationFirstSubstepOption(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.StabilizationFirstSubstepOption) -> None
+
+   
+   Sets the Stabilization First Substep Option for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStabilizationForceLimit(stepNumber: int, value: float) -> None
+
+   
+   Sets the Stabilization Force Limit for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStabilizationMethod(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.StabilizationMethod) -> None
+
+   
+   Sets the Stabilization Method for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStepEndTime(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Step End Time for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStepName(stepNumber: int, value: str) -> None
+
+   
+   Sets the Step name at a given step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStoreResulsAtValue(stepNumber: int, value: int) -> None
+
+   
+   Sets the Store Results At Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStoreResultsAt(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.TimePointsOptions) -> None
+
+   
+   Sets the Store Results At for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStructuralOnly(stepNumber: int, value: bool) -> None
+
+   
+   Sets the TimeIntegration Structural for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTemperatureConvergenceInputValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Temperature Convergence Input Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTemperatureConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Temperature Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTemperatureConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Temperature Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTemperatureConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Temperature Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTemperatureConvergenceValue(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.NonLinearValueType) -> None
+
+   
+   Sets the Temperature Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetThermalOnly(stepNumber: int, value: bool) -> None
+
+   
+   Sets the TimeIntegration Thermal for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTimeIntegration(stepNumber: int, value: bool) -> None
+
+   
+   Sets the TimeIntegration for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetVoltageConvergenceMinimumReference(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Voltage Convergence Minimum Reference for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetVoltageConvergenceTolerance(stepNumber: int, value: float) -> None
+
+.. code-block:: text
+
+   Sets the Voltage Convergence Tolerance as a percentage for a given solution step.
+   For example if the user input is 5% then the "value" argument should be set to 5.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetVoltageConvergenceType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType) -> None
+
+   
+   Sets the Voltage Convergence Tolerance type for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetVoltageConvergenceValue(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Voltage Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

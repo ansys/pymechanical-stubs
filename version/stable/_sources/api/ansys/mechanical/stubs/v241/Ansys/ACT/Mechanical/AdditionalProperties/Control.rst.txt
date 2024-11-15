@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`Control`
+================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Mechanical.AdditionalProperties.Control
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   The control type for an additional property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Control
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ApplyCancel`
+            - 
+          * - :py:attr:`~Double`
+            - 
+          * - :py:attr:`~Expression`
+            - 
+          * - :py:attr:`~Options`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ApplyCancel
+   :value: 131072
+
+
+.. py:attribute:: Double
+   :value: 1310720
+
+
+.. py:attribute:: Expression
+   :value: 64
+
+
+.. py:attribute:: Options
+   :value: 2097152
+
+
+
+
+
+
+.. vale on

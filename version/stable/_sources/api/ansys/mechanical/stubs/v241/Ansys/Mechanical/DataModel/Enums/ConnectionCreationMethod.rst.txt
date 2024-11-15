@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ConnectionCreationMethod`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ConnectionCreationMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ConnectionCreationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConnectionCreationMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~InputFile`
+            - 
+          * - :py:attr:`~Manual`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: InputFile
+   :value: 0
+
+
+.. py:attribute:: Manual
+   :value: 1
+
+
+
+
+
+
+.. vale on

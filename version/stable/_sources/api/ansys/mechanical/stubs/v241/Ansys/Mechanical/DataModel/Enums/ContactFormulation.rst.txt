@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ContactFormulation`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactFormulation
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactFormulation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AugmentedLagrange`
+            - 
+          * - :py:attr:`~Beam`
+            - 
+          * - :py:attr:`~MPC`
+            - 
+          * - :py:attr:`~NormalLagrange`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~PureLagrange`
+            - 
+          * - :py:attr:`~PurePenalty`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AugmentedLagrange
+   :value: 0
+
+
+.. py:attribute:: Beam
+   :value: 4
+
+
+.. py:attribute:: MPC
+   :value: 2
+
+
+.. py:attribute:: NormalLagrange
+   :value: 3
+
+
+.. py:attribute:: ProgramControlled
+   :value: 6
+
+
+.. py:attribute:: PureLagrange
+   :value: 5
+
+
+.. py:attribute:: PurePenalty
+   :value: 1
+
+
+
+
+
+
+.. vale on

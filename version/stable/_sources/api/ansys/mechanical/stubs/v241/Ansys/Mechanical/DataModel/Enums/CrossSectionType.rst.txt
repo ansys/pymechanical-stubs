@@ -1,0 +1,150 @@
+.. vale off
+
+
+
+:class:`CrossSectionType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.CrossSectionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CrossSectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CrossSectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Channel`
+            - 
+          * - :py:attr:`~Circular`
+            - 
+          * - :py:attr:`~CircularTube`
+            - 
+          * - :py:attr:`~HatBeam`
+            - 
+          * - :py:attr:`~HollowRectangular`
+            - 
+          * - :py:attr:`~IBeam`
+            - 
+          * - :py:attr:`~LBeam`
+            - 
+          * - :py:attr:`~MeshBeam`
+            - 
+          * - :py:attr:`~Quadrilateral`
+            - 
+          * - :py:attr:`~Rectangular`
+            - 
+          * - :py:attr:`~TBeam`
+            - 
+          * - :py:attr:`~UndefinedType`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+          * - :py:attr:`~ZBeam`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Channel
+   :value: 5
+
+
+.. py:attribute:: Circular
+   :value: 3
+
+
+.. py:attribute:: CircularTube
+   :value: 4
+
+
+.. py:attribute:: HatBeam
+   :value: 10
+
+
+.. py:attribute:: HollowRectangular
+   :value: 11
+
+
+.. py:attribute:: IBeam
+   :value: 8
+
+
+.. py:attribute:: LBeam
+   :value: 7
+
+
+.. py:attribute:: MeshBeam
+   :value: 13
+
+
+.. py:attribute:: Quadrilateral
+   :value: 2
+
+
+.. py:attribute:: Rectangular
+   :value: 1
+
+
+.. py:attribute:: TBeam
+   :value: 9
+
+
+.. py:attribute:: UndefinedType
+   :value: 0
+
+
+.. py:attribute:: UserDefined
+   :value: 12
+
+
+.. py:attribute:: ZBeam
+   :value: 6
+
+
+
+
+
+
+.. vale on

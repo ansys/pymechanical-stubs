@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CondensedPartCMSAttachmentMethod`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.CondensedPartCMSAttachmentMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CondensedPartCMSAttachmentMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartCMSAttachmentMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FixedMaster`
+            - 
+          * - :py:attr:`~Orthogonalization`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FixedMaster
+   :value: 1
+
+
+.. py:attribute:: Orthogonalization
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

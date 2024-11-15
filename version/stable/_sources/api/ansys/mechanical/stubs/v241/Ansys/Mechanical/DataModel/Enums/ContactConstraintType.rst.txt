@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`ContactConstraintType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ContactConstraintType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactConstraintType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactConstraintType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DistributedAllDirections`
+            - 
+          * - :py:attr:`~DistributedAnywhereInsidePinball`
+            - 
+          * - :py:attr:`~DistributedNormalOnly`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~ProjectedDisplacementOnly`
+            - 
+          * - :py:attr:`~ProjectedUncoupleUtoROT`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DistributedAllDirections
+   :value: 0
+
+
+.. py:attribute:: DistributedAnywhereInsidePinball
+   :value: 1
+
+
+.. py:attribute:: DistributedNormalOnly
+   :value: 5
+
+
+.. py:attribute:: ProgramControlled
+   :value: 3
+
+
+.. py:attribute:: ProjectedDisplacementOnly
+   :value: 4
+
+
+.. py:attribute:: ProjectedUncoupleUtoROT
+   :value: 2
+
+
+
+
+
+
+.. vale on

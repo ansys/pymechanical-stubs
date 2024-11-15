@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ShellBodyDimension`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ShellBodyDimension
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ShellBodyDimension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShellBodyDimension
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Three_D`
+            - 
+          * - :py:attr:`~Two_D`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Three_D
+   :value: 3
+
+
+.. py:attribute:: Two_D
+   :value: 2
+
+
+
+
+
+
+.. vale on

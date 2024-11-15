@@ -1,0 +1,170 @@
+.. vale off
+
+
+
+:class:`IMechanicalTheme`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.UI.Interfaces.IMechanicalTheme
+
+   Bases: :py:obj:`object`
+
+
+   
+   IMechanicalTheme interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalTheme
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ColorPalette`
+            - Palette object, which provides an entry point to get Mechnical UI's theme colors represented as Ansys.Utilities.Color objects
+          * - :py:attr:`~HexadecimalPalette`
+            - Palette object, which provides an entry point to get Mechnical UI's theme colors represented in Hexadecimal. ei. #FFFFFF
+          * - :py:attr:`~IntPalette`
+            - Palette object, which provides an entry point to get Mechnical UI's theme colors represented as integers formatted as BGR
+          * - :py:attr:`~Name`
+            - The name of the theme as an enum value.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ColorPalette
+   :type: Optional[Ansys.Mechanical.UI.Palette]
+
+   
+   Palette object, which provides an entry point to get Mechnical UI's theme colors represented as Ansys.Utilities.Color objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HexadecimalPalette
+   :type: Optional[Ansys.Mechanical.UI.Palette]
+
+   
+   Palette object, which provides an entry point to get Mechnical UI's theme colors represented in Hexadecimal. ei. #FFFFFF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IntPalette
+   :type: Optional[Ansys.Mechanical.UI.Palette]
+
+   
+   Palette object, which provides an entry point to get Mechnical UI's theme colors represented as integers formatted as BGR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[Ansys.Mechanical.UI.Enums.ThemeName]
+
+   
+   The name of the theme as an enum value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on
