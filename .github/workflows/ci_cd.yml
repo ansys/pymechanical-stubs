@@ -141,7 +141,7 @@ jobs:
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           fi
 
-          echo "test_matrix={\"os\":[ubuntu-latest, windows-latest],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
+          echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
 
   gen-stubs:
     name: Generate Mechanical stubs
