@@ -103,6 +103,11 @@ jobs:
             export mech_image_version=${mech_version:0:2}.${mech_version:2}.0
           fi
 
+          # Set the variables
+          # echo "image=$mech_image_version" >> $GITHUB_OUTPUT
+          # echo "version=$mech_version" >> $GITHUB_OUTPUT
+          echo "mech_versions=[[$mech_version, $mech_image_version]]" >> $GITHUB_OUTPUT
+
           if [[ -z "${{ inputs.python-version }}" ]]; then
             if [[ ("${{ inputs.python-version }}" == "All of the above") ]]; then
               python_version="['3.10', '3.11', '3.12']"
@@ -113,9 +118,6 @@ jobs:
             python_version="['3.10', '3.11', '3.12']"
           fi
 
-          # Set the variables
-          echo "image=$mech_image_version" >> $GITHUB_OUTPUT
-          echo "version=$mech_version" >> $GITHUB_OUTPUT
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
 
   config-matrix:
@@ -130,9 +132,13 @@ jobs:
           # For nightly scheduled runs use pre-release (25.1_candidate)
           # For pull requests and merges use latest stable version (242)
           if ${{ github.event_name == 'workflow_dispatch' }}; then
-            echo "matrix={\"mechanical\":[\{\"image\":'${{ needs.set-mechanical-versions.outputs.image }}',\"version\":'${{ needs.set-mechanical-versions.outputs.version }}'\}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}"
+            echo "matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "DELIMITER" >> ${GITHUB_OUTPUT}
           else
-            echo "matrix={\"mechanical\":[\{\"image\":'24.1.0',\"version\":'241'},{\"image\":'24.2.0',\"version\":'242'\}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}"
+            echo "matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "DELIMITER" >> ${GITHUB_OUTPUT}
           fi
 
   gen-stubs:
