@@ -107,14 +107,14 @@ jobs:
           echo "image=$mech_image_version" >> $GITHUB_OUTPUT
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
-          if [[ -n "${{ inputs.python-version }}" ]]; then
+          if [[ -z "${{ inputs.python-version }}" ]]; then
+            python_version="['3.10', '3.11', '3.12']"
+          else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
               python_version="['3.10', '3.11', '3.12']"
             else
               python_version="['${{ inputs.python-version }}']"
             fi
-          else
-            python_version="['3.10', '3.11', '3.12']"
           fi
 
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
