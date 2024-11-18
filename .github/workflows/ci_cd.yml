@@ -130,7 +130,7 @@ jobs:
           # For nightly scheduled runs use pre-release (25.1_candidate)
           # For pull requests and merges use latest stable version (242)
           if ${{ github.event_name == 'workflow_dispatch' }}; then
-            echo "matrix={\"os\":[public-ubuntu-latest-8-cores],\"mechanical\":[{\"image\":'${{ needs.set-mechanical-versions.outputs.image }}',\"version\":'${{ needs.set-mechanical-versions.outputs.version }}'}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}"
+            echo "matrix={\"os\":[public-ubuntu-latest-8-cores],\"mechanical\":[\{\"image\":\'${{ needs.set-mechanical-versions.outputs.image }}\',\"version\":\'${{ needs.set-mechanical-versions.outputs.version }}\'\}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}"
           else
             echo "matrix={\"os\":[public-ubuntu-latest-8-cores],\"mechanical\":[{\"image\":'24.1.0',\"version\":'241'},{\"image\":'24.2.0',\"version\":'242'}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}"
           fi
