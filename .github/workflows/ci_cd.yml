@@ -104,9 +104,8 @@ jobs:
           fi
 
           # Set the variables
-          # echo "image=$mech_image_version" >> $GITHUB_OUTPUT
-          # echo "version=$mech_version" >> $GITHUB_OUTPUT
-          echo "mech_versions=[[$mech_version, $mech_image_version]]" >> $GITHUB_OUTPUT
+          echo "image=$mech_image_version" >> $GITHUB_OUTPUT
+          echo "version=$mech_version" >> $GITHUB_OUTPUT
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
             if [[ ("${{ inputs.python-version }}" == "All of the above") ]]; then
