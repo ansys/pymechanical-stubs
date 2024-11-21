@@ -31,6 +31,9 @@ import clr
 import generate_content
 
 import System  # isort: skip
+from pathlib import Path
+
+ACCEPTED_TYPES = ["Ansys.Core.Units.Quantity"]
 
 
 def get_version():
@@ -53,7 +56,10 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    sys.path.append(f"{pathlib.Path(install_dir, 'aisol', 'bin', platform_string)}")
+    ansys_mech_embedding_path = str(Path(install_dir, "aisol", "bin", platform_string))
+
+    # Append path for Ansys.Mechanical.Embedding
+    sys.path.append(ansys_mech_embedding_path)
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
@@ -90,7 +96,12 @@ def is_type_published(mod_type: "System.RuntimeType"):
     try:
         attrs = mod_type.GetCustomAttributes(True)
         if len(attrs) == 0:
-            return False
+            try:
+                if mod_type.FullName in ACCEPTED_TYPES:
+                    return True
+            except:  # noqa: E722
+                return False
+
         return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
     except Exception as e:
         print(e)
@@ -237,6 +248,7 @@ def main():
         "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
         "Ansys.ACT.WB1",
+        "Ans.Core",
     ]
 
     resolve()
