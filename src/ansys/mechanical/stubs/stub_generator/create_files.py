@@ -32,7 +32,7 @@ import generate_content
 
 import System  # isort: skip
 
-ACCEPTED_TYPES = {"Ansys.Core.Units.Quantity"}
+ACCEPTED_TYPES = {"Ansys.Core.Units.Quantity", "Ansys.ACT.Interfaces.Common"}
 
 
 def get_version():
@@ -246,6 +246,7 @@ def main():
     assemblies = [
         "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
+        "Ansys.ACT.Interfaces",
         "Ansys.ACT.WB1",
         "Ans.Core",
     ]
