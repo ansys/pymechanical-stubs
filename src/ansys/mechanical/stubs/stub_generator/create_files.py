@@ -46,7 +46,7 @@ def get_version():
     int
         The version of the Ansys install set in the AWP_ROOTDV_DEV environment variable.
     """
-    install_dir = os.environ["AWP_ROOT251"]  # ["AWP_ROOTDV_DEV"]
+    install_dir = os.environ["AWP_ROOTDV_DEV"]
     version = int(install_dir[-3:])
 
     return install_dir, version
