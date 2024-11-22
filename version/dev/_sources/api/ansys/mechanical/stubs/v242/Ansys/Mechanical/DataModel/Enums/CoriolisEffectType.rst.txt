@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CoriolisEffectType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CoriolisEffectType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CoriolisEffectType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoriolisEffectType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~OnRotatingReferenceFrame`
+            - 
+          * - :py:attr:`~OnStationaryReferenceFrame`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Off
+   :value: 0
+
+
+.. py:attribute:: OnRotatingReferenceFrame
+   :value: 2
+
+
+.. py:attribute:: OnStationaryReferenceFrame
+   :value: 1
+
+
+
+
+
+
+.. vale on

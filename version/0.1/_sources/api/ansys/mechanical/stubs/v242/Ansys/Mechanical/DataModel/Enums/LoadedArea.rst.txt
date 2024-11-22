@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`LoadedArea`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.LoadedArea
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadedArea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadedArea
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Deformed`
+            - 
+          * - :py:attr:`~Initial`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Deformed
+   :value: 0
+
+
+.. py:attribute:: Initial
+   :value: 1
+
+
+
+
+
+
+.. vale on

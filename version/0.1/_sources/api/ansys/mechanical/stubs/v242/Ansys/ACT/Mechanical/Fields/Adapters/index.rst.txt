@@ -1,0 +1,220 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Adapters``
+============================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Adapters
+.. tab-set::
+
+
+
+    .. tab-item:: Interfaces
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.IDefinition`
+            - IDefinition interface.
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.AAPCustomLoadAdapter`
+            - AAPCustomLoadAdapter class.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSAccelerationAdapter`
+            - Adapter dedicated to IDSAccelerationAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSBearingAdapter`
+            - Adapter dedicated to IDSBearingAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSBoltPretensionAdapter`
+            - Adapter dedicated to IDSBoltPretensionAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSJointLoadAdapter`
+            - Adapter dedicated to IDSJointConditionAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSLoadAdapter`
+            - Adapter dedicated to IDSLoadAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSPSDLoadAdapter`
+            - Adapter dedicated to IDSRSLoad objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSRSLoadAdapter`
+            - Adapter dedicated to IDSRSLoad objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSRotationAdapter`
+            - Adapter dedicated to IDSRotationAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSSpringAdapter`
+            - Adapter dedicated to IDSSpringAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSThicknessAdapter`
+            - Adapter dedicated to IDSThicknessAuto objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.DSTopoConstraintAdapter`
+            - Adapter dedicated to IDSRSLoad objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.FieldAdapter`
+            - Base class for objects that handle the interface between the generic boundary condition wrapper and the various types of concrete object implemented in Mechanical.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.FieldAdapterManager`
+            - Static class that operates like a factory to create field adapters from Mechanical objects.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Adapters.Keywords`
+            - Keywords class.
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_interface"></span> IDefinition</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/IDefinition>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AAPCustomLoadAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/AAPCustomLoadAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSAccelerationAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSAccelerationAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSBearingAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSBearingAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSBoltPretensionAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSBoltPretensionAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSJointLoadAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSJointLoadAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSLoadAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSLoadAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSPSDLoadAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSPSDLoadAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSRSLoadAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSRSLoadAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSRotationAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSRotationAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSSpringAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSSpringAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSThicknessAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSThicknessAdapter>
+    <span class="nf nf-cod-symbol_class"></span> DSTopoConstraintAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/DSTopoConstraintAdapter>
+    <span class="nf nf-cod-symbol_class"></span> FieldAdapter</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/FieldAdapter>
+    <span class="nf nf-cod-symbol_class"></span> FieldAdapterManager</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/FieldAdapterManager>
+    <span class="nf nf-cod-symbol_class"></span> Keywords</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Adapters/Keywords>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Adapters module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

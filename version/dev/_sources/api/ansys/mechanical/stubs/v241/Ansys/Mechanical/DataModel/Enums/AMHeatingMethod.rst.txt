@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMHeatingMethod`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMHeatingMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMHeatingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMHeatingMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MeltingTemperature`
+            - 
+          * - :py:attr:`~Power`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MeltingTemperature
+   :value: 1
+
+
+.. py:attribute:: Power
+   :value: 2
+
+
+
+
+
+
+.. vale on

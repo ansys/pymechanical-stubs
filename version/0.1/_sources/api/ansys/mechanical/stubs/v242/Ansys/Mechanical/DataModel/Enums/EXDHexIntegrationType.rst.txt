@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDHexIntegrationType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDHexIntegrationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDHexIntegrationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Exact`
+            - 
+          * - :py:attr:`~OnePtGauss`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Exact
+   :value: 0
+
+
+.. py:attribute:: OnePtGauss
+   :value: 1
+
+
+
+
+
+
+.. vale on

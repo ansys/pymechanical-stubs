@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`RBDDoStaticAnalysisType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.RBDDoStaticAnalysisType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RBDDoStaticAnalysisType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~On`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Off
+   :value: 1
+
+
+.. py:attribute:: On
+   :value: 0
+
+
+
+
+
+
+.. vale on

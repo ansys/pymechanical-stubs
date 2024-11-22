@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`BuildStep`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BuildStep
+
+   Bases: :py:obj:`object`
+
+
+   
+   BuildStep class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

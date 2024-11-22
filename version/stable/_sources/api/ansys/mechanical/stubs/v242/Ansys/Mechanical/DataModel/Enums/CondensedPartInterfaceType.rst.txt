@@ -1,0 +1,89 @@
+.. vale off
+
+
+
+:class:`CondensedPartInterfaceType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CondensedPartInterfaceType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartInterfaceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~General`
+            - 
+          * - :py:attr:`~Remote`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 3
+
+
+.. py:attribute:: General
+   :value: 1
+
+
+.. py:attribute:: Remote
+   :value: 2
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+
+
+
+
+.. vale on

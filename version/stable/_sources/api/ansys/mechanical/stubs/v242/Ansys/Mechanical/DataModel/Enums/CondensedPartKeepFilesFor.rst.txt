@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CondensedPartKeepFilesFor`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.CondensedPartKeepFilesFor
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CondensedPartKeepFilesFor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartKeepFilesFor
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MAPDLExpansion`
+            - 
+          * - :py:attr:`~OnDemandExpansion`
+            - 
+          * - :py:attr:`~UsePassOnly`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MAPDLExpansion
+   :value: 2
+
+
+.. py:attribute:: OnDemandExpansion
+   :value: 1
+
+
+.. py:attribute:: UsePassOnly
+   :value: 0
+
+
+
+
+
+
+.. vale on

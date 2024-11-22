@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`JointGeneralPrimitiveType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.JointGeneralPrimitiveType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointGeneralPrimitiveType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointGeneralPrimitiveType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~InLine`
+            - 
+          * - :py:attr:`~InPlane`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Orientation`
+            - 
+          * - :py:attr:`~Parallel`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: InLine
+   :value: 3
+
+
+.. py:attribute:: InPlane
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Orientation
+   :value: 4
+
+
+.. py:attribute:: Parallel
+   :value: 1
+
+
+
+
+
+
+.. vale on

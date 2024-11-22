@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`ExternalLoadDisplayComponentType`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplayComponentType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExternalLoadDisplayComponentType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExternalLoadDisplayComponentType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Total`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~XComponent`
+            - 
+          * - :py:attr:`~XXComponent`
+            - 
+          * - :py:attr:`~XYComponent`
+            - 
+          * - :py:attr:`~XZComponent`
+            - 
+          * - :py:attr:`~YComponent`
+            - 
+          * - :py:attr:`~YYComponent`
+            - 
+          * - :py:attr:`~YZComponent`
+            - 
+          * - :py:attr:`~ZComponent`
+            - 
+          * - :py:attr:`~ZZComponent`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: Total
+   :value: 1
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: XComponent
+   :value: 3
+
+
+.. py:attribute:: XXComponent
+   :value: 11
+
+
+.. py:attribute:: XYComponent
+   :value: 14
+
+
+.. py:attribute:: XZComponent
+   :value: 16
+
+
+.. py:attribute:: YComponent
+   :value: 4
+
+
+.. py:attribute:: YYComponent
+   :value: 12
+
+
+.. py:attribute:: YZComponent
+   :value: 15
+
+
+.. py:attribute:: ZComponent
+   :value: 5
+
+
+.. py:attribute:: ZZComponent
+   :value: 13
+
+
+
+
+
+
+.. vale on

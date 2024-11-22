@@ -1,0 +1,79 @@
+.. vale off
+
+
+
+:class:`StackerMethodMeshType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.StackerMethodMeshType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StackerMethodMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllTri`
+            - 
+          * - :py:attr:`~QuadTri`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllTri
+   :value: 0
+
+
+.. py:attribute:: QuadTri
+   :value: 1
+
+
+
+
+
+
+.. vale on

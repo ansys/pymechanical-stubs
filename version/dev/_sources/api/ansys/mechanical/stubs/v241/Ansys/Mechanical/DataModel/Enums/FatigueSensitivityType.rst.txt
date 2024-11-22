@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FatigueSensitivityType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.FatigueSensitivityType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RadiationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueSensitivityType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Damage`
+            - 
+          * - :py:attr:`~FactorSaftey`
+            - 
+          * - :py:attr:`~Life`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Damage
+   :value: 62
+
+
+.. py:attribute:: FactorSaftey
+   :value: 61
+
+
+.. py:attribute:: Life
+   :value: 60
+
+
+
+
+
+
+.. vale on

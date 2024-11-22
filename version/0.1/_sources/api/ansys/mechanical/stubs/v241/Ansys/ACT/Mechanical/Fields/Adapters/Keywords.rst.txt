@@ -1,0 +1,79 @@
+.. vale off
+
+
+
+:class:`Keywords`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Mechanical.Fields.Adapters.Keywords
+
+   Bases: :py:obj:`object`
+
+
+   
+   Keywords class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: Keywords
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Get`
+            - Get method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Get(type: Ansys.Common.Interop.AnsMaterial.kEDDataType) -> str
+   :classmethod:
+
+
+   
+   Get method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
