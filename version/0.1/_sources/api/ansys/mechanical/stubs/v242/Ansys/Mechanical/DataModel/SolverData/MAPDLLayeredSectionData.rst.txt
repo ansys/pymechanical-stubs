@@ -1,0 +1,92 @@
+.. vale off
+
+
+
+:class:`MAPDLLayeredSectionData`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.SolverData.MAPDLLayeredSectionData
+
+   Bases: :py:obj:`object`
+
+
+   
+   MAPDLLayeredSectionData class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MAPDLLayeredSectionData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SectionId`
+            - Gets the section Id for the layered section.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: SectionId
+   :type: Optional[int]
+
+   
+   Gets the section Id for the layered section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

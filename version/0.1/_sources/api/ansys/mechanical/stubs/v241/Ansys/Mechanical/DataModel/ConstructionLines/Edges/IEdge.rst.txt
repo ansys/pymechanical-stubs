@@ -1,0 +1,92 @@
+.. vale off
+
+
+
+:class:`IEdge`
+==============
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.ConstructionLines.Edges.IEdge
+
+   Bases: :py:obj:`object`
+
+
+   
+   Interface for edges created by ConstructionLine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IEdge
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Length`
+            - Get the length of this edge.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Length
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Get the length of this edge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

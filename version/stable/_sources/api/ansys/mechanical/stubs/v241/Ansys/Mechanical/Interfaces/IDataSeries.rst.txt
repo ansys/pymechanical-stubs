@@ -1,0 +1,177 @@
+.. vale off
+
+
+
+:class:`IDataSeries`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Interfaces.IDataSeries
+
+   Bases: :py:obj:`object`
+
+
+   
+   IDataSeries interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IDataSeries
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DataType`
+            - 
+          * - :py:attr:`~Name`
+            - Gets or sets the name of the data series.
+          * - :py:attr:`~QuantityName`
+            - Gets or sets the quantity name of the data series, e.g., “Length”, “Pressure”, or “Heat Flux”.
+          * - :py:attr:`~Unit`
+            - Gets or sets a string representation of the data series units, e.g., “m”,
+          * - :py:attr:`~Values`
+            - Explicitly gets or sets the values of the data series.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DataType
+   :type: Optional[type]
+
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets or sets the name of the data series.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuantityName
+   :type: Optional[str]
+
+   
+   Gets or sets the quantity name of the data series, e.g., “Length”, “Pressure”, or “Heat Flux”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+   
+   Gets or sets a string representation of the data series units, e.g., “m”,
+   “kg m^-1 s^-2”, or “kg m^2 s^-3”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[Collection]
+
+   
+   Explicitly gets or sets the values of the data series.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

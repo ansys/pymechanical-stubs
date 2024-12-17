@@ -1,0 +1,77 @@
+.. vale off
+
+
+
+:class:`EXDEulerSizeDefType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDEulerSizeDefType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDEulerSizeDefType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~eAuto`
+            - 
+          * - :py:attr:`~eManual`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: eAuto
+   :value: 0
+
+
+.. py:attribute:: eManual
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ReinforcingStressState`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ReinforcingStressState
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ReinforcingStressState.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ReinforcingStressState
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PlaneStressOnly`
+            - 
+          * - :py:attr:`~PlaneStressWithTransverseShear`
+            - 
+          * - :py:attr:`~PlaneStressWithTransverseShearAndBending`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: PlaneStressOnly
+   :value: 0
+
+
+.. py:attribute:: PlaneStressWithTransverseShear
+   :value: 1
+
+
+.. py:attribute:: PlaneStressWithTransverseShearAndBending
+   :value: 2
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ElementOrientationAxisType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ElementOrientationAxisType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ElementOrientationAxisType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ElementOrientationAxisType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxisUndefined`
+            - 
+          * - :py:attr:`~NegativeXAxis`
+            - 
+          * - :py:attr:`~NegativeYAxis`
+            - 
+          * - :py:attr:`~NegativeZAxis`
+            - 
+          * - :py:attr:`~PositiveXAxis`
+            - 
+          * - :py:attr:`~PositiveYAxis`
+            - 
+          * - :py:attr:`~PositiveZAxis`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AxisUndefined
+   :value: 0
+
+
+.. py:attribute:: NegativeXAxis
+   :value: 4
+
+
+.. py:attribute:: NegativeYAxis
+   :value: 5
+
+
+.. py:attribute:: NegativeZAxis
+   :value: 6
+
+
+.. py:attribute:: PositiveXAxis
+   :value: 1
+
+
+.. py:attribute:: PositiveYAxis
+   :value: 2
+
+
+.. py:attribute:: PositiveZAxis
+   :value: 3
+
+
+
+
+
+
+.. vale on

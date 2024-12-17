@@ -1,0 +1,170 @@
+.. vale off
+
+
+
+:class:`GlobalLegendSettings`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Graphics.GlobalLegendSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines global legend settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GlobalLegendSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LegendOrientation`
+            - Whether the orientation of the legend.
+          * - :py:attr:`~ShowDateAndTime`
+            - Whether the  date and time of the legend is shown.
+          * - :py:attr:`~ShowDeformingScaling`
+            - Whether the Deformation Scaling is shown.
+          * - :py:attr:`~ShowMinMax`
+            - Whether the Min and Max value are shown.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: LegendOrientation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LegendOrientationType]
+
+   
+   Whether the orientation of the legend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowDateAndTime
+   :type: Optional[bool]
+
+   
+   Whether the  date and time of the legend is shown.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowDeformingScaling
+   :type: Optional[bool]
+
+   
+   Whether the Deformation Scaling is shown.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowMinMax
+   :type: Optional[bool]
+
+   
+   Whether the Min and Max value are shown.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

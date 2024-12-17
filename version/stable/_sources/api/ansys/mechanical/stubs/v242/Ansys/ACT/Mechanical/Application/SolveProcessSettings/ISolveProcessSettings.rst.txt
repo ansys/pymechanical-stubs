@@ -1,0 +1,482 @@
+.. vale off
+
+
+
+:class:`ISolveProcessSettings`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveProcessSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   ISolveProcessSettings interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISolveProcessSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AdditionalCommandLineArguments`
+            - Gets or sets the "Additional Command Line Arguments" field.
+          * - :py:attr:`~CustomExecutablePath`
+            - Gets or sets the "Custom Executable Name (with path)" field.
+          * - :py:attr:`~DCSAutoDownloadResults`
+            - Gets or sets the "DCS Auto Download Results" field.
+          * - :py:attr:`~DistributeSolution`
+            - Gets or sets the boolean "Distribute Solution (if possible)" field.
+          * - :py:attr:`~GPUAccelerationDevice`
+            - Gets or sets the "GPU Acceleration Device" field.
+          * - :py:attr:`~HybridParallel`
+            - Gets or sets the boolean "Hybrid Parallel (Mechanical APDL)" field.
+          * - :py:attr:`~LicenseQueuing`
+            - Gets or sets the "License Queuing: Wait for Available License" field.
+          * - :py:attr:`~ManualLinuxSettings`
+            - Gets the LinuxSettings object for the configuration.
+          * - :py:attr:`~ManualSolverMemorySettings`
+            - Gets the SolverMemorySettings object for the configuration.
+          * - :py:attr:`~MaxNumberOfCores`
+            - Gets or sets the "Maximum number of utilized cores" field.
+          * - :py:attr:`~NumberOfGPUDevices`
+            - Gets or sets the "Number of utilized GPU devices" field.
+          * - :py:attr:`~NumberOfProcesses`
+            - Gets or sets the "Number of processes" field.
+          * - :py:attr:`~SolveInSynchronousMode`
+            - Gets or sets the "Solve in synchronous mode" field.
+          * - :py:attr:`~ThreadsPerProcess`
+            - Gets or sets the "Threads per process" field.
+          * - :py:attr:`~UseSharedLicense`
+            - Gets or sets the "Use Shared License, if possible" field.
+          * - :py:attr:`~UserString`
+            - Gets or sets the User String field.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AdditionalCommandLineArguments
+   :type: Optional[str]
+
+   
+   Gets or sets the "Additional Command Line Arguments" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomExecutablePath
+   :type: Optional[str]
+
+   
+   Gets or sets the "Custom Executable Name (with path)" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DCSAutoDownloadResults
+   :type: Optional[bool]
+
+   
+   Gets or sets the "DCS Auto Download Results" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DistributeSolution
+   :type: Optional[bool]
+
+   
+   Gets or sets the boolean "Distribute Solution (if possible)" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GPUAccelerationDevice
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GPUAccelerationDevicesType]
+
+   
+   Gets or sets the "GPU Acceleration Device" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HybridParallel
+   :type: Optional[bool]
+
+   
+   Gets or sets the boolean "Hybrid Parallel (Mechanical APDL)" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LicenseQueuing
+   :type: Optional[bool]
+
+   
+   Gets or sets the "License Queuing: Wait for Available License" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ManualLinuxSettings
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.ILinuxSettings]
+
+   
+   Gets the LinuxSettings object for the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ManualSolverMemorySettings
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolverMemorySettings]
+
+   
+   Gets the SolverMemorySettings object for the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxNumberOfCores
+   :type: Optional[int]
+
+   
+   Gets or sets the "Maximum number of utilized cores" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfGPUDevices
+   :type: Optional[int]
+
+   
+   Gets or sets the "Number of utilized GPU devices" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfProcesses
+   :type: Optional[int]
+
+   
+   Gets or sets the "Number of processes" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolveInSynchronousMode
+   :type: Optional[bool]
+
+   
+   Gets or sets the "Solve in synchronous mode" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThreadsPerProcess
+   :type: Optional[int]
+
+   
+   Gets or sets the "Threads per process" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseSharedLicense
+   :type: Optional[bool]
+
+   
+   Gets or sets the "Use Shared License, if possible" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserString
+   :type: Optional[str]
+
+   
+   Gets or sets the User String field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

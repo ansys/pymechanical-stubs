@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ScatteringOutputType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ScatteringOutputType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ScatteringOutputType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ScatteringOutputType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Scattered`
+            - 
+          * - :py:attr:`~Total`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Scattered
+   :value: 1
+
+
+.. py:attribute:: Total
+   :value: 0
+
+
+
+
+
+
+.. vale on
