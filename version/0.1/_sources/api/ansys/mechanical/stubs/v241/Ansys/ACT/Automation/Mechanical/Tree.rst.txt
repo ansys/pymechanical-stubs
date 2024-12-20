@@ -1,0 +1,396 @@
+.. vale off
+
+
+
+:class:`Tree`
+=============
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Tree
+
+   Bases: :py:obj:`object`
+
+
+   
+   Tree class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Tree
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - selects an object in the tree.
+          * - :py:attr:`~ClearFilter`
+            - Clears the current filter.
+          * - :py:attr:`~ClearSort`
+            - Clears the current sort.
+          * - :py:attr:`~Filter`
+            - Filters the tree objects based on given parameters.
+          * - :py:attr:`~Find`
+            - Find method.
+          * - :py:attr:`~GetPathToFirstActiveObject`
+            - Gets the full path that needs to be typed in order to go to the selected object.
+          * - :py:attr:`~Group`
+            - Groups a list of objects together.
+          * - :py:attr:`~IsSorted`
+            - Checks if the tree is currently sorted alphabetically.
+          * - :py:attr:`~Refresh`
+            - Refreshes the tree.
+          * - :py:attr:`~Sort`
+            - Sorts the tree objects based on given parameters.
+          * - :py:attr:`~Suspend`
+            - Prevents the tree from being updated.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ActiveObjects`
+            - Gets a list of all selected objects.
+          * - :py:attr:`~AllObjects`
+            - Gets a list of all objects available in the tree.
+          * - :py:attr:`~CurrentFilter`
+            - Gets the current filter applied on the tree.
+          * - :py:attr:`~CurrentSearchGraphics`
+            - Gets the current visibility.
+          * - :py:attr:`~CurrentSearchState`
+            - Gets the current search state.
+          * - :py:attr:`~CurrentSearchString`
+            - Gets the current search string (name/tag/propertyName/propertyValue).
+          * - :py:attr:`~FirstActiveObject`
+            - Gets the first object selected in the tree.
+          * - :py:attr:`~GroupingFoldersVisible`
+            - Controls whether or not group folders are visible.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ActiveObjects
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets a list of all selected objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AllObjects
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets a list of all objects available in the tree.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentFilter
+   :type: Optional[Ansys.Common.Interop.DSObjectTypes.DSTreeSearchType]
+
+   
+   Gets the current filter applied on the tree.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentSearchGraphics
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.VisibilityType]
+
+   
+   Gets the current visibility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentSearchState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+   
+   Gets the current search state.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentSearchString
+   :type: Optional[str]
+
+   
+   Gets the current search string (name/tag/propertyName/propertyValue).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FirstActiveObject
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   Gets the first object selected in the tree.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFoldersVisible
+   :type: Optional[bool]
+
+   
+   Controls whether or not group folders are visible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
+
+   
+   selects an object in the tree.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearFilter() -> None
+
+   
+   Clears the current filter.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearSort() -> None
+
+   
+   Clears the current sort.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Filter(name: str, tag: str, state: Ansys.Mechanical.DataModel.Enums.ObjectState, visibility: Ansys.Mechanical.DataModel.Enums.VisibilityType, type: Ansys.Mechanical.DataModel.Enums.TreeFilterObjectClass, coordinateSystem: Ansys.ACT.Automation.Mechanical.CoordinateSystem, model: str, environment: Ansys.ACT.Automation.Mechanical.Analysis, scoping: Ansys.Mechanical.DataModel.Enums.TreeFilterScopingType, filterState: Ansys.Mechanical.DataModel.Enums.TreeFilterObjectState, propertyName: str, propertyValue: str) -> None
+
+   
+   Filters the tree objects based on given parameters.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Find(name: str, func: System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,bool], tag: str, state: Ansys.Mechanical.DataModel.Enums.ObjectState) -> Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   Find method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPathToFirstActiveObject() -> str
+
+   
+   Gets the full path that needs to be typed in order to go to the selected object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Group(dataModelObjects: Iterable) -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Groups a list of objects together.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsSorted() -> bool
+
+   
+   Checks if the tree is currently sorted alphabetically.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Refresh() -> None
+
+   
+   Refreshes the tree.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Sort(type: Ansys.Mechanical.DataModel.Enums.SortingType, reverse: bool) -> None
+
+.. code-block:: text
+
+   Sorts the tree objects based on given parameters.
+   type
+   reverse
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Suspend() -> System.IDisposable
+
+   
+   Prevents the tree from being updated.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

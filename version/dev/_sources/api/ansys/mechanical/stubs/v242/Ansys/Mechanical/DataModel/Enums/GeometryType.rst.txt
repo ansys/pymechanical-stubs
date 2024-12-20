@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`GeometryType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GeometryType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GeometryType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GeometryType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Empty`
+            - 
+          * - :py:attr:`~Lightweight`
+            - 
+          * - :py:attr:`~Line`
+            - 
+          * - :py:attr:`~Mixed`
+            - 
+          * - :py:attr:`~Solid`
+            - 
+          * - :py:attr:`~Surface`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Empty
+   :value: 4
+
+
+.. py:attribute:: Lightweight
+   :value: 5
+
+
+.. py:attribute:: Line
+   :value: 3
+
+
+.. py:attribute:: Mixed
+   :value: 2
+
+
+.. py:attribute:: Solid
+   :value: 0
+
+
+.. py:attribute:: Surface
+   :value: 1
+
+
+.. py:attribute:: Unknown
+   :value: 6
+
+
+
+
+
+
+.. vale on

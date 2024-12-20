@@ -1,0 +1,116 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CrackInitiation``
+===================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CrackInitiation
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CrackInitiation
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CrackInitiation.CrackCenter`
+            - This enum specifies the crack center type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CrackInitiation.CrackOrientation`
+            - This enum specifies the crack orientation type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CrackInitiation.CrackShape`
+            - This enum specifies the crack shape type.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> CrackCenter</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CrackInitiation/CrackCenter>
+    <span class="nf nf-cod-symbol_enum"></span> CrackOrientation</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CrackInitiation/CrackOrientation>
+    <span class="nf nf-cod-symbol_enum"></span> CrackShape</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CrackInitiation/CrackShape>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CrackInitiation module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

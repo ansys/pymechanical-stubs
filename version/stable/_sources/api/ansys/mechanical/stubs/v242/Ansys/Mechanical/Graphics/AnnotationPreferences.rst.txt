@@ -1,0 +1,511 @@
+.. vale off
+
+
+
+:class:`AnnotationPreferences`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Graphics.AnnotationPreferences
+
+   Bases: :py:obj:`object`
+
+
+   
+   AnnotationPreferences class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AnnotationPreferences
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SetElementNumbering`
+            - Sets the begin, end and increment values to display element numbering.
+          * - :py:attr:`~SetNodeNumbering`
+            - Sets the begin, end and increment values to display node numbering.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PointMassSize`
+            - Sets the size for point mass annotation. (Small-Large ; 1-100)
+          * - :py:attr:`~ShowAllAnnotations`
+            - Sets the visibility of all annotations.
+          * - :py:attr:`~ShowBeams`
+            - Sets the visibility of beam annotations.
+          * - :py:attr:`~ShowBearings`
+            - Sets the visibility of bearing annotations.
+          * - :py:attr:`~ShowBodyScopings`
+            - Sets the visibility of body scoping annotations.
+          * - :py:attr:`~ShowCracks`
+            - Sets the visibility of crack annotations.
+          * - :py:attr:`~ShowCustomAnnotations`
+            - Sets the visibility of user defined annotations.
+          * - :py:attr:`~ShowElementNumbers`
+            - Sets the visibility of mesh element numbers in named Selection, mesh, and result displays.
+          * - :py:attr:`~ShowForceArrows`
+            - Sets the visibility of force arrows on surface reaction.
+          * - :py:attr:`~ShowLabels`
+            - Sets the visibility of annotation labels.
+          * - :py:attr:`~ShowMeshAnnotations`
+            - Sets the visibility of mesh node and mesh element annotations in named selection displays.
+          * - :py:attr:`~ShowNamedSelectionElements`
+            - Sets the visibility of elements for all items in the named selection group.
+          * - :py:attr:`~ShowNodeNumbers`
+            - Sets the visibility of mesh node numbers in named selection, mesh, and result displays.
+          * - :py:attr:`~ShowPointMasses`
+            - Sets the visibility of point mass annotations.
+          * - :py:attr:`~ShowSprings`
+            - Sets the visibility of spring annotations.
+          * - :py:attr:`~SpringSize`
+            - Sets the size for spring annotation. (Small-Large ; 1-100)
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: PointMassSize
+   :type: Optional[int]
+
+   
+   Sets the size for point mass annotation. (Small-Large ; 1-100) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowAllAnnotations
+   :type: Optional[bool]
+
+   
+   Sets the visibility of all annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowBeams
+   :type: Optional[bool]
+
+   
+   Sets the visibility of beam annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowBearings
+   :type: Optional[bool]
+
+   
+   Sets the visibility of bearing annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowBodyScopings
+   :type: Optional[bool]
+
+   
+   Sets the visibility of body scoping annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowCracks
+   :type: Optional[bool]
+
+   
+   Sets the visibility of crack annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowCustomAnnotations
+   :type: Optional[bool]
+
+   
+   Sets the visibility of user defined annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowElementNumbers
+   :type: Optional[bool]
+
+   
+   Sets the visibility of mesh element numbers in named Selection, mesh, and result displays.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowForceArrows
+   :type: Optional[bool]
+
+   
+   Sets the visibility of force arrows on surface reaction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowLabels
+   :type: Optional[bool]
+
+   
+   Sets the visibility of annotation labels.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowMeshAnnotations
+   :type: Optional[bool]
+
+   
+   Sets the visibility of mesh node and mesh element annotations in named selection displays.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowNamedSelectionElements
+   :type: Optional[bool]
+
+   
+   Sets the visibility of elements for all items in the named selection group.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowNodeNumbers
+   :type: Optional[bool]
+
+   
+   Sets the visibility of mesh node numbers in named selection, mesh, and result displays.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowPointMasses
+   :type: Optional[bool]
+
+   
+   Sets the visibility of point mass annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowSprings
+   :type: Optional[bool]
+
+   
+   Sets the visibility of spring annotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpringSize
+   :type: Optional[int]
+
+   
+   Sets the size for spring annotation. (Small-Large ; 1-100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: SetElementNumbering(begin: int, end: int, inc: int) -> None
+
+   
+   Sets the begin, end and increment values to display element numbering.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetNodeNumbering(begin: int, end: int, inc: int) -> None
+
+   
+   Sets the begin, end and increment values to display node numbering.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`VirtualCellGroupMethodType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.VirtualCellGroupMethodType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the VirtualCellGroupMethodType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VirtualCellGroupMethodType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Automatic`
+            - 
+          * - :py:attr:`~Repair`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Automatic
+   :value: 0
+
+
+.. py:attribute:: Repair
+   :value: 1
+
+
+.. py:attribute:: UserDefined
+   :value: 2
+
+
+
+
+
+
+.. vale on

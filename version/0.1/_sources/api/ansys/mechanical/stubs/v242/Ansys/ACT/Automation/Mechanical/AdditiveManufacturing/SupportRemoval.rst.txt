@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`SupportRemoval`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval
+
+   Bases: :py:obj:`object`
+
+
+   
+   SupportRemoval class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

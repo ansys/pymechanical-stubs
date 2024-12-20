@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SolveBehaviourType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.SolveBehaviourType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SolveBehaviourType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolveBehaviourType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Combined`
+            - 
+          * - :py:attr:`~Individual`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Combined
+   :value: 0
+
+
+.. py:attribute:: Individual
+   :value: 1
+
+
+
+
+
+
+.. vale on

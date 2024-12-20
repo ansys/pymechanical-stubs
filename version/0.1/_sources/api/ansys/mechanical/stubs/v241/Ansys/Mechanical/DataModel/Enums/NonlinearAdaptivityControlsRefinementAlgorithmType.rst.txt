@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`NonlinearAdaptivityControlsRefinementAlgorithmType`
+===========================================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityControlsRefinementAlgorithmType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NonlinearAdaptivityControlsRefinementAlgorithmType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NonlinearAdaptivityControlsRefinementAlgorithmType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GeneralRemeshing`
+            - 
+          * - :py:attr:`~MeshSplitting`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: GeneralRemeshing
+   :value: 0
+
+
+.. py:attribute:: MeshSplitting
+   :value: 1
+
+
+
+
+
+
+.. vale on

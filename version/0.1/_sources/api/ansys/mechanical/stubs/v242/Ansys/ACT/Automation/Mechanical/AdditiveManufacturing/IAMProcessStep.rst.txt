@@ -1,0 +1,92 @@
+.. vale off
+
+
+
+:class:`IAMProcessStep`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep
+
+   Bases: :py:obj:`object`
+
+
+   
+   IAMProcessStep interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IAMProcessStep
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ProcessStepType`
+            - ProcessStepType property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ProcessStepType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessStepType]
+
+   
+   ProcessStepType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

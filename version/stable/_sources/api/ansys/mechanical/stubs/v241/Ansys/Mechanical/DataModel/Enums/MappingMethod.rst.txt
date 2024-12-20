@@ -1,0 +1,83 @@
+.. vale off
+
+
+
+:class:`MappingMethod`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.MappingMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MappingMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementElement`
+            - 
+          * - :py:attr:`~PointElement`
+            - 
+          * - :py:attr:`~PointPoint`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ElementElement
+   :value: 2
+
+
+.. py:attribute:: PointElement
+   :value: 1
+
+
+.. py:attribute:: PointPoint
+   :value: 0
+
+
+
+
+
+
+.. vale on

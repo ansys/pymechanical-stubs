@@ -1,0 +1,83 @@
+.. vale off
+
+
+
+:class:`EXDTetPressureIntegrationType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.EXDTetPressureIntegrationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDTetPressureIntegrationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AverageNodal`
+            - 
+          * - :py:attr:`~Constant`
+            - 
+          * - :py:attr:`~NBS`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AverageNodal
+   :value: 0
+
+
+.. py:attribute:: Constant
+   :value: 1
+
+
+.. py:attribute:: NBS
+   :value: 2
+
+
+
+
+
+
+.. vale on

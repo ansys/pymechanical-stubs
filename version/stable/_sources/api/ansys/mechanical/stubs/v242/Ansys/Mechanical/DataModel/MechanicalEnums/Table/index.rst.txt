@@ -1,0 +1,123 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Table``
+=========================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Table
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.ImportFormat`
+            - Specifies how to interpret the variable data source.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.TableRefreshImportOn`
+            - Allows control on when an import should be refreshed.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification`
+            - This enum represents the classification of variables that can be represented by Table
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType`
+            - An enumeration of the different variable types supported by the tabular data
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> ImportFormat</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/Table/ImportFormat>
+    <span class="nf nf-cod-symbol_enum"></span> TableRefreshImportOn</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/Table/TableRefreshImportOn>
+    <span class="nf nf-cod-symbol_enum"></span> VariableClassification</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/Table/VariableClassification>
+    <span class="nf nf-cod-symbol_enum"></span> VariableType</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/Table/VariableType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Table module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

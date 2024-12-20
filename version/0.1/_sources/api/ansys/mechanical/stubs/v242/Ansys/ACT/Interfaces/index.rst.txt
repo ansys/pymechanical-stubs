@@ -1,0 +1,103 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Interfaces``
+==============================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Interfaces
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Graphics`
+            - Graphics module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Mechanical`
+            - Mechanical module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Graphics</api/ansys/mechanical/stubs/v242/Ansys/ACT/Interfaces/Graphics/index>
+    <span class="nf nf-md-package"></span> Mechanical</api/ansys/mechanical/stubs/v242/Ansys/ACT/Interfaces/Mechanical/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Interfaces module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on
