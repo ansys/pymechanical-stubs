@@ -32,7 +32,11 @@ import generate_content
 
 import System  # isort: skip
 
-ACCEPTED_TYPES = {"Ansys.Core.Units.Quantity"}
+ACCEPTED_TYPES = {
+    "Ansys.Core.Units.Quantity",
+    "Ansys.ACT.Interfaces.Common",
+    "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
+}
 
 
 def get_version():
@@ -199,7 +203,15 @@ def make(base_dir, outdir, assemblies, str_version):
                         contents = contents.replace(
                             "import typing", f"import typing\n{''.join(import_statements)}"
                         )
+
                         f.write(contents)
+
+                        datamodel_interfaces = (
+                            pathlib.Path("Ansys") / "Mechanical" / "DataModel" / "Interfaces"
+                        )
+                        if str(datamodel_interfaces) in str(init_path):
+                            f.write("class DataModelObject(IDataModelObject):\n")
+                            f.write("    pass\n")
 
     print("Done processing all mechanical stubs.")
 
@@ -246,6 +258,7 @@ def main():
     assemblies = [
         "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
+        "Ansys.ACT.Interfaces",
         "Ansys.ACT.WB1",
         "Ans.Core",
     ]

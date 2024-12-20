@@ -884,6 +884,8 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
 
     if assembly_name == "Ans.Core":
         namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
+    elif assembly_name == "Ansys.ACT.Interfaces":
+        namespaces = {"Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"]}
 
     dump_types(namespaces)
     doc = get_doc(assembly)
