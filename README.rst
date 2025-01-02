@@ -191,16 +191,17 @@ This code shows how to import PyMechanical Stubs and its basic capabilities:
    geometry_import_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
 
 
-Alternatively, you can use the following steps to enable autocomplete in VS Code's
-``settings.json`` file:
+Alternatively, you can enable autocomplete in VS Code's ``settings.json`` file with the
+following steps:
 
 1. Run ``pip install ansys-mechanical-core``.
+
 2. Run ``ansys-mechanical-ideconfig`` in the terminal to retrieve the information for VS Code's
 ``settings.json`` file:
 
-   .. code:: bash
+.. code:: bash
 
-       ansys-mechanical-ideconfig --ide vscode --target user --revision 242
+   ansys-mechanical-ideconfig --ide vscode --target user --revision 242
 
 The command returns the path to the settings.json file. Open the file and add the lines from the
 command output.
