@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`NonLinearValueType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.NonLinearValueType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NonLinearValueType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NonLinearValueType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CalculatedBySolver`
+            - 
+          * - :py:attr:`~UserInput`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CalculatedBySolver
+   :value: 0
+
+
+.. py:attribute:: UserInput
+   :value: 1
+
+
+
+
+
+
+.. vale on

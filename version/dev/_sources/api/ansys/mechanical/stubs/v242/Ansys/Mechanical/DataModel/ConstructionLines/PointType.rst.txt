@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`PointType`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.PointType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Enumeration for the possible edge vertex types that can be represented.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

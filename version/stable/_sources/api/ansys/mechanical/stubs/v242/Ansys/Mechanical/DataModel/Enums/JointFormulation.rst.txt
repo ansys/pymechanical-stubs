@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`JointFormulation`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.JointFormulation
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointFormulation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bushing`
+            - 
+          * - :py:attr:`~MPC`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bushing
+   :value: 1
+
+
+.. py:attribute:: MPC
+   :value: 0
+
+
+
+
+
+
+.. vale on

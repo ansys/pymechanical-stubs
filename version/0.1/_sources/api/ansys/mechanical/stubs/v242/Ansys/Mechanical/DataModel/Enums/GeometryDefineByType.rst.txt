@@ -1,0 +1,234 @@
+.. vale off
+
+
+
+:class:`GeometryDefineByType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GeometryDefineByType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GeometryDefineByType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GeometryDefineByType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllOptimizationRegions`
+            - 
+          * - :py:attr:`~AnalysisPly`
+            - 
+          * - :py:attr:`~BeamConnection`
+            - 
+          * - :py:attr:`~BoundaryCondition`
+            - 
+          * - :py:attr:`~Component`
+            - 
+          * - :py:attr:`~ContactRegion`
+            - 
+          * - :py:attr:`~Coordinates`
+            - 
+          * - :py:attr:`~CrackGrowth`
+            - 
+          * - :py:attr:`~Fracture`
+            - 
+          * - :py:attr:`~FreeStanding`
+            - 
+          * - :py:attr:`~Geometry`
+            - 
+          * - :py:attr:`~ImportedAssembly`
+            - 
+          * - :py:attr:`~ImportedCondensedPart`
+            - 
+          * - :py:attr:`~ImportedInterface`
+            - 
+          * - :py:attr:`~ImportedPretension`
+            - 
+          * - :py:attr:`~Mapping`
+            - 
+          * - :py:attr:`~MaximumValues`
+            - 
+          * - :py:attr:`~MinimumValues`
+            - 
+          * - :py:attr:`~NamedSelections`
+            - 
+          * - :py:attr:`~OptimizationRegion`
+            - 
+          * - :py:attr:`~Path`
+            - 
+          * - :py:attr:`~RemotePoint`
+            - 
+          * - :py:attr:`~RemotePointAndNodes`
+            - 
+          * - :py:attr:`~ResultFileItem`
+            - 
+          * - :py:attr:`~Surface`
+            - 
+          * - :py:attr:`~SurfaceCoating`
+            - 
+          * - :py:attr:`~VoltageCoupling`
+            - 
+          * - :py:attr:`~Worksheet`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllOptimizationRegions
+   :value: 23
+
+
+.. py:attribute:: AnalysisPly
+   :value: 13
+
+
+.. py:attribute:: BeamConnection
+   :value: 19
+
+
+.. py:attribute:: BoundaryCondition
+   :value: 15
+
+
+.. py:attribute:: Component
+   :value: 1
+
+
+.. py:attribute:: ContactRegion
+   :value: 14
+
+
+.. py:attribute:: Coordinates
+   :value: 11
+
+
+.. py:attribute:: CrackGrowth
+   :value: 31
+
+
+.. py:attribute:: Fracture
+   :value: 9
+
+
+.. py:attribute:: FreeStanding
+   :value: 17
+
+
+.. py:attribute:: Geometry
+   :value: 0
+
+
+.. py:attribute:: ImportedAssembly
+   :value: 12
+
+
+.. py:attribute:: ImportedCondensedPart
+   :value: 29
+
+
+.. py:attribute:: ImportedInterface
+   :value: 10
+
+
+.. py:attribute:: ImportedPretension
+   :value: 21
+
+
+.. py:attribute:: Mapping
+   :value: 8
+
+
+.. py:attribute:: MaximumValues
+   :value: 4
+
+
+.. py:attribute:: MinimumValues
+   :value: 3
+
+
+.. py:attribute:: NamedSelections
+   :value: 30
+
+
+.. py:attribute:: OptimizationRegion
+   :value: 16
+
+
+.. py:attribute:: Path
+   :value: 6
+
+
+.. py:attribute:: RemotePoint
+   :value: 5
+
+
+.. py:attribute:: RemotePointAndNodes
+   :value: 22
+
+
+.. py:attribute:: ResultFileItem
+   :value: 18
+
+
+.. py:attribute:: Surface
+   :value: 7
+
+
+.. py:attribute:: SurfaceCoating
+   :value: 20
+
+
+.. py:attribute:: VoltageCoupling
+   :value: 28
+
+
+.. py:attribute:: Worksheet
+   :value: 2
+
+
+
+
+
+
+.. vale on

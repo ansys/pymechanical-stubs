@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ImportedCondensedPartStatus`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ImportedCondensedPartStatus
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ImportedCondensedPartStatus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportedCondensedPartStatus
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FileSelectionRequired`
+            - 
+          * - :py:attr:`~ImportFailed`
+            - 
+          * - :py:attr:`~ImportRequired`
+            - 
+          * - :py:attr:`~ImportSuccessful`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FileSelectionRequired
+   :value: 0
+
+
+.. py:attribute:: ImportFailed
+   :value: 3
+
+
+.. py:attribute:: ImportRequired
+   :value: 1
+
+
+.. py:attribute:: ImportSuccessful
+   :value: 2
+
+
+
+
+
+
+.. vale on

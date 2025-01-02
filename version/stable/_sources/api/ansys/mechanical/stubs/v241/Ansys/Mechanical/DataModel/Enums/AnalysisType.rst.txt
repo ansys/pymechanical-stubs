@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`AnalysisType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AnalysisType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AnalysisType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AnalysisType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Buckling`
+            - 
+          * - :py:attr:`~DesignAssessment`
+            - 
+          * - :py:attr:`~ExplicitDynamics`
+            - 
+          * - :py:attr:`~Harmonic`
+            - 
+          * - :py:attr:`~MBD`
+            - 
+          * - :py:attr:`~Modal`
+            - 
+          * - :py:attr:`~ResponseSpectrum`
+            - 
+          * - :py:attr:`~Shape`
+            - 
+          * - :py:attr:`~Spectrum`
+            - 
+          * - :py:attr:`~Static`
+            - 
+          * - :py:attr:`~TopologyOptimization`
+            - 
+          * - :py:attr:`~Transient`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Buckling
+   :value: 4
+
+
+.. py:attribute:: DesignAssessment
+   :value: 11
+
+
+.. py:attribute:: ExplicitDynamics
+   :value: 10
+
+
+.. py:attribute:: Harmonic
+   :value: 1
+
+
+.. py:attribute:: MBD
+   :value: 7
+
+
+.. py:attribute:: Modal
+   :value: 5
+
+
+.. py:attribute:: ResponseSpectrum
+   :value: 9
+
+
+.. py:attribute:: Shape
+   :value: 8
+
+
+.. py:attribute:: Spectrum
+   :value: 3
+
+
+.. py:attribute:: Static
+   :value: 0
+
+
+.. py:attribute:: TopologyOptimization
+   :value: 13
+
+
+.. py:attribute:: Transient
+   :value: 2
+
+
+
+
+
+
+.. vale on

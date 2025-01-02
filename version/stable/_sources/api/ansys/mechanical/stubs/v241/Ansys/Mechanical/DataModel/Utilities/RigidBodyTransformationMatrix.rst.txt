@@ -1,0 +1,522 @@
+.. vale off
+
+
+
+:class:`RigidBodyTransformationMatrix`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Utilities.RigidBodyTransformationMatrix
+
+   Bases: :py:obj:`object`
+
+
+   
+   A 4x4 transformation matrix, to be used explicitly for rigid body transformations. The
+   transformation matrix is in column-major format. Elements 0-3 represent, respectively,
+   the x-components of the X axis, Y axis, Z axis, and translation with respect to global.
+   Identically, elements 4-7 represent the y components and elements 8-11 the z components.
+   Elements 2-15, per rigid-body requirements, are expected to be [0.0, 0.0, 0.0, 1.0].
+
+   The ability to piecewise set rotation and translation components precludes the option of
+   validating the matrix data at every operation. Thus, these values ***must*** be checked
+   before the data is used.
+
+   The class `Ansys.ACT.Common.SimpleTransform` provides a simplified mechanism for working
+   with rigid body transformations and getting a `RigidBodyTransformationMatrix` object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RigidBodyTransformationMatrix
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Data`
+            - A 16-value list representing a linearized 4x4 transformation matrix.
+          * - :py:attr:`~S`
+            - Element 15: the transformation scale, which must be '1.0' for rigid body
+          * - :py:attr:`~T_x`
+            - Element 3: the x component of the translation.
+          * - :py:attr:`~T_y`
+            - Element 7: the y component of the translation.
+          * - :py:attr:`~T_z`
+            - Element 11: the z component of the translation.
+          * - :py:attr:`~X_x`
+            - Element 0: the x component of the X axis rotation.
+          * - :py:attr:`~X_y`
+            - Element 4: the y component of the X axis rotation.
+          * - :py:attr:`~X_z`
+            - Element 8: the z component of the X axis rotation.
+          * - :py:attr:`~Y_x`
+            - Element 1: the x component of the Y axis rotation.
+          * - :py:attr:`~Y_y`
+            - Element 5: the y component of the Y axis rotation.
+          * - :py:attr:`~Y_z`
+            - Element 9: the z component of the Y axis rotation.
+          * - :py:attr:`~Z_x`
+            - Element 2: the x component of the Z axis rotation.
+          * - :py:attr:`~Z_y`
+            - Element 6: the y component of the Z axis rotation.
+          * - :py:attr:`~Z_z`
+            - Element 10: the z component of the Z axis rotation.
+          * - :py:attr:`~tau_x`
+            - Element 12: the x component of the shear, which must be '0.0' for rigid body
+          * - :py:attr:`~tau_y`
+            - Element 13: the y component of the shear, which must be '0.0' for rigid body
+          * - :py:attr:`~tau_z`
+            - Element 14: the z component of the shear, which must be '0.0' for rigid body
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Data
+   :type: Optional[List[Any]]
+
+   
+   A 16-value list representing a linearized 4x4 transformation matrix.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: S
+   :type: Optional[float]
+
+   
+   Element 15: the transformation scale, which must be '1.0' for rigid body
+   transformations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: T_x
+   :type: Optional[float]
+
+   
+   Element 3: the x component of the translation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: T_y
+   :type: Optional[float]
+
+   
+   Element 7: the y component of the translation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: T_z
+   :type: Optional[float]
+
+   
+   Element 11: the z component of the translation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: X_x
+   :type: Optional[float]
+
+   
+   Element 0: the x component of the X axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: X_y
+   :type: Optional[float]
+
+   
+   Element 4: the y component of the X axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: X_z
+   :type: Optional[float]
+
+   
+   Element 8: the z component of the X axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Y_x
+   :type: Optional[float]
+
+   
+   Element 1: the x component of the Y axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Y_y
+   :type: Optional[float]
+
+   
+   Element 5: the y component of the Y axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Y_z
+   :type: Optional[float]
+
+   
+   Element 9: the z component of the Y axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Z_x
+   :type: Optional[float]
+
+   
+   Element 2: the x component of the Z axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Z_y
+   :type: Optional[float]
+
+   
+   Element 6: the y component of the Z axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Z_z
+   :type: Optional[float]
+
+   
+   Element 10: the z component of the Z axis rotation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: tau_x
+   :type: Optional[float]
+
+   
+   Element 12: the x component of the shear, which must be '0.0' for rigid body
+   transformations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: tau_y
+   :type: Optional[float]
+
+   
+   Element 13: the y component of the shear, which must be '0.0' for rigid body
+   transformations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: tau_z
+   :type: Optional[float]
+
+   
+   Element 14: the z component of the shear, which must be '0.0' for rigid body
+   transformations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

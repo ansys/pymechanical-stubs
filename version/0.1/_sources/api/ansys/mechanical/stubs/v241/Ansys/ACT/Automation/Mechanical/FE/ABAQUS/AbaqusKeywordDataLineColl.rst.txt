@@ -1,0 +1,92 @@
+.. vale off
+
+
+
+:class:`AbaqusKeywordDataLineColl`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordDataLineColl
+
+   Bases: :py:obj:`object`
+
+
+   
+   Collection of keyword data lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AbaqusKeywordDataLineColl
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Items`
+            - Gets the list of data lines.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Items
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordDataLine]]
+
+   
+   Gets the list of data lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

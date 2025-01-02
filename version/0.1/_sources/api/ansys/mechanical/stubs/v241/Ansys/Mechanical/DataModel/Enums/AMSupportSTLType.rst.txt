@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMSupportSTLType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMSupportSTLType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMSupportSTLType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMSupportSTLType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Solid`
+            - 
+          * - :py:attr:`~Volumeless`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Solid
+   :value: 1
+
+
+.. py:attribute:: Volumeless
+   :value: 0
+
+
+
+
+
+
+.. vale on
