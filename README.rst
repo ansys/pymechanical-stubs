@@ -195,36 +195,33 @@ Alternatively, you can enable autocomplete in VS Code's ``settings.json`` file w
 
 1. Run ``pip install ansys-mechanical-core``.
 
-2. Run ``ansys-mechanical-ideconfig`` in the terminal to retrieve the information for VS Code's
-``settings.json`` file:
+2. Run ``ansys-mechanical-ideconfig`` in the terminal to retrieve the information for VS Code's ``settings.json`` file:
 
-.. code:: bash
+   .. code:: bash
 
-   ansys-mechanical-ideconfig --ide vscode --target user --revision 242
+      ansys-mechanical-ideconfig --ide vscode --target user --revision 242
 
-The command returns the path to the settings.json file. Open the file and add the lines from the
-command output.
+   The command returns the path to the settings.json file. Open the file and add the lines from the command output.
 
-3. Once the ``settings.json`` file is updated, you only need to ``import Ansys`` to enable
-autocomplete:
+3. Once the ``settings.json`` file is updated, you only need to ``import Ansys`` to enable autocomplete:
 
-.. code:: python
+   .. code:: python
 
-   from typing import TYPE_CHECKING
-   import ansys.mechanical.core as mech
+      from typing import TYPE_CHECKING
+      import ansys.mechanical.core as mech
 
-   if TYPE_CHECKING:
-       import Ansys
-       from Ansys.Mechanical.DataModel.Enums import *
+      if TYPE_CHECKING:
+          import Ansys
+          from Ansys.Mechanical.DataModel.Enums import *
 
-   geometry_import_group = app.Model.GeometryImportGroup
-   geometry_import = geometry_import_group.AddGeometryImport()
+      geometry_import_group = app.Model.GeometryImportGroup
+      geometry_import = geometry_import_group.AddGeometryImport()
 
-   # Lines that start with "Ansys." will autocomplete as you type
-   geometry_import_format = (
-       Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format.Automatic
-   )
-   geometry_import_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
+      # Lines that start with "Ansys." will autocomplete as you type
+      geometry_import_format = (
+          Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format.Automatic
+      )
+      geometry_import_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
 
 Documentation and issues
 ^^^^^^^^^^^^^^^^^^^^^^^^
