@@ -6,30 +6,29 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
-## [2024.2.0](https://github.com/ansys/pymechanical-stubs/releases/tag/v2024.2.0) - 2024-11-08
+## [0.1.5](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.5) - 2025-01-02
 
 
 ### Added
 
-- Make 2024 R2 stubs [#86](https://github.com/ansys/pymechanical-stubs/pull/86)
-
-
-### Maintenance
-
-- pre-commit automatic update [#82](https://github.com/ansys/pymechanical-stubs/pull/82)
-- update CHANGELOG for v2024.1.0 [#85](https://github.com/ansys/pymechanical-stubs/pull/85)
-
-## [2024.1.0](https://github.com/ansys/pymechanical-stubs/releases/tag/v2024.1.0) - 2024-11-08
+- add Ansys.Core.Units.Quantity to stubs [#92](https://github.com/ansys/pymechanical-stubs/pull/92)
+- add missing APIs [#93](https://github.com/ansys/pymechanical-stubs/pull/93)
 
 
 ### Fixed
 
-- Create stubs one version at a time [#84](https://github.com/ansys/pymechanical-stubs/pull/84)
+- revert to v0.1 [#89](https://github.com/ansys/pymechanical-stubs/pull/89)
+
+
+### Documentation
+
+- Update README for v0.1.5 [#96](https://github.com/ansys/pymechanical-stubs/pull/96)
 
 
 ### Maintenance
 
-- update CHANGELOG for v0.1.4 [#83](https://github.com/ansys/pymechanical-stubs/pull/83)
+- update CHANGELOG for v2024.2.0 [#87](https://github.com/ansys/pymechanical-stubs/pull/87)
+- pre-commit automatic update [#88](https://github.com/ansys/pymechanical-stubs/pull/88), [#94](https://github.com/ansys/pymechanical-stubs/pull/94)
 
 ## [0.1.4](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.4) - 2024-10-22
 
