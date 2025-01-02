@@ -1,4 +1,4 @@
-# Copyright (C) 2023 - 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2023 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -32,6 +32,12 @@ import generate_content
 
 import System  # isort: skip
 
+ACCEPTED_TYPES = {
+    "Ansys.Core.Units.Quantity",
+    "Ansys.ACT.Interfaces.Common",
+    "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
+}
+
 
 def get_version():
     """Get the install directory and version of Ansys Mechanical installed on the system.
@@ -53,7 +59,10 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    sys.path.append(f"{pathlib.Path(install_dir, 'aisol', 'bin', platform_string)}")
+    ansys_mech_embedding_path = str(pathlib.Path(install_dir, "aisol", "bin", platform_string))
+
+    # Append path for Ansys.Mechanical.Embedding
+    sys.path.append(ansys_mech_embedding_path)
     clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
@@ -90,7 +99,12 @@ def is_type_published(mod_type: "System.RuntimeType"):
     try:
         attrs = mod_type.GetCustomAttributes(True)
         if len(attrs) == 0:
-            return False
+            try:
+                if mod_type.FullName in ACCEPTED_TYPES:
+                    return True
+            except:  # noqa: E722
+                return False
+
         return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
     except Exception as e:
         print(e)
@@ -189,7 +203,15 @@ def make(base_dir, outdir, assemblies, str_version):
                         contents = contents.replace(
                             "import typing", f"import typing\n{''.join(import_statements)}"
                         )
+
                         f.write(contents)
+
+                        datamodel_interfaces = (
+                            pathlib.Path("Ansys") / "Mechanical" / "DataModel" / "Interfaces"
+                        )
+                        if str(datamodel_interfaces) in str(init_path):
+                            f.write("class DataModelObject(IDataModelObject):\n")
+                            f.write("    pass\n")
 
     print("Done processing all mechanical stubs.")
 
@@ -236,7 +258,9 @@ def main():
     assemblies = [
         "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
+        "Ansys.ACT.Interfaces",
         "Ansys.ACT.WB1",
+        "Ans.Core",
     ]
 
     resolve()

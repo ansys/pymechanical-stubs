@@ -1,4 +1,4 @@
-# Copyright (C) 2023 - 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2023 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -323,14 +323,17 @@ def write_enum(
         if field.IsLiteral and (type_filter is None or type_filter(field))
     ]
     buffer.write(f"class {enum_type.Name}(Enum):\n")
-    enum_doc = doc.get(f"T:{namespace}.{enum_type.Name}", None)
-    if enum_doc is None:
-        write_missing_class_enum_docstring(buffer, enum_type.Name, "enum")
-    else:
+
+    if doc is not None:
+        enum_doc = doc.get(f"T:{namespace}.{enum_type.Name}", None)
         write_docstring(buffer, enum_doc, 1)
+    else:
+        write_missing_class_enum_docstring(buffer, enum_type.Name, "enum")
     buffer.write("\n")
+
     for field in fields:
         write_enum_field(buffer, field, 1)
+
     if len(fields) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
@@ -444,7 +447,12 @@ def get_properties(
         prop_name = prop.Name
         declaring_type_name = prop.DeclaringType.ToString()
         method_doc_key = f"P:{declaring_type_name}.{prop_name}"
-        prop_doc = doc.get(method_doc_key, None)
+
+        if doc is not None:
+            prop_doc = doc.get(method_doc_key, None)
+        else:
+            prop_doc = None
+
         property = Property(
             getter=False,
             setter=False,
@@ -690,7 +698,11 @@ def get_methods(
         # Get the method name
         method_doc_key = f"M:{declaring_type_name}.{full_method_name}".replace("()", "")
         method_doc_key = adjust_method_name_xml(method_doc_key)
-        method_doc = doc.get(method_doc_key, None)
+
+        if doc is not None:
+            method_doc = doc.get(method_doc_key, None)
+        else:
+            method_doc = None
 
         method = Method(
             name=method_name,
@@ -727,12 +739,14 @@ def write_class(
     """
     logging.debug(f"    writing class {class_type.Name}")
     buffer.write(f"class {class_type.Name}(object):\n")
-    class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
-    if class_doc is None:
-        write_missing_class_enum_docstring(buffer, class_type.Name, "class")
-    else:
+
+    if doc is not None:
+        class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
         write_docstring(buffer, class_doc, 1)
+    else:
+        write_missing_class_enum_docstring(buffer, class_type.Name, "class")
     buffer.write("\n")
+
     props = get_properties(class_type, doc, type_filter)
     [write_property(buffer, prop, 1) for prop in props]
     methods = get_methods(class_type, doc, type_filter)
@@ -867,6 +881,12 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
         logging.info(f"   Using a type_filter: {str(type_filter)}")
     # Type filter is what gets messed up
     namespaces = get_namespaces(assembly, type_filter)
+
+    if assembly_name == "Ans.Core":
+        namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
+    elif assembly_name == "Ansys.ACT.Interfaces":
+        namespaces = {"Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"]}
+
     dump_types(namespaces)
     doc = get_doc(assembly)
     logging.info(f"    {len(namespaces.items())} namespaces")

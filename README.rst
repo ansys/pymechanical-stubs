@@ -64,12 +64,12 @@ autocomplete.
 Manually create ``__init__.py`` files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install Mechanical 2024 R1.
+1. Install Mechanical 2024 R1 or R2.
 
    **Note**
 
        Ensure the environment variable, AWP_ROOTDV_DEV, is set to the location of
-       Mechanical 2024 R1 (``C:\Program Files\Ansys Inc\v241``).
+       Mechanical 2024 R1 or R2 (``C:\Program Files\Ansys Inc\v242``).
 
 2. Clone the repository.
 
@@ -78,7 +78,7 @@ Manually create ``__init__.py`` files
         git clone https://github.com/ansys/pymechanical-stubs.git
 
 
-3. Run stub_generator/create_files.py to generate the stubs from Mechanical 2024 R1.
+3. Run stub_generator/create_files.py to generate the stubs from Mechanical 2024 R1 or R2.
 
    .. code:: bash
 
@@ -156,7 +156,7 @@ For example, on Linux with Python 3.10, unzip the wheelhouse archive and install
 
 .. code:: bash
 
-    unzip ansys-mechanical-stubs-v0.1.0-wheelhouse-ubuntu-latest-3.10 -d wheelhouse
+    unzip ansys-mechanical-stubs-v0.1.5-wheelhouse-ubuntu-latest-3.10 -d wheelhouse
     pip install ansys-mechanical-stubs -f wheelhouse --no-index --upgrade --ignore-installed
 
 If you are on Windows with Python 3.10, unzip the wheelhouse archive to a wheelhouse directory
@@ -181,13 +181,47 @@ This code shows how to import PyMechanical Stubs and its basic capabilities:
    if TYPE_CHECKING:
        import ansys.mechanical.stubs.v241.Ansys as Ansys
 
-   geometry_import = Model.GeometryImportGroup.AddGeometryImport()
+   geometry_import_group = app.Model.GeometryImportGroup
+   geometry_import = geometry_import_group.AddGeometryImport()
 
    # Lines that start with "Ansys." will autocomplete as you type
    geometry_import_format = (
        Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format.Automatic
    )
    geometry_import_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
+
+
+Alternatively, you can enable autocomplete in VS Code's ``settings.json`` file with the following steps:
+
+1. Run ``pip install ansys-mechanical-core``.
+
+2. Run ``ansys-mechanical-ideconfig`` in the terminal to retrieve the information for VS Code's ``settings.json`` file:
+
+   .. code:: bash
+
+      ansys-mechanical-ideconfig --ide vscode --target user --revision 242
+
+   The command returns the path to the settings.json file. Open the file and add the lines from the command output.
+
+3. Once the ``settings.json`` file is updated, you only need to ``import Ansys`` to enable autocomplete:
+
+   .. code:: python
+
+      from typing import TYPE_CHECKING
+      import ansys.mechanical.core as mech
+
+      if TYPE_CHECKING:
+          import Ansys
+          from Ansys.Mechanical.DataModel.Enums import *
+
+      geometry_import_group = app.Model.GeometryImportGroup
+      geometry_import = geometry_import_group.AddGeometryImport()
+
+      # Lines that start with "Ansys." will autocomplete as you type
+      geometry_import_format = (
+          Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format.Automatic
+      )
+      geometry_import_preferences = Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences()
 
 Documentation and issues
 ^^^^^^^^^^^^^^^^^^^^^^^^
