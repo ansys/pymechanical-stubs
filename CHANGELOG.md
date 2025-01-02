@@ -6,6 +6,30 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.5](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.5) - 2025-01-02
+
+
+### Added
+
+- add Ansys.Core.Units.Quantity to stubs [#92](https://github.com/ansys/pymechanical-stubs/pull/92)
+- add missing APIs [#93](https://github.com/ansys/pymechanical-stubs/pull/93)
+
+
+### Fixed
+
+- revert to v0.1 [#89](https://github.com/ansys/pymechanical-stubs/pull/89)
+
+
+### Documentation
+
+- Update README for v0.1.5 [#96](https://github.com/ansys/pymechanical-stubs/pull/96)
+
+
+### Maintenance
+
+- update CHANGELOG for v2024.2.0 [#87](https://github.com/ansys/pymechanical-stubs/pull/87)
+- pre-commit automatic update [#88](https://github.com/ansys/pymechanical-stubs/pull/88), [#94](https://github.com/ansys/pymechanical-stubs/pull/94)
+
 ## [0.1.4](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.4) - 2024-10-22
 
 
