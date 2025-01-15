@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`CriterionFrequencyRangeType`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.CriterionFrequencyRangeType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CriterionFrequencyRangeType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CriterionFrequencyRangeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Manual`
+            - 
+          * - :py:attr:`~UseParent`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Manual
+   :value: 1
+
+
+.. py:attribute:: UseParent
+   :value: 0
+
+
+
+
+
+
+.. vale on

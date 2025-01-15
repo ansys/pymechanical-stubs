@@ -1,0 +1,79 @@
+.. vale off
+
+
+
+:class:`ExistingMaterialOperation`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Materials.ExistingMaterialOperation
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies what should occur when a material being imported has the same identifiers as
+   a material which already exists in Mechanical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExistingMaterialOperation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~New`
+            - 
+          * - :py:attr:`~Replace`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: New
+   :value: 1
+
+
+.. py:attribute:: Replace
+   :value: 2
+
+
+
+
+
+
+.. vale on

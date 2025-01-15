@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ScopingDisplay`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ScopingDisplay
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ScopingDisplay.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ScopingDisplay
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllBodies`
+            - 
+          * - :py:attr:`~ResultOnly`
+            - 
+          * - :py:attr:`~ScopedBodies`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllBodies
+   :value: 1
+
+
+.. py:attribute:: ResultOnly
+   :value: 2
+
+
+.. py:attribute:: ScopedBodies
+   :value: 0
+
+
+
+
+
+
+.. vale on

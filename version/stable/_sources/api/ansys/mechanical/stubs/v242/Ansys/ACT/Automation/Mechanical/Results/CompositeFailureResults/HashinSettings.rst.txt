@@ -1,0 +1,269 @@
+.. vale off
+
+
+
+:class:`HashinSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.HashinSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Hashin failure criterion for reinforced materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HashinSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DelaminationWeightingFactor`
+            - Gets or sets the weighting factor for the delamination evaluation.
+          * - :py:attr:`~EvaluateDelamination`
+            - Gets or sets whether delamination is evaluated. Only applies when three-dimensional
+          * - :py:attr:`~EvaluateFiberFailure`
+            - Gets or sets whether fiber failure is evaluated. The corresponding failure label is 'hf'
+          * - :py:attr:`~EvaluateMatrixFailure`
+            - Gets or sets whether matrix failure is evaluated. The corresponding failure label is 'hm'
+          * - :py:attr:`~FailureDimension`
+            - Gets or sets whether the failure criterion is evaluated only in-plane (2D),
+          * - :py:attr:`~FiberFailureWeightingFactor`
+            - Gets or sets the weighting factor for the fiber failure evaluation.
+          * - :py:attr:`~MatrixFailureWeightingFactor`
+            - Gets or sets the weighting factor for the matrix failure evaluation.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DelaminationWeightingFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the weighting factor for the delamination evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateDelamination
+   :type: Optional[bool]
+
+   
+   Gets or sets whether delamination is evaluated. Only applies when three-dimensional
+       evaluation is selected. The corresponding failure label is 'hd'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateFiberFailure
+   :type: Optional[bool]
+
+   
+   Gets or sets whether fiber failure is evaluated. The corresponding failure label is 'hf'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateMatrixFailure
+   :type: Optional[bool]
+
+   
+   Gets or sets whether matrix failure is evaluated. The corresponding failure label is 'hm'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailureDimension
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.FailureDimension]
+
+   
+   Gets or sets whether the failure criterion is evaluated only in-plane (2D),
+       or also in the out-of-plane direction (3D).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FiberFailureWeightingFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the weighting factor for the fiber failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MatrixFailureWeightingFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the weighting factor for the matrix failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

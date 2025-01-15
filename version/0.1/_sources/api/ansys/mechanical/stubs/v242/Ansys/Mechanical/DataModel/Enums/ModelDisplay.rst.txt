@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ModelDisplay`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ModelDisplay
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Model display options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModelDisplay
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ShadedExterior`
+            - 
+          * - :py:attr:`~ShadedExteriorAndEdges`
+            - 
+          * - :py:attr:`~Wireframe`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ShadedExterior
+   :value: 1
+
+
+.. py:attribute:: ShadedExteriorAndEdges
+   :value: 3
+
+
+.. py:attribute:: Wireframe
+   :value: 2
+
+
+
+
+
+
+.. vale on

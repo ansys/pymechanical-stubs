@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`TopoEnvironmentType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.TopoEnvironmentType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Topology Environment Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoEnvironmentType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllModal`
+            - 
+          * - :py:attr:`~AllStaticStructural`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllModal
+   :value: 2
+
+
+.. py:attribute:: AllStaticStructural
+   :value: 1
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+
+
+
+
+.. vale on

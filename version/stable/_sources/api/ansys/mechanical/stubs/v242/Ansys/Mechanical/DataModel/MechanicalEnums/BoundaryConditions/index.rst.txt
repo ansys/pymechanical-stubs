@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``BoundaryConditions``
+======================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: BoundaryConditions
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation`
+            - enumeration used to set the return object for the magnitude property in boundary conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> DataRepresentation</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/BoundaryConditions/DataRepresentation>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+BoundaryConditions module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

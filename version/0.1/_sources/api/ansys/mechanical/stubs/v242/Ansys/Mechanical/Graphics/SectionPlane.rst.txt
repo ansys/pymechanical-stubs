@@ -1,0 +1,215 @@
+.. vale off
+
+
+
+:class:`SectionPlane`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Graphics.SectionPlane
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a SectionPlane object. This object holds properties of the Plane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SectionPlane
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Indicates whether the current SectionPlane properties are equal to the properties of another SectionPlane object.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - Gets or Sets the Active State of the Section Plane
+          * - :py:attr:`~Center`
+            - Gets or Sets the Center point of the Section Plane
+          * - :py:attr:`~Direction`
+            - Gets or Sets the Direction(Normal) of the Section Plane
+          * - :py:attr:`~Name`
+            - Gets or Sets the Name of the Section Plane
+          * - :py:attr:`~Type`
+            - Gets or Sets the SectionPlane Type of the Section Plane
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+   
+   Gets or Sets the Active State of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Center
+   :type: Optional[Ansys.Mechanical.Graphics.Point]
+
+   
+   Gets or Sets the Center point of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Direction
+   :type: Optional[Ansys.ACT.Math.Vector3D]
+
+   
+   Gets or Sets the Direction(Normal) of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets or Sets the Name of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SectionPlaneType]
+
+   
+   Gets or Sets the SectionPlane Type of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(sectionPlane: Ansys.Mechanical.Graphics.SectionPlane) -> bool
+
+   
+   Indicates whether the current SectionPlane properties are equal to the properties of another SectionPlane object.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

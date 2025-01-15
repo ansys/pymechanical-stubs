@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMThermalStrainMethod`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AMThermalStrainMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMThermalStrainMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMThermalStrainMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FullThermal`
+            - 
+          * - :py:attr:`~MachineLearning`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FullThermal
+   :value: 0
+
+
+.. py:attribute:: MachineLearning
+   :value: 1
+
+
+
+
+
+
+.. vale on

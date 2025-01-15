@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ReactionForceCriteriaType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ReactionForceCriteriaType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ReactionForceCriteriaType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ReactionForceCriteriaType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AbsoluteMaximum`
+            - 
+          * - :py:attr:`~Sum`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AbsoluteMaximum
+   :value: 1
+
+
+.. py:attribute:: Sum
+   :value: 0
+
+
+
+
+
+
+.. vale on

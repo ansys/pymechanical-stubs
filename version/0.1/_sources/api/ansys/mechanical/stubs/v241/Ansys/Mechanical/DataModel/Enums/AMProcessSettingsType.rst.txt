@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`AMProcessSettingsType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.AMProcessSettingsType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMProcessSettingsType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMProcessSettingsType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PreheatTemperature`
+            - 
+          * - :py:attr:`~RoomTemperature`
+            - 
+          * - :py:attr:`~SpecifiedTemperature`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: PreheatTemperature
+   :value: 2
+
+
+.. py:attribute:: RoomTemperature
+   :value: 0
+
+
+.. py:attribute:: SpecifiedTemperature
+   :value: 1
+
+
+
+
+
+
+.. vale on

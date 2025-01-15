@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`LoadVectorAssignment`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.LoadVectorAssignment
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadVectorAssignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadVectorAssignment
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LoadVectorAssignment_Manual`
+            - 
+          * - :py:attr:`~LoadVectorAssignment_ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: LoadVectorAssignment_Manual
+   :value: 1
+
+
+.. py:attribute:: LoadVectorAssignment_ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

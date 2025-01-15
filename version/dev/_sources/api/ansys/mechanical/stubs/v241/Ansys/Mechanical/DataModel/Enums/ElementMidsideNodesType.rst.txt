@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ElementMidsideNodesType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ElementMidsideNodesType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ElementMidsideNodesType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ElementMidsideNodesType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dropped`
+            - 
+          * - :py:attr:`~GlobalSetting`
+            - 
+          * - :py:attr:`~Kept`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Dropped
+   :value: 1
+
+
+.. py:attribute:: GlobalSetting
+   :value: 0
+
+
+.. py:attribute:: Kept
+   :value: 2
+
+
+
+
+
+
+.. vale on
