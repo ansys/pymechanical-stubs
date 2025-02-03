@@ -6,7 +6,7 @@ ci:
 repos:
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.9.1
+  rev: v0.9.4
   hooks:
     - id: ruff
       args: [ --fix ]
@@ -19,7 +19,7 @@ repos:
     additional_dependencies: [black==23.7.0]
 
 - repo: https://github.com/codespell-project/codespell
-  rev: v2.3.0
+  rev: v2.4.1
   hooks:
   - id: codespell
     args: ["--ignore-words", "doc/styles/config/vocabularies/ANSYS/accept.txt"]
@@ -33,7 +33,7 @@ repos:
   - id: trailing-whitespace
 
 - repo: https://github.com/ansys/pre-commit-hooks
-  rev: v0.4.4
+  rev: v0.5.1
   hooks:
   - id: add-license-headers
     files: '(src|examples|tests|scripts)/.*\.(py)|\.(proto)'
