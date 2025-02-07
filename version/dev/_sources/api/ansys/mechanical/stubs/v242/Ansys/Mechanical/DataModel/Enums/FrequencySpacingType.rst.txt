@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`FrequencySpacingType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.FrequencySpacingType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FrequencySpacingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FrequencySpacingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Linear`
+            - 
+          * - :py:attr:`~Logarithmic`
+            - 
+          * - :py:attr:`~OctaveBand1`
+            - 
+          * - :py:attr:`~OctaveBand12`
+            - 
+          * - :py:attr:`~OctaveBand2`
+            - 
+          * - :py:attr:`~OctaveBand24`
+            - 
+          * - :py:attr:`~OctaveBand3`
+            - 
+          * - :py:attr:`~OctaveBand6`
+            - 
+          * - :py:attr:`~OrderBased`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Linear
+   :value: 0
+
+
+.. py:attribute:: Logarithmic
+   :value: 1
+
+
+.. py:attribute:: OctaveBand1
+   :value: 2
+
+
+.. py:attribute:: OctaveBand12
+   :value: 6
+
+
+.. py:attribute:: OctaveBand2
+   :value: 3
+
+
+.. py:attribute:: OctaveBand24
+   :value: 7
+
+
+.. py:attribute:: OctaveBand3
+   :value: 4
+
+
+.. py:attribute:: OctaveBand6
+   :value: 5
+
+
+.. py:attribute:: OrderBased
+   :value: 8
+
+
+
+
+
+
+.. vale on

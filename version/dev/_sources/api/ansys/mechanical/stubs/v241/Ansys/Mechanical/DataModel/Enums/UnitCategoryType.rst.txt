@@ -1,0 +1,776 @@
+.. vale off
+
+
+
+:class:`UnitCategoryType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.UnitCategoryType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the WB Unit Category Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: UnitCategoryType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AWeightedDecibel`
+            - 
+          * - :py:attr:`~Acceleration`
+            - 
+          * - :py:attr:`~AcousticAdmittance`
+            - 
+          * - :py:attr:`~Angle`
+            - 
+          * - :py:attr:`~AngularAcceleration`
+            - 
+          * - :py:attr:`~AngularVelocity`
+            - 
+          * - :py:attr:`~Area`
+            - 
+          * - :py:attr:`~Capacitance`
+            - 
+          * - :py:attr:`~Charge`
+            - 
+          * - :py:attr:`~ChargeDensity`
+            - 
+          * - :py:attr:`~Conductivity`
+            - 
+          * - :py:attr:`~Current`
+            - 
+          * - :py:attr:`~CurrentDensity`
+            - 
+          * - :py:attr:`~DecayConstant`
+            - 
+          * - :py:attr:`~Decibel`
+            - 
+          * - :py:attr:`~Density`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~ElectricCapacitancePerArea`
+            - 
+          * - :py:attr:`~ElectricChargeDensity`
+            - 
+          * - :py:attr:`~ElectricConductancePerUnitArea`
+            - 
+          * - :py:attr:`~ElectricConductivity`
+            - 
+          * - :py:attr:`~ElectricField`
+            - 
+          * - :py:attr:`~ElectricFluxDensity`
+            - 
+          * - :py:attr:`~ElectricResistance`
+            - 
+          * - :py:attr:`~ElectricResistivity`
+            - 
+          * - :py:attr:`~Energy`
+            - 
+          * - :py:attr:`~EnergyDensityMass`
+            - 
+          * - :py:attr:`~EnergyPerVolume`
+            - 
+          * - :py:attr:`~FilmCoeff`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~ForceIntensity`
+            - 
+          * - :py:attr:`~ForcePerAngularUnit`
+            - 
+          * - :py:attr:`~FractureEnergy`
+            - 
+          * - :py:attr:`~FractureEnergyRate`
+            - 
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~FrequencyRate`
+            - 
+          * - :py:attr:`~GasketStiffness`
+            - 
+          * - :py:attr:`~HeatFlux`
+            - 
+          * - :py:attr:`~HeatGeneration`
+            - 
+          * - :py:attr:`~HeatTransferRate`
+            - 
+          * - :py:attr:`~Impulse`
+            - 
+          * - :py:attr:`~ImpulsePerAngularUnit`
+            - 
+          * - :py:attr:`~Inductance`
+            - 
+          * - :py:attr:`~InverseAngle`
+            - 
+          * - :py:attr:`~InverseLength`
+            - 
+          * - :py:attr:`~InverseStress`
+            - 
+          * - :py:attr:`~Length`
+            - 
+          * - :py:attr:`~MagneticFieldIntensity`
+            - 
+          * - :py:attr:`~MagneticFlux`
+            - 
+          * - :py:attr:`~MagneticFluxDensity`
+            - 
+          * - :py:attr:`~Mass`
+            - 
+          * - :py:attr:`~MassFlowRate`
+            - 
+          * - :py:attr:`~MassFlowRatePerArea`
+            - 
+          * - :py:attr:`~MassFlowRatePerLength`
+            - 
+          * - :py:attr:`~MassFlowRatePerVolume`
+            - 
+          * - :py:attr:`~MassMoment`
+            - 
+          * - :py:attr:`~MassPerArea`
+            - 
+          * - :py:attr:`~MassSourceRate`
+            - 
+          * - :py:attr:`~MassSourceRatePerArea`
+            - 
+          * - :py:attr:`~MassSourceRatePerLength`
+            - 
+          * - :py:attr:`~MassSourceRatePerVolume`
+            - 
+          * - :py:attr:`~MaterialImpedance`
+            - 
+          * - :py:attr:`~Moment`
+            - 
+          * - :py:attr:`~MomentInertia`
+            - 
+          * - :py:attr:`~MomentInertiaMass`
+            - 
+          * - :py:attr:`~NoUnits`
+            - 
+          * - :py:attr:`~NormalizedValue`
+            - 
+          * - :py:attr:`~PSDAcceleration`
+            - 
+          * - :py:attr:`~PSDAccelerationGrav`
+            - 
+          * - :py:attr:`~PSDDisplacement`
+            - 
+          * - :py:attr:`~PSDForce`
+            - 
+          * - :py:attr:`~PSDMoment`
+            - 
+          * - :py:attr:`~PSDPressure`
+            - 
+          * - :py:attr:`~PSDStrain`
+            - 
+          * - :py:attr:`~PSDStress`
+            - 
+          * - :py:attr:`~PSDVelocity`
+            - 
+          * - :py:attr:`~Permeability`
+            - 
+          * - :py:attr:`~Permittivity`
+            - 
+          * - :py:attr:`~Poisson`
+            - 
+          * - :py:attr:`~Power`
+            - 
+          * - :py:attr:`~PowerSpectralDensity`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~RSAcceleration`
+            - 
+          * - :py:attr:`~RSAccelerationGrav`
+            - 
+          * - :py:attr:`~RSDisplacement`
+            - 
+          * - :py:attr:`~RSVelocity`
+            - 
+          * - :py:attr:`~RelativePermeability`
+            - 
+          * - :py:attr:`~RelativePermittivity`
+            - 
+          * - :py:attr:`~RotationalDamping`
+            - 
+          * - :py:attr:`~RotationalStiffness`
+            - 
+          * - :py:attr:`~SectionModulus`
+            - 
+          * - :py:attr:`~SeebeckCoefficient`
+            - 
+          * - :py:attr:`~ShearRate`
+            - 
+          * - :py:attr:`~ShearStrain`
+            - 
+          * - :py:attr:`~ShockVelocity`
+            - 
+          * - :py:attr:`~SpecificHeat`
+            - 
+          * - :py:attr:`~SpecificWeight`
+            - 
+          * - :py:attr:`~SquareRootOfLength`
+            - 
+          * - :py:attr:`~Stiffness`
+            - 
+          * - :py:attr:`~Strain`
+            - 
+          * - :py:attr:`~Strength`
+            - 
+          * - :py:attr:`~Stress`
+            - 
+          * - :py:attr:`~StressIntensityFactor`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~TemperatureDifference`
+            - 
+          * - :py:attr:`~ThermalCapacitance`
+            - 
+          * - :py:attr:`~ThermalCompliance`
+            - 
+          * - :py:attr:`~ThermalConductance`
+            - 
+          * - :py:attr:`~ThermalExpansion`
+            - 
+          * - :py:attr:`~ThermalGradient`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~TranslationalDamping`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~Unitless`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+          * - :py:attr:`~Viscosity`
+            - 
+          * - :py:attr:`~Voltage`
+            - 
+          * - :py:attr:`~Volume`
+            - 
+          * - :py:attr:`~WarpingFactor`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AWeightedDecibel
+   :value: 107
+
+
+.. py:attribute:: Acceleration
+   :value: 0
+
+
+.. py:attribute:: AcousticAdmittance
+   :value: 104
+
+
+.. py:attribute:: Angle
+   :value: 1
+
+
+.. py:attribute:: AngularAcceleration
+   :value: 63
+
+
+.. py:attribute:: AngularVelocity
+   :value: 2
+
+
+.. py:attribute:: Area
+   :value: 3
+
+
+.. py:attribute:: Capacitance
+   :value: 4
+
+
+.. py:attribute:: Charge
+   :value: 5
+
+
+.. py:attribute:: ChargeDensity
+   :value: 6
+
+
+.. py:attribute:: Conductivity
+   :value: 7
+
+
+.. py:attribute:: Current
+   :value: 8
+
+
+.. py:attribute:: CurrentDensity
+   :value: 9
+
+
+.. py:attribute:: DecayConstant
+   :value: 65
+
+
+.. py:attribute:: Decibel
+   :value: 106
+
+
+.. py:attribute:: Density
+   :value: 10
+
+
+.. py:attribute:: Displacement
+   :value: 11
+
+
+.. py:attribute:: ElectricCapacitancePerArea
+   :value: 110
+
+
+.. py:attribute:: ElectricChargeDensity
+   :value: 109
+
+
+.. py:attribute:: ElectricConductancePerUnitArea
+   :value: 69
+
+
+.. py:attribute:: ElectricConductivity
+   :value: 12
+
+
+.. py:attribute:: ElectricField
+   :value: 13
+
+
+.. py:attribute:: ElectricFluxDensity
+   :value: 14
+
+
+.. py:attribute:: ElectricResistance
+   :value: 111
+
+
+.. py:attribute:: ElectricResistivity
+   :value: 15
+
+
+.. py:attribute:: Energy
+   :value: 16
+
+
+.. py:attribute:: EnergyDensityMass
+   :value: 68
+
+
+.. py:attribute:: EnergyPerVolume
+   :value: 94
+
+
+.. py:attribute:: FilmCoeff
+   :value: 17
+
+
+.. py:attribute:: Force
+   :value: 18
+
+
+.. py:attribute:: ForceIntensity
+   :value: 19
+
+
+.. py:attribute:: ForcePerAngularUnit
+   :value: 75
+
+
+.. py:attribute:: FractureEnergy
+   :value: 66
+
+
+.. py:attribute:: FractureEnergyRate
+   :value: 98
+
+
+.. py:attribute:: Frequency
+   :value: 20
+
+
+.. py:attribute:: FrequencyRate
+   :value: 108
+
+
+.. py:attribute:: GasketStiffness
+   :value: 54
+
+
+.. py:attribute:: HeatFlux
+   :value: 21
+
+
+.. py:attribute:: HeatGeneration
+   :value: 22
+
+
+.. py:attribute:: HeatTransferRate
+   :value: 23
+
+
+.. py:attribute:: Impulse
+   :value: 76
+
+
+.. py:attribute:: ImpulsePerAngularUnit
+   :value: 77
+
+
+.. py:attribute:: Inductance
+   :value: 24
+
+
+.. py:attribute:: InverseAngle
+   :value: 87
+
+
+.. py:attribute:: InverseLength
+   :value: 86
+
+
+.. py:attribute:: InverseStress
+   :value: 25
+
+
+.. py:attribute:: Length
+   :value: 26
+
+
+.. py:attribute:: MagneticFieldIntensity
+   :value: 27
+
+
+.. py:attribute:: MagneticFlux
+   :value: 28
+
+
+.. py:attribute:: MagneticFluxDensity
+   :value: 29
+
+
+.. py:attribute:: Mass
+   :value: 30
+
+
+.. py:attribute:: MassFlowRate
+   :value: 90
+
+
+.. py:attribute:: MassFlowRatePerArea
+   :value: 102
+
+
+.. py:attribute:: MassFlowRatePerLength
+   :value: 103
+
+
+.. py:attribute:: MassFlowRatePerVolume
+   :value: 101
+
+
+.. py:attribute:: MassMoment
+   :value: 96
+
+
+.. py:attribute:: MassPerArea
+   :value: 97
+
+
+.. py:attribute:: MassSourceRate
+   :value: 115
+
+
+.. py:attribute:: MassSourceRatePerArea
+   :value: 113
+
+
+.. py:attribute:: MassSourceRatePerLength
+   :value: 114
+
+
+.. py:attribute:: MassSourceRatePerVolume
+   :value: 112
+
+
+.. py:attribute:: MaterialImpedance
+   :value: 79
+
+
+.. py:attribute:: Moment
+   :value: 31
+
+
+.. py:attribute:: MomentInertia
+   :value: 32
+
+
+.. py:attribute:: MomentInertiaMass
+   :value: 55
+
+
+.. py:attribute:: NoUnits
+
+.. py:attribute:: NormalizedValue
+   :value: 89
+
+
+.. py:attribute:: PSDAcceleration
+   :value: 56
+
+
+.. py:attribute:: PSDAccelerationGrav
+   :value: 57
+
+
+.. py:attribute:: PSDDisplacement
+   :value: 58
+
+
+.. py:attribute:: PSDForce
+   :value: 72
+
+
+.. py:attribute:: PSDMoment
+   :value: 73
+
+
+.. py:attribute:: PSDPressure
+   :value: 74
+
+
+.. py:attribute:: PSDStrain
+   :value: 71
+
+
+.. py:attribute:: PSDStress
+   :value: 70
+
+
+.. py:attribute:: PSDVelocity
+   :value: 59
+
+
+.. py:attribute:: Permeability
+   :value: 33
+
+
+.. py:attribute:: Permittivity
+   :value: 34
+
+
+.. py:attribute:: Poisson
+   :value: 35
+
+
+.. py:attribute:: Power
+   :value: 36
+
+
+.. py:attribute:: PowerSpectralDensity
+   :value: 105
+
+
+.. py:attribute:: Pressure
+   :value: 37
+
+
+.. py:attribute:: RSAcceleration
+   :value: 80
+
+
+.. py:attribute:: RSAccelerationGrav
+   :value: 81
+
+
+.. py:attribute:: RSDisplacement
+   :value: 82
+
+
+.. py:attribute:: RSVelocity
+   :value: 83
+
+
+.. py:attribute:: RelativePermeability
+   :value: 38
+
+
+.. py:attribute:: RelativePermittivity
+   :value: 39
+
+
+.. py:attribute:: RotationalDamping
+   :value: 60
+
+
+.. py:attribute:: RotationalStiffness
+   :value: 61
+
+
+.. py:attribute:: SectionModulus
+   :value: 40
+
+
+.. py:attribute:: SeebeckCoefficient
+   :value: 64
+
+
+.. py:attribute:: ShearRate
+   :value: 99
+
+
+.. py:attribute:: ShearStrain
+   :value: 43
+
+
+.. py:attribute:: ShockVelocity
+   :value: 67
+
+
+.. py:attribute:: SpecificHeat
+   :value: 41
+
+
+.. py:attribute:: SpecificWeight
+   :value: 42
+
+
+.. py:attribute:: SquareRootOfLength
+   :value: 93
+
+
+.. py:attribute:: Stiffness
+   :value: 44
+
+
+.. py:attribute:: Strain
+   :value: 45
+
+
+.. py:attribute:: Strength
+   :value: 47
+
+
+.. py:attribute:: Stress
+   :value: 46
+
+
+.. py:attribute:: StressIntensityFactor
+   :value: 92
+
+
+.. py:attribute:: Temperature
+   :value: 49
+
+
+.. py:attribute:: TemperatureDifference
+   :value: 78
+
+
+.. py:attribute:: ThermalCapacitance
+   :value: 88
+
+
+.. py:attribute:: ThermalCompliance
+   :value: 116
+
+
+.. py:attribute:: ThermalConductance
+   :value: 85
+
+
+.. py:attribute:: ThermalExpansion
+   :value: 48
+
+
+.. py:attribute:: ThermalGradient
+   :value: 95
+
+
+.. py:attribute:: Time
+   :value: 50
+
+
+.. py:attribute:: TranslationalDamping
+   :value: 62
+
+
+.. py:attribute:: Undefined
+
+.. py:attribute:: Unitless
+   :value: 91
+
+
+.. py:attribute:: Velocity
+   :value: 51
+
+
+.. py:attribute:: Viscosity
+   :value: 100
+
+
+.. py:attribute:: Voltage
+   :value: 52
+
+
+.. py:attribute:: Volume
+   :value: 53
+
+
+.. py:attribute:: WarpingFactor
+   :value: 84
+
+
+
+
+
+
+.. vale on

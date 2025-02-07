@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`FEParser`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.FEParser
+
+   Bases: :py:obj:`object`
+
+
+   
+   FE parser object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

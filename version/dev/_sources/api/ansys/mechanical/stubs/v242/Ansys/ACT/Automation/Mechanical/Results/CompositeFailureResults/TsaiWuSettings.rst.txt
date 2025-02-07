@@ -1,0 +1,139 @@
+.. vale off
+
+
+
+:class:`TsaiWuSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.TsaiWuSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Tsai-Wu failure criterion for reinforced materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TsaiWuSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FailureDimension`
+            - Gets or sets whether the failure criterion is evaluated only in-plane (2D),
+          * - :py:attr:`~WeightingFactor`
+            - Gets or sets the weighting factor for the failure criterion.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: FailureDimension
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.FailureDimension]
+
+   
+   Gets or sets whether the failure criterion is evaluated only in-plane (2D),
+       or also in the out-of-plane direction (3D).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeightingFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the weighting factor for the failure criterion.
+       The corresponding failure label is 'tw'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

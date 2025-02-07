@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ShellMBPType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ShellMBPType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ShellMBPType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShellMBPType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BendingStress`
+            - 
+          * - :py:attr:`~BottomPeakStress`
+            - 
+          * - :py:attr:`~MembraneStress`
+            - 
+          * - :py:attr:`~TopPeakStress`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BendingStress
+   :value: 1
+
+
+.. py:attribute:: BottomPeakStress
+   :value: 2
+
+
+.. py:attribute:: MembraneStress
+   :value: 0
+
+
+.. py:attribute:: TopPeakStress
+   :value: 3
+
+
+
+
+
+
+.. vale on

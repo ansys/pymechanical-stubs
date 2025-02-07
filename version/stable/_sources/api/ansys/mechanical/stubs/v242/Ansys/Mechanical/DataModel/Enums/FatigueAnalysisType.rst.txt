@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`FatigueAnalysisType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.FatigueAnalysisType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Fatigue Analysis Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueAnalysisType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FatigueToolGerber`
+            - 
+          * - :py:attr:`~FatigueToolGoodman`
+            - 
+          * - :py:attr:`~FatigueToolNone`
+            - 
+          * - :py:attr:`~FatigueToolSNMeanStressCurves`
+            - 
+          * - :py:attr:`~FatigueToolSoderberg`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FatigueToolGerber
+   :value: 3
+
+
+.. py:attribute:: FatigueToolGoodman
+   :value: 1
+
+
+.. py:attribute:: FatigueToolNone
+   :value: 0
+
+
+.. py:attribute:: FatigueToolSNMeanStressCurves
+   :value: 4
+
+
+.. py:attribute:: FatigueToolSoderberg
+   :value: 2
+
+
+
+
+
+
+.. vale on
