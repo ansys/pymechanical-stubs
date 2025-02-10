@@ -19,7 +19,7 @@ on:
           - '3.11'
           - '3.12'
           - 'All of the above'
-        default: "All of the above"
+        default: 'All of the above'
   push:
     tags:
       - "*"
