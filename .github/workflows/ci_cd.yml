@@ -122,10 +122,10 @@ jobs:
 
           if [[ -z "${{ inputs.python-version }}" ]] || [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
             python_version="['3.10', '3.11', '3.12']"
-            doc_python_version="['${{ env.MAIN_PYTHON_VERSION }}']"
+            doc_python_version="${{ env.MAIN_PYTHON_VERSION }}"
           else
             python_version="['${{ inputs.python-version }}']"
-            doc_python_version="['${{ inputs.python-version }}']"
+            doc_python_version="${{ inputs.python-version }}"
           fi
 
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
@@ -322,7 +322,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ${{ needs.set-mechanical-versions.outputs.doc-python-version }}
+        python-version: ["${{ needs.set-mechanical-versions.outputs.doc-python-version }}"]
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
