@@ -21,6 +21,7 @@
 # SOFTWARE.
 """Create __init__.py files from the content of the assembly XML files."""
 
+import argparse
 import logging
 import os
 import pathlib
@@ -39,25 +40,113 @@ ACCEPTED_TYPES = {
 }
 
 
-def get_version():
-    """Get the install directory and version of Ansys Mechanical installed on the system.
+def parse_args() -> argparse.Namespace:
+    """Parse command line arguments.
 
     Returns
     -------
-    str
-        Path of the Ansys install set in the AWP_ROOTDV_DEV environment variable.
-    int
-        The version of the Ansys install set in the AWP_ROOTDV_DEV environment variable.
+    argparse.Namespace
+        Parsed command line arguments.
     """
-    install_dir = os.environ["AWP_ROOTDV_DEV"]
-    version = int(install_dir[-3:])
+    # Set argparser
+    argparser = argparse.ArgumentParser(description="Generate Mechanical stubs.")
 
-    return install_dir, version
+    # Arguments for generating stubs
+    argparser.add_argument("--make", action="store_true", help="Generate stubs.")
+    argparser.add_argument("--clean", action="store_true", help="Clean stubs.")
+
+    # Show logging.DEBUG statements
+    argparser.add_argument("--debug", action="store_true", help="Print logging.debug() statements.")
+
+    # Arguments for assemblies to generate stubs for
+    argparser.add_argument(
+        "--all-assemblies", action="store_true", help="Make stubs for all assemblies."
+    )
+    argparser.add_argument(
+        "--mechanical-datamodel",
+        action="store_true",
+        help="Make stubs for Ansys.Mechanical.DataModel.",
+    )
+    argparser.add_argument(
+        "--mechanical-interfaces",
+        action="store_true",
+        help="Make stubs for Ansys.Mechanical.Interfaces.",
+    )
+    argparser.add_argument(
+        "--act-interfaces", action="store_true", help="Make stubs for Ansys.ACT.Interfaces."
+    )
+    argparser.add_argument("--act-wb1", action="store_true", help="Make stubs for Ansys.ACT.WB1.")
+    argparser.add_argument("--ans-core", action="store_true", help="Make stubs for Ans.Core.")
+
+    # Version of the Mechanical install to create stubs for
+    argparser.add_argument("--version", type=str, help="Version of the Mechanical install.")
+
+    return argparser.parse_args()
 
 
-def resolve():
+def get_mech_install_info(version: str) -> tuple:
+    """Get the Mechanical install directory and version if not provided.
+
+    Parameters
+    ----------
+    version : str | None
+        Version of the Mechanical install.
+
+    Returns
+    -------
+    install_dir : str
+        The Mechanical install directory.
+    v_version : str
+        Version of the Mechanical install with v. For example, v251.
+    """
+    if not version:
+        install_dir = os.environ["AWP_ROOTDV_DEV"]
+        version = int(install_dir[-3:])
+    else:
+        install_dir = os.environ[f"AWP_ROOT{version}"]
+
+    return install_dir, f"v{version}"
+
+
+def make_assemblies_list(args: argparse.Namespace) -> list:
+    """Make a list of assemblies to generate stubs for.
+
+    Parameters
+    ----------
+    args : argparse.Namespace
+        Parsed command line arguments.
+
+    Returns
+    -------
+    list
+        List of assemblies to generate stubs for.
+    """
+    assemblies = []
+    if args.all_assemblies:
+        assemblies = [
+            "Ansys.Mechanical.DataModel",
+            "Ansys.Mechanical.Interfaces",
+            "Ansys.ACT.Interfaces",
+            "Ansys.ACT.WB1",
+            "Ans.Core",
+        ]
+    else:
+        if args.mechanical_datamodel:
+            assemblies.append("Ansys.Mechanical.DataModel")
+        if args.mechanical_interfaces:
+            assemblies.append("Ansys.Mechanical.Interfaces")
+        if args.act_interfaces:
+            assemblies.append("Ansys.ACT.Interfaces")
+        if args.act_wb1:
+            assemblies.append("Ansys.ACT.WB1")
+        if args.ans_core:
+            assemblies.append("Ans.Core")
+
+    return assemblies
+
+
+def resolve(install_dir):
     """Add assembly resolver for the Ansys Mechanical install."""
-    install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
     ansys_mech_embedding_path = str(pathlib.Path(install_dir, "aisol", "bin", platform_string))
 
@@ -124,10 +213,6 @@ def make(base_dir, outdir, assemblies, str_version):
     assemblies: list
         List of Mechanical assembly files to create classes, properties, and methods from.
     """
-    install_dir, version = get_version()
-    version = str(version)
-    version = version[:2] + "." + version[2:]
-
     outdir.mkdir(parents=True, exist_ok=True)
 
     for assembly in assemblies:
@@ -240,35 +325,32 @@ def write_docs(commands, tiny_pages_path):
 
 def main():
     """Generate the Mechanical stubs based on assembly files."""
-    make_bool = True
-    clean_bool = False
+    # Get command line arguments
+    args = parse_args()
 
-    # Get version of the Mechanical install
-    install_dir, version = get_version()
-    version = f"v{str(version)}"
+    # Get the Mechanical install directory and version (if args.version is not provided)
+    install_dir, v_version = get_mech_install_info(args.version)
 
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent
-    outdir = base_dir / version
+    outdir = base_dir / v_version
 
+    # Set logging level and configuration
     logging.getLogger().setLevel(logging.INFO)
-    logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+    if args.debug:
+        logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+    else:
+        logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
-    # Assembly files to read from the Ansys Mechanical install.
-    assemblies = [
-        "Ansys.Mechanical.DataModel",
-        "Ansys.Mechanical.Interfaces",
-        "Ansys.ACT.Interfaces",
-        "Ansys.ACT.WB1",
-        "Ans.Core",
-    ]
+    # Assembly files to read from the Ansys Mechanical install
+    assemblies = make_assemblies_list(args)
 
-    resolve()
+    resolve(install_dir)
 
-    if make_bool:
-        make(base_dir, outdir, assemblies, version)
+    if args.make:
+        make(base_dir, outdir, assemblies, v_version)
 
-    if clean_bool:
+    if args.clean:
         clean(outdir)
 
 

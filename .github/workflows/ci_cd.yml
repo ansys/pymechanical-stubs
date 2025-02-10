@@ -1,7 +1,7 @@
 name: GitHub CI
 on:
   pull_request:
-  workflow_dispatch: # or workflow_call
+  workflow_dispatch:
     inputs:
       mechanical-version:
         description: "Create stubs for the following Mechanical version:"
@@ -183,7 +183,7 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py > results.txt
+          python src/ansys/mechanical/stubs/stub_generator/create_files.py --make --version ${{ matrix.mechanical.version }} --all-assemblies > results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
