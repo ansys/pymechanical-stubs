@@ -1,7 +1,25 @@
 name: GitHub CI
 on:
   pull_request:
-  workflow_dispatch:
+  workflow_dispatch: # or workflow_call
+    inputs:
+      mechanical-version:
+        description: "Create stubs for the following Mechanical version:"
+        type: choice
+        options:
+          - '251'
+          - '242'
+          - '241'
+        default: '251'
+      python-version:
+        description: "Create stubs using the following python version:"
+        type: choice
+        options:
+          - '3.10'
+          - '3.11'
+          - '3.12'
+          - 'All of the above'
+        default: 'All of the above'
   push:
     tags:
       - "*"
@@ -9,7 +27,8 @@ on:
       - main
 
 env:
-  MAIN_PYTHON_VERSION: '3.10'
+  MAIN_PYTHON_VERSION: '3.12'
+  DEFAULT_MECHANICAL_VERSION: '251'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
   PACKAGE_PATH: src/ansys/mechanical/stubs
@@ -62,22 +81,76 @@ jobs:
           vale-config: doc/.vale.ini
           token: ${{ secrets.GITHUB_TOKEN }}
 
+  set-mechanical-versions:
+    name: Set Mechanical image and version variables
+    runs-on: ubuntu-latest
+    outputs:
+      # '25.1.0'
+      image: ${{ steps.save-versions.outputs.image }}
+      # '251'
+      version: ${{ steps.save-versions.outputs.version }}
+      # ['3.10', '3.11', '3.12']
+      python-version: ${{ steps.save-versions.outputs.python_version }}
+    steps:
+      - id: save-versions
+        run: |
+          if [[ -z "${{ inputs.mechanical-version }}" ]]; then
+            export mech_version=""
+            export mech_image_version=""
+          else
+            export mech_version=${{ inputs.mechanical-version }}
+            # Create the image version from the Mechanical version (251 -> 25.1.0)
+            export mech_image_version=${mech_version:0:2}.${mech_version:2}.0
+          fi
+
+          # Set the variables
+          echo "image=$mech_image_version" >> $GITHUB_OUTPUT
+          echo "version=$mech_version" >> $GITHUB_OUTPUT
+
+          if [[ -z "${{ inputs.python-version }}" ]]; then
+            python_version="['3.10', '3.11', '3.12']"
+          else
+            if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
+              python_version="['3.10', '3.11', '3.12']"
+            else
+              python_version="['${{ inputs.python-version }}']"
+            fi
+          fi
+
+          echo "python_version=$python_version" >> $GITHUB_OUTPUT
+
+  config-matrix:
+    runs-on: ubuntu-latest
+    needs: [set-mechanical-versions]
+    outputs:
+      stubs-matrix: ${{ steps.set-matrix.outputs.stubs_matrix }}
+      test-matrix: ${{ steps.set-matrix.outputs.test_matrix }}
+    steps:
+      - id: set-matrix
+        run: |
+          # Run all stable mechanical versions release tags
+          # For pull requests and merges use latest stable version (251)
+          if ${{ github.event_name == 'workflow_dispatch' }}; then
+            echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "DELIMITER" >> ${GITHUB_OUTPUT}
+          else
+            echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "DELIMITER" >> ${GITHUB_OUTPUT}
+          fi
+
+          echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
+
   gen-stubs:
     name: Generate Mechanical stubs
-    needs: [style, doc-style]
-    runs-on: ${{ matrix.os }}
+    needs: [style, doc-style, config-matrix]
+    runs-on: public-ubuntu-latest-8-cores
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
       options: --entrypoint /bin/bash
     strategy:
-      matrix:
-        os: [public-ubuntu-latest-8-cores]
-        mechanical: [
-          { image: '25.1.0', version: '251' },
-          { image: '24.2.0', version: '242' },
-          { image: '24.1.0', version: '241' },
-        ]
-        python-version: ['3.10', '3.11', '3.12']
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
@@ -137,11 +210,9 @@ jobs:
   smoke-tests:
     name: Build wheelhouse
     runs-on: ${{ matrix.os }}
-    needs: [gen-stubs]
+    needs: [gen-stubs, config-matrix]
     strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        python-version: ['3.10', '3.11', '3.12']
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.test-matrix) }}
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
