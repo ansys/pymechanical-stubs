@@ -91,6 +91,8 @@ jobs:
       version: ${{ steps.save-versions.outputs.version }}
       # ['3.10', '3.11', '3.12']
       python-version: ${{ steps.save-versions.outputs.python_version }}
+      # ['3.12'] -> MAIN_PYTHON_VERSION
+      doc-python-version: ${{ steps.save-versions.outputs.doc_python_version }}
     steps:
       - id: save-versions
         run: |
@@ -109,15 +111,19 @@ jobs:
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
             python_version="['3.10', '3.11', '3.12']"
+            doc_python_version=${{ env.MAIN_PYTHON_VERSION }}
           else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
               python_version="['3.10', '3.11', '3.12']"
+              doc_python_version=${{ env.MAIN_PYTHON_VERSION }}
             else
               python_version="['${{ inputs.python-version }}']"
+              doc_python_version="['${{ inputs.python-version }}']"
             fi
           fi
 
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
+          echo "doc_python_version=$doc_python_version" >> $GITHUB_OUTPUT
 
   config-matrix:
     runs-on: ubuntu-latest
@@ -280,11 +286,11 @@ jobs:
 
   doc-build:
     name: Make html and markdown documentation
-    needs: [smoke-tests]
+    needs: [smoke-tests, set-mechanical-versions]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.10']
+        python-version: ${{ needs.set-mechanical-versions.outputs.doc-python-version }}
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
