@@ -109,17 +109,12 @@ jobs:
           echo "image=$mech_image_version" >> $GITHUB_OUTPUT
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
-          if [[ -z "${{ inputs.python-version }}" ]]; then
+          if [[ -z "${{ inputs.python-version }}" ]] || [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
             python_version="['3.10', '3.11', '3.12']"
-            doc_python_version=${{ env.MAIN_PYTHON_VERSION }}
+            doc_python_version="['${{ env.MAIN_PYTHON_VERSION }}']"
           else
-            if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
-              python_version="['3.10', '3.11', '3.12']"
-              doc_python_version=${{ env.MAIN_PYTHON_VERSION }}
-            else
-              python_version="['${{ inputs.python-version }}']"
-              doc_python_version="['${{ inputs.python-version }}']"
-            fi
+            python_version="['${{ inputs.python-version }}']"
+            doc_python_version="['${{ inputs.python-version }}']"
           fi
 
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
