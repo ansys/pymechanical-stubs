@@ -177,7 +177,7 @@ def generate_stubs(base_dir, outdir, assemblies, str_version):
             init_path = full_path / "__init__.py"
 
             if "__pycache__" not in str(init_path):
-                add_init_imports(path, pathlib.Path(base_dir), init_path)
+                add_init_imports(full_path, pathlib.Path(base_dir), init_path)
 
     print("Done processing all mechanical stubs.")
 
