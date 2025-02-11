@@ -36,6 +36,7 @@ import System  # isort: skip
 ACCEPTED_TYPES = {
     "Ansys.Core.Units.Quantity",
     "Ansys.ACT.Interfaces.Common",
+    "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
 }
 
