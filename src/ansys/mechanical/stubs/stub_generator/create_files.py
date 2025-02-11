@@ -21,13 +21,13 @@
 # SOFTWARE.
 """Create __init__.py files from the content of the assembly XML files."""
 
-import argparse
 import logging
 import os
 import pathlib
 import shutil
 import sys
 
+import click
 import clr
 import generate_content
 
@@ -38,50 +38,6 @@ ACCEPTED_TYPES = {
     "Ansys.ACT.Interfaces.Common",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
 }
-
-
-def parse_args() -> argparse.Namespace:
-    """Parse command line arguments.
-
-    Returns
-    -------
-    argparse.Namespace
-        Parsed command line arguments.
-    """
-    # Set argparser
-    argparser = argparse.ArgumentParser(description="Generate Mechanical stubs.")
-
-    # Arguments for generating stubs
-    argparser.add_argument("--make", action="store_true", help="Generate stubs.")
-    argparser.add_argument("--clean", action="store_true", help="Clean stubs.")
-
-    # Show logging.DEBUG statements
-    argparser.add_argument("--debug", action="store_true", help="Print logging.debug() statements.")
-
-    # Arguments for assemblies to generate stubs for
-    argparser.add_argument(
-        "--all-assemblies", action="store_true", help="Make stubs for all assemblies."
-    )
-    argparser.add_argument(
-        "--mechanical-datamodel",
-        action="store_true",
-        help="Make stubs for Ansys.Mechanical.DataModel.",
-    )
-    argparser.add_argument(
-        "--mechanical-interfaces",
-        action="store_true",
-        help="Make stubs for Ansys.Mechanical.Interfaces.",
-    )
-    argparser.add_argument(
-        "--act-interfaces", action="store_true", help="Make stubs for Ansys.ACT.Interfaces."
-    )
-    argparser.add_argument("--act-wb1", action="store_true", help="Make stubs for Ansys.ACT.WB1.")
-    argparser.add_argument("--ans-core", action="store_true", help="Make stubs for Ans.Core.")
-
-    # Version of the Mechanical install to create stubs for
-    argparser.add_argument("--version", type=str, help="Version of the Mechanical install.")
-
-    return argparser.parse_args()
 
 
 def get_mech_install_info(version: str) -> tuple:
@@ -108,13 +64,30 @@ def get_mech_install_info(version: str) -> tuple:
     return install_dir, f"v{version}"
 
 
-def make_assemblies_list(args: argparse.Namespace) -> list:
+def make_assemblies_list(
+    all_assemblies: bool,
+    mechanical_datamodel: bool,
+    mechanical_interfaces: bool,
+    act_interfaces: bool,
+    act_wb1: bool,
+    ans_core: bool,
+) -> list:
     """Make a list of assemblies to generate stubs for.
 
     Parameters
     ----------
-    args : argparse.Namespace
-        Parsed command line arguments.
+    all_assemblies : bool
+        Make stubs for all assemblies.
+    mechanical_datamodel : bool
+        Make stubs for Ansys.Mechanical.DataModel.
+    mechanical_interfaces : bool
+        Make stubs for Ansys.Mechanical.Interfaces.
+    act_interfaces : bool
+        Make stubs for Ansys.ACT.Interfaces.
+    act_wb1 : bool
+        Make stubs for Ansys.ACT.WB1.
+    ans_core : bool
+        Make stubs for Ans.Core.
 
     Returns
     -------
@@ -122,7 +95,7 @@ def make_assemblies_list(args: argparse.Namespace) -> list:
         List of assemblies to generate stubs for.
     """
     assemblies = []
-    if args.all_assemblies:
+    if all_assemblies:
         assemblies = [
             "Ansys.Mechanical.DataModel",
             "Ansys.Mechanical.Interfaces",
@@ -131,15 +104,15 @@ def make_assemblies_list(args: argparse.Namespace) -> list:
             "Ans.Core",
         ]
     else:
-        if args.mechanical_datamodel:
+        if mechanical_datamodel:
             assemblies.append("Ansys.Mechanical.DataModel")
-        if args.mechanical_interfaces:
+        if mechanical_interfaces:
             assemblies.append("Ansys.Mechanical.Interfaces")
-        if args.act_interfaces:
+        if act_interfaces:
             assemblies.append("Ansys.ACT.Interfaces")
-        if args.act_wb1:
+        if act_wb1:
             assemblies.append("Ansys.ACT.WB1")
-        if args.ans_core:
+        if ans_core:
             assemblies.append("Ans.Core")
 
     return assemblies
@@ -160,46 +133,7 @@ def resolve(install_dir):
     System.AppDomain.CurrentDomain.AssemblyResolve += resolve_handler
 
 
-def clean(outdir):
-    """Remove src/ansys/mechanical/stubs directory.
-
-    Parameters
-    ----------
-    outdir: pathlib.Path
-        Path to where the init files are generated.
-    """
-    shutil.rmtree(outdir, ignore_errors=True)
-
-
-def is_type_published(mod_type: "System.RuntimeType"):
-    """Get published type if it exists.
-
-    Parameters
-    ----------
-    mod_type: System.RuntimeType
-        A module type.
-
-    Returns
-    -------
-    bool
-        `True` if "Ansys.Utilities.Sdk.PublishedAttribute" is in map(str, attrs)
-        `False` if "Ansys.Utilities.Sdk.PublishedAttribute" is not in map(str, attrs)
-    """
-    try:
-        attrs = mod_type.GetCustomAttributes(True)
-        if len(attrs) == 0:
-            try:
-                if mod_type.FullName in ACCEPTED_TYPES:
-                    return True
-            except:  # noqa: E722
-                return False
-
-        return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
-    except Exception as e:
-        print(e)
-
-
-def make(base_dir, outdir, assemblies, str_version):
+def generate_stubs(base_dir, outdir, assemblies, str_version):
     """Generate the __init__.py files from assembly files.
 
     Make __init__.py files in src/ansys/mechanical/stubs, generate
@@ -239,66 +173,97 @@ def make(base_dir, outdir, assemblies, str_version):
     # Add import statements to init files
     for dirpath, dirnames, filenames in os.walk(path):
         for dir in dirnames:
-            full_path = str(pathlib.Path(dirpath, dir))
-            init_path = pathlib.Path(full_path, "__init__.py")
+            full_path = pathlib.Path(dirpath) / dir
+            init_path = full_path / "__init__.py"
 
             if "__pycache__" not in str(init_path):
-                module_list = []
-                original_str = f"{pathlib.Path(base_dir)}{os.sep}"
-                import_str = full_path.replace(original_str, "ansys.mechanical.stubs.").replace(
-                    os.sep, "."
-                )
-                [
-                    module_list.append(pathlib.Path(dir.path).name)
-                    for dir in os.scandir(pathlib.Path(init_path).parent)
-                ]
-
-                # Create list of import statements for each submodule. For example,
-                # "import ansys.mechanical.stubs.v241.Ansys.ACT.Common as Common"
-                # in Ansys/ACT/__init__.py
-                import_statements = []
-                for module in module_list:
-                    if module != "__init__.py":
-                        import_statements.append(f"import {import_str}.{module} as {module}\n")
-
-                # If __init__ file is empty, add a docstring to the top of the file and
-                # write module import statements. For example, Ansys/ACT/__init__.py
-                if (not pathlib.Path.is_file(init_path)) or (
-                    pathlib.Path.stat(init_path).st_size == 0
-                ):
-                    with pathlib.Path.open(init_path, "a") as f:
-                        f.write(f'"""{pathlib.Path(full_path).name} module."""\n')
-                        f.write("".join(import_statements))
-                else:
-                    # Add "import Ansys" to the top of __init__ files
-                    import_statements.insert(0, "if typing.TYPE_CHECKING:\n    import Ansys\n")
-
-                    # Read the __init__ file contents
-                    with pathlib.Path.open(init_path, "r", encoding="utf-8") as f:
-                        content_list = f.readlines()
-                        if '"' in content_list[0]:
-                            content_list.insert(1, "from __future__ import annotations\n")
-                        else:
-                            content_list.insert(0, "from __future__ import annotations\n")
-                        contents = "".join(content_list)
-
-                    # Add all module import statements from import_statements to the top of the file
-                    # For example, Ansys/ACT/Automation/Mechanical
-                    with pathlib.Path.open(init_path, "w", encoding="utf-8") as f:
-                        contents = contents.replace(
-                            "import typing", f"import typing\n{''.join(import_statements)}"
-                        )
-
-                        f.write(contents)
-
-                        datamodel_interfaces = (
-                            pathlib.Path("Ansys") / "Mechanical" / "DataModel" / "Interfaces"
-                        )
-                        if str(datamodel_interfaces) in str(init_path):
-                            f.write("class DataModelObject(IDataModelObject):\n")
-                            f.write("    pass\n")
+                add_init_imports(path, pathlib.Path(base_dir), init_path)
 
     print("Done processing all mechanical stubs.")
+
+
+def is_type_published(mod_type: "System.RuntimeType"):
+    """Get published type if it exists.
+
+    Parameters
+    ----------
+    mod_type: System.RuntimeType
+        A module type.
+
+    Returns
+    -------
+    bool
+        `True` if "Ansys.Utilities.Sdk.PublishedAttribute" is in map(str, attrs)
+        `False` if "Ansys.Utilities.Sdk.PublishedAttribute" is not in map(str, attrs)
+    """
+    try:
+        attrs = mod_type.GetCustomAttributes(True)
+        if len(attrs) == 0:
+            try:
+                if mod_type.FullName in ACCEPTED_TYPES:
+                    return True
+            except:  # noqa: E722
+                return False
+
+        return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
+    except Exception as e:
+        print(e)
+
+
+def add_init_imports(
+    full_path: pathlib.Path, base_dir: pathlib.Path, init_path: pathlib.Path
+) -> None:
+    """Add import statements to init files."""
+    module_list = []
+    original_str = f"{base_dir}{os.sep}"
+    import_str = (
+        str(full_path).replace(original_str, "ansys.mechanical.stubs.").replace(os.sep, ".")
+    )
+    [
+        module_list.append(pathlib.Path(dir.path).name)
+        for dir in os.scandir(pathlib.Path(init_path).parent)
+    ]
+
+    # Create list of import statements for each submodule. For example,
+    # "import ansys.mechanical.stubs.v241.Ansys.ACT.Common as Common"
+    # in Ansys/ACT/__init__.py
+    import_statements = []
+    for module in module_list:
+        if module != "__init__.py":
+            import_statements.append(f"import {import_str}.{module} as {module}\n")
+
+    # If __init__ file is empty, add a docstring to the top of the file and
+    # write module import statements. For example, Ansys/ACT/__init__.py
+    if (not init_path.is_file()) or (init_path.stat().st_size == 0):
+        with init_path.open("a") as f:
+            f.write(f'"""{full_path.name} module."""\n')
+            f.write("".join(import_statements))
+    else:
+        # Add "import Ansys" to the top of __init__ files
+        import_statements.insert(0, "if typing.TYPE_CHECKING:\n    import Ansys\n")
+
+        # Read the __init__ file contents
+        with init_path.open("r", encoding="utf-8") as f:
+            content_list = f.readlines()
+            if '"' in content_list[0]:
+                content_list.insert(1, "from __future__ import annotations\n")
+            else:
+                content_list.insert(0, "from __future__ import annotations\n")
+            contents = "".join(content_list)
+
+        # Add all module import statements from import_statements to the top of the file
+        # For example, Ansys/ACT/Automation/Mechanical
+        with init_path.open("w", encoding="utf-8") as f:
+            contents = contents.replace(
+                "import typing", f"import typing\n{''.join(import_statements)}"
+            )
+
+            f.write(contents)
+
+            datamodel_interfaces = pathlib.Path("Ansys") / "Mechanical" / "DataModel" / "Interfaces"
+            if str(datamodel_interfaces) in str(init_path):
+                f.write("class DataModelObject(IDataModelObject):\n")
+                f.write("    pass\n")
 
 
 def write_docs(commands, tiny_pages_path):
@@ -323,13 +288,84 @@ def write_docs(commands, tiny_pages_path):
             fid.write(f"   {cmd_name}\n")
 
 
-def main():
-    """Generate the Mechanical stubs based on assembly files."""
-    # Get command line arguments
-    args = parse_args()
+def clean_stubs_dir(outdir):
+    """Remove src/ansys/mechanical/stubs directory.
 
-    # Get the Mechanical install directory and version (if args.version is not provided)
-    install_dir, v_version = get_mech_install_info(args.version)
+    Parameters
+    ----------
+    outdir: pathlib.Path
+        Path to where the init files are generated.
+    """
+    shutil.rmtree(outdir, ignore_errors=True)
+
+
+@click.command()
+@click.help_option("--help", "-h")
+@click.option(
+    "--make",
+    is_flag=True,
+    help="Generate stubs.",
+)
+@click.option(
+    "--clean",
+    is_flag=True,
+    help="Clean stubs.",
+)
+@click.option(
+    "--debug",
+    is_flag=True,
+    help="Print logging.debug() statements.",
+)
+@click.option(
+    "--all-assemblies",
+    is_flag=True,
+    help="Make stubs for all assemblies.",
+)
+@click.option(
+    "--mechanical-datamodel",
+    is_flag=True,
+    help="Make stubs for Ansys.Mechanical.DataModel.",
+)
+@click.option(
+    "--mechanical-interfaces",
+    is_flag=True,
+    help="Make stubs for Ansys.Mechanical.Interfaces.",
+)
+@click.option(
+    "--act-interfaces",
+    is_flag=True,
+    help="Make stubs for Ansys.ACT.Interfaces.",
+)
+@click.option(
+    "--act-wb1",
+    is_flag=True,
+    help="Make stubs for Ansys.ACT.WB1.",
+)
+@click.option(
+    "--ans-core",
+    is_flag=True,
+    help="Make stubs for Ans.Core.",
+)
+@click.option(
+    "--version",
+    type=str,
+    help="Version of the Mechanical install.",
+)
+def cli(
+    make: bool,
+    clean: bool,
+    debug: bool,
+    all_assemblies: bool,
+    mechanical_datamodel: bool,
+    mechanical_interfaces: bool,
+    act_interfaces: bool,
+    act_wb1: bool,
+    ans_core: bool,
+    version: str,
+):
+    """Generate the Mechanical stubs based on assembly files."""
+    # Get the Mechanical install directory and version (if version is not provided)
+    install_dir, v_version = get_mech_install_info(version)
 
     # Path in which to generate the __init__.py files
     base_dir = pathlib.Path(__file__).parent.parent
@@ -337,22 +373,29 @@ def main():
 
     # Set logging level and configuration
     logging.getLogger().setLevel(logging.INFO)
-    if args.debug:
+    if debug:
         logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
     else:
         logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
     # Assembly files to read from the Ansys Mechanical install
-    assemblies = make_assemblies_list(args)
+    assemblies = make_assemblies_list(
+        all_assemblies,
+        mechanical_datamodel,
+        mechanical_interfaces,
+        act_interfaces,
+        act_wb1,
+        ans_core,
+    )
 
     resolve(install_dir)
 
-    if args.make:
-        make(base_dir, outdir, assemblies, v_version)
+    if make:
+        generate_stubs(base_dir, outdir, assemblies, v_version)
 
-    if args.clean:
-        clean(outdir)
+    if clean:
+        clean_stubs_dir(outdir)
 
 
 if __name__ == "__main__":
-    main()
+    cli()
