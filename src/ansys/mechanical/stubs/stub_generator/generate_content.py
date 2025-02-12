@@ -51,6 +51,8 @@ C_TO_PYTHON = {
     "System.DateTime": "typing.Any",
     "System.Double": "float",
     "System.Int32": "int",
+    "System.IFormatProvider": "typing.Any",
+    "System.MidpointRounding": "typing.Optional[float]",
     "System.Object": "typing.Any",
     "System.String": "str",
     "System.Tuple": "tuple",
@@ -207,6 +209,11 @@ class DocMember:
             summary_text = summary.text
             # Get text from tags in the summary text if necessary
             for tags in summary:
+                # Covers T:Ansys.Core.Units.Quantity summary containing "para" tags
+                if tags.tag == "para":
+                    summary_text += tags.text
+                    if tags.tail is not None:
+                        summary_text += tags.tail
                 if "paramref" in tags.tag:
                     # Get the text of the member's (self._element's) parameter
                     param_text = self._element.find("param").text
@@ -380,6 +387,8 @@ def fix_str(input_str: str):
         input_str = input_str.replace("+", ".")
     if "[]" in input_str:
         input_str = input_str.replace("[]", "")
+    if "&" in input_str:
+        input_str = input_str.replace("&", "")
     if "`" in input_str:
         input_str = remove_backtick(input_str)
     return input_str
@@ -438,9 +447,15 @@ def get_properties(
     typing.List[Property]
         A list of properties
     """
-    props = [
-        prop for prop in class_type.GetProperties() if (type_filter is None or type_filter(prop))
-    ]
+    if class_type.ToString() == "Ansys.Core.Units.Quantity":
+        props = [prop for prop in class_type.GetProperties()]
+    else:
+        props = [
+            prop
+            for prop in class_type.GetProperties()
+            if (type_filter is None or type_filter(prop))
+        ]
+
     output = []
     for prop in props:
         prop_type = f'"{prop.PropertyType.ToString()}"'
@@ -681,9 +696,12 @@ def get_methods(
     typing.List[Method]
         A list of methods
     """
-    methods = [
-        prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
-    ]
+    if class_type.ToString() == "Ansys.Core.Units.Quantity":
+        methods = [prop for prop in class_type.GetMethods()]
+    else:
+        methods = [
+            prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
+        ]
     output = []
     for method in methods:
         method_return_type = f'"{method.ReturnType.ToString()}"'
@@ -742,14 +760,17 @@ def write_class(
 
     if doc is not None:
         class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
+        print(f"class_doc: {class_doc}")
         write_docstring(buffer, class_doc, 1)
     else:
         write_missing_class_enum_docstring(buffer, class_type.Name, "class")
     buffer.write("\n")
 
     props = get_properties(class_type, doc, type_filter)
+    print(f"props: {props}")
     [write_property(buffer, prop, 1) for prop in props]
     methods = get_methods(class_type, doc, type_filter)
+    print(f"methods: {methods}")
     [write_method(buffer, method, 1) for method in methods]
 
     if len(props) == 0 and len(methods) == 0:
@@ -838,10 +859,20 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
     path = System.Uri.UnescapeDataString(uri.Path)
     directory = System.IO.Path.GetDirectoryName(path)
     xml_path = System.IO.Path.Combine(directory, assembly.GetName().Name + ".xml")
+
     if System.IO.File.Exists(xml_path):
         logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
+    elif "Ans.Core" in assembly.GetName().Name:
+        xml_path = f"{directory}/../../../AnsysEM/common/Framework/bin/Win64/Ans.Core.xml"
+        logging.info(f"Loading xml doc from {xml_path}")
+        doc = load_doc(xml_path)
+        new_doc = {"T:Ansys.Core.Units.Quantity": doc["T:Ansys.Core.Units.Quantity"]}
+        for key, value in doc.items():
+            if "Ansys.Core.Units.Quantity." in key:
+                new_doc[key] = value
+        return new_doc
     else:
         logging.warning("XML Doc file does not exist, skipping")
         return None
