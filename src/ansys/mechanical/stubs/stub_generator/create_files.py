@@ -38,6 +38,7 @@ ACCEPTED_TYPES = {
     "Ansys.ACT.Core.Math.Point3D",
     "Ansys.ACT.Interfaces.Common",
     "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
+    "Ansys.ACT.Mechanical.MechanicalDataModel",
     "Ansys.Core.Units.Quantity",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
 }
