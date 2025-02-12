@@ -782,7 +782,13 @@ def write_module(
         outdir = outdir / token
     logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
-    class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
+    # See https://learn.microsoft.com/en-us/dotnet/api/system.type.isclass?view=net-9.0 for more
+    # information about Properties like IsClass, IsAnsiClass, and IsInterface
+    class_types = [
+        mod_type
+        for mod_type in mod_types
+        if mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface
+    ]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
     with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
@@ -885,7 +891,12 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     if assembly_name == "Ans.Core":
         namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
     elif assembly_name == "Ansys.ACT.Interfaces":
-        namespaces = {"Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"]}
+        namespaces = {
+            "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
+            "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
+        }
+    elif assembly_name == "Ansys.ACT.Core":
+        namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
 
     dump_types(namespaces)
     doc = get_doc(assembly)

@@ -34,9 +34,11 @@ import generate_content
 import System  # isort: skip
 
 ACCEPTED_TYPES = {
-    "Ansys.Core.Units.Quantity",
+    "Ansys.ACT.Core.Math.Point2D",
+    "Ansys.ACT.Core.Math.Point3D",
     "Ansys.ACT.Interfaces.Common",
     "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
+    "Ansys.Core.Units.Quantity",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
 }
 
@@ -69,6 +71,7 @@ def make_assemblies_list(
     all_assemblies: bool,
     mechanical_datamodel: bool,
     mechanical_interfaces: bool,
+    act_core: bool,
     act_interfaces: bool,
     act_wb1: bool,
     ans_core: bool,
@@ -100,6 +103,7 @@ def make_assemblies_list(
         assemblies = [
             "Ansys.Mechanical.DataModel",
             "Ansys.Mechanical.Interfaces",
+            "Ansys.ACT.Core",
             "Ansys.ACT.Interfaces",
             "Ansys.ACT.WB1",
             "Ans.Core",
@@ -109,6 +113,8 @@ def make_assemblies_list(
             assemblies.append("Ansys.Mechanical.DataModel")
         if mechanical_interfaces:
             assemblies.append("Ansys.Mechanical.Interfaces")
+        if act_core:
+            assemblies.append("Ansys.ACT.Core")
         if act_interfaces:
             assemblies.append("Ansys.ACT.Interfaces")
         if act_wb1:
@@ -202,6 +208,7 @@ def is_type_published(mod_type: "System.RuntimeType"):
         if len(attrs) == 0:
             try:
                 if mod_type.FullName in ACCEPTED_TYPES:
+                    logging.debug(f"Found {mod_type.FullName} in ACCEPTED_TYPES")
                     return True
             except:  # noqa: E722
                 return False
@@ -298,6 +305,7 @@ def clean_stubs_dir(outdir):
         Path to where the init files are generated.
     """
     shutil.rmtree(outdir, ignore_errors=True)
+    logging.debug(f"Removed {outdir}")
 
 
 @click.command()
@@ -333,6 +341,11 @@ def clean_stubs_dir(outdir):
     help="Make stubs for Ansys.Mechanical.Interfaces.",
 )
 @click.option(
+    "--act-core",
+    is_flag=True,
+    help="Make stubs for Ansys.ACT.Core.",
+)
+@click.option(
     "--act-interfaces",
     is_flag=True,
     help="Make stubs for Ansys.ACT.Interfaces.",
@@ -359,6 +372,7 @@ def cli(
     all_assemblies: bool,
     mechanical_datamodel: bool,
     mechanical_interfaces: bool,
+    act_core: bool,
     act_interfaces: bool,
     act_wb1: bool,
     ans_core: bool,
@@ -384,18 +398,19 @@ def cli(
         all_assemblies,
         mechanical_datamodel,
         mechanical_interfaces,
-        act_interfaces,
+        act_core,
+        act_interfaces,  # contains Ansys.ACT.Math.Vector3D
         act_wb1,
         ans_core,
     )
 
     resolve(install_dir)
 
+    if clean and outdir.exists():
+        clean_stubs_dir(outdir)
+
     if make:
         generate_stubs(base_dir, outdir, assemblies, v_version)
-
-    if clean:
-        clean_stubs_dir(outdir)
 
 
 if __name__ == "__main__":
