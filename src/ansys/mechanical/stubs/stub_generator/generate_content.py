@@ -31,6 +31,7 @@ import typing
 import xml.etree.ElementTree as ElementTree
 
 import clr
+from create_files import ACCEPTED_TYPES, ADDITIONAL_ASSEMBLY_TYPES, ALL_STUBS_ASSEMBLIES
 import System
 
 C_TO_PYTHON = {
@@ -121,12 +122,12 @@ def is_namespace(something):
         return True
 
 
-def iter_module(module, type_filter: typing.Callable = None):
+def iter_module(assembly, type_filter: typing.Callable = None):
     """Recursively iterates through all namespaces in assembly.
 
     Parameters
     ----------
-    module: System.Reflection.RuntimeAssembly
+    assembly: System.Reflection.RuntimeAssembly
         An assembly module
     type_filter: typing.Callable
         Whether or not the type is published
@@ -136,16 +137,92 @@ def iter_module(module, type_filter: typing.Callable = None):
     string
         The namespace in the assembly file
     """
-    mod_types = module.GetTypes()
+    assembly_types = assembly.GetTypes()
     namespaces = {}
-    for mod_type in mod_types:
-        if type_filter and not type_filter(mod_type):
+
+    for assembly_type in assembly_types:
+        if type_filter and not type_filter(assembly_type):
             continue
-        namespace = mod_type.Namespace
-        if namespace not in namespaces.keys():
-            namespaces[namespace] = [mod_type]
+
+        assembly_name = assembly_type.Assembly.GetName().Name
+        # print(f"assembly name: {assembly_name}")
+        if assembly_name not in ALL_STUBS_ASSEMBLIES:
+            namespaces = additional_assemblies(assembly, assembly_type, namespaces)
         else:
-            namespaces[namespace].append(mod_type)
+            # If the assembly is in
+            namespaces = add_namespace(namespaces, assembly_type)
+
+    # print(namespaces)
+
+    if assembly_name not in ALL_STUBS_ASSEMBLIES:
+        for key, value in namespaces.items():
+            # print(f"key: {key}")
+            for val in value:
+                # print(f"val: {val}")
+                if val.ToString() not in ACCEPTED_TYPES:
+                    # print(f"removing {val.ToString()}")
+                    value.remove(val)
+
+    return namespaces
+
+
+def additional_assemblies(assembly, assembly_type, namespaces) -> dict:
+    """Include specific RuntimeProperties or RuntimeMethods depending on the assembly.
+
+    Parameters
+    ----------
+    assembly: System.Reflection.RuntimeAssembly
+        An assembly module
+    assembly_type: System.Reflection.RuntimeType
+        The type of the assembly
+    namespaces: dict
+        Dictionary of namespaces in the assembly
+
+    Returns
+    -------
+    dict
+        Dictionary of namespaces in the assembly
+    """
+    for key, value in ADDITIONAL_ASSEMBLY_TYPES.items():
+        if key in assembly.ToString():
+            for val in value:
+                if val in assembly_type.ToString():
+                    namespaces = add_namespace(namespaces, assembly_type)
+
+    # if "Ans.Core" in assembly.ToString():
+    #     if "Ansys.Core.Units.Quantity" in assembly_type.ToString():
+    #         namespaces = add_namespace(namespaces, assembly_type)
+    # elif "Ansys.ACT.Core" in assembly.ToString():
+    #     if "Ansys.ACT.Core.Math" in assembly_type.ToString():
+    #         namespaces = add_namespace(namespaces, assembly_type)
+    # elif "Ansys.ACT.Interfaces" in assembly.ToString():
+    #     if "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem" in assembly_type.ToString() or "Ansys.ACT.Math" in assembly_type.ToString():
+    #         namespaces = add_namespace(namespaces, assembly_type)
+
+    return namespaces
+
+
+def add_namespace(namespaces: dict, assembly_type) -> dict:
+    """Add a namespace to the dictionary of namespaces.
+
+    Parameters
+    ----------
+    namespaces: dict
+        Dictionary of namespaces in the assembly
+    assembly_type: System.Reflection.RuntimeType
+        The type of the assembly
+
+    Returns
+    -------
+    dict
+        Dictionary of namespaces in the assembly
+    """
+    namespace = assembly_type.Namespace
+    if namespace not in namespaces.keys():
+        namespaces[namespace] = [assembly_type]
+    else:
+        namespaces[namespace].append(assembly_type)
+
     return namespaces
 
 
@@ -447,14 +524,16 @@ def get_properties(
     typing.List[Property]
         A list of properties
     """
-    if class_type.ToString() == "Ansys.Core.Units.Quantity":
-        props = [prop for prop in class_type.GetProperties()]
-    else:
-        props = [
-            prop
-            for prop in class_type.GetProperties()
-            if (type_filter is None or type_filter(prop))
-        ]
+    # if class_type.ToString() == "Ansys.Core.Units.Quantity":
+    #     props = [prop for prop in class_type.GetProperties()]
+    # else:
+    # print("getting properties")
+    # print(f"class_type properties: {class_type.GetProperties()}")
+    # for prop in class_type.GetProperties():
+    #     print(f"prop: {prop}")
+    props = [
+        prop for prop in class_type.GetProperties() if (type_filter is None or type_filter(prop))
+    ]
 
     output = []
     for prop in props:
@@ -696,12 +775,20 @@ def get_methods(
     typing.List[Method]
         A list of methods
     """
-    if class_type.ToString() == "Ansys.Core.Units.Quantity":
-        methods = [prop for prop in class_type.GetMethods()]
-    else:
-        methods = [
-            prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
-        ]
+    # if class_type.ToString() == "Ansys.Core.Units.Quantity":
+    #     methods = [prop for prop in class_type.GetMethods()]
+    # else:
+    # print("getting methods")
+    # print(f"class_type methods: {class_type.GetMethods()}")
+    # for method in class_type.GetMethods():
+    #     print(f"method: {method}")
+    #     print(f"type_filter: {type_filter}")
+    #     print(f"type_filter(method): {type_filter(method)}")
+    #     print("")
+
+    methods = [
+        prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
+    ]
     output = []
     for method in methods:
         method_return_type = f'"{method.ReturnType.ToString()}"'
@@ -760,17 +847,25 @@ def write_class(
 
     if doc is not None:
         class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
-        print(f"class_doc: {class_doc}")
+        # print(f"class_doc: {class_doc}")
         write_docstring(buffer, class_doc, 1)
     else:
         write_missing_class_enum_docstring(buffer, class_type.Name, "class")
     buffer.write("\n")
 
+    # Create def __init__(self) methods for constructors ({class_type.Name}.#ctor() functions)
+    # Figure out how to do this for multiple constructors like in the Quantity class
+    # Check for Type.TypeInitializer (this may be in the function that calls write_class)
+    # constructors = get_constructors(class_type, doc, type_filter)
+    # print(f"constructors: {constructors}")
+    # [write_constructors(buffer, constructor, 1) for constructor in constructors]
+
     props = get_properties(class_type, doc, type_filter)
-    print(f"props: {props}")
+    # print(f"props: {props}")
     [write_property(buffer, prop, 1) for prop in props]
+
     methods = get_methods(class_type, doc, type_filter)
-    print(f"methods: {methods}")
+    # print(f"methods: {methods}")
     [write_method(buffer, method, 1) for method in methods]
 
     if len(props) == 0 and len(methods) == 0:
@@ -919,15 +1014,17 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     # Type filter is what gets messed up
     namespaces = get_namespaces(assembly, type_filter)
 
-    if assembly_name == "Ans.Core":
-        namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
-    elif assembly_name == "Ansys.ACT.Interfaces":
-        namespaces = {
-            "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
-            "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
-        }
-    elif assembly_name == "Ansys.ACT.Core":
-        namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
+    print(namespaces)
+
+    # if assembly_name == "Ans.Core":
+    #     namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
+    # elif assembly_name == "Ansys.ACT.Interfaces":
+    #     namespaces = {
+    #         "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
+    #         "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
+    #     }
+    # elif assembly_name == "Ansys.ACT.Core":
+    #     namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
 
     dump_types(namespaces)
     doc = get_doc(assembly)

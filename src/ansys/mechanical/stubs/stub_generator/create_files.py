@@ -33,15 +33,43 @@ import generate_content
 
 import System  # isort: skip
 
-ACCEPTED_TYPES = {
+ADDITIONAL_ASSEMBLY_TYPES = {
+    "Ansys.ACT.Core": [
+        "Ansys.ACT.Core.Math.Point2D",
+        "Ansys.ACT.Core.Math.Point3D",
+    ],
+    "Ansys.ACT.Interfaces": [
+        # "Ansys.ACT.Interfaces.Common",
+        "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
+        "Ansys.ACT.Math.Vector3D",
+    ],
+    "Ans.Core": [
+        "Ansys.Core.Units.Quantity",
+    ],
+    # "Ansys.Mechanical.DataModel": [
+    #     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
+    # ],
+    # "Ansys.ACT.WB1": [
+    #     "Ansys.ACT.Mechanical.MechanicalDataModel",
+    # ],
+}
+
+ALL_STUBS_ASSEMBLIES = [
+    "Ansys.Mechanical.DataModel",
+    "Ansys.Mechanical.Interfaces",
+    "Ansys.ACT.WB1",
+]
+
+ACCEPTED_TYPES = [
     "Ansys.ACT.Core.Math.Point2D",
     "Ansys.ACT.Core.Math.Point3D",
-    "Ansys.ACT.Interfaces.Common",
+    # "Ansys.ACT.Interfaces.Common",
     "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
-    "Ansys.ACT.Mechanical.MechanicalDataModel",
+    "Ansys.ACT.Math.Vector3D",
     "Ansys.Core.Units.Quantity",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
-}
+    "Ansys.ACT.Mechanical.MechanicalDataModel",
+]
 
 
 def get_mech_install_info(version: str) -> tuple:
@@ -206,13 +234,28 @@ def is_type_published(mod_type: "System.RuntimeType"):
     """
     try:
         attrs = mod_type.GetCustomAttributes(True)
+        try:
+            name = mod_type.FullName
+        except Exception:
+            name = mod_type.Name
+
+        get_mod_type = mod_type.GetType().ToString()
+
         if len(attrs) == 0:
-            try:
-                if mod_type.FullName in ACCEPTED_TYPES:
-                    logging.debug(f"Found {mod_type.FullName} in ACCEPTED_TYPES")
+            # System.RuntimeType is an assembly
+            if get_mod_type == "System.RuntimeType":
+                if name in ACCEPTED_TYPES:
+                    # logging.debug(f"Found {mod_type.FullName} in ACCEPTED_TYPES")
                     return True
-            except:  # noqa: E722
-                return False
+            elif (
+                get_mod_type == "System.Reflection.RuntimePropertyInfo"
+                or get_mod_type == "System.Reflection.RuntimeMethodInfo"
+            ):
+                return True
+            return False
+
+        # print(f"name: {name}")
+        # print(f"map(str,attrs): {list(map(str, attrs))}")
 
         return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
     except Exception as e:
