@@ -148,7 +148,10 @@ def make(base_dir, outdir, assemblies, str_version):
         for dir in get_dirs:
             full_dir_path = path / dir
             if full_dir_path.is_dir():
-                f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
+                dir_name = dir.name
+                f.write(
+                    f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir_name} as {dir_name}\n"
+                )
         f.close()
 
     # Add import statements to init files
