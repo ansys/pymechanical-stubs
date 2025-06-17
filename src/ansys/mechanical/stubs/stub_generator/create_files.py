@@ -142,12 +142,12 @@ def make(base_dir, outdir, assemblies, str_version):
     path_init = path / "__init__.py"
 
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
-    get_dirs = os.listdir(path)
-    with pathlib.Path.open(path_init, "w") as f:
+    get_dirs = path.iterdir()
+    with path_init.open("w") as f:
         f.write('"""Ansys module."""\n')
         for dir in get_dirs:
             full_dir_path = path / dir
-            if pathlib.Path.is_dir(full_dir_path):
+            if full_dir_path.is_dir():
                 f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
         f.close()
 
@@ -165,7 +165,7 @@ def make(base_dir, outdir, assemblies, str_version):
                 )
                 [
                     module_list.append(pathlib.Path(dir.path).name)
-                    for dir in os.scandir(pathlib.Path(init_path).parent)
+                    for dir in os.scandir(init_path.parent)
                 ]
 
                 # Create list of import statements for each submodule. For example,
