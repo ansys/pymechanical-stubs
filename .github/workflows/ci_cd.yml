@@ -19,6 +19,7 @@ on:
           - '3.10'
           - '3.11'
           - '3.12'
+          - '3.13'
           - 'All of the above'
         default: 'All of the above'
   push:
@@ -90,7 +91,7 @@ jobs:
       image: ${{ steps.save-versions.outputs.image }}
       # '251'
       version: ${{ steps.save-versions.outputs.version }}
-      # ['3.10', '3.11', '3.12']
+      # ['3.10', '3.11', '3.12', '3.13']
       python-version: ${{ steps.save-versions.outputs.python_version }}
     steps:
       - id: save-versions
@@ -109,10 +110,10 @@ jobs:
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
-            python_version="['3.10', '3.11', '3.12']"
+            python_version="['3.10', '3.11', '3.12', '3.13']"
           else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
-              python_version="['3.10', '3.11', '3.12']"
+              python_version="['3.10', '3.11', '3.12', '3.13']"
             else
               python_version="['${{ inputs.python-version }}']"
             fi
@@ -126,6 +127,7 @@ jobs:
     outputs:
       stubs-matrix: ${{ steps.set-matrix.outputs.stubs_matrix }}
       test-matrix: ${{ steps.set-matrix.outputs.test_matrix }}
+      doc-build-matrix: ${{ steps.set-matrix.outputs.doc_build_matrix }}
     steps:
       - id: set-matrix
         run: |
@@ -137,11 +139,12 @@ jobs:
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           fi
 
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
+          echo "doc_build_matrix={\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
 
   gen-stubs:
     name: Generate Mechanical stubs
@@ -279,13 +282,12 @@ jobs:
         path: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
         retention-days: 7
 
-  doc-build:
+  doc-build:  # HTML and Markdown documentation are only uploaded for the main Python version
     name: Make html and markdown documentation
-    needs: [smoke-tests]
+    needs: [config-matrix, smoke-tests]
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        python-version: ['3.10']
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
