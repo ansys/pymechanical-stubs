@@ -11,7 +11,7 @@ on:
           - '251'
           - '242'
           - '241'
-        default: '251'
+        default: '252'
       python-version:
         description: "Create stubs using the following python version:"
         type: choice
@@ -30,7 +30,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.12'
-  DEFAULT_MECHANICAL_VERSION: '251'
+  DEFAULT_MECHANICAL_VERSION: '252'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
   PACKAGE_PATH: src/ansys/mechanical/stubs
@@ -87,9 +87,9 @@ jobs:
     name: Set Mechanical image and version variables
     runs-on: ubuntu-latest
     outputs:
-      # '25.1.0'
+      # '25.2.0'
       image: ${{ steps.save-versions.outputs.image }}
-      # '251'
+      # '252'
       version: ${{ steps.save-versions.outputs.version }}
       # ['3.10', '3.11', '3.12', '3.13']
       python-version: ${{ steps.save-versions.outputs.python_version }}
