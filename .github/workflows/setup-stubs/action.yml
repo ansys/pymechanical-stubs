@@ -79,3 +79,8 @@ runs:
                 if "v" in folder:
                     f.write(f"from .{folder} import *\n")
                     f.write('"""Mechanical installation version."""\n')
+
+        with open("${{ inputs.package-path }}/__init__.py", "r") as f:
+            content = f.readlines()
+            for line in content:
+                print(line.strip())

@@ -221,7 +221,7 @@ jobs:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
 
-    - name: "Download stubs"
+    - name: ""
       uses: ./.github/workflows/setup-stubs/
       with:
         folder-pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
