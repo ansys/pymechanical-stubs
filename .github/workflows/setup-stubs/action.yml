@@ -79,10 +79,3 @@ runs:
                 if "v" in folder:
                     f.write(f"from .{folder} import *\n")
                     f.write('"""Mechanical installation version."""\n')
-
-    - name: "Upload __init__.py files"
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ inputs.folder-pattern }}-init-file
-        path: ${{ inputs.package-path }}/__init__.py
-        retention-days: 7
