@@ -28,7 +28,7 @@ dependencies = []
 
 [project.optional-dependencies]
 build = [
-    "ansys-pythonnet==3.1.0rc3"
+    "ansys-pythonnet==3.1.0rc6"
 ]
 doc = [
     "ansys-sphinx-theme[autoapi]==1.0.11",
