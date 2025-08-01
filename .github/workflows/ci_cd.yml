@@ -283,7 +283,7 @@ jobs:
   doc-build:
     name: Make html and markdown documentation
     needs: [smoke-tests]
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-8-cores
     strategy:
       matrix:
         python-version: ['3.13']
