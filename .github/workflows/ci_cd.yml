@@ -29,7 +29,7 @@ on:
       - main
 
 env:
-  MAIN_PYTHON_VERSION: '3.13'
+  MAIN_PYTHON_VERSION: '3.10'
   DEFAULT_MECHANICAL_VERSION: '252'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
@@ -286,7 +286,7 @@ jobs:
     runs-on: public-ubuntu-latest-8-cores
     strategy:
       matrix:
-        python-version: ['3.13']
+        python-version: ['3.10']
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
