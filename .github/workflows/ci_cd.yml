@@ -138,7 +138,7 @@ jobs:
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           fi
 
