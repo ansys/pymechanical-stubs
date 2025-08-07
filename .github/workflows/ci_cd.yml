@@ -7,10 +7,11 @@ on:
         description: "Create stubs for the following Mechanical version:"
         type: choice
         options:
+          - '252'
           - '251'
           - '242'
           - '241'
-        default: '251'
+        default: '252'
       python-version:
         description: "Create stubs using the following python version:"
         type: choice
@@ -18,6 +19,7 @@ on:
           - '3.10'
           - '3.11'
           - '3.12'
+          - '3.13'
           - 'All of the above'
         default: 'All of the above'
   push:
@@ -28,7 +30,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.12'
-  DEFAULT_MECHANICAL_VERSION: '251'
+  DEFAULT_MECHANICAL_VERSION: '252'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
   PACKAGE_PATH: src/ansys/mechanical/stubs
@@ -85,11 +87,11 @@ jobs:
     name: Set Mechanical image and version variables
     runs-on: ubuntu-latest
     outputs:
-      # '25.1.0'
+      # '25.2.0'
       image: ${{ steps.save-versions.outputs.image }}
-      # '251'
+      # '252'
       version: ${{ steps.save-versions.outputs.version }}
-      # ['3.10', '3.11', '3.12']
+      # ['3.10', '3.11', '3.12', '3.13']
       python-version: ${{ steps.save-versions.outputs.python_version }}
     steps:
       - id: save-versions
@@ -99,7 +101,7 @@ jobs:
             export mech_image_version=""
           else
             export mech_version=${{ inputs.mechanical-version }}
-            # Create the image version from the Mechanical version (251 -> 25.1.0)
+            # Create the image version from the Mechanical version (252 -> 25.2.0)
             export mech_image_version=${mech_version:0:2}.${mech_version:2}.0
           fi
 
@@ -108,10 +110,10 @@ jobs:
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
-            python_version="['3.10', '3.11', '3.12']"
+            python_version="['3.10', '3.11', '3.12', '3.13']"
           else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
-              python_version="['3.10', '3.11', '3.12']"
+              python_version="['3.10', '3.11', '3.12', '3.13']"
             else
               python_version="['${{ inputs.python-version }}']"
             fi
@@ -136,7 +138,7 @@ jobs:
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           fi
 
@@ -456,6 +458,7 @@ jobs:
         uses: ansys/actions/release-github@v8
         with:
           library-name: ${{ env.PACKAGE_NAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   doc-deploy-dev:
     name: "Deploy development documentation"
