@@ -148,7 +148,7 @@ jobs:
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
             echo "doc_build_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical-version\":[\"241\",\"242\",\"251\",\"252\"],\"python-version\":[\'${{ env.MAIN_PYTHON_VERSION }}\']}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical-version\":[\"241\",\"242\",\"251\",\"252\"],\"python-version\":['${{ env.MAIN_PYTHON_VERSION }}']}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
           fi
 
