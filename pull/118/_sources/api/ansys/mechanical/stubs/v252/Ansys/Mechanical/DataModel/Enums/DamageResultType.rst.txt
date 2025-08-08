@@ -1,0 +1,150 @@
+.. vale off
+
+
+
+:class:`DamageResultType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.DamageResultType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DamageResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DamageResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DamageStatus`
+            - 
+          * - :py:attr:`~EnergyDissipatedPerUnitVolume`
+            - 
+          * - :py:attr:`~FiberCompressiveDamageVariable`
+            - 
+          * - :py:attr:`~FiberCompressiveFailureCriterion`
+            - 
+          * - :py:attr:`~FiberTensileDamageVariable`
+            - 
+          * - :py:attr:`~FiberTensileFailureCriterion`
+            - 
+          * - :py:attr:`~MatrixCompressiveDamageVariable`
+            - 
+          * - :py:attr:`~MatrixCompressiveFailureCriterion`
+            - 
+          * - :py:attr:`~MatrixTensileDamageVariable`
+            - 
+          * - :py:attr:`~MatrixTensileFailureCriterion`
+            - 
+          * - :py:attr:`~MaximumFailureCriteria`
+            - 
+          * - :py:attr:`~MullinsDamageVariable`
+            - 
+          * - :py:attr:`~MullinsMaximumPreviousStrainEnergy`
+            - 
+          * - :py:attr:`~ShearDamageVariable`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DamageStatus
+   :value: 281
+
+
+.. py:attribute:: EnergyDissipatedPerUnitVolume
+   :value: 287
+
+
+.. py:attribute:: FiberCompressiveDamageVariable
+   :value: 283
+
+
+.. py:attribute:: FiberCompressiveFailureCriterion
+   :value: 278
+
+
+.. py:attribute:: FiberTensileDamageVariable
+   :value: 282
+
+
+.. py:attribute:: FiberTensileFailureCriterion
+   :value: 277
+
+
+.. py:attribute:: MatrixCompressiveDamageVariable
+   :value: 285
+
+
+.. py:attribute:: MatrixCompressiveFailureCriterion
+   :value: 280
+
+
+.. py:attribute:: MatrixTensileDamageVariable
+   :value: 284
+
+
+.. py:attribute:: MatrixTensileFailureCriterion
+   :value: 279
+
+
+.. py:attribute:: MaximumFailureCriteria
+   :value: 276
+
+
+.. py:attribute:: MullinsDamageVariable
+   :value: 274
+
+
+.. py:attribute:: MullinsMaximumPreviousStrainEnergy
+   :value: 275
+
+
+.. py:attribute:: ShearDamageVariable
+   :value: 286
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,248 @@
+.. vale off
+
+
+
+:class:`SFECommand`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.SFECommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a SFE command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SFECommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Elem`
+            - Gets the element number.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Key`
+            - Gets the value key.
+          * - :py:attr:`~LKey`
+            - Get the load key.
+          * - :py:attr:`~Lab`
+            - Gets the load label.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Values`
+            - Gets the values.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Elem
+   :type: Optional[int]
+
+   
+   Gets the element number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Key
+   :type: Optional[int]
+
+   
+   Gets the value key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LKey
+   :type: Optional[int]
+
+   
+   Get the load key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+   
+   Gets the load label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[tuple[float]]
+
+   
+   Gets the values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

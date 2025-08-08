@@ -1,0 +1,309 @@
+.. vale off
+
+
+
+:class:`TBDataCommand`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CDB.TBDataCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a TBDATA command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TBDataCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DataValueCount`
+            - Gets the number of data values.
+          * - :py:attr:`~DataValues`
+            - Gets the data values.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Lab`
+            - Gets the label.
+          * - :py:attr:`~Mat`
+            - Gets the material number.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Npts`
+            - Gets the number of points, if provided.
+          * - :py:attr:`~Ntemp`
+            - Gets the number of temperature, if provided.
+          * - :py:attr:`~Tbopt`
+            - Gets the option.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DataValueCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of data values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataValues
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.TBDataValues]]
+
+
+   
+   Gets the data values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+
+   
+   Gets the label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Mat
+   :type: Optional[int]
+
+
+   
+   Gets the material number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Npts
+   :type: Optional[int]
+
+
+   
+   Gets the number of points, if provided.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Ntemp
+   :type: Optional[int]
+
+
+   
+   Gets the number of temperature, if provided.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Tbopt
+   :type: Optional[str]
+
+
+   
+   Gets the option.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

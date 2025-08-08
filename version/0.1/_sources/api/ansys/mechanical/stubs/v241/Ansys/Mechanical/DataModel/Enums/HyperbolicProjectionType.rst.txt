@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`HyperbolicProjectionType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.HyperbolicProjectionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the HyperbolicProjectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HyperbolicProjectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: No
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Yes
+   :value: 1
+
+
+
+
+
+
+.. vale on

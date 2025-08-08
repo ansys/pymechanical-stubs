@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`JointInitialPosition`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.JointInitialPosition
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointInitialPosition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointInitialPosition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Override`
+            - 
+          * - :py:attr:`~Unchanged`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Override
+   :value: 1
+
+
+.. py:attribute:: Unchanged
+   :value: 0
+
+
+
+
+
+
+.. vale on

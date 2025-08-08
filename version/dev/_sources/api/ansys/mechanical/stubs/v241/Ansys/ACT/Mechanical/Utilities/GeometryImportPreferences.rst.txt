@@ -1,0 +1,728 @@
+.. vale off
+
+
+
+:class:`GeometryImportPreferences`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences
+
+   Bases: :py:obj:`object`
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GeometryImportPreferences
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AnalysisType`
+            - Specify the analysis type to target during import.
+          * - :py:attr:`~AttributeKey`
+            - If `ProcessAttributes` is `true`, import only those attributes with this prefix.
+          * - :py:attr:`~CADAssociativity`
+            - Allow associativity.
+          * - :py:attr:`~Clean`
+            - Clean unwanted features when importing geometry.
+          * - :py:attr:`~ComparePartsOnUpdate`
+            - Enable mesh preservation on refresh for unmodified entities.
+          * - :py:attr:`~ComparePartsTolerance`
+            - Specifies the tolerance to use when comparing parts.
+          * - :py:attr:`~CoordinateSystemKey`
+            - If `ProcessCoordinateSystems` is `true`, import only those coordinate systems with this
+          * - :py:attr:`~DecomposeDisjointGeometry`
+            - Enable the decomposition of disjoint geometries for the following associative geometry
+          * - :py:attr:`~DoSmartUpdate`
+            - Speed up refreshes for models with unmodified components. Causes changes to other import
+          * - :py:attr:`~EnclosureSymmetryProcessing`
+            - Enable the processing of enclosure and symmetry named selections.
+          * - :py:attr:`~FacetQuality`
+            - Specifies what facet quality should be used for the import.
+          * - :py:attr:`~MixedImportResolution`
+            - Allows mixed-dimension parts to be imported as assembly components with parts of
+          * - :py:attr:`~NamedSelectionKey`
+            - If `ProcessNamedSelections` is `true`, import only those named selections with this
+          * - :py:attr:`~ProcessAttributes`
+            - Import CAD system attributes.
+          * - :py:attr:`~ProcessCoordinateSystems`
+            - Import coordinate systems defined in the CAD source.
+          * - :py:attr:`~ProcessInstances`
+            - Honor part instance specifications.
+          * - :py:attr:`~ProcessLines`
+            - Import lines bodies.
+          * - :py:attr:`~ProcessMaterialProperties`
+            - Import primary material data defined in the CAD source.
+          * - :py:attr:`~ProcessNamedSelections`
+            - Import/create named selections.
+          * - :py:attr:`~ProcessSolids`
+            - Import solid bodies.
+          * - :py:attr:`~ProcessSurfaces`
+            - Import surface bodies.
+          * - :py:attr:`~ProcessWorkPoints`
+            - Import work points.
+          * - :py:attr:`~ReaderSaveFile`
+            - Save the part file of a model after the import.
+          * - :py:attr:`~StitchTolerance`
+            - If `StitchType` is `User`, specifies the tolerance to use for stitching detection.
+          * - :py:attr:`~StitchType`
+            - Specifies how surfaces should be stitched together.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AnalysisType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.AnalysisType]
+
+   
+   Specify the analysis type to target during import.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttributeKey
+   :type: Optional[str]
+
+   
+   If `ProcessAttributes` is `true`, import only those attributes with this prefix.
+   Multiple semicolon-delimited filters may be specified. An empty string matches
+   everything.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CADAssociativity
+   :type: Optional[bool]
+
+   
+   Allow associativity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Clean
+   :type: Optional[bool]
+
+   
+   Clean unwanted features when importing geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ComparePartsOnUpdate
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.ComparePartsOnUpdate]
+
+   
+   Enable mesh preservation on refresh for unmodified entities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ComparePartsTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.ComparePartsTolerance]
+
+   
+   Specifies the tolerance to use when comparing parts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystemKey
+   :type: Optional[str]
+
+   
+   If `ProcessCoordinateSystems` is `true`, import only those coordinate systems with this
+   prefix. Multiple semicolon-delimited filters may be specified. An empty string matches
+   everything.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DecomposeDisjointGeometry
+   :type: Optional[bool]
+
+   
+   Enable the decomposition of disjoint geometries for the following associative geometry
+   interfaces:
+   bullet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DoSmartUpdate
+   :type: Optional[bool]
+
+   
+   Speed up refreshes for models with unmodified components. Causes changes to other import
+   preferences to be ignored during refresh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnclosureSymmetryProcessing
+   :type: Optional[bool]
+
+   
+   Enable the processing of enclosure and symmetry named selections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FacetQuality
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.FacetQuality]
+
+   
+   Specifies what facet quality should be used for the import. 
+   The default value is Source meaning that the facets as represented in the CAD 
+   system or use a Normal option for those that do not have display. 
+   The others are relative settings compared to "normal" facet quality. 
+   Typically, better facet quality requires more memory and may take additional time to import/update.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MixedImportResolution
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.MixedImportResolution]
+
+   
+   Allows mixed-dimension parts to be imported as assembly components with parts of
+   different dimensions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelectionKey
+   :type: Optional[str]
+
+   
+   If `ProcessNamedSelections` is `true`, import only those named selections with this
+   prefix. Multiple semicolon-delimited filters may be specified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessAttributes
+   :type: Optional[bool]
+
+   
+   Import CAD system attributes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessCoordinateSystems
+   :type: Optional[bool]
+
+   
+   Import coordinate systems defined in the CAD source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessInstances
+   :type: Optional[bool]
+
+   
+   Honor part instance specifications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessLines
+   :type: Optional[bool]
+
+   
+   Import lines bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessMaterialProperties
+   :type: Optional[bool]
+
+   
+   Import primary material data defined in the CAD source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessNamedSelections
+   :type: Optional[bool]
+
+   
+   Import/create named selections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessSolids
+   :type: Optional[bool]
+
+   
+   Import solid bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessSurfaces
+   :type: Optional[bool]
+
+   
+   Import surface bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessWorkPoints
+   :type: Optional[bool]
+
+   
+   Import work points.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReaderSaveFile
+   :type: Optional[bool]
+
+   
+   Save the part file of a model after the import.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StitchTolerance
+   :type: Optional[float]
+
+   
+   If `StitchType` is `User`, specifies the tolerance to use for stitching detection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StitchType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.StitchSurfacesOnImport]
+
+   
+   Specifies how surfaces should be stitched together.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

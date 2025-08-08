@@ -1,0 +1,1566 @@
+.. vale off
+
+
+
+:class:`InitialCondition`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.InitialCondition
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a InitialCondition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: InitialCondition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new child CommandSnippet.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ContactStatus`
+            - Gets or sets the ContactStatus.
+          * - :py:attr:`~CoordinateSystem`
+            - Gets or sets the CoordinateSystem.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DefineBy`
+            - Gets or sets the DefineBy.
+          * - :py:attr:`~Direction`
+            - Gets or sets the Direction.
+          * - :py:attr:`~DropDirection`
+            - Gets or sets the DropDirection.
+          * - :py:attr:`~DropHeight`
+            - Gets or sets the DropHeight.
+          * - :py:attr:`~DropTestDefineBy`
+            - Gets or sets the DropTestDefineBy.
+          * - :py:attr:`~ExplicitPreStressTime`
+            - Gets or sets the ExplicitPreStressTime.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~ImpactVelocity`
+            - Gets or sets the ImpactVelocity.
+          * - :py:attr:`~InitialEnvironment`
+            - Gets or sets the InitialEnvironment.
+          * - :py:attr:`~InitialTemperature`
+            - Gets or sets the InitialTemperature.
+          * - :py:attr:`~InitialTemperatureValue`
+            - Gets or sets the InitialTemperatureValue.
+          * - :py:attr:`~InputType`
+            - Gets or sets the InputType.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LoadControl`
+            - Gets or sets the LoadControl.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~ModalEnvironmentHarmonicIC`
+            - Gets or sets the ModalEnvironmentHarmonicIC.
+          * - :py:attr:`~ModalEnvironmentPSDIC`
+            - Gets or sets the ModalEnvironmentPSDIC.
+          * - :py:attr:`~ModalEnvironmentRSIC`
+            - Gets or sets the ModalEnvironmentRSIC.
+          * - :py:attr:`~ModalEnvironmentTransientMSUPIC`
+            - Gets or sets the ModalEnvironmentTransientMSUPIC.
+          * - :py:attr:`~ModalICEnvironment`
+            - Gets or sets the ModalICEnvironment.
+          * - :py:attr:`~Mode`
+            - Gets or sets the Mode.
+          * - :py:attr:`~NewtonRaphsonOption`
+            - Gets the NewtonRaphsonOption.
+          * - :py:attr:`~PreStressDefineBy`
+            - Gets or sets the PreStressDefineBy.
+          * - :py:attr:`~PreStressEnvironmentHarmonicIC`
+            - Gets or sets the PreStressEnvironmentHarmonicIC.
+          * - :py:attr:`~PreStressEnvironmentHarmonicMSUPModal`
+            - Gets the PreStressEnvironmentHarmonicMSUPModal.
+          * - :py:attr:`~PreStressEnvironmentModalIC`
+            - Gets or sets the PreStressEnvironmentModalIC.
+          * - :py:attr:`~PreStressEnvironmentTransientIC`
+            - Gets or sets the PreStressEnvironmentTransientIC.
+          * - :py:attr:`~PreStressEnvironmentTransientMSUPModal`
+            - Gets the PreStressEnvironmentTransientMSUPModal.
+          * - :py:attr:`~PreStressICEnvironment`
+            - Gets or sets the PreStressICEnvironment.
+          * - :py:attr:`~PreStressLoadStep`
+            - Gets or sets the PreStressLoadStep.
+          * - :py:attr:`~PreStressTime`
+            - Gets or sets the PreStressTime.
+          * - :py:attr:`~PressureInitialization`
+            - Gets or sets the PressureInitialization.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReferenceTemperature`
+            - Gets or sets the ReferenceTemperature.
+          * - :py:attr:`~ReportedLoadStep`
+            - Gets the ReportedLoadStep.
+          * - :py:attr:`~ReportedSubStep`
+            - Gets the ReportedSubStep.
+          * - :py:attr:`~ReportedTime`
+            - Gets the ReportedTime.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~Time`
+            - Gets or sets the Time.
+          * - :py:attr:`~TimeStepFactor`
+            - Gets or sets the TimeStepFactor.
+          * - :py:attr:`~TotalMagnitude`
+            - Gets or sets the Magnitude.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~XComponent`
+            - Gets or sets the XComponent.
+          * - :py:attr:`~YComponent`
+            - Gets or sets the YComponent.
+          * - :py:attr:`~ZComponent`
+            - Gets or sets the ZComponent.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactStatus
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PreStressContactStatus]
+
+   
+   Gets or sets the ContactStatus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+   
+   Gets or sets the CoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadDefineBy]
+
+   
+   Gets or sets the DefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Direction
+   :type: Optional[Ansys.ACT.Math.Vector3D]
+
+   
+   Gets or sets the Direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DropDirection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DropDirection]
+
+   
+   Gets or sets the DropDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DropHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the DropHeight.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DropTestDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DropTestDefineBy]
+
+   
+   Gets or sets the DropTestDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExplicitPreStressTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ExplicitPreStressTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImpactVelocity
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ImpactVelocity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialEnvironment
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the InitialEnvironment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialTemperature
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.InitialTemperatureType]
+
+   
+   Gets or sets the InitialTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialTemperatureValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the InitialTemperatureValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InputType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.InitialConditionsType]
+
+   
+   Gets or sets the InputType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSInitialConditionsAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadControl
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PreStressLoadControl]
+
+   
+   Gets or sets the LoadControl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalEnvironmentHarmonicIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the ModalEnvironmentHarmonicIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalEnvironmentPSDIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the ModalEnvironmentPSDIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalEnvironmentRSIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the ModalEnvironmentRSIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalEnvironmentTransientMSUPIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the ModalEnvironmentTransientMSUPIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModalICEnvironment
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the ModalICEnvironment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Mode
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PreStressMode]
+
+   
+   Gets or sets the Mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NewtonRaphsonOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NewtonRaphsonType]
+
+   
+   Gets the NewtonRaphsonOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PreStressStateType]
+
+   
+   Gets or sets the PreStressDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressEnvironmentHarmonicIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the PreStressEnvironmentHarmonicIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressEnvironmentHarmonicMSUPModal
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets the PreStressEnvironmentHarmonicMSUPModal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressEnvironmentModalIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the PreStressEnvironmentModalIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressEnvironmentTransientIC
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the PreStressEnvironmentTransientIC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressEnvironmentTransientMSUPModal
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets the PreStressEnvironmentTransientMSUPModal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressICEnvironment
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Analysis]
+
+   
+   Gets or sets the PreStressICEnvironment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressLoadStep
+   :type: Optional[float]
+
+   
+   Gets or sets the PreStressLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreStressTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the PreStressTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PressureInitialization
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PressureInitializationType]
+
+   
+   Gets or sets the PressureInitialization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ReferenceTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReportedLoadStep
+   :type: Optional[int]
+
+   
+   Gets the ReportedLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReportedSubStep
+   :type: Optional[int]
+
+   
+   Gets the ReportedSubStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReportedTime
+   :type: Optional[float]
+
+   
+   Gets the ReportedTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Time
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeStepFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the TimeStepFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TotalMagnitude
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Magnitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XComponent
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the XComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YComponent
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the YComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZComponent
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ZComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new child CommandSnippet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

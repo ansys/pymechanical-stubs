@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`StiffnessMethodType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.StiffnessMethodType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the StiffnessMethodType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StiffnessMethodType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Augmented`
+            - 
+          * - :py:attr:`~Full`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Augmented
+   :value: 3
+
+
+.. py:attribute:: Full
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 1
+
+
+
+
+
+
+.. vale on

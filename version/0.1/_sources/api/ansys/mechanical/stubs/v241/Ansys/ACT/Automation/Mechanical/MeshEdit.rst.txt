@@ -1,0 +1,656 @@
+.. vale off
+
+
+
+:class:`MeshEdit`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.MeshEdit
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a MeshEdit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshEdit
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddContactMatchGroup`
+            - Creates a new ContactMatchGroup
+          * - :py:attr:`~AddDirectMorph`
+            - Creates a new DirectMorph
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddManualMeshConnection`
+            - Add a new ManualMeshConnection
+          * - :py:attr:`~AddMeshConnectionGroup`
+            - Creates a new MeshConnectionGroup
+          * - :py:attr:`~AddNodeMerge`
+            - Add a new NodeMerge.
+          * - :py:attr:`~AddNodeMergeGroup`
+            - Creates a new NodeMergeGroup
+          * - :py:attr:`~AddNodeMove`
+            - Creates a new NodeMove
+          * - :py:attr:`~AddPullExtrude`
+            - Creates a new MeshExtrude
+          * - :py:attr:`~AddPullRevolve`
+            - Creates a new MeshExtrude
+          * - :py:attr:`~AddPullSurfaceCoating`
+            - Creates a new MeshExtrude
+          * - :py:attr:`~ClearGeneratedData`
+            - Clear the generated data.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateNamedSelectionForSharedNodes`
+            - Run the CreateNamedSelectionForSharedNodes action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Generate`
+            - Generate all mesh edits.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+          * - :py:attr:`~SearchConnectionsForDuplicatePairs`
+            - Run the SearchConnectionsForDuplicatePairs action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AssociateToPullGeometry`
+            - To Migrate Boundary Conditions from profile to resulting Pull bodies.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GenerateAutomaticMeshConnectionsOnRefresh`
+            - Gets or sets the GenerateAutomaticMeshConnectionsOnRefresh.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~TransparencyEnabled`
+            - Gets or sets the TransparencyEnabled.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AssociateToPullGeometry
+   :type: Optional[bool]
+
+   
+   To Migrate Boundary Conditions from profile to resulting Pull bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateAutomaticMeshConnectionsOnRefresh
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutomaticOrManual]
+
+   
+   Gets or sets the GenerateAutomaticMeshConnectionsOnRefresh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSMeshConnectionsParentAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransparencyEnabled
+   :type: Optional[bool]
+
+   
+   Gets or sets the TransparencyEnabled.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactMatchGroup() -> Ansys.ACT.Automation.Mechanical.ContactMatchGroup
+
+   
+   Creates a new ContactMatchGroup
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectMorph() -> Ansys.ACT.Automation.Mechanical.DirectMorph
+
+   
+   Creates a new DirectMorph
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddManualMeshConnection() -> None
+
+   
+   Add a new ManualMeshConnection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMeshConnectionGroup() -> Ansys.ACT.Automation.Mechanical.MeshConnectionGroup
+
+   
+   Creates a new MeshConnectionGroup
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodeMerge() -> None
+
+   
+   Add a new NodeMerge.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodeMergeGroup() -> Ansys.ACT.Automation.Mechanical.NodeMergeGroup
+
+   
+   Creates a new NodeMergeGroup
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodeMove() -> Ansys.ACT.Automation.Mechanical.NodeMove
+
+   
+   Creates a new NodeMove
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPullExtrude() -> Ansys.ACT.Automation.Mechanical.MeshExtrude
+
+   
+   Creates a new MeshExtrude
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPullRevolve() -> Ansys.ACT.Automation.Mechanical.MeshExtrude
+
+   
+   Creates a new MeshExtrude
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPullSurfaceCoating() -> Ansys.ACT.Automation.Mechanical.MeshExtrude
+
+   
+   Creates a new MeshExtrude
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Clear the generated data.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateNamedSelectionForSharedNodes() -> None
+
+   
+   Run the CreateNamedSelectionForSharedNodes action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Generate() -> None
+
+   
+   Generate all mesh edits.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SearchConnectionsForDuplicatePairs() -> None
+
+   
+   Run the SearchConnectionsForDuplicatePairs action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
