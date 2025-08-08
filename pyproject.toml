@@ -31,8 +31,8 @@ build = [
     "ansys-pythonnet==3.1.0rc6"
 ]
 doc = [
-    "ansys-sphinx-theme[autoapi]==1.0.11",
-    "Sphinx==7.3.7",
+    "ansys-sphinx-theme[autoapi]==1.5.3",
+    "Sphinx==7.4.0",
     "sphinx-copybutton==0.5.2",
     "sphinx-notfound-page==1.0.2",
     "sphinx-design==0.6.1",
@@ -140,29 +140,6 @@ showcontent = true
 directory = "miscellaneous"
 name = "Miscellaneous"
 showcontent = true
-
-[[tool.towncrier.type]]
-directory = "documentation"
-name = "Documentation"
-showcontent = true
-
-[[tool.towncrier.type]]
-directory = "maintenance"
-name = "Maintenance"
-showcontent = true
-
-[[tool.towncrier.type]]
-directory = "test"
-name = "Test"
-showcontent = true
-
-[tool.numpydoc_validation]
-checks = [
-    "all",   # report on all checks, except the below
-    "EX01",
-    "SA01",
-    "ES01",
-]
 
 [[tool.towncrier.type]]
 directory = "documentation"
