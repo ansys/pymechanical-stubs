@@ -145,7 +145,7 @@ jobs:
             echo "{\"mechanical\":[{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
-            echo "doc_build_matrix={\"python-version\":[\'${{ env.MAIN_PYTHON_VERSION }}\']}" >> $GITHUB_OUTPUT
+            echo "doc_build_matrix={\"python-version\":['${{ env.MAIN_PYTHON_VERSION }}']}" >> $GITHUB_OUTPUT
           fi
 
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
