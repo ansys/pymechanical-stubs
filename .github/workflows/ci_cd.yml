@@ -139,17 +139,13 @@ jobs:
             echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
-            echo "doc_build_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical-version\":\"${{ needs.set-mechanical-versions.outputs.version }}\",\"python-version\":['${{ inputs.python-version }}']}" >> ${GITHUB_OUTPUT}
-            echo "DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "doc_build_matrix={\"mechanical-revn\":[${{ needs.set-mechanical-versions.outputs.version }}],\"python-version\":[${{ inputs.python-version }}]}" >> $GITHUB_OUTPUT
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
             echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
-            echo "doc_build_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical-version\":[\"241\",\"242\",\"251\",\"252\"],\"python-version\":['${{ env.MAIN_PYTHON_VERSION }}']}" >> ${GITHUB_OUTPUT}
-            echo "DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "doc_build_matrix={\"mechanical-revn\":['241', '242', '251', '252'],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
           fi
 
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
@@ -163,7 +159,9 @@ jobs:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
       options: --entrypoint /bin/bash
     strategy:
-      matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
+      matrix:
+        mechanical-version: ['241', '242', '251', '252']
+        python-version: ['3.12']
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
@@ -305,7 +303,7 @@ jobs:
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
       with:
-        folder-pattern: "v${{ matrix.mechanical-version }}-${{ matrix.python-version }}"
+        folder-pattern: "v${{ matrix.mechanical-revn }}-${{ matrix.python-version }}"
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
 
@@ -391,7 +389,7 @@ jobs:
         github.event_name == 'workflow_dispatch' ||
         matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
-        name: documentation-md-v${{ matrix.mechanical-version }}
+        name: documentation-md-v${{ matrix.mechanical-revn }}
         path: doc/_build/markdown
         retention-days: 7
 
@@ -401,7 +399,7 @@ jobs:
         github.event_name == 'workflow_dispatch' ||
         matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
-        name: documentation-html-v${{ matrix.mechanical-version }}
+        name: documentation-html-v${{ matrix.mechanical-revn }}
         path: doc/_build/html
         retention-days: 7
 
@@ -411,7 +409,7 @@ jobs:
         matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
-        name: documentation-pdf-v${{ matrix.mechanical-version }}
+        name: documentation-pdf-v${{ matrix.mechanical-revn }}
         path: doc/_build/latex/doc.pdf
         retention-days: 7
 
