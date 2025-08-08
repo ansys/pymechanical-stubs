@@ -159,9 +159,7 @@ jobs:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
       options: --entrypoint /bin/bash
     strategy:
-      matrix:
-        mechanical-version: ['241', '242', '251', '252']
-        python-version: ['3.12']
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
     steps:
       - name: "Install Git and clone project"
         uses: actions/checkout@v4
