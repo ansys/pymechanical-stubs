@@ -128,22 +128,28 @@ jobs:
     outputs:
       stubs-matrix: ${{ steps.set-matrix.outputs.stubs_matrix }}
       test-matrix: ${{ steps.set-matrix.outputs.test_matrix }}
+      doc-build-matrix: ${{ steps.set-matrix.outputs.doc_build_matrix }}
     steps:
       - id: set-matrix
         run: |
           # Run all stable mechanical versions release tags
-          # For pull requests and merges use latest stable version (251)
+          # For pull requests and merges use latest stable version (252)
           if ${{ github.event_name == 'workflow_dispatch' }}; then
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
             echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
+
+            echo "doc_build_matrix={\"python-version\":[\'${{ inputs.python-version }}\']}" >> $GITHUB_OUTPUT
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
             echo "{\"mechanical\":[{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
+
+            echo "doc_build_matrix={\"python-version\":[\'${{ env.MAIN_PYTHON_VERSION }}\']}" >> $GITHUB_OUTPUT
           fi
 
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
+
 
   gen-stubs:
     name: Generate Mechanical stubs
@@ -284,11 +290,10 @@ jobs:
   doc-build:
     name: Make html and markdown documentation
     if: github.event.action != 'closed'
-    needs: [smoke-tests]
+    needs: [smoke-tests, config-matrix]
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        python-version: ['3.12']
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
@@ -368,7 +373,9 @@ jobs:
         python scripts/05-remove-link-in-heading.py
 
     - name: "Upload toc.yml"
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      if: |
+        github.event_name == 'workflow_dispatch' ||
+        matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
         name: toc-file
@@ -376,7 +383,9 @@ jobs:
 
     - name: "Upload Markdown documentation"
       uses: actions/upload-artifact@v4
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      if: |
+        github.event_name == 'workflow_dispatch' ||
+        matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-md
         path: doc/_build/markdown
@@ -384,14 +393,18 @@ jobs:
 
     - name: "Upload HTML documentation"
       uses: actions/upload-artifact@v4
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      if: |
+        github.event_name == 'workflow_dispatch' ||
+        matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-html
         path: doc/_build/html
         retention-days: 7
 
     - name: Upload PDF Documentation
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      if: |
+        github.event_name == 'workflow_dispatch' ||
+        matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
         name: documentation-pdf
