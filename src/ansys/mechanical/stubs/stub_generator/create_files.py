@@ -23,7 +23,7 @@
 
 import logging
 import os
-import pathlib
+from pathlib import Path
 import shutil
 import sys
 
@@ -59,7 +59,7 @@ def resolve():
     """Add assembly resolver for the Ansys Mechanical install."""
     install_dir, version = get_version()
     platform_string = "winx64" if os.name == "nt" else "linx64"
-    ansys_mech_embedding_path = str(pathlib.Path(install_dir, "aisol", "bin", platform_string))
+    ansys_mech_embedding_path = str(Path(install_dir, "aisol", "bin", platform_string))
 
     # Append path for Ansys.Mechanical.Embedding
     sys.path.append(ansys_mech_embedding_path)
@@ -134,7 +134,7 @@ def make(base_dir, outdir, assemblies, str_version):
         generate_content.make(outdir, assembly, type_filter=is_type_published)
 
     outdir_init = outdir / "__init__.py"
-    with pathlib.Path.open(outdir_init, "w") as f:
+    with outdir_init.open("w") as f:
         f.write(f'"""Ansys Mechanical {str_version} module."""\n')
         f.write(f"""import ansys.mechanical.stubs.{str_version}.Ansys as Ansys""")
 
@@ -142,30 +142,31 @@ def make(base_dir, outdir, assemblies, str_version):
     path_init = path / "__init__.py"
 
     # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
-    get_dirs = os.listdir(path)
-    with pathlib.Path.open(path_init, "w") as f:
+    with path_init.open("w") as f:
         f.write('"""Ansys module."""\n')
-        for dir in get_dirs:
-            full_dir_path = path / dir
-            if pathlib.Path.is_dir(full_dir_path):
-                f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
+        for directory in path.iterdir():
+            if directory.is_dir():
+                dir_name = directory.name
+                f.write(
+                    f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir_name} as {dir_name}\n"
+                )
         f.close()
 
     # Add import statements to init files
     for dirpath, dirnames, filenames in os.walk(path):
         for dir in dirnames:
-            full_path = str(pathlib.Path(dirpath, dir))
-            init_path = pathlib.Path(full_path, "__init__.py")
+            full_path = str(Path(dirpath, dir))
+            init_path = Path(full_path, "__init__.py")
 
             if "__pycache__" not in str(init_path):
                 module_list = []
-                original_str = f"{pathlib.Path(base_dir)}{os.sep}"
+                original_str = f"{Path(base_dir)}{os.sep}"
                 import_str = full_path.replace(original_str, "ansys.mechanical.stubs.").replace(
                     os.sep, "."
                 )
                 [
-                    module_list.append(pathlib.Path(dir.path).name)
-                    for dir in os.scandir(pathlib.Path(init_path).parent)
+                    module_list.append(Path(dir.path).name)
+                    for dir in os.scandir(Path(init_path).parent)
                 ]
 
                 # Create list of import statements for each submodule. For example,
@@ -178,18 +179,16 @@ def make(base_dir, outdir, assemblies, str_version):
 
                 # If __init__ file is empty, add a docstring to the top of the file and
                 # write module import statements. For example, Ansys/ACT/__init__.py
-                if (not pathlib.Path.is_file(init_path)) or (
-                    pathlib.Path.stat(init_path).st_size == 0
-                ):
-                    with pathlib.Path.open(init_path, "a") as f:
-                        f.write(f'"""{pathlib.Path(full_path).name} module."""\n')
+                if (not init_path.is_file()) or (init_path.stat().st_size == 0):
+                    with init_path.open("a") as f:
+                        f.write(f'"""{Path(full_path).name} module."""\n')
                         f.write("".join(import_statements))
                 else:
                     # Add "import Ansys" to the top of __init__ files
                     import_statements.insert(0, "if typing.TYPE_CHECKING:\n    import Ansys\n")
 
                     # Read the __init__ file contents
-                    with pathlib.Path.open(init_path, "r", encoding="utf-8") as f:
+                    with init_path.open("r", encoding="utf-8") as f:
                         content_list = f.readlines()
                         if '"' in content_list[0]:
                             content_list.insert(1, "from __future__ import annotations\n")
@@ -199,7 +198,7 @@ def make(base_dir, outdir, assemblies, str_version):
 
                     # Add all module import statements from import_statements to the top of the file
                     # For example, Ansys/ACT/Automation/Mechanical
-                    with pathlib.Path.open(init_path, "w", encoding="utf-8") as f:
+                    with init_path.open("w", encoding="utf-8") as f:
                         contents = contents.replace(
                             "import typing", f"import typing\n{''.join(import_statements)}"
                         )
@@ -207,7 +206,7 @@ def make(base_dir, outdir, assemblies, str_version):
                         f.write(contents)
 
                         datamodel_interfaces = (
-                            pathlib.Path("Ansys") / "Mechanical" / "DataModel" / "Interfaces"
+                            Path("Ansys") / "Mechanical" / "DataModel" / "Interfaces"
                         )
                         if str(datamodel_interfaces) in str(init_path):
                             f.write("class DataModelObject(IDataModelObject):\n")
@@ -224,8 +223,8 @@ def write_docs(commands, tiny_pages_path):
     tiny_pages_path : str
         Path to the tiny pages directory.
     """
-    doc_src = pathlib.Path(tiny_pages_path / "docs.rst")
-    with pathlib.Path.open(doc_src, "w") as fid:
+    doc_src = Path(tiny_pages_path / "docs.rst")
+    with doc_src.open("w") as fid:
         fid.write("###################\n")
         fid.write("Autosummary Testing\n")
         fid.write("###################\n")
@@ -248,7 +247,7 @@ def main():
     version = f"v{str(version)}"
 
     # Path in which to generate the __init__.py files
-    base_dir = pathlib.Path(__file__).parent.parent
+    base_dir = Path(__file__).parent.parent
     outdir = base_dir / version
 
     logging.getLogger().setLevel(logging.INFO)
