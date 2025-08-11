@@ -162,7 +162,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: "Install dependencies"
         env:
@@ -224,7 +224,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.test-matrix) }}
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
@@ -296,7 +296,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
@@ -431,7 +431,7 @@ jobs:
     needs: [doc-build]
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: "Set up Python"
       uses: ansys/actions/_setup-python@v10
