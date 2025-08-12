@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ComparePartsOnUpdate`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.ComparePartsOnUpdate
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies how to enable mesh preservation on parts during update.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ComparePartsOnUpdate
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Associatively`
+            - 
+          * - :py:attr:`~NonAssociatively`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Associatively
+   :value: 1
+
+
+.. py:attribute:: NonAssociatively
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+
+
+
+
+.. vale on

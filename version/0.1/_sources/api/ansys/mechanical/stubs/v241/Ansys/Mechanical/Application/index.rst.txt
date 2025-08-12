@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Application``
+===============================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Application
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Application
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Application.Message`
+            - A message.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Application.Messages`
+            - Defines the collection of Mechanical's messages.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Application.ObjectTag`
+            - An instance of an ObjectTag.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Application.ObjectTags`
+            - Defines the collection of Mechanical’s tags.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.Application.Progress`
+            - Defines a Progress.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> Message</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Application/Message>
+    <span class="nf nf-cod-symbol_class"></span> Messages</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Application/Messages>
+    <span class="nf nf-cod-symbol_class"></span> ObjectTag</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Application/ObjectTag>
+    <span class="nf nf-cod-symbol_class"></span> ObjectTags</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Application/ObjectTags>
+    <span class="nf nf-cod-symbol_class"></span> Progress</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/Application/Progress>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Application module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

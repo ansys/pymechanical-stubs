@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`IExtensionManager`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtensionManager
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines an extension manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IExtensionManager
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CurrentExtension`
+            - Gets the current extension.
+          * - :py:attr:`~Extensions`
+            - Gets the list of loaded extensions.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: CurrentExtension
+   :type: Optional[Ansys.ACT.Interfaces.Common.IExtension]
+
+
+   
+   Gets the current extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Extensions
+   :type: Optional[List[Ansys.ACT.Interfaces.Common.IExtension]]
+
+
+   
+   Gets the list of loaded extensions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

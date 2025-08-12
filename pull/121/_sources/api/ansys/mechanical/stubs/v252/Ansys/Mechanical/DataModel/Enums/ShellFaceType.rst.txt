@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ShellFaceType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ShellFaceType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ShellFaceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShellFaceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Bending`
+            - 
+          * - :py:attr:`~Bottom`
+            - 
+          * - :py:attr:`~Middle`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Top`
+            - 
+          * - :py:attr:`~TopAndBottom`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 7
+
+
+.. py:attribute:: Bending
+   :value: 4
+
+
+.. py:attribute:: Bottom
+   :value: 1
+
+
+.. py:attribute:: Middle
+   :value: 3
+
+
+.. py:attribute:: ProgramControlled
+   :value: 5
+
+
+.. py:attribute:: Top
+   :value: 0
+
+
+.. py:attribute:: TopAndBottom
+   :value: 2
+
+
+
+
+
+
+.. vale on

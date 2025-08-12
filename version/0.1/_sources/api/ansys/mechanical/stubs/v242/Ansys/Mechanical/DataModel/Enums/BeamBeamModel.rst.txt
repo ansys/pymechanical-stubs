@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`BeamBeamModel`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.BeamBeamModel
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the BeamBeamModel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BeamBeamModel
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~ExcludeCrossingBeams`
+            - 
+          * - :py:attr:`~OnlyCrossingBeams`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: ExcludeCrossingBeams
+   :value: 1
+
+
+.. py:attribute:: OnlyCrossingBeams
+   :value: 3
+
+
+
+
+
+
+.. vale on

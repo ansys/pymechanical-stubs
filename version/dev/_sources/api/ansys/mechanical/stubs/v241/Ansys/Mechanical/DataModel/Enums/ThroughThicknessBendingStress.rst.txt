@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ThroughThicknessBendingStress`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ThroughThicknessBendingStress
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ThroughThicknessBendingStress.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ThroughThicknessBendingStress
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Ignore`
+            - 
+          * - :py:attr:`~Include`
+            - 
+          * - :py:attr:`~IncludeUsingYDirFormula`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Ignore
+   :value: 1
+
+
+.. py:attribute:: Include
+   :value: 0
+
+
+.. py:attribute:: IncludeUsingYDirFormula
+   :value: 2
+
+
+
+
+
+
+.. vale on
