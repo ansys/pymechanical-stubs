@@ -14,7 +14,6 @@ import os
 from ansys_sphinx_theme import ansys_favicon, get_version_match, pyansys_logo_black
 
 from ansys.mechanical.stubs import __version__
-from ansys.tools.path import find_mechanical
 
 # -- Project information -----------------------------------------------------
 
@@ -141,7 +140,7 @@ html_context = {
     "doc_path": "doc/source",
 }
 
-mech_version = str(find_mechanical()[1]).replace(".", "")
+# mech_version = str(find_mechanical()[1]).replace(".", "")
 
 html_theme_options = {
     "switcher": {
@@ -167,7 +166,7 @@ html_theme_options = {
     ],
     "ansys_sphinx_theme_autoapi": {
         "project": project,
-        "output": f"api/{mech_version}",
+        # "output": f"api/{mech_version}",
         "templates": "_templates/autoapi",
         "member_order": "alphabetical",
     },

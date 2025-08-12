@@ -63,6 +63,9 @@ runs:
         for version in mechanical_versions:
             if not os.path.exists(f"${{ inputs.package-path }}/v{version}"):
                 os.makedirs(f"${{ inputs.package-path }}/v{version}")
+                with open(f"${{ inputs.package-path }}/v{version}/__init__.py", "w") as f:
+                    f.write(f'"""Ansys Mechanical v{version} module."""\n')
+                    f.write(f'import ansys.mechanical.stubs.v{version}.Ansys as Ansys\n')
 
     - name: Create __init__.py in ${{ inputs.package-path }}
       shell: python
