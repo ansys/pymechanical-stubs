@@ -139,6 +139,10 @@ html_context = {
     "github_version": "main",
     "doc_path": "doc/source",
 }
+
+install_dir = os.environ["AWP_ROOTDV_DEV"]
+mech_version = int(install_dir[-3:])
+
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
@@ -163,6 +167,7 @@ html_theme_options = {
     ],
     "ansys_sphinx_theme_autoapi": {
         "project": project,
+        "output": f"api/{mech_version}",
         "templates": "_templates/autoapi",
         "member_order": "alphabetical",
     },
