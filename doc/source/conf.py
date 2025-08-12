@@ -141,7 +141,7 @@ html_context = {
     "doc_path": "doc/source",
 }
 
-mech_version = find_mechanical()[1].replace(".", "")
+mech_version = str(find_mechanical()[1]).replace(".", "")
 
 html_theme_options = {
     "switcher": {
