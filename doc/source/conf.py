@@ -14,6 +14,7 @@ import os
 from ansys_sphinx_theme import ansys_favicon, get_version_match, pyansys_logo_black
 
 from ansys.mechanical.stubs import __version__
+from ansys.tools.path import find_mechanical
 
 # -- Project information -----------------------------------------------------
 
@@ -140,8 +141,7 @@ html_context = {
     "doc_path": "doc/source",
 }
 
-install_dir = os.environ["AWP_ROOTDV_DEV"]
-mech_version = int(install_dir[-3:])
+mech_version = find_mechanical()[1].replace(".", "")
 
 html_theme_options = {
     "switcher": {
