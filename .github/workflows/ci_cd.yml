@@ -2,7 +2,7 @@ name: GitHub CI
 on:
   pull_request:
     types: [opened, reopened, synchronize, edited, closed]
-  workflow_dispatch: # or workflow_call
+  workflow_dispatch:
     inputs:
       mechanical-version:
         description: "Create stubs for the following Mechanical version:"
