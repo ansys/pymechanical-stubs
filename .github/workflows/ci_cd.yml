@@ -330,7 +330,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
-        name: original-documentation-md
+        name: original-documentation-md-v${{ matrix.mechanical-revn }}
         path: doc/_build/markdown
         retention-days: 7
 
@@ -378,7 +378,7 @@ jobs:
         matrix.python-version == env.MAIN_PYTHON_VERSION
       uses: actions/upload-artifact@v4
       with:
-        name: toc-file
+        name: toc-file-v${{ matrix.mechanical-revn }}
         path: output/
 
     - name: "Upload Markdown documentation"
