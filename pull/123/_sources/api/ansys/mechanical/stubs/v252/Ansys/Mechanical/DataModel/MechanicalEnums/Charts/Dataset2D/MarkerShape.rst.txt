@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`MarkerShape`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.MarkerShape(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   An enum that allows user to control the shape of dataset markers on the chart. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

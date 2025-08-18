@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`VectorReductionType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.VectorReductionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the VectorReductionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VectorReductionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Directional`
+            - 
+          * - :py:attr:`~FaceNormal`
+            - 
+          * - :py:attr:`~Magnitude`
+            - 
+          * - :py:attr:`~X`
+            - 
+          * - :py:attr:`~XX`
+            - 
+          * - :py:attr:`~XY`
+            - 
+          * - :py:attr:`~XZ`
+            - 
+          * - :py:attr:`~Y`
+            - 
+          * - :py:attr:`~YY`
+            - 
+          * - :py:attr:`~YZ`
+            - 
+          * - :py:attr:`~Z`
+            - 
+          * - :py:attr:`~ZZ`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Directional
+   :value: 5
+
+
+.. py:attribute:: FaceNormal
+   :value: 4
+
+
+.. py:attribute:: Magnitude
+   :value: 3
+
+
+.. py:attribute:: X
+   :value: 0
+
+
+.. py:attribute:: XX
+   :value: 11
+
+
+.. py:attribute:: XY
+   :value: 6
+
+
+.. py:attribute:: XZ
+   :value: 8
+
+
+.. py:attribute:: Y
+   :value: 1
+
+
+.. py:attribute:: YY
+   :value: 12
+
+
+.. py:attribute:: YZ
+   :value: 7
+
+
+.. py:attribute:: Z
+   :value: 2
+
+
+.. py:attribute:: ZZ
+   :value: 13
+
+
+
+
+
+
+.. vale on

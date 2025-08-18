@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ExternalModel``
+=================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ExternalModel
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ExternalModel
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ExternalModel.ImportedSurfaceLoadType`
+            - Specifies the ImportedSurfaceLoadType.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> ImportedSurfaceLoadType</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/Enums/ExternalModel/ImportedSurfaceLoadType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ExternalModel module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

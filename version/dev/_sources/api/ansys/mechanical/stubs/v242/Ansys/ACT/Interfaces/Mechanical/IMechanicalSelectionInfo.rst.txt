@@ -1,0 +1,118 @@
+.. vale off
+
+
+
+:class:`IMechanicalSelectionInfo`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Mechanical.IMechanicalSelectionInfo
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the mechanical selection information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalSelectionInfo
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementFaceIndices`
+            - Gets the list indices needed to define the face of an element.
+          * - :py:attr:`~Entities`
+            - Gets the list of selected geometry entities.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementFaceIndices
+   :type: Optional[List[int]]
+
+   
+   Gets the list indices needed to define the face of an element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Entities
+   :type: Optional[List[Ansys.ACT.Interfaces.Geometry.IGeoEntity]]
+
+   
+   Gets the list of selected geometry entities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

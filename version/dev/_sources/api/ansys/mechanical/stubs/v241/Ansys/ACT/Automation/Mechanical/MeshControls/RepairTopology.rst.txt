@@ -1,0 +1,1446 @@
+.. vale off
+
+
+
+:class:`RepairTopology`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.MeshControls.RepairTopology
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a RepairTopology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RepairTopology
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GenerateMesh`
+            - Generate the Mesh.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~CollapseShortEdges`
+            - Gets or sets the CollapseShortEdges.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FillHole`
+            - Gets or sets the FillHole.
+          * - :py:attr:`~FillHoleGeometryDefineBy`
+            - Gets or sets the FillHoleGeometryDefineBy.
+          * - :py:attr:`~FillHoleGeometrySelection`
+            - Gets or sets the FillHoleGeometrySelection.
+          * - :py:attr:`~FillHoleNamedSelection`
+            - Gets or sets the FillHoleNamedSelection.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~MergeFaces`
+            - Gets or sets the MergeFaces.
+          * - :py:attr:`~MergeFacesGeometryDefineBy`
+            - Gets or sets the MergeFacesGeometryDefineBy.
+          * - :py:attr:`~MergeFacesGeometrySelection`
+            - Gets or sets the MergeFacesGeometrySelection.
+          * - :py:attr:`~MergeFacesNamedSelection`
+            - Gets or sets the MergeFacesNamedSelection.
+          * - :py:attr:`~PinchFaces`
+            - Gets or sets the PinchFaces.
+          * - :py:attr:`~PinchFacesGeometryDefineBy`
+            - Gets or sets the PinchFacesGeometryDefineBy.
+          * - :py:attr:`~PinchFacesGeometrySelection`
+            - Gets or sets the PinchFacesGeometrySelection.
+          * - :py:attr:`~PinchFacesNamedSelection`
+            - Gets or sets the PinchFacesNamedSelection.
+          * - :py:attr:`~PinchFacesUseLocalScoping`
+            - Gets or sets the PinchFacesUseLocalScoping.
+          * - :py:attr:`~PinchTolerance`
+            - Gets or sets the PinchTolerance.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RemoveSharpAngleFaces`
+            - Gets or sets the RemoveSharpAngleFaces.
+          * - :py:attr:`~RemoveThinFaces`
+            - Gets or sets the RemoveThinFaces.
+          * - :py:attr:`~ScopingMethod`
+            - Gets or sets the ScopingMethod.
+          * - :py:attr:`~SharpAngle`
+            - Gets or sets the SharpAngle.
+          * - :py:attr:`~SharpAngleGeometryDefineBy`
+            - Gets or sets the SharpAngleGeometryDefineBy.
+          * - :py:attr:`~SharpAngleGeometrySelection`
+            - Gets or sets the SharpAngleGeometrySelection.
+          * - :py:attr:`~SharpAngleNamedSelection`
+            - Gets or sets the SharpAngleNamedSelection.
+          * - :py:attr:`~SharpAngleUseLocalScoping`
+            - Gets or sets the SharpAngleUseLocalScoping.
+          * - :py:attr:`~ShortEdgeGeometryDefineBy`
+            - Gets or sets the ShortEdgeGeometryDefineBy.
+          * - :py:attr:`~ShortEdgeGeometrySelection`
+            - Gets or sets the ShortEdgeGeometrySelection.
+          * - :py:attr:`~ShortEdgeLength`
+            - Gets or sets the ShortEdgeLength.
+          * - :py:attr:`~ShortEdgeNamedSelection`
+            - Gets or sets the ShortEdgeNamedSelection.
+          * - :py:attr:`~ShortEdgeUseLocalScoping`
+            - Gets or sets the ShortEdgeUseLocalScoping.
+          * - :py:attr:`~SuppressEdges`
+            - Gets or sets the SuppressEdges.
+          * - :py:attr:`~SuppressEdgesGeometryDefineBy`
+            - Gets or sets the SuppressEdgesGeometryDefineBy.
+          * - :py:attr:`~SuppressEdgesGeometrySelection`
+            - Gets or sets the SuppressEdgesGeometrySelection.
+          * - :py:attr:`~SuppressEdgesNamedSelection`
+            - Gets or sets the SuppressEdgesNamedSelection.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~ThinFaceGeometryDefineBy`
+            - Gets or sets the ThinFaceGeometryDefineBy.
+          * - :py:attr:`~ThinFaceGeometrySelection`
+            - Gets or sets the ThinFaceGeometrySelection.
+          * - :py:attr:`~ThinFaceNamedSelection`
+            - Gets or sets the ThinFaceNamedSelection.
+          * - :py:attr:`~ThinFaceWidth`
+            - Gets or sets the ThinFaceWidth.
+          * - :py:attr:`~ThinFacesUseLocalScoping`
+            - Gets or sets the ThinFacesUseLocalScoping.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CollapseShortEdges
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the CollapseShortEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FillHole
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the FillHole.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FillHoleGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the FillHoleGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FillHoleGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the FillHoleGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FillHoleNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the FillHoleNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSMeshControlAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MergeFaces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the MergeFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MergeFacesGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the MergeFacesGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MergeFacesGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the MergeFacesGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MergeFacesNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the MergeFacesNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchFaces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the PinchFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchFacesGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the PinchFacesGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchFacesGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the PinchFacesGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchFacesNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the PinchFacesNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchFacesUseLocalScoping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the PinchFacesUseLocalScoping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the PinchTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemoveSharpAngleFaces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the RemoveSharpAngleFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemoveThinFaces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the RemoveThinFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the ScopingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharpAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the SharpAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharpAngleGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the SharpAngleGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharpAngleGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the SharpAngleGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharpAngleNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the SharpAngleNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharpAngleUseLocalScoping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the SharpAngleUseLocalScoping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShortEdgeGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the ShortEdgeGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShortEdgeGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the ShortEdgeGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShortEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ShortEdgeLength.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShortEdgeNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the ShortEdgeNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShortEdgeUseLocalScoping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the ShortEdgeUseLocalScoping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SuppressEdges
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the SuppressEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SuppressEdgesGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the SuppressEdgesGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SuppressEdgesGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the SuppressEdgesGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SuppressEdgesNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the SuppressEdgesNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinFaceGeometryDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the ThinFaceGeometryDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinFaceGeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the ThinFaceGeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinFaceNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Gets or sets the ThinFaceNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinFaceWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the ThinFaceWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinFacesUseLocalScoping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+   
+   Gets or sets the ThinFacesUseLocalScoping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateMesh() -> None
+
+   
+   Generate the Mesh.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

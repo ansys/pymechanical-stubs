@@ -1,0 +1,1254 @@
+.. vale off
+
+
+
+:class:`EdgeCrack`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.EdgeCrack
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a EdgeCrack.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EdgeCrack
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BottomFaceNodes`
+            - Gets or sets the BottomFaceNodes.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~CircumferentialDivisions`
+            - Gets or sets the CircumferentialDivisions.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~Contact1Nodes`
+            - Gets or sets the Contact1Nodes.
+          * - :py:attr:`~ContactPairsNodes`
+            - Gets or sets the ContactPairsNodes.
+          * - :py:attr:`~CoordinateSystem`
+            - Gets or sets the CoordinateSystem.
+          * - :py:attr:`~CrackFacesNodes`
+            - Gets or sets the CrackFacesNodes.
+          * - :py:attr:`~CrackFrontDivisions`
+            - Gets or sets the CrackFrontDivisions.
+          * - :py:attr:`~CrackFrontNodes`
+            - Gets or sets the CrackFrontNodes.
+          * - :py:attr:`~CrackID`
+            - Gets the CrackID.
+          * - :py:attr:`~CrackMeshMethod`
+            - Gets or sets the CrackMeshMethod.
+          * - :py:attr:`~CrackShape`
+            - Gets the CrackShape.
+          * - :py:attr:`~CrackSourceType`
+            - Gets the CrackSourceType.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Depth`
+            - Gets or sets the Depth.
+          * - :py:attr:`~EndWidth`
+            - Gets or sets the EndWidth.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FractureAffectedZone`
+            - Gets or sets the FractureAffectedZone.
+          * - :py:attr:`~FractureAffectedZoneHeight`
+            - Gets or sets the FractureAffectedZoneHeight.
+          * - :py:attr:`~FrontElementSize`
+            - Gets or sets the FrontElementSize.
+          * - :py:attr:`~GrowthRate`
+            - Gets or sets the GrowthRate.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LargestContourRadius`
+            - Gets or sets the LargestContourRadius.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~MeshContours`
+            - Gets or sets the MeshContours.
+          * - :py:attr:`~MidWidth`
+            - Gets or sets the MidWidth.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~SolutionContours`
+            - Gets or sets the SolutionContours.
+          * - :py:attr:`~StartWidth`
+            - Gets or sets the StartWidth.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~Target1Nodes`
+            - Gets or sets the Target1Nodes.
+          * - :py:attr:`~TopFaceNodes`
+            - Gets or sets the TopFaceNodes.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~XScaleFactor`
+            - Gets or sets the XScaleFactor.
+          * - :py:attr:`~YScaleFactor`
+            - Gets or sets the YScaleFactor.
+          * - :py:attr:`~ZScaleFactor`
+            - Gets or sets the ZScaleFactor.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BottomFaceNodes
+   :type: Optional[str]
+
+   
+   Gets or sets the BottomFaceNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CircumferentialDivisions
+   :type: Optional[int]
+
+   
+   Gets or sets the CircumferentialDivisions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Contact1Nodes
+   :type: Optional[str]
+
+   
+   Gets or sets the Contact1Nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactPairsNodes
+   :type: Optional[bool]
+
+   
+   Gets or sets the ContactPairsNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+   
+   Gets or sets the CoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackFacesNodes
+   :type: Optional[bool]
+
+   
+   Gets or sets the CrackFacesNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackFrontDivisions
+   :type: Optional[int]
+
+   
+   Gets or sets the CrackFrontDivisions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackFrontNodes
+   :type: Optional[str]
+
+   
+   Gets or sets the CrackFrontNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackID
+   :type: Optional[int]
+
+   
+   Gets the CrackID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackMeshMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CrackMeshMethod]
+
+   
+   Gets or sets the CrackMeshMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackShape
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CrackShapeType]
+
+   
+   Gets the CrackShape.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackSourceType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CrackSourceType]
+
+   
+   Gets the CrackSourceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Depth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the Depth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EndWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the EndWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FractureAffectedZone
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FractureAffectedZone]
+
+   
+   Gets or sets the FractureAffectedZone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FractureAffectedZoneHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the FractureAffectedZoneHeight.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FrontElementSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the FrontElementSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GrowthRate
+   :type: Optional[float]
+
+   
+   Gets or sets the GrowthRate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSCrackAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LargestContourRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the LargestContourRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshContours
+   :type: Optional[int]
+
+   
+   Gets or sets the MeshContours.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MidWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the MidWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionContours
+   :type: Optional[int]
+
+   
+   Gets or sets the SolutionContours.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StartWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the StartWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Target1Nodes
+   :type: Optional[str]
+
+   
+   Gets or sets the Target1Nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopFaceNodes
+   :type: Optional[str]
+
+   
+   Gets or sets the TopFaceNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XScaleFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the XScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YScaleFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the YScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZScaleFactor
+   :type: Optional[float]
+
+   
+   Gets or sets the ZScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

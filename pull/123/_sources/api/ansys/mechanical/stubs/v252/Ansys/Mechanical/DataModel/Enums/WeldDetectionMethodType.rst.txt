@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`WeldDetectionMethodType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.WeldDetectionMethodType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specify the weld detection method type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: WeldDetectionMethodType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Automatic`
+            - 
+          * - :py:attr:`~EdgeMeshSizeFactor`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Automatic
+   :value: 0
+
+
+.. py:attribute:: EdgeMeshSizeFactor
+   :value: 1
+
+
+
+
+
+
+.. vale on

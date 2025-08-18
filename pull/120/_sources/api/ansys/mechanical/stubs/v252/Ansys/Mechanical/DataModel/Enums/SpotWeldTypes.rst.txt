@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SpotWeldTypes`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SpotWeldTypes(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpotWeldTypes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpotWeldTypes
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dependent`
+            - 
+          * - :py:attr:`~Independent`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Dependent
+   :value: 0
+
+
+.. py:attribute:: Independent
+   :value: 1
+
+
+
+
+
+
+.. vale on

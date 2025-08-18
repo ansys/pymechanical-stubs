@@ -1,0 +1,79 @@
+.. vale off
+
+
+
+:class:`EXDSaveProbeDataOnType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EXDSaveProbeDataOnType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDSaveProbeDataOnType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~TimeSteps`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Time
+   :value: 1
+
+
+.. py:attribute:: TimeSteps
+   :value: 0
+
+
+
+
+
+
+.. vale on

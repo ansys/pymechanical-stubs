@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`JointFrictionType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.JointFrictionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointFrictionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointFrictionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ForcedFrictionalSliding`
+            - 
+          * - :py:attr:`~FrictionWithTransitions`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ForcedFrictionalSliding
+   :value: 2
+
+
+.. py:attribute:: FrictionWithTransitions
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

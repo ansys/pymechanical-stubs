@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`TBPTData`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.FE.CDB.TBPTData
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents data for the TBPT command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TBPTData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~TBPTCount`
+            - Gets the number of values.
+          * - :py:attr:`~TBPTValues`
+            - Gets the TBPT values.
+          * - :py:attr:`~Temp`
+            - Gets the temperature.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: TBPTCount
+   :type: Optional[int]
+
+   
+   Gets the number of values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TBPTValues
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.TBPTValues]]
+
+   
+   Gets the TBPT values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Temp
+   :type: Optional[float]
+
+   
+   Gets the temperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`LoadBehavior`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.LoadBehavior
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Beam`
+            - 
+          * - :py:attr:`~Coupled`
+            - 
+          * - :py:attr:`~Deformable`
+            - 
+          * - :py:attr:`~Rigid`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Beam
+   :value: 2
+
+
+.. py:attribute:: Coupled
+   :value: 3
+
+
+.. py:attribute:: Deformable
+   :value: 1
+
+
+.. py:attribute:: Rigid
+   :value: 0
+
+
+
+
+
+
+.. vale on

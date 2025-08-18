@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FatigueToolMethod`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FatigueToolMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FatigueToolMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueToolMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NarrowBand`
+            - 
+          * - :py:attr:`~Steinberg`
+            - 
+          * - :py:attr:`~Wirsching`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NarrowBand
+   :value: 0
+
+
+.. py:attribute:: Steinberg
+   :value: 1
+
+
+.. py:attribute:: Wirsching
+   :value: 2
+
+
+
+
+
+
+.. vale on

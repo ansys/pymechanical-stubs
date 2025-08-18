@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`SolutionCombinationDriverStyle`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SolutionCombinationDriverStyle
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SolutionCombinationDriverStyle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolutionCombinationDriverStyle
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CombinationOfMaximum`
+            - 
+          * - :py:attr:`~CombinationOfMinimum`
+            - 
+          * - :py:attr:`~Default`
+            - 
+          * - :py:attr:`~MaximumOverCombinations`
+            - 
+          * - :py:attr:`~MinimumOverCombinations`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CombinationOfMaximum
+   :value: 2
+
+
+.. py:attribute:: CombinationOfMinimum
+   :value: 4
+
+
+.. py:attribute:: Default
+   :value: 0
+
+
+.. py:attribute:: MaximumOverCombinations
+   :value: 1
+
+
+.. py:attribute:: MinimumOverCombinations
+   :value: 3
+
+
+
+
+
+
+.. vale on

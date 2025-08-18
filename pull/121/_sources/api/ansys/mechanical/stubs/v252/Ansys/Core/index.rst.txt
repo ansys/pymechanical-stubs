@@ -1,0 +1,98 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Core``
+========================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.Core
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Core
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Core.Units`
+            - Units module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Units</api/ansys/mechanical/stubs/v252/Ansys/Core/Units/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Core module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

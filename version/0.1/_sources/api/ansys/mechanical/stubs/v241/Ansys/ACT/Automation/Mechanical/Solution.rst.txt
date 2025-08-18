@@ -1,0 +1,5150 @@
+.. vale off
+
+
+
+:class:`Solution`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Solution
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Solution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Solution
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddAccelerationFrequencyResponse`
+            - Creates a new AccelerationFrequencyResponse
+          * - :py:attr:`~AddAccelerationPhaseResponse`
+            - Creates a new AccelerationPhaseResponse
+          * - :py:attr:`~AddAccelerationProbe`
+            - Creates a new AccelerationProbe
+          * - :py:attr:`~AddAccelerationWaterfallDiagram`
+            - Creates a new AccelerationWaterfallDiagram
+          * - :py:attr:`~AddAccumulatedEquivalentPlasticStrain`
+            - Creates a new AccumulatedEquivalentPlasticStrain
+          * - :py:attr:`~AddAcousticAWeightedSPLFrequencyResponse`
+            - Creates a new AcousticAWeightedSPLFrequencyResponse
+          * - :py:attr:`~AddAcousticAWeightedSoundPressureLevel`
+            - Creates a new AcousticAWeightedSoundPressureLevel
+          * - :py:attr:`~AddAcousticAbsorptionCoefficient`
+            - Creates a new AcousticAbsorptionCoefficient
+          * - :py:attr:`~AddAcousticDiffuseSoundTransmissionLoss`
+            - Creates a new AcousticDiffuseSoundTransmissionLoss
+          * - :py:attr:`~AddAcousticDirectionalVelocityResult`
+            - Creates a new AcousticDirectionalVelocityResult
+          * - :py:attr:`~AddAcousticFarFieldAWeightedSPL`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldAWeightedSPLMic`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldDirectivity`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldMaximumPressure`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldMaximumPressureMic`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldMaximumScatteredPressure`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldPhase`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldPhaseMic`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldSPL`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldSPLMic`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldSPLMicWaterfallDiagram`
+            - Creates a new AcousticFarFieldSPLMicWaterfallDiagram
+          * - :py:attr:`~AddAcousticFarFieldSoundPowerLevel`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFarFieldSoundPowerLevelWaterfallDiagram`
+            - Creates a new AcousticFarFieldSoundPowerLevelWaterfallDiagram
+          * - :py:attr:`~AddAcousticFarFieldTargetStrength`
+            - Creates a new AcousticFarFieldResult
+          * - :py:attr:`~AddAcousticFrequencyBandAWeightedSPL`
+            - Creates a new AcousticFrequencyBandAWeightedSPL
+          * - :py:attr:`~AddAcousticFrequencyBandSPL`
+            - Creates a new AcousticFrequencyBandSPL
+          * - :py:attr:`~AddAcousticKineticEnergy`
+            - Creates a new AcousticKineticEnergy
+          * - :py:attr:`~AddAcousticKineticEnergyFrequencyResponse`
+            - Creates a new AcousticKineticEnergyFrequencyResponse
+          * - :py:attr:`~AddAcousticPotentialEnergy`
+            - Creates a new AcousticPotentialEnergy
+          * - :py:attr:`~AddAcousticPotentialEnergyFrequencyResponse`
+            - Creates a new AcousticPotentialEnergyFrequencyResponse
+          * - :py:attr:`~AddAcousticPressureFrequencyResponse`
+            - Creates a new AcousticPressureFrequencyResponse
+          * - :py:attr:`~AddAcousticPressureResult`
+            - Creates a new AcousticPressureResult
+          * - :py:attr:`~AddAcousticReturnLoss`
+            - Creates a new AcousticReturnLoss
+          * - :py:attr:`~AddAcousticSPLFrequencyResponse`
+            - Creates a new AcousticSPLFrequencyResponse
+          * - :py:attr:`~AddAcousticSoundPressureLevel`
+            - Creates a new AcousticSoundPressureLevel
+          * - :py:attr:`~AddAcousticTotalVelocityResult`
+            - Creates a new AcousticTotalVelocityResult
+          * - :py:attr:`~AddAcousticTransmissionLoss`
+            - Creates a new AcousticTransmissionLoss
+          * - :py:attr:`~AddAcousticVelocityFrequencyResponse`
+            - Creates a new AcousticVelocityFrequencyResponse
+          * - :py:attr:`~AddAngularAccelerationProbe`
+            - Creates a new AngularAccelerationProbe
+          * - :py:attr:`~AddAngularVelocityProbe`
+            - Creates a new AngularVelocityProbe
+          * - :py:attr:`~AddBeamProbe`
+            - Creates a new BeamProbe
+          * - :py:attr:`~AddBeamTool`
+            - Creates a new BeamTool
+          * - :py:attr:`~AddBearingProbe`
+            - Creates a new BearingProbe
+          * - :py:attr:`~AddBendingStressEquivalent`
+            - Creates a new BendingStressEquivalent
+          * - :py:attr:`~AddBendingStressIntensity`
+            - Creates a new BendingStressIntensity
+          * - :py:attr:`~AddBoltPretensionProbe`
+            - Creates a new BoltPretensionProbe
+          * - :py:attr:`~AddBoltTool`
+            - Creates a new BoltTool
+          * - :py:attr:`~AddCampbellDiagram`
+            - Creates a new CampbellDiagram
+          * - :py:attr:`~AddChargeReactionFrequencyResponse`
+            - Creates a new ChargeReactionFrequencyResponse
+          * - :py:attr:`~AddChargeReactionProbe`
+            - Creates a new ChargeReactionProbe
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddCompositeCriterion`
+            - Creates a new CompositeCriterion
+          * - :py:attr:`~AddCompositeFailureTool`
+            - Creates a new CompositeFailureTool
+          * - :py:attr:`~AddCompositeSamplingPointTool`
+            - Creates a new CompositeSamplingPointTool
+          * - :py:attr:`~AddContactDistanceProbe`
+            - Creates a new ContactDistanceProbe
+          * - :py:attr:`~AddContactTool`
+            - Creates a new ContactTool
+          * - :py:attr:`~AddCurrentDensity`
+            - Creates a new CurrentDensity
+          * - :py:attr:`~AddCurrentDensityProbe`
+            - Creates a new CurrentDensityProbe
+          * - :py:attr:`~AddDamageStatus`
+            - Creates a new DamageStatus
+          * - :py:attr:`~AddDeformationFrequencyResponse`
+            - Creates a new DeformationFrequencyResponse
+          * - :py:attr:`~AddDeformationPhaseResponse`
+            - Creates a new DeformationPhaseResponse
+          * - :py:attr:`~AddDeformationProbe`
+            - Creates a new DeformationProbe
+          * - :py:attr:`~AddDirectionalAcceleration`
+            - Creates a new DirectionalAcceleration
+          * - :py:attr:`~AddDirectionalAccelerationPSD`
+            - Creates a new DirectionalAccelerationPSD
+          * - :py:attr:`~AddDirectionalAccelerationRS`
+            - Creates a new DirectionalAccelerationRS
+          * - :py:attr:`~AddDirectionalAxialForce`
+            - Creates a new DirectionalAxialForce
+          * - :py:attr:`~AddDirectionalBendingMoment`
+            - Creates a new DirectionalBendingMoment
+          * - :py:attr:`~AddDirectionalCurrentDensity`
+            - Creates a new DirectionalCurrentDensity
+          * - :py:attr:`~AddDirectionalDeformation`
+            - Creates a new DirectionalDeformation
+          * - :py:attr:`~AddDirectionalElectricFieldIntensity`
+            - Creates a new DirectionalElectricFieldIntensity
+          * - :py:attr:`~AddDirectionalElectricFluxDensity`
+            - Creates a new DirectionalElectricFluxDensity
+          * - :py:attr:`~AddDirectionalElectrostaticForce`
+            - Creates a new DirectionalElectrostaticForce
+          * - :py:attr:`~AddDirectionalHeatFlux`
+            - Creates a new DirectionalHeatFlux
+          * - :py:attr:`~AddDirectionalMagneticFieldIntensity`
+            - Creates a new DirectionalMagneticFieldIntensity
+          * - :py:attr:`~AddDirectionalMagneticFluxDensity`
+            - Creates a new DirectionalMagneticFluxDensity
+          * - :py:attr:`~AddDirectionalShearForce`
+            - Creates a new DirectionalShearForce
+          * - :py:attr:`~AddDirectionalTorsionalMoment`
+            - Creates a new DirectionalTorsionalMoment
+          * - :py:attr:`~AddDirectionalVelocity`
+            - Creates a new DirectionalVelocity
+          * - :py:attr:`~AddDirectionalVelocityPSD`
+            - Creates a new DirectionalVelocityPSD
+          * - :py:attr:`~AddDirectionalVelocityRS`
+            - Creates a new DirectionalVelocityRS
+          * - :py:attr:`~AddElasticStrainFrequencyResponse`
+            - Creates a new ElasticStrainFrequencyResponse
+          * - :py:attr:`~AddElasticStrainIntensity`
+            - Creates a new ElasticStrainIntensity
+          * - :py:attr:`~AddElasticStrainPhaseResponse`
+            - Creates a new ElasticStrainPhaseResponse
+          * - :py:attr:`~AddElectricFieldProbe`
+            - Creates a new ElectricFieldProbe
+          * - :py:attr:`~AddElectricPotential`
+            - Creates a new ElectricPotential
+          * - :py:attr:`~AddElectricVoltage`
+            - Creates a new ElectricVoltage
+          * - :py:attr:`~AddElectromechanicalCouplingCoefficient`
+            - Creates a new ElectromechanicalCouplingCoefficient
+          * - :py:attr:`~AddElementalEulerXYAngle`
+            - Creates a new ElementalEulerXYAngle
+          * - :py:attr:`~AddElementalEulerXZAngle`
+            - Creates a new ElementalEulerXZAngle
+          * - :py:attr:`~AddElementalEulerYZAngle`
+            - Creates a new ElementalEulerYZAngle
+          * - :py:attr:`~AddElementalStrainEnergy`
+            - Creates a new ElementalStrainEnergy
+          * - :py:attr:`~AddElementalTriads`
+            - Creates a new ElementalTriads
+          * - :py:attr:`~AddEmagReactionProbe`
+            - Creates a new EmagReactionProbe
+          * - :py:attr:`~AddEnergyDissipatedPerUnitVolume`
+            - Creates a new EnergyDissipatedPerUnitVolume
+          * - :py:attr:`~AddEnergyProbe`
+            - Creates a new EnergyProbe
+          * - :py:attr:`~AddEquivalentCreepStrain`
+            - Creates a new EquivalentCreepStrain
+          * - :py:attr:`~AddEquivalentCreepStrainRST`
+            - Creates a new EquivalentCreepStrainRST
+          * - :py:attr:`~AddEquivalentElasticStrain`
+            - Creates a new EquivalentElasticStrain
+          * - :py:attr:`~AddEquivalentElasticStrainRST`
+            - Creates a new EquivalentElasticStrainRST
+          * - :py:attr:`~AddEquivalentPlasticStrain`
+            - Creates a new EquivalentPlasticStrain
+          * - :py:attr:`~AddEquivalentPlasticStrainRST`
+            - Creates a new EquivalentPlasticStrainRST
+          * - :py:attr:`~AddEquivalentRadiatedPower`
+            - Creates a new EquivalentRadiatedPower
+          * - :py:attr:`~AddEquivalentRadiatedPowerLevel`
+            - Creates a new EquivalentRadiatedPowerLevel
+          * - :py:attr:`~AddEquivalentRadiatedPowerLevelWaterfallDiagram`
+            - Creates a new EquivalentRadiatedPowerLevelWaterfallDiagram
+          * - :py:attr:`~AddEquivalentRadiatedPowerWaterfallDiagram`
+            - Creates a new EquivalentRadiatedPowerWaterfallDiagram
+          * - :py:attr:`~AddEquivalentStress`
+            - Creates a new EquivalentStress
+          * - :py:attr:`~AddEquivalentStressPSD`
+            - Creates a new EquivalentStressPSD
+          * - :py:attr:`~AddEquivalentStressRS`
+            - Creates a new EquivalentStressRS
+          * - :py:attr:`~AddEquivalentTotalStrain`
+            - Creates a new EquivalentTotalStrain
+          * - :py:attr:`~AddExpansionSettings`
+            - Creates a new ExpansionSettings
+          * - :py:attr:`~AddFatigueTool`
+            - AddFatigueTool method.
+          * - :py:attr:`~AddFiberCompressiveDamageVariable`
+            - Creates a new FiberCompressiveDamageVariable
+          * - :py:attr:`~AddFiberCompressiveFailureCriterion`
+            - Creates a new FiberCompressiveFailureCriterion
+          * - :py:attr:`~AddFiberTensileDamageVariable`
+            - Creates a new FiberTensileDamageVariable
+          * - :py:attr:`~AddFiberTensileFailureCriterion`
+            - Creates a new FiberTensileFailureCriterion
+          * - :py:attr:`~AddFieldIntensityProbe`
+            - Creates a new FieldIntensityProbe
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddFlexibleRotationProbe`
+            - Creates a new FlexibleRotationProbe
+          * - :py:attr:`~AddFluidFlowRate`
+            - Creates a new FluidFlowRate
+          * - :py:attr:`~AddFluidHeatConductionRate`
+            - Creates a new FluidHeatConductionRate
+          * - :py:attr:`~AddFluidHeatTransportRate`
+            - Creates a new FluidHeatTransportRate
+          * - :py:attr:`~AddFluxDensityProbe`
+            - Creates a new FluxDensityProbe
+          * - :py:attr:`~AddFluxLinkage`
+            - Creates a new FluxLinkage
+          * - :py:attr:`~AddForceReaction`
+            - Creates a new ForceReaction
+          * - :py:attr:`~AddForceReactionFrequencyResponse`
+            - Creates a new ForceReactionFrequencyResponse
+          * - :py:attr:`~AddForceReactionsForContactRegions`
+            - AddForceReactionsForContactRegions method.
+          * - :py:attr:`~AddForceSummationProbe`
+            - Creates a new ForceSummationProbe
+          * - :py:attr:`~AddFractureTool`
+            - Creates a new FractureTool
+          * - :py:attr:`~AddGeneralizedPlaneStrainProbe`
+            - Creates a new GeneralizedPlaneStrainProbe
+          * - :py:attr:`~AddGroupedScopedACPResults`
+            - AddGroupedScopedACPResults method.
+          * - :py:attr:`~AddGroupedScopedCustomResult`
+            - AddGroupedScopedCustomResult method.
+          * - :py:attr:`~AddHeatFluxProbe`
+            - Creates a new HeatFluxProbe
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddImpedanceFrequencyResponse`
+            - Creates a new ImpedanceFrequencyResponse
+          * - :py:attr:`~AddImpedanceProbe`
+            - Creates a new ImpedanceProbe
+          * - :py:attr:`~AddInductance`
+            - Creates a new Inductance
+          * - :py:attr:`~AddJointProbe`
+            - Creates a new JointProbe
+          * - :py:attr:`~AddJouleHeat`
+            - Creates a new JouleHeat
+          * - :py:attr:`~AddJouleHeatProbe`
+            - Creates a new JouleHeatProbe
+          * - :py:attr:`~AddLatticeDensity`
+            - Creates a new LatticeDensity
+          * - :py:attr:`~AddLatticeElementalDensity`
+            - Creates a new LatticeElementalDensity
+          * - :py:attr:`~AddLineChart2D`
+            - Creates a new LineChart2D
+          * - :py:attr:`~AddLinePressureResult`
+            - Creates a new LinePressureResult
+          * - :py:attr:`~AddLinearizedEquivalentStress`
+            - Creates a new LinearizedEquivalentStress
+          * - :py:attr:`~AddLinearizedMaximumPrincipalStress`
+            - Creates a new LinearizedMaximumPrincipalStress
+          * - :py:attr:`~AddLinearizedMaximumShearStress`
+            - Creates a new LinearizedMaximumShearStress
+          * - :py:attr:`~AddLinearizedMiddlePrincipalStress`
+            - Creates a new LinearizedMiddlePrincipalStress
+          * - :py:attr:`~AddLinearizedMinimumPrincipalStress`
+            - Creates a new LinearizedMinimumPrincipalStress
+          * - :py:attr:`~AddLinearizedNormalStress`
+            - Creates a new LinearizedNormalStress
+          * - :py:attr:`~AddLinearizedShearStress`
+            - Creates a new LinearizedShearStress
+          * - :py:attr:`~AddLinearizedStressIntensity`
+            - Creates a new LinearizedStressIntensity
+          * - :py:attr:`~AddMCFWaterfallDiagram`
+            - Creates a new MCFWaterfallDiagram
+          * - :py:attr:`~AddMagneticCoenergy`
+            - Creates a new MagneticCoenergy
+          * - :py:attr:`~AddMagneticDirectionalForces`
+            - Creates a new MagneticDirectionalForces
+          * - :py:attr:`~AddMagneticError`
+            - Creates a new MagneticError
+          * - :py:attr:`~AddMagneticFluxProbe`
+            - Creates a new MagneticFluxProbe
+          * - :py:attr:`~AddMagneticPotential`
+            - Creates a new MagneticPotential
+          * - :py:attr:`~AddMagneticTotalForces`
+            - Creates a new MagneticTotalForces
+          * - :py:attr:`~AddMatrixCompressiveDamageVariable`
+            - Creates a new MatrixCompressiveDamageVariable
+          * - :py:attr:`~AddMatrixCompressiveFailureCriterion`
+            - Creates a new MatrixCompressiveFailureCriterion
+          * - :py:attr:`~AddMatrixTensileDamageVariable`
+            - Creates a new MatrixTensileDamageVariable
+          * - :py:attr:`~AddMatrixTensileFailureCriterion`
+            - Creates a new MatrixTensileFailureCriterion
+          * - :py:attr:`~AddMaximumFailureCriteria`
+            - Creates a new MaximumFailureCriteria
+          * - :py:attr:`~AddMaximumPrincipalElasticStrain`
+            - Creates a new MaximumPrincipalElasticStrain
+          * - :py:attr:`~AddMaximumPrincipalStress`
+            - Creates a new MaximumPrincipalStress
+          * - :py:attr:`~AddMaximumPrincipalThermalStrain`
+            - Creates a new MaximumPrincipalThermalStrain
+          * - :py:attr:`~AddMaximumShearElasticStrain`
+            - Creates a new MaximumShearElasticStrain
+          * - :py:attr:`~AddMaximumShearStress`
+            - Creates a new MaximumShearStress
+          * - :py:attr:`~AddMembraneStressEquivalent`
+            - Creates a new MembraneStressEquivalent
+          * - :py:attr:`~AddMembraneStressIntensity`
+            - Creates a new MembraneStressIntensity
+          * - :py:attr:`~AddMiddlePrincipalElasticStrain`
+            - Creates a new MiddlePrincipalElasticStrain
+          * - :py:attr:`~AddMiddlePrincipalStress`
+            - Creates a new MiddlePrincipalStress
+          * - :py:attr:`~AddMiddlePrincipalThermalStrain`
+            - Creates a new MiddlePrincipalThermalStrain
+          * - :py:attr:`~AddMinimumPrincipalElasticStrain`
+            - Creates a new MinimumPrincipalElasticStrain
+          * - :py:attr:`~AddMinimumPrincipalStress`
+            - Creates a new MinimumPrincipalStress
+          * - :py:attr:`~AddMomentReaction`
+            - Creates a new MomentReaction
+          * - :py:attr:`~AddMomentReactionsForContactRegions`
+            - AddMomentReactionsForContactRegions method.
+          * - :py:attr:`~AddMullinsDamageVariable`
+            - Creates a new MullinsDamageVariable
+          * - :py:attr:`~AddMullinsMaximumPreviousStrainEnergy`
+            - Creates a new MullinsMaximumPreviousStrainEnergy
+          * - :py:attr:`~AddNewtonRaphsonResidualCharge`
+            - Creates a new NewtonRaphsonResidualCharge
+          * - :py:attr:`~AddNewtonRaphsonResidualForce`
+            - Creates a new NewtonRaphsonResidualForce
+          * - :py:attr:`~AddNewtonRaphsonResidualHeat`
+            - Creates a new NewtonRaphsonResidualHeat
+          * - :py:attr:`~AddNewtonRaphsonResidualMoment`
+            - Creates a new NewtonRaphsonResidualMoment
+          * - :py:attr:`~AddNodalEulerXYAngle`
+            - Creates a new NodalEulerXYAngle
+          * - :py:attr:`~AddNodalEulerXZAngle`
+            - Creates a new NodalEulerXZAngle
+          * - :py:attr:`~AddNodalEulerYZAngle`
+            - Creates a new NodalEulerYZAngle
+          * - :py:attr:`~AddNodalTriads`
+            - Creates a new NodalTriads
+          * - :py:attr:`~AddNormalElasticStrain`
+            - Creates a new NormalElasticStrain
+          * - :py:attr:`~AddNormalGasketPressure`
+            - Creates a new NormalGasketPressure
+          * - :py:attr:`~AddNormalGasketTotalClosure`
+            - Creates a new NormalGasketTotalClosure
+          * - :py:attr:`~AddNormalStress`
+            - Creates a new NormalStress
+          * - :py:attr:`~AddPosition`
+            - Creates a new Position
+          * - :py:attr:`~AddPrimaryCriterion`
+            - Creates a new PrimaryCriterion
+          * - :py:attr:`~AddPythonCodeEventBased`
+            - Creates a new PythonCodeEventBased
+          * - :py:attr:`~AddPythonResult`
+            - Creates a new PythonResult
+          * - :py:attr:`~AddQualityFactor`
+            - Creates a new QualityFactor
+          * - :py:attr:`~AddRadiationProbe`
+            - Creates a new RadiationProbe
+          * - :py:attr:`~AddReactionProbe`
+            - Creates a new ReactionProbe
+          * - :py:attr:`~AddReactionsForContactRegions`
+            - AddReactionsForContactRegions method.
+          * - :py:attr:`~AddResponsePSD`
+            - Creates a new ResponsePSD
+          * - :py:attr:`~AddResponsePSDTool`
+            - Creates a new ResponsePSDTool
+          * - :py:attr:`~AddResultMesh`
+            - Creates a new ResultMesh
+          * - :py:attr:`~AddRotationProbe`
+            - Creates a new RotationProbe
+          * - :py:attr:`~AddShapeFinder`
+            - Creates a new ShapeFinder
+          * - :py:attr:`~AddShapeFinderElemental`
+            - Creates a new ShapeFinderElemental
+          * - :py:attr:`~AddShearDamageVariable`
+            - Creates a new ShearDamageVariable
+          * - :py:attr:`~AddShearElasticStrain`
+            - Creates a new ShearElasticStrain
+          * - :py:attr:`~AddShearGasketPressure`
+            - Creates a new ShearGasketPressure
+          * - :py:attr:`~AddShearGasketTotalClosure`
+            - Creates a new ShearGasketTotalClosure
+          * - :py:attr:`~AddShearMomentDiagramMSUM`
+            - Creates a new TotalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramMY`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramMZ`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramUSUM`
+            - Creates a new TotalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramUY`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramUZ`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramVSUM`
+            - Creates a new TotalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramVY`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramVZ`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearStress`
+            - Creates a new ShearStress
+          * - :py:attr:`~AddShellBendingStress`
+            - Creates a new ShellBendingStress
+          * - :py:attr:`~AddShellBottomPeakStress`
+            - Creates a new ShellBottomPeakStress
+          * - :py:attr:`~AddShellMembraneStress`
+            - Creates a new ShellMembraneStress
+          * - :py:attr:`~AddShellTopPeakStress`
+            - Creates a new ShellTopPeakStress
+          * - :py:attr:`~AddSpringProbe`
+            - Creates a new SpringProbe
+          * - :py:attr:`~AddStabilizationEnergy`
+            - Creates a new StabilizationEnergy
+          * - :py:attr:`~AddStrainProbe`
+            - Creates a new StrainProbe
+          * - :py:attr:`~AddStressFrequencyResponse`
+            - Creates a new StressFrequencyResponse
+          * - :py:attr:`~AddStressIntensity`
+            - Creates a new StressIntensity
+          * - :py:attr:`~AddStressPhaseResponse`
+            - Creates a new StressPhaseResponse
+          * - :py:attr:`~AddStressProbe`
+            - Creates a new StressProbe
+          * - :py:attr:`~AddStressTool`
+            - Creates a new StressTool
+          * - :py:attr:`~AddStructuralError`
+            - Creates a new StructuralError
+          * - :py:attr:`~AddStructuralStrainEnergy`
+            - Creates a new StructuralStrainEnergy
+          * - :py:attr:`~AddTemperature`
+            - Creates a new TemperatureResult
+          * - :py:attr:`~AddTemperatureProbe`
+            - Creates a new TemperatureProbe
+          * - :py:attr:`~AddThermalError`
+            - Creates a new ThermalError
+          * - :py:attr:`~AddThermalStrain`
+            - Creates a new DirectionalThermalStrain
+          * - :py:attr:`~AddThermalStrainEnergy`
+            - Creates a new ThermalStrainEnergy
+          * - :py:attr:`~AddTopologyDensity`
+            - Creates a new TopologyDensity
+          * - :py:attr:`~AddTopologyElementalDensity`
+            - Creates a new TopologyElementalDensity
+          * - :py:attr:`~AddTorqueProbe`
+            - Creates a new TorqueProbe
+          * - :py:attr:`~AddTotalAcceleration`
+            - Creates a new TotalAcceleration
+          * - :py:attr:`~AddTotalAxialForce`
+            - Creates a new TotalAxialForce
+          * - :py:attr:`~AddTotalBendingMoment`
+            - Creates a new TotalBendingMoment
+          * - :py:attr:`~AddTotalCurrentDensity`
+            - Creates a new TotalCurrentDensity
+          * - :py:attr:`~AddTotalDeformation`
+            - Creates a new TotalDeformation
+          * - :py:attr:`~AddTotalElectricFieldIntensity`
+            - Creates a new TotalElectricFieldIntensity
+          * - :py:attr:`~AddTotalElectricFluxDensity`
+            - Creates a new TotalElectricFluxDensity
+          * - :py:attr:`~AddTotalElectrostaticForce`
+            - Creates a new TotalElectrostaticForce
+          * - :py:attr:`~AddTotalHeatFlux`
+            - Creates a new TotalHeatFlux
+          * - :py:attr:`~AddTotalMagneticFieldIntensity`
+            - Creates a new TotalMagneticFieldIntensity
+          * - :py:attr:`~AddTotalMagneticFluxDensity`
+            - Creates a new TotalMagneticFluxDensity
+          * - :py:attr:`~AddTotalShearForce`
+            - Creates a new TotalShearForce
+          * - :py:attr:`~AddTotalTorsionalMoment`
+            - Creates a new TotalTorsionalMoment
+          * - :py:attr:`~AddTotalVelocity`
+            - Creates a new TotalVelocity
+          * - :py:attr:`~AddUserDefinedResult`
+            - Creates a new UserDefinedResult
+          * - :py:attr:`~AddVariableGraph`
+            - Creates a new VariableGraph
+          * - :py:attr:`~AddVectorAxialForce`
+            - Creates a new VectorAxialForce
+          * - :py:attr:`~AddVectorBendingMoment`
+            - Creates a new VectorBendingMoment
+          * - :py:attr:`~AddVectorDeformation`
+            - Creates a new VectorDeformation
+          * - :py:attr:`~AddVectorHeatFlux`
+            - Creates a new VectorHeatFlux
+          * - :py:attr:`~AddVectorPrincipalElasticStrain`
+            - Creates a new VectorPrincipalElasticStrain
+          * - :py:attr:`~AddVectorPrincipalStress`
+            - Creates a new VectorPrincipalStress
+          * - :py:attr:`~AddVectorShearForce`
+            - Creates a new VectorShearForce
+          * - :py:attr:`~AddVectorTorsionalMoment`
+            - Creates a new VectorTorsionalMoment
+          * - :py:attr:`~AddVelocityFrequencyResponse`
+            - Creates a new VelocityFrequencyResponse
+          * - :py:attr:`~AddVelocityPhaseResponse`
+            - Creates a new VelocityPhaseResponse
+          * - :py:attr:`~AddVelocityProbe`
+            - Creates a new VelocityProbe
+          * - :py:attr:`~AddVelocityWaterfallDiagram`
+            - Creates a new VelocityWaterfallDiagram
+          * - :py:attr:`~AddVoltageFrequencyResponse`
+            - Creates a new VoltageFrequencyResponse
+          * - :py:attr:`~AddVoltageProbe`
+            - Creates a new ElectricVoltageProbe
+          * - :py:attr:`~AddVolume`
+            - Creates a new Volume
+          * - :py:attr:`~AddVolumeProbe`
+            - Creates a new VolumeProbe
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~ClearRemoteStorageData`
+            - ClearRemoteStorageData method.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~CreateResultsAtAllSets`
+            - CreateResultsAtAllSets method.
+          * - :py:attr:`~DeleteRow`
+            - DeleteRow method.
+          * - :py:attr:`~DisconnectRemoteJob`
+            - DisconnectRemoteJob method.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateAllContactTrackers`
+            - EvaluateAllContactTrackers method.
+          * - :py:attr:`~EvaluateAllResults`
+            - Run the EvaluateAllResults action.
+          * - :py:attr:`~EvaluateContactTracker`
+            - EvaluateContactTracker method.
+          * - :py:attr:`~ExecutePostCommands`
+            - Run Execute Post Commands for all post command objects.
+          * - :py:attr:`~ExportSubstructureInCPAFormat`
+            - Export Substructure to cpa file.
+          * - :py:attr:`~ExtractSolutionStatistics`
+            - ExtractSolutionStatistics method.
+          * - :py:attr:`~FetchRemoteResults`
+            - FetchRemoteResults method.
+          * - :py:attr:`~FormatValue`
+            - FormatValue method.
+          * - :py:attr:`~GenerateAdaptedMesh`
+            - GenerateAdaptedMesh method.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetResults`
+            - Gets the Results from the server.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~IsResultFileChanged`
+            - Checks if the referenced result file has been changed.
+          * - :py:attr:`~IsResultFileSameAsLoaded`
+            - Checks if the given result file is same the loaded result file
+          * - :py:attr:`~OpenSolverFilesDirectory`
+            - Run the OpenSolverFilesDirectory action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~ReadAnsysResultFile`
+            - Run the Ansys ReadResults action.
+          * - :py:attr:`~ReadGivenAnsysResultFile`
+            - Run the given Ansys ReadResults action.///
+          * - :py:attr:`~ReadGivenAnsysResultFileByReference`
+            - Run the given Ansys ReadResults by reference action.///
+          * - :py:attr:`~ReconnectRemoteJob`
+            - ReconnectRemoteJob method.
+          * - :py:attr:`~RelinkResultFile`
+            - Relink the result file. This action allows repairing the result file referencing without altering the generated result data.
+          * - :py:attr:`~ReloadResultFile`
+            - Reload the result file. For results-only systems, this action reloads the result mesh data and resets all result scopings.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~Solve`
+            - Run the Solve action.
+          * - :py:attr:`~ValueForResultTracking`
+            - ValueForResultTracking method.
+          * - :py:attr:`~ValueForSolutionTracking`
+            - ValueForSolutionTracking method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllThreadsCPUTime`
+            - AllThreadsCPUTime property.
+          * - :py:attr:`~CalculateBeamSectionResults`
+            - Gets or sets the CalculateBeamSectionResults.
+          * - :py:attr:`~CellId`
+            - Gets the CellId.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CyclicSectorDisplayRangeBegin`
+            - Gets or sets the CyclicSectorDisplayRangeBegin.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DateOfRun`
+            - DateOfRun property.
+          * - :py:attr:`~EigenSolverType`
+            - EigenSolverType property.
+          * - :py:attr:`~ElapsedRunTime`
+            - Gets or sets the ElapsedRunTime.
+          * - :py:attr:`~ElapsedTime`
+            - ElapsedTime property.
+          * - :py:attr:`~ElementLoadBalRatio`
+            - ElementLoadBalRatio property.
+          * - :py:attr:`~ElementSelection`
+            - Gets or sets the ElementSelection.
+          * - :py:attr:`~Elements`
+            - Elements property.
+          * - :py:attr:`~EquationSolverType`
+            - EquationSolverType property.
+          * - :py:attr:`~ExportTopologyFile`
+            - Gets or sets the ExportTopologyFile.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GPUType`
+            - GPUType property.
+          * - :py:attr:`~GpuAcceleration`
+            - GpuAcceleration property.
+          * - :py:attr:`~IOBound`
+            - IOBound property.
+          * - :py:attr:`~IORead`
+            - IORead property.
+          * - :py:attr:`~IOWrite`
+            - IOWrite property.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsAutoHybridParallel`
+            - Returns if Hybrid Parallel was turned on by APDL or not (i.e. Automatic Hybrid Parallel)
+          * - :py:attr:`~IsDataExtractionComplete`
+            - IsDataExtractionComplete property.
+          * - :py:attr:`~IsDistributedSolution`
+            - IsDistributedSolution property.
+          * - :py:attr:`~IsEigenSolver`
+            - IsEigenSolver property.
+          * - :py:attr:`~IsGPUAccelerationRequested`
+            - IsGPUAccelerationRequested property.
+          * - :py:attr:`~IsHybridParallelSolution`
+            - IsHybridParallelSolution property.
+          * - :py:attr:`~IsUnsymmetricMatrixSolve`
+            - IsUnsymmetricMatrixSolve property.
+          * - :py:attr:`~License`
+            - License property.
+          * - :py:attr:`~LicenseCoresAvailable`
+            - LicenseCoresAvailable property.
+          * - :py:attr:`~MPIType`
+            - MPIType property.
+          * - :py:attr:`~MSUPHarmonicAnalysis`
+            - MSUPHarmonicAnalysis property.
+          * - :py:attr:`~MainThreadCPUTime`
+            - MainThreadCPUTime property.
+          * - :py:attr:`~MaximumRefinementLoops`
+            - Gets or sets the MaximumRefinementLoops.
+          * - :py:attr:`~MemoryAvailable`
+            - MemoryAvailable property.
+          * - :py:attr:`~MemoryUsed`
+            - Gets or sets the MemoryUsed.
+          * - :py:attr:`~MeshSource`
+            - Gets or sets the MeshSource.
+          * - :py:attr:`~Nodes`
+            - Nodes property.
+          * - :py:attr:`~NumCoresAvailable`
+            - NumCoresAvailable property.
+          * - :py:attr:`~NumGPURequested`
+            - NumGPURequested property.
+          * - :py:attr:`~NumMachinesRequested`
+            - NumMachinesRequested property.
+          * - :py:attr:`~NumProcRequested`
+            - NumProcRequested property.
+          * - :py:attr:`~NumVirtualCoresAvailable`
+            - NumVirtualCoresAvailable property.
+          * - :py:attr:`~NumberOfDOF`
+            - Get the Number of DOF.
+          * - :py:attr:`~NumberOfProcessesRequested`
+            - NumberOfProcessesRequested property.
+          * - :py:attr:`~NumberofSectors`
+            - Gets or sets the NumberofSectors.
+          * - :py:attr:`~OperatingSystem`
+            - OperatingSystem property.
+          * - :py:attr:`~ProcessorModel`
+            - ProcessorModel property.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RefinementDepth`
+            - Gets or sets the RefinementDepth.
+          * - :py:attr:`~ResultFileDirectory`
+            - Gets the ResultFileDirectory.
+          * - :py:attr:`~ResultFileName`
+            - Gets the ResultFileName.
+          * - :py:attr:`~ResultFilePath`
+            - Get the result file full path.
+          * - :py:attr:`~ResultFileSize`
+            - Gets the ResultFileSize.
+          * - :py:attr:`~ResultFileTimestamp`
+            - Gets the ResultFileTimestamp.
+          * - :py:attr:`~ResultFileUnitSystem`
+            - Gets the ResultFileUnitSystem.
+          * - :py:attr:`~ResultTrackingVectorLength`
+            - ResultTrackingVectorLength property.
+          * - :py:attr:`~SkipSolveCommand`
+            - Gets or sets the flag to avoid issuing the solve command in the MAPDL solver.
+          * - :py:attr:`~SolutionInformation`
+            - Gets the SolutionInformation.
+          * - :py:attr:`~SolutionTrackingVectorLength`
+            - SolutionTrackingVectorLength property.
+          * - :py:attr:`~SolutionUnitSystem`
+            - SolutionUnitSystem property.
+          * - :py:attr:`~SolverData`
+            - SolverData property.
+          * - :py:attr:`~SolverType`
+            - SolverType property.
+          * - :py:attr:`~SparseMode`
+            - Get the Sparse Mode value.
+          * - :py:attr:`~Status`
+            - Gets the Status.
+          * - :py:attr:`~ThreadsPerProcessRequested`
+            - ThreadsPerProcessRequested property.
+          * - :py:attr:`~TimeOfRun`
+            - TimeOfRun property.
+          * - :py:attr:`~TimeToCombineDistributedFiles`
+            - TimeToCombineDistributedFiles property.
+          * - :py:attr:`~TopologyResult`
+            - Gets or sets the TopologyResult.
+          * - :py:attr:`~TotalMemoryUsed`
+            - TotalMemoryUsed property.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WorkingDir`
+            - Gets the WorkingDir.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AllThreadsCPUTime
+   :type: Optional[float]
+
+   
+   AllThreadsCPUTime property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateBeamSectionResults
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateBeamSectionResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CellId
+   :type: Optional[str]
+
+   
+   Gets the CellId.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CyclicSectorDisplayRangeBegin
+   :type: Optional[int]
+
+   
+   Gets or sets the CyclicSectorDisplayRangeBegin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DateOfRun
+   :type: Optional[str]
+
+   
+   DateOfRun property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EigenSolverType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EigenSolverType]
+
+   
+   EigenSolverType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElapsedRunTime
+   :type: Optional[float]
+
+   
+   Gets or sets the ElapsedRunTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElapsedTime
+   :type: Optional[float]
+
+   
+   ElapsedTime property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementLoadBalRatio
+   :type: Optional[float]
+
+   
+   ElementLoadBalRatio property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementSelection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvergenceControlType]
+
+   
+   Gets or sets the ElementSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Elements
+   :type: Optional[int]
+
+   
+   Elements property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EquationSolverType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EquationSolverType]
+
+   
+   EquationSolverType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportTopologyFile
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExportTopologyFileOption]
+
+   
+   Gets or sets the ExportTopologyFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GPUType
+   :type: Optional[Ansys.Common.Interop.DSObjectTypes.DSGPUType]
+
+   
+   GPUType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GpuAcceleration
+   :type: Optional[str]
+
+   
+   GpuAcceleration property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IOBound
+   :type: Optional[bool]
+
+   
+   IOBound property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IORead
+   :type: Optional[float]
+
+   
+   IORead property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IOWrite
+   :type: Optional[float]
+
+   
+   IOWrite property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAnswerSetAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsAutoHybridParallel
+   :type: Optional[bool]
+
+   
+   Returns if Hybrid Parallel was turned on by APDL or not (i.e. Automatic Hybrid Parallel)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsDataExtractionComplete
+   :type: Optional[bool]
+
+   
+   IsDataExtractionComplete property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsDistributedSolution
+   :type: Optional[bool]
+
+   
+   IsDistributedSolution property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsEigenSolver
+   :type: Optional[bool]
+
+   
+   IsEigenSolver property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsGPUAccelerationRequested
+   :type: Optional[bool]
+
+   
+   IsGPUAccelerationRequested property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsHybridParallelSolution
+   :type: Optional[bool]
+
+   
+   IsHybridParallelSolution property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsUnsymmetricMatrixSolve
+   :type: Optional[bool]
+
+   
+   IsUnsymmetricMatrixSolve property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: License
+   :type: Optional[str]
+
+   
+   License property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LicenseCoresAvailable
+   :type: Optional[int]
+
+   
+   LicenseCoresAvailable property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MPIType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MPIType]
+
+   
+   MPIType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MSUPHarmonicAnalysis
+   :type: Optional[bool]
+
+   
+   MSUPHarmonicAnalysis property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MainThreadCPUTime
+   :type: Optional[float]
+
+   
+   MainThreadCPUTime property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumRefinementLoops
+   :type: Optional[int]
+
+   
+   Gets or sets the MaximumRefinementLoops.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MemoryAvailable
+   :type: Optional[float]
+
+   
+   MemoryAvailable property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MemoryUsed
+   :type: Optional[float]
+
+   
+   Gets or sets the MemoryUsed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshSource
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshSourceType]
+
+   
+   Gets or sets the MeshSource.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Nodes
+   :type: Optional[int]
+
+   
+   Nodes property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumCoresAvailable
+   :type: Optional[int]
+
+   
+   NumCoresAvailable property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumGPURequested
+   :type: Optional[int]
+
+   
+   NumGPURequested property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumMachinesRequested
+   :type: Optional[int]
+
+   
+   NumMachinesRequested property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumProcRequested
+   :type: Optional[int]
+
+   
+   NumProcRequested property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumVirtualCoresAvailable
+   :type: Optional[int]
+
+   
+   NumVirtualCoresAvailable property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfDOF
+   :type: Optional[int]
+
+   
+   Get the Number of DOF.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfProcessesRequested
+   :type: Optional[int]
+
+   
+   NumberOfProcessesRequested property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberofSectors
+   :type: Optional[int]
+
+   
+   Gets or sets the NumberofSectors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OperatingSystem
+   :type: Optional[str]
+
+   
+   OperatingSystem property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessorModel
+   :type: Optional[str]
+
+   
+   ProcessorModel property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RefinementDepth
+   :type: Optional[int]
+
+   
+   Gets or sets the RefinementDepth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileDirectory
+   :type: Optional[str]
+
+   
+   Gets the ResultFileDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileName
+   :type: Optional[str]
+
+   
+   Gets the ResultFileName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFilePath
+   :type: Optional[str]
+
+   
+   Get the result file full path.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileSize
+   :type: Optional[float]
+
+   
+   Gets the ResultFileSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileTimestamp
+   :type: Optional[str]
+
+   
+   Gets the ResultFileTimestamp.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileUnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+   
+   Gets the ResultFileUnitSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultTrackingVectorLength
+   :type: Optional[int]
+
+   
+   ResultTrackingVectorLength property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SkipSolveCommand
+   :type: Optional[bool]
+
+   
+   Gets or sets the flag to avoid issuing the solve command in the MAPDL solver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionInformation
+   :type: Optional[Ansys.ACT.Automation.Mechanical.SolutionInformation]
+
+   
+   Gets the SolutionInformation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionTrackingVectorLength
+   :type: Optional[int]
+
+   
+   SolutionTrackingVectorLength property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionUnitSystem
+   :type: Optional[Ansys.ACT.Interfaces.Common.MechanicalUnitSystem]
+
+   
+   SolutionUnitSystem property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverData
+   :type: Optional[Any]
+
+   
+   SolverData property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverType]
+
+   
+   SolverType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SparseMode
+   :type: Optional[int]
+
+   
+   Get the Sparse Mode value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Status
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolutionStatusType]
+
+   
+   Gets the Status.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThreadsPerProcessRequested
+   :type: Optional[int]
+
+   
+   ThreadsPerProcessRequested property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeOfRun
+   :type: Optional[str]
+
+   
+   TimeOfRun property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeToCombineDistributedFiles
+   :type: Optional[float]
+
+   
+   TimeToCombineDistributedFiles property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopologyResult
+   :type: Optional[Ansys.ACT.Automation.Mechanical.DataModelObject]
+
+   
+   Gets or sets the TopologyResult.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TotalMemoryUsed
+   :type: Optional[float]
+
+   
+   TotalMemoryUsed property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkingDir
+   :type: Optional[str]
+
+   
+   Gets the WorkingDir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAccelerationFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AccelerationFrequencyResponse
+
+   
+   Creates a new AccelerationFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAccelerationPhaseResponse() -> Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.AccelerationPhaseResponse
+
+   
+   Creates a new AccelerationPhaseResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAccelerationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.AccelerationProbe
+
+   
+   Creates a new AccelerationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAccelerationWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AccelerationWaterfallDiagram
+
+   
+   Creates a new AccelerationWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAccumulatedEquivalentPlasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.AccumulatedEquivalentPlasticStrain
+
+   
+   Creates a new AccumulatedEquivalentPlasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticAWeightedSPLFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticAWeightedSPLFrequencyResponse
+
+   
+   Creates a new AcousticAWeightedSPLFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticAWeightedSoundPressureLevel() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticAWeightedSoundPressureLevel
+
+   
+   Creates a new AcousticAWeightedSoundPressureLevel
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticAbsorptionCoefficient() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticAbsorptionCoefficient
+
+   
+   Creates a new AcousticAbsorptionCoefficient
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticDiffuseSoundTransmissionLoss() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticDiffuseSoundTransmissionLoss
+
+   
+   Creates a new AcousticDiffuseSoundTransmissionLoss
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticDirectionalVelocityResult() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticDirectionalVelocityResult
+
+   
+   Creates a new AcousticDirectionalVelocityResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldAWeightedSPL() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldAWeightedSPLMic() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldDirectivity() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldMaximumPressure() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldMaximumPressureMic() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldMaximumScatteredPressure() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldPhase() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldPhaseMic() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldSPL() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldSPLMic() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldSPLMicWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldSPLMicWaterfallDiagram
+
+   
+   Creates a new AcousticFarFieldSPLMicWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldSoundPowerLevel() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldSoundPowerLevelWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldSoundPowerLevelWaterfallDiagram
+
+   
+   Creates a new AcousticFarFieldSoundPowerLevelWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldTargetStrength() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult
+
+   
+   Creates a new AcousticFarFieldResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFrequencyBandAWeightedSPL() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFrequencyBandAWeightedSPL
+
+   
+   Creates a new AcousticFrequencyBandAWeightedSPL
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFrequencyBandSPL() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFrequencyBandSPL
+
+   
+   Creates a new AcousticFrequencyBandSPL
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticKineticEnergy() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticKineticEnergy
+
+   
+   Creates a new AcousticKineticEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticKineticEnergyFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticKineticEnergyFrequencyResponse
+
+   
+   Creates a new AcousticKineticEnergyFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPotentialEnergy() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticPotentialEnergy
+
+   
+   Creates a new AcousticPotentialEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPotentialEnergyFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticPotentialEnergyFrequencyResponse
+
+   
+   Creates a new AcousticPotentialEnergyFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPressureFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticPressureFrequencyResponse
+
+   
+   Creates a new AcousticPressureFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPressureResult() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticPressureResult
+
+   
+   Creates a new AcousticPressureResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticReturnLoss() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticReturnLoss
+
+   
+   Creates a new AcousticReturnLoss
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticSPLFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticSPLFrequencyResponse
+
+   
+   Creates a new AcousticSPLFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticSoundPressureLevel() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticSoundPressureLevel
+
+   
+   Creates a new AcousticSoundPressureLevel
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticTotalVelocityResult() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticTotalVelocityResult
+
+   
+   Creates a new AcousticTotalVelocityResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticTransmissionLoss() -> Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticTransmissionLoss
+
+   
+   Creates a new AcousticTransmissionLoss
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticVelocityFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticVelocityFrequencyResponse
+
+   
+   Creates a new AcousticVelocityFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAngularAccelerationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.AngularAccelerationProbe
+
+   
+   Creates a new AngularAccelerationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAngularVelocityProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.AngularVelocityProbe
+
+   
+   Creates a new AngularVelocityProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBeamProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.BeamProbe
+
+   
+   Creates a new BeamProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBeamTool() -> Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.BeamTool
+
+   
+   Creates a new BeamTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBearingProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.BearingProbe
+
+   
+   Creates a new BearingProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBendingStressEquivalent() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.BendingStressEquivalent
+
+   
+   Creates a new BendingStressEquivalent
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBendingStressIntensity() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.BendingStressIntensity
+
+   
+   Creates a new BendingStressIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBoltPretensionProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.BoltPretensionProbe
+
+   
+   Creates a new BoltPretensionProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBoltTool() -> Ansys.ACT.Automation.Mechanical.Results.BoltToolResults.BoltTool
+
+   
+   Creates a new BoltTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCampbellDiagram() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.CampbellDiagram
+
+   
+   Creates a new CampbellDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddChargeReactionFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ChargeReactionFrequencyResponse
+
+   
+   Creates a new ChargeReactionFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddChargeReactionProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ChargeReactionProbe
+
+   
+   Creates a new ChargeReactionProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCompositeCriterion() -> Ansys.ACT.Automation.Mechanical.CompositeCriterion
+
+   
+   Creates a new CompositeCriterion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCompositeFailureTool() -> Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureTool
+
+   
+   Creates a new CompositeFailureTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCompositeSamplingPointTool() -> Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeSamplingPointTool
+
+   
+   Creates a new CompositeSamplingPointTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactDistanceProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ContactDistanceProbe
+
+   
+   Creates a new ContactDistanceProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactTool() -> Ansys.ACT.Automation.Mechanical.PostContactTool
+
+   
+   Creates a new ContactTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCurrentDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.CurrentDensity
+
+   
+   Creates a new CurrentDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCurrentDensityProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.CurrentDensityProbe
+
+   
+   Creates a new CurrentDensityProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDamageStatus() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.DamageStatus
+
+   
+   Creates a new DamageStatus
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDeformationFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.DeformationFrequencyResponse
+
+   
+   Creates a new DeformationFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDeformationPhaseResponse() -> Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.DeformationPhaseResponse
+
+   
+   Creates a new DeformationPhaseResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDeformationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.DeformationProbe
+
+   
+   Creates a new DeformationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAcceleration() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAcceleration
+
+   
+   Creates a new DirectionalAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAccelerationPSD() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAccelerationPSD
+
+   
+   Creates a new DirectionalAccelerationPSD
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAccelerationRS() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAccelerationRS
+
+   
+   Creates a new DirectionalAccelerationRS
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAxialForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalAxialForce
+
+   
+   Creates a new DirectionalAxialForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalBendingMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalBendingMoment
+
+   
+   Creates a new DirectionalBendingMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalCurrentDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalCurrentDensity
+
+   
+   Creates a new DirectionalCurrentDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalDeformation() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalDeformation
+
+   
+   Creates a new DirectionalDeformation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalElectricFieldIntensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalElectricFieldIntensity
+
+   
+   Creates a new DirectionalElectricFieldIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalElectricFluxDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalElectricFluxDensity
+
+   
+   Creates a new DirectionalElectricFluxDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalElectrostaticForce() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalElectrostaticForce
+
+   
+   Creates a new DirectionalElectrostaticForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalHeatFlux() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.DirectionalHeatFlux
+
+   
+   Creates a new DirectionalHeatFlux
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalMagneticFieldIntensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.DirectionalMagneticFieldIntensity
+
+   
+   Creates a new DirectionalMagneticFieldIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalMagneticFluxDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.DirectionalMagneticFluxDensity
+
+   
+   Creates a new DirectionalMagneticFluxDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalShearForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearForce
+
+   
+   Creates a new DirectionalShearForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalTorsionalMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalTorsionalMoment
+
+   
+   Creates a new DirectionalTorsionalMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalVelocity() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocity
+
+   
+   Creates a new DirectionalVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalVelocityPSD() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocityPSD
+
+   
+   Creates a new DirectionalVelocityPSD
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalVelocityRS() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocityRS
+
+   
+   Creates a new DirectionalVelocityRS
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElasticStrainFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ElasticStrainFrequencyResponse
+
+   
+   Creates a new ElasticStrainFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElasticStrainIntensity() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.ElasticStrainIntensity
+
+   
+   Creates a new ElasticStrainIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElasticStrainPhaseResponse() -> Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.ElasticStrainPhaseResponse
+
+   
+   Creates a new ElasticStrainPhaseResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElectricFieldProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ElectricFieldProbe
+
+   
+   Creates a new ElectricFieldProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElectricPotential() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.ElectricPotential
+
+   
+   Creates a new ElectricPotential
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElectricVoltage() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.ElectricVoltage
+
+   
+   Creates a new ElectricVoltage
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElectromechanicalCouplingCoefficient() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ElectromechanicalCouplingCoefficient
+
+   
+   Creates a new ElectromechanicalCouplingCoefficient
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementalEulerXYAngle() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalEulerXYAngle
+
+   
+   Creates a new ElementalEulerXYAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementalEulerXZAngle() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalEulerXZAngle
+
+   
+   Creates a new ElementalEulerXZAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementalEulerYZAngle() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalEulerYZAngle
+
+   
+   Creates a new ElementalEulerYZAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementalStrainEnergy() -> Ansys.ACT.Automation.Mechanical.Results.EnergyResults.ElementalStrainEnergy
+
+   
+   Creates a new ElementalStrainEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementalTriads() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.ElementalTriads
+
+   
+   Creates a new ElementalTriads
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEmagReactionProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.EmagReactionProbe
+
+   
+   Creates a new EmagReactionProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEnergyDissipatedPerUnitVolume() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.EnergyDissipatedPerUnitVolume
+
+   
+   Creates a new EnergyDissipatedPerUnitVolume
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEnergyProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.EnergyProbe
+
+   
+   Creates a new EnergyProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentCreepStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentCreepStrain
+
+   
+   Creates a new EquivalentCreepStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentCreepStrainRST() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentCreepStrainRST
+
+   
+   Creates a new EquivalentCreepStrainRST
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrain
+
+   
+   Creates a new EquivalentElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentElasticStrainRST() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrainRST
+
+   
+   Creates a new EquivalentElasticStrainRST
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentPlasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentPlasticStrain
+
+   
+   Creates a new EquivalentPlasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentPlasticStrainRST() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentPlasticStrainRST
+
+   
+   Creates a new EquivalentPlasticStrainRST
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentRadiatedPower() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPower
+
+   
+   Creates a new EquivalentRadiatedPower
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentRadiatedPowerLevel() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPowerLevel
+
+   
+   Creates a new EquivalentRadiatedPowerLevel
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentRadiatedPowerLevelWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPowerLevelWaterfallDiagram
+
+   
+   Creates a new EquivalentRadiatedPowerLevelWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentRadiatedPowerWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPowerWaterfallDiagram
+
+   
+   Creates a new EquivalentRadiatedPowerWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStress
+
+   
+   Creates a new EquivalentStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentStressPSD() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStressPSD
+
+   
+   Creates a new EquivalentStressPSD
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentStressRS() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStressRS
+
+   
+   Creates a new EquivalentStressRS
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentTotalStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentTotalStrain
+
+   
+   Creates a new EquivalentTotalStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddExpansionSettings() -> Ansys.ACT.Automation.Mechanical.ExpansionSettings
+
+   
+   Creates a new ExpansionSettings
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFatigueTool() -> Ansys.ACT.Automation.Mechanical.FatigueTool
+
+   
+   AddFatigueTool method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFiberCompressiveDamageVariable() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.FiberCompressiveDamageVariable
+
+   
+   Creates a new FiberCompressiveDamageVariable
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFiberCompressiveFailureCriterion() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.FiberCompressiveFailureCriterion
+
+   
+   Creates a new FiberCompressiveFailureCriterion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFiberTensileDamageVariable() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.FiberTensileDamageVariable
+
+   
+   Creates a new FiberTensileDamageVariable
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFiberTensileFailureCriterion() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.FiberTensileFailureCriterion
+
+   
+   Creates a new FiberTensileFailureCriterion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFieldIntensityProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.FieldIntensityProbe
+
+   
+   Creates a new FieldIntensityProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFlexibleRotationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.FlexibleRotationProbe
+
+   
+   Creates a new FlexibleRotationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluidFlowRate() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.FluidFlowRate
+
+   
+   Creates a new FluidFlowRate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluidHeatConductionRate() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.FluidHeatConductionRate
+
+   
+   Creates a new FluidHeatConductionRate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluidHeatTransportRate() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.FluidHeatTransportRate
+
+   
+   Creates a new FluidHeatTransportRate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluxDensityProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.FluxDensityProbe
+
+   
+   Creates a new FluxDensityProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluxLinkage() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.FluxLinkage
+
+   
+   Creates a new FluxLinkage
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForceReaction() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ForceReaction
+
+   
+   Creates a new ForceReaction
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForceReactionFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ForceReactionFrequencyResponse
+
+   
+   Creates a new ForceReactionFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForceReactionsForContactRegions(contactRegionObjIds: Iterable[int]) -> None
+
+   
+   AddForceReactionsForContactRegions method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForceSummationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ForceSummationProbe
+
+   
+   Creates a new ForceSummationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFractureTool() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureTool
+
+   
+   Creates a new FractureTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGeneralizedPlaneStrainProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.GeneralizedPlaneStrainProbe
+
+   
+   Creates a new GeneralizedPlaneStrainProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGroupedScopedACPResults(resultType: Ansys.Mechanical.DataModel.Enums.ResultType, selectedPlies: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+
+   
+   AddGroupedScopedACPResults method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGroupedScopedCustomResult(selectedPlies: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+
+   
+   AddGroupedScopedCustomResult method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHeatFluxProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.HeatFluxProbe
+
+   
+   Creates a new HeatFluxProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImpedanceFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ImpedanceFrequencyResponse
+
+   
+   Creates a new ImpedanceFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImpedanceProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ImpedanceProbe
+
+   
+   Creates a new ImpedanceProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInductance() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.Inductance
+
+   
+   Creates a new Inductance
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJointProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.JointProbe
+
+   
+   Creates a new JointProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJouleHeat() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.JouleHeat
+
+   
+   Creates a new JouleHeat
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJouleHeatProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.JouleHeatProbe
+
+   
+   Creates a new JouleHeatProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLatticeDensity() -> Ansys.ACT.Automation.Mechanical.Results.LatticeDensity
+
+   
+   Creates a new LatticeDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLatticeElementalDensity() -> Ansys.ACT.Automation.Mechanical.Results.LatticeElementalDensity
+
+   
+   Creates a new LatticeElementalDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLineChart2D() -> Ansys.ACT.Automation.Mechanical.LineChart2D
+
+   
+   Creates a new LineChart2D
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinePressureResult() -> Ansys.ACT.Automation.Mechanical.Results.LinePressureResult
+
+   
+   Creates a new LinePressureResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedEquivalentStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedEquivalentStress
+
+   
+   Creates a new LinearizedEquivalentStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMaximumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMaximumPrincipalStress
+
+   
+   Creates a new LinearizedMaximumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMaximumShearStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMaximumShearStress
+
+   
+   Creates a new LinearizedMaximumShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMiddlePrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMiddlePrincipalStress
+
+   
+   Creates a new LinearizedMiddlePrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMinimumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMinimumPrincipalStress
+
+   
+   Creates a new LinearizedMinimumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedNormalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedNormalStress
+
+   
+   Creates a new LinearizedNormalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedShearStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedShearStress
+
+   
+   Creates a new LinearizedShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedStressIntensity() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedStressIntensity
+
+   
+   Creates a new LinearizedStressIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMCFWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.MCFWaterfallDiagram
+
+   
+   Creates a new MCFWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticCoenergy() -> Ansys.ACT.Automation.Mechanical.Results.MagneticCoenergy
+
+   
+   Creates a new MagneticCoenergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticDirectionalForces() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.MagneticDirectionalForces
+
+   
+   Creates a new MagneticDirectionalForces
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticError() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.MagneticError
+
+   
+   Creates a new MagneticError
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticFluxProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.MagneticFluxProbe
+
+   
+   Creates a new MagneticFluxProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticPotential() -> Ansys.ACT.Automation.Mechanical.Results.MagneticPotential
+
+   
+   Creates a new MagneticPotential
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticTotalForces() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.MagneticTotalForces
+
+   
+   Creates a new MagneticTotalForces
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMatrixCompressiveDamageVariable() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MatrixCompressiveDamageVariable
+
+   
+   Creates a new MatrixCompressiveDamageVariable
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMatrixCompressiveFailureCriterion() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MatrixCompressiveFailureCriterion
+
+   
+   Creates a new MatrixCompressiveFailureCriterion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMatrixTensileDamageVariable() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MatrixTensileDamageVariable
+
+   
+   Creates a new MatrixTensileDamageVariable
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMatrixTensileFailureCriterion() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MatrixTensileFailureCriterion
+
+   
+   Creates a new MatrixTensileFailureCriterion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumFailureCriteria() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MaximumFailureCriteria
+
+   
+   Creates a new MaximumFailureCriteria
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumPrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumPrincipalElasticStrain
+
+   
+   Creates a new MaximumPrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MaximumPrincipalStress
+
+   
+   Creates a new MaximumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumPrincipalThermalStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumPrincipalThermalStrain
+
+   
+   Creates a new MaximumPrincipalThermalStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumShearElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumShearElasticStrain
+
+   
+   Creates a new MaximumShearElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumShearStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MaximumShearStress
+
+   
+   Creates a new MaximumShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMembraneStressEquivalent() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MembraneStressEquivalent
+
+   
+   Creates a new MembraneStressEquivalent
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMembraneStressIntensity() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MembraneStressIntensity
+
+   
+   Creates a new MembraneStressIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMiddlePrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MiddlePrincipalElasticStrain
+
+   
+   Creates a new MiddlePrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMiddlePrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MiddlePrincipalStress
+
+   
+   Creates a new MiddlePrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMiddlePrincipalThermalStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MiddlePrincipalThermalStrain
+
+   
+   Creates a new MiddlePrincipalThermalStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMinimumPrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MinimumPrincipalElasticStrain
+
+   
+   Creates a new MinimumPrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMinimumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MinimumPrincipalStress
+
+   
+   Creates a new MinimumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMomentReaction() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.MomentReaction
+
+   
+   Creates a new MomentReaction
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMomentReactionsForContactRegions(contactRegionObjIds: Iterable[int]) -> None
+
+   
+   AddMomentReactionsForContactRegions method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMullinsDamageVariable() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MullinsDamageVariable
+
+   
+   Creates a new MullinsDamageVariable
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMullinsMaximumPreviousStrainEnergy() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.MullinsMaximumPreviousStrainEnergy
+
+   
+   Creates a new MullinsMaximumPreviousStrainEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNewtonRaphsonResidualCharge() -> Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualCharge
+
+   
+   Creates a new NewtonRaphsonResidualCharge
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNewtonRaphsonResidualForce() -> Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualForce
+
+   
+   Creates a new NewtonRaphsonResidualForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNewtonRaphsonResidualHeat() -> Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualHeat
+
+   
+   Creates a new NewtonRaphsonResidualHeat
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNewtonRaphsonResidualMoment() -> Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualMoment
+
+   
+   Creates a new NewtonRaphsonResidualMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalEulerXYAngle() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalEulerXYAngle
+
+   
+   Creates a new NodalEulerXYAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalEulerXZAngle() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalEulerXZAngle
+
+   
+   Creates a new NodalEulerXZAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalEulerYZAngle() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalEulerYZAngle
+
+   
+   Creates a new NodalEulerYZAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalTriads() -> Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults.NodalTriads
+
+   
+   Creates a new NodalTriads
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNormalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.NormalElasticStrain
+
+   
+   Creates a new NormalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNormalGasketPressure() -> Ansys.ACT.Automation.Mechanical.Results.GasketResults.NormalGasketPressure
+
+   
+   Creates a new NormalGasketPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNormalGasketTotalClosure() -> Ansys.ACT.Automation.Mechanical.Results.GasketResults.NormalGasketTotalClosure
+
+   
+   Creates a new NormalGasketTotalClosure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNormalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.NormalStress
+
+   
+   Creates a new NormalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPosition() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.Position
+
+   
+   Creates a new Position
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPrimaryCriterion() -> Ansys.ACT.Automation.Mechanical.PrimaryCriterion
+
+   
+   Creates a new PrimaryCriterion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPythonCodeEventBased() -> Ansys.ACT.Automation.Mechanical.PythonCodeEventBased
+
+   
+   Creates a new PythonCodeEventBased
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPythonResult() -> Ansys.ACT.Automation.Mechanical.Results.ScriptableResults.PythonResult
+
+   
+   Creates a new PythonResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddQualityFactor() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.QualityFactor
+
+   
+   Creates a new QualityFactor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRadiationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.RadiationProbe
+
+   
+   Creates a new RadiationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddReactionProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ReactionProbe
+
+   
+   Creates a new ReactionProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddReactionsForContactRegions(contactRegionObjIds: Iterable[int]) -> None
+
+   
+   AddReactionsForContactRegions method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddResponsePSD() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ResponsePSD
+
+   
+   Creates a new ResponsePSD
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddResponsePSDTool() -> Ansys.ACT.Automation.Mechanical.ResponsePSDTool
+
+   
+   Creates a new ResponsePSDTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddResultMesh() -> Ansys.ACT.Automation.Mechanical.ResultMesh
+
+   
+   Creates a new ResultMesh
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRotationProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.RotationProbe
+
+   
+   Creates a new RotationProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShapeFinder() -> Ansys.ACT.Automation.Mechanical.Results.ShapeFinder
+
+   
+   Creates a new ShapeFinder
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShapeFinderElemental() -> Ansys.ACT.Automation.Mechanical.Results.ShapeFinderElemental
+
+   
+   Creates a new ShapeFinderElemental
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearDamageVariable() -> Ansys.ACT.Automation.Mechanical.Results.DamageResults.ShearDamageVariable
+
+   
+   Creates a new ShearDamageVariable
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.ShearElasticStrain
+
+   
+   Creates a new ShearElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearGasketPressure() -> Ansys.ACT.Automation.Mechanical.Results.GasketResults.ShearGasketPressure
+
+   
+   Creates a new ShearGasketPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearGasketTotalClosure() -> Ansys.ACT.Automation.Mechanical.Results.GasketResults.ShearGasketTotalClosure
+
+   
+   Creates a new ShearGasketTotalClosure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramMSUM() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram
+
+   
+   Creates a new TotalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramMY() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramMZ() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramUSUM() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram
+
+   
+   Creates a new TotalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramUY() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramUZ() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramVSUM() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram
+
+   
+   Creates a new TotalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramVY() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramVZ() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.ShearStress
+
+   
+   Creates a new ShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShellBendingStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellBendingStress
+
+   
+   Creates a new ShellBendingStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShellBottomPeakStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellBottomPeakStress
+
+   
+   Creates a new ShellBottomPeakStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShellMembraneStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellMembraneStress
+
+   
+   Creates a new ShellMembraneStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShellTopPeakStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellTopPeakStress
+
+   
+   Creates a new ShellTopPeakStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpringProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.SpringProbe
+
+   
+   Creates a new SpringProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStabilizationEnergy() -> Ansys.ACT.Automation.Mechanical.Results.EnergyResults.StabilizationEnergy
+
+   
+   Creates a new StabilizationEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStrainProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.StrainProbe
+
+   
+   Creates a new StrainProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.StressFrequencyResponse
+
+   
+   Creates a new StressFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressIntensity() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.StressIntensity
+
+   
+   Creates a new StressIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressPhaseResponse() -> Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.StressPhaseResponse
+
+   
+   Creates a new StressPhaseResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.StressProbe
+
+   
+   Creates a new StressProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressTool() -> Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressTool
+
+   
+   Creates a new StressTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStructuralError() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.StructuralError
+
+   
+   Creates a new StructuralError
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStructuralStrainEnergy() -> Ansys.ACT.Automation.Mechanical.Results.EnergyResults.StructuralStrainEnergy
+
+   
+   Creates a new StructuralStrainEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTemperature() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.TemperatureResult
+
+   
+   Creates a new TemperatureResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTemperatureProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.TemperatureProbe
+
+   
+   Creates a new TemperatureProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalError() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.ThermalError
+
+   
+   Creates a new ThermalError
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.DirectionalThermalStrain
+
+   
+   Creates a new DirectionalThermalStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalStrainEnergy() -> Ansys.ACT.Automation.Mechanical.Results.EnergyResults.ThermalStrainEnergy
+
+   
+   Creates a new ThermalStrainEnergy
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTopologyDensity() -> Ansys.ACT.Automation.Mechanical.Results.TopologyDensity
+
+   
+   Creates a new TopologyDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTopologyElementalDensity() -> Ansys.ACT.Automation.Mechanical.Results.TopologyElementalDensity
+
+   
+   Creates a new TopologyElementalDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTorqueProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.TorqueProbe
+
+   
+   Creates a new TorqueProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalAcceleration() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalAcceleration
+
+   
+   Creates a new TotalAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalAxialForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalAxialForce
+
+   
+   Creates a new TotalAxialForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalBendingMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalBendingMoment
+
+   
+   Creates a new TotalBendingMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalCurrentDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalCurrentDensity
+
+   
+   Creates a new TotalCurrentDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalDeformation() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalDeformation
+
+   
+   Creates a new TotalDeformation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalElectricFieldIntensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalElectricFieldIntensity
+
+   
+   Creates a new TotalElectricFieldIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalElectricFluxDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalElectricFluxDensity
+
+   
+   Creates a new TotalElectricFluxDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalElectrostaticForce() -> Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalElectrostaticForce
+
+   
+   Creates a new TotalElectrostaticForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalHeatFlux() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.TotalHeatFlux
+
+   
+   Creates a new TotalHeatFlux
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalMagneticFieldIntensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.TotalMagneticFieldIntensity
+
+   
+   Creates a new TotalMagneticFieldIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalMagneticFluxDensity() -> Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.TotalMagneticFluxDensity
+
+   
+   Creates a new TotalMagneticFluxDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalShearForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearForce
+
+   
+   Creates a new TotalShearForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalTorsionalMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalTorsionalMoment
+
+   
+   Creates a new TotalTorsionalMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalVelocity() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalVelocity
+
+   
+   Creates a new TotalVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddUserDefinedResult() -> Ansys.ACT.Automation.Mechanical.Results.UserDefinedResult
+
+   
+   Creates a new UserDefinedResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVariableGraph() -> Ansys.ACT.Automation.Mechanical.Results.VariableGraph
+
+   
+   Creates a new VariableGraph
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorAxialForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorAxialForce
+
+   
+   Creates a new VectorAxialForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorBendingMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorBendingMoment
+
+   
+   Creates a new VectorBendingMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorDeformation() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.VectorDeformation
+
+   
+   Creates a new VectorDeformation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorHeatFlux() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.VectorHeatFlux
+
+   
+   Creates a new VectorHeatFlux
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorPrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.VectorPrincipalElasticStrain
+
+   
+   Creates a new VectorPrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.VectorPrincipalStress
+
+   
+   Creates a new VectorPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorShearForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorShearForce
+
+   
+   Creates a new VectorShearForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorTorsionalMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorTorsionalMoment
+
+   
+   Creates a new VectorTorsionalMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVelocityFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.VelocityFrequencyResponse
+
+   
+   Creates a new VelocityFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVelocityPhaseResponse() -> Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.VelocityPhaseResponse
+
+   
+   Creates a new VelocityPhaseResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVelocityProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.VelocityProbe
+
+   
+   Creates a new VelocityProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVelocityWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.VelocityWaterfallDiagram
+
+   
+   Creates a new VelocityWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVoltageFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.VoltageFrequencyResponse
+
+   
+   Creates a new VoltageFrequencyResponse
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVoltageProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ElectricVoltageProbe
+
+   
+   Creates a new ElectricVoltageProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVolume() -> Ansys.ACT.Automation.Mechanical.Results.Volume
+
+   
+   Creates a new Volume
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVolumeProbe() -> Ansys.ACT.Automation.Mechanical.Results.ProbeResults.VolumeProbe
+
+   
+   Creates a new VolumeProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearRemoteStorageData() -> None
+
+   
+   ClearRemoteStorageData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateResultsAtAllSets(resId: int) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   CreateResultsAtAllSets method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+   
+   DeleteRow method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DisconnectRemoteJob() -> None
+
+   
+   DisconnectRemoteJob method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllContactTrackers() -> None
+
+   
+   EvaluateAllContactTrackers method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllResults() -> None
+
+   
+   Run the EvaluateAllResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateContactTracker() -> None
+
+   
+   EvaluateContactTracker method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExecutePostCommands() -> None
+
+   
+   Run Execute Post Commands for all post command objects.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportSubstructureInCPAFormat(exportFileName: str, bAddOnDemandExpansionFiles: bool) -> None
+
+   
+   Export Substructure to cpa file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExtractSolutionStatistics() -> None
+
+   
+   ExtractSolutionStatistics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FetchRemoteResults() -> None
+
+   
+   FetchRemoteResults method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FormatValue(value: float, unitType: int) -> str
+
+   
+   FormatValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateAdaptedMesh() -> None
+
+   
+   GenerateAdaptedMesh method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetResults() -> None
+
+   
+   Gets the Results from the server.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsResultFileChanged() -> bool
+
+   
+   Checks if the referenced result file has been changed.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsResultFileSameAsLoaded(filepath: str) -> bool
+
+   
+   Checks if the given result file is same the loaded result file
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OpenSolverFilesDirectory() -> None
+
+   
+   Run the OpenSolverFilesDirectory action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ReadAnsysResultFile() -> None
+
+   
+   Run the Ansys ReadResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ReadGivenAnsysResultFile(resultFilePath: str, unitSystemID: Ansys.Mechanical.DataModel.Enums.UnitSystemIDType) -> None
+
+   
+   Run the given Ansys ReadResults action./// 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ReadGivenAnsysResultFileByReference(resultFilePath: str, unitSystemID: Ansys.Mechanical.DataModel.Enums.UnitSystemIDType) -> None
+
+   
+   Run the given Ansys ReadResults by reference action./// 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ReconnectRemoteJob() -> None
+
+   
+   ReconnectRemoteJob method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RelinkResultFile(filepath: str) -> None
+
+   
+   Relink the result file. This action allows repairing the result file referencing without altering the generated result data.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ReloadResultFile() -> None
+
+   
+   Reload the result file. For results-only systems, this action reloads the result mesh data and resets all result scopings.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Solve(wait: bool, config: str) -> None
+
+   
+   Run the Solve action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ValueForResultTracking(index: int, key: str) -> str
+
+   
+   ValueForResultTracking method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ValueForSolutionTracking(index: int, key: str) -> str
+
+   
+   ValueForSolutionTracking method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
