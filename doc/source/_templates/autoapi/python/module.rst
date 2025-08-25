@@ -50,7 +50,7 @@ The ``{{ obj.name }}`` library
     {% if obj.type == "package" %}
 
         {% if (obj.short_name | length==4) and obj.short_name.startswith("v") %}
-Mechanical 20{{ obj.short_name[1:3] }} R{{ obj.short_name[3] }} API Reference
+Mechanical 20{{ obj.short_name[1:3] }} R{{ obj.short_name[3] }}
 ================================
         {% else %}
 ``{{ obj.short_name }}``
