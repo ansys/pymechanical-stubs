@@ -312,7 +312,6 @@ jobs:
     - name: "Generate HTML documentation"
       run: |
         make -C doc html
-        make -C doc pdf
 
     - name: "Upload original Sphinx HTML documentation"
       uses: actions/upload-artifact@v4
@@ -401,15 +400,53 @@ jobs:
         path: doc/_build/html
         retention-days: 7
 
-    - name: Upload PDF Documentation
-      if: |
-        github.event_name == 'workflow_dispatch' ||
-        matrix.python-version == env.MAIN_PYTHON_VERSION
-      uses: actions/upload-artifact@v4
-      with:
-        name: documentation-pdf-v${{ matrix.mechanical-revn }}
-        path: doc/_build/latex/doc.pdf
-        retention-days: 7
+  combine-docs:
+    name: Combine documentation
+    runs-on: ubuntu-latest
+    needs: [doc-build, config-matrix]
+    strategy:
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
+    steps:
+      - name: "Install Git and clone project"
+        uses: actions/checkout@v4
+
+      - name: "Download all HTML documentation"
+        uses: actions/download-artifact@v4
+        with:
+          pattern: documentation-html-v*
+
+      - name: "Combine all HTML documentation"
+        run: |
+          combined_html=$(pwd)/documentation-html
+          html_folders=($(find . -maxdepth 1 -type d -name "documentation-html-v[0-9][0-9][0-9]"))
+
+          for item in "${html_folders[@]}"; do
+            echo "Item: $item"
+            if [ -d "$combined_html" ]; then
+                folder_version="${item##*-}"
+                version_path="api/ansys/mechanical/stubs/${folder_version}"
+                cp -r $item/$version_path/* $combined_html/$version_path
+            else
+                mkdir -p "$combined_html"
+                echo "$combined_html folder created."
+                cp -r "$item/"* "$combined_html"
+            fi
+          done
+
+      - name: "Upload HTML documentation"
+        uses: actions/upload-artifact@v4
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-html
+          path: documentation-html
+          retention-days: 7
+
+      # - name: "Download all markdown documentation"
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     pattern: documentation-md-*
 
   # doc-deploy-pr:
   #   name: "Deploy PR documentation"
