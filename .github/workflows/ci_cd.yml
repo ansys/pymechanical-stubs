@@ -313,11 +313,11 @@ jobs:
       run: |
         make -C doc html
 
-    - name: "Upload original Sphinx HTML documentation"
+    - name: "Upload version Sphinx HTML documentation"
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
-        name: original-documentation-html-v${{ matrix.mechanical-revn }}
+        name: documentation-html-v${{ matrix.mechanical-revn }}
         path: doc/_build/html
         retention-days: 7
 
@@ -325,79 +325,12 @@ jobs:
       run: |
         make -C doc markdown
 
-    - name: "Upload original markdown documentation"
+    - name: "Upload version markdown documentation"
       uses: actions/upload-artifact@v4
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
-        name: original-documentation-md-v${{ matrix.mechanical-revn }}
-        path: doc/_build/markdown
-        retention-days: 7
-
-    - name: "Replace Windows apostrophes with single quotes"
-      run: |
-        python scripts/replace-windows-apostrophes.py
-
-    - name: "Make all hrefs local in Markdown"
-      run: |
-        python scripts/fix-href-md.py
-
-    - name: "Make all hrefs local in HTML"
-      run: |
-        python scripts/fix-href-html.py
-
-    - name: "Clean ID in first row"
-      run: |
-        python scripts/01-clean-id.py
-
-    - name: "Clean empty rows"
-      run: |
-        python scripts/02-clean-empty-row.py
-
-    - name: "Create table of contents"
-      run: |
-        python scripts/03-create-toc-from-html-mechanical.py
-
-    - name: "Fix paths in toc.yml"
-      shell: bash
-      run: |
-        # Remove doc/_build/html from paths in toc.yml file
-        sed -i -e 's;doc/_build/html/;;g' output/toc.yml
-
-    - name: "Add header to tables"
-      run: |
-        python scripts/04-add-header-to-tables.py
-
-    - name: "Remove links in heading"
-      run: |
-        python scripts/05-remove-link-in-heading.py
-
-    - name: "Upload toc.yml"
-      if: |
-        github.event_name == 'workflow_dispatch' ||
-        matrix.python-version == env.MAIN_PYTHON_VERSION
-      uses: actions/upload-artifact@v4
-      with:
-        name: toc-file-v${{ matrix.mechanical-revn }}
-        path: output/
-
-    - name: "Upload Markdown documentation"
-      uses: actions/upload-artifact@v4
-      if: |
-        github.event_name == 'workflow_dispatch' ||
-        matrix.python-version == env.MAIN_PYTHON_VERSION
-      with:
         name: documentation-md-v${{ matrix.mechanical-revn }}
         path: doc/_build/markdown
-        retention-days: 7
-
-    - name: "Upload HTML documentation"
-      uses: actions/upload-artifact@v4
-      if: |
-        github.event_name == 'workflow_dispatch' ||
-        matrix.python-version == env.MAIN_PYTHON_VERSION
-      with:
-        name: documentation-html-v${{ matrix.mechanical-revn }}
-        path: doc/_build/html
         retention-days: 7
 
   combine-docs:
@@ -416,23 +349,118 @@ jobs:
         with:
           pattern: documentation-html-v*
 
-      - name: "Combine all HTML documentation"
-        run: |
-          combined_html=$(pwd)/documentation-html
-          html_folders=($(find . -maxdepth 1 -type d -name "documentation-html-v[0-9][0-9][0-9]"))
+      - name: "Download all Markdown documentation"
+        uses: actions/download-artifact@v4
+        with:
+          pattern: documentation-md-v*
 
-          for item in "${html_folders[@]}"; do
-            echo "Item: $item"
-            if [ -d "$combined_html" ]; then
-                folder_version="${item##*-}"
-                version_path="api/ansys/mechanical/stubs/${folder_version}"
-                cp -r $item/$version_path/* $combined_html/$version_path
-            else
-                mkdir -p "$combined_html"
-                echo "$combined_html folder created."
-                cp -r "$item/"* "$combined_html"
-            fi
-          done
+      - name: "Combine HTML and Markdown documentation"
+        run: |
+          combine_documentation() {
+            combined_folder_name=$1
+            combined_folder_path=$(pwd)/$combined_folder_name
+            version_folders=($(find . -maxdepth 1 -type d -name "$combined_folder_name-v[0-9][0-9][0-9]"))
+
+            for folder in "${version_folders[@]}"; do
+              if [ -d "$combined_folder_path" ]; then
+                  folder_version="${folder##*-}"
+                  version_path="api/ansys/mechanical/stubs/${folder_version}"
+                  cp -r $folder/$version_path/* $combined_folder_path/$version_path
+              else
+                  mkdir -p "$combined_folder_path"
+                  echo "$combined_folder_path folder created."
+                  cp -r "$folder/"* "$combined_folder_path"
+              fi
+            done
+          }
+
+          combine_documentation "documentation-html"
+          combine_documentation "documentation-md"
+
+      - name: "Upload HTML documentation"
+        uses: actions/upload-artifact@v4
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: combined-documentation-html
+          path: documentation-html
+          retention-days: 7
+
+      - name: "Upload Markdown documentation"
+        uses: actions/upload-artifact@v4
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: combined-documentation-md
+          path: documentation-md
+          retention-days: 7
+
+  clean-docs:
+    name: Clean HTML and Markdown documentation
+    runs-on: ubuntu-latest
+    needs: [combine-docs, config-matrix]
+    strategy:
+      matrix:
+        python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
+    steps:
+      - name: "Download all HTML documentation"
+        uses: actions/download-artifact@v4
+        with:
+          pattern: combined-documentation-html
+
+      - name: "Download all Markdown documentation"
+        uses: actions/download-artifact@v4
+        with:
+          pattern: combined-documentation-md
+
+      - name: "Replace Windows apostrophes with single quotes"
+        run: |
+          python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --md_api_folder combined-documentation-md/api
+
+      - name: "Markdown: Make all hrefs local"
+        run: |
+          python scripts/fix-href-md.py --api_folder combined-documentation-md/api
+
+      - name: "HTML: Make all hrefs local"
+        run: |
+          python scripts/fix-href-html.py --api_folder combined-documentation-html/api
+
+      - name: "Markdown: Clean ID in first row"
+        run: |
+          python scripts/01-clean-id.py --input_folder combined-documentation-markdown
+
+      - name: "Markdown: Clean empty rows"
+        run: |
+          python scripts/02-clean-empty-row.py --input_folder combined-documentation-markdown
+
+      - name: "Create table of contents"
+        run: |
+          python scripts/03-create-toc-from-html-mechanical.py --api_folder combined-documentation-html/api
+
+      - name: "Fix paths in toc.yml"
+        shell: bash
+        run: |
+          # Remove doc/_build/html from paths in toc.yml file
+          sed -i -e 's;doc/_build/html/;;g' output/toc.yml
+
+      - name: "Upload toc.yml file"
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        uses: actions/upload-artifact@v4
+        with:
+          name: toc-file
+          path: output/
+
+      - name: "Markdown: Add header to tables"
+        run: |
+          python scripts/04-add-header-to-tables.py --input_folder combined-documentation-markdown
+
+      - name: "Markdown: Remove links in heading"
+        run: |
+          python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-markdown
 
       - name: "Upload HTML documentation"
         uses: actions/upload-artifact@v4
@@ -441,19 +469,24 @@ jobs:
           matrix.python-version == env.MAIN_PYTHON_VERSION
         with:
           name: documentation-html
-          path: documentation-html
+          path: combined-documentation-html
           retention-days: 7
 
-      # - name: "Download all markdown documentation"
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     pattern: documentation-md-*
+      - name: "Upload Markdown documentation"
+        uses: actions/upload-artifact@v4
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-md
+          path: combined-documentation-md
+          retention-days: 7
 
   doc-deploy-pr:
     name: "Deploy PR documentation"
     runs-on: ubuntu-latest
     needs: [combine-docs]
-    if: always() && (needs.doc-build.result == 'success' || needs.doc-build.result == 'skipped')
+    if: always() && (needs.combine-docs.result == 'success' || needs.combine-docs.result == 'skipped')
     steps:
       - uses: ansys/actions/doc-deploy-pr@v10
         with:
