@@ -420,7 +420,7 @@ jobs:
 
       - name: "Replace Windows apostrophes with single quotes"
         run: |
-          python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --md_api_folder combined-documentation-md/api
+          python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --markdown_api_folder combined-documentation-md/api
 
       - name: "Markdown: Make all hrefs local"
         run: |
