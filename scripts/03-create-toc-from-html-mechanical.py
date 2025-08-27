@@ -170,7 +170,7 @@ if __name__ == "__main__":
 
     os.chdir(output_folder_path)
 
-    if not api_folder.is_dir():
+    if not Path(api_folder).is_dir():
         print(f"Error: {api_folder} does not exist.")
         sys.exit(1)
 
