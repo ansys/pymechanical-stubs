@@ -488,8 +488,8 @@ jobs:
   doc-deploy-pr:
     name: "Deploy PR documentation"
     runs-on: ubuntu-latest
-    needs: [combine-docs]
-    if: always() && (needs.combine-docs.result == 'success' || needs.combine-docs.result == 'skipped')
+    needs: [clean-docs]
+    if: always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
     steps:
       - uses: ansys/actions/doc-deploy-pr@v10
         with:
@@ -502,7 +502,7 @@ jobs:
   build-library:
     name: Build library
     runs-on: ubuntu-latest
-    needs: [combine-docs]
+    needs: [clean-docs]
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4
@@ -577,7 +577,7 @@ jobs:
     name: "Deploy development documentation"
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    needs: [combine-docs]
+    needs: [clean-docs]
     steps:
       - name: "Deploy development documentation"
         uses: ansys/actions/doc-deploy-dev@v10
