@@ -24,7 +24,6 @@
 import argparse
 import os
 from pathlib import Path
-import sys
 
 from bs4 import BeautifulSoup
 
@@ -154,8 +153,7 @@ if __name__ == "__main__":
     full_dir_path = str(Path(repo_dir, api_folder))
 
     if not full_file_path.is_file():
-        print(f"Error: {full_file_path} does not exist.")
-        sys.exit(1)
+        raise NotADirectoryError(f"{full_file_path} is not a valid directory.")
 
     print(f"HTML_PATH={str(Path(full_dir_path, html_file))}")
     os.chdir(full_dir_path)
@@ -166,8 +164,7 @@ if __name__ == "__main__":
     os.chdir(repo_dir)
 
     if not Path(api_folder).is_dir():
-        print(f"Error: {api_folder} does not exist.")
-        sys.exit(1)
+        raise NotADirectoryError(f"{api_folder} is not a valid directory.")
 
     output_folder_path = Path(repo_dir, output_folder)
     if not output_folder_path.is_dir():

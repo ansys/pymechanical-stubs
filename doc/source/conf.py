@@ -140,8 +140,6 @@ html_context = {
     "doc_path": "doc/source",
 }
 
-# mech_version = str(find_mechanical()[1]).replace(".", "")
-
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
@@ -166,7 +164,6 @@ html_theme_options = {
     ],
     "ansys_sphinx_theme_autoapi": {
         "project": project,
-        # "output": f"api/{mech_version}",
         "templates": "_templates/autoapi",
         "member_order": "alphabetical",
     },

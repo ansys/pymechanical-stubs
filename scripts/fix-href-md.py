@@ -77,8 +77,7 @@ def main():
     if full_api_dir_path.exists():
         fix_hrefs(full_api_dir_path)
     else:
-        print(f"Error: {full_api_dir_path} does not exist.")
-        exit(1)
+        raise NotADirectoryError(f"{full_api_dir_path} is not a valid directory.")
 
 
 if __name__ == "__main__":

@@ -111,7 +111,7 @@ jobs:
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
-            python_version="['3.12']"  # "['3.10', '3.11', '3.12', '3.13']"
+            python_version="['3.10', '3.11', '3.12', '3.13']"
           else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
               python_version="['3.10', '3.11', '3.12', '3.13']"
