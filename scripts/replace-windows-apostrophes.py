@@ -70,9 +70,15 @@ def main():
 
     if full_html_api_dir.exists():
         replace_windows_apostrophes(full_html_api_dir)
+    else:
+        print(f"Error: {full_html_api_dir} does not exist.")
+        exit(1)
 
     if full_markdown_api_dir.exists():
         replace_windows_apostrophes(full_html_api_dir)
+    else:
+        print(f"Error: {full_markdown_api_dir} does not exist.")
+        exit(1)
 
 
 if __name__ == "__main__":

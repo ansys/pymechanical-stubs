@@ -23,7 +23,7 @@
 
 import argparse
 import os
-import pathlib
+from pathlib import Path
 import re
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
@@ -31,12 +31,12 @@ DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
 def process_markdown_file(file_path):
     """Update markdown file content."""
-    with pathlib.Path.open(file_path, "r", encoding="utf-8") as file:
+    with file_path.open("r", encoding="utf-8") as file:
         content = file.read()
 
     updated_content = re.sub(r"(#+)\s*\[`([^`]+)`\]\(#.*?\)", r"\1 `\2`", content)
 
-    with pathlib.Path.open(file_path, "w", encoding="utf-8") as file:
+    with file_path.open("w", encoding="utf-8") as file:
         file.write(updated_content)
 
 
@@ -45,7 +45,7 @@ def process_directory(directory):
     for dirpath, _, filenames in os.walk(directory):
         for filename in filenames:
             if filename.endswith(".md"):
-                file_path = pathlib.Path(dirpath, filename)
+                file_path = Path(dirpath, filename)
                 process_markdown_file(file_path)
 
 
@@ -61,5 +61,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     folder_path = args.input_folder
+
+    if not Path(folder_path).is_dir():
+        raise NotADirectoryError(f"{folder_path} is not a valid directory.")
+
     process_directory(folder_path)
     print("Markdown files processed successfully.")

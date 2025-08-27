@@ -23,7 +23,7 @@
 
 import argparse
 import os
-import pathlib
+from pathlib import Path
 import sys
 
 from bs4 import BeautifulSoup
@@ -36,10 +36,10 @@ DEFAULT_OUTPUT_FOLDER = "output"
 # This script must be run as follows: python script_name api index.html
 def parse_index_html(html_file):
     """Read & return the HTML content and index.html file name."""
-    with pathlib.Path.open(html_file, "r", encoding="utf-8") as f:
+    with html_file.open("r", encoding="utf-8") as f:
         html_content = f.read()
     # Return HTML content and directory of the HTML file
-    return html_content, pathlib.Path(html_file).parent
+    return html_content, html_file.parent
 
 
 def extract_nav_items(base_dir, html_content):
@@ -56,7 +56,7 @@ def extract_nav_items(base_dir, html_content):
         if href.startswith("../") or "#" in href:
             # print('SKIP ../index.html file=', href)
             continue  # Skip '../index.html' paths and path not ending with just index.html
-        item = {"name": link.text.strip(), "href": str(pathlib.Path(base_dir, href))}
+        item = {"name": link.text.strip(), "href": str(Path(base_dir, href))}
         if item not in items:
             # print('ITEM=', item)
             items.append(item)
@@ -79,7 +79,7 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
             nested_html_path = nav_item["href"][0:index]
             # print('nested_html_path= ', nested_html_path)
             try:
-                full_path = pathlib.Path(nested_html_path, str)
+                full_path = Path(nested_html_path, str)
                 # print('full_path=',full_path)
                 nested_html_content, _ = parse_index_html(full_path)  # Parse nested HTML file
                 nested_items = extract_nav_items(nested_html_path, nested_html_content)
@@ -100,7 +100,8 @@ def build_indented_items(nav_items, base_dir="", indentation=1):
 
 def create_toc_file(api_folder, indented_items):
     """Create the toc.yml file with the indented_items list."""
-    with pathlib.Path.open(pathlib.Path("toc.yml"), "w", encoding="utf-8") as f:
+    toc_file_name = Path("toc.yml")
+    with toc_file_name.open("w", encoding="utf-8") as f:
         f.write("- name: Introduction\n")
         f.write("  href: index.md\n")
         f.write("- name: API reference\n")
@@ -145,29 +146,38 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     api_folder = args.api_folder
-    html_file = pathlib.Path(args.html_file)
-    output_folder = pathlib.Path(args.output_folder)
+    html_file = Path(args.html_file)
+    output_folder = Path(args.output_folder)
 
-    repo_dir = pathlib.Path(__file__).parent.parent
-    full_file_path = pathlib.Path(repo_dir, api_folder, html_file)
-    full_dir_path = str(pathlib.Path(repo_dir, api_folder))
+    repo_dir = Path(__file__).parent.parent
+    full_file_path = Path(repo_dir, api_folder, html_file)
+    full_dir_path = str(Path(repo_dir, api_folder))
 
-    if not pathlib.Path.is_file(full_file_path):
+    if not full_file_path.is_file():
         print(f"Error: {full_file_path} does not exist.")
         sys.exit(1)
 
-    print(f"HTML_PATH={str(pathlib.Path(full_dir_path, html_file))}")
+    print(f"HTML_PATH={str(Path(full_dir_path, html_file))}")
     os.chdir(full_dir_path)
     html_content, base_dir = parse_index_html(html_file)
     nav_items = extract_nav_items(base_dir, html_content)
     indented_items = build_indented_items(nav_items, base_dir)
 
-    output_folder_path = pathlib.Path(repo_dir, output_folder)
+    output_folder_path = Path(repo_dir, output_folder)
     os.chdir(repo_dir)
-    if not pathlib.Path.is_dir(output_folder_path):
-        pathlib.Path.mkdir(output_folder)
+    if not output_folder_path.is_dir():
+        output_folder.mkdir()
 
     os.chdir(output_folder_path)
+
+    if not api_folder.is_dir():
+        print(f"Error: {api_folder} does not exist.")
+        sys.exit(1)
+
+    if not html_file.is_file():
+        print(f"Error: {html_file} does not exist.")
+        sys.exit(1)
+
     create_toc_file(api_folder, indented_items)
 
     print("toc.yml file created successfully!")
