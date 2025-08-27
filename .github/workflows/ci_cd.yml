@@ -436,11 +436,11 @@ jobs:
 
       - name: "Markdown: Clean ID in first row"
         run: |
-          python scripts/01-clean-id.py --input_folder combined-documentation-markdown
+          python scripts/01-clean-id.py --input_folder combined-documentation-md
 
       - name: "Markdown: Clean empty rows"
         run: |
-          python scripts/02-clean-empty-row.py --input_folder combined-documentation-markdown
+          python scripts/02-clean-empty-row.py --input_folder combined-documentation-md
 
       - name: "Create table of contents"
         run: |
@@ -463,11 +463,11 @@ jobs:
 
       - name: "Markdown: Add header to tables"
         run: |
-          python scripts/04-add-header-to-tables.py --input_folder combined-documentation-markdown
+          python scripts/04-add-header-to-tables.py --input_folder combined-documentation-md
 
       - name: "Markdown: Remove links in heading"
         run: |
-          python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-markdown
+          python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
       - name: "Upload HTML documentation"
         uses: actions/upload-artifact@v4
