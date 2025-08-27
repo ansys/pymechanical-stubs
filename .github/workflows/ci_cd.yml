@@ -405,6 +405,9 @@ jobs:
       matrix:
         python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
     steps:
+      - name: "Install Git and clone project"
+        uses: actions/checkout@v4
+
       - name: "Download all HTML documentation"
         uses: actions/download-artifact@v4
         with:
