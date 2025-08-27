@@ -163,6 +163,8 @@ if __name__ == "__main__":
     nav_items = extract_nav_items(base_dir, html_content)
     indented_items = build_indented_items(nav_items, base_dir)
 
+    os.chdir(repo_dir)
+
     if not Path(api_folder).is_dir():
         print(f"Error: {api_folder} does not exist.")
         sys.exit(1)
@@ -172,7 +174,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     output_folder_path = Path(repo_dir, output_folder)
-    os.chdir(repo_dir)
     if not output_folder_path.is_dir():
         output_folder.mkdir()
 
