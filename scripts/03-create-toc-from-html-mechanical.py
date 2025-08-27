@@ -169,10 +169,6 @@ if __name__ == "__main__":
         print(f"Error: {api_folder} does not exist.")
         sys.exit(1)
 
-    if not html_file.is_file():
-        print(f"Error: {html_file} does not exist.")
-        sys.exit(1)
-
     output_folder_path = Path(repo_dir, output_folder)
     if not output_folder_path.is_dir():
         output_folder.mkdir()
