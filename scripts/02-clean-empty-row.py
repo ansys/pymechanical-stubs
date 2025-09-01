@@ -23,7 +23,7 @@
 
 import argparse
 import os
-import pathlib
+from pathlib import Path
 import re
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
@@ -38,17 +38,17 @@ def remove_empty_rows_at_top_and_before_heading1(directory_path):
     for root, dirs, files in os.walk(directory_path):
         for file in files:
             if file.endswith(".md"):
-                file_path = pathlib.Path(root, file)
+                file_path = Path(root, file)
 
                 # Read the content of the Markdown file
-                with pathlib.Path.open(file_path, "r", encoding="utf-8") as f:
+                with file_path.open("r", encoding="utf-8") as f:
                     content = f.read()
 
                 # Use re.sub() to remove empty rows at the top and before the first Heading 1
                 new_content = re.sub(pattern, "", content, count=1)
 
                 # Write the modified content back to the file
-                with pathlib.Path.open(file_path, "w", encoding="utf-8") as f:
+                with file_path.open("w", encoding="utf-8") as f:
                     f.write(new_content)
 
                 print(f"Removed empty rows at the top and before Heading 1 in {file_path}.")
@@ -65,10 +65,10 @@ if __name__ == "__main__":
         default=DEFAULT_INPUT_FOLDER,
     )
     args = parser.parse_args()
-
     folder_path = args.input_folder
-    repo_dir = pathlib.Path(__file__).parent.parent
-    full_dir_path = repo_dir / folder_path
+
+    if not Path(folder_path).is_dir():
+        raise NotADirectoryError(f"{folder_path} is not a valid directory.")
 
     # Replace 'your_directory' with the actual path to the directory containing your Markdown files
     remove_empty_rows_at_top_and_before_heading1(folder_path)
