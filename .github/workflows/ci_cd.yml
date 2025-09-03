@@ -174,8 +174,8 @@ jobs:
           apt install software-properties-common -y
           add-apt-repository ppa:deadsnakes/ppa -y
           apt install python${{ matrix.python-version }} -y
-          # ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
-          # apt install python${{ matrix.python-version }}-venv -y
+          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
+          apt install python${{ matrix.python-version }}-venv -y
           # apt install -y lsb-release mono-complete make git zip
 
           # python -m ensurepip --default-pip
