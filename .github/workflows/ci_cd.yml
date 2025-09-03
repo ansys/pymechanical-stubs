@@ -178,14 +178,14 @@ jobs:
           apt install python${{ matrix.python-version }}-venv -y
           apt install -y lsb-release mono-complete make git zip
 
-          # python -m ensurepip --default-pip
-          # python -m pip install --upgrade pip
-          # python --version
-          # python -m pip --version
+          python -m ensurepip --default-pip
+          python -m pip install --upgrade pip
+          python --version
+          python -m pip --version
 
-          # python -m pip install -e .[build,doc]
-          # python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-          # python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+          python -m pip install -e .[build,doc]
+          python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
       - name: "Generate the Mechanical stub files"
         env:
