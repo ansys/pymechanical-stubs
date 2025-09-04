@@ -176,16 +176,21 @@ jobs:
           echo "install software-properties-common\n\n"
           apt install software-properties-common -y
 
-          echo "get the gpg key\n\n"
-          for i in {1..5}; do
-              gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776 && break || sleep 10
-          done
+          # echo "get the gpg key\n\n"
+          # for i in {1..5}; do
+          #     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776 && break || sleep 10
+          # done
+
+          # Determine codename for Ubuntu version of container
+          codename=$(cat /etc/lsb-release | grep "DISTRIB_CODENAME")
+          codename=${codename#*=}
+
+          # Get deadsnakes keyring
+          curl -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x6A755776 | gpg --dearmor -o /usr/share/keyrings/deadsnakes-archive-keyring.gpg
+          echo "deb [signed-by=/usr/share/keyrings/deadsnakes-archive-keyring.gpg] http://ppa.launchpad.net/deadsnakes/ppa/ubuntu $codename main" | tee /etc/apt/sources.list.d/deadsnakes-ppa.list
+
           echo "add deadsnakes ppa\n\n"
           add-apt-repository ppa:deadsnakes/ppa -y
-
-          # # Determine codename for Ubuntu version of container
-          # codename=$(cat /etc/lsb-release | grep "DISTRIB_CODENAME")
-          # codename=${codename#*=}
 
           # echo "Add deadsnakes ppa to sources.list\n\n"
           # cat <<EOF >> /etc/apt/source.list
