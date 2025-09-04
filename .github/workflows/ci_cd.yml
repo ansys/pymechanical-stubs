@@ -186,6 +186,7 @@ jobs:
           codename=${codename#*=}
 
           # Get deadsnakes keyring
+          apt-get install -y curl
           curl -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x6A755776 | gpg --dearmor -o /usr/share/keyrings/deadsnakes-archive-keyring.gpg
           echo "deb [signed-by=/usr/share/keyrings/deadsnakes-archive-keyring.gpg] http://ppa.launchpad.net/deadsnakes/ppa/ubuntu $codename main" | tee /etc/apt/sources.list.d/deadsnakes-ppa.list
 
