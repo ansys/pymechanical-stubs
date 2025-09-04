@@ -176,26 +176,14 @@ jobs:
           echo "install software-properties-common\n\n"
           apt install software-properties-common -y
 
-          # Determine Ubuntu version
-          ubuntu_version=$(hostnamectl | grep "Ubuntu")
-          if [[ $ubuntu_version =~ "20.04" ]]; then
-            name="focal"
-            echo "Ubuntu 20.04 detected"
-          elif [[ $ubuntu_version =~ "22.04" ]]; then
-            name="jammy"
-            echo "Ubuntu 22.04 detected"
-          elif [[ $ubuntu_version =~ "24.04" ]]; then
-            name="noble"
-            echo "Ubuntu 24.04 detected"
-          else
-            echo "Unsupported Ubuntu version. Exiting."
-            exit 1
-          fi
+          # Determine codename for Ubuntu version of container
+          codename=$(cat /etc/lsb-release | grep "DISTRIB_CODENAME")
+          codename=${codename#*=}
 
           echo "Add deadsnakes ppa to sources.list\n\n"
           cat <<EOF >> /etc/apt/source.list
-          deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $name main
-          deb-src https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $name main
+          deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $codename main
+          deb-src https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $codename main
           EOF
 
           echo "add the gpg key\n\n"
