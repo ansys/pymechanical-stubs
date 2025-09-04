@@ -187,14 +187,10 @@ jobs:
           EOF
 
           echo "add the gpg key\n\n"
+          apt-get install -y gnupg
           apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776
 
-          echo "apt-get update and install deadsnakes\n\n"
           apt-get update
-          apt-get install deadsnakes/ppa
-
-          # echo "add apt repository\n\n"
-          # add-apt-repository ppa:deadsnakes/ppa -y
 
           echo "apt install python${{ matrix.python-version }}\n\n"
           apt install python${{ matrix.python-version }} -y
