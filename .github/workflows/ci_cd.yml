@@ -175,8 +175,39 @@ jobs:
           apt install --reinstall ca-certificates
           echo "install software-properties-common\n\n"
           apt install software-properties-common -y
-          echo "add apt repository\n\n"
-          add-apt-repository ppa:deadsnakes/ppa -y -m
+
+          # Determine Ubuntu version
+          ubuntu_version=$(hostnamectl | grep "Ubuntu")
+          if [[ $ubuntu_version =~ "20.04" ]]; then
+            name="focal"
+            echo "Ubuntu 20.04 detected"
+          elif [[ $ubuntu_version =~ "22.04" ]]; then
+            name="jammy"
+            echo "Ubuntu 22.04 detected"
+          elif [[ $ubuntu_version =~ "24.04" ]]; then
+            name="noble"
+            echo "Ubuntu 24.04 detected"
+          else
+            echo "Unsupported Ubuntu version. Exiting."
+            exit 1
+          fi
+
+          echo "Add deadsnakes ppa to sources.list\n\n"
+          cat <<EOF >> /etc/apt/source.list
+          deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $name main
+          deb-src https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $name main
+          EOF
+
+          echo "add the gpg key\n\n"
+          apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776
+
+          echo "apt-get update and install deadsnakes\n\n"
+          apt-get update
+          apt-get install deadsnakes/ppa
+
+          # echo "add apt repository\n\n"
+          # add-apt-repository ppa:deadsnakes/ppa -y
+
           echo "apt install python${{ matrix.python-version }}\n\n"
           apt install python${{ matrix.python-version }} -y
           echo "link python\n\n"
