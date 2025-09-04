@@ -176,21 +176,28 @@ jobs:
           echo "install software-properties-common\n\n"
           apt install software-properties-common -y
 
-          # Determine codename for Ubuntu version of container
-          codename=$(cat /etc/lsb-release | grep "DISTRIB_CODENAME")
-          codename=${codename#*=}
+          echo "get the gpg key\n\n"
+          for i in {1..5}; do
+              gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776 && break || sleep 10
+          done
+          echo "add deadsnakes ppa\n\n"
+          add-apt-repository ppa:deadsnakes/ppa -y
 
-          echo "Add deadsnakes ppa to sources.list\n\n"
-          cat <<EOF >> /etc/apt/source.list
-          deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $codename main
-          deb-src https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $codename main
-          EOF
+          # # Determine codename for Ubuntu version of container
+          # codename=$(cat /etc/lsb-release | grep "DISTRIB_CODENAME")
+          # codename=${codename#*=}
 
-          echo "add the gpg key\n\n"
-          apt-get install -y gnupg
-          apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776
+          # echo "Add deadsnakes ppa to sources.list\n\n"
+          # cat <<EOF >> /etc/apt/source.list
+          # deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $codename main
+          # deb-src https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu $codename main
+          # EOF
 
-          apt-get update
+          # echo "add the gpg key\n\n"
+          # apt-get install -y gnupg
+          # apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776
+
+          # apt-get update
 
           echo "apt install python${{ matrix.python-version }}\n\n"
           apt install python${{ matrix.python-version }} -y
