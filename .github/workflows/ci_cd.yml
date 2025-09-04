@@ -176,7 +176,7 @@ jobs:
           echo "install software-properties-common\n\n"
           apt install software-properties-common -y
           echo "add apt repository\n\n"
-          add-apt-repository ppa:deadsnakes/ppa -y
+          add-apt-repository ppa:deadsnakes/ppa -y -m
           echo "apt install python${{ matrix.python-version }}\n\n"
           apt install python${{ matrix.python-version }} -y
           echo "link python\n\n"
