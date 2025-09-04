@@ -199,6 +199,7 @@ jobs:
           apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F23C5A6CF475977595C89F51BA6932366A755776
 
           apt-get update
+          apt-get install deadsnakes-ppa -y
 
           echo "apt install python${{ matrix.python-version }}\n\n"
           apt install python${{ matrix.python-version }} -y
