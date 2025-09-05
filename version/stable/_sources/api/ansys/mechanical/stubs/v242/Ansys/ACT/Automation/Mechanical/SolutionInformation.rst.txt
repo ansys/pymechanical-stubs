@@ -1,0 +1,1866 @@
+.. vale off
+
+
+
+:class:`SolutionInformation`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.SolutionInformation
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a SolutionInformation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolutionInformation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddAddedMass`
+            - Creates a new AddedMassTracker
+          * - :py:attr:`~AddArtificialEnergy`
+            - Creates a new ArtificialEnergyTracker
+          * - :py:attr:`~AddChattering`
+            - Creates a new ContactChatteringTracker
+          * - :py:attr:`~AddClosedPenetration`
+            - Creates a new ContactClosedPenetrationTracker
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddContactDepth`
+            - Creates a new ContactDepthTracker
+          * - :py:attr:`~AddContactEnergy`
+            - Creates a new ContactEnergyTracker
+          * - :py:attr:`~AddContactForce`
+            - Creates a new ContactForceTracker
+          * - :py:attr:`~AddContactHeatFlux`
+            - Creates a new ContactHeatFluxTracker
+          * - :py:attr:`~AddContactMaxTangentialFluidPressure`
+            - Creates a new ContactMaxTangentialFluidPressureTracker
+          * - :py:attr:`~AddContactMaximumNormalStiffness`
+            - Creates a new ContactMaximumNormalStiffnessTracker
+          * - :py:attr:`~AddContactMinimumNormalStiffness`
+            - Creates a new ContactMinimumNormalStiffnessTracker
+          * - :py:attr:`~AddContactPairForceConvergenceNorm`
+            - Creates a new ContactPairForceConvergenceNormTracker
+          * - :py:attr:`~AddContactPressure`
+            - Creates a new ContactPressureTracker
+          * - :py:attr:`~AddContactingArea`
+            - Creates a new ContactingAreaTracker
+          * - :py:attr:`~AddDampingEnergy`
+            - Creates a new DampingEnergyTracker
+          * - :py:attr:`~AddDeformationPlotTracker`
+            - Creates a new TotalDeformation Plot Tracker.
+          * - :py:attr:`~AddDensity`
+            - Creates a new DensityTracker
+          * - :py:attr:`~AddDirectionalAcceleration`
+            - Creates a new DirectionalAccelerationTracker
+          * - :py:attr:`~AddDirectionalDeformation`
+            - Creates a new DirectionalDeformationTracker
+          * - :py:attr:`~AddDirectionalVelocity`
+            - Creates a new DirectionalVelocityTracker
+          * - :py:attr:`~AddEffectiveStrain`
+            - Creates a new EffectiveStrainTracker
+          * - :py:attr:`~AddEffectiveStress`
+            - Creates a new EffectiveStressTracker
+          * - :py:attr:`~AddElasticSlip`
+            - Creates a new ContactElasticSlipTracker
+          * - :py:attr:`~AddErodedInternalEnergy`
+            - Creates a new ErodedInternalEnergyTracker
+          * - :py:attr:`~AddErodedKineticEnergy`
+            - Creates a new ErodedKineticEnergyTracker
+          * - :py:attr:`~AddExternalForce`
+            - Creates a new ExternalForceTracker
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddFluidPressure`
+            - Creates a new ContactFluidPressureTracker
+          * - :py:attr:`~AddForceReaction`
+            - Creates a new ForceReactionTracker
+          * - :py:attr:`~AddFrictionalDissipationEnergy`
+            - Creates a new ContactFrictionalDissipationEnergyTracker
+          * - :py:attr:`~AddFrictionalStress`
+            - Creates a new ContactFrictionalStressTracker
+          * - :py:attr:`~AddGap`
+            - Creates a new ContactGapTracker
+          * - :py:attr:`~AddHourglassEnergy`
+            - Creates a new HourglassEnergyTracker
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddInternalEnergy`
+            - Creates a new InternalEnergyTracker
+          * - :py:attr:`~AddKineticEnergy`
+            - Creates a new KineticEnergyTracker
+          * - :py:attr:`~AddLSDYNAGeneralTracker`
+            - Creates a new LSDYNAGeneralTracker
+          * - :py:attr:`~AddLatticeDensity`
+            - Creates a new LatticeDensity
+          * - :py:attr:`~AddLatticeElementalDensity`
+            - Creates a new LatticeElementalDensity
+          * - :py:attr:`~AddMaximumDampingPressure`
+            - Creates a new ContactMaximumDampingPressureTracker
+          * - :py:attr:`~AddMaximumGeometricSlidingDistance`
+            - Creates a new ContactMaximumGeometricSlidingDistanceTracker
+          * - :py:attr:`~AddMaximumTangentialStiffness`
+            - Creates a new ContactMaximumTangentialStiffnessTracker
+          * - :py:attr:`~AddMinimumGeometricSlidingDistance`
+            - Creates a new ContactMinimumGeometricSlidingDistanceTracker
+          * - :py:attr:`~AddMinimumTangentialStiffness`
+            - Creates a new ContactMinimumTangentialStiffnessTracker
+          * - :py:attr:`~AddMomentReaction`
+            - Creates a new MomentReactionTracker
+          * - :py:attr:`~AddMomentum`
+            - Creates a new MomentumTracker
+          * - :py:attr:`~AddNonLinearStabilizationEnergy`
+            - Creates a new NonLinearStabilizationEnergyTracker
+          * - :py:attr:`~AddNumberContacting`
+            - Creates a new NumberContactingTracker
+          * - :py:attr:`~AddNumberSticking`
+            - Creates a new ContactNumberStickingTracker
+          * - :py:attr:`~AddNumberWithLargePenetration`
+            - Creates a new ContactNumberWithLargePenetrationTracker
+          * - :py:attr:`~AddNumberWithTooMuchSliding`
+            - Creates a new ContactNumberWithTooMuchSlidingTracker
+          * - :py:attr:`~AddPenetration`
+            - Creates a new ContactPenetrationTracker
+          * - :py:attr:`~AddPlasticWork`
+            - Creates a new PlasticWorkTracker
+          * - :py:attr:`~AddPosition`
+            - Creates a new PositionTracker
+          * - :py:attr:`~AddPossibleOverconstraint`
+            - Creates a new ContactPossibleOverconstraintTracker
+          * - :py:attr:`~AddPressure`
+            - Creates a new PressureTracker
+          * - :py:attr:`~AddResultingPinball`
+            - Creates a new ContactResultingPinballTracker
+          * - :py:attr:`~AddRigidBodyVelocity`
+            - Creates a new RigidBodyVelocityTracker
+          * - :py:attr:`~AddSlidingDistance`
+            - Creates a new ContactSlidingDistanceTracker
+          * - :py:attr:`~AddSlidingIndication`
+            - Creates a new ContactSlidingIndicationTracker
+          * - :py:attr:`~AddSpringTrackerDampingForce`
+            - Creates a new SpringDampingForceTracker
+          * - :py:attr:`~AddSpringTrackerElasticForce`
+            - Creates a new SpringElasticForceTracker
+          * - :py:attr:`~AddSpringTrackerElongation`
+            - Creates a new SpringElongationTracker
+          * - :py:attr:`~AddSpringTrackerVelocity`
+            - Creates a new SpringVelocityTracker
+          * - :py:attr:`~AddStabilizationEnergy`
+            - Creates a new ContactStabilizationEnergyTracker
+          * - :py:attr:`~AddStiffnessEnergy`
+            - Creates a new StiffnessEnergyTracker
+          * - :py:attr:`~AddStrainEnergy`
+            - Creates a new ContactStrainEnergyTracker
+          * - :py:attr:`~AddStrainPlotTracker`
+            - Creates a new EquivalentElasticStrainRST Plot Tracker.
+          * - :py:attr:`~AddStressPlotTracker`
+            - Creates a new EquivalentStress Plot Tracker.
+          * - :py:attr:`~AddTangentialDampingStress`
+            - Creates a new ContactTangentialDampingStressTracker
+          * - :py:attr:`~AddTemperature`
+            - Creates a new TemperatureTracker
+          * - :py:attr:`~AddTemperaturePlotTracker`
+            - Creates a new TemperatureResult Plot Tracker.
+          * - :py:attr:`~AddTopologyDensity`
+            - Creates a new TopologyDensity
+          * - :py:attr:`~AddTopologyElementalDensity`
+            - Creates a new TopologyElementalDensity
+          * - :py:attr:`~AddTotalEnergy`
+            - Creates a new TotalEnergyTracker
+          * - :py:attr:`~AddTotalForceFromContactPressureX`
+            - Creates a new ContactTotalForceFromContactPressureXTracker
+          * - :py:attr:`~AddTotalForceFromContactPressureY`
+            - Creates a new ContactTotalForceFromContactPressureYTracker
+          * - :py:attr:`~AddTotalForceFromContactPressureZ`
+            - Creates a new ContactTotalForceFromContactPressureZTracker
+          * - :py:attr:`~AddTotalForceFromTangentialStressX`
+            - Creates a new ContactTotalForceFromTangentialStressXTracker
+          * - :py:attr:`~AddTotalForceFromTangentialStressY`
+            - Creates a new ContactTotalForceFromTangentialStressYTracker
+          * - :py:attr:`~AddTotalForceFromTangentialStressZ`
+            - Creates a new ContactTotalForceFromTangentialStressZTracker
+          * - :py:attr:`~AddTotalMassAverageVelocity`
+            - Creates a new TotalMassAverageVelocityTracker
+          * - :py:attr:`~AddVolumeLossDueToWear`
+            - Creates a new ContactVolumeLossDueToWearTracker
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateAllContactTrackers`
+            - Run the EvaluateAllContactTrackers action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~ImportResultTrackersFromFile`
+            - Import Result Trackers from File.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ActivateVisibility`
+            - Gets or sets the ActivateVisibility.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~Component`
+            - Gets or sets the Component.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Display`
+            - Gets or sets the Display.
+          * - :py:attr:`~DisplayFilterDuringSolve`
+            - Gets or sets the DisplayFilterDuringSolve.
+          * - :py:attr:`~DisplayPoints`
+            - Gets or sets the DisplayPoints.
+          * - :py:attr:`~DisplayType`
+            - Gets or sets the DisplayType.
+          * - :py:attr:`~DrawConnectionsAttachedTo`
+            - Gets or sets the DrawConnectionsAttachedTo.
+          * - :py:attr:`~EnvironmentSelection`
+            - Gets or Sets the EnvironmentSelection to an Analysis object.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~IdentifyElementViolations`
+            - Gets or sets the IdentifyElementViolations.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LineColor`
+            - Gets or sets the LineColor.
+          * - :py:attr:`~LineThickness`
+            - Gets or sets the LineThickness.
+          * - :py:attr:`~ModeNumber`
+            - Gets or sets the ModeNumber.
+          * - :py:attr:`~NewtonRaphsonResiduals`
+            - Gets or sets the NewtonRaphsonResiduals.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ResponseConstraint`
+            - Gets or sets the ResponseConstraint.
+          * - :py:attr:`~ShowChargeResiduals`
+            - Gets or sets the ShowChargeResiduals.
+          * - :py:attr:`~ShowHeatResiduals`
+            - Gets or sets the ShowHeatResiduals.
+          * - :py:attr:`~ShowMomentResiduals`
+            - Gets or sets the ShowMomentResiduals.
+          * - :py:attr:`~SolutionOutput`
+            - Gets or sets the SolutionOutput.
+          * - :py:attr:`~StepNumber`
+            - Gets or sets the StepNumber.
+          * - :py:attr:`~StepSelectionMode`
+            - Gets or sets the StepSelectionMode.
+          * - :py:attr:`~SummaryType`
+            - Gets or sets the SummaryType.
+          * - :py:attr:`~UpdateInterval`
+            - Gets or sets the UpdateInterval.
+          * - :py:attr:`~VisibleOnResults`
+            - Gets or sets the VisibleOnResults.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ActivateVisibility
+   :type: Optional[bool]
+
+   
+   Gets or sets the ActivateVisibility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Component
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.OptimizationResponseConstraintComponentType]
+
+   
+   Gets or sets the Component.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Display
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FEConnectionDisplay]
+
+   
+   Gets or sets the Display.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayFilterDuringSolve
+   :type: Optional[bool]
+
+   
+   Gets or sets the DisplayFilterDuringSolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayPoints
+   :type: Optional[float]
+
+   
+   Gets or sets the DisplayPoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FEConnectionDisplayType]
+
+   
+   Gets or sets the DisplayType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DrawConnectionsAttachedTo
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NodeSelection]
+
+   
+   Gets or sets the DrawConnectionsAttachedTo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnvironmentSelection
+   :type: Optional[Any]
+
+   
+   Gets or Sets the EnvironmentSelection to an Analysis object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IdentifyElementViolations
+   :type: Optional[int]
+
+   
+   Gets or sets the IdentifyElementViolations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSSolutionInfoToolAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineColor
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FEConnectionLineColor]
+
+   
+   Gets or sets the LineColor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineThickness
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FEConnectionLineThicknessType]
+
+   
+   Gets or sets the LineThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModeNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the ModeNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NewtonRaphsonResiduals
+   :type: Optional[int]
+
+   
+   Gets or sets the NewtonRaphsonResiduals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResponseConstraint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.ResponseConstraint]
+
+   
+   Gets or sets the ResponseConstraint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowChargeResiduals
+   :type: Optional[bool]
+
+   
+   Gets or sets the ShowChargeResiduals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowHeatResiduals
+   :type: Optional[bool]
+
+   
+   Gets or sets the ShowHeatResiduals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowMomentResiduals
+   :type: Optional[bool]
+
+   
+   Gets or sets the ShowMomentResiduals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionOutput
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolutionOutputType]
+
+   
+   Gets or sets the SolutionOutput.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the StepNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepSelectionMode
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SeqSelectionMode]
+
+   
+   Gets or sets the StepSelectionMode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SummaryType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PFactorResultType]
+
+   
+   Gets or sets the SummaryType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UpdateInterval
+   :type: Optional[float]
+
+   
+   Gets or sets the UpdateInterval.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleOnResults
+   :type: Optional[bool]
+
+   
+   Gets or sets the VisibleOnResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAddedMass() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.AddedMassTracker
+
+   
+   Creates a new AddedMassTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddArtificialEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ArtificialEnergyTracker
+
+   
+   Creates a new ArtificialEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddChattering() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactChatteringTracker
+
+   
+   Creates a new ContactChatteringTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddClosedPenetration() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactClosedPenetrationTracker
+
+   
+   Creates a new ContactClosedPenetrationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactDepth() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactDepthTracker
+
+   
+   Creates a new ContactDepthTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactEnergyTracker
+
+   
+   Creates a new ContactEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactForce() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactForceTracker
+
+   
+   Creates a new ContactForceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactHeatFlux() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactHeatFluxTracker
+
+   
+   Creates a new ContactHeatFluxTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactMaxTangentialFluidPressure() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMaxTangentialFluidPressureTracker
+
+   
+   Creates a new ContactMaxTangentialFluidPressureTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactMaximumNormalStiffness() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMaximumNormalStiffnessTracker
+
+   
+   Creates a new ContactMaximumNormalStiffnessTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactMinimumNormalStiffness() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMinimumNormalStiffnessTracker
+
+   
+   Creates a new ContactMinimumNormalStiffnessTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactPairForceConvergenceNorm() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactPairForceConvergenceNormTracker
+
+   
+   Creates a new ContactPairForceConvergenceNormTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactPressure() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactPressureTracker
+
+   
+   Creates a new ContactPressureTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactingArea() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactingAreaTracker
+
+   
+   Creates a new ContactingAreaTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDampingEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.DampingEnergyTracker
+
+   
+   Creates a new DampingEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDeformationPlotTracker() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalDeformation
+
+   
+   Creates a new TotalDeformation Plot Tracker.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDensity() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.DensityTracker
+
+   
+   Creates a new DensityTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAcceleration() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.DirectionalAccelerationTracker
+
+   
+   Creates a new DirectionalAccelerationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalDeformation() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.DirectionalDeformationTracker
+
+   
+   Creates a new DirectionalDeformationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalVelocity() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.DirectionalVelocityTracker
+
+   
+   Creates a new DirectionalVelocityTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEffectiveStrain() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.EffectiveStrainTracker
+
+   
+   Creates a new EffectiveStrainTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEffectiveStress() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.EffectiveStressTracker
+
+   
+   Creates a new EffectiveStressTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElasticSlip() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactElasticSlipTracker
+
+   
+   Creates a new ContactElasticSlipTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddErodedInternalEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ErodedInternalEnergyTracker
+
+   
+   Creates a new ErodedInternalEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddErodedKineticEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ErodedKineticEnergyTracker
+
+   
+   Creates a new ErodedKineticEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddExternalForce() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ExternalForceTracker
+
+   
+   Creates a new ExternalForceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluidPressure() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactFluidPressureTracker
+
+   
+   Creates a new ContactFluidPressureTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForceReaction() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ForceReactionTracker
+
+   
+   Creates a new ForceReactionTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFrictionalDissipationEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactFrictionalDissipationEnergyTracker
+
+   
+   Creates a new ContactFrictionalDissipationEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFrictionalStress() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactFrictionalStressTracker
+
+   
+   Creates a new ContactFrictionalStressTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGap() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactGapTracker
+
+   
+   Creates a new ContactGapTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHourglassEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.HourglassEnergyTracker
+
+   
+   Creates a new HourglassEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInternalEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.InternalEnergyTracker
+
+   
+   Creates a new InternalEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddKineticEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.KineticEnergyTracker
+
+   
+   Creates a new KineticEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLSDYNAGeneralTracker() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.LSDYNAGeneralTracker
+
+   
+   Creates a new LSDYNAGeneralTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLatticeDensity() -> Ansys.ACT.Automation.Mechanical.Results.LatticeDensity
+
+   
+   Creates a new LatticeDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLatticeElementalDensity() -> Ansys.ACT.Automation.Mechanical.Results.LatticeElementalDensity
+
+   
+   Creates a new LatticeElementalDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumDampingPressure() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMaximumDampingPressureTracker
+
+   
+   Creates a new ContactMaximumDampingPressureTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumGeometricSlidingDistance() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMaximumGeometricSlidingDistanceTracker
+
+   
+   Creates a new ContactMaximumGeometricSlidingDistanceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumTangentialStiffness() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMaximumTangentialStiffnessTracker
+
+   
+   Creates a new ContactMaximumTangentialStiffnessTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMinimumGeometricSlidingDistance() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMinimumGeometricSlidingDistanceTracker
+
+   
+   Creates a new ContactMinimumGeometricSlidingDistanceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMinimumTangentialStiffness() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactMinimumTangentialStiffnessTracker
+
+   
+   Creates a new ContactMinimumTangentialStiffnessTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMomentReaction() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.MomentReactionTracker
+
+   
+   Creates a new MomentReactionTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMomentum() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.MomentumTracker
+
+   
+   Creates a new MomentumTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNonLinearStabilizationEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.NonLinearStabilizationEnergyTracker
+
+   
+   Creates a new NonLinearStabilizationEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNumberContacting() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.NumberContactingTracker
+
+   
+   Creates a new NumberContactingTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNumberSticking() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactNumberStickingTracker
+
+   
+   Creates a new ContactNumberStickingTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNumberWithLargePenetration() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactNumberWithLargePenetrationTracker
+
+   
+   Creates a new ContactNumberWithLargePenetrationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNumberWithTooMuchSliding() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactNumberWithTooMuchSlidingTracker
+
+   
+   Creates a new ContactNumberWithTooMuchSlidingTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPenetration() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactPenetrationTracker
+
+   
+   Creates a new ContactPenetrationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPlasticWork() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.PlasticWorkTracker
+
+   
+   Creates a new PlasticWorkTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPosition() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.PositionTracker
+
+   
+   Creates a new PositionTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPossibleOverconstraint() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactPossibleOverconstraintTracker
+
+   
+   Creates a new ContactPossibleOverconstraintTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPressure() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.PressureTracker
+
+   
+   Creates a new PressureTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddResultingPinball() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactResultingPinballTracker
+
+   
+   Creates a new ContactResultingPinballTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRigidBodyVelocity() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.RigidBodyVelocityTracker
+
+   
+   Creates a new RigidBodyVelocityTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSlidingDistance() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactSlidingDistanceTracker
+
+   
+   Creates a new ContactSlidingDistanceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSlidingIndication() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactSlidingIndicationTracker
+
+   
+   Creates a new ContactSlidingIndicationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpringTrackerDampingForce() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.SpringDampingForceTracker
+
+   
+   Creates a new SpringDampingForceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpringTrackerElasticForce() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.SpringElasticForceTracker
+
+   
+   Creates a new SpringElasticForceTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpringTrackerElongation() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.SpringElongationTracker
+
+   
+   Creates a new SpringElongationTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSpringTrackerVelocity() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.SpringVelocityTracker
+
+   
+   Creates a new SpringVelocityTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStabilizationEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactStabilizationEnergyTracker
+
+   
+   Creates a new ContactStabilizationEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStiffnessEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.StiffnessEnergyTracker
+
+   
+   Creates a new StiffnessEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStrainEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactStrainEnergyTracker
+
+   
+   Creates a new ContactStrainEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStrainPlotTracker() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrainRST
+
+   
+   Creates a new EquivalentElasticStrainRST Plot Tracker.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressPlotTracker() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStress
+
+   
+   Creates a new EquivalentStress Plot Tracker.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTangentialDampingStress() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTangentialDampingStressTracker
+
+   
+   Creates a new ContactTangentialDampingStressTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTemperature() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.TemperatureTracker
+
+   
+   Creates a new TemperatureTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTemperaturePlotTracker() -> Ansys.ACT.Automation.Mechanical.Results.ThermalResults.TemperatureResult
+
+   
+   Creates a new TemperatureResult Plot Tracker.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTopologyDensity() -> Ansys.ACT.Automation.Mechanical.Results.TopologyDensity
+
+   
+   Creates a new TopologyDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTopologyElementalDensity() -> Ansys.ACT.Automation.Mechanical.Results.TopologyElementalDensity
+
+   
+   Creates a new TopologyElementalDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalEnergy() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.TotalEnergyTracker
+
+   
+   Creates a new TotalEnergyTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalForceFromContactPressureX() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTotalForceFromContactPressureXTracker
+
+   
+   Creates a new ContactTotalForceFromContactPressureXTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalForceFromContactPressureY() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTotalForceFromContactPressureYTracker
+
+   
+   Creates a new ContactTotalForceFromContactPressureYTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalForceFromContactPressureZ() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTotalForceFromContactPressureZTracker
+
+   
+   Creates a new ContactTotalForceFromContactPressureZTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalForceFromTangentialStressX() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTotalForceFromTangentialStressXTracker
+
+   
+   Creates a new ContactTotalForceFromTangentialStressXTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalForceFromTangentialStressY() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTotalForceFromTangentialStressYTracker
+
+   
+   Creates a new ContactTotalForceFromTangentialStressYTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalForceFromTangentialStressZ() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactTotalForceFromTangentialStressZTracker
+
+   
+   Creates a new ContactTotalForceFromTangentialStressZTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalMassAverageVelocity() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.TotalMassAverageVelocityTracker
+
+   
+   Creates a new TotalMassAverageVelocityTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVolumeLossDueToWear() -> Ansys.ACT.Automation.Mechanical.Results.ResultTrackers.ContactVolumeLossDueToWearTracker
+
+   
+   Creates a new ContactVolumeLossDueToWearTracker
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllContactTrackers() -> None
+
+   
+   Run the EvaluateAllContactTrackers action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportResultTrackersFromFile(fileName: str) -> None
+
+   
+   Import Result Trackers from File.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`EdgeType`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.EdgeType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the EdgeType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EdgeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Circle`
+            - 
+          * - :py:attr:`~Faceted`
+            - 
+          * - :py:attr:`~Line`
+            - 
+          * - :py:attr:`~Spline`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Circle
+   :value: 3
+
+
+.. py:attribute:: Faceted
+   :value: 8
+
+
+.. py:attribute:: Line
+   :value: 1
+
+
+.. py:attribute:: Spline
+   :value: 7
+
+
+
+
+
+
+.. vale on

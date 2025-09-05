@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`HarmonicMultiStepType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.HarmonicMultiStepType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the HarmonicMultiStepType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HarmonicMultiStepType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Load_Step`
+            - 
+          * - :py:attr:`~RPM`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Load_Step
+   :value: 1
+
+
+.. py:attribute:: RPM
+   :value: 0
+
+
+
+
+
+
+.. vale on

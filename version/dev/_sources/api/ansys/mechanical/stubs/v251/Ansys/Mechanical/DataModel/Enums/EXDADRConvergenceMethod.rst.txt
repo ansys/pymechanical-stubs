@@ -1,0 +1,85 @@
+.. vale off
+
+
+
+:class:`EXDADRConvergenceMethod`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.Enums.EXDADRConvergenceMethod
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDADRConvergenceMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CentralDifferenceMethod`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~RunningAverageMethod`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CentralDifferenceMethod
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: RunningAverageMethod
+   :value: 2
+
+
+
+
+
+
+.. vale on

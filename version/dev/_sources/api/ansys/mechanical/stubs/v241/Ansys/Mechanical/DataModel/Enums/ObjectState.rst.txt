@@ -1,0 +1,180 @@
+.. vale off
+
+
+
+:class:`ObjectState`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ObjectState
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Object State type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ObjectState
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Error`
+            - 
+          * - :py:attr:`~FullyDefined`
+            - 
+          * - :py:attr:`~Hidden`
+            - 
+          * - :py:attr:`~Ignored`
+            - 
+          * - :py:attr:`~LicenseConflict`
+            - 
+          * - :py:attr:`~Meshed`
+            - 
+          * - :py:attr:`~NoState`
+            - 
+          * - :py:attr:`~NotSolved`
+            - 
+          * - :py:attr:`~Obsolete`
+            - 
+          * - :py:attr:`~ObsoleteNotLoaded`
+            - 
+          * - :py:attr:`~PartialSolved`
+            - 
+          * - :py:attr:`~SolveFailed`
+            - 
+          * - :py:attr:`~SolveFailedNotLoaded`
+            - 
+          * - :py:attr:`~Solved`
+            - 
+          * - :py:attr:`~SolvedNotLoaded`
+            - 
+          * - :py:attr:`~Solving`
+            - 
+          * - :py:attr:`~Suppressed`
+            - 
+          * - :py:attr:`~UnderDefined`
+            - 
+          * - :py:attr:`~WaitForValidation`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Error
+   :value: 7
+
+
+.. py:attribute:: FullyDefined
+   :value: 1
+
+
+.. py:attribute:: Hidden
+   :value: 10
+
+
+.. py:attribute:: Ignored
+   :value: 9
+
+
+.. py:attribute:: LicenseConflict
+   :value: 8
+
+
+.. py:attribute:: Meshed
+   :value: 16
+
+
+.. py:attribute:: NoState
+   :value: 0
+
+
+.. py:attribute:: NotSolved
+   :value: 4
+
+
+.. py:attribute:: Obsolete
+   :value: 6
+
+
+.. py:attribute:: ObsoleteNotLoaded
+   :value: 19
+
+
+.. py:attribute:: PartialSolved
+   :value: 15
+
+
+.. py:attribute:: SolveFailed
+   :value: 13
+
+
+.. py:attribute:: SolveFailedNotLoaded
+   :value: 14
+
+
+.. py:attribute:: Solved
+   :value: 5
+
+
+.. py:attribute:: SolvedNotLoaded
+   :value: 12
+
+
+.. py:attribute:: Solving
+   :value: 11
+
+
+.. py:attribute:: Suppressed
+   :value: 3
+
+
+.. py:attribute:: UnderDefined
+   :value: 2
+
+
+.. py:attribute:: WaitForValidation
+   :value: 17
+
+
+
+
+
+
+.. vale on

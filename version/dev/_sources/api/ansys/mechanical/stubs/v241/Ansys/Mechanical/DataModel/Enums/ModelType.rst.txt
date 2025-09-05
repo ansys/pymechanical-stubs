@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ModelType`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.ModelType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ModelType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModelType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Type_2_5DZDirectionExtrusion`
+            - 
+          * - :py:attr:`~Type_2_5YAxisRotationExtrusion`
+            - 
+          * - :py:attr:`~Type_3D`
+            - 
+          * - :py:attr:`~Type_VibratingStructuralPanel`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Type_2_5DZDirectionExtrusion
+   :value: 1
+
+
+.. py:attribute:: Type_2_5YAxisRotationExtrusion
+   :value: 2
+
+
+.. py:attribute:: Type_3D
+   :value: 0
+
+
+.. py:attribute:: Type_VibratingStructuralPanel
+   :value: 3
+
+
+
+
+
+
+.. vale on

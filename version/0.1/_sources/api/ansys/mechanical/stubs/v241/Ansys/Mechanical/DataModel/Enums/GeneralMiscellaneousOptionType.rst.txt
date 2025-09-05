@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`GeneralMiscellaneousOptionType`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GeneralMiscellaneousOptionType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GeneralMiscellaneousOptionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GeneralMiscellaneousOptionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AcousticBodies`
+            - 
+          * - :py:attr:`~AllBodies`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~StructuralBodies`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AcousticBodies
+   :value: 3
+
+
+.. py:attribute:: AllBodies
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: StructuralBodies
+   :value: 2
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FatigueFrequencySelection`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FatigueFrequencySelection(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the EnclosureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueFrequencySelection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MultipleFrequency`
+            - 
+          * - :py:attr:`~SineSweep`
+            - 
+          * - :py:attr:`~SingleFrequency`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MultipleFrequency
+   :value: 1
+
+
+.. py:attribute:: SineSweep
+   :value: 2
+
+
+.. py:attribute:: SingleFrequency
+   :value: 0
+
+
+
+
+
+
+.. vale on

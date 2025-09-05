@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`FEConnectionDisplay`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.FEConnectionDisplay
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FEConnectionDisplay.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FEConnectionDisplay
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Beam`
+            - 
+          * - :py:attr:`~CE`
+            - 
+          * - :py:attr:`~Cyclic`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~WeakSprings`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 0
+
+
+.. py:attribute:: Beam
+   :value: 2
+
+
+.. py:attribute:: CE
+   :value: 1
+
+
+.. py:attribute:: Cyclic
+   :value: 5
+
+
+.. py:attribute:: None_
+   :value: 4
+
+
+.. py:attribute:: WeakSprings
+   :value: 3
+
+
+
+
+
+
+.. vale on

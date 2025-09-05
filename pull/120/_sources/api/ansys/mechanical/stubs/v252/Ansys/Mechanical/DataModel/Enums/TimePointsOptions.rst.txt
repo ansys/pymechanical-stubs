@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`TimePointsOptions`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.TimePointsOptions(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TimePointsOptions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TimePointsOptions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllTimePoints`
+            - 
+          * - :py:attr:`~EquallySpacedPoints`
+            - 
+          * - :py:attr:`~LastTimePoints`
+            - 
+          * - :py:attr:`~SpecifiedRecurrenceRate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllTimePoints
+   :value: 0
+
+
+.. py:attribute:: EquallySpacedPoints
+   :value: 2
+
+
+.. py:attribute:: LastTimePoints
+   :value: 1
+
+
+.. py:attribute:: SpecifiedRecurrenceRate
+   :value: 3
+
+
+
+
+
+
+.. vale on

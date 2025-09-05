@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`ILog`
+=============
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ILog
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines log engine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ILog
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~WriteError`
+            - Adds a new error message entry into the log.
+          * - :py:attr:`~WriteMessage`
+            - Adds a new message entry into the log.
+          * - :py:attr:`~WriteWarning`
+            - Adds a new warning message entry into the log.
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: WriteError(message: str) -> None
+
+   
+   Adds a new error message entry into the log.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WriteMessage(message: str) -> None
+
+   
+   Adds a new message entry into the log. 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WriteWarning(message: str) -> None
+
+   
+   Adds a new warning message entry into the log. 
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

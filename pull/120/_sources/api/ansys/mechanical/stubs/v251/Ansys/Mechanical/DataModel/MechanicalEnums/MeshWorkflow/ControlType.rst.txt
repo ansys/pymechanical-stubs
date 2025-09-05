@@ -1,0 +1,294 @@
+.. vale off
+
+
+
+:class:`ControlType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the mesh workflow control type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ControlType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddPrescribedPoints`
+            - 
+          * - :py:attr:`~AddPrescribedPointsFromFile`
+            - 
+          * - :py:attr:`~Checkpoint`
+            - 
+          * - :py:attr:`~ConstantSizeSurfaceMesh`
+            - 
+          * - :py:attr:`~ConstantSizeVolumeMesh`
+            - 
+          * - :py:attr:`~ConstantSizeWrap`
+            - 
+          * - :py:attr:`~CustomNamesEnclosure`
+            - 
+          * - :py:attr:`~CustomNamesExtrusion`
+            - 
+          * - :py:attr:`~CustomNamesWrap`
+            - 
+          * - :py:attr:`~Extrusion`
+            - 
+          * - :py:attr:`~HemisphereEnclosure`
+            - 
+          * - :py:attr:`~HoleFilling`
+            - 
+          * - :py:attr:`~HolePatching`
+            - 
+          * - :py:attr:`~ImproveSurfaceMeshQuadsToTrianglesSplitting`
+            - 
+          * - :py:attr:`~ImproveSurfaceMeshSecondOrderConversion`
+            - 
+          * - :py:attr:`~ImproveVolumeMeshAutoNodeMove`
+            - 
+          * - :py:attr:`~ImproveVolumeMeshSecondOrderConversion`
+            - 
+          * - :py:attr:`~IrregularShapeConvexEnclosure`
+            - 
+          * - :py:attr:`~IrregularShapeHemiConvexEnclosure`
+            - 
+          * - :py:attr:`~MaterialPoint`
+            - 
+          * - :py:attr:`~MeshExport`
+            - 
+          * - :py:attr:`~MeshImport`
+            - 
+          * - :py:attr:`~PartEnclosure`
+            - 
+          * - :py:attr:`~PartsMerging`
+            - 
+          * - :py:attr:`~SizeFieldWrap`
+            - 
+          * - :py:attr:`~SphericalEnclosure`
+            - 
+          * - :py:attr:`~TopologyCreation`
+            - 
+          * - :py:attr:`~TopologyDeletion`
+            - 
+          * - :py:attr:`~UserNamesVolumetricSizeField`
+            - 
+          * - :py:attr:`~VolumesMerging`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldBOI`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldCurvature`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldLoad`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldMaxSize`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldProximity`
+            - 
+          * - :py:attr:`~WrapSpecificSurfaceMesh`
+            - 
+          * - :py:attr:`~ZoneMaterialAssignment`
+            - 
+          * - :py:attr:`~ZoneThicknessAssignment`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AddPrescribedPoints
+   :value: 75
+
+
+.. py:attribute:: AddPrescribedPointsFromFile
+   :value: 76
+
+
+.. py:attribute:: Checkpoint
+   :value: 3
+
+
+.. py:attribute:: ConstantSizeSurfaceMesh
+   :value: 51
+
+
+.. py:attribute:: ConstantSizeVolumeMesh
+   :value: 58
+
+
+.. py:attribute:: ConstantSizeWrap
+   :value: 77
+
+
+.. py:attribute:: CustomNamesEnclosure
+   :value: 12
+
+
+.. py:attribute:: CustomNamesExtrusion
+   :value: 27
+
+
+.. py:attribute:: CustomNamesWrap
+   :value: 81
+
+
+.. py:attribute:: Extrusion
+   :value: 26
+
+
+.. py:attribute:: HemisphereEnclosure
+   :value: 9
+
+
+.. py:attribute:: HoleFilling
+   :value: 28
+
+
+.. py:attribute:: HolePatching
+   :value: 29
+
+
+.. py:attribute:: ImproveSurfaceMeshQuadsToTrianglesSplitting
+   :value: 70
+
+
+.. py:attribute:: ImproveSurfaceMeshSecondOrderConversion
+   :value: 69
+
+
+.. py:attribute:: ImproveVolumeMeshAutoNodeMove
+   :value: 72
+
+
+.. py:attribute:: ImproveVolumeMeshSecondOrderConversion
+   :value: 73
+
+
+.. py:attribute:: IrregularShapeConvexEnclosure
+   :value: 10
+
+
+.. py:attribute:: IrregularShapeHemiConvexEnclosure
+   :value: 11
+
+
+.. py:attribute:: MaterialPoint
+   :value: 83
+
+
+.. py:attribute:: MeshExport
+   :value: 5
+
+
+.. py:attribute:: MeshImport
+   :value: 4
+
+
+.. py:attribute:: PartEnclosure
+   :value: 7
+
+
+.. py:attribute:: PartsMerging
+   :value: 100
+
+
+.. py:attribute:: SizeFieldWrap
+   :value: 80
+
+
+.. py:attribute:: SphericalEnclosure
+   :value: 8
+
+
+.. py:attribute:: TopologyCreation
+   :value: 18
+
+
+.. py:attribute:: TopologyDeletion
+   :value: 19
+
+
+.. py:attribute:: UserNamesVolumetricSizeField
+   :value: 20
+
+
+.. py:attribute:: VolumesMerging
+   :value: 30
+
+
+.. py:attribute:: VolumetricSizeFieldBOI
+   :value: 25
+
+
+.. py:attribute:: VolumetricSizeFieldCurvature
+   :value: 23
+
+
+.. py:attribute:: VolumetricSizeFieldLoad
+   :value: 21
+
+
+.. py:attribute:: VolumetricSizeFieldMaxSize
+   :value: 22
+
+
+.. py:attribute:: VolumetricSizeFieldProximity
+   :value: 24
+
+
+.. py:attribute:: WrapSpecificSurfaceMesh
+   :value: 53
+
+
+.. py:attribute:: ZoneMaterialAssignment
+   :value: 13
+
+
+.. py:attribute:: ZoneThicknessAssignment
+   :value: 14
+
+
+
+
+
+
+.. vale on
