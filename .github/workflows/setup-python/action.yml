@@ -28,11 +28,11 @@ runs:
     - name: Get most recent Python version
       shell: bash
       run: |
-          declare -A python_versions=([3.10]=3.10.18 [3.11]=3.11.13 [3.12]=3.12.11 [3.13]=3.13.7)
+          declare -A python_versions=([3.10]="3.10.18" [3.11]="3.11.13" [3.12]="3.12.11" [3.13]="3.13.7")
 
           # Get the Python version inputs
-          python_version_input=${{ inputs.python-version }}
-          python_version_patch_input=${{ inputs.python-version-patch }}
+          python_version_input="${{ inputs.python-version }}"
+          python_version_patch_input="${{ inputs.python-version-patch }}"
 
           if [ -n "$python_version_patch_input" ]; then
             echo "PYTHON_VERSION_PATCH=$python_version_patch_input" >> "$GITHUB_ENV"
