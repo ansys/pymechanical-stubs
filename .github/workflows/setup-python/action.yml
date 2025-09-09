@@ -1,0 +1,89 @@
+name: >
+  Set up Python
+
+description: |
+  Sets up Python on the Mechanical containers.
+
+inputs:
+
+  # Required inputs
+  python-version:
+    description: >
+      Python version to set up. For example, 3.10
+    required: true
+    type: string
+
+  # Optional inputs
+  python-version-patch:
+    description: >
+      The Python version to set up with the patch specified. For example, 3.10.0
+    required: false
+    type: string
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: Get most recent Python version
+      shell: python
+      run: |
+          import os
+
+          # Create dictionary of most recent Python versions
+          python_versions = {
+              "3.10": "3.10.18", # Updated June 3, 2025
+              "3.11": "3.11.13", # Updated June 3, 2025
+              "3.12": "3.12.11", # Updated June 3, 2025
+              "3.13": "3.13.7",  # Updated Aug. 14, 2025
+          }
+
+          # Get the Python version inputs
+          python_version_input = "${{ inputs.python-version }}"
+          python_version_patch_input = "${{ inputs.python-version-patch }}"
+
+          # Get the GITHUB_ENV variable
+          github_env = os.getenv("GITHUB_ENV")
+
+          if python_version_patch_input:
+              # Save the provided patch version to the environment
+              with open(github_env, "a") as file:
+                file.write(f"PYTHON_VERSION_PATCH={python_version_patch_input}\n")
+              return 0
+          else:
+              # Get the most recent patch version from the dictionary
+              if python_versions.get(python_version_input, None) is not None:
+                  most_recent_patch = python_versions[python_version_input]
+                  # Save the most recent patch version to the environment
+                  with open(github_env, "a") as file:
+                      file.write(f"PYTHON_VERSION_PATCH={most_recent_patch}\n")
+                  return 0
+              else:
+                  raise ValueError(f"Unsupported Python version: {python_version_input}")
+
+
+    - name: Manually set up Python
+      shell: bash
+      run: |
+        # Update package lists
+        apt update
+
+        # Install dependencies to build Python
+        apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+
+        # Download the specified Python version from python.org
+        version=${{ env.PYTHON_VERSION_PATCH }}
+        wget https://www.python.org/ftp/python/$version/Python-$version.tgz
+
+        # Extract the downloaded tarball
+        tar -xf Python-$VERSION.tgz
+
+        # Check the required dependencies of the Python install
+        cd  Python-$VERSION/
+        ./configure --enable-optimizations
+
+        # Build Python
+        make -j $(nproc)
+
+        # Install Python
+        make altinstall
