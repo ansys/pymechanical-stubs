@@ -60,10 +60,10 @@ runs:
         wget https://www.python.org/ftp/python/$version/Python-$version.tgz
 
         # Extract the downloaded tarball
-        tar -xf Python-$VERSION.tgz
+        tar -xf Python-$version.tgz
 
         # Check the required dependencies of the Python install
-        cd  Python-$VERSION/
+        cd  Python-$version/
         ./configure --enable-optimizations
 
         # Build Python
