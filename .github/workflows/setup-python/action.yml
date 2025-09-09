@@ -26,41 +26,25 @@ runs:
   steps:
 
     - name: Get most recent Python version
-      shell: python
+      shell: bash
       run: |
-          import os
-
-          # Create dictionary of most recent Python versions
-          python_versions = {
-              "3.10": "3.10.18", # Updated June 3, 2025
-              "3.11": "3.11.13", # Updated June 3, 2025
-              "3.12": "3.12.11", # Updated June 3, 2025
-              "3.13": "3.13.7",  # Updated Aug. 14, 2025
-          }
+          declare -A python_versions=([3.10]=3.10.18 [3.11]=3.11.13 [3.12]=3.12.11 [3.13]=3.13.7)
 
           # Get the Python version inputs
-          python_version_input = "${{ inputs.python-version }}"
-          python_version_patch_input = "${{ inputs.python-version-patch }}"
+          python_version_input=${{ inputs.python-version }}
+          python_version_patch_input=${{ inputs.python-version-patch }}
 
-          # Get the GITHUB_ENV variable
-          github_env = os.getenv("GITHUB_ENV")
-
-          if python_version_patch_input:
-              # Save the provided patch version to the environment
-              with open(github_env, "a") as file:
-                file.write(f"PYTHON_VERSION_PATCH={python_version_patch_input}\n")
-              return 0
-          else:
-              # Get the most recent patch version from the dictionary
-              if python_versions.get(python_version_input, None) is not None:
-                  most_recent_patch = python_versions[python_version_input]
-                  # Save the most recent patch version to the environment
-                  with open(github_env, "a") as file:
-                      file.write(f"PYTHON_VERSION_PATCH={most_recent_patch}\n")
-                  return 0
-              else:
-                  raise ValueError(f"Unsupported Python version: {python_version_input}")
-
+          if [ -n "$python_version_patch_input" ]; then
+            echo "PYTHON_VERSION_PATCH=$python_version_patch_input" >> "$GITHUB_ENV"
+          else
+            if [[ -v hashmap["$python_version_input"] ]]; then
+              echo "PYTHON_VERSION_PATCH=${python_versions[$python_version_input]}" >> "$GITHUB_ENV"
+            else
+              echo "Key '$python_version_input' does not exist in the hashmap."
+              echo "The available Python versions are: ${!python_versions[@]}"
+              exit 1
+            fi
+          fi
 
     - name: Manually set up Python
       shell: bash
