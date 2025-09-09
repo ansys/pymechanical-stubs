@@ -37,7 +37,7 @@ runs:
           if [ -n "$python_version_patch_input" ]; then
             echo "PYTHON_VERSION_PATCH=$python_version_patch_input" >> "$GITHUB_ENV"
           else
-            if [[ -v hashmap["$python_version_input"] ]]; then
+            if [[ -v python_versions["$python_version_input"] ]]; then
               echo "PYTHON_VERSION_PATCH=${python_versions[$python_version_input]}" >> "$GITHUB_ENV"
             else
               echo "Key '$python_version_input' does not exist in the hashmap."
