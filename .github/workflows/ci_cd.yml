@@ -172,17 +172,13 @@ jobs:
       - name: "Configure Python"
         run: |
           # Link python to the installed version
-          ln -s /usr/bin/python${{ matrix.python-version }} /usr/bin/python
-
-          # Install venv package for Python
-          apt install python${{ matrix.python-version }}-venv -y
+          ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
 
           # Verify Python installation
           python -m ensurepip --default-pip
           python -m pip install --upgrade pip
           python --version
           python -m pip --version
-
 
       - name: "Install dependencies"
         env:

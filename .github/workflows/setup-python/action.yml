@@ -63,7 +63,7 @@ runs:
         tar -xf Python-$version.tgz
 
         # Check the required dependencies of the Python install
-        cd  Python-$version/
+        cd Python-$version/
         ./configure --enable-optimizations
 
         # Build Python
