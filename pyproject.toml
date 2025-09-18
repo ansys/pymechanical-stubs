@@ -46,7 +46,7 @@ doc = [
     "sphinxcontrib-httpdomain==1.8.1",
     "sphinx-copybutton==0.5.2",
     "sphinx_design==0.6.1",
-    "sphinx-markdown-builder==0.6.6",
+    "sphinx-markdown-builder==0.6.8",
     "sphinxnotes-strike==1.2.1",
 ]
 tests = [
