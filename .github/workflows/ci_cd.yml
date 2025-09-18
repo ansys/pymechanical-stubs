@@ -349,12 +349,12 @@ jobs:
         uses: actions/checkout@v5
 
       - name: "Download all HTML documentation"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: documentation-html-v*
 
       - name: "Download all Markdown documentation"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: documentation-md-v*
 
@@ -417,12 +417,12 @@ jobs:
           python -m pip install -e .[doc]
 
       - name: "Download all HTML documentation"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: combined-documentation-html
 
       - name: "Download all Markdown documentation"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: combined-documentation-md
 
@@ -562,7 +562,7 @@ jobs:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     steps:
       - name: "Download the library artifacts from build-library step"
-        uses: actions/download-artifact@cc203385981b70ca67e1cc392babf9cc229d5806 # v4.1.9
+        uses: actions/download-artifact@abefc31eafcfbdf6c5336127c1346fdae79ff41c # v4.1.9
         with:
           name: ${{ env.PACKAGE_NAME }}-artifacts
           path: ${{ env.PACKAGE_NAME }}-artifacts
