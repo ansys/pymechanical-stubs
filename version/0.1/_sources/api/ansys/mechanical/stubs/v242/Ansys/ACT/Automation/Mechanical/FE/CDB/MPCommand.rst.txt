@@ -1,0 +1,300 @@
+.. vale off
+
+
+
+:class:`MPCommand`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.MPCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a MP command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MPCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~C0`
+            - Gets the temperature-independent term of the property.
+          * - :py:attr:`~C1`
+            - Gets the coefficient of the linear term in the property-versus-temperature polynomial.
+          * - :py:attr:`~C2`
+            - Gets the coefficient of the quadratic term in the property-versus-temperature polynomial.
+          * - :py:attr:`~C3`
+            - Gets the coefficient of the cubic term in the property-versus-temperature polynomial.
+          * - :py:attr:`~C4`
+            - Gets the coefficient of the quartic term in the property-versus-temperature polynomial.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Lab`
+            - Gets the label.
+          * - :py:attr:`~Mat`
+            - Gets the material number.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: C0
+   :type: Optional[float]
+
+   
+   Gets the temperature-independent term of the property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: C1
+   :type: Optional[float]
+
+   
+   Gets the coefficient of the linear term in the property-versus-temperature polynomial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: C2
+   :type: Optional[float]
+
+   
+   Gets the coefficient of the quadratic term in the property-versus-temperature polynomial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: C3
+   :type: Optional[float]
+
+   
+   Gets the coefficient of the cubic term in the property-versus-temperature polynomial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: C4
+   :type: Optional[float]
+
+   
+   Gets the coefficient of the quartic term in the property-versus-temperature polynomial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+   
+   Gets the label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Mat
+   :type: Optional[int]
+
+   
+   Gets the material number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

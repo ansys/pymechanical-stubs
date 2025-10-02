@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Ansys``
+=========================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Ansys
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT`
+            - ACT module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Core`
+            - Core module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical`
+            - Mechanical module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> ACT</api/ansys/mechanical/stubs/v252/Ansys/ACT/index>
+    <span class="nf nf-md-package"></span> Core</api/ansys/mechanical/stubs/v252/Ansys/Core/index>
+    <span class="nf nf-md-package"></span> Mechanical</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Ansys module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

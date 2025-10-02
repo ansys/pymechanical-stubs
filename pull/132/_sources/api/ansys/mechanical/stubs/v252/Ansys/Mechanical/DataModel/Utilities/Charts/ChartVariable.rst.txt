@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`ChartVariable`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Charts.ChartVariable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Chart Variable enables user to create a list of values that can be used to construct a dataset object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

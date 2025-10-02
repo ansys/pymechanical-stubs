@@ -1,0 +1,196 @@
+.. vale off
+
+
+
+:class:`CMBlockCommand`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.CMBlockCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a CMBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CMBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Cmname`
+            - Gets the component name.
+          * - :py:attr:`~Elements`
+            - Gets the type of entities.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Type`
+            - Gets the type of entities (node or elem).
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Cmname
+   :type: Optional[str]
+
+   
+   Gets the component name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Elements
+   :type: Optional[tuple[int]]
+
+   
+   Gets the type of entities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[str]
+
+   
+   Gets the type of entities (node or elem).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

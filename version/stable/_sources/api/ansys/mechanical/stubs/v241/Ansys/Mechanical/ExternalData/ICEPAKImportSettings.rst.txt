@@ -1,0 +1,171 @@
+.. vale off
+
+
+
+:class:`ICEPAKImportSettings`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.ExternalData.ICEPAKImportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   T:Ansys.Mechanical.ExternalData.ICEPAKImportSettings defines how to import external data from an ICEPAK BOOL or ICEPAK COND file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ICEPAKImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Format`
+            - Gets the existing corresponding format.
+          * - :py:attr:`~SupportingFileDescription`
+            - The supporting file description. This is optional.
+          * - :py:attr:`~SupportingFileIdentifier`
+            - The supporting file identifier. The identifier should be unique, otherwise, an exception will be
+          * - :py:attr:`~SupportingFilePath`
+            - The supporting file path of the ICEPAK INFO file.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Format
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat]
+
+   
+   Gets the existing corresponding format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportingFileDescription
+   :type: Optional[str]
+
+   
+   The supporting file description. This is optional.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportingFileIdentifier
+   :type: Optional[str]
+
+   
+   The supporting file identifier. The identifier should be unique, otherwise, an exception will be 
+   thrown during the import. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportingFilePath
+   :type: Optional[str]
+
+   
+   The supporting file path of the ICEPAK INFO file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

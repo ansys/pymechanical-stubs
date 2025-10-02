@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`CommandKeyOpt`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandKeyOpt
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a KEYOPT command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandKeyOpt
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Knum`
+            - Gets the key option number.
+          * - :py:attr:`~Value`
+            - Gets the value.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Knum
+   :type: Optional[int]
+
+
+   
+   Gets the key option number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Value
+   :type: Optional[int]
+
+
+   
+   Gets the value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

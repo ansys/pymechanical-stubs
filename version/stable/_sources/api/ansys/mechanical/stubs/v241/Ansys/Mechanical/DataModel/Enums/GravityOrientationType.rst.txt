@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`GravityOrientationType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.GravityOrientationType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the GravityOrientationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GravityOrientationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NegativeXAxis`
+            - 
+          * - :py:attr:`~NegativeYAxis`
+            - 
+          * - :py:attr:`~NegativeZAxis`
+            - 
+          * - :py:attr:`~PositiveXAxis`
+            - 
+          * - :py:attr:`~PositiveYAxis`
+            - 
+          * - :py:attr:`~PositiveZAxis`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NegativeXAxis
+   :value: 1
+
+
+.. py:attribute:: NegativeYAxis
+   :value: 3
+
+
+.. py:attribute:: NegativeZAxis
+   :value: 5
+
+
+.. py:attribute:: PositiveXAxis
+   :value: 0
+
+
+.. py:attribute:: PositiveYAxis
+   :value: 2
+
+
+.. py:attribute:: PositiveZAxis
+   :value: 4
+
+
+
+
+
+
+.. vale on

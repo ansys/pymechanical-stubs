@@ -1,0 +1,1746 @@
+.. vale off
+
+
+
+:class:`ShapeFinder`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.ShapeFinder
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ShapeFinder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShapeFinder
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddAlert`
+            - Creates a new Alert
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddConvergence`
+            - Creates a new Convergence
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - CreateParameter method.
+          * - :py:attr:`~CreateResultsAtAllSets`
+            - Creates results at all sets for results under a solution.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~DuplicateWithoutResults`
+            - Run the DuplicateWithoutResults action.
+          * - :py:attr:`~EvaluateAllResults`
+            - Run the EvaluateAllResults action.
+          * - :py:attr:`~ExportAnimation`
+            - Run the ExportAnimation action.
+          * - :py:attr:`~ExportToTextFile`
+            - Run the ExportToTextFile action.
+          * - :py:attr:`~FetchRemoteResults`
+            - Run the FetchRemoteResult action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PromoteToNamedSelection`
+            - Run the PromoteToNamedSelection action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Average`
+            - Gets the Average.
+          * - :py:attr:`~By`
+            - Gets or sets the By.
+          * - :py:attr:`~CalculateTimeHistory`
+            - Gets or sets the CalculateTimeHistory.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~CombinationNumber`
+            - Gets or sets the Combination Number for a Solution Combination result.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CoordinateSystem`
+            - Gets or sets the Coordinate System.
+          * - :py:attr:`~CrackFrontNumber`
+            - Gets or sets the CrackFrontNumber.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DisplayOption`
+            - Gets or sets the DisplayOption.
+          * - :py:attr:`~DisplayTime`
+            - Gets or sets the DisplayTime.
+          * - :py:attr:`~DpfEvaluation`
+            - Gets or sets the DpfEvaluation.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GlobalIDs`
+            - Gets or sets the GlobalIDs.
+          * - :py:attr:`~GraphControlsXAxis`
+            - Gets or sets the GraphControlsXAxis.
+          * - :py:attr:`~Identifier`
+            - Gets or sets the Identifier.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsSolved`
+            - Gets the IsSolved.
+          * - :py:attr:`~ItemType`
+            - Gets or sets the ItemType.
+          * - :py:attr:`~IterationNumber`
+            - Gets the IterationNumber.
+          * - :py:attr:`~LoadStep`
+            - Gets the LoadStep.
+          * - :py:attr:`~LoadStepForMaximumOfMaximumValues`
+            - Get the Load Step for the maximum of maximum values.
+          * - :py:attr:`~LoadStepForMaximumOfMinimumValues`
+            - Get the Load Step for the maximum of minimum values.
+          * - :py:attr:`~LoadStepForMinimumOfMaximumValues`
+            - Get the Load Step for the minimum of maximum values.
+          * - :py:attr:`~LoadStepForMinimumOfMinimumValues`
+            - Get the Load Step for the minimum of minimum values.
+          * - :py:attr:`~LoadStepNumber`
+            - Gets or sets the LoadStepNumber.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~Maximum`
+            - Gets the Maximum.
+          * - :py:attr:`~MaximumOccursOn`
+            - Gets the MaximumOccursOn.
+          * - :py:attr:`~MaximumOfMaximumOverTime`
+            - Gets the MaximumOfMaximumOverTime.
+          * - :py:attr:`~MaximumOfMinimumOverTime`
+            - Gets the MaximumOfMinimumOverTime.
+          * - :py:attr:`~Minimum`
+            - Gets the Minimum.
+          * - :py:attr:`~MinimumOccursOn`
+            - Gets the MinimumOccursOn.
+          * - :py:attr:`~MinimumOfMaximumOverTime`
+            - Gets the MinimumOfMaximumOverTime.
+          * - :py:attr:`~MinimumOfMinimumOverTime`
+            - Gets the MinimumOfMinimumOverTime.
+          * - :py:attr:`~NamedSelections`
+            - Gets or sets the NamedSelections.
+          * - :py:attr:`~Path`
+            - Path property.
+          * - :py:attr:`~PlotData`
+            - Gets the result table.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ScopingMethod`
+            - Gets or sets the ScopingMethod.
+          * - :py:attr:`~SetNumber`
+            - Gets or sets the Set Number.
+          * - :py:attr:`~SolutionCombinationDriver`
+            - Gets or sets the SolutionCombinationDriver.
+          * - :py:attr:`~SolverComponentIDs`
+            - Gets or sets the SolverComponentIDs.
+          * - :py:attr:`~Substep`
+            - Gets the Substep.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~Surface`
+            - Surface property.
+          * - :py:attr:`~Time`
+            - Gets the Time.
+          * - :py:attr:`~TimeForMaximumOfMaximumValues`
+            - Get the Time for the maximum of maximum values.
+          * - :py:attr:`~TimeForMaximumOfMinimumValues`
+            - Get the Time for the maximum of minimum values.
+          * - :py:attr:`~TimeForMinimumOfMaximumValues`
+            - Get the Time for the minimum of maximum values.
+          * - :py:attr:`~TimeForMinimumOfMinimumValues`
+            - Get the Time for the minimum of minimum values.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WaterfallPanelShowTextOnMosaic`
+            - Gets or sets the Waterfall Panel Mosaic Text Property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Average
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the Average.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: By
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SetDriverStyle]
+
+   
+   Gets or sets the By.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateTimeHistory
+   :type: Optional[bool]
+
+   
+   Gets or sets the CalculateTimeHistory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CombinationNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the Combination Number for a Solution Combination result.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+   
+   Gets or sets the Coordinate System. 
+   Accepts/Returns None for Solution Coordinate System in the general case (if applicable). 
+   Accepts/Returns None for Fiber Coordinate System for a result that is sub scoped by ply.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackFrontNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the CrackFrontNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ResultAveragingType]
+
+   
+   Gets or sets the DisplayOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets or sets the DisplayTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DpfEvaluation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DpfEvaluationType]
+
+   
+   Gets or sets the DpfEvaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalIDs
+   :type: Optional[str]
+
+   
+   Gets or sets the GlobalIDs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GraphControlsXAxis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GraphControlsXAxis]
+
+   
+   Gets or sets the GraphControlsXAxis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Identifier
+   :type: Optional[str]
+
+   
+   Gets or sets the Identifier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSResultAuto]
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsSolved
+   :type: Optional[bool]
+
+   
+   Gets the IsSolved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ItemType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ResultFileItemType]
+
+   
+   Gets or sets the ItemType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IterationNumber
+   :type: Optional[int]
+
+   
+   Gets the IterationNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStep
+   :type: Optional[int]
+
+   
+   Gets the LoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepForMaximumOfMaximumValues
+   :type: Optional[int]
+
+   
+   Get the Load Step for the maximum of maximum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepForMaximumOfMinimumValues
+   :type: Optional[int]
+
+   
+   Get the Load Step for the maximum of minimum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepForMinimumOfMaximumValues
+   :type: Optional[int]
+
+   
+   Get the Load Step for the minimum of maximum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepForMinimumOfMinimumValues
+   :type: Optional[int]
+
+   
+   Get the Load Step for the minimum of minimum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the LoadStepNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Maximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the Maximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumOccursOn
+   :type: Optional[str]
+
+   
+   Gets the MaximumOccursOn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumOfMaximumOverTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the MaximumOfMaximumOverTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumOfMinimumOverTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the MaximumOfMinimumOverTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Minimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the Minimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumOccursOn
+   :type: Optional[str]
+
+   
+   Gets the MinimumOccursOn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumOfMaximumOverTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the MinimumOfMaximumOverTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumOfMinimumOverTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the MinimumOfMinimumOverTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelections
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+   
+   Gets or sets the NamedSelections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Path
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Path]
+
+   
+   Path property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PlotData
+   :type: Optional[Ansys.Mechanical.DataModel.Results.ResultDataTable]
+
+   
+   Gets the result table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+   
+   Gets or sets the ScopingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SetNumber
+   :type: Optional[int]
+
+   
+   Gets or sets the Set Number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionCombinationDriver
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolutionCombinationDriverStyle]
+
+   
+   Gets or sets the SolutionCombinationDriver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverComponentIDs
+   :type: Optional[str]
+
+   
+   Gets or sets the SolverComponentIDs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Substep
+   :type: Optional[int]
+
+   
+   Gets the Substep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Surface
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Surface]
+
+   
+   Surface property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Time
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Gets the Time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeForMaximumOfMaximumValues
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Get the Time for the maximum of maximum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeForMaximumOfMinimumValues
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Get the Time for the maximum of minimum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeForMinimumOfMaximumValues
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Get the Time for the minimum of maximum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeForMinimumOfMinimumValues
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+   
+   Get the Time for the minimum of minimum values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallPanelShowTextOnMosaic
+   :type: Optional[bool]
+
+   
+   Gets or sets the Waterfall Panel Mosaic Text Property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAlert() -> Ansys.ACT.Automation.Mechanical.Results.Alert
+
+   
+   Creates a new Alert
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddConvergence() -> Ansys.ACT.Automation.Mechanical.Results.Convergence
+
+   
+   Creates a new Convergence
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   CreateParameter method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateResultsAtAllSets() -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   Creates results at all sets for results under a solution.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DuplicateWithoutResults() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Run the DuplicateWithoutResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllResults() -> None
+
+   
+   Run the EvaluateAllResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportAnimation(filePath: str, format: Ansys.Mechanical.DataModel.Enums.GraphicsAnimationExportFormat, settings: Ansys.Mechanical.Graphics.AnimationExportSettings) -> None
+
+   
+   Run the ExportAnimation action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportToTextFile(filePath: str) -> None
+
+   
+   Run the ExportToTextFile action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FetchRemoteResults() -> None
+
+   
+   Run the FetchRemoteResult action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToNamedSelection() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Run the PromoteToNamedSelection action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

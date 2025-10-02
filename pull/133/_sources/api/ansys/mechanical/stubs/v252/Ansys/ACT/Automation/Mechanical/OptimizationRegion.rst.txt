@@ -1,0 +1,958 @@
+.. vale off
+
+
+
+:class:`OptimizationRegion`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.OptimizationRegion
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a OptimizationRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OptimizationRegion
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddExclusionRegion`
+            - Creates a new ExclusionRegion
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDefinition`
+            - Gets the Worksheet Definition.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BoundaryCondition`
+            - Gets or sets the BoundaryCondition.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DesignRegionLocation`
+            - Gets or sets the DesignRegionLocation.
+          * - :py:attr:`~ExclusionExtension`
+            - Gets or sets the ExclusionExtension.
+          * - :py:attr:`~ExclusionRegionLocation`
+            - Gets or sets the ExclusionRegionLocation.
+          * - :py:attr:`~ExclusionScopingMethod`
+            - Gets or sets the ExclusionScopingMethod.
+          * - :py:attr:`~ExclusionThickness`
+            - Gets or sets the ExclusionThickness.
+          * - :py:attr:`~HyperbolicProjection`
+            - Gets or sets the HyperbolicProjection.
+          * - :py:attr:`~InitialVolumeFraction`
+            - Gets or sets the InitialVolumeFraction.
+          * - :py:attr:`~InitializationHoleSize`
+            - Gets or sets the InitializationHoleSize.
+          * - :py:attr:`~InitializationModifierType`
+            - Gets or sets the InitializationModifierType.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LatticeMaxDensity`
+            - Gets or sets the LatticeMaxDensity.
+          * - :py:attr:`~LatticeMinDensity`
+            - Gets or sets the LatticeMinDensity.
+          * - :py:attr:`~LatticeSize`
+            - Gets or sets the LatticeSize.
+          * - :py:attr:`~LatticeType`
+            - Gets or sets the LatticeType.
+          * - :py:attr:`~MaxCumulatedDisplacementControl`
+            - Gets or sets the MaxCumulatedDisplacementControl.
+          * - :py:attr:`~MeshDeformationToleranceControl`
+            - Gets or sets the MeshDeformationToleranceControl.
+          * - :py:attr:`~MorphingIterationMoveLimit`
+            - Gets or sets the MorphingIterationMoveLimit.
+          * - :py:attr:`~MorphingTotalMeshDeformationTolerance`
+            - Gets or sets the MorphingTotalMeshDeformationTolerance.
+          * - :py:attr:`~MorphingTotalMoveLimit`
+            - Gets or sets the MorphingTotalMoveLimit.
+          * - :py:attr:`~OptimizationType`
+            - Gets or sets the OptimizationType.
+          * - :py:attr:`~PenaltyFactor`
+            - Gets or sets the PenaltyFactor.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ShapeMoveLimitControl`
+            - Gets or sets the ShapeMoveLimitControl.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BoundaryCondition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.BoundaryConditionType]
+
+
+   
+   Gets or sets the BoundaryCondition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.ACT.Automation.Mechanical.DataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DesignRegionLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the DesignRegionLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExclusionExtension
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExclusionType]
+
+
+   
+   Gets or sets the ExclusionExtension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExclusionRegionLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the ExclusionRegionLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExclusionScopingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+
+   
+   Gets or sets the ExclusionScopingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExclusionThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ExclusionThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HyperbolicProjection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.HyperbolicProjectionType]
+
+
+   
+   Gets or sets the HyperbolicProjection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialVolumeFraction
+   :type: Optional[float]
+
+
+   
+   Gets or sets the InitialVolumeFraction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitializationHoleSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the InitializationHoleSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitializationModifierType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.InitializationModifierType]
+
+
+   
+   Gets or sets the InitializationModifierType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSOptimizationRegionAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LatticeMaxDensity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the LatticeMaxDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LatticeMinDensity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the LatticeMinDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LatticeSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the LatticeSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LatticeType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LatticeType]
+
+
+   
+   Gets or sets the LatticeType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxCumulatedDisplacementControl
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoPropertyControlType]
+
+
+   
+   Gets or sets the MaxCumulatedDisplacementControl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshDeformationToleranceControl
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoPropertyControlType]
+
+
+   
+   Gets or sets the MeshDeformationToleranceControl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphingIterationMoveLimit
+   :type: Optional[float]
+
+
+   
+   Gets or sets the MorphingIterationMoveLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphingTotalMeshDeformationTolerance
+   :type: Optional[float]
+
+
+   
+   Gets or sets the MorphingTotalMeshDeformationTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphingTotalMoveLimit
+   :type: Optional[float]
+
+
+   
+   Gets or sets the MorphingTotalMoveLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OptimizationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.OptimizationType]
+
+
+   
+   Gets or sets the OptimizationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PenaltyFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the PenaltyFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShapeMoveLimitControl
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoPropertyControlType]
+
+
+   
+   Gets or sets the ShapeMoveLimitControl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddExclusionRegion() -> Ansys.ACT.Automation.Mechanical.ExclusionRegion
+
+   
+   Creates a new ExclusionRegion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDefinition() -> Ansys.ACT.Automation.Mechanical.MaterialsOptimizationDefinition
+
+.. code-block:: text
+
+   Gets the Worksheet Definition.
+   This Definition is a list of OptimizationMaterial.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

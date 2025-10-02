@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`CooldownStep`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.CooldownStep
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

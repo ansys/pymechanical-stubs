@@ -1,0 +1,180 @@
+.. vale off
+
+
+
+:class:`OptimizationMaterial`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.OptimizationMaterial
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: OptimizationMaterial
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DensityMaximum`
+            - Gets or sets the maximum density of the lattice for the OptimizationMaterial (between 0 and 1)
+          * - :py:attr:`~DensityMinimum`
+            - Gets or sets the minimum density of the lattice for the OptimizationMaterial (between 0 and 1)
+          * - :py:attr:`~LatticeType`
+            - Gets or sets the lattice shape for the OptimizationMaterial
+          * - :py:attr:`~Material`
+            - Gets or sets the material it is based on (a Material, a string or an objectId can be used to set it)
+          * - :py:attr:`~VolumeFillingMethod`
+            - Gets or sets if the filling method for the OptimizationMaterial
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DensityMaximum
+   :type: Optional[float]
+
+
+   
+   Gets or sets the maximum density of the lattice for the OptimizationMaterial (between 0 and 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DensityMinimum
+   :type: Optional[float]
+
+
+   
+   Gets or sets the minimum density of the lattice for the OptimizationMaterial (between 0 and 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LatticeType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LatticeType]
+
+
+   
+   Gets or sets the lattice shape for the OptimizationMaterial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Material
+   :type: Optional[Any]
+
+
+   
+   Gets or sets the material it is based on (a Material, a string or an objectId can be used to set it) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VolumeFillingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FillingMethod]
+
+
+   
+   Gets or sets if the filling method for the OptimizationMaterial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,168 @@
+.. vale off
+
+
+
+:class:`LabelCollection`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection
+
+   Bases: :py:obj:`object`
+
+
+   
+   A class to manage labels on the chart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LabelCollection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CreateAndAddLabel`
+            - Creates a new label and adds it to the chart at a specified position, where the label_text parameter is optional.
+          * - :py:attr:`~CreateLabelOnSegment`
+            - Create a label on the segment of the dataset starting from the data point at a specified distance along the segment.
+          * - :py:attr:`~CreateLabelsAtXCoordinate`
+            - Creates label(s) on the dataset at a specified X coordinate.
+          * - :py:attr:`~CreateLabelsAtYCoordinate`
+            - Creates label(s) on the dataset at a specified Y coordinate.
+          * - :py:attr:`~DeleteLabel`
+            - Deletes a label from a specific position in the chart.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Labels`
+            - Gets an IEnumerable of ILabelInfo objects, which contain information about the underlying label
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Labels
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo]]
+
+
+   
+   Gets an IEnumerable of ILabelInfo objects, which contain information about the underlying label 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CreateAndAddLabel(x_anchor: Ansys.Core.Units.Quantity, y_anchor: Ansys.Core.Units.Quantity, label_text: str) -> Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo
+
+.. code-block:: text
+
+   Creates a new label and adds it to the chart at a specified position, where the label_text parameter is optional. 
+   The default label text is: “x: <x_value>, y: <y_value>” (example: “x: 0.3497, y: 1.9821”).  
+   An InvalidOperationException will be thrown when creating a Label at a location already assigned to another Label.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateLabelOnSegment(data_point_index: int, fractional_distance: float) -> Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo
+
+.. code-block:: text
+
+   Create a label on the segment of the dataset starting from the data point at a specified distance along the segment. 
+   Distance values are fractional going from 0 to 1 (first datapoint at 0) along the length of the segment
+   An ArgumentException will be thrown when creating a Label at a location already assigned to another Label.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateLabelsAtXCoordinate(x_anchor: Ansys.Core.Units.Quantity) -> List[Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo]
+
+.. code-block:: text
+
+   Creates label(s) on the dataset at a specified X coordinate. 
+   This API may return multiple `LabelInfo` references in case the corresponding dataset has more than one Y-value for the given X-value (for eg. Spiral graphs). 
+   Each `LabelInfo` reference corresponds to the multiple anchor positions thus obtained. 
+   An ArgumentException will be thrown when creating a Label at a location already assigned to another Label.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateLabelsAtYCoordinate(y_anchor: Ansys.Core.Units.Quantity) -> List[Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo]
+
+.. code-block:: text
+
+   Creates label(s) on the dataset at a specified Y coordinate. 
+   This API may return multiple `LabelInfo` references in case the corresponding dataset has more than one X-value for a given Y-value. 
+   Each `LabelInfo` reference corresponds to the multiple anchor positions thus obtained. 
+   An ArgumentException will be thrown when creating a Label at a location already assigned to another Label.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteLabel(label: Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo) -> None
+
+.. code-block:: text
+
+   Deletes a label from a specific position in the chart. 
+   An InvalidOperationException will be thrown when deleting a Label that does not exist.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Graphics``
+============================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Graphics
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.DMCameraWrapper`
+            - Wrapper for Camera in Design Modeler.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.DMGraphicsWrapper`
+            - Wrapper for Graphics in Design Modeler.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.MechanicalCameraWrapper`
+            - Wrapper for Camera in Mechanical.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.MechanicalGraphicsWrapper`
+            - Wrapper for Graphics in Mechanical.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.ModelViewManager`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> DMCameraWrapper</api/ansys/mechanical/stubs/v252/Ansys/ACT/Common/Graphics/DMCameraWrapper>
+    <span class="nf nf-cod-symbol_class"></span> DMGraphicsWrapper</api/ansys/mechanical/stubs/v252/Ansys/ACT/Common/Graphics/DMGraphicsWrapper>
+    <span class="nf nf-cod-symbol_class"></span> MechanicalCameraWrapper</api/ansys/mechanical/stubs/v252/Ansys/ACT/Common/Graphics/MechanicalCameraWrapper>
+    <span class="nf nf-cod-symbol_class"></span> MechanicalGraphicsWrapper</api/ansys/mechanical/stubs/v252/Ansys/ACT/Common/Graphics/MechanicalGraphicsWrapper>
+    <span class="nf nf-cod-symbol_class"></span> ModelViewManager</api/ansys/mechanical/stubs/v252/Ansys/ACT/Common/Graphics/ModelViewManager>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Graphics module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

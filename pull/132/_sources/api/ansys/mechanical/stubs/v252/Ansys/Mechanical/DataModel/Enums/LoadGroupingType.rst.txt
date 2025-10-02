@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`LoadGroupingType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.LoadGroupingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Grouping loads enables the possibility to group the generated imported loads in several manners 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadGroupingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ByLocation`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ToBinary`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ByLocation
+   :value: 1
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: ToBinary
+   :value: 2
+
+
+
+
+
+
+.. vale on

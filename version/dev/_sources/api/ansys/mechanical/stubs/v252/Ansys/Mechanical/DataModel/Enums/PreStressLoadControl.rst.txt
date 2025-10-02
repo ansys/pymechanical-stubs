@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`PreStressLoadControl`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PreStressLoadControl(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PreStressLoadControl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PreStressLoadControl
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DeleteAll`
+            - 
+          * - :py:attr:`~KeepAll`
+            - 
+          * - :py:attr:`~KeepAllDisplacementsAsZero`
+            - 
+          * - :py:attr:`~KeepDisplacementConstraints`
+            - 
+          * - :py:attr:`~KeepInertiaAndDisplacementConstraints`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DeleteAll
+   :value: 4
+
+
+.. py:attribute:: KeepAll
+   :value: 0
+
+
+.. py:attribute:: KeepAllDisplacementsAsZero
+   :value: 3
+
+
+.. py:attribute:: KeepDisplacementConstraints
+   :value: 2
+
+
+.. py:attribute:: KeepInertiaAndDisplacementConstraints
+   :value: 1
+
+
+
+
+
+
+.. vale on

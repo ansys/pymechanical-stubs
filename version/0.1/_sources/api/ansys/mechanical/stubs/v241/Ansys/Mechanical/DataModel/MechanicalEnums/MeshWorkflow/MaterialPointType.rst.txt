@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MaterialPointType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.MaterialPointType
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the MeshWorkflow Surface Scope Modality Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MaterialPointType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Exclude`
+            - 
+          * - :py:attr:`~Include`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Exclude
+   :value: 2
+
+
+.. py:attribute:: Include
+   :value: 1
+
+
+
+
+
+
+.. vale on
