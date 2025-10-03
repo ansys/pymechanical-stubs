@@ -24,6 +24,7 @@
 import argparse
 import os
 import pathlib
+from pathlib import Path
 import re
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
@@ -68,5 +69,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     folder_path = args.input_folder
+
+    if not Path(folder_path).is_dir():
+        raise NotADirectoryError(f"{folder_path} is not a valid directory.")
+
     # Replace 'your_directory' with the actual path to the directory containing your Markdown files
     remove_links_from_markdown_files(folder_path)

@@ -20,7 +20,7 @@ jobs:
     name: Syncer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: micnncim/action-label-syncer@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,12 +31,13 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      issues: write
     runs-on: ubuntu-latest
     steps:
 
     # Label based on modified files
     - name: Label based on changed files
-      uses: actions/labeler@v5
+      uses: actions/labeler@v6
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         sync-labels: true
@@ -81,12 +82,12 @@ jobs:
         issue-number: ${{ github.event.pull_request.number }}
         body: |
           Please add one of the following labels to add this contribution to the Release Notes :point_down:
-          - [bug](https://github.com/pyansys/pyavxcelerate-sensors/pulls?q=label%3Abug+)
-          - [documentation](https://github.com/pyansys/pyavxcelerate-sensors/pulls?q=label%3Adocumentation+)
-          - [enhancement](https://github.com/pyansys/pyavxcelerate-sensors/pulls?q=label%3Aenhancement+)
-          - [good first issue](https://github.com/pyansys/pyavxcelerate-sensors/pulls?q=label%3Agood+first+issue)
-          - [maintenance](https://github.com/pyansys/pyavxcelerate-sensors/pulls?q=label%3Amaintenance+)
-          - [release](https://github.com/pyansys/pyavxcelerate-sensors/pulls?q=label%3Arelease+)
+          - [bug](https://github.com/ansys/pymechanical-stubs/pulls?q=label%3Abug+)
+          - [documentation](https://github.com/ansys/pymechanical-stubs/pulls?q=label%3Adocumentation+)
+          - [enhancement](https://github.com/ansys/pymechanical-stubs/pulls?q=label%3Aenhancement+)
+          - [good first issue](https://github.com/ansys/pymechanical-stubs/pulls?q=label%3Agood+first+issue)
+          - [maintenance](https://github.com/ansys/pymechanical-stubs/pulls?q=label%3Amaintenance+)
+          - [release](https://github.com/ansys/pymechanical-stubs/pulls?q=label%3Arelease+)
 
   changelog-fragment:
     name: "Create changelog fragment"
@@ -96,7 +97,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: ansys/actions/doc-changelog@v8
+    - uses: ansys/actions/doc-changelog@v10
       with:
         token: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
         use-conventional-commits: true

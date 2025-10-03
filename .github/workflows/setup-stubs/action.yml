@@ -10,7 +10,7 @@ inputs:
   # Required inputs
   folder-pattern:
     description: >
-      Pattern of the folder to download. For example, "v[0-9][0-9][0-9]-3.10"
+      Pattern of the folder to download. For example, "v[0-9][0-9][0-9]-3.12"
     required: true
     type: string
 
@@ -58,6 +58,13 @@ runs:
               new_dir = dir.replace("-${{ inputs.python-version }}", "")
               renamed_dir = os.path.join(dirpath, new_dir)
               os.rename(original_dir, renamed_dir)
+
+        mechanical_versions = ["241", "242", "251", "252"]
+        for version in mechanical_versions:
+            if not os.path.exists(f"${{ inputs.package-path }}/v{version}"):
+                os.makedirs(f"${{ inputs.package-path }}/v{version}")
+                with open(f"${{ inputs.package-path }}/v{version}/__init__.py", "w") as f:
+                    f.write(f'"""Ansys Mechanical v{version} module."""\n')
 
     - name: Create __init__.py in ${{ inputs.package-path }}
       shell: python

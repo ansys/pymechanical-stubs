@@ -156,7 +156,7 @@ For example, on Linux with Python 3.10, unzip the wheelhouse archive and install
 
 .. code:: bash
 
-    unzip ansys-mechanical-stubs-v0.1.6-wheelhouse-ubuntu-latest-3.10 -d wheelhouse
+    unzip ansys-mechanical-stubs-v0.1.7-wheelhouse-ubuntu-latest-3.10 -d wheelhouse
     pip install ansys-mechanical-stubs -f wheelhouse --no-index --upgrade --ignore-installed
 
 If you are on Windows with Python 3.10, unzip the wheelhouse archive to a wheelhouse directory

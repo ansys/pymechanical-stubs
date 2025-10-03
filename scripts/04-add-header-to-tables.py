@@ -23,7 +23,7 @@
 
 import argparse
 import os
-import pathlib
+from pathlib import Path
 
 DEFAULT_INPUT_FOLDER = "doc/_build/markdown"
 
@@ -95,10 +95,10 @@ def process_md_files(folder_path):
         for file in files:
             # Check if the file is a Markdown file
             if file.endswith(".md"):
-                file_path = pathlib.Path(root, file)
+                file_path = Path(root, file)
                 print("Processing:", file_path)
                 # Read the input file
-                with pathlib.Path.open(file_path, "r", encoding="utf-8") as file:
+                with file_path.open("r", encoding="utf-8") as file:
                     file_content = file.read()
 
                 # Split the file content by at least one newline character
@@ -142,7 +142,7 @@ def process_md_files(folder_path):
                 modified_content = "\n\n".join(modified_tables)
 
                 # Write the modified content back to the input file
-                with pathlib.Path.open(file_path, "w", encoding="utf-8") as file:
+                with file_path.open("w", encoding="utf-8") as file:
                     file.write(modified_content)
 
                 print("File '{}' has been updated with corrected tables.".format(file_path))
@@ -158,8 +158,10 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
     folder_path = args.input_folder
+
+    if not Path(folder_path).is_dir():
+        raise NotADirectoryError(f"{folder_path} is not a valid directory.")
 
     # Process all Markdown files in the folder and its subfolders
     process_md_files(folder_path)

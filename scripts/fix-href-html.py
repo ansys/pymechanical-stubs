@@ -83,6 +83,8 @@ def main():
 
     if full_api_dir_path.exists():
         fix_hrefs(full_api_dir_path)
+    else:
+        raise NotADirectoryError(f"{full_api_dir_path} is not a valid directory.")
 
 
 if __name__ == "__main__":
