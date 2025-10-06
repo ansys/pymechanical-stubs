@@ -401,6 +401,24 @@ jobs:
           path: documentation-md
           retention-days: 7
 
+      - name: "Create fake PDF"
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        run: |
+          mkdir -p doc/_build/latex
+          touch doc/_build/latex/doc.pdf
+
+      - name: Upload PDF Documentation
+        uses: actions/upload-artifact@v4
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-pdf
+          path: doc/_build/latex/doc.pdf
+          retention-days: 7
+
   clean-docs:
     name: Clean HTML and Markdown documentation
     runs-on: ubuntu-latest
