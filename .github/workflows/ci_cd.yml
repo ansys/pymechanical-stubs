@@ -401,7 +401,7 @@ jobs:
           path: documentation-md
           retention-days: 7
 
-      - name: "Create fake PDF"
+      - name: "Create dummy PDF"
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
