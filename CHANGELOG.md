@@ -6,6 +6,52 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.8](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.8) - October 06, 2025
+
+
+### Fixed
+
+- Add dummy documentation-pdf for the release to pass [#138](https://github.com/ansys/pymechanical-stubs/pull/138)
+
+
+### Maintenance
+
+- Update CHANGELOG for v0.1.7 [#137](https://github.com/ansys/pymechanical-stubs/pull/137)
+
+## [0.1.7](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.7) - October 03, 2025
+
+
+### Added
+
+- Configure matrix for mechanical and python versions [#91](https://github.com/ansys/pymechanical-stubs/pull/91)
+- Adjust how stubs documentation is generated [#122](https://github.com/ansys/pymechanical-stubs/pull/122)
+
+
+### Fixed
+
+- Address gpg key timeout issue [#125](https://github.com/ansys/pymechanical-stubs/pull/125)
+- Label and dependabot [#130](https://github.com/ansys/pymechanical-stubs/pull/130)
+
+
+### Dependencies
+
+- Bump `ansys/actions` from v8 to v10 [#118](https://github.com/ansys/pymechanical-stubs/pull/118)
+
+
+### Documentation
+
+- Add 2025 R2 API documentation [#117](https://github.com/ansys/pymechanical-stubs/pull/117)
+
+
+### Maintenance
+
+- update CHANGELOG for v0.1.6 [#109](https://github.com/ansys/pymechanical-stubs/pull/109)
+- pre-commit automatic update [#110](https://github.com/ansys/pymechanical-stubs/pull/110), [#111](https://github.com/ansys/pymechanical-stubs/pull/111)
+- Pre-commit automatic update [#119](https://github.com/ansys/pymechanical-stubs/pull/119), [#123](https://github.com/ansys/pymechanical-stubs/pull/123), [#128](https://github.com/ansys/pymechanical-stubs/pull/128)
+- Bump actions/checkout from 4 to 5 [#121](https://github.com/ansys/pymechanical-stubs/pull/121)
+- Bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0 [#126](https://github.com/ansys/pymechanical-stubs/pull/126)
+- Bump actions/labeler from 5 to 6 [#127](https://github.com/ansys/pymechanical-stubs/pull/127)
+
 ## [0.1.6](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.6) - 2025-01-14
 
 
