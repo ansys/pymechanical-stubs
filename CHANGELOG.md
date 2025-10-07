@@ -6,6 +6,18 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.8](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.8) - October 06, 2025
+
+
+### Fixed
+
+- Add dummy documentation-pdf for the release to pass [#138](https://github.com/ansys/pymechanical-stubs/pull/138)
+
+
+### Maintenance
+
+- Update CHANGELOG for v0.1.7 [#137](https://github.com/ansys/pymechanical-stubs/pull/137)
+
 ## [0.1.7](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.7) - October 03, 2025
 
 
