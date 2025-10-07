@@ -502,27 +502,12 @@ jobs:
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
-    - name: "Install build and twine"
-      shell: bash
-      run: |
-        python -m pip install build twine
-
-    - name: "Build distribution artifacts"
-      shell: bash
-      run: |
-        python -m build
-
-    - name: "Check build health"
-      shell: bash
-      run: |
-        python -m twine check dist/*
-
-    - name: "Upload distribution artifacts to GitHub artifacts"
-      uses: actions/upload-artifact@v4
+    - name: Build library source and wheel artifacts
+      uses: ansys/actions/build-library@c2fa7c93f6883114e0e643599431b33d29f0b13f # v10.1.4
       with:
-        name: ${{ env.PACKAGE_NAME }}-artifacts
-        path: dist/
-        retention-days: 7
+        library-name: ${{ env.PACKAGE_NAME }}
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        checkout: false
 
   release:
     runs-on: ubuntu-latest
