@@ -237,59 +237,13 @@ jobs:
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
 
-    - name: Install build requirements
-      run: |
-        pip install -U pip
-        pip install build
-
-    - name: Build project
-      run: |
-        python -m build
-
-    - name: Install on Windows
-      if: matrix.os == 'windows-latest'
-      run: |
-        New-Item -Path $PWD -Name "wheelhouse" -ItemType "Directory"
-        cd dist
-        $files = Get-ChildItem -Path $PWD | Where-Object { $_.Extension -eq '.whl' }
-        foreach ($file in $files) {
-          Copy-Item -Path "$file" -Destination "..\wheelhouse"
-          pip install $file
-        }
-
-    - name: Install on Ubuntu
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        mkdir wheelhouse
-        cp dist/*.whl wheelhouse
-        pip install dist/*.whl
-
-    - name: "Retrieve Mechanical version"
-      shell: python
-      run: |
-        import os
-        from ${{ env.PACKAGE_NAMESPACE }} import __version__
-
-        # Get the GITHUB_ENV variable
-        github_env = os.getenv('GITHUB_ENV')
-
-        with open(github_env, "a") as f:
-            f.write(f"MECHANICAL_VERSION={__version__}")
-
-        print(f"Mechanical version is {__version__}")
-
-    - name: "Compress the wheelhouse"
-      uses: vimtor/action-zip@v1.2
+    - name: "Build a wheelhouse of the Python library"
+      uses: ansys/actions/build-wheelhouse@c2fa7c93f6883114e0e643599431b33d29f0b13f # v10.1.4
       with:
-        files: wheelhouse
-        dest: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
-
-    - name: "Upload the compressed wheelhouse"
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}
-        path: ${{ env.PACKAGE_NAME }}-v${{ env.MECHANICAL_VERSION }}-wheelhouse-${{ matrix.os }}-${{ matrix.python-version }}.zip
-        retention-days: 7
+        library-name: ${{ env.PACKAGE_NAME }}
+        operating-system: ${{ matrix.os }}
+        python-version: ${{ matrix.python-version }}
+        checkout: false
 
   doc-build:
     name: Make html and markdown documentation
@@ -548,31 +502,16 @@ jobs:
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
-    - name: "Install build and twine"
-      shell: bash
-      run: |
-        python -m pip install build twine
-
-    - name: "Build distribution artifacts"
-      shell: bash
-      run: |
-        python -m build
-
-    - name: "Check build health"
-      shell: bash
-      run: |
-        python -m twine check dist/*
-
-    - name: "Upload distribution artifacts to GitHub artifacts"
-      uses: actions/upload-artifact@v4
+    - name: Build library source and wheel artifacts
+      uses: ansys/actions/build-library@c2fa7c93f6883114e0e643599431b33d29f0b13f # v10.1.4
       with:
-        name: ${{ env.PACKAGE_NAME }}-artifacts
-        path: dist/
-        retention-days: 7
+        library-name: ${{ env.PACKAGE_NAME }}
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        checkout: false
 
   release:
     runs-on: ubuntu-latest
-    needs: [build-library, update-changelog]
+    needs: [smoke-tests, build-library, update-changelog]
     environment: release
     permissions:
       id-token: write
