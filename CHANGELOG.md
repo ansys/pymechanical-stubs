@@ -6,6 +6,19 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.9](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.9) - October 09, 2025
+
+
+### Fixed
+
+- Use build-wheelhouse action instead of manually building wheelhouse [#141](https://github.com/ansys/pymechanical-stubs/pull/141)
+
+
+### Maintenance
+
+- Bump pytest-cov from 5.0.0 to 7.0.0 [#133](https://github.com/ansys/pymechanical-stubs/pull/133)
+- Update CHANGELOG for v0.1.8 [#139](https://github.com/ansys/pymechanical-stubs/pull/139)
+
 ## [0.1.8](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.8) - October 06, 2025
 
 
