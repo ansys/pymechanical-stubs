@@ -1,0 +1,200 @@
+.. vale off
+
+
+
+
+
+
+
+
+``BeamResults``
+===============================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: BeamResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.BeamResult`
+            - Defines a BeamResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalAxialForce`
+            - Defines a DirectionalAxialForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalBendingMoment`
+            - Defines a DirectionalBendingMoment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearForce`
+            - Defines a DirectionalShearForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram`
+            - Defines a DirectionalShearMomentDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalTorsionalMoment`
+            - Defines a DirectionalTorsionalMoment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalAxialForce`
+            - Defines a TotalAxialForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalBendingMoment`
+            - Defines a TotalBendingMoment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearForce`
+            - Defines a TotalShearForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram`
+            - Defines a TotalShearMomentDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalTorsionalMoment`
+            - Defines a TotalTorsionalMoment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorAxialForce`
+            - Defines a VectorAxialForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorBendingMoment`
+            - Defines a VectorBendingMoment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorShearForce`
+            - Defines a VectorShearForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorTorsionalMoment`
+            - Defines a VectorTorsionalMoment.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> BeamResult</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/BeamResult>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalAxialForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/DirectionalAxialForce>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalBendingMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/DirectionalBendingMoment>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalShearForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/DirectionalShearForce>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalShearMomentDiagram</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/DirectionalShearMomentDiagram>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalTorsionalMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/DirectionalTorsionalMoment>
+    <span class="nf nf-cod-symbol_class"></span> TotalAxialForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/TotalAxialForce>
+    <span class="nf nf-cod-symbol_class"></span> TotalBendingMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/TotalBendingMoment>
+    <span class="nf nf-cod-symbol_class"></span> TotalShearForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/TotalShearForce>
+    <span class="nf nf-cod-symbol_class"></span> TotalShearMomentDiagram</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/TotalShearMomentDiagram>
+    <span class="nf nf-cod-symbol_class"></span> TotalTorsionalMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/TotalTorsionalMoment>
+    <span class="nf nf-cod-symbol_class"></span> VectorAxialForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/VectorAxialForce>
+    <span class="nf nf-cod-symbol_class"></span> VectorBendingMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/VectorBendingMoment>
+    <span class="nf nf-cod-symbol_class"></span> VectorShearForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/VectorShearForce>
+    <span class="nf nf-cod-symbol_class"></span> VectorTorsionalMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/VectorTorsionalMoment>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+BeamResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

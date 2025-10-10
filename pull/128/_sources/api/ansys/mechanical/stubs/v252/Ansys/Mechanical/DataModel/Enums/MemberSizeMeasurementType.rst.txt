@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MemberSizeMeasurementType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.MemberSizeMeasurementType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Controls how thickness is measured.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MemberSizeMeasurementType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~InPlane`
+            - 
+          * - :py:attr:`~Isotropic`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: InPlane
+   :value: 1
+
+
+.. py:attribute:: Isotropic
+   :value: 0
+
+
+
+
+
+
+.. vale on

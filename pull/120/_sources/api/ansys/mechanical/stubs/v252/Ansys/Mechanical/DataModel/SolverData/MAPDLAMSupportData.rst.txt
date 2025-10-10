@@ -1,0 +1,99 @@
+.. vale off
+
+
+
+:class:`MAPDLAMSupportData`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.SolverData.MAPDLAMSupportData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLAMSupportData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MaterialIds`
+            - Gets the Material Ids for the AM Support.
+          * - :py:attr:`~RealConstantId`
+            - Gets the Real Constant Id for the AM Support.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: MaterialIds
+   :type: Optional[Iterable[int]]
+
+
+   
+   Gets the Material Ids for the AM Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RealConstantId
+   :type: Optional[int]
+
+
+   
+   Gets the Real Constant Id for the AM Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

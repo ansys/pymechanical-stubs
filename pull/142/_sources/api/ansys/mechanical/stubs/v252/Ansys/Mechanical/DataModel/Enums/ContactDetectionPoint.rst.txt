@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ContactDetectionPoint`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ContactDetectionPoint(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactDetectionPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactDetectionPoint
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Combined`
+            - 
+          * - :py:attr:`~NodalDualShapeFunctionProjection`
+            - 
+          * - :py:attr:`~NodalNormalFromContact`
+            - 
+          * - :py:attr:`~NodalNormalToTarget`
+            - 
+          * - :py:attr:`~NodalProjectedNormalFromContact`
+            - 
+          * - :py:attr:`~OnGaussPoint`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Combined
+   :value: 6
+
+
+.. py:attribute:: NodalDualShapeFunctionProjection
+   :value: 5
+
+
+.. py:attribute:: NodalNormalFromContact
+   :value: 2
+
+
+.. py:attribute:: NodalNormalToTarget
+   :value: 3
+
+
+.. py:attribute:: NodalProjectedNormalFromContact
+   :value: 4
+
+
+.. py:attribute:: OnGaussPoint
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

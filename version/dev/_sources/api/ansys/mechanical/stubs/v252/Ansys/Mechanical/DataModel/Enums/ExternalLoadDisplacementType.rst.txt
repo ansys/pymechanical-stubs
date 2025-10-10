@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ExternalLoadDisplacementType`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplacementType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExternalLoadDisplacementType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExternalLoadDisplacementType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BoundaryPrescribedFinalGeometry`
+            - 
+          * - :py:attr:`~InitialFoamReferenceGeometry`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BoundaryPrescribedFinalGeometry
+   :value: 0
+
+
+.. py:attribute:: InitialFoamReferenceGeometry
+   :value: 1
+
+
+
+
+
+
+.. vale on

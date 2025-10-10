@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`MAPDLSurfaceLoadData`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.SolverData.MAPDLSurfaceLoadData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLSurfaceLoadData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SurfaceEffectElementTypeId`
+            - Gets the Surface Effect Element Type Id used by the load.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: SurfaceEffectElementTypeId
+   :type: Optional[int]
+
+
+   
+   Gets the Surface Effect Element Type Id used by the load.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

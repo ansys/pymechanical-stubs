@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`IMechanicalUserResult`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserResult
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Mechanical user result.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

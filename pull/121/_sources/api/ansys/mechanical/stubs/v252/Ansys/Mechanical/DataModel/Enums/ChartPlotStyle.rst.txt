@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ChartPlotStyle`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ChartPlotStyle(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ChartPlotStyle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ChartPlotStyle
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Both`
+            - 
+          * - :py:attr:`~Lines`
+            - 
+          * - :py:attr:`~Points`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Both
+   :value: 2
+
+
+.. py:attribute:: Lines
+   :value: 0
+
+
+.. py:attribute:: Points
+   :value: 1
+
+
+
+
+
+
+.. vale on

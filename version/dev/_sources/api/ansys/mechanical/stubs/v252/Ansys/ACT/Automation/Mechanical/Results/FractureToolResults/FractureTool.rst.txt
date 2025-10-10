@@ -1,0 +1,828 @@
+.. vale off
+
+
+
+:class:`FractureTool`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureTool
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a FractureTool.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FractureTool
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCStarIntegral`
+            - Creates a new FractureCSTAR
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddCrackExtensionProbe`
+            - Creates a new FractureCrackExtensionProbe
+          * - :py:attr:`~AddEquivalentSIFSRange`
+            - Creates a new FractureEquivalentSIFSRange
+          * - :py:attr:`~AddEquivalentSIFSRangeProbe`
+            - Creates a new FractureEquivalentSIFSRangeProbe
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddJINT`
+            - Creates a new FractureJINT
+          * - :py:attr:`~AddJINTProbe`
+            - Creates a new FractureJINTProbe
+          * - :py:attr:`~AddMaterialForceX`
+            - Creates a new FractureMaterialForceX
+          * - :py:attr:`~AddMaterialForceY`
+            - Creates a new FractureMaterialForceY
+          * - :py:attr:`~AddMaterialForceZ`
+            - Creates a new FractureMaterialForceZ
+          * - :py:attr:`~AddNumberOfCyclesProbe`
+            - Creates a new FractureTotalNumberOfCyclesProbe
+          * - :py:attr:`~AddSIFSK1`
+            - Creates a new FractureSIFSK1
+          * - :py:attr:`~AddSIFSK1Probe`
+            - Creates a new FractureSIFSProbe
+          * - :py:attr:`~AddSIFSK2`
+            - Creates a new FractureSIFSK2
+          * - :py:attr:`~AddSIFSK2Probe`
+            - Creates a new FractureSIFSProbe
+          * - :py:attr:`~AddSIFSK3`
+            - Creates a new FractureSIFSK3
+          * - :py:attr:`~AddSIFSK3Probe`
+            - Creates a new FractureSIFSProbe
+          * - :py:attr:`~AddTSTRESS`
+            - Creates a new FractureTSTRESS
+          * - :py:attr:`~AddVCCTG1`
+            - Creates a new FractureVCCTG1
+          * - :py:attr:`~AddVCCTG2`
+            - Creates a new FractureVCCTG2
+          * - :py:attr:`~AddVCCTG3`
+            - Creates a new FractureVCCTG3
+          * - :py:attr:`~AddVCCTGT`
+            - Creates a new FractureVCCTGT
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateAllResults`
+            - Run the EvaluateAllResults action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CrackFrontNumber`
+            - Gets or sets the CrackFrontNumber.
+          * - :py:attr:`~CrackSelection`
+            - Gets or sets the CrackSelection.
+          * - :py:attr:`~CrackSelectionMode`
+            - Gets or sets the CrackSelectionMode.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~MultipleCracksSelection`
+            - Get/Set multiple cracks to Fracture tool
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ScopingMethod`
+            - Gets or sets the ScopingMethod.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackFrontNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the CrackFrontNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.GenericCrack]
+
+
+   
+   Gets or sets the CrackSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrackSelectionMode
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CrackSelectionModeType]
+
+
+   
+   Gets or sets the CrackSelectionMode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSFractureToolAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultipleCracksSelection
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.GenericCrack]]
+
+
+   
+   Get/Set multiple cracks to Fracture tool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FractureToolScopeType]
+
+
+   
+   Gets or sets the ScopingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCStarIntegral() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureCSTAR
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCrackExtensionProbe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureCrackExtensionProbe
+
+   
+   Creates a new FractureCrackExtensionProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentSIFSRange() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureEquivalentSIFSRange
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentSIFSRangeProbe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureEquivalentSIFSRangeProbe
+
+   
+   Creates a new FractureEquivalentSIFSRangeProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJINT() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureJINT
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJINTProbe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureJINTProbe
+
+   
+   Creates a new FractureJINTProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaterialForceX() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureMaterialForceX
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaterialForceY() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureMaterialForceY
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaterialForceZ() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureMaterialForceZ
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNumberOfCyclesProbe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureTotalNumberOfCyclesProbe
+
+   
+   Creates a new FractureTotalNumberOfCyclesProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSIFSK1() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureSIFSK1
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSIFSK1Probe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureSIFSProbe
+
+   
+   Creates a new FractureSIFSProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSIFSK2() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureSIFSK2
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSIFSK2Probe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureSIFSProbe
+
+   
+   Creates a new FractureSIFSProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSIFSK3() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureSIFSK3
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSIFSK3Probe() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureSIFSProbe
+
+   
+   Creates a new FractureSIFSProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTSTRESS() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureTSTRESS
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVCCTG1() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureVCCTG1
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVCCTG2() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureVCCTG2
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVCCTG3() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureVCCTG3
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVCCTGT() -> Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult
+
+   
+   Creates a new FractureVCCTGT
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllResults() -> None
+
+   
+   Run the EvaluateAllResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

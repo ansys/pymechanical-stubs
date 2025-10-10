@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`DSRBDContactDetection`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.DSRBDContactDetection(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DSRBDContactDetection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DSRBDContactDetection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~kCDGeometryBased`
+            - 
+          * - :py:attr:`~kCDMeshBased`
+            - 
+          * - :py:attr:`~kCDProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: kCDGeometryBased
+   :value: 1
+
+
+.. py:attribute:: kCDMeshBased
+   :value: 2
+
+
+.. py:attribute:: kCDProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

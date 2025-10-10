@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ExportFormat`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.CondensedParts.ExportFormat(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Condensed Part Export Format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExportFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Automatic`
+            - 
+          * - :py:attr:`~Unspecified`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Automatic
+   :value: 1
+
+
+.. py:attribute:: Unspecified
+   :value: 0
+
+
+
+
+
+
+.. vale on

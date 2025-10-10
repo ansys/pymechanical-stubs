@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ContactCorrection`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ContactCorrection(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactCorrection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactCorrection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bolt`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~Smoothing`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bolt
+   :value: 2
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: Smoothing
+   :value: 1
+
+
+
+
+
+
+.. vale on

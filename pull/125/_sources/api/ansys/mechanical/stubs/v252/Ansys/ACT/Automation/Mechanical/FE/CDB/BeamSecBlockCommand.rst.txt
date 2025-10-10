@@ -1,0 +1,229 @@
+.. vale off
+
+
+
+:class:`BeamSecBlockCommand`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CDB.BeamSecBlockCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a beam SECBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BeamSecBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Cells`
+            - Gets the cells of the section.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Nodes`
+            - Gets the nodes of the section.
+          * - :py:attr:`~ToCdbCommandString`
+            - Gets the command text formatted as a CDB file entry.
+          * - :py:attr:`~Type`
+            - Gets the section type.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Cells
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandCell]]
+
+
+   
+   Gets the cells of the section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Nodes
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNode]]
+
+
+   
+   Gets the nodes of the section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToCdbCommandString
+   :type: Optional[Ansys.ACT.Automation.Mechanical.FE.CDB.CdbCommandFormatAndParameter]
+
+
+   
+   Gets the command text formatted as a CDB file entry.
+   Gets the command parameters formatted as a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[str]
+
+
+   
+   Gets the section type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`IncrementControl`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.IncrementControl(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum provides the options for MinIncrementControl property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IncrementControl
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Default`
+            - 
+          * - :py:attr:`~SetSmallIncrementsToZero`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Default
+   :value: 0
+
+
+.. py:attribute:: SetSmallIncrementsToZero
+   :value: 1
+
+
+
+
+
+
+.. vale on

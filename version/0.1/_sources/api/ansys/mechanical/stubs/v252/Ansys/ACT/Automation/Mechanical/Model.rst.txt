@@ -1,0 +1,2078 @@
+.. vale off
+
+
+
+:class:`Model`
+==============
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Model
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Model
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddAMProcess`
+            - Creates a new AMProcess
+          * - :py:attr:`~AddChart`
+            - Creates a new child Chart.
+          * - :py:attr:`~AddCoSimulationPin`
+            - Creates a new CoSimulationPin
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddCompositeFailureCriteria`
+            - Creates a new Composite Failure Criteria object.
+          * - :py:attr:`~AddCondensedGeometry`
+            - Creates a new CondensedGeometry
+          * - :py:attr:`~AddConnections`
+            - Creates a new Connections
+          * - :py:attr:`~AddConstructionGeometry`
+            - Creates a new ConstructionGeometry
+          * - :py:attr:`~AddCoupledFieldHarmonic`
+            - Run the AddCoupledFieldHarmonic action.
+          * - :py:attr:`~AddCoupledFieldModal`
+            - Run the AddCoupledFieldModal action.
+          * - :py:attr:`~AddCoupledFieldStatic`
+            - Run the AddCoupledFieldStatic action.
+          * - :py:attr:`~AddCoupledFieldTransient`
+            - Run the AddCoupledFieldTransient action.
+          * - :py:attr:`~AddCrossSections`
+            - Creates new CrossSections group.
+          * - :py:attr:`~AddDesignAssessmentAnalysis`
+            - Run the AddDesignAssessmentAnalysis action.
+          * - :py:attr:`~AddDesignLifeAnalysis`
+            - Run the AddDesignLifeAnalysis action.
+          * - :py:attr:`~AddEigenvalueBucklingAnalysis`
+            - Run the AddEigenvalueBucklingAnalysis action.
+          * - :py:attr:`~AddElectricAnalysis`
+            - Run the AddElectricAnalysis action.
+          * - :py:attr:`~AddExplicitDynamicsAnalysis`
+            - Run the AddExplicitDynamicsAnalysis action.
+          * - :py:attr:`~AddFatigueCombination`
+            - Creates a new FatigueCombination
+          * - :py:attr:`~AddFeatureDetection`
+            - Creates a new FeatureDetection
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddForcedResponseAnalysis`
+            - Run the AddForcedResponseAnalysis action.
+          * - :py:attr:`~AddFracture`
+            - Creates a new Fracture
+          * - :py:attr:`~AddGeometryImportGroup`
+            - Get the
+          * - :py:attr:`~AddHarmonicAcousticAnalysis`
+            - Run the AddHarmonicAcousticAnalysis action.
+          * - :py:attr:`~AddHarmonicResponseAnalysis`
+            - Run the AddHarmonicResponseAnalysis action.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddImagePlane`
+            - Creates an ImagePlane and adds it as a child of this object.
+          * - :py:attr:`~AddLSDynaAnalysis`
+            - Run the AddLSDynaAnalysis action.
+          * - :py:attr:`~AddLSDynaRestartAnalysis`
+            - Run the AddLSDynaRestartAnalysis action.
+          * - :py:attr:`~AddMagnetostaticAnalysis`
+            - Run the AddMagnetostaticAnalysis action.
+          * - :py:attr:`~AddMeasures`
+            - Creates a new Measures
+          * - :py:attr:`~AddMeshEdit`
+            - Creates a new MeshEdit
+          * - :py:attr:`~AddMeshNumbering`
+            - Creates a new MeshNumbering
+          * - :py:attr:`~AddModalAcousticAnalysis`
+            - Run the AddModalAcousticAnalysis action.
+          * - :py:attr:`~AddModalAnalysis`
+            - Run the AddModalAnalysis action.
+          * - :py:attr:`~AddMotionAnalysis`
+            - Run the AddMotionAnalysis action.
+          * - :py:attr:`~AddNamedSelection`
+            - Creates a new child NamedSelection.
+          * - :py:attr:`~AddNamedSelectionFromSelectedConnections`
+            - Creates a new Named Selections (Components) for the selected connections.
+          * - :py:attr:`~AddPartTransform`
+            - Creates a new child PartTransform.
+          * - :py:attr:`~AddPythonCodeEventBased`
+            - Creates a new PythonCodeEventBased
+          * - :py:attr:`~AddPythonResult`
+            - Creates a new PythonResult
+          * - :py:attr:`~AddRandomVibrationAnalysis`
+            - Run the AddRandomVibrationAnalysis action.
+          * - :py:attr:`~AddRemotePoint`
+            - Creates a new child RemotePoint.
+          * - :py:attr:`~AddResponseSpectrumAnalysis`
+            - Run the AddResponseSpectrumAnalysis action.
+          * - :py:attr:`~AddRigidDynamicsAnalysis`
+            - Run the AddRigidDynamicsAnalysis action.
+          * - :py:attr:`~AddSolutionCombination`
+            - Creates a new SolutionCombination
+          * - :py:attr:`~AddStaticAcousticAnalysis`
+            - Run the AddStaticAcousticAnalysis action.
+          * - :py:attr:`~AddStaticStructuralAnalysis`
+            - Run the AddStaticStructuralAnalysis action.
+          * - :py:attr:`~AddSteadyStateThermalAnalysis`
+            - Run the AddSteadyStateThermalAnalysis action.
+          * - :py:attr:`~AddSubstructureGenerationAnalysis`
+            - Run the AddSubstructureGenerationAnalysis action.
+          * - :py:attr:`~AddSymmetry`
+            - Creates a new Symmetry
+          * - :py:attr:`~AddTableGroup`
+            - Get the
+          * - :py:attr:`~AddThermalElectricAnalysis`
+            - Run the AddThermalElectricAnalysis action.
+          * - :py:attr:`~AddTopologyOptimizationAnalysis`
+            - Run the AddTopologyOptimizationAnalysis action.
+          * - :py:attr:`~AddTransientStructuralAnalysis`
+            - Run the AddTransientStructuralAnalysis action.
+          * - :py:attr:`~AddTransientThermalAnalysis`
+            - Run the AddTransientThermalAnalysis action.
+          * - :py:attr:`~AddTreeGroupingFolder`
+            - Move the Data Model Objects to a new TreeGroupingFolder.
+          * - :py:attr:`~AddVirtualTopology`
+            - Creates a new VirtualTopology
+          * - :py:attr:`~AutoFilter`
+            - Enables interface filtering that only displays model-level items applicable to the
+          * - :py:attr:`~CenterOfMass`
+            - Calculates the center of mass of all unsupressed bodies and point masses.
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateCylindricalBolt`
+            - Create bolt with a cylinder head based on the specified dimensions. The bolt will be
+          * - :py:attr:`~CreateCylindricalNut`
+            - Create a cylindrical nut with the specified dimensions. The nut will be created so that
+          * - :py:attr:`~CreateHexBolt`
+            - Create a bolt with a hex head based on the specified dimensions. The bolt will be
+          * - :py:attr:`~CreateHexNut`
+            - Create a hex nut with the specified dimensions. The nut will be created so that the
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~CreatePartInstance`
+            - This will create an instance (not an independent copy) of the provided part. The use of
+          * - :py:attr:`~DeleteParts`
+            - Deletes the provide parts if they exist. Otherwise, nothing happens. An exception will be issued if the argument is invalid.
+          * - :py:attr:`~DisableFilter`
+            - Disables interface filtering so that model-level items are not filtered out based on
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateScriptDefinedResults`
+            - EvaluateScriptDefinedResults method.
+          * - :py:attr:`~FreezeMeshOnSelectedParts`
+            - Run the FreezeMeshOnSelectedParts action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetFECommandsRepository`
+            - Gets the commands repository for a file from external model.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetResults`
+            - Gets the Results from the server.
+          * - :py:attr:`~GetTransformationOnPart`
+            - Get the transformation matrix of the provided part.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~LoadResultFile`
+            - Creates a results-only system and loads the result file.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RefreshMaterials`
+            - Run the RefresMaterials action.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SetTransformationOnPart`
+            - Transform a part with given transformation. Only rigid body transformation is
+          * - :py:attr:`~Solve`
+            - Run the Solve action.
+          * - :py:attr:`~UnfreezeMeshOnSelectedParts`
+            - Run the UnfreezeMeshOnSelectedParts action.
+          * - :py:attr:`~UpdateGeometryFromSource`
+            - Run the UpdateGeometryFromSource action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AEDTImportManager`
+            - Get the manager for manipulating import settings for AEDT files.
+          * - :py:attr:`~AMProcess`
+            - Gets the AMProcess.
+          * - :py:attr:`~Ambient`
+            - Gets or sets the Ambient Lighting factor.
+          * - :py:attr:`~Analyses`
+            - Gets the Analyses.
+          * - :py:attr:`~CellId`
+            - Gets the CellId.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Color`
+            - Gets or sets the Lighting Color. Can also be set using Hex color codes; three byte hexadecimal numbers (consisting of six digits) preceded by '0x', where each byte (or pair of characters in the Hex code) represents the intensity of red, green and blue in the color respectively. For example, 0xFFFFFF.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CondensedGeometry`
+            - Gets the CondensedGeometry.
+          * - :py:attr:`~Connections`
+            - Gets the Connections.
+          * - :py:attr:`~ConstructionGeometry`
+            - Gets the ConstructionGeometry.
+          * - :py:attr:`~Control`
+            - Gets the Control.
+          * - :py:attr:`~CoordinateSystems`
+            - Gets the CoordinateSystems.
+          * - :py:attr:`~CrossSections`
+            - Gets the CrossSections.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Diffuse`
+            - Gets or sets the Diffuse Lighting factor.
+          * - :py:attr:`~Environments`
+            - Gets the Analyses.
+          * - :py:attr:`~FeatureDetection`
+            - Gets the FeatureDetection.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Fracture`
+            - Gets the Fracture.
+          * - :py:attr:`~Geometry`
+            - Gets the Geometry.
+          * - :py:attr:`~GeometryImportGroup`
+            - Gets the GeometryImportGroup.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Materials`
+            - Gets the Materials.
+          * - :py:attr:`~Measures`
+            - Gets the Measures.
+          * - :py:attr:`~Mesh`
+            - Gets the Mesh.
+          * - :py:attr:`~MeshEdit`
+            - Gets the MeshEdit.
+          * - :py:attr:`~MeshNumbering`
+            - Gets the MeshNumbering.
+          * - :py:attr:`~NamedSelections`
+            - Gets the NamedSelections.
+          * - :py:attr:`~PartTransformGroup`
+            - Gets the PartTransformGroup.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RemotePoints`
+            - Gets the RemotePoints.
+          * - :py:attr:`~Specular`
+            - Gets or sets the Specular Lighting factor.
+          * - :py:attr:`~Symmetry`
+            - Gets the Symmetry.
+          * - :py:attr:`~SystemCaption`
+            - Gets the SystemCaption.
+          * - :py:attr:`~TableGroup`
+            - Gets the TableGroup.
+          * - :py:attr:`~VirtualTopology`
+            - Gets the VirtualTopology.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AEDTImportManager
+   :type: Optional[Ansys.ACT.Automation.Mechanical.AEDTImportManager]
+
+
+   
+   Get the manager for manipulating import settings for AEDT files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AMProcess
+   :type: Optional[Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMProcess]
+
+
+   
+   Gets the AMProcess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Ambient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Ambient Lighting factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Analyses
+   :type: Optional[List[Ansys.ACT.Automation.Mechanical.Analysis]]
+
+
+   
+   Gets the Analyses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CellId
+   :type: Optional[str]
+
+
+   
+   Gets the CellId.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Color
+   :type: Optional[int]
+
+
+   
+   Gets or sets the Lighting Color. Can also be set using Hex color codes; three byte hexadecimal numbers (consisting of six digits) preceded by '0x', where each byte (or pair of characters in the Hex code) represents the intensity of red, green and blue in the color respectively. For example, 0xFFFFFF.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CondensedGeometry
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CondensedGeometry]
+
+
+   
+   Gets the CondensedGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Connections
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Connections.Connections]
+
+
+   
+   Gets the Connections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConstructionGeometry
+   :type: Optional[Ansys.ACT.Automation.Mechanical.ConstructionGeometry]
+
+
+   
+   Gets the ConstructionGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Control
+   :type: Optional[str]
+
+
+   
+   Gets the Control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystems
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystems]
+
+
+   
+   Gets the CoordinateSystems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrossSections
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CrossSections]
+
+
+   
+   Gets the CrossSections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Diffuse
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Diffuse Lighting factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Environments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Analysis]]
+
+
+   
+   Gets the Analyses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FeatureDetection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.FeatureDetection]
+
+
+   
+   Gets the FeatureDetection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Fracture
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Fracture]
+
+
+   
+   Gets the Fracture.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Geometry
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Geometry]
+
+
+   
+   Gets the Geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometryImportGroup
+   :type: Optional[Ansys.ACT.Automation.Mechanical.GeometryImportGroup]
+
+
+   
+   Gets the GeometryImportGroup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSModelAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Materials
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Materials]
+
+
+   
+   Gets the Materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Measures
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Measures]
+
+
+   
+   Gets the Measures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Mesh
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshControls.Mesh]
+
+
+   
+   Gets the Mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshEdit
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshEdit]
+
+
+   
+   Gets the MeshEdit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshNumbering
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshNumbering]
+
+
+   
+   Gets the MeshNumbering.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelections
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelections]
+
+
+   
+   Gets the NamedSelections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PartTransformGroup
+   :type: Optional[Ansys.ACT.Automation.Mechanical.PartTransformGroup]
+
+
+   
+   Gets the PartTransformGroup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemotePoints
+   :type: Optional[Ansys.ACT.Automation.Mechanical.RemotePoints]
+
+
+   
+   Gets the RemotePoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Specular
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Specular Lighting factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Symmetry
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Symmetry]
+
+
+   
+   Gets the Symmetry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SystemCaption
+   :type: Optional[str]
+
+
+   
+   Gets the SystemCaption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TableGroup
+   :type: Optional[Ansys.ACT.Automation.Mechanical.TableGroup]
+
+
+   
+   Gets the TableGroup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualTopology
+   :type: Optional[Ansys.ACT.Automation.Mechanical.VirtualTopology]
+
+
+   
+   Gets the VirtualTopology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAMProcess() -> Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMProcess
+
+   
+   Creates a new AMProcess
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddChart() -> Ansys.ACT.Automation.Mechanical.Chart
+
+   
+   Creates a new child Chart.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCoSimulationPin() -> Ansys.ACT.Automation.Mechanical.CoSimulationPin
+
+   
+   Creates a new CoSimulationPin
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCompositeFailureCriteria() -> Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureCriteria
+
+   
+   Creates a new Composite Failure Criteria object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCondensedGeometry() -> Ansys.ACT.Automation.Mechanical.CondensedGeometry
+
+   
+   Creates a new CondensedGeometry
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddConnections() -> Ansys.ACT.Automation.Mechanical.Connections.Connections
+
+   
+   Creates a new Connections
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddConstructionGeometry() -> Ansys.ACT.Automation.Mechanical.ConstructionGeometry
+
+   
+   Creates a new ConstructionGeometry
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCoupledFieldHarmonic() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddCoupledFieldHarmonic action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCoupledFieldModal() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddCoupledFieldModal action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCoupledFieldStatic() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddCoupledFieldStatic action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCoupledFieldTransient() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddCoupledFieldTransient action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCrossSections() -> Ansys.ACT.Automation.Mechanical.CrossSections
+
+   
+   Creates new CrossSections group.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDesignAssessmentAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddDesignAssessmentAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDesignLifeAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddDesignLifeAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEigenvalueBucklingAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddEigenvalueBucklingAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElectricAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddElectricAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddExplicitDynamicsAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddExplicitDynamicsAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFatigueCombination() -> Ansys.ACT.Automation.Mechanical.FatigueCombination
+
+   
+   Creates a new FatigueCombination
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFeatureDetection() -> Ansys.ACT.Automation.Mechanical.FeatureDetection
+
+   
+   Creates a new FeatureDetection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForcedResponseAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddForcedResponseAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFracture() -> Ansys.ACT.Automation.Mechanical.Fracture
+
+   
+   Creates a new Fracture
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGeometryImportGroup() -> Ansys.ACT.Automation.Mechanical.GeometryImportGroup
+
+   
+   Get the 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHarmonicAcousticAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddHarmonicAcousticAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHarmonicResponseAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddHarmonicResponseAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImagePlane() -> Ansys.ACT.Automation.Mechanical.ImagePlane
+
+   
+   Creates an ImagePlane and adds it as a child of this object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLSDynaAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddLSDynaAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLSDynaRestartAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddLSDynaRestartAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagnetostaticAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddMagnetostaticAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMeasures() -> Ansys.ACT.Automation.Mechanical.Measures
+
+   
+   Creates a new Measures
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMeshEdit() -> Ansys.ACT.Automation.Mechanical.MeshEdit
+
+   
+   Creates a new MeshEdit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMeshNumbering() -> Ansys.ACT.Automation.Mechanical.MeshNumbering
+
+   
+   Creates a new MeshNumbering
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddModalAcousticAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddModalAcousticAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddModalAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddModalAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMotionAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddMotionAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNamedSelection() -> Ansys.ACT.Automation.Mechanical.NamedSelection
+
+   
+   Creates a new child NamedSelection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNamedSelectionFromSelectedConnections() -> List[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Creates a new Named Selections (Components) for the selected connections.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPartTransform() -> Ansys.ACT.Automation.Mechanical.PartTransform
+
+   
+   Creates a new child PartTransform.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPythonCodeEventBased() -> Ansys.ACT.Automation.Mechanical.PythonCodeEventBased
+
+   
+   Creates a new PythonCodeEventBased
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPythonResult() -> Ansys.ACT.Automation.Mechanical.Results.ScriptableResults.PythonResult
+
+   
+   Creates a new PythonResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRandomVibrationAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddRandomVibrationAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRemotePoint() -> Ansys.ACT.Automation.Mechanical.RemotePoint
+
+   
+   Creates a new child RemotePoint.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddResponseSpectrumAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddResponseSpectrumAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRigidDynamicsAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddRigidDynamicsAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSolutionCombination() -> Ansys.ACT.Automation.Mechanical.SolutionCombination
+
+   
+   Creates a new SolutionCombination
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStaticAcousticAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddStaticAcousticAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStaticStructuralAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddStaticStructuralAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSteadyStateThermalAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddSteadyStateThermalAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSubstructureGenerationAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddSubstructureGenerationAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSymmetry() -> Ansys.ACT.Automation.Mechanical.Symmetry
+
+   
+   Creates a new Symmetry
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTableGroup(activate: bool) -> Ansys.ACT.Automation.Mechanical.TableGroup
+
+   
+   Get the 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalElectricAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddThermalElectricAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTopologyOptimizationAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddTopologyOptimizationAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTransientStructuralAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddTransientStructuralAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTransientThermalAnalysis() -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Run the AddTransientThermalAnalysis action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTreeGroupingFolder(dataModelObjects: Iterable) -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Move the Data Model Objects to a new TreeGroupingFolder.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVirtualTopology() -> Ansys.ACT.Automation.Mechanical.VirtualTopology
+
+   
+   Creates a new VirtualTopology
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AutoFilter() -> None
+
+.. code-block:: text
+
+   Enables interface filtering that only displays model-level items applicable to the
+       particular analysis type environments in which you are working.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CenterOfMass() -> Ansys.Core.Units.Quantity
+
+   
+   Calculates the center of mass of all unsupressed bodies and point masses.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateCylindricalBolt(headHeight: Any, headRadius: Any, shankLength: Any, shankRadius: Any) -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+.. code-block:: text
+
+   Create bolt with a cylinder head based on the specified dimensions. The bolt will be
+   created so that the base of the head is at the origin and aligned with the Y-Z plane.
+   Valid input arguments include:
+     1) `double`
+     2) `Quantity`
+     3) A string representation of `double` or `Quantity`, i.e., "1.0" or "1.0 [cm]"
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateCylindricalNut(height: Any, innerRadius: Any, outerRadius: Any) -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+.. code-block:: text
+
+   Create a cylindrical nut with the specified dimensions. The nut will be created so that
+   the base of the nut is at the origin and aligned with the Y-Z plane.
+   Valid input arguments include:
+     1) `double`
+     2) `Quantity`
+     3) A string representation of `double` or `Quantity`, i.e., "1.0" or "1.0 [cm]"
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateHexBolt(headHeight: Any, wrenchWidth: Any, shankLength: Any, shankRadius: Any) -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+.. code-block:: text
+
+   Create a bolt with a hex head based on the specified dimensions. The bolt will be
+   created so that the base of the head is at the origin and aligned with the Y-Z plane.
+   Valid input arguments include:
+     1) `double`
+     2) `Quantity`
+     3) A string representation of `double` or `Quantity`, i.e., "1.0" or "1.0 [cm]"
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateHexNut(height: Any, innerRadius: Any, wrenchWidth: Any) -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+.. code-block:: text
+
+   Create a hex nut with the specified dimensions. The nut will be created so that the
+   base of the nut is at the origin and aligned with the Y-Z plane.
+   Valid input arguments include:
+     1) `double`
+     2) `Quantity`
+     3) A string representation of `double` or `Quantity`, i.e., "1.0" or "1.0 [cm]"
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreatePartInstance(part: Ansys.ACT.Interfaces.Geometry.IGeoPart) -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+.. code-block:: text
+
+   This will create an instance (not an independent copy) of the provided part. The use of
+   instanced parts for replication is highly recommended for memory and performance
+   reasons.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteParts(parts: Any) -> None
+
+   
+   Deletes the provide parts if they exist. Otherwise, nothing happens. An exception will be issued if the argument is invalid.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DisableFilter() -> None
+
+.. code-block:: text
+
+   Disables interface filtering so that model-level items are not filtered out based on
+       the environment types in your model.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateScriptDefinedResults() -> None
+
+   
+   EvaluateScriptDefinedResults method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FreezeMeshOnSelectedParts(parts: Any) -> None
+
+   
+   Run the FreezeMeshOnSelectedParts action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFECommandsRepository(source: str, fileIdentifier: str) -> Ansys.ACT.Automation.Mechanical.FE.CommandRepository
+
+   
+   Gets the commands repository for a file from external model.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetResults() -> None
+
+   
+   Gets the Results from the server.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTransformationOnPart(part: Ansys.ACT.Interfaces.Geometry.IGeoPart) -> Ansys.Mechanical.DataModel.Utilities.RigidBodyTransformationMatrix
+
+   
+   Get the transformation matrix of the provided part.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: LoadResultFile(filePath: str) -> Ansys.ACT.Automation.Mechanical.Solution
+
+   
+   Creates a results-only system and loads the result file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RefreshMaterials() -> None
+
+   
+   Run the RefresMaterials action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTransformationOnPart(part: Ansys.ACT.Interfaces.Geometry.IGeoPart, transformationMatrix: Ansys.Mechanical.DataModel.Utilities.RigidBodyTransformationMatrix) -> None
+
+.. code-block:: text
+
+   Transform a part with given transformation. Only rigid body transformation is
+   supported, i.e., no scaling will be performed. The validity of “transformationMatrix”
+   will be checked against the constraints of rigid body transforms; an error will be
+   emitted if the matrix is ill-formed.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Solve(wait: bool, config: str) -> None
+
+   
+   Run the Solve action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnfreezeMeshOnSelectedParts(parts: Any) -> None
+
+   
+   Run the UnfreezeMeshOnSelectedParts action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UpdateGeometryFromSource() -> None
+
+   
+   Run the UpdateGeometryFromSource action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

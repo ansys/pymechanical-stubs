@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`IParameterManager`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IParameterManager
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a parameter manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on
