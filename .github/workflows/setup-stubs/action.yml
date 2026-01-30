@@ -30,7 +30,7 @@ runs:
   using: "composite"
   steps:
 
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
       with:
         python-version: ${{ inputs.python-version }}
 
@@ -42,7 +42,7 @@ runs:
         print(os.getcwd())
 
     - name: Download the library artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
       with:
         pattern: ${{ inputs.folder-pattern }}
         path: ${{ inputs.package-path }}/
