@@ -29,6 +29,13 @@ inputs:
     type: boolean
     default: true
 
+  debug:
+    description: >
+      Enable debug mode.
+    required: false
+    type: boolean
+    default: false
+
 runs:
   using: "composite"
   steps:
@@ -41,6 +48,11 @@ runs:
           # Get the Python version inputs
           python_version_input="${{ inputs.python-version }}"
           python_version_patch_input="${{ inputs.python-version-patch }}"
+
+          if [ "${{ inputs.debug }}" = true ]; then
+            echo "Python version input: $python_version_input"
+            echo "Python version patch input: $python_version_patch_input"
+          fi
 
           if [ -n "$python_version_patch_input" ]; then
             echo "PYTHON_VERSION_PATCH=$python_version_patch_input" >> "$GITHUB_ENV"

@@ -23,6 +23,10 @@ on:
           - '3.13'
           - 'All of the above'
         default: 'All of the above'
+      debug:
+        description: "Enable debug mode"
+        type: boolean
+        default: false
   push:
     tags:
       - "*"
@@ -168,6 +172,7 @@ jobs:
         uses: ./.github/workflows/setup-python/
         with:
           python-version: ${{ matrix.python-version }}
+          debug: ${{ github.event.inputs.debug }}
 
       - name: "Configure Python"
         run: |
