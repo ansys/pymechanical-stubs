@@ -168,7 +168,8 @@ def generate_stubs(base_dir, outdir, assemblies, str_version):
         for dir in get_dirs:
             full_dir_path = path / dir
             if full_dir_path.is_dir():
-                f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{dir} as {dir}\n")
+                name = full_dir_path.name
+                f.write(f"import ansys.mechanical.stubs.{str_version}.Ansys.{name} as {name}\n")
         f.close()
 
     # Add import statements to init files
