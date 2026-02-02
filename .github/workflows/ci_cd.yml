@@ -165,11 +165,47 @@ jobs:
 
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
 
-
-  check-inputs:
-    name: Check inputs
-    runs-on: ubuntu-latest
+  gen-stubs:
+    name: Generate Mechanical stubs
+    needs: [style, doc-style, config-matrix]
+    runs-on: public-ubuntu-latest-8-cores
+    container:
+      image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
+      options: --entrypoint /bin/bash
+    strategy:
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
     steps:
+      - name: "Install Git and clone project"
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: "Set up Python"
+        uses: ./.github/workflows/setup-python/
+        with:
+          python-version: ${{ matrix.python-version }}
+          debug: ${{ github.event.inputs.debug }}
+
+      - name: "Configure Python"
+        run: |
+          # Link python to the installed version
+          ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
+
+          # Verify Python installation
+          python -m pip install --upgrade pip
+          python --version
+          python -m pip --version
+
+      - name: "Install dependencies"
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+        run: |
+          apt update
+          apt install -y lsb-release mono-complete make git zip
+
+          python -m pip install -e .[build,doc]
+          python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
+          python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+
       - name: "Get assembly and debug choice"
         id: get-choices
         run: |
@@ -197,445 +233,377 @@ jobs:
         run: |
           echo "Choices set: assembly='--${{ steps.get-choices.outputs.assembly }}', debug='--${{ steps.get-choices.outputs.debug }}'"
 
-  # gen-stubs:
-  #   name: Generate Mechanical stubs
-  #   needs: [style, doc-style, config-matrix]
-  #   runs-on: public-ubuntu-latest-8-cores
-  #   container:
-  #     image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
-  #     options: --entrypoint /bin/bash
-  #   strategy:
-  #     matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
-  #   steps:
-  #     - name: "Install Git and clone project"
-  #       uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - name: "Generate the Mechanical stub files"
+        env:
+          AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
+          ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
+        run: |
+          python src/ansys/mechanical/stubs/stub_generator/create_files.py '--${{ steps.get-choices.outputs.assembly }}' --make '--${{ steps.get-choices.outputs.debug }}' > results.txt
+        continue-on-error: True
 
-  #     - name: "Set up Python"
-  #       uses: ./.github/workflows/setup-python/
-  #       with:
-  #         python-version: ${{ matrix.python-version }}
-  #         debug: ${{ github.event.inputs.debug }}
+      - name: "Check stubs were generated"
+        run: |
+          cat results.txt
 
-  #     - name: "Configure Python"
-  #       run: |
-  #         # Link python to the installed version
-  #         ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
+          # Check if failure occurred
+          output=$(grep -c "Done processing all mechanical stubs" results.txt)
+          if [ $output -eq 1 ]; then
+            echo "All mechanical stubs were created"
+            exit 0
+          else
+            echo "There was an issue creating the mechanical stubs"
+            exit 1
+          fi
 
-  #         # Verify Python installation
-  #         python -m pip install --upgrade pip
-  #         python --version
-  #         python -m pip --version
+      - name: "Upload v${{ matrix.mechanical.version }} stubs"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: v${{ matrix.mechanical.version }}-${{ matrix.python-version }}
+          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
+          retention-days: 7
 
-  #     - name: "Install dependencies"
-  #       env:
-  #         AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-  #         ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
-  #       run: |
-  #         apt update
-  #         apt install -y lsb-release mono-complete make git zip
+  smoke-tests:
+    name: Build wheelhouse
+    runs-on: ${{ matrix.os }}
+    needs: [gen-stubs, config-matrix]
+    strategy:
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.test-matrix) }}
+    steps:
+    - name: "Install Git and clone project"
+      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-  #         python -m pip install -e .[build,doc]
-  #         python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip setuptools
-  #         python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
+    - name: "Download stubs"
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ matrix.python-version }}
 
-  #     - name: "Get assembly and debug choice"
-  #       id: get-choices
-  #       run: |
-  #         if [ "${{ github.event.inputs.assembly }}" == "All of the above" ] || [ "${{ github.event.inputs.assembly }}" == "" ]; then
-  #           echo "assembly=all-assemblies" >> $GITHUB_OUTPUT
-  #         elif [ "${{ github.event.inputs.assembly }}" == "Ansys.Mechanical.DataModel" ]; then
-  #           echo "assembly=mechanical-datamodel" >> $GITHUB_OUTPUT
-  #         elif [ "${{ github.event.inputs.assembly }}" == "Ansys.Mechanical.Interfaces" ]; then
-  #           echo "assembly=mechanical-interfaces" >> $GITHUB_OUTPUT
-  #         elif [ "${{ github.event.inputs.assembly }}" == "Ansys.ACT.Interfaces" ]; then
-  #           echo "assembly=mechanical-act-interfaces" >> $GITHUB_OUTPUT
-  #         elif [ "${{ github.event.inputs.assembly }}" == "Ansys.ACT.WB1" ]; then
-  #           echo "assembly=mechanical-act-wb1" >> $GITHUB_OUTPUT
-  #         elif [ "${{ github.event.inputs.assembly }}" == "Ans.Core" ]; then
-  #           echo "assembly=ans-core" >> $GITHUB_OUTPUT
-  #         fi
+    - name: "Build a wheelhouse of the Python library"
+      uses: ansys/actions/build-wheelhouse@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+      with:
+        library-name: ${{ env.PACKAGE_NAME }}
+        operating-system: ${{ matrix.os }}
+        python-version: ${{ matrix.python-version }}
+        checkout: false
 
-  #         if [ "${{ github.event.inputs.debug }}" == "true" ]; then
-  #           echo "debug=debug" >> $GITHUB_OUTPUT
-  #         else
-  #           echo "debug=" >> $GITHUB_OUTPUT
-  #         fi
+  doc-build:
+    name: Make html and markdown documentation
+    if: github.event.action != 'closed'
+    needs: [smoke-tests, config-matrix]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
+    steps:
+    - name: "Install Git and clone project"
+      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-  #     - name: "Show selected choices"
-  #       run: |
-  #         echo "Choices set: assembly='--${{ steps.get-choices.outputs.assembly }}', debug='--${{ steps.get-choices.outputs.debug }}'"
+    - name: "Download stubs"
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v${{ matrix.mechanical-revn }}-${{ matrix.python-version }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ matrix.python-version }}
 
-  #     - name: "Generate the Mechanical stub files"
-  #       env:
-  #         AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
-  #         ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
-  #       run: |
-  #         python src/ansys/mechanical/stubs/stub_generator/create_files.py '--${{ steps.get-choices.outputs.assembly }}' --make '--${{ steps.get-choices.outputs.debug }}' > results.txt
-  #       continue-on-error: True
+    - name: "Install project & doc dependencies"
+      run: |
+        python -m pip install -e .[doc]
 
-  #     - name: "Check stubs were generated"
-  #       run: |
-  #         cat results.txt
+    - name: "Generate HTML documentation"
+      run: |
+        make -C doc html
 
-  #         # Check if failure occurred
-  #         output=$(grep -c "Done processing all mechanical stubs" results.txt)
-  #         if [ $output -eq 1 ]; then
-  #           echo "All mechanical stubs were created"
-  #           exit 0
-  #         else
-  #           echo "There was an issue creating the mechanical stubs"
-  #           exit 1
-  #         fi
+    - name: "Upload version Sphinx HTML documentation"
+      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-html-v${{ matrix.mechanical-revn }}
+        path: doc/_build/html
+        retention-days: 7
 
-  #     - name: "Upload v${{ matrix.mechanical.version }} stubs"
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       with:
-  #         name: v${{ matrix.mechanical.version }}-${{ matrix.python-version }}
-  #         path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
-  #         retention-days: 7
+    - name: "Generate Markdown documentation"
+      run: |
+        make -C doc markdown
 
-  # smoke-tests:
-  #   name: Build wheelhouse
-  #   runs-on: ${{ matrix.os }}
-  #   needs: [gen-stubs, config-matrix]
-  #   strategy:
-  #     matrix: ${{ fromJSON(needs.config-matrix.outputs.test-matrix) }}
-  #   steps:
-  #   - name: "Install Git and clone project"
-  #     uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+    - name: "Upload version markdown documentation"
+      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      with:
+        name: documentation-md-v${{ matrix.mechanical-revn }}
+        path: doc/_build/markdown
+        retention-days: 7
 
-  #   - name: "Download stubs"
-  #     uses: ./.github/workflows/setup-stubs/
-  #     with:
-  #       folder-pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
-  #       package-path: "${{ env.PACKAGE_PATH }}"
-  #       python-version: ${{ matrix.python-version }}
+  combine-docs:
+    name: Combine documentation
+    runs-on: ubuntu-latest
+    needs: [doc-build, config-matrix]
+    strategy:
+      matrix:
+        python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
+    steps:
+      - name: "Install Git and clone project"
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-  #   - name: "Build a wheelhouse of the Python library"
-  #     uses: ansys/actions/build-wheelhouse@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #     with:
-  #       library-name: ${{ env.PACKAGE_NAME }}
-  #       operating-system: ${{ matrix.os }}
-  #       python-version: ${{ matrix.python-version }}
-  #       checkout: false
+      - name: "Download all HTML documentation"
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: documentation-html-v*
 
-  # doc-build:
-  #   name: Make html and markdown documentation
-  #   if: github.event.action != 'closed'
-  #   needs: [smoke-tests, config-matrix]
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
-  #   steps:
-  #   - name: "Install Git and clone project"
-  #     uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - name: "Download all Markdown documentation"
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: documentation-md-v*
 
-  #   - name: "Download stubs"
-  #     uses: ./.github/workflows/setup-stubs/
-  #     with:
-  #       folder-pattern: "v${{ matrix.mechanical-revn }}-${{ matrix.python-version }}"
-  #       package-path: "${{ env.PACKAGE_PATH }}"
-  #       python-version: ${{ matrix.python-version }}
+      - name: "Combine HTML and Markdown documentation"
+        run: |
+          combine_documentation() {
+            combined_folder_name=$1
+            combined_folder_path=$(pwd)/$combined_folder_name
+            version_folders=($(find . -maxdepth 1 -type d -name "$combined_folder_name-v[0-9][0-9][0-9]"))
 
-  #   - name: "Install project & doc dependencies"
-  #     run: |
-  #       python -m pip install -e .[doc]
+            for folder in "${version_folders[@]}"; do
+              if [ -d "$combined_folder_path" ]; then
+                  folder_version="${folder##*-}"
+                  version_path="api/ansys/mechanical/stubs/${folder_version}"
+                  cp -r $folder/$version_path/* $combined_folder_path/$version_path
+              else
+                  mkdir -p "$combined_folder_path"
+                  echo "$combined_folder_path folder created."
+                  cp -r "$folder/"* "$combined_folder_path"
+              fi
+            done
+          }
 
-  #   - name: "Generate HTML documentation"
-  #     run: |
-  #       make -C doc html
+          combine_documentation "documentation-html"
+          combine_documentation "documentation-md"
 
-  #   - name: "Upload version Sphinx HTML documentation"
-  #     uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #     if: matrix.python-version == env.MAIN_PYTHON_VERSION
-  #     with:
-  #       name: documentation-html-v${{ matrix.mechanical-revn }}
-  #       path: doc/_build/html
-  #       retention-days: 7
+      - name: "Upload HTML documentation"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: combined-documentation-html
+          path: documentation-html
+          retention-days: 7
 
-  #   - name: "Generate Markdown documentation"
-  #     run: |
-  #       make -C doc markdown
+      - name: "Upload Markdown documentation"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: combined-documentation-md
+          path: documentation-md
+          retention-days: 7
 
-  #   - name: "Upload version markdown documentation"
-  #     uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #     if: matrix.python-version == env.MAIN_PYTHON_VERSION
-  #     with:
-  #       name: documentation-md-v${{ matrix.mechanical-revn }}
-  #       path: doc/_build/markdown
-  #       retention-days: 7
+      - name: "Create fake PDF"
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        run: |
+          mkdir -p doc/_build/latex
+          touch doc/_build/latex/doc.pdf
 
-  # combine-docs:
-  #   name: Combine documentation
-  #   runs-on: ubuntu-latest
-  #   needs: [doc-build, config-matrix]
-  #   strategy:
-  #     matrix:
-  #       python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
-  #   steps:
-  #     - name: "Install Git and clone project"
-  #       uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - name: Upload PDF Documentation
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-pdf
+          path: doc/_build/latex/doc.pdf
+          retention-days: 7
 
-  #     - name: "Download all HTML documentation"
-  #       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
-  #       with:
-  #         pattern: documentation-html-v*
+  clean-docs:
+    name: Clean HTML and Markdown documentation
+    runs-on: ubuntu-latest
+    needs: [combine-docs, config-matrix]
+    strategy:
+      matrix:
+        python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
+    steps:
+      - name: "Install Git and clone project"
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-  #     - name: "Download all Markdown documentation"
-  #       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
-  #       with:
-  #         pattern: documentation-md-v*
+      - name: "Install project & doc dependencies"
+        run: |
+          python -m pip install -e .[doc]
 
-  #     - name: "Combine HTML and Markdown documentation"
-  #       run: |
-  #         combine_documentation() {
-  #           combined_folder_name=$1
-  #           combined_folder_path=$(pwd)/$combined_folder_name
-  #           version_folders=($(find . -maxdepth 1 -type d -name "$combined_folder_name-v[0-9][0-9][0-9]"))
+      - name: "Download all HTML documentation"
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: combined-documentation-html
 
-  #           for folder in "${version_folders[@]}"; do
-  #             if [ -d "$combined_folder_path" ]; then
-  #                 folder_version="${folder##*-}"
-  #                 version_path="api/ansys/mechanical/stubs/${folder_version}"
-  #                 cp -r $folder/$version_path/* $combined_folder_path/$version_path
-  #             else
-  #                 mkdir -p "$combined_folder_path"
-  #                 echo "$combined_folder_path folder created."
-  #                 cp -r "$folder/"* "$combined_folder_path"
-  #             fi
-  #           done
-  #         }
+      - name: "Download all Markdown documentation"
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: combined-documentation-md
 
-  #         combine_documentation "documentation-html"
-  #         combine_documentation "documentation-md"
+      - name: "Replace Windows apostrophes with single quotes"
+        run: |
+          python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --markdown_api_folder combined-documentation-md/api
 
-  #     - name: "Upload HTML documentation"
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: combined-documentation-html
-  #         path: documentation-html
-  #         retention-days: 7
+      - name: "Markdown: Make all hrefs local"
+        run: |
+          python scripts/fix-href-md.py --api_folder combined-documentation-md/api
 
-  #     - name: "Upload Markdown documentation"
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: combined-documentation-md
-  #         path: documentation-md
-  #         retention-days: 7
+      - name: "HTML: Make all hrefs local"
+        run: |
+          python scripts/fix-href-html.py --api_folder combined-documentation-html/api
 
-  #     - name: "Create fake PDF"
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       run: |
-  #         mkdir -p doc/_build/latex
-  #         touch doc/_build/latex/doc.pdf
+      - name: "Markdown: Clean ID in first row"
+        run: |
+          python scripts/01-clean-id.py --input_folder combined-documentation-md
 
-  #     - name: Upload PDF Documentation
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: documentation-pdf
-  #         path: doc/_build/latex/doc.pdf
-  #         retention-days: 7
+      - name: "Markdown: Clean empty rows"
+        run: |
+          python scripts/02-clean-empty-row.py --input_folder combined-documentation-md
 
-  # clean-docs:
-  #   name: Clean HTML and Markdown documentation
-  #   runs-on: ubuntu-latest
-  #   needs: [combine-docs, config-matrix]
-  #   strategy:
-  #     matrix:
-  #       python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
-  #   steps:
-  #     - name: "Install Git and clone project"
-  #       uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - name: "Create table of contents"
+        run: |
+          python scripts/03-create-toc-from-html-mechanical.py --api_folder combined-documentation-html/api
 
-  #     - name: "Install project & doc dependencies"
-  #       run: |
-  #         python -m pip install -e .[doc]
+      - name: "Fix paths in toc.yml"
+        shell: bash
+        run: |
+          # Remove doc/_build/html from paths in toc.yml file
+          sed -i -e 's;doc/_build/html/;;g' output/toc.yml
 
-  #     - name: "Download all HTML documentation"
-  #       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
-  #       with:
-  #         pattern: combined-documentation-html
+      - name: "Upload toc.yml file"
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: toc-file
+          path: output/
 
-  #     - name: "Download all Markdown documentation"
-  #       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
-  #       with:
-  #         pattern: combined-documentation-md
+      - name: "Markdown: Add header to tables"
+        run: |
+          python scripts/04-add-header-to-tables.py --input_folder combined-documentation-md
 
-  #     - name: "Replace Windows apostrophes with single quotes"
-  #       run: |
-  #         python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --markdown_api_folder combined-documentation-md/api
+      - name: "Markdown: Remove links in heading"
+        run: |
+          python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
-  #     - name: "Markdown: Make all hrefs local"
-  #       run: |
-  #         python scripts/fix-href-md.py --api_folder combined-documentation-md/api
+      - name: "Upload HTML documentation"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-html
+          path: combined-documentation-html
+          retention-days: 7
 
-  #     - name: "HTML: Make all hrefs local"
-  #       run: |
-  #         python scripts/fix-href-html.py --api_folder combined-documentation-html/api
+      - name: "Upload Markdown documentation"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          matrix.python-version == env.MAIN_PYTHON_VERSION
+        with:
+          name: documentation-md
+          path: combined-documentation-md
+          retention-days: 7
 
-  #     - name: "Markdown: Clean ID in first row"
-  #       run: |
-  #         python scripts/01-clean-id.py --input_folder combined-documentation-md
+  doc-deploy-pr:
+    name: "Deploy PR documentation"
+    runs-on: ubuntu-latest
+    needs: [clean-docs]
+    if: always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
+    steps:
+      - uses: ansys/actions/doc-deploy-pr@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          maximum-pr-doc-deployments: 10
 
-  #     - name: "Markdown: Clean empty rows"
-  #       run: |
-  #         python scripts/02-clean-empty-row.py --input_folder combined-documentation-md
+  build-library:
+    name: Build library
+    runs-on: ubuntu-latest
+    needs: [clean-docs]
+    steps:
+    - name: "Install Git and clone project"
+      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-  #     - name: "Create table of contents"
-  #       run: |
-  #         python scripts/03-create-toc-from-html-mechanical.py --api_folder combined-documentation-html/api
+    - name: "Set up Python"
+      uses: ansys/actions/_setup-python@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+      with:
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        use-cache: false
+        provision-uv: false
+        prune-uv-cache: false
 
-  #     - name: "Fix paths in toc.yml"
-  #       shell: bash
-  #       run: |
-  #         # Remove doc/_build/html from paths in toc.yml file
-  #         sed -i -e 's;doc/_build/html/;;g' output/toc.yml
+    - name: "Download stubs"
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
-  #     - name: "Upload toc.yml file"
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       with:
-  #         name: toc-file
-  #         path: output/
+    - name: Build library source and wheel artifacts
+      uses: ansys/actions/build-library@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+      with:
+        library-name: ${{ env.PACKAGE_NAME }}
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        checkout: false
 
-  #     - name: "Markdown: Add header to tables"
-  #       run: |
-  #         python scripts/04-add-header-to-tables.py --input_folder combined-documentation-md
+  release:
+    runs-on: ubuntu-latest
+    needs: [smoke-tests, build-library, update-changelog]
+    environment: release
+    permissions:
+      id-token: write
+      contents: write
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+    steps:
+      - name: "Download the library artifacts from build-library step"
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: ${{ env.PACKAGE_NAME }}-artifacts
+          path: ${{ env.PACKAGE_NAME }}-artifacts
 
-  #     - name: "Markdown: Remove links in heading"
-  #       run: |
-  #         python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
+      - name: "Upload artifacts to PyPI using trusted publisher"
+        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # v1.13.0
+        with:
+          repository-url: "https://upload.pypi.org/legacy/"
+          print-hash: true
+          packages-dir: ${{ env.PACKAGE_NAME }}-artifacts
+          skip-existing: false
 
-  #     - name: "Upload HTML documentation"
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: documentation-html
-  #         path: combined-documentation-html
-  #         retention-days: 7
+      - name: "Release to GitHub"
+        uses: ansys/actions/release-github@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+        with:
+          library-name: ${{ env.PACKAGE_NAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-  #     - name: "Upload Markdown documentation"
-  #       uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
-  #       if: |
-  #         github.event_name == 'workflow_dispatch' ||
-  #         matrix.python-version == env.MAIN_PYTHON_VERSION
-  #       with:
-  #         name: documentation-md
-  #         path: combined-documentation-md
-  #         retention-days: 7
+  doc-deploy-dev:
+    name: "Deploy development documentation"
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: [clean-docs]
+    steps:
+      - name: "Deploy development documentation"
+        uses: ansys/actions/doc-deploy-dev@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
 
-  # doc-deploy-pr:
-  #   name: "Deploy PR documentation"
-  #   runs-on: ubuntu-latest
-  #   needs: [clean-docs]
-  #   if: always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
-  #   steps:
-  #     - uses: ansys/actions/doc-deploy-pr@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #       with:
-  #         cname: ${{ env.DOCUMENTATION_CNAME }}
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-  #         bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-  #         bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
-  #         maximum-pr-doc-deployments: 10
-
-  # build-library:
-  #   name: Build library
-  #   runs-on: ubuntu-latest
-  #   needs: [clean-docs]
-  #   steps:
-  #   - name: "Install Git and clone project"
-  #     uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-
-  #   - name: "Set up Python"
-  #     uses: ansys/actions/_setup-python@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #     with:
-  #       python-version: ${{ env.MAIN_PYTHON_VERSION }}
-  #       use-cache: false
-  #       provision-uv: false
-  #       prune-uv-cache: false
-
-  #   - name: "Download stubs"
-  #     uses: ./.github/workflows/setup-stubs/
-  #     with:
-  #       folder-pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
-  #       package-path: "${{ env.PACKAGE_PATH }}"
-  #       python-version: ${{ env.MAIN_PYTHON_VERSION }}
-
-  #   - name: Build library source and wheel artifacts
-  #     uses: ansys/actions/build-library@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #     with:
-  #       library-name: ${{ env.PACKAGE_NAME }}
-  #       python-version: ${{ env.MAIN_PYTHON_VERSION }}
-  #       checkout: false
-
-  # release:
-  #   runs-on: ubuntu-latest
-  #   needs: [smoke-tests, build-library, update-changelog]
-  #   environment: release
-  #   permissions:
-  #     id-token: write
-  #     contents: write
-  #   if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-  #   steps:
-  #     - name: "Download the library artifacts from build-library step"
-  #       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
-  #       with:
-  #         name: ${{ env.PACKAGE_NAME }}-artifacts
-  #         path: ${{ env.PACKAGE_NAME }}-artifacts
-
-  #     - name: "Upload artifacts to PyPI using trusted publisher"
-  #       uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # v1.13.0
-  #       with:
-  #         repository-url: "https://upload.pypi.org/legacy/"
-  #         print-hash: true
-  #         packages-dir: ${{ env.PACKAGE_NAME }}-artifacts
-  #         skip-existing: false
-
-  #     - name: "Release to GitHub"
-  #       uses: ansys/actions/release-github@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #       with:
-  #         library-name: ${{ env.PACKAGE_NAME }}
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-
-  # doc-deploy-dev:
-  #   name: "Deploy development documentation"
-  #   if: github.ref == 'refs/heads/main'
-  #   runs-on: ubuntu-latest
-  #   needs: [clean-docs]
-  #   steps:
-  #     - name: "Deploy development documentation"
-  #       uses: ansys/actions/doc-deploy-dev@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #       with:
-  #         cname: ${{ env.DOCUMENTATION_CNAME }}
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-  #         bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-  #         bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
-
-  # doc-deploy-stable:
-  #   name: "Deploy stable documentation"
-  #   if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-  #   runs-on: ubuntu-latest
-  #   needs: release
-  #   steps:
-  #     - name: "Deploy stable documentation"
-  #       uses: ansys/actions/doc-deploy-stable@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
-  #       with:
-  #         cname: ${{ env.DOCUMENTATION_CNAME }}
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-  #         bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-  #         bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+  doc-deploy-stable:
+    name: "Deploy stable documentation"
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+    runs-on: ubuntu-latest
+    needs: release
+    steps:
+      - name: "Deploy stable documentation"
+        uses: ansys/actions/doc-deploy-stable@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
+        with:
+          cname: ${{ env.DOCUMENTATION_CNAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
