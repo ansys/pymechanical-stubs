@@ -210,7 +210,7 @@ jobs:
       - name: "Get assembly and debug choice"
         id: get-choices
         run: |
-          if [[ "${{ github.event.inputs.assembly }}" == "All of the above" || "${{ github.event.inputs.assembly }}" == "" ]]; then
+          if [[ "${{ github.event.inputs.assembly }}" == "All of the above" ]] || [[ "${{ github.event.inputs.assembly }}" == "" ]]; then
             echo "assembly=all-assemblies" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.assembly }}" == "Ansys.Mechanical.DataModel" ]]; then
             echo "assembly=mechanical-datamodel" >> $GITHUB_OUTPUT
