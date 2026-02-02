@@ -232,14 +232,14 @@ jobs:
 
       - name: "Show selected choices"
         run: |
-          echo "Choices set: assembly=--${{ steps.get-choices.outputs.assembly }}, debug=--${{ steps.get-choices.outputs.debug }}"
+          echo "Choices set: assembly='--${{ steps.get-choices.outputs.assembly }}', debug='--${{ steps.get-choices.outputs.debug }}'"
 
       - name: "Generate the Mechanical stub files"
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py --${{ steps.get-choices.outputs.assembly }} --make --${{ steps.get-choices.outputs.debug }} > results.txt
+          python src/ansys/mechanical/stubs/stub_generator/create_files.py '--${{ steps.get-choices.outputs.assembly }}' --make '--${{ steps.get-choices.outputs.debug }}' > results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
