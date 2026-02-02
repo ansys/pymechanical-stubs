@@ -246,7 +246,7 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py --version ${{ matrix.mechanical.version }} --assembly ${{ needs.check-inputs.outputs.assembly }} --make ${{ needs.check-inputs.outputs.debug }} > results.txt
+          python src/ansys/mechanical/stubs/stub_generator/create_files.py --version ${{ matrix.mechanical.version }} ${{ needs.check-inputs.outputs.assembly }} --make ${{ needs.check-inputs.outputs.debug }} > results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
