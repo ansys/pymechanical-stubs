@@ -230,7 +230,9 @@ jobs:
             echo "debug=" >> $GITHUB_OUTPUT
           fi
 
-          echo "Choices set: assembly=${{ github.event.inputs.assembly }}, debug=${{ github.event.inputs.debug }}"
+      - name: "Show selected choices"
+        run: |
+          echo "Choices set: assembly=${{ steps.get-choices.outputs.assembly }}, debug=${{ steps.get-choices.outputs.debug }}"
 
       - name: "Generate the Mechanical stub files"
         env:
