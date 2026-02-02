@@ -183,9 +183,9 @@ jobs:
           elif [ "${{ github.event.inputs.assembly }}" == "Ansys.Mechanical.Interfaces" ]; then
             echo "assembly=--mechanical-interfaces" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.inputs.assembly }}" == "Ansys.ACT.Interfaces" ]; then
-            echo "assembly=--mechanical-act-interfaces" >> $GITHUB_OUTPUT
+            echo "assembly=--act-interfaces" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.inputs.assembly }}" == "Ansys.ACT.WB1" ]; then
-            echo "assembly=--mechanical-act-wb1" >> $GITHUB_OUTPUT
+            echo "assembly=--act-wb1" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.inputs.assembly }}" == "Ans.Core" ]; then
             echo "assembly=--ans-core" >> $GITHUB_OUTPUT
           fi
@@ -246,7 +246,7 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py ${{ needs.check-inputs.outputs.assembly }} --make ${{ needs.check-inputs.outputs.debug }} > results.txt
+          python src/ansys/mechanical/stubs/stub_generator/create_files.py --version ${{ matrix.mechanical.version }} --assembly ${{ needs.check-inputs.outputs.assembly }} --make ${{ needs.check-inputs.outputs.debug }} > results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
