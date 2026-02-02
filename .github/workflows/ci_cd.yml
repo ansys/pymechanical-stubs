@@ -230,6 +230,8 @@ jobs:
             echo "debug=" >> $GITHUB_OUTPUT
           fi
 
+          echo "Choices set: assembly=${{ github.event.inputs.assembly }}, debug=${{ github.event.inputs.debug }}"
+
       - name: "Generate the Mechanical stub files"
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
