@@ -211,35 +211,35 @@ jobs:
         id: get-choices
         run: |
           if [[ "${{ github.event.inputs.assembly }}" == "All of the above" || "${{ github.event.inputs.assembly }}" == "" ]]; then
-            echo "assembly=--all-assemblies" >> $GITHUB_OUTPUT
+            echo "assembly=all-assemblies" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.assembly }}" == "Ansys.Mechanical.DataModel" ]]; then
-            echo "assembly=--mechanical-datamodel" >> $GITHUB_OUTPUT
+            echo "assembly=mechanical-datamodel" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.assembly }}" == "Ansys.Mechanical.Interfaces" ]]; then
-            echo "assembly=--mechanical-interfaces" >> $GITHUB_OUTPUT
+            echo "assembly=mechanical-interfaces" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.assembly }}" == "Ansys.ACT.Interfaces" ]]; then
-            echo "assembly=--mechanical-act-interfaces" >> $GITHUB_OUTPUT
+            echo "assembly=mechanical-act-interfaces" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.assembly }}" == "Ansys.ACT.WB1" ]]; then
-            echo "assembly=--mechanical-act-wb1" >> $GITHUB_OUTPUT
+            echo "assembly=mechanical-act-wb1" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.assembly }}" == "Ans.Core" ]]; then
-            echo "assembly=--ans-core" >> $GITHUB_OUTPUT
+            echo "assembly=ans-core" >> $GITHUB_OUTPUT
           fi
 
           if [[ "${{ github.event.inputs.debug }}" == "true" ]]; then
-            echo "debug=--debug" >> $GITHUB_OUTPUT
+            echo "debug=debug" >> $GITHUB_OUTPUT
           else
             echo "debug=" >> $GITHUB_OUTPUT
           fi
 
       - name: "Show selected choices"
         run: |
-          echo "Choices set: assembly=${{ steps.get-choices.outputs.assembly }}, debug=${{ steps.get-choices.outputs.debug }}"
+          echo "Choices set: assembly=--${{ steps.get-choices.outputs.assembly }}, debug=--${{ steps.get-choices.outputs.debug }}"
 
       - name: "Generate the Mechanical stub files"
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py ${{ steps.get-choices.outputs.assembly }} --make ${{ steps.get-choices.outputs.debug }} > results.txt
+          python src/ansys/mechanical/stubs/stub_generator/create_files.py --${{ steps.get-choices.outputs.assembly }} --make --${{ steps.get-choices.outputs.debug }} > results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
