@@ -201,41 +201,9 @@ jobs:
         run: |
           echo "Choices set: assembly=${{ steps.get-choices.outputs.assembly }}, debug=${{ steps.get-choices.outputs.debug }}"
 
-  get-container-sha:
-    name: Get container SHA for Mechanical images
-    runs-on: public-ubuntu-latest-16-cores
-    needs: [style, config-matrix]
-    strategy:
-      matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
-    permissions:
-      contents: read
-      packages: read         # Required to pull Docker images from GitHub Container Registry
-      checks: write          # Needed to publish test results and status checks
-    steps:
-      - name: Login in Github Container registry
-        uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef # v3.6.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Pull, launch, and validate Mechanical service
-        env:
-          MECHANICAL_IMAGE: ${{ env.DOCKER_PACKAGE }}:${{ matrix.mechanical.image }}
-          MECHANICAL_VERSION: ${{ matrix.mechanical.image }}
-          LICENSE_SERVER: ${{ env.LICENSE_SERVER }}
-        run: |
-          docker pull ${MECHANICAL_IMAGE}
-
-          # Get the image SHA
-          image_sha=$(docker images --no-trunc --quiet ${MECHANICAL_IMAGE})
-          sha_only="${image_sha#*:}"
-
-          echo "MECHANICAL_${MECHANICAL_VERSION}_SHA=$sha_only" >> $GITHUB_ENV
-
   gen-stubs:
     name: Generate Mechanical stubs
-    needs: [style, doc-style, config-matrix, check-inputs, get-container-sha]
+    needs: [style, doc-style, config-matrix, check-inputs]
     runs-on: public-ubuntu-latest-8-cores
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
@@ -246,12 +214,6 @@ jobs:
       - name: "Install Git and clone project"
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
-        id: stubs-cache-restore
-        with:
-          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
-          key: ${{ runner.os }}-MECHANICAL_${{ matrix.mechanical.image }}_SHA-${{ matrix.python-version }}
-
       - name: "Set up Python"
         if: steps.stubs-cache-restore.outputs.cache-hit != 'true'
         uses: ./.github/workflows/setup-python/
@@ -260,7 +222,6 @@ jobs:
           debug: ${{ github.event.inputs.debug }}
 
       - name: "Configure Python"
-        if: steps.stubs-cache-restore.outputs.cache-hit != 'true'
         run: |
           # Link python to the installed version
           ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
@@ -271,7 +232,6 @@ jobs:
           python -m pip --version
 
       - name: "Install dependencies"
-        if: steps.stubs-cache-restore.outputs.cache-hit != 'true'
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
@@ -284,7 +244,6 @@ jobs:
           python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
       - name: "Generate the Mechanical stub files"
-        if: steps.stubs-cache-restore.outputs.cache-hit != 'true'
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
@@ -293,7 +252,6 @@ jobs:
         continue-on-error: True
 
       - name: "Check stubs were generated"
-        if: steps.stubs-cache-restore.outputs.cache-hit != 'true'
         run: |
           cat results.txt
 
@@ -306,13 +264,6 @@ jobs:
             echo "There was an issue creating the mechanical stubs"
             exit 1
           fi
-
-      - name: Save stubs cache
-        id: stubs-cache-save
-        uses: actions/cache/save@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
-        with:
-          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
-          key: ${{ steps.stubs-cache-restore.outputs.cache-primary-key }}
 
       - name: "Upload v${{ matrix.mechanical.version }} stubs"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
@@ -424,8 +375,10 @@ jobs:
               if [ -d "$combined_folder_path" ]; then
                   folder_version="${folder##*-}"
                   version_path="api/ansys/mechanical/stubs/${folder_version}"
+                  echo "Copying $folder/$version_path to $combined_folder_path/$version_path"
                   cp -r $folder/$version_path/* $combined_folder_path/$version_path
               else
+                  echo "Creating $combined_folder_path and copying contents from $folder"
                   mkdir -p "$combined_folder_path"
                   echo "$combined_folder_path folder created."
                   cp -r "$folder/"* "$combined_folder_path"
