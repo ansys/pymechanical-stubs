@@ -235,7 +235,7 @@ jobs:
 
   gen-stubs:
     name: Generate Mechanical stubs
-    needs: [style, doc-style, config-matrix, check-inputs]
+    needs: [style, doc-style, config-matrix, check-inputs, get-container-sha]
     runs-on: public-ubuntu-latest-8-cores
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
