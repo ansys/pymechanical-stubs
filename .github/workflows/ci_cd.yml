@@ -215,7 +215,6 @@ jobs:
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: "Set up Python"
-        if: steps.stubs-cache-restore.outputs.cache-hit != 'true'
         uses: ./.github/workflows/setup-python/
         with:
           python-version: ${{ matrix.python-version }}
@@ -358,15 +357,14 @@ jobs:
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           pattern: documentation-html-v*
-          path: ${GITHUB_WORKSPACE}/documentation-html
-          merge-multiple: true
 
       - name: "Download all Markdown documentation"
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           pattern: documentation-md-v*
-          path: ${GITHUB_WORKSPACE}/documentation-md
-          merge-multiple: true
+
+      - name: Display structure of downloaded files
+        run: ls -R
 
       # - name: "Combine HTML and Markdown documentation"
       #   run: |
