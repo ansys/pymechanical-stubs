@@ -32,7 +32,7 @@ build = [
 ]
 doc = [
     "ansys-tools-common==0.4.3",
-    "ansys-sphinx-theme[autoapi]==1.6.4",
+    "ansys-sphinx-theme[autoapi]==1.7.0",
     "Sphinx==7.4.0",
     "sphinx-copybutton==0.5.2",
     "sphinx-notfound-page==1.1.0",
