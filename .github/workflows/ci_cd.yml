@@ -162,7 +162,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: "Set up Python"
         uses: ./.github/workflows/setup-python/
@@ -228,7 +228,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.test-matrix) }}
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.2
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
@@ -238,7 +238,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: "Build a wheelhouse of the Python library"
-      uses: ansys/actions/build-wheelhouse@c2fa7c93f6883114e0e643599431b33d29f0b13f # v10.1.4
+      uses: ansys/actions/build-wheelhouse@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
       with:
         library-name: ${{ env.PACKAGE_NAME }}
         operating-system: ${{ matrix.os }}
@@ -254,7 +254,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.2
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
@@ -300,7 +300,7 @@ jobs:
         python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: "Download all HTML documentation"
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
@@ -382,7 +382,7 @@ jobs:
         python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: "Install project & doc dependencies"
         run: |
@@ -489,7 +489,7 @@ jobs:
     needs: [clean-docs]
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.2
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
     - name: "Set up Python"
       uses: ansys/actions/_setup-python@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
@@ -507,7 +507,7 @@ jobs:
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
     - name: Build library source and wheel artifacts
-      uses: ansys/actions/build-library@c2fa7c93f6883114e0e643599431b33d29f0b13f # v10.1.4
+      uses: ansys/actions/build-library@36cd86710c966963f4dcec56a9670171618cf76a # v10.2.4
       with:
         library-name: ${{ env.PACKAGE_NAME }}
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
