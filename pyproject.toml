@@ -41,7 +41,7 @@ doc = [
     "autodoc_pydantic==2.2.0",
     "jupyter_sphinx==0.5.3",
     "numpydoc==1.10.0",
-    "sphinx-autodoc-typehints==2.3.0",
+    "sphinx-autodoc-typehints==3.0.1",
     "sphinxcontrib-globalsubs==0.1.2",
     "sphinxcontrib-httpdomain==2.0.0",
     "sphinx-copybutton==0.5.2",
