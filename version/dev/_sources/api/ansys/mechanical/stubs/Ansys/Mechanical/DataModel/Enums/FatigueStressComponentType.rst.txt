@@ -1,0 +1,132 @@
+.. vale off
+
+
+
+:class:`FatigueStressComponentType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueStressComponentType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Fatigue Stress Component Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueStressComponentType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FatigueToolAbsMaxPrincipal`
+            - 
+          * - :py:attr:`~FatigueToolComponent_X`
+            - 
+          * - :py:attr:`~FatigueToolComponent_XY`
+            - 
+          * - :py:attr:`~FatigueToolComponent_XZ`
+            - 
+          * - :py:attr:`~FatigueToolComponent_Y`
+            - 
+          * - :py:attr:`~FatigueToolComponent_YZ`
+            - 
+          * - :py:attr:`~FatigueToolComponent_Z`
+            - 
+          * - :py:attr:`~FatigueToolMaxPrincipal`
+            - 
+          * - :py:attr:`~FatigueToolMaxShear`
+            - 
+          * - :py:attr:`~FatigueToolSignedVonMises`
+            - 
+          * - :py:attr:`~FatigueToolVon_Mises`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FatigueToolAbsMaxPrincipal
+   :value: 10
+
+
+.. py:attribute:: FatigueToolComponent_X
+   :value: 0
+
+
+.. py:attribute:: FatigueToolComponent_XY
+   :value: 3
+
+
+.. py:attribute:: FatigueToolComponent_XZ
+   :value: 5
+
+
+.. py:attribute:: FatigueToolComponent_Y
+   :value: 1
+
+
+.. py:attribute:: FatigueToolComponent_YZ
+   :value: 4
+
+
+.. py:attribute:: FatigueToolComponent_Z
+   :value: 2
+
+
+.. py:attribute:: FatigueToolMaxPrincipal
+   :value: 9
+
+
+.. py:attribute:: FatigueToolMaxShear
+   :value: 8
+
+
+.. py:attribute:: FatigueToolSignedVonMises
+   :value: 7
+
+
+.. py:attribute:: FatigueToolVon_Mises
+   :value: 6
+
+
+
+
+
+
+.. vale on

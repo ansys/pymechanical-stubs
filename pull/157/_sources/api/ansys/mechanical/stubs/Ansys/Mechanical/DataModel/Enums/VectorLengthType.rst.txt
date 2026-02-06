@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`VectorLengthType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VectorLengthType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the VectorLengthType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VectorLengthType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Proportional`
+            - 
+          * - :py:attr:`~Uniform`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Proportional
+   :value: 0
+
+
+.. py:attribute:: Uniform
+   :value: 1
+
+
+
+
+
+
+.. vale on

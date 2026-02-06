@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ExtrudeBy`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExtrudeBy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To specify the method of extrusion. The available options are Use Coordinate System, Face Normal and Face Normal (Reversed).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExtrudeBy
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FaceNormal`
+            - 
+          * - :py:attr:`~FaceNormalReversed`
+            - 
+          * - :py:attr:`~UseCoordinateSystem`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FaceNormal
+   :value: 1
+
+
+.. py:attribute:: FaceNormalReversed
+   :value: 2
+
+
+.. py:attribute:: UseCoordinateSystem
+   :value: 0
+
+
+
+
+
+
+.. vale on

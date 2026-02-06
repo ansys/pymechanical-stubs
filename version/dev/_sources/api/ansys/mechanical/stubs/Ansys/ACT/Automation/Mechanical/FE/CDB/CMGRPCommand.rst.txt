@@ -1,0 +1,202 @@
+.. vale off
+
+
+
+:class:`CMGRPCommand`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CMGRPCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a CMGRP command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CMGRPCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Aname`
+            - Gets the assembly name.
+          * - :py:attr:`~Cnames`
+            - Gets the component and/or assembly names.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~ToCdbCommandString`
+            - Gets the command text formatted as a CDB file entry.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Aname
+   :type: Optional[str]
+
+
+   
+   Gets the assembly name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Cnames
+   :type: Optional[tuple[str]]
+
+
+   
+   Gets the component and/or assembly names.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToCdbCommandString
+   :type: Optional[Ansys.ACT.Automation.Mechanical.FE.CDB.CdbCommandFormatAndParameter]
+
+
+   
+   Gets the command text formatted as a CDB file entry.
+   Gets the command parameters formatted as a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

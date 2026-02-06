@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ExpandResultsSubType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExpandResultsSubType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExpandResultsSubType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExpandResultsSubType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HarmonicSolution`
+            - 
+          * - :py:attr:`~ModalSolution`
+            - 
+          * - :py:attr:`~TransientSolution`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HarmonicSolution
+   :value: 2
+
+
+.. py:attribute:: ModalSolution
+   :value: 1
+
+
+.. py:attribute:: TransientSolution
+   :value: 3
+
+
+
+
+
+
+.. vale on

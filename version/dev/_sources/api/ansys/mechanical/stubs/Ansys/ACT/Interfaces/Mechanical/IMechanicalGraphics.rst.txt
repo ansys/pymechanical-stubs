@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`IMechanicalGraphics`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalGraphics
+
+   Bases: :py:obj:`object`
+
+
+   
+   Interface for MechanicalGraphics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalGraphics
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ModelViewManager`
+            - An instance of the ModelViewManager.
+          * - :py:attr:`~SectionPlanes`
+            - An instance of the SectionPlanes.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ModelViewManager
+   :type: Optional[Ansys.ACT.Interfaces.Graphics.IModelViewManager]
+
+
+   
+   An instance of the ModelViewManager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SectionPlanes
+   :type: Optional[Ansys.Mechanical.Graphics.SectionPlanes]
+
+
+   
+   An instance of the SectionPlanes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

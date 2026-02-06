@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SymmetryBoundaryDOFOrientation`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SymmetryBoundaryDOFOrientation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SymmetryBoundaryDOFOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SymmetryBoundaryDOFOrientation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ChosenBySolver`
+            - 
+          * - :py:attr:`~Manual`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ChosenBySolver
+   :value: 1
+
+
+.. py:attribute:: Manual
+   :value: 0
+
+
+
+
+
+
+.. vale on

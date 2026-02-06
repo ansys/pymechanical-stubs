@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`UpdateContactStiffness`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UpdateContactStiffness(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the UpdateContactStiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: UpdateContactStiffness
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EachIteration`
+            - 
+          * - :py:attr:`~EachIterationAggressive`
+            - 
+          * - :py:attr:`~EachIterationExponential`
+            - 
+          * - :py:attr:`~EachSubStep`
+            - 
+          * - :py:attr:`~Never`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EachIteration
+   :value: 1
+
+
+.. py:attribute:: EachIterationAggressive
+   :value: 3
+
+
+.. py:attribute:: EachIterationExponential
+   :value: 5
+
+
+.. py:attribute:: EachSubStep
+   :value: 2
+
+
+.. py:attribute:: Never
+   :value: 0
+
+
+.. py:attribute:: ProgramControlled
+   :value: 4
+
+
+
+
+
+
+.. vale on

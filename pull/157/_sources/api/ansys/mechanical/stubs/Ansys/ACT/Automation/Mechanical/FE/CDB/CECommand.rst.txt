@@ -1,0 +1,229 @@
+.. vale off
+
+
+
+:class:`CECommand`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CECommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a CE command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CECommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Constant`
+            - Gets the constant term of the equation.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Nce`
+            - Gets the constraint equation number.
+          * - :py:attr:`~Terms`
+            - Gets the equation terms.
+          * - :py:attr:`~ToCdbCommandString`
+            - Gets the command text formatted as a CDB file entry.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Constant
+   :type: Optional[float]
+
+
+   
+   Gets the constant term of the equation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Nce
+   :type: Optional[int]
+
+
+   
+   Gets the constraint equation number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Terms
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandCETerm]]
+
+
+   
+   Gets the equation terms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToCdbCommandString
+   :type: Optional[Ansys.ACT.Automation.Mechanical.FE.CDB.CdbCommandFormatAndParameter]
+
+
+   
+   Gets the command text formatted as a CDB file entry.
+   Gets the command parameters formatted as a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

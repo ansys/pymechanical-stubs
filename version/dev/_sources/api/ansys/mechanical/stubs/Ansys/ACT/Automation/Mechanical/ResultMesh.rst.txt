@@ -1,0 +1,638 @@
+.. vale off
+
+
+
+:class:`ResultMesh`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.ResultMesh
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ResultMesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ResultMesh
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddNamedSelection`
+            - Creates a new NamedSelection
+          * - :py:attr:`~ClearGeneratedData`
+            - Clear the generated mesh data
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Generate`
+            - Generate the mesh data
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~ImportComponentsFromResultFile`
+            - Import solver components from result file
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConfigurationId`
+            - Gets the ConfigurationId.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Elements`
+            - Gets the Elements.
+          * - :py:attr:`~FEBodies`
+            - Gets FE Bodies
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Nodes`
+            - Gets the Nodes.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~SourceFile`
+            - Gets the SourceFile.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConfigurationId
+   :type: Optional[int]
+
+
+   
+   Gets the ConfigurationId.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Elements
+   :type: Optional[int]
+
+
+   
+   Gets the Elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FEBodies
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Part]
+
+
+   
+   Gets FE Bodies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSExtraMeshAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Nodes
+   :type: Optional[int]
+
+
+   
+   Gets the Nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceFile
+   :type: Optional[str]
+
+
+   
+   Gets the SourceFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNamedSelection() -> Ansys.ACT.Automation.Mechanical.NamedSelection
+
+   
+   Creates a new NamedSelection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Clear the generated mesh data
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Generate() -> None
+
+   
+   Generate the mesh data
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportComponentsFromResultFile() -> None
+
+   
+   Import solver components from result file
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

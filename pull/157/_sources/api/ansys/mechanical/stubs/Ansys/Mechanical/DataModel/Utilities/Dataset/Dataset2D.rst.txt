@@ -1,0 +1,121 @@
+.. vale off
+
+
+
+:class:`Dataset2D`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D
+
+   Bases: :py:obj:`object`
+
+
+   
+   A class to reference the dataset object.
+   A dataset object is regarded as pure mathematical data containing X and Y values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Dataset2D
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~XAxisVals`
+            - Gets the X axis variable for the dataset.
+          * - :py:attr:`~YAxisVals`
+            - Gets the Y axis variable for the dataset.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: XAxisVals
+   :type: Optional[Ansys.Mechanical.DataModel.Utilities.Charts.ChartVariable]
+
+
+   
+   Gets the X axis variable for the dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YAxisVals
+   :type: Optional[Ansys.Mechanical.DataModel.Utilities.Charts.ChartVariable]
+
+
+   
+   Gets the Y axis variable for the dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

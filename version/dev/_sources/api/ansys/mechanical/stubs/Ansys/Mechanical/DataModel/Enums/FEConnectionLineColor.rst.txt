@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FEConnectionLineColor`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FEConnectionLineColor(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FEConnectionLineColor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FEConnectionLineColor
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Manual`
+            - 
+          * - :py:attr:`~Object`
+            - 
+          * - :py:attr:`~Type`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Manual
+   :value: 1
+
+
+.. py:attribute:: Object
+   :value: 2
+
+
+.. py:attribute:: Type
+   :value: 0
+
+
+
+
+
+
+.. vale on

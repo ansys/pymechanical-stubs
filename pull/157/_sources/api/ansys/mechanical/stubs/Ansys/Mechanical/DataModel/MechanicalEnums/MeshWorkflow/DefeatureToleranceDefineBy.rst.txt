@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`DefeatureToleranceDefineBy`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.DefeatureToleranceDefineBy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in MultiZone mesher controls. It specifies how the MultiZone Defeature Tolerance is defined.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DefeatureToleranceDefineBy
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ProgramControlled
+   :value: 1
+
+
+.. py:attribute:: UserDefined
+   :value: 2
+
+
+
+
+
+
+.. vale on

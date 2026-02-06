@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`HeatTreatmentStep`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.HeatTreatmentStep
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

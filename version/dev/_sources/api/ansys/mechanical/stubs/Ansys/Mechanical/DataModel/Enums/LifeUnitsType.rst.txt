@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`LifeUnitsType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LifeUnitsType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Life Units Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LifeUnitsType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Blocks_LC`
+            - 
+          * - :py:attr:`~Cycles_LC`
+            - 
+          * - :py:attr:`~Days_LC`
+            - 
+          * - :py:attr:`~Hours_LC`
+            - 
+          * - :py:attr:`~Minutes_LC`
+            - 
+          * - :py:attr:`~Months_LC`
+            - 
+          * - :py:attr:`~Seconds`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Blocks_LC
+   :value: 1
+
+
+.. py:attribute:: Cycles_LC
+   :value: 0
+
+
+.. py:attribute:: Days_LC
+   :value: 5
+
+
+.. py:attribute:: Hours_LC
+   :value: 4
+
+
+.. py:attribute:: Minutes_LC
+   :value: 3
+
+
+.. py:attribute:: Months_LC
+   :value: 6
+
+
+.. py:attribute:: Seconds
+   :value: 2
+
+
+.. py:attribute:: UserDefined
+   :value: 7
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`FluidPathType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.FluidPenetrationPressure.FluidPathType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FluidPathType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FluidPathType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HistoryDependentPath`
+            - 
+          * - :py:attr:`~HistoryIndependentPath`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HistoryDependentPath
+   :value: 2
+
+
+.. py:attribute:: HistoryIndependentPath
+   :value: 1
+
+
+
+
+
+
+.. vale on

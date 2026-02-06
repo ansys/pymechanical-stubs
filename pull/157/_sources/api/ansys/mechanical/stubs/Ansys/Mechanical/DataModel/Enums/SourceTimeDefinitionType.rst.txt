@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SourceTimeDefinitionType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SourceTimeDefinitionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SourceTimeDefinitionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SourceTimeDefinitionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SourceTimeDefinition_All`
+            - 
+          * - :py:attr:`~SourceTimeDefinition_Range`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: SourceTimeDefinition_All
+   :value: 0
+
+
+.. py:attribute:: SourceTimeDefinition_Range
+   :value: 1
+
+
+
+
+
+
+.. vale on

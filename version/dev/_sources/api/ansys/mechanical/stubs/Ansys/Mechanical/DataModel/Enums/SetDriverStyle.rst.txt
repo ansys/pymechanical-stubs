@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`SetDriverStyle`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SetDriverStyle(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SetDriverStyle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SetDriverStyle
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CyclicPhaseOfMaximum`
+            - 
+          * - :py:attr:`~MaximumOfCyclicPhase`
+            - 
+          * - :py:attr:`~MaximumOverModes`
+            - 
+          * - :py:attr:`~MaximumOverPhase`
+            - 
+          * - :py:attr:`~MaximumOverTime`
+            - 
+          * - :py:attr:`~MinimumOverTime`
+            - 
+          * - :py:attr:`~ModeOfMaximum`
+            - 
+          * - :py:attr:`~PhaseOfMaximum`
+            - 
+          * - :py:attr:`~ResultSet`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~TimeOfMaximum`
+            - 
+          * - :py:attr:`~TimeOfMinimum`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CyclicPhaseOfMaximum
+   :value: 8
+
+
+.. py:attribute:: MaximumOfCyclicPhase
+   :value: 7
+
+
+.. py:attribute:: MaximumOverModes
+   :value: 9
+
+
+.. py:attribute:: MaximumOverPhase
+   :value: 5
+
+
+.. py:attribute:: MaximumOverTime
+   :value: 3
+
+
+.. py:attribute:: MinimumOverTime
+   :value: 12
+
+
+.. py:attribute:: ModeOfMaximum
+   :value: 10
+
+
+.. py:attribute:: PhaseOfMaximum
+   :value: 6
+
+
+.. py:attribute:: ResultSet
+   :value: 2
+
+
+.. py:attribute:: Time
+   :value: 1
+
+
+.. py:attribute:: TimeOfMaximum
+   :value: 4
+
+
+.. py:attribute:: TimeOfMinimum
+   :value: 13
+
+
+
+
+
+
+.. vale on

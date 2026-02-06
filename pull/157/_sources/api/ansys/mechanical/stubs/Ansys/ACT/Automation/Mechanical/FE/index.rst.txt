@@ -1,0 +1,171 @@
+.. vale off
+
+
+
+
+
+
+
+
+``FE``
+======================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: FE
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS`
+            - ABAQUS module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB`
+            - CDB module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.NASTRAN`
+            - NASTRAN module.
+
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.Command`
+            - Base class for all Commands.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CommandColl`
+            - Collection of commands.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CommandRepository`
+            - Command repository.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.FEParser`
+            - FE parser object.
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CommandsType`
+            - Commands type.
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> ABAQUS</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/index>
+    <span class="nf nf-md-package"></span> CDB</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/index>
+    <span class="nf nf-md-package"></span> NASTRAN</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/NASTRAN/index>
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> Command</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/Command>
+    <span class="nf nf-cod-symbol_class"></span> CommandColl</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CommandColl>
+    <span class="nf nf-cod-symbol_class"></span> CommandRepository</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CommandRepository>
+    <span class="nf nf-cod-symbol_class"></span> FEParser</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/FEParser>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> CommandsType</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CommandsType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+FE module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

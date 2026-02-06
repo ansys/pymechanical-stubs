@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ImportFormat`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Table.ImportFormat(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies how to interpret the variable data source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Delimited`
+            - 
+          * - :py:attr:`~FixedWidth`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Delimited
+   :value: 1
+
+
+.. py:attribute:: FixedWidth
+   :value: 2
+
+
+
+
+
+
+.. vale on

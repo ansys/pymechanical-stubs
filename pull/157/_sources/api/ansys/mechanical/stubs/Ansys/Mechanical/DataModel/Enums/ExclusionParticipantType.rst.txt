@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ExclusionParticipantType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExclusionParticipantType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExclusionParticipantType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExclusionParticipantType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ExcludeExclusion`
+            - 
+          * - :py:attr:`~IncludeExclusion`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ExcludeExclusion
+   :value: 1
+
+
+.. py:attribute:: IncludeExclusion
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ModeSelectionMethod`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModeSelectionMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ModeSelectionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModeSelectionMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ModalEffectiveMass`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ModalEffectiveMass
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+
+
+
+
+.. vale on

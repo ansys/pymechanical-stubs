@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ScaleFactorType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ScaleFactorType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ScaleFactorType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ScaleFactorType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Sigma1`
+            - 
+          * - :py:attr:`~Sigma2`
+            - 
+          * - :py:attr:`~Sigma3`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Sigma1
+   :value: 0
+
+
+.. py:attribute:: Sigma2
+   :value: 1
+
+
+.. py:attribute:: Sigma3
+   :value: 2
+
+
+.. py:attribute:: UserDefined
+   :value: 3
+
+
+
+
+
+
+.. vale on

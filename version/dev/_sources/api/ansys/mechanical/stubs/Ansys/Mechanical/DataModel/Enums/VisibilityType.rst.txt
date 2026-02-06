@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`VisibilityType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VisibilityType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Tree Graphic Filter type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VisibilityType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Invisible`
+            - 
+          * - :py:attr:`~Visible`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 0
+
+
+.. py:attribute:: Invisible
+   :value: 2
+
+
+.. py:attribute:: Visible
+   :value: 1
+
+
+
+
+
+
+.. vale on

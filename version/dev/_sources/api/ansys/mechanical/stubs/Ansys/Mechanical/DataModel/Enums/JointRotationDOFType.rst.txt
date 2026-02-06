@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`JointRotationDOFType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointRotationDOFType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointRotationDOFType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointRotationDOFType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FixAll`
+            - 
+          * - :py:attr:`~FreeAll`
+            - 
+          * - :py:attr:`~FreeX`
+            - 
+          * - :py:attr:`~FreeXFreeY`
+            - 
+          * - :py:attr:`~FreeXFreeZ`
+            - 
+          * - :py:attr:`~FreeY`
+            - 
+          * - :py:attr:`~FreeYFreeZ`
+            - 
+          * - :py:attr:`~FreeZ`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FixAll
+   :value: 0
+
+
+.. py:attribute:: FreeAll
+   :value: 4
+
+
+.. py:attribute:: FreeX
+   :value: 1
+
+
+.. py:attribute:: FreeXFreeY
+   :value: 5
+
+
+.. py:attribute:: FreeXFreeZ
+   :value: 7
+
+
+.. py:attribute:: FreeY
+   :value: 2
+
+
+.. py:attribute:: FreeYFreeZ
+   :value: 6
+
+
+.. py:attribute:: FreeZ
+   :value: 3
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`OptimizationType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OptimizationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the OptimizationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OptimizationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Lattice`
+            - 
+          * - :py:attr:`~MaterialsOptimization`
+            - 
+          * - :py:attr:`~MixableDensity`
+            - 
+          * - :py:attr:`~Shape`
+            - 
+          * - :py:attr:`~Topography`
+            - 
+          * - :py:attr:`~TopologyDensity`
+            - 
+          * - :py:attr:`~TopologyLevelSet`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Lattice
+   :value: 2
+
+
+.. py:attribute:: MaterialsOptimization
+   :value: 7
+
+
+.. py:attribute:: MixableDensity
+   :value: 5
+
+
+.. py:attribute:: Shape
+   :value: 4
+
+
+.. py:attribute:: Topography
+   :value: 6
+
+
+.. py:attribute:: TopologyDensity
+   :value: 1
+
+
+.. py:attribute:: TopologyLevelSet
+   :value: 3
+
+
+
+
+
+
+.. vale on

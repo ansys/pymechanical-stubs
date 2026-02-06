@@ -1,0 +1,863 @@
+.. vale off
+
+
+
+:class:`AMProcess`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMProcess
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a AMProcess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMProcess
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCartesianMesh`
+            - AddCartesianMesh method.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddGeneratedAMSupport`
+            - Creates a new GeneratedAMSupport
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddPredefinedAMSupport`
+            - Creates a new PredefinedAMSupport
+          * - :py:attr:`~AddSTLAMSupport`
+            - Creates a new STLAMSupport
+          * - :py:attr:`~AddSupportGroup`
+            - Creates a new AMSupportGroup
+          * - :py:attr:`~CleanAMStrains`
+            - Run the CleanAMStrains action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateAMBondConnections`
+            - Run the CreateAMBondConnections action.
+          * - :py:attr:`~CreateBuildToBaseContact`
+            - Run the CreateBuildToBaseContact action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GenerateAMStrains`
+            - Run the GenerateAMStrains action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetSequence`
+            - Gets the support removal sequence for a given environment.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~HasAMStrains`
+            - Get the HasAMStrains property.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ResetAllSequences`
+            - Resets the sequence for all analyses
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BaseGeometry`
+            - Gets or sets the BaseGeometry.
+          * - :py:attr:`~BuildGeometry`
+            - Gets or sets the PartGeometry using the deprecated BuildGeometry method.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~ElementSize`
+            - Gets or sets the ElementSize.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LayerHeight`
+            - Gets the element layer height used for the AM build step.
+          * - :py:attr:`~LengthUnits`
+            - Gets or sets the LengthUnits.
+          * - :py:attr:`~MeshUsingVoxelization`
+            - Gets or sets the MeshUsingVoxelization.
+          * - :py:attr:`~NonlinearEffects`
+            - Gets or sets the NonlinearEffects.
+          * - :py:attr:`~PartGeometry`
+            - Gets or sets the PartGeometry.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~SubsampleRate`
+            - Gets or sets the SubsampleRate.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WallThickness`
+            - Gets or sets the WallThickness.
+          * - :py:attr:`~ZLocationAtTopOfBase`
+            - Gets the ZLocationAtTopOfBase.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BaseGeometry
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the BaseGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildGeometry
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the PartGeometry using the deprecated BuildGeometry method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ElementSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAMProcessSimulationAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LayerHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the element layer height used for the AM build step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthUnits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the LengthUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshUsingVoxelization
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the MeshUsingVoxelization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NonlinearEffects
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the NonlinearEffects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PartGeometry
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the PartGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SubsampleRate
+   :type: Optional[int]
+
+
+   
+   Gets or sets the SubsampleRate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WallThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WallThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZLocationAtTopOfBase
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the ZLocationAtTopOfBase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCartesianMesh() -> Ansys.ACT.Automation.Mechanical.MeshControls.AutomaticMethod
+
+   
+   AddCartesianMesh method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGeneratedAMSupport() -> Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.GeneratedAMSupport
+
+   
+   Creates a new GeneratedAMSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPredefinedAMSupport() -> Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.PredefinedAMSupport
+
+   
+   Creates a new PredefinedAMSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSTLAMSupport() -> Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.STLAMSupport
+
+   
+   Creates a new STLAMSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSupportGroup() -> Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportGroup
+
+   
+   Creates a new AMSupportGroup
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CleanAMStrains() -> None
+
+   
+   Run the CleanAMStrains action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateAMBondConnections() -> None
+
+   
+   Run the CreateAMBondConnections action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateBuildToBaseContact() -> Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   
+   Run the CreateBuildToBaseContact action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateAMStrains() -> None
+
+   
+   Run the GenerateAMStrains action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSequence(analysis: Ansys.ACT.Automation.Mechanical.Analysis) -> Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportRemovalSequence
+
+   
+   Gets the support removal sequence for a given environment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasAMStrains() -> bool
+
+   
+   Get the HasAMStrains property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ResetAllSequences() -> None
+
+   
+   Resets the sequence for all analyses
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

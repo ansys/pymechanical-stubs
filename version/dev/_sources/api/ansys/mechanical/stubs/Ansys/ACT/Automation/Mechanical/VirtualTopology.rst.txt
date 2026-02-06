@@ -1,0 +1,1241 @@
+.. vale off
+
+
+
+:class:`VirtualTopology`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.VirtualTopology
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a VirtualTopology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VirtualTopology
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddVirtualCell`
+            - Add Virtual Cell.
+          * - :py:attr:`~AddVirtualHardVertex`
+            - Add Virtual Hard Vertex.
+          * - :py:attr:`~AddVirtualSplitEdgeAt`
+            - Add Virtual Split Edge at
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~DeleteAllVirtualCells`
+            - Delete all Virtual Cells.
+          * - :py:attr:`~DeleteAllVirtualEntities`
+            - Delete all Virtual Entities.
+          * - :py:attr:`~DeleteAllVirtualHardVertices`
+            - Delete all Virtual Split Hard Vertices.
+          * - :py:attr:`~DeleteAllVirtualSplitEdges`
+            - Delete all Virtual Split Edges.
+          * - :py:attr:`~DeleteAllVirtualSplitFaces`
+            - Delete all Virtual Split Faces.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GenerateVirtualCells`
+            - Generate the Virtual Cells on the selected/all entities.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetVirtualCellFromSelection`
+            - Gets the Virtual Cell from the selection.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~VirtualSplitEdge`
+            - Generate the Virtual Cells on the selected/all entities.
+          * - :py:attr:`~VirtualSplitFaceAtVertices`
+            - Generate the Virtual Cells on the selected/all entities.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AspectRatio`
+            - Gets or sets the AspectRatio.
+          * - :py:attr:`~AutomaticBehavior`
+            - Gets or sets the Behavior when Method is set to "Automatic".
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ContactAngle`
+            - Gets or sets the ContactAngle.
+          * - :py:attr:`~CustomFeatureAngle`
+            - Gets or sets the CustomFeatureAngle.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~EdgeAngle`
+            - Gets or sets the EdgeAngle.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GaussAngle`
+            - Gets or sets the GaussAngle.
+          * - :py:attr:`~GenerateOnUpdate`
+            - Gets or sets the GenerateOnUpdate.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LockPositionOfDependentEdgeSplits`
+            - Gets or sets the LockPositionOfDependentEdgeSplits.
+          * - :py:attr:`~MaxEdgeLength`
+            - Gets or sets the MaxEdgeLength.
+          * - :py:attr:`~MaxFaceArea`
+            - Gets or sets the MaxFaceArea.
+          * - :py:attr:`~MaxSliverWidth`
+            - Gets or sets the MaxSliverWidth.
+          * - :py:attr:`~MergeFaceEdges`
+            - Gets or sets the MergeFaceEdges.
+          * - :py:attr:`~Method`
+            - Gets or sets the Method.
+          * - :py:attr:`~MinEdgeLength`
+            - Gets or sets the MinEdgeLength.
+          * - :py:attr:`~MinFaceArea`
+            - Gets or sets the MinFaceArea.
+          * - :py:attr:`~MinSliverWidth`
+            - Gets or sets the MinSliverWidth.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RepairBehavior`
+            - Gets or sets the Behavior when Method is set to "Repair".
+          * - :py:attr:`~SharedBoundaryRatio`
+            - Gets or sets the SharedBoundaryRatio.
+          * - :py:attr:`~SimplifyFaces`
+            - Gets or sets the SimplifyFaces.
+          * - :py:attr:`~VirtualEdges`
+            - Gets the VirtualEdges.
+          * - :py:attr:`~VirtualEntities`
+            - Gets the VirtualEntities.
+          * - :py:attr:`~VirtualFaces`
+            - Gets the VirtualFaces.
+          * - :py:attr:`~VirtualHardVertex`
+            - Gets the VirtualHardVertex.
+          * - :py:attr:`~VirtualSplitEdges`
+            - Gets the VirtualSplitEdges.
+          * - :py:attr:`~VirtualSplitFaces`
+            - Gets the VirtualSplitFaces.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AspectRatio
+   :type: Optional[float]
+
+
+   
+   Gets or sets the AspectRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.VirtualCellGroupAutomaticBehaviorType]
+
+
+   
+   Gets or sets the Behavior when Method is set to "Automatic".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ContactAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomFeatureAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the CustomFeatureAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the EdgeAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GaussAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the GaussAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateOnUpdate
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the GenerateOnUpdate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSVirtualCellGroupAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LockPositionOfDependentEdgeSplits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the LockPositionOfDependentEdgeSplits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MaxEdgeLength.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxFaceArea
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MaxFaceArea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxSliverWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MaxSliverWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MergeFaceEdges
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the MergeFaceEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Method
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.VirtualCellGroupMethodType]
+
+
+   
+   Gets or sets the Method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MinEdgeLength.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinFaceArea
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MinFaceArea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinSliverWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MinSliverWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RepairBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.VirtualCellGroupRepairBehaviorType]
+
+
+   
+   Gets or sets the Behavior when Method is set to "Repair".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharedBoundaryRatio
+   :type: Optional[float]
+
+
+   
+   Gets or sets the SharedBoundaryRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SimplifyFaces
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the SimplifyFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualEdges
+   :type: Optional[int]
+
+
+   
+   Gets the VirtualEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualEntities
+   :type: Optional[int]
+
+
+   
+   Gets the VirtualEntities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualFaces
+   :type: Optional[int]
+
+
+   
+   Gets the VirtualFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualHardVertex
+   :type: Optional[int]
+
+
+   
+   Gets the VirtualHardVertex.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualSplitEdges
+   :type: Optional[int]
+
+
+   
+   Gets the VirtualSplitEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VirtualSplitFaces
+   :type: Optional[int]
+
+
+   
+   Gets the VirtualSplitFaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVirtualCell(iSelInfo: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> Iterable[Ansys.ACT.Automation.Mechanical.VirtualCell]
+
+   
+   Add Virtual Cell.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVirtualHardVertex(iSelInfo: Ansys.ACT.Interfaces.Common.ISelectionInfo, point: Ansys.Mechanical.Graphics.Point) -> None
+
+   
+   Add Virtual Hard Vertex.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVirtualSplitEdgeAt(iSelInfo: Ansys.ACT.Interfaces.Common.ISelectionInfo, point: Ansys.Mechanical.Graphics.Point) -> None
+
+   
+   Add Virtual Split Edge at 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllVirtualCells() -> None
+
+   
+   Delete all Virtual Cells.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllVirtualEntities() -> None
+
+   
+   Delete all Virtual Entities.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllVirtualHardVertices() -> None
+
+   
+   Delete all Virtual Split Hard Vertices.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllVirtualSplitEdges() -> None
+
+   
+   Delete all Virtual Split Edges.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllVirtualSplitFaces() -> None
+
+   
+   Delete all Virtual Split Faces.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateVirtualCells(selectionInfo: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> None
+
+   
+   Generate the Virtual Cells on the selected/all entities.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVirtualCellFromSelection(currentSelection: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> Ansys.ACT.Automation.Mechanical.VirtualCell
+
+   
+   Gets the Virtual Cell from the selection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: VirtualSplitEdge(iSelInfo: Ansys.ACT.Interfaces.Common.ISelectionInfo, splitRatio: float) -> None
+
+   
+   Generate the Virtual Cells on the selected/all entities.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: VirtualSplitFaceAtVertices(iSelInfo: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> None
+
+   
+   Generate the Virtual Cells on the selected/all entities.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

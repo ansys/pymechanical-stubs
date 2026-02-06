@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SourceDimension`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SourceDimension(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SourceDimension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SourceDimension
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SourceDimension2D`
+            - 
+          * - :py:attr:`~SourceDimension3D`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: SourceDimension2D
+   :value: 2
+
+
+.. py:attribute:: SourceDimension3D
+   :value: 3
+
+
+
+
+
+
+.. vale on

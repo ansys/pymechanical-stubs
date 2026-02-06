@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CondensedPartFileFormat`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartFileFormat(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CondensedPartFileFormat.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartFileFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ExportedCondensedPart_CPA`
+            - 
+          * - :py:attr:`~GenerationPassOutput_SUB`
+            - 
+          * - :py:attr:`~SuperElement_MATRIX`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ExportedCondensedPart_CPA
+   :value: 0
+
+
+.. py:attribute:: GenerationPassOutput_SUB
+   :value: 1
+
+
+.. py:attribute:: SuperElement_MATRIX
+   :value: 2
+
+
+
+
+
+
+.. vale on

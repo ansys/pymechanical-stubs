@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`InitialTemperatureType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InitialTemperatureType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the InitialTemperatureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: InitialTemperatureType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NonUniform`
+            - 
+          * - :py:attr:`~Uniform`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NonUniform
+   :value: 1
+
+
+.. py:attribute:: Uniform
+   :value: 0
+
+
+
+
+
+
+.. vale on

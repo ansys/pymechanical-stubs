@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`NodeMergeToleranceMethod`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NodeMergeToleranceMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the method of AutoNodeMove under PCTet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NodeMergeToleranceMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AbsoluteValue`
+            - 
+          * - :py:attr:`~PercentageOfElementSize`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AbsoluteValue
+   :value: 2
+
+
+.. py:attribute:: PercentageOfElementSize
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

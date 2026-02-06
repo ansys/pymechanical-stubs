@@ -1,0 +1,195 @@
+.. vale off
+
+
+
+
+
+
+
+
+``MechanicalEnums``
+===================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: MechanicalEnums
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions`
+            - BoundaryConditions module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Charts`
+            - Charts module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Common`
+            - Common module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure`
+            - CompositeFailure module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.CondensedParts`
+            - CondensedParts module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.CrackInitiation`
+            - CrackInitiation module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData`
+            - ExternalData module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.FluidPenetrationPressure`
+            - FluidPenetrationPressure module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics`
+            - Graphics module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Materials`
+            - Materials module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow`
+            - MeshWorkflow module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MorphControl`
+            - MorphControl module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth`
+            - SMARTCrackGrowth module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination`
+            - SolutionCombination module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Substructure`
+            - Substructure module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Table`
+            - Table module.
+
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MultizoneMappedMeshType`
+            - To select Multizone Mesh Type.
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> BoundaryConditions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/BoundaryConditions/index>
+    <span class="nf nf-md-package"></span> Charts</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Charts/index>
+    <span class="nf nf-md-package"></span> Common</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Common/index>
+    <span class="nf nf-md-package"></span> CompositeFailure</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/CompositeFailure/index>
+    <span class="nf nf-md-package"></span> CondensedParts</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/CondensedParts/index>
+    <span class="nf nf-md-package"></span> CrackInitiation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/CrackInitiation/index>
+    <span class="nf nf-md-package"></span> ExternalData</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/index>
+    <span class="nf nf-md-package"></span> FluidPenetrationPressure</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/FluidPenetrationPressure/index>
+    <span class="nf nf-md-package"></span> Graphics</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Graphics/index>
+    <span class="nf nf-md-package"></span> Materials</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Materials/index>
+    <span class="nf nf-md-package"></span> MeshWorkflow</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/MeshWorkflow/index>
+    <span class="nf nf-md-package"></span> MorphControl</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/MorphControl/index>
+    <span class="nf nf-md-package"></span> SMARTCrackGrowth</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/SMARTCrackGrowth/index>
+    <span class="nf nf-md-package"></span> SolutionCombination</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/SolutionCombination/index>
+    <span class="nf nf-md-package"></span> Substructure</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Substructure/index>
+    <span class="nf nf-md-package"></span> Table</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Table/index>
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> MultizoneMappedMeshType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/MultizoneMappedMeshType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+MechanicalEnums module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

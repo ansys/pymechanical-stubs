@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ContactSmallSlidingType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactSmallSlidingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactSmallSlidingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactSmallSlidingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Adaptive`
+            - 
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~On`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Adaptive
+   :value: 3
+
+
+.. py:attribute:: Off
+   :value: 2
+
+
+.. py:attribute:: On
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

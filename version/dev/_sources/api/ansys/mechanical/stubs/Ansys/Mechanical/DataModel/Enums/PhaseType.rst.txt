@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`PhaseType`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PhaseType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Prototype Phase Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PhaseType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DefinedByGeometry`
+            - 
+          * - :py:attr:`~LiquidGas`
+            - 
+          * - :py:attr:`~Solid`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DefinedByGeometry
+   :value: 0
+
+
+.. py:attribute:: LiquidGas
+   :value: 1
+
+
+.. py:attribute:: Solid
+   :value: 2
+
+
+
+
+
+
+.. vale on

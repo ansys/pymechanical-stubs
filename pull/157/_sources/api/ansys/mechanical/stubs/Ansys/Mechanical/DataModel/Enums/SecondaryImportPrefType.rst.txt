@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`SecondaryImportPrefType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SecondaryImportPrefType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SecondaryImportPrefType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SecondaryImportPrefType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Line`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Solid`
+            - 
+          * - :py:attr:`~SolidAndSurface`
+            - 
+          * - :py:attr:`~Surface`
+            - 
+          * - :py:attr:`~SurfaceAndLine`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Line
+   :value: 3
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Solid
+   :value: 1
+
+
+.. py:attribute:: SolidAndSurface
+   :value: 4
+
+
+.. py:attribute:: Surface
+   :value: 2
+
+
+.. py:attribute:: SurfaceAndLine
+   :value: 5
+
+
+
+
+
+
+.. vale on

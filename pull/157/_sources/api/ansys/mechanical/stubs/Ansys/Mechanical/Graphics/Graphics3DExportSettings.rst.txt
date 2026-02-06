@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`Graphics3DExportSettings`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.Graphics.Graphics3DExportSettings
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: Graphics3DExportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Background`
+            - Specifies the background color.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Background
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GraphicsBackgroundType]
+
+
+   
+   Specifies the background color.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

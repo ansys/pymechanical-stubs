@@ -1,0 +1,159 @@
+.. vale off
+
+
+
+:class:`ObjectTag`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.Application.ObjectTag
+
+   Bases: :py:obj:`object`
+
+
+   
+   An instance of an ObjectTag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ObjectTag
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddObject`
+            - Add an object to this tag.
+          * - :py:attr:`~ClearObjects`
+            - Clear all objects from this tag.
+          * - :py:attr:`~RemoveObject`
+            - Remove an object from this tag.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Name`
+            - The name of the tag. If the tag exists in ObjectTags, attempting to set the name to a value of another tag in that collection will lead to an exception.
+          * - :py:attr:`~Objects`
+            - The list of objects which use this tag.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   The name of the tag. If the tag exists in ObjectTags, attempting to set the name to a value of another tag in that collection will lead to an exception.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Objects
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   The list of objects which use this tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddObject(obj: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
+
+   
+   Add an object to this tag.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearObjects() -> None
+
+   
+   Clear all objects from this tag.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveObject(obj: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
+
+   
+   Remove an object from this tag.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

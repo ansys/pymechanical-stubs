@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ContactEdgeEdgeOption`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactEdgeEdgeOption(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactEdgeEdgeOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactEdgeEdgeOption
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IfNoEdgeFace`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: IfNoEdgeFace
+   :value: 2
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: Yes
+   :value: 1
+
+
+
+
+
+
+.. vale on

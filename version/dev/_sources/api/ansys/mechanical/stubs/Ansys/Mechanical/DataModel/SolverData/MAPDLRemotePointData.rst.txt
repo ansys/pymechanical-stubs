@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`MAPDLRemotePointData`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.SolverData.MAPDLRemotePointData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLRemotePointData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NodeId`
+            - Gets the Pilot Node Id number for the remote point.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: NodeId
+   :type: Optional[int]
+
+
+   
+   Gets the Pilot Node Id number for the remote point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

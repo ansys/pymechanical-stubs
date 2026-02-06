@@ -1,0 +1,151 @@
+.. vale off
+
+
+
+
+
+
+
+
+``GeometryImportPreference``
+============================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: GeometryImportPreference
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.AnalysisType`
+            - Specifies the type of analysis to target during import.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.ComparePartsOnUpdate`
+            - Specifies how to enable mesh preservation on parts during update.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.ComparePartsTolerance`
+            - Specifies the tolerance to use when comparing parts. This provides comparison robustness due
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.FacetQuality`
+            - Used to specify the quality of the facet for the import.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Format`
+            - Specifies how to interpret the geometry file.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.MixedImportResolution`
+            - Describes how parts of mixed dimension will be treated, i.e., to be imported as components
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Parameters`
+            - Defines how parameters in the CAD source are processed.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.StitchSurfacesOnImport`
+            - Used to specify if and how to join surfaces when imported.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> AnalysisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/AnalysisType>
+    <span class="nf nf-cod-symbol_enum"></span> ComparePartsOnUpdate</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/ComparePartsOnUpdate>
+    <span class="nf nf-cod-symbol_enum"></span> ComparePartsTolerance</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/ComparePartsTolerance>
+    <span class="nf nf-cod-symbol_enum"></span> FacetQuality</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/FacetQuality>
+    <span class="nf nf-cod-symbol_enum"></span> Format</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/Format>
+    <span class="nf nf-cod-symbol_enum"></span> MixedImportResolution</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/MixedImportResolution>
+    <span class="nf nf-cod-symbol_enum"></span> Parameters</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/Parameters>
+    <span class="nf nf-cod-symbol_enum"></span> StitchSurfacesOnImport</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/StitchSurfacesOnImport>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+GeometryImportPreference module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on
