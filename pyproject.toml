@@ -42,7 +42,7 @@ doc = [
     "jupyter_sphinx==0.5.3",
     "numpydoc==1.10.0",
     "sphinx-autodoc-typehints==2.3.0",
-    "sphinxcontrib-globalsubs==0.1.2",
+    "sphinxcontrib-globalsubs==1.0.0",
     "sphinxcontrib-httpdomain==2.0.0",
     "sphinx-copybutton==0.5.2",
     "sphinx_design==0.6.1",
