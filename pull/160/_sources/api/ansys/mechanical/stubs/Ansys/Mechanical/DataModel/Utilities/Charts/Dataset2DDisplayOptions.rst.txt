@@ -1,0 +1,275 @@
+.. vale off
+
+
+
+:class:`Dataset2DDisplayOptions`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Utilities.Charts.Dataset2DDisplayOptions
+
+   Bases: :py:obj:`object`
+
+
+   
+   A class that exposes methods/properties to customize the display of a dataset on the chart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Dataset2DDisplayOptions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CopySettingsFrom`
+            - Copies the settings of a Dataset2DDisplayOptions reference to this Dataset2DDisplayOptions .
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Color`
+            - Gets or sets the Dataset2D Color
+          * - :py:attr:`~IsVisible`
+            - Gets or sets the visibility of the Dataset2D
+          * - :py:attr:`~LineThickness`
+            - Gets or sets the Dataset2D line thickness (in pixels)
+          * - :py:attr:`~LineType`
+            - Gets or sets the Dataset2D Line display type
+          * - :py:attr:`~MarkerShape`
+            - Gets or sets the Dataset2D marker shape
+          * - :py:attr:`~MarkerSize`
+            - Gets or sets the Dataset2D marker size (in pixels)
+          * - :py:attr:`~Name`
+            - Gets or sets the Dataset2D name
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Color
+   :type: Optional[int]
+
+
+   
+   Gets or sets the Dataset2D Color 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsVisible
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the visibility of the Dataset2D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineThickness
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Dataset2D line thickness (in pixels) 
+
+   An ArgumentException is thrown for values less than 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.LineType]
+
+
+   
+   Gets or sets the Dataset2D Line display type 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MarkerShape
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.MarkerShape]
+
+
+   
+   Gets or sets the Dataset2D marker shape 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MarkerSize
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Dataset2D marker size (in pixels)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Dataset2D name 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CopySettingsFrom(input_display_options: Ansys.Mechanical.DataModel.Utilities.Charts.Dataset2DDisplayOptions) -> None
+
+   
+   Copies the settings of a Dataset2DDisplayOptions reference to this Dataset2DDisplayOptions . 
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

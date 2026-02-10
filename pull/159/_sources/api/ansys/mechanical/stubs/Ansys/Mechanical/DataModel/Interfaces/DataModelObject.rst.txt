@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`DataModelObject`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Interfaces.DataModelObject
+
+   Bases: :py:obj:`IDataModelObject`
+
+
+
+
+
+
+
+
+
+
+.. vale on

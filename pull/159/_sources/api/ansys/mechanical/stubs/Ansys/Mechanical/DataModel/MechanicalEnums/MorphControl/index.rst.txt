@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``MorphControl``
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MorphControl
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: MorphControl
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MorphControl.MorphDefinitionType`
+            - To specify what the Morph Control is based on. The available options are Mesh Workflow and Displacement File.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> MorphDefinitionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/MorphControl/MorphDefinitionType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+MorphControl module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

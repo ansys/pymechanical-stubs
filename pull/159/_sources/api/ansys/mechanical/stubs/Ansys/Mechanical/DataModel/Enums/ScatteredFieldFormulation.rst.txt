@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ScatteredFieldFormulation`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ScatteredFieldFormulation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ScatteredFieldFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ScatteredFieldFormulation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~On`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Off
+   :value: 1
+
+
+.. py:attribute:: On
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

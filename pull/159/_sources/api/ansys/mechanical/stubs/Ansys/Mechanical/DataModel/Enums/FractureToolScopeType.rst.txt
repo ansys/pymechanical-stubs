@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`FractureToolScopeType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FractureToolScopeType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FractureToolScopeType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FractureToolScopeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CrackSelection`
+            - 
+          * - :py:attr:`~ResultFileItem`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CrackSelection
+   :value: 1
+
+
+.. py:attribute:: ResultFileItem
+   :value: 0
+
+
+
+
+
+
+.. vale on

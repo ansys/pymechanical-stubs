@@ -1,0 +1,354 @@
+.. vale off
+
+
+
+:class:`ProbeResultType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ProbeResultType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ProbeResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ProbeResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AccelerationProbe`
+            - 
+          * - :py:attr:`~AngularAccelerationProbe`
+            - 
+          * - :py:attr:`~AngularVelocityProbe`
+            - 
+          * - :py:attr:`~BeamProbe`
+            - 
+          * - :py:attr:`~BearingProbe`
+            - 
+          * - :py:attr:`~BoltPretension`
+            - 
+          * - :py:attr:`~ChargeReaction`
+            - 
+          * - :py:attr:`~ConstraintForce`
+            - 
+          * - :py:attr:`~ConstraintMoment`
+            - 
+          * - :py:attr:`~ContactDistanceProbe`
+            - 
+          * - :py:attr:`~CurrentDensityProbe`
+            - 
+          * - :py:attr:`~DampingForce`
+            - 
+          * - :py:attr:`~DampingMoment`
+            - 
+          * - :py:attr:`~DeformationProbe`
+            - 
+          * - :py:attr:`~ElasticForce`
+            - 
+          * - :py:attr:`~ElasticMoment`
+            - 
+          * - :py:attr:`~ElasticPlusFrictionMoment`
+            - 
+          * - :py:attr:`~ElectromechanicalCouplingCoefficient`
+            - 
+          * - :py:attr:`~EmagReactionProbe`
+            - 
+          * - :py:attr:`~Energy`
+            - 
+          * - :py:attr:`~FieldIntensity`
+            - 
+          * - :py:attr:`~FieldIntensityProbe`
+            - 
+          * - :py:attr:`~FlexibleRotationProbe`
+            - 
+          * - :py:attr:`~FluxDensityProbe`
+            - 
+          * - :py:attr:`~ForceReaction`
+            - 
+          * - :py:attr:`~FrictionForceProbe`
+            - 
+          * - :py:attr:`~FrictionMomentProbe`
+            - 
+          * - :py:attr:`~GeneralizedPlaneStrainProbe`
+            - 
+          * - :py:attr:`~HeatFluxProbe`
+            - 
+          * - :py:attr:`~Impedance`
+            - 
+          * - :py:attr:`~JointProbe`
+            - 
+          * - :py:attr:`~JouleHeatProbe`
+            - 
+          * - :py:attr:`~MagneticFluxProbe`
+            - 
+          * - :py:attr:`~MomentReaction`
+            - 
+          * - :py:attr:`~Position`
+            - 
+          * - :py:attr:`~ProbeStatus`
+            - 
+          * - :py:attr:`~QualityFactor`
+            - 
+          * - :py:attr:`~RadiationProbe`
+            - 
+          * - :py:attr:`~ReactionProbe`
+            - 
+          * - :py:attr:`~ResponsePSD`
+            - 
+          * - :py:attr:`~RotationProbe`
+            - 
+          * - :py:attr:`~SpringProbe`
+            - 
+          * - :py:attr:`~StrainProbe`
+            - 
+          * - :py:attr:`~StressProbe`
+            - 
+          * - :py:attr:`~TemperatureProbe`
+            - 
+          * - :py:attr:`~VelocityProbe`
+            - 
+          * - :py:attr:`~VoltageProbe`
+            - 
+          * - :py:attr:`~VolumeProbe`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AccelerationProbe
+   :value: 11
+
+
+.. py:attribute:: AngularAccelerationProbe
+   :value: 19
+
+
+.. py:attribute:: AngularVelocityProbe
+   :value: 18
+
+
+.. py:attribute:: BeamProbe
+   :value: 28
+
+
+.. py:attribute:: BearingProbe
+   :value: 36
+
+
+.. py:attribute:: BoltPretension
+   :value: 21
+
+
+.. py:attribute:: ChargeReaction
+   :value: 52
+
+
+.. py:attribute:: ConstraintForce
+   :value: 29
+
+
+.. py:attribute:: ConstraintMoment
+   :value: 32
+
+
+.. py:attribute:: ContactDistanceProbe
+   :value: 58
+
+
+.. py:attribute:: CurrentDensityProbe
+   :value: 25
+
+
+.. py:attribute:: DampingForce
+   :value: 31
+
+
+.. py:attribute:: DampingMoment
+   :value: 34
+
+
+.. py:attribute:: DeformationProbe
+   :value: 3
+
+
+.. py:attribute:: ElasticForce
+   :value: 30
+
+
+.. py:attribute:: ElasticMoment
+   :value: 33
+
+
+.. py:attribute:: ElasticPlusFrictionMoment
+   :value: 56
+
+
+.. py:attribute:: ElectromechanicalCouplingCoefficient
+   :value: 55
+
+
+.. py:attribute:: EmagReactionProbe
+   :value: 17
+
+
+.. py:attribute:: Energy
+   :value: 14
+
+
+.. py:attribute:: FieldIntensity
+   :value: 26
+
+
+.. py:attribute:: FieldIntensityProbe
+   :value: 7
+
+
+.. py:attribute:: FlexibleRotationProbe
+   :value: 39
+
+
+.. py:attribute:: FluxDensityProbe
+   :value: 6
+
+
+.. py:attribute:: ForceReaction
+   :value: 15
+
+
+.. py:attribute:: FrictionForceProbe
+   :value: 37
+
+
+.. py:attribute:: FrictionMomentProbe
+   :value: 38
+
+
+.. py:attribute:: GeneralizedPlaneStrainProbe
+   :value: 22
+
+
+.. py:attribute:: HeatFluxProbe
+   :value: 5
+
+
+.. py:attribute:: Impedance
+   :value: 53
+
+
+.. py:attribute:: JointProbe
+   :value: 12
+
+
+.. py:attribute:: JouleHeatProbe
+   :value: 40
+
+
+.. py:attribute:: MagneticFluxProbe
+   :value: 27
+
+
+.. py:attribute:: MomentReaction
+   :value: 16
+
+
+.. py:attribute:: Position
+   :value: 20
+
+
+.. py:attribute:: ProbeStatus
+   :value: 57
+
+
+.. py:attribute:: QualityFactor
+   :value: 54
+
+
+.. py:attribute:: RadiationProbe
+   :value: 35
+
+
+.. py:attribute:: ReactionProbe
+   :value: 9
+
+
+.. py:attribute:: ResponsePSD
+   :value: 23
+
+
+.. py:attribute:: RotationProbe
+   :value: 8
+
+
+.. py:attribute:: SpringProbe
+   :value: 13
+
+
+.. py:attribute:: StrainProbe
+   :value: 2
+
+
+.. py:attribute:: StressProbe
+   :value: 1
+
+
+.. py:attribute:: TemperatureProbe
+   :value: 4
+
+
+.. py:attribute:: VelocityProbe
+   :value: 10
+
+
+.. py:attribute:: VoltageProbe
+   :value: 24
+
+
+.. py:attribute:: VolumeProbe
+   :value: 51
+
+
+
+
+
+
+.. vale on

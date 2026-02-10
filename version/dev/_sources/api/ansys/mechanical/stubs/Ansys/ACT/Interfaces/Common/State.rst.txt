@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`State`
+==============
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.State(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   General state enumeration to be used across ACT Apps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: State
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Disabled`
+            - 
+          * - :py:attr:`~EditRequired`
+            - 
+          * - :py:attr:`~Error`
+            - 
+          * - :py:attr:`~Interrupted`
+            - 
+          * - :py:attr:`~Modified`
+            - 
+          * - :py:attr:`~OutOfDate`
+            - 
+          * - :py:attr:`~RefreshRequired`
+            - 
+          * - :py:attr:`~Unfulfilled`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~UpToDate`
+            - 
+          * - :py:attr:`~UpdateRequired`
+            - 
+          * - :py:attr:`~UpstreamChangesPending`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Disabled
+   :value: 6
+
+
+.. py:attribute:: EditRequired
+   :value: 8
+
+
+.. py:attribute:: Error
+   :value: 7
+
+
+.. py:attribute:: Interrupted
+   :value: 9
+
+
+.. py:attribute:: Modified
+   :value: 4
+
+
+.. py:attribute:: OutOfDate
+   :value: 2
+
+
+.. py:attribute:: RefreshRequired
+   :value: 1
+
+
+.. py:attribute:: Unfulfilled
+   :value: 5
+
+
+.. py:attribute:: Unknown
+   :value: 11
+
+
+.. py:attribute:: UpToDate
+   :value: 0
+
+
+.. py:attribute:: UpdateRequired
+   :value: 3
+
+
+.. py:attribute:: UpstreamChangesPending
+   :value: 10
+
+
+
+
+
+
+.. vale on

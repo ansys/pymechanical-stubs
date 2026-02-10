@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ExpandResultFrom`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExpandResultFrom(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExpandResultFrom.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExpandResultFrom
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HarmonicSolution`
+            - 
+          * - :py:attr:`~ModalSolution`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~TransientSolution`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HarmonicSolution
+   :value: 1
+
+
+.. py:attribute:: ModalSolution
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: TransientSolution
+   :value: 3
+
+
+
+
+
+
+.. vale on

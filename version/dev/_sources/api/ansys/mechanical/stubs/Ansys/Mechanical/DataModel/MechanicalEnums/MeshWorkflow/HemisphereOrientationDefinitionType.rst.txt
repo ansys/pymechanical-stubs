@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`HemisphereOrientationDefinitionType`
+============================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.HemisphereOrientationDefinitionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the 'Control' tree node and reflects the type of hemisphere orientation modality being configured.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HemisphereOrientationDefinitionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NegativeX`
+            - 
+          * - :py:attr:`~NegativeY`
+            - 
+          * - :py:attr:`~NegativeZ`
+            - 
+          * - :py:attr:`~PositiveX`
+            - 
+          * - :py:attr:`~PositiveY`
+            - 
+          * - :py:attr:`~PositiveZ`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NegativeX
+   :value: 4
+
+
+.. py:attribute:: NegativeY
+   :value: 5
+
+
+.. py:attribute:: NegativeZ
+   :value: 6
+
+
+.. py:attribute:: PositiveX
+   :value: 1
+
+
+.. py:attribute:: PositiveY
+   :value: 2
+
+
+.. py:attribute:: PositiveZ
+   :value: 3
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`SurfaceCoatingStiffnessBehavior`
+========================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SurfaceCoatingStiffnessBehavior(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SurfaceCoatingStiffnessBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SurfaceCoatingStiffnessBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MembraneAndBending`
+            - 
+          * - :py:attr:`~MembraneOnly`
+            - 
+          * - :py:attr:`~StressEvaluationOnly`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MembraneAndBending
+   :value: 0
+
+
+.. py:attribute:: MembraneOnly
+   :value: 1
+
+
+.. py:attribute:: StressEvaluationOnly
+   :value: 2
+
+
+
+
+
+
+.. vale on

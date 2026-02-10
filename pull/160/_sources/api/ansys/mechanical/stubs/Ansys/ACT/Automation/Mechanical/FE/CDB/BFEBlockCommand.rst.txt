@@ -1,0 +1,283 @@
+.. vale off
+
+
+
+:class:`BFEBlockCommand`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.BFEBlockCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a BFEBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BFEBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementBodyForceCount`
+            - Gets the number of element body-force loads.
+          * - :py:attr:`~ElementBodyForces`
+            - Gets the element body-force loads.
+          * - :py:attr:`~Format`
+            - Gets the format.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~IsDefinedFromTable`
+            - Gets whether the values are defined using a table.
+          * - :py:attr:`~Lab`
+            - Gets the label.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~ToCdbCommandString`
+            - Gets the command text formatted as a CDB file entry.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementBodyForceCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of element body-force loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementBodyForces
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementBodyForce]]
+
+
+   
+   Gets the element body-force loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Format
+   :type: Optional[str]
+
+
+   
+   Gets the format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsDefinedFromTable
+   :type: Optional[bool]
+
+
+   
+   Gets whether the values are defined using a table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+
+   
+   Gets the label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToCdbCommandString
+   :type: Optional[Ansys.ACT.Automation.Mechanical.FE.CDB.CdbCommandFormatAndParameter]
+
+
+   
+   Gets the command text formatted as a CDB file entry.
+   Gets the command parameters formatted as a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

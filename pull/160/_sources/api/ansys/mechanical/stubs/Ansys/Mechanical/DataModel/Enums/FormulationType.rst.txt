@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FormulationType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FormulationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FormulationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FormulationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Joint`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~SmallRotation`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Joint
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: SmallRotation
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,68 @@
+.. vale off
+
+
+
+
+
+
+
+
+Mechanical 2025 R2
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v252
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Ansys Mechanical v252 module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

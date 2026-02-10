@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`ITools`
+===============
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.ITools
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines common tools.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ITools
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetGeoDataFromFile`
+            - Returns the geo data model object for the CAD file name specified.
+          * - :py:attr:`~GetMeshDataFromFile`
+            - Returns the mesh data model associated to the file name specified.
+          * - :py:attr:`~GetResultsDataFromFile`
+            - Returns the result reader object associated to the file name specified.
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetGeoDataFromFile(filename: str) -> Ansys.ACT.Interfaces.Geometry.IGeoData
+
+   
+   Returns the geo data model object for the CAD file name specified.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshDataFromFile(filename: str, bodyGrouping: str) -> Ansys.ACT.Interfaces.Mesh.IMeshData
+
+   
+   Returns the mesh data model associated to the file name specified.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetResultsDataFromFile(filename: str) -> Ansys.ACT.Interfaces.Post.IResultReader
+
+   
+   Returns the result reader object associated to the file name specified.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

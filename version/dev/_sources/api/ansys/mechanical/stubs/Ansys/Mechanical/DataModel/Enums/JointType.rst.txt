@@ -1,0 +1,168 @@
+.. vale off
+
+
+
+:class:`JointType`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the JointType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bushing`
+            - 
+          * - :py:attr:`~ConstantVelocity`
+            - 
+          * - :py:attr:`~Cylindrical`
+            - 
+          * - :py:attr:`~Distance`
+            - 
+          * - :py:attr:`~Fixed`
+            - 
+          * - :py:attr:`~General`
+            - 
+          * - :py:attr:`~Planar`
+            - 
+          * - :py:attr:`~PlaneRadialGap`
+            - 
+          * - :py:attr:`~PointOnCurve`
+            - 
+          * - :py:attr:`~RadialGap3D`
+            - 
+          * - :py:attr:`~Revolute`
+            - 
+          * - :py:attr:`~Screw`
+            - 
+          * - :py:attr:`~Slot`
+            - 
+          * - :py:attr:`~Spherical`
+            - 
+          * - :py:attr:`~SphericalGap`
+            - 
+          * - :py:attr:`~Translational`
+            - 
+          * - :py:attr:`~Universal`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bushing
+   :value: 9
+
+
+.. py:attribute:: ConstantVelocity
+   :value: 17
+
+
+.. py:attribute:: Cylindrical
+   :value: 4
+
+
+.. py:attribute:: Distance
+   :value: 18
+
+
+.. py:attribute:: Fixed
+   :value: 0
+
+
+.. py:attribute:: General
+   :value: 8
+
+
+.. py:attribute:: Planar
+   :value: 7
+
+
+.. py:attribute:: PlaneRadialGap
+   :value: 11
+
+
+.. py:attribute:: PointOnCurve
+   :value: 10
+
+
+.. py:attribute:: RadialGap3D
+   :value: 13
+
+
+.. py:attribute:: Revolute
+   :value: 1
+
+
+.. py:attribute:: Screw
+   :value: 16
+
+
+.. py:attribute:: Slot
+   :value: 3
+
+
+.. py:attribute:: Spherical
+   :value: 6
+
+
+.. py:attribute:: SphericalGap
+   :value: 12
+
+
+.. py:attribute:: Translational
+   :value: 2
+
+
+.. py:attribute:: Universal
+   :value: 5
+
+
+
+
+
+
+.. vale on

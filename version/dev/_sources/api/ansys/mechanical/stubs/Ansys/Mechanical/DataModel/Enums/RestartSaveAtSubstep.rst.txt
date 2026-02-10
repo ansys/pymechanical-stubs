@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`RestartSaveAtSubstep`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RestartSaveAtSubstep(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RestartSaveAtSubstep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RestartSaveAtSubstep
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~EquallySpaced`
+            - 
+          * - :py:attr:`~Last`
+            - 
+          * - :py:attr:`~SaveAtSubstepSpecified`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: EquallySpaced
+   :value: 4
+
+
+.. py:attribute:: Last
+   :value: 1
+
+
+.. py:attribute:: SaveAtSubstepSpecified
+   :value: 3
+
+
+
+
+
+
+.. vale on

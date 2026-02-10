@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`DynamicRelaxationBehaviorType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DynamicRelaxationBehaviorType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DynamicRelaxationBehaviorType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DynamicRelaxationBehaviorType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Both`
+            - 
+          * - :py:attr:`~DynamicRelaxationPhaseOnly`
+            - 
+          * - :py:attr:`~NormalPhaseOnly`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Both
+   :value: 2
+
+
+.. py:attribute:: DynamicRelaxationPhaseOnly
+   :value: 1
+
+
+.. py:attribute:: NormalPhaseOnly
+   :value: 0
+
+
+
+
+
+
+.. vale on

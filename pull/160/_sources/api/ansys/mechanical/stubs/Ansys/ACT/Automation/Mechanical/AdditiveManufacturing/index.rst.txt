@@ -1,0 +1,234 @@
+.. vale off
+
+
+
+
+
+
+
+
+``AdditiveManufacturing``
+=========================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: AdditiveManufacturing
+.. tab-set::
+
+
+
+    .. tab-item:: Interfaces
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IInterpolationMethod`
+            - 
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings`
+            - Defines a AMBuildSettings.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMProcess`
+            - Defines a AMProcess.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupport`
+            - Defines a AMSupport.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportGroup`
+            - Defines a AMSupportGroup.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportRemovalSequence`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseUnboltStep`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BuildStep`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.CooldownStep`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.GeneratedAMSupport`
+            - Defines a GeneratedAMSupport.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.HeatTreatmentStep`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.InverseDistanceWeightedInterpolationMethod`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.PredefinedAMSupport`
+            - Defines a PredefinedAMSupport.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.STLAMSupport`
+            - Defines a STLAMSupport.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.UserStep`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_interface"></span> IAMProcessStep</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/IAMProcessStep>
+    <span class="nf nf-cod-symbol_interface"></span> IInterpolationMethod</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/IInterpolationMethod>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AMBuildSettings</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/AMBuildSettings>
+    <span class="nf nf-cod-symbol_class"></span> AMProcess</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/AMProcess>
+    <span class="nf nf-cod-symbol_class"></span> AMSupport</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/AMSupport>
+    <span class="nf nf-cod-symbol_class"></span> AMSupportGroup</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/AMSupportGroup>
+    <span class="nf nf-cod-symbol_class"></span> AMSupportRemovalSequence</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/AMSupportRemovalSequence>
+    <span class="nf nf-cod-symbol_class"></span> BaseRemoval</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/BaseRemoval>
+    <span class="nf nf-cod-symbol_class"></span> BaseUnboltStep</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/BaseUnboltStep>
+    <span class="nf nf-cod-symbol_class"></span> BuildStep</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/BuildStep>
+    <span class="nf nf-cod-symbol_class"></span> CooldownStep</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/CooldownStep>
+    <span class="nf nf-cod-symbol_class"></span> GeneratedAMSupport</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/GeneratedAMSupport>
+    <span class="nf nf-cod-symbol_class"></span> HeatTreatmentStep</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/HeatTreatmentStep>
+    <span class="nf nf-cod-symbol_class"></span> InverseDistanceWeightedInterpolationMethod</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/InverseDistanceWeightedInterpolationMethod>
+    <span class="nf nf-cod-symbol_class"></span> PredefinedAMSupport</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/PredefinedAMSupport>
+    <span class="nf nf-cod-symbol_class"></span> STLAMSupport</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/STLAMSupport>
+    <span class="nf nf-cod-symbol_class"></span> SupportRemoval</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/SupportRemoval>
+    <span class="nf nf-cod-symbol_class"></span> UserStep</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/AdditiveManufacturing/UserStep>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+AdditiveManufacturing module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

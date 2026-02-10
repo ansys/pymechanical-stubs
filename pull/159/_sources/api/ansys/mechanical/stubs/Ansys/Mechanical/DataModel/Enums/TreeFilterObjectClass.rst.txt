@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`TreeFilterObjectClass`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TreeFilterObjectClass(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TreeFilterObjectClass.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TreeFilterObjectClass
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~BoundaryConditions`
+            - 
+          * - :py:attr:`~Commands`
+            - 
+          * - :py:attr:`~Connections`
+            - 
+          * - :py:attr:`~Results`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 0
+
+
+.. py:attribute:: BoundaryConditions
+   :value: 2
+
+
+.. py:attribute:: Commands
+   :value: 4
+
+
+.. py:attribute:: Connections
+   :value: 3
+
+
+.. py:attribute:: Results
+   :value: 1
+
+
+
+
+
+
+.. vale on

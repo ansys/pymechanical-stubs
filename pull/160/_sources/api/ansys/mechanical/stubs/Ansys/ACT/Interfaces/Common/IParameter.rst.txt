@@ -1,0 +1,147 @@
+.. vale off
+
+
+
+:class:`IParameter`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.IParameter
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a design parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IParameter
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Key`
+            - Gets the identifier of the parameter.
+          * - :py:attr:`~Name`
+            - Gets the name of the parameter.
+          * - :py:attr:`~Value`
+            - Gets the value of the parameter.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Key
+   :type: Optional[str]
+
+
+   
+   Gets the identifier of the parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the name of the parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Value
+   :type: Optional[float]
+
+
+   
+   Gets the value of the parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

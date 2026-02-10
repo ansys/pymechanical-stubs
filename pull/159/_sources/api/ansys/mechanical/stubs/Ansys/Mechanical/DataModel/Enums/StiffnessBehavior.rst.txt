@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`StiffnessBehavior`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StiffnessBehavior(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the StiffnessBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StiffnessBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Beam`
+            - 
+          * - :py:attr:`~Explicit`
+            - 
+          * - :py:attr:`~Flexible`
+            - 
+          * - :py:attr:`~Gasket`
+            - 
+          * - :py:attr:`~Rigid`
+            - 
+          * - :py:attr:`~RigidBeam`
+            - 
+          * - :py:attr:`~StiffBeam`
+            - 
+          * - :py:attr:`~SuperElement`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Beam
+   :value: 2
+
+
+.. py:attribute:: Explicit
+   :value: 7
+
+
+.. py:attribute:: Flexible
+   :value: 0
+
+
+.. py:attribute:: Gasket
+   :value: 5
+
+
+.. py:attribute:: Rigid
+   :value: 1
+
+
+.. py:attribute:: RigidBeam
+   :value: 3
+
+
+.. py:attribute:: StiffBeam
+   :value: 6
+
+
+.. py:attribute:: SuperElement
+   :value: 4
+
+
+
+
+
+
+.. vale on

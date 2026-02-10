@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`RemeshHexDominantToTetrahedral`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RemeshHexDominantToTetrahedral(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Use this property to specify the Fracture re-meshing type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RemeshHexDominantToTetrahedral
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BufferZoneAndMPCContact`
+            - 
+          * - :py:attr:`~BufferZoneAndPyramidElements`
+            - 
+          * - :py:attr:`~EntirePart`
+            - 
+          * - :py:attr:`~Off`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BufferZoneAndMPCContact
+   :value: 2
+
+
+.. py:attribute:: BufferZoneAndPyramidElements
+   :value: 3
+
+
+.. py:attribute:: EntirePart
+   :value: 1
+
+
+.. py:attribute:: Off
+   :value: 0
+
+
+
+
+
+
+.. vale on

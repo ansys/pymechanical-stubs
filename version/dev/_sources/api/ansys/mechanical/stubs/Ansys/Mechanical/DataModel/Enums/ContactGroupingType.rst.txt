@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ContactGroupingType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactGroupingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactGroupingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactGroupingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Bodies`
+            - 
+          * - :py:attr:`~Faces`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Parts`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Bodies
+   :value: 1
+
+
+.. py:attribute:: Faces
+   :value: 3
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Parts
+   :value: 2
+
+
+
+
+
+
+.. vale on

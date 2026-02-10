@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`RadiositySolverType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RadiositySolverType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RadiositySolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RadiositySolverType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Direct`
+            - 
+          * - :py:attr:`~IterativeGaussSeidel`
+            - 
+          * - :py:attr:`~IterativeJacobi`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Direct
+   :value: 1
+
+
+.. py:attribute:: IterativeGaussSeidel
+   :value: 3
+
+
+.. py:attribute:: IterativeJacobi
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

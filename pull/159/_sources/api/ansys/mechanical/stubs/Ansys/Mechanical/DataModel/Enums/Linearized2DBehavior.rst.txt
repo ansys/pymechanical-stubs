@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`Linearized2DBehavior`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.Linearized2DBehavior(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Linearized2DBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Linearized2DBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxisymmetricCurve`
+            - 
+          * - :py:attr:`~AxisymmetricStraight`
+            - 
+          * - :py:attr:`~Planar`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AxisymmetricCurve
+   :value: 2
+
+
+.. py:attribute:: AxisymmetricStraight
+   :value: 1
+
+
+.. py:attribute:: Planar
+   :value: 0
+
+
+
+
+
+
+.. vale on

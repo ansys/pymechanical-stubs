@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ConnectionOptions`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConnectionOptions(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ConnectionOptions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConnectionOptions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllToAll`
+            - 
+          * - :py:attr:`~FreeToAll`
+            - 
+          * - :py:attr:`~FreeToFree`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllToAll
+   :value: 1
+
+
+.. py:attribute:: FreeToAll
+   :value: 2
+
+
+.. py:attribute:: FreeToFree
+   :value: 3
+
+
+
+
+
+
+.. vale on

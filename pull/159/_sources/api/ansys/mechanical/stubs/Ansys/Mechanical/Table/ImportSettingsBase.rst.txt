@@ -1,0 +1,121 @@
+.. vale off
+
+
+
+:class:`ImportSettingsBase`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.Table.ImportSettingsBase
+
+   Bases: :py:obj:`object`
+
+
+   
+   A base class for Table import settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportSettingsBase
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Format`
+            - Gets the existing corresponding format.
+          * - :py:attr:`~PathType`
+            - Gets or sets the type of URI provided for Table import.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Format
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.ImportFormat]
+
+
+   
+   Gets the existing corresponding format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PathType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Common.PathType]
+
+
+   
+   Gets or sets the type of URI provided for Table import.
+   Default: F:Ansys.Mechanical.DataModel.MechanicalEnums.Common.PathType.Absolute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

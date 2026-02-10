@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`GraphicsImageExportFormat`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsImageExportFormat(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the 2D Image Format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GraphicsImageExportFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BMP`
+            - 
+          * - :py:attr:`~EPS`
+            - 
+          * - :py:attr:`~JPG`
+            - 
+          * - :py:attr:`~PNG`
+            - 
+          * - :py:attr:`~TIF`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BMP
+   :value: 3
+
+
+.. py:attribute:: EPS
+   :value: 4
+
+
+.. py:attribute:: JPG
+   :value: 1
+
+
+.. py:attribute:: PNG
+   :value: 0
+
+
+.. py:attribute:: TIF
+   :value: 2
+
+
+
+
+
+
+.. vale on

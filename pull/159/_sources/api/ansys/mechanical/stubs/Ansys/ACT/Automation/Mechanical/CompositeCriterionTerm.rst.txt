@@ -1,0 +1,100 @@
+.. vale off
+
+
+
+:class:`CompositeCriterionTerm`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: CompositeCriterionTerm
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Coefficient`
+            - Returns coefficient of PrimaryCriterion in the CompositeCriterionTerm.
+          * - :py:attr:`~PrimaryCriterion`
+            - Returns PrimaryCriterion Object associated with the CompositeCriterionTerm.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Coefficient
+   :type: Optional[float]
+
+
+   
+   Returns coefficient of PrimaryCriterion in the CompositeCriterionTerm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimaryCriterion
+   :type: Optional[Ansys.ACT.Automation.Mechanical.PrimaryCriterion]
+
+
+   
+   Returns PrimaryCriterion Object associated with the CompositeCriterionTerm.
+   Returns None if no PrimaryCriterion Object is assigned to CompositeCriterionTerm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

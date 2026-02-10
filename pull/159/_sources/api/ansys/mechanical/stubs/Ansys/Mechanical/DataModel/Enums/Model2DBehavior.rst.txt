@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`Model2DBehavior`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.Model2DBehavior(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Model2DBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Model2DBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxiSymmetric`
+            - 
+          * - :py:attr:`~ByBody`
+            - 
+          * - :py:attr:`~GeneralAxisymmetric`
+            - 
+          * - :py:attr:`~GeneralizedPlaneStrain`
+            - 
+          * - :py:attr:`~MeshExtrude`
+            - 
+          * - :py:attr:`~PlaneStrain`
+            - 
+          * - :py:attr:`~PlaneStress`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AxiSymmetric
+   :value: 1
+
+
+.. py:attribute:: ByBody
+   :value: 4
+
+
+.. py:attribute:: GeneralAxisymmetric
+   :value: 5
+
+
+.. py:attribute:: GeneralizedPlaneStrain
+   :value: 3
+
+
+.. py:attribute:: MeshExtrude
+   :value: 6
+
+
+.. py:attribute:: PlaneStrain
+   :value: 2
+
+
+.. py:attribute:: PlaneStress
+   :value: 0
+
+
+
+
+
+
+.. vale on

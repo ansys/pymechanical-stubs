@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`TriangleCountReductionMode`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.TriangleCountReductionMode(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the 'Control' tree node and reflects the mode of triangle count reduction during surface meshing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TriangleCountReductionMode
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Aggressive`
+            - 
+          * - :py:attr:`~Conservative`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Aggressive
+   :value: 3
+
+
+.. py:attribute:: Conservative
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: 1
+
+
+
+
+
+
+.. vale on

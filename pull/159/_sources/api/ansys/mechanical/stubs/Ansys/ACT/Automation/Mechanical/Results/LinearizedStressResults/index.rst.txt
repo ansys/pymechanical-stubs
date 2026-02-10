@@ -1,0 +1,158 @@
+.. vale off
+
+
+
+
+
+
+
+
+``LinearizedStressResults``
+===========================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: LinearizedStressResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedEquivalentStress`
+            - Defines a LinearizedEquivalentStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMaximumPrincipalStress`
+            - Defines a LinearizedMaximumPrincipalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMaximumShearStress`
+            - Defines a LinearizedMaximumShearStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMiddlePrincipalStress`
+            - Defines a LinearizedMiddlePrincipalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMinimumPrincipalStress`
+            - Defines a LinearizedMinimumPrincipalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedNormalStress`
+            - Defines a LinearizedNormalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedShearStress`
+            - Defines a LinearizedShearStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedStressIntensity`
+            - Defines a LinearizedStressIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedStressResult`
+            - Defines a LinearizedStressResult.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> LinearizedEquivalentStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedEquivalentStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedMaximumPrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedMaximumPrincipalStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedMaximumShearStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedMaximumShearStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedMiddlePrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedMiddlePrincipalStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedMinimumPrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedMinimumPrincipalStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedNormalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedNormalStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedShearStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedShearStress>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedStressIntensity</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedStressIntensity>
+    <span class="nf nf-cod-symbol_class"></span> LinearizedStressResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/LinearizedStressResult>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+LinearizedStressResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,1143 @@
+.. vale off
+
+
+
+:class:`MeshWorkflowStepGroup`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup
+
+   Bases: :py:obj:`object`
+
+
+   
+   Object that wraps IDSEngineeringModelWorkflow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshWorkflowStepGroup
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddSettings`
+            - Add the settings of the input SettingsType to the Steps node.
+          * - :py:attr:`~AddStep`
+            - Add another operation to the sequence of steps to be executed for the mesh workflow.
+          * - :py:attr:`~ClearDataAndDisableCheckpoints`
+            - Clear all checkpoints data and disable checkpointing for the workflow.
+          * - :py:attr:`~ConvertSizingSettings`
+            - Convert the active sizing settings to the input SettingsType for the Steps node.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~DeleteAllStepsAndClearGeneratedData`
+            - Deletes all steps and reset workflow type to undefined and also resets all inactive geometry parts/bodies to active again, clears the output data, and resets the state of the child objects (“Input”, “Steps”, “Output”) to the initial state. However, any user-defined settings such as the “Input” node scoping are retained.
+          * - :py:attr:`~DeleteSettings`
+            - Delete the settings of the input SettingsType from the Steps node. All the Settings specific entries are removed automatically to the Steps details.
+          * - :py:attr:`~DisableAllCheckpoints`
+            - Disables checkpoints for all editable steps in the workflow.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EnableAllCheckpoints`
+            - Enables checkpoints for all editable steps in the workflow.
+          * - :py:attr:`~ExecuteAllSteps`
+            - Executes all steps defined under the “StepGroup” object (which is the “Steps” node in the UI).
+          * - :py:attr:`~ExecuteNextStep`
+            - Executes the next step, i.e. the next operation which is ready to be executed under the parent “StepGroup” object.
+          * - :py:attr:`~ExecuteUpToStep`
+            - Executes any not yet ready steps up to and including the specified step.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropagateSettings`
+            - Propagate the settings of the input SettingsType to the attributes of the Step nodes. The meshing attributes of the Step nodes will then be automatically defined based on the physical parameters of the settings. Otherwise, the meshing attributes need to be manually specified.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RevertToLastCheckpoint`
+            - Revert to the last available checkpoint; if no checkpoint is available, then an exception will be raised.
+          * - :py:attr:`~RevertToStep`
+            - Revert to the specified step; if no checkpoint is available, then an exception will be raised.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AnalysisFrequency`
+            - Defines the analysis frequency of the acoustic scenario.
+          * - :py:attr:`~BoundingBoxFactor`
+            - Gets or sets the bounding box factor applied to compute automatically the StackerMeshSize from the model. If set to 0, the default bouding box factor is used.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~CurvatureAngle`
+            - Gets or sets the curvature angle of the mesh to be used in workflow steps. If set to 0, the default curvature angle is used.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DirectionX`
+            - Gets or sets the X component of stacking direction used by stacker operations , with respect to Global Coordinate System.
+          * - :py:attr:`~DirectionY`
+            - Gets or sets the Y component of stacking direction to be used in stacker steps, with respect to Global Coordinate System.
+          * - :py:attr:`~DirectionZ`
+            - Gets or sets the Z component of stacking direction to be used in stacker steps, with respect to Global Coordinate System.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GlobalMeshSize`
+            - Gets or sets the element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~GrowthRate`
+            - Gets or sets the growth rate of the mesh to be used in workflow steps. If set to 0, the default growth rate is used.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LateralDefeatureSize`
+            - Gets or sets the defeature size to be used along the lateral direction of stacking in stacker operations.
+          * - :py:attr:`~MaximumMeshSize`
+            - Gets or sets the element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~MeshSize`
+            - Defines the mesh size of the acoustic scenario based on the wave velocity and the frequency.
+          * - :py:attr:`~MinimumMeshSize`
+            - Gets or sets the minimal element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~NonStackableBodyMeshSize`
+            - Gets or sets the element size to be used in meshing non-stackable bodies in stacker workflow.
+          * - :py:attr:`~NumberOfAcousticLayers`
+            - Gets or sets the number of layers in the acoustic region. If set to 0, the value defaults to 1 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 2 otherwise.
+          * - :py:attr:`~NumberOfCores`
+            - Defines how many CPU cores to be used in an operation (if supported by the operation).
+          * - :py:attr:`~NumberOfPMLs`
+            - Gets or sets the number of layers in the perfectly meshed layers region. If set to 0, the value defaults to 2 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 4 otherwise.
+          * - :py:attr:`~OriginX`
+            - Gets or sets the X coordinate location of base face for the volume flattening step.
+          * - :py:attr:`~OriginY`
+            - Gets or sets the Y coordinate location of base face for the volume flattening step.
+          * - :py:attr:`~OriginZ`
+            - Gets or sets the Z coordinate location of base face for the volume flattening step.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~QuadraticElements`
+            - Defines if the quadratic elements are used for the mesh generation.
+          * - :py:attr:`~SpeedOfSound`
+            - Defines the speed of sound in the acoustic scenario.
+          * - :py:attr:`~StackingDefeatureSize`
+            - Gets or sets the defeature size to be used along the stacking direction in stacker operations.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AnalysisFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Defines the analysis frequency of the acoustic scenario.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BoundingBoxFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the bounding box factor applied to compute automatically the StackerMeshSize from the model. If set to 0, the default bouding box factor is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurvatureAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the curvature angle of the mesh to be used in workflow steps. If set to 0, the default curvature angle is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DirectionX
+   :type: Optional[float]
+
+
+   
+   Gets or sets the X component of stacking direction used by stacker operations , with respect to Global Coordinate System.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DirectionY
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Y component of stacking direction to be used in stacker steps, with respect to Global Coordinate System.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DirectionZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Z component of stacking direction to be used in stacker steps, with respect to Global Coordinate System.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GrowthRate
+   :type: Optional[float]
+
+
+   
+   Gets or sets the growth rate of the mesh to be used in workflow steps. If set to 0, the default growth rate is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelWorkflowAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LateralDefeatureSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the defeature size to be used along the lateral direction of stacking in stacker operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Defines the mesh size of the acoustic scenario based on the wave velocity and the frequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the minimal element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NonStackableBodyMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the element size to be used in meshing non-stackable bodies in stacker workflow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfAcousticLayers
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of layers in the acoustic region. If set to 0, the value defaults to 1 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 2 otherwise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfCores
+   :type: Optional[int]
+
+
+   
+   Defines how many CPU cores to be used in an operation (if supported by the operation).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfPMLs
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of layers in the perfectly meshed layers region. If set to 0, the value defaults to 2 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 4 otherwise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the X coordinate location of base face for the volume flattening step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Y coordinate location of base face for the volume flattening step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Z coordinate location of base face for the volume flattening step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuadraticElements
+   :type: Optional[bool]
+
+
+   
+   Defines if the quadratic elements are used for the mesh generation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpeedOfSound
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Defines the speed of sound in the acoustic scenario.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StackingDefeatureSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the defeature size to be used along the stacking direction in stacker operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSettings(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> None
+
+   
+   Add the settings of the input SettingsType to the Steps node.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStep(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType) -> Ansys.ACT.Automation.Mechanical.MeshWorkflowStep
+
+   
+   Add another operation to the sequence of steps to be executed for the mesh workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearDataAndDisableCheckpoints() -> None
+
+   
+   Clear all checkpoints data and disable checkpointing for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertSizingSettings(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> None
+
+   
+   Convert the active sizing settings to the input SettingsType for the Steps node.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllStepsAndClearGeneratedData() -> None
+
+   
+   Deletes all steps and reset workflow type to undefined and also resets all inactive geometry parts/bodies to active again, clears the output data, and resets the state of the child objects (“Input”, “Steps”, “Output”) to the initial state. However, any user-defined settings such as the “Input” node scoping are retained.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteSettings(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> None
+
+   
+   Delete the settings of the input SettingsType from the Steps node. All the Settings specific entries are removed automatically to the Steps details.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DisableAllCheckpoints() -> None
+
+   
+   Disables checkpoints for all editable steps in the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EnableAllCheckpoints() -> None
+
+   
+   Enables checkpoints for all editable steps in the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExecuteAllSteps() -> None
+
+   
+   Executes all steps defined under the “StepGroup” object (which is the “Steps” node in the UI). 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExecuteNextStep() -> None
+
+   
+   Executes the next step, i.e. the next operation which is ready to be executed under the parent “StepGroup” object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExecuteUpToStep(arg: Any) -> None
+
+   
+   Executes any not yet ready steps up to and including the specified step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropagateSettings(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> None
+
+   
+   Propagate the settings of the input SettingsType to the attributes of the Step nodes. The meshing attributes of the Step nodes will then be automatically defined based on the physical parameters of the settings. Otherwise, the meshing attributes need to be manually specified.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RevertToLastCheckpoint() -> None
+
+   
+   Revert to the last available checkpoint; if no checkpoint is available, then an exception will be raised.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RevertToStep(arg: Any) -> None
+
+   
+   Revert to the specified step; if no checkpoint is available, then an exception will be raised.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

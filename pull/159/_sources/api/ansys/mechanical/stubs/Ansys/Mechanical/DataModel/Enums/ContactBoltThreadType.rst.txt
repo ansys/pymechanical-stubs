@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ContactBoltThreadType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactBoltThreadType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactBoltThreadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactBoltThreadType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DoubleThread`
+            - 
+          * - :py:attr:`~SingleThread`
+            - 
+          * - :py:attr:`~TripleThread`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DoubleThread
+   :value: 1
+
+
+.. py:attribute:: SingleThread
+   :value: 0
+
+
+.. py:attribute:: TripleThread
+   :value: 2
+
+
+
+
+
+
+.. vale on

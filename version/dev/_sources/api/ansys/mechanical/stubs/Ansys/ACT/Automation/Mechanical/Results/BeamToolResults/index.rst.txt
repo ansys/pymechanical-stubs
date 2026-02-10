@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+
+
+
+
+
+``BeamToolResults``
+===================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: BeamToolResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.BeamTool`
+            - Defines a BeamTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.BeamToolResult`
+            - Defines a BeamToolResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.DirectStress`
+            - Defines a DirectStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.MaximumBendingStress`
+            - Defines a MaximumBendingStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.MaximumCombinedStress`
+            - Defines a MaximumCombinedStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.MinimumBendingStress`
+            - Defines a MinimumBendingStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.MinimumCombinedStress`
+            - Defines a MinimumCombinedStress.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> BeamTool</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/BeamTool>
+    <span class="nf nf-cod-symbol_class"></span> BeamToolResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/BeamToolResult>
+    <span class="nf nf-cod-symbol_class"></span> DirectStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/DirectStress>
+    <span class="nf nf-cod-symbol_class"></span> MaximumBendingStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/MaximumBendingStress>
+    <span class="nf nf-cod-symbol_class"></span> MaximumCombinedStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/MaximumCombinedStress>
+    <span class="nf nf-cod-symbol_class"></span> MinimumBendingStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/MinimumBendingStress>
+    <span class="nf nf-cod-symbol_class"></span> MinimumCombinedStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/MinimumCombinedStress>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+BeamToolResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

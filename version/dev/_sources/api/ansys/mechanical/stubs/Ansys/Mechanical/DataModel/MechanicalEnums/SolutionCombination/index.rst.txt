@@ -1,0 +1,109 @@
+.. vale off
+
+
+
+
+
+
+
+
+``SolutionCombination``
+=======================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: SolutionCombination
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.EnvelopeType`
+            - Specifies the Solution Combination Envelope Type
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.Type`
+            - Specifies the Solution Combination Type
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> EnvelopeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/SolutionCombination/EnvelopeType>
+    <span class="nf nf-cod-symbol_enum"></span> Type</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/SolutionCombination/Type>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+SolutionCombination module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

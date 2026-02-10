@@ -1,0 +1,415 @@
+.. vale off
+
+
+
+:class:`MaximumStressSettings`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.MaximumStressSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Maximum Stress failure criterion for reinforced materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MaximumStressSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EvaluateMaterialOneDirectionFailure`
+            - Gets or sets whether the failure criterion is evaluated in the material 1 direction.
+          * - :py:attr:`~EvaluateMaterialThreeDirectionFailure`
+            - Gets or sets whether the failure criterion is evaluated in the out-of-plane direction.
+          * - :py:attr:`~EvaluateMaterialTwoDirectionFailure`
+            - Gets or sets whether the failure criterion is evaluated in the material 2 direction.
+          * - :py:attr:`~EvaluateShearOneThreeFailure`
+            - Gets or sets whether failure is evaluated for the out-of-plane shear s13.
+          * - :py:attr:`~EvaluateShearOneTwoFailure`
+            - Gets or sets whether failure is evaluated for the in-plane shear s12.
+          * - :py:attr:`~EvaluateShearTwoThreeFailure`
+            - Gets or sets whether failure is evaluated for the out-of-plane shear s23.
+          * - :py:attr:`~MaterialOneDirectionFailureWeightingFactor`
+            - Gets or sets the weighting factor for the failure criterion in the material 1 direction.
+          * - :py:attr:`~MaterialThreeDirectionFailureWeightingFactor`
+            - Gets or sets the weighting factor for the failure criterion in the out-of-plane direction.
+          * - :py:attr:`~MaterialTwoDirectionFailureWeightingFactor`
+            - Gets or sets the weighting factor for the failure criterion in the material 2 direction.
+          * - :py:attr:`~ShearOneThreeFailureWeightingFactor`
+            - Gets or sets the weighting factor for failure due to out-of-plane shear s13.
+          * - :py:attr:`~ShearOneTwoFailureWeightingFactor`
+            - Gets or sets the weighting factor for failure due to in-plane shear s12.
+          * - :py:attr:`~ShearTwoThreeFailureWeightingFactor`
+            - Gets or sets the weighting factor for failure due to out-of-plane shear s23.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: EvaluateMaterialOneDirectionFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the failure criterion is evaluated in the material 1 direction.
+       The corresponding failure label is 's1'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateMaterialThreeDirectionFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the failure criterion is evaluated in the out-of-plane direction.
+       The corresponding failure label is 's3'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateMaterialTwoDirectionFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the failure criterion is evaluated in the material 2 direction.
+       The corresponding failure label is 's2'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateShearOneThreeFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether failure is evaluated for the out-of-plane shear s13.
+       The corresponding failure label is 's13'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateShearOneTwoFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether failure is evaluated for the in-plane shear s12.
+       The corresponding failure label is 's12'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateShearTwoThreeFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether failure is evaluated for the out-of-plane shear s23.
+       The corresponding failure label is 's23'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialOneDirectionFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the failure criterion in the material 1 direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialThreeDirectionFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the failure criterion in the out-of-plane direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialTwoDirectionFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the failure criterion in the material 2 direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearOneThreeFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for failure due to out-of-plane shear s13.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearOneTwoFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for failure due to in-plane shear s12.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearTwoThreeFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for failure due to out-of-plane shear s23.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

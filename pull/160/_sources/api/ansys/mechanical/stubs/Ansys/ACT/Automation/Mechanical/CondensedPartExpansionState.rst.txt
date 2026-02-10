@@ -1,0 +1,99 @@
+.. vale off
+
+
+
+:class:`CondensedPartExpansionState`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.CondensedPartExpansionState
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: CondensedPartExpansionState
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Displacement`
+            - Gets or sets the Displacement Property
+          * - :py:attr:`~Stress`
+            - Gets or sets the Stress Property
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Displacement
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Displacement Property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Stress
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Stress Property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

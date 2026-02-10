@@ -1,0 +1,235 @@
+.. vale off
+
+
+
+
+
+
+
+
+``StrainResults``
+=================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: StrainResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.AccumulatedEquivalentPlasticStrain`
+            - Defines a AccumulatedEquivalentPlasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.DirectionalThermalStrain`
+            - Defines a DirectionalThermalStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.ElasticStrainIntensity`
+            - Defines a ElasticStrainIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentCreepStrain`
+            - Defines a EquivalentCreepStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentCreepStrainRST`
+            - Defines a EquivalentCreepStrainRST.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrain`
+            - Defines a EquivalentElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrainRST`
+            - Defines a EquivalentElasticStrainRST.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentPlasticStrain`
+            - Defines a EquivalentPlasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentPlasticStrainRST`
+            - Defines a EquivalentPlasticStrainRST.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentTotalStrain`
+            - Defines a EquivalentTotalStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumPrincipalElasticStrain`
+            - Defines a MaximumPrincipalElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumPrincipalThermalStrain`
+            - Defines a MaximumPrincipalThermalStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumShearElasticStrain`
+            - Defines a MaximumShearElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.MiddlePrincipalElasticStrain`
+            - Defines a MiddlePrincipalElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.MiddlePrincipalThermalStrain`
+            - Defines a MiddlePrincipalThermalStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.MinimumPrincipalElasticStrain`
+            - Defines a MinimumPrincipalElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.NormalElasticStrain`
+            - Defines a NormalElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.ShearElasticStrain`
+            - Defines a ShearElasticStrain.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.StrainResult`
+            - Defines a StrainResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StrainResults.VectorPrincipalElasticStrain`
+            - Defines a VectorPrincipalElasticStrain.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AccumulatedEquivalentPlasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/AccumulatedEquivalentPlasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalThermalStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/DirectionalThermalStrain>
+    <span class="nf nf-cod-symbol_class"></span> ElasticStrainIntensity</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/ElasticStrainIntensity>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentCreepStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentCreepStrain>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentCreepStrainRST</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentCreepStrainRST>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentElasticStrainRST</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentElasticStrainRST>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentPlasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentPlasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentPlasticStrainRST</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentPlasticStrainRST>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentTotalStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/EquivalentTotalStrain>
+    <span class="nf nf-cod-symbol_class"></span> MaximumPrincipalElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/MaximumPrincipalElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> MaximumPrincipalThermalStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/MaximumPrincipalThermalStrain>
+    <span class="nf nf-cod-symbol_class"></span> MaximumShearElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/MaximumShearElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> MiddlePrincipalElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/MiddlePrincipalElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> MiddlePrincipalThermalStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/MiddlePrincipalThermalStrain>
+    <span class="nf nf-cod-symbol_class"></span> MinimumPrincipalElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/MinimumPrincipalElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> NormalElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/NormalElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> ShearElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/ShearElasticStrain>
+    <span class="nf nf-cod-symbol_class"></span> StrainResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/StrainResult>
+    <span class="nf nf-cod-symbol_class"></span> VectorPrincipalElasticStrain</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StrainResults/VectorPrincipalElasticStrain>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+StrainResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

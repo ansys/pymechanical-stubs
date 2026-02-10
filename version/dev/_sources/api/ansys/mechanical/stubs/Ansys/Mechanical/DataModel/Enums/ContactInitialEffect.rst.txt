@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ContactInitialEffect`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactInitialEffect(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactInitialEffect.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactInitialEffect
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddOffsetNoRamping`
+            - 
+          * - :py:attr:`~AddOffsetRampedEffects`
+            - 
+          * - :py:attr:`~AdjustToTouch`
+            - 
+          * - :py:attr:`~OffsetOnlyNoRamping`
+            - 
+          * - :py:attr:`~OffsetOnlyNoRampingIgnoreInitialStatus`
+            - 
+          * - :py:attr:`~OffsetOnlyRampedEffects`
+            - 
+          * - :py:attr:`~OffsetOnlyRampedEffectsIgnoreInitialStatus`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AddOffsetNoRamping
+   :value: 4
+
+
+.. py:attribute:: AddOffsetRampedEffects
+   :value: 0
+
+
+.. py:attribute:: AdjustToTouch
+   :value: 1
+
+
+.. py:attribute:: OffsetOnlyNoRamping
+   :value: 7
+
+
+.. py:attribute:: OffsetOnlyNoRampingIgnoreInitialStatus
+   :value: 9
+
+
+.. py:attribute:: OffsetOnlyRampedEffects
+   :value: 6
+
+
+.. py:attribute:: OffsetOnlyRampedEffectsIgnoreInitialStatus
+   :value: 8
+
+
+
+
+
+
+.. vale on

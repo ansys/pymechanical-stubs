@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`EquivalentSIFMethod`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth.EquivalentSIFMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Enum to specify the Equivalent SIF Method for SMART Crack Growth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EquivalentSIFMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EmpiricalFunction`
+            - 
+          * - :py:attr:`~MaximumTangentialStress`
+            - 
+          * - :py:attr:`~PookCriterion`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~RichardFunction`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EmpiricalFunction
+   :value: 4
+
+
+.. py:attribute:: MaximumTangentialStress
+   :value: 1
+
+
+.. py:attribute:: PookCriterion
+   :value: 3
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: RichardFunction
+   :value: 2
+
+
+
+
+
+
+.. vale on

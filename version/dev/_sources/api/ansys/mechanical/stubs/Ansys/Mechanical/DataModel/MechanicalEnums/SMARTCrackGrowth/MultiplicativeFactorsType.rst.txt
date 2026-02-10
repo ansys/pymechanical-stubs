@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MultiplicativeFactorsType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth.MultiplicativeFactorsType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Enum to specify the Multiplicative Factors type for Equivalent SIF Method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MultiplicativeFactorsType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Manual`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Manual
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on

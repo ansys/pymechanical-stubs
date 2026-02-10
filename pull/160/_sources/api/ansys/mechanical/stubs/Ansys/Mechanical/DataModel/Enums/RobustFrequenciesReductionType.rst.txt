@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`RobustFrequenciesReductionType`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RobustFrequenciesReductionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RobustFrequenciesReductionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RobustFrequenciesReductionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Average`
+            - 
+          * - :py:attr:`~ModeTracking`
+            - 
+          * - :py:attr:`~SmoothMin`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Average
+   :value: 0
+
+
+.. py:attribute:: ModeTracking
+   :value: 2
+
+
+.. py:attribute:: SmoothMin
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,626 @@
+.. vale off
+
+
+
+:class:`PuckSettings`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.PuckSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Puck failure criterion for reinforced materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PuckSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConsiderInterFiberParallelStresses`
+            - Gets or sets whether inter-fiber failure will include the influence of the fiber parallel stresses.
+          * - :py:attr:`~DegradationInitiationFactor`
+            - Gets or sets the degradation initiation factor s (0 < s < 1).
+          * - :py:attr:`~DegradationResidualStrengthFactor`
+            - Gets or sets the degradation residual strength factor M (0 < M < 1).
+          * - :py:attr:`~DelaminationWeightingFactor`
+            - Gets or sets the weighting factor for the delamination (pd) evaluation.
+          * - :py:attr:`~EvaluateDelamination`
+            - Gets or sets whether delamination is evaluated. Only applies when three-dimensional
+          * - :py:attr:`~EvaluateFiberFailure`
+            - Gets or sets whether fiber failure (pf) is evaluated. The corresponding failure label is 'pf'.
+          * - :py:attr:`~EvaluateMatrixCompressionFailure`
+            - Gets or sets whether matrix compression failure is evaluated. The corresponding failure label is 'pmB'.
+          * - :py:attr:`~EvaluateMatrixShearFailure`
+            - Gets or sets whether matrix shear failure is evaluated. The corresponding failure label is 'pmC'.
+          * - :py:attr:`~EvaluateMatrixTensionFailure`
+            - Gets or sets whether matrix tension failure is evaluated. The corresponding failure label is 'pmA'.
+          * - :py:attr:`~FiberFailureWeightingFactor`
+            - Gets or sets the weighting factor for the fiber failure evaluation.
+          * - :py:attr:`~Formulation`
+            - Gets or sets whether the simplified, 2D, or 3D Puck formulation is used.
+          * - :py:attr:`~InclinationFactorTwoOneNegative`
+            - Gets or sets the p21(-) Puck constant.
+          * - :py:attr:`~InclinationFactorTwoOnePositive`
+            - Gets or sets the p21(+) Puck constant.
+          * - :py:attr:`~InclinationFactorTwoTwoNegative`
+            - Gets or sets the p22(-) Puck constant.
+          * - :py:attr:`~InclinationFactorTwoTwoPositive`
+            - Gets or sets the p22(+) Puck constant.
+          * - :py:attr:`~InterfaceWeakeningFactor`
+            - Gets or sets the interface weakening factor.
+          * - :py:attr:`~MatrixCompressionFailureWeightingFactor`
+            - Gets or sets the weighting factor for the matrix compression (pmB) failure evaluation.
+          * - :py:attr:`~MatrixShearFailureWeightingFactor`
+            - Gets or sets the weighting factor for the matrix shear (pmC) failure evaluation.
+          * - :py:attr:`~MatrixTensionFailureWeightingFactor`
+            - Gets or sets the weighting factor for the matrix tension (pmA) failure evaluation.
+          * - :py:attr:`~OverrideMaterial`
+            - Gets or sets whether the global Puck constants are used overriding material-specific constants.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ConsiderInterFiberParallelStresses
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether inter-fiber failure will include the influence of the fiber parallel stresses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DegradationInitiationFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the degradation initiation factor s (0 < s < 1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DegradationResidualStrengthFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the degradation residual strength factor M (0 < M < 1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DelaminationWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the delamination (pd) evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateDelamination
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether delamination is evaluated. Only applies when three-dimensional
+       evaluation is selected. The corresponding failure label is 'pd'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateFiberFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether fiber failure (pf) is evaluated. The corresponding failure label is 'pf'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateMatrixCompressionFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether matrix compression failure is evaluated. The corresponding failure label is 'pmB'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateMatrixShearFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether matrix shear failure is evaluated. The corresponding failure label is 'pmC'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvaluateMatrixTensionFailure
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether matrix tension failure is evaluated. The corresponding failure label is 'pmA'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FiberFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the fiber failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Formulation
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.PuckFormulation]
+
+
+   
+   Gets or sets whether the simplified, 2D, or 3D Puck formulation is used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InclinationFactorTwoOneNegative
+   :type: Optional[float]
+
+
+   
+   Gets or sets the p21(-) Puck constant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InclinationFactorTwoOnePositive
+   :type: Optional[float]
+
+
+   
+   Gets or sets the p21(+) Puck constant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InclinationFactorTwoTwoNegative
+   :type: Optional[float]
+
+
+   
+   Gets or sets the p22(-) Puck constant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InclinationFactorTwoTwoPositive
+   :type: Optional[float]
+
+
+   
+   Gets or sets the p22(+) Puck constant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InterfaceWeakeningFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the interface weakening factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MatrixCompressionFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the matrix compression (pmB) failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MatrixShearFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the matrix shear (pmC) failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MatrixTensionFailureWeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the matrix tension (pmA) failure evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OverrideMaterial
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the global Puck constants are used overriding material-specific constants.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

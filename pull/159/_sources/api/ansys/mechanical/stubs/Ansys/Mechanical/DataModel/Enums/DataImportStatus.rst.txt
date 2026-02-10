@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`DataImportStatus`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DataImportStatus(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DataImportStatus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DataImportStatus
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Failed`
+            - 
+          * - :py:attr:`~NoData`
+            - 
+          * - :py:attr:`~Obsolete`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~Uptodate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Failed
+   :value: 4
+
+
+.. py:attribute:: NoData
+   :value: 1
+
+
+.. py:attribute:: Obsolete
+   :value: 2
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+.. py:attribute:: Uptodate
+   :value: 3
+
+
+
+
+
+
+.. vale on

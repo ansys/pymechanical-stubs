@@ -1,0 +1,139 @@
+.. vale off
+
+
+
+:class:`ISourceFile`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.ISourceFile
+
+   Bases: :py:obj:`object`
+
+
+   
+   A file containing source code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISourceFile
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Save`
+            - Saves the modified content.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Content`
+            - Reads or writes the content of the file.
+          * - :py:attr:`~FilePath`
+            - Represents the absolute path of the source file.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Content
+   :type: Optional[str]
+
+
+   
+   Reads or writes the content of the file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilePath
+   :type: Optional[str]
+
+
+   
+   Represents the absolute path of the source file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Save() -> None
+
+   
+   Saves the modified content.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

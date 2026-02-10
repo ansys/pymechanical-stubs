@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ComparePartsToleranceType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ComparePartsToleranceType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ComparePartsTolerance Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ComparePartsToleranceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Loose`
+            - 
+          * - :py:attr:`~Normal`
+            - 
+          * - :py:attr:`~Tight`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Loose
+   :value: 0
+
+
+.. py:attribute:: Normal
+   :value: 1
+
+
+.. py:attribute:: Tight
+   :value: 2
+
+
+
+
+
+
+.. vale on

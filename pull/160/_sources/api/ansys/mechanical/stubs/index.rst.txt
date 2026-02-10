@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+
+
+
+
+The ``ansys.mechanical.stubs`` library
+======================================
+
+.. py:module:: ansys.mechanical.stubs
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: stubs
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys`
+            - Ansys module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.stub_generator`
+            - Init file for stub generator.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241`
+            - Ansys Mechanical v241 module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242`
+            - Ansys Mechanical v242 module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v251`
+            - Ansys Mechanical v251 module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252`
+            - Ansys Mechanical v252 module.
+
+
+
+
+
+
+
+
+
+    .. tab-item:: Attributes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~__version__`
+            - Patch version for the ansys-mechanical-stubs package.
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Ansys</api/ansys/mechanical/stubs/Ansys/index>
+    <span class="nf nf-md-package"></span> stub_generator</api/ansys/mechanical/stubs/stub_generator/index>
+    <span class="nf nf-md-package"></span> v241</api/ansys/mechanical/stubs/v241/index>
+    <span class="nf nf-md-package"></span> v242</api/ansys/mechanical/stubs/v242/index>
+    <span class="nf nf-md-package"></span> v251</api/ansys/mechanical/stubs/v251/index>
+    <span class="nf nf-md-package"></span> v252</api/ansys/mechanical/stubs/v252/index>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:data:: __version__
+
+   
+   Patch version for the ansys-mechanical-stubs package.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+.. vale on

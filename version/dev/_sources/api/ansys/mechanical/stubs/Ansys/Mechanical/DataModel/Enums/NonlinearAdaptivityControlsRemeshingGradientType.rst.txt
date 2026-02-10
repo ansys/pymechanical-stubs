@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`NonlinearAdaptivityControlsRemeshingGradientType`
+=========================================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityControlsRemeshingGradientType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NonlinearAdaptivityControlsRemeshingGradientType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NonlinearAdaptivityControlsRemeshingGradientType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AverageGradient`
+            - 
+          * - :py:attr:`~NoGradient`
+            - 
+          * - :py:attr:`~PerfectShapeGradient`
+            - 
+          * - :py:attr:`~PracticalShapeGradient`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AverageGradient
+   :value: 1
+
+
+.. py:attribute:: NoGradient
+   :value: 0
+
+
+.. py:attribute:: PerfectShapeGradient
+   :value: 2
+
+
+.. py:attribute:: PracticalShapeGradient
+   :value: 3
+
+
+
+
+
+
+.. vale on

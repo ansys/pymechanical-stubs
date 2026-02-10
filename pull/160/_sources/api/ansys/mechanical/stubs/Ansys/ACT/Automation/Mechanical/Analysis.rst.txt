@@ -1,0 +1,2376 @@
+.. vale off
+
+
+
+:class:`Analysis`
+=================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Analysis
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Analysis
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddAMOverhangConstraint`
+            - Creates a new AMOverhangConstraint
+          * - :py:attr:`~AddAcceleration`
+            - Creates a new Acceleration
+          * - :py:attr:`~AddAcousticAbsorptionElement`
+            - Creates a new AcousticAbsorptionElement
+          * - :py:attr:`~AddAcousticAbsorptionSurface`
+            - Creates a new AcousticAbsorptionSurface
+          * - :py:attr:`~AddAcousticDiffuseSoundField`
+            - Creates a new AcousticDiffuseSoundField
+          * - :py:attr:`~AddAcousticFarFieldRadationSurface`
+            - Creates a new AcousticFarFieldRadationSurface
+          * - :py:attr:`~AddAcousticFreeSurface`
+            - Creates a new AcousticFreeSurface
+          * - :py:attr:`~AddAcousticImpedanceBoundary`
+            - Creates a new AcousticImpedanceBoundary
+          * - :py:attr:`~AddAcousticImpedanceSheet`
+            - Creates a new AcousticImpedanceSheet
+          * - :py:attr:`~AddAcousticIncidentWaveSource`
+            - Creates a new AcousticIncidentWaveSource
+          * - :py:attr:`~AddAcousticLowReducedFrequency`
+            - Creates a new AcousticLowReducedFrequency
+          * - :py:attr:`~AddAcousticMassSource`
+            - Creates a new AcousticMassSource
+          * - :py:attr:`~AddAcousticMassSourceRate`
+            - Creates a new AcousticMassSourceRate
+          * - :py:attr:`~AddAcousticPort`
+            - Creates a new AcousticPort
+          * - :py:attr:`~AddAcousticPortInDuct`
+            - Creates a new AcousticPortInDuct
+          * - :py:attr:`~AddAcousticPressure`
+            - Creates a new AcousticPressure
+          * - :py:attr:`~AddAcousticRadiationBoundary`
+            - Creates a new AcousticRadiationBoundary
+          * - :py:attr:`~AddAcousticRigidWall`
+            - Creates a new AcousticRigidWall
+          * - :py:attr:`~AddAcousticStaticPressure`
+            - Creates a new AcousticStaticPressure
+          * - :py:attr:`~AddAcousticSurfaceAcceleration`
+            - Creates a new AcousticSurfaceAcceleration
+          * - :py:attr:`~AddAcousticSurfaceVelocity`
+            - Creates a new AcousticSurfaceVelocity
+          * - :py:attr:`~AddAcousticSymmetryPlane`
+            - Creates a new AcousticSymmetryPlane
+          * - :py:attr:`~AddAcousticTemperature`
+            - Creates a new child ThermalCondition.
+          * - :py:attr:`~AddAcousticThermoViscousBLIBoundary`
+            - Creates a new AcousticThermoViscousBLIBoundary
+          * - :py:attr:`~AddAcousticTransferAdmittanceMatrix`
+            - Creates a new AcousticTransferAdmittanceMatrix
+          * - :py:attr:`~AddBearingLoad`
+            - Creates a new BearingLoad
+          * - :py:attr:`~AddBodyControl`
+            - Creates a new BodyControl
+          * - :py:attr:`~AddBoltPretension`
+            - Creates a new BoltPretension
+          * - :py:attr:`~AddCenterOfGravityConstraint`
+            - Creates a new CenterOfGravityConstraint
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddComplexityIndexConstraint`
+            - Creates a new ComplexityIndexConstraint
+          * - :py:attr:`~AddComplianceConstraint`
+            - Creates a new ComplianceConstraint
+          * - :py:attr:`~AddCompressionOnlySupport`
+            - Creates a new CompressionOnlySupport
+          * - :py:attr:`~AddConstraintEquation`
+            - Creates a new ConstraintEquation
+          * - :py:attr:`~AddContactStepControl`
+            - Creates a new ContactStepControl
+          * - :py:attr:`~AddConvection`
+            - ..
+          * - :py:attr:`~AddCoupling`
+            - Creates a new Coupling
+          * - :py:attr:`~AddCriterionConstraint`
+            - Creates a new CriterionConstraint
+          * - :py:attr:`~AddCurrent`
+            - Creates a new Current
+          * - :py:attr:`~AddCyclicManufacturingConstraint`
+            - Creates a new CyclicManufacturingConstraint
+          * - :py:attr:`~AddCylindricalSupport`
+            - Creates a new CylindricalSupport
+          * - :py:attr:`~AddDetonationPoint`
+            - Creates a new DetonationPoint
+          * - :py:attr:`~AddDisplacement`
+            - Creates a new Displacement
+          * - :py:attr:`~AddDisplacementConstraint`
+            - Creates a new DisplacementConstraint
+          * - :py:attr:`~AddDynamicComplianceConstraint`
+            - Creates a new DynamicComplianceConstraint
+          * - :py:attr:`~AddEMTransducer`
+            - Creates a new EMTransducer
+          * - :py:attr:`~AddEarthGravity`
+            - Creates a new EarthGravity
+          * - :py:attr:`~AddElasticSupport`
+            - Creates a new ElasticSupport
+          * - :py:attr:`~AddElectricCharge`
+            - Creates a new ElectricCharge
+          * - :py:attr:`~AddElementBirthAndDeath`
+            - Creates a new ElementBirthAndDeath
+          * - :py:attr:`~AddExtrusionManufacturingConstraint`
+            - Creates a new ExtrusionManufacturingConstraint
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddFixedRotation`
+            - Creates a new FixedRotation
+          * - :py:attr:`~AddFixedSupport`
+            - Creates a new FixedSupport
+          * - :py:attr:`~AddFluidPenetrationPressure`
+            - Creates a new Fluid Penetration Pressure object in Mechanical. This load object is used to simulate surrounding fluid or air penetrating into the contact interface.
+          * - :py:attr:`~AddFluidSolidInterface`
+            - Creates a new FluidSolidInterface
+          * - :py:attr:`~AddForce`
+            - Creates a new Force
+          * - :py:attr:`~AddFrictionlessSupport`
+            - Creates a new FrictionlessSupport
+          * - :py:attr:`~AddGeneralizedPlaneStrain`
+            - Creates a new GeneralizedPlaneStrain
+          * - :py:attr:`~AddGeometryBasedAdaptivity`
+            - Creates a new GeometryBasedAdaptivity
+          * - :py:attr:`~AddGlobalVonMisesStressConstraint`
+            - Creates a new GlobalVonMisesStressConstraint
+          * - :py:attr:`~AddHeatFlow`
+            - Creates a new HeatFlow
+          * - :py:attr:`~AddHeatFlux`
+            - Creates a new HeatFlux
+          * - :py:attr:`~AddHousingConstraint`
+            - Creates a new HousingConstraint
+          * - :py:attr:`~AddHydrostaticPressure`
+            - Creates a new HydrostaticPressure
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddImpedanceBoundary`
+            - Creates a new ImpedanceBoundary
+          * - :py:attr:`~AddImportedCFDPressure`
+            - Creates a new ImportedCFDPressure
+          * - :py:attr:`~AddImportedLoadExternalData`
+            - Creates a new Imported Load (External Data).
+          * - :py:attr:`~AddImportedLoadFluidsResultsFile`
+            - Creates a new Import Load for Fluids Results File.
+          * - :py:attr:`~AddImportedLoadMAPDLResultsFile`
+            - Creates a new Import Load for MAPDL Results File.
+          * - :py:attr:`~AddImportedRemoteLoadsGroup`
+            - Creates a new Import Remote Load Group.
+          * - :py:attr:`~AddInitialVelocity`
+            - Creates a new child Initial Velocity.
+          * - :py:attr:`~AddInternalHeatGeneration`
+            - Creates a new InternalHeatGeneration
+          * - :py:attr:`~AddJointLoad`
+            - Creates a new JointLoad
+          * - :py:attr:`~AddLimitBoundary`
+            - Creates a new LimitBoundary
+          * - :py:attr:`~AddLinePressure`
+            - Creates a new LinePressure
+          * - :py:attr:`~AddLoadApplication`
+            - 
+          * - :py:attr:`~AddLocalVonMisesStressConstraint`
+            - Creates a new LocalVonMisesStressConstraint
+          * - :py:attr:`~AddMagneticFluxParallel`
+            - Creates a new MagneticFluxParallel
+          * - :py:attr:`~AddMassConstraint`
+            - Creates a new MassConstraint
+          * - :py:attr:`~AddMassFlowRate`
+            - Creates a new MassFlowRate
+          * - :py:attr:`~AddMemberSizeManufacturingConstraint`
+            - Creates a new MemberSizeManufacturingConstraint
+          * - :py:attr:`~AddMoment`
+            - Creates a new Moment
+          * - :py:attr:`~AddMomentOfInertiaConstraint`
+            - Creates a new MomentOfInertiaConstraint
+          * - :py:attr:`~AddMorphingRegion`
+            - Creates a new MorphingRegion
+          * - :py:attr:`~AddNaturalFrequencyConstraint`
+            - Creates a new NaturalFrequencyConstraint
+          * - :py:attr:`~AddNodalDisplacement`
+            - Creates a new NodalDisplacement
+          * - :py:attr:`~AddNodalForce`
+            - Creates a new NodalForce
+          * - :py:attr:`~AddNodalOrientation`
+            - Creates a new NodalOrientation
+          * - :py:attr:`~AddNodalPressure`
+            - Creates a new NodalPressure
+          * - :py:attr:`~AddNodalRotation`
+            - Creates a new NodalRotation
+          * - :py:attr:`~AddNonlinearAdaptiveRegion`
+            - Creates a new NonlinearAdaptiveRegion
+          * - :py:attr:`~AddObjective`
+            - Creates a new Objective
+          * - :py:attr:`~AddOptimizationRegion`
+            - Creates a new OptimizationRegion
+          * - :py:attr:`~AddPSDAcceleration`
+            - Creates a new PSDAcceleration
+          * - :py:attr:`~AddPSDDisplacement`
+            - Creates a new PSDDisplacement
+          * - :py:attr:`~AddPSDGAcceleration`
+            - Creates a new PSDGAcceleration
+          * - :py:attr:`~AddPSDPressure`
+            - 
+          * - :py:attr:`~AddPSDVelocity`
+            - Creates a new PSDVelocity
+          * - :py:attr:`~AddPatternRepetitionConstraint`
+            - Creates a new PatternRepetitionConstraint
+          * - :py:attr:`~AddPerfectlyInsulated`
+            - Creates a new PerfectlyInsulated
+          * - :py:attr:`~AddPhysicsRegion`
+            - Creates a new PhysicsRegion
+          * - :py:attr:`~AddPipeIdealization`
+            - Creates a new child PipeIdealization.
+          * - :py:attr:`~AddPipePressure`
+            - Creates a new PipePressure
+          * - :py:attr:`~AddPipeTemperature`
+            - Creates a new PipeTemperature
+          * - :py:attr:`~AddPlasticHeating`
+            - Creates a new PlasticHeating
+          * - :py:attr:`~AddPressure`
+            - Creates a new child Pressure.
+          * - :py:attr:`~AddPullOutDirectionManufacturingConstraint`
+            - Creates a new PullOutDirectionManufacturingConstraint
+          * - :py:attr:`~AddPythonCodeEventBased`
+            - Creates a new PythonCodeEventBased
+          * - :py:attr:`~AddRSAcceleration`
+            - Creates a new RSAcceleration
+          * - :py:attr:`~AddRSDisplacement`
+            - Creates a new RSDisplacement
+          * - :py:attr:`~AddRSVelocity`
+            - Creates a new RSVelocity
+          * - :py:attr:`~AddRadiation`
+            - Creates a new Radiation
+          * - :py:attr:`~AddReactionForceConstraint`
+            - Creates a new ReactionForceConstraint
+          * - :py:attr:`~AddRemoteDisplacement`
+            - Creates a new RemoteDisplacement
+          * - :py:attr:`~AddRemoteForce`
+            - Creates a new RemoteForce
+          * - :py:attr:`~AddRotatingForce`
+            - Creates a new RotatingForce
+          * - :py:attr:`~AddRotationalAcceleration`
+            - Creates a new RotationalAcceleration
+          * - :py:attr:`~AddRotationalVelocity`
+            - Creates a new RotationalVelocity
+          * - :py:attr:`~AddSimplySupported`
+            - Creates a new SimplySupported
+          * - :py:attr:`~AddSourceConductor`
+            - Creates a new child SourceConductor.
+          * - :py:attr:`~AddSubstructureGenerationCondensedPart`
+            - Creates a new SubstructureGenerationCondensedPart
+          * - :py:attr:`~AddSurfaceChargeDensity`
+            - Creates a new SurfaceChargeDensity
+          * - :py:attr:`~AddSymmetryManufacturingConstraint`
+            - Creates a new SymmetryManufacturingConstraint
+          * - :py:attr:`~AddSystemCouplingRegion`
+            - Creates a new SystemCouplingRegion
+          * - :py:attr:`~AddTemperature`
+            - Creates a new child Temperature.
+          * - :py:attr:`~AddTemperatureConstraint`
+            - Creates a new TemperatureConstraint
+          * - :py:attr:`~AddThermalComplianceConstraint`
+            - Creates a new ThermalComplianceConstraint
+          * - :py:attr:`~AddThermalCondition`
+            - ..
+          * - :py:attr:`~AddUniformConstraint`
+            - Creates a new UniformConstraint
+          * - :py:attr:`~AddVelocity`
+            - Creates a new Velocity
+          * - :py:attr:`~AddViscoelasticHeating`
+            - Creates a new ViscoelasticHeating
+          * - :py:attr:`~AddVoltage`
+            - Creates a new Voltage
+          * - :py:attr:`~AddVoltageCoupling`
+            - Creates a new Coupling
+          * - :py:attr:`~AddVoltageGround`
+            - Creates a new VoltageGround
+          * - :py:attr:`~AddVolumeChargeDensity`
+            - Creates a new VolumeChargeDensity
+          * - :py:attr:`~AddVolumeConstraint`
+            - Creates a new VolumeConstraint
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateAutomaticFSI`
+            - Run the CreateAutomaticFSI action.
+          * - :py:attr:`~CreateAutomaticFSIandFarFieldRadiationSurfaces`
+            - Run the CreateAutomaticFSIandEquivalentSourceSurfaces action.
+          * - :py:attr:`~CreateAutomaticFarFieldRadiationSurfaces`
+            - Run the CreateAutomaticEquivalentSourceSurfaces action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Duplicate method.
+          * - :py:attr:`~ExportNastranFile`
+            - Export Nastran File.
+          * - :py:attr:`~FilterBasedOnEnvironment`
+            - Enables interface filtering that only displays model-level items applicable to
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~ImportLoad`
+            - Import Load action.
+          * - :py:attr:`~OpenSolverFilesDirectory`
+            - Run the OpenSolverFilesDirectory action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SelectBodiesWithMultiplePhysicsRegion`
+            - Run the SelectBodiesWithMultiplePhysicsRegion action to select the bodies that belong to more than one Physics Region.
+          * - :py:attr:`~SelectBodiesWithoutPhysicsRegion`
+            - Run the SelectBodiesWithoutPhysicsRegion action to select the bodies that don't belong to a Physics Region.
+          * - :py:attr:`~Solve`
+            - Run the Solve action.
+          * - :py:attr:`~TransferDataFrom`
+            - Transfer Data From action.
+          * - :py:attr:`~UnlinkDataFrom`
+            - Unlink Data From action.
+          * - :py:attr:`~WriteSystemCouplingFiles`
+            - Writes the system coupling files. Usage WriteSystemCouplingFiles("C:\Desktop\temp\scp1.scp");
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AMProcessSimulation`
+            - Gets or sets the AMProcessSimulation.
+          * - :py:attr:`~Acoustics`
+            - Gets or sets the Acoustics.
+          * - :py:attr:`~AnalysisSettings`
+            - Gets the AnalysisSettings.
+          * - :py:attr:`~AnalysisType`
+            - Gets the AnalysisType.
+          * - :py:attr:`~CellId`
+            - Gets the CellId.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Electric`
+            - Gets the Electric.
+          * - :py:attr:`~EnvironmentTemperature`
+            - Gets or sets the EnvironmentTemperature.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GenerateInputOnly`
+            - Gets the GenerateInputOnly.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InitialConditions`
+            - Get InitialConditions.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~PhysicsType`
+            - Gets the PhysicsType.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~ResultFileName`
+            - Get the full path and name of the result file.
+          * - :py:attr:`~Solution`
+            - Gets the Solution.
+          * - :py:attr:`~Structural`
+            - Gets or sets the Structural.
+          * - :py:attr:`~SystemCaption`
+            - Gets the SystemCaption.
+          * - :py:attr:`~Thermal`
+            - Gets the Thermal.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AMProcessSimulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessSimulationType]
+
+
+   
+   Gets or sets the AMProcessSimulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Acoustics
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Acoustics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisSettings
+   :type: Optional[Ansys.ACT.Automation.Mechanical.AnalysisSettings.AnalysisSettings]
+
+
+   
+   Gets the AnalysisSettings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AnalysisType]
+
+
+   
+   Gets the AnalysisType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CellId
+   :type: Optional[str]
+
+
+   
+   Gets the CellId.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Electric
+   :type: Optional[bool]
+
+
+   
+   Gets the Electric.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnvironmentTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the EnvironmentTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateInputOnly
+   :type: Optional[bool]
+
+
+   
+   Gets the GenerateInputOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialConditions
+   :type: Optional[List[Ansys.ACT.Automation.Mechanical.InitialCondition]]
+
+
+   
+   Get InitialConditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSEnvironmentAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PhysicsType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PhysicsType]
+
+
+   
+   Gets the PhysicsType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileName
+   :type: Optional[str]
+
+
+   
+   Get the full path and name of the result file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Solution
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Solution]
+
+
+   
+   Gets the Solution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Structural
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Structural.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SystemCaption
+   :type: Optional[str]
+
+
+   
+   Gets the SystemCaption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Thermal
+   :type: Optional[bool]
+
+
+   
+   Gets the Thermal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAMOverhangConstraint() -> Ansys.ACT.Automation.Mechanical.AMOverhangConstraint
+
+   
+   Creates a new AMOverhangConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcceleration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Acceleration
+
+   
+   Creates a new Acceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticAbsorptionElement() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticAbsorptionElement
+
+   
+   Creates a new AcousticAbsorptionElement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticAbsorptionSurface() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticAbsorptionSurface
+
+   
+   Creates a new AcousticAbsorptionSurface
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticDiffuseSoundField() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticDiffuseSoundField
+
+   
+   Creates a new AcousticDiffuseSoundField
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFarFieldRadationSurface() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticFarFieldRadationSurface
+
+   
+   Creates a new AcousticFarFieldRadationSurface
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticFreeSurface() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticFreeSurface
+
+   
+   Creates a new AcousticFreeSurface
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticImpedanceBoundary() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticImpedanceBoundary
+
+   
+   Creates a new AcousticImpedanceBoundary
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticImpedanceSheet() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticImpedanceSheet
+
+   
+   Creates a new AcousticImpedanceSheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticIncidentWaveSource() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticIncidentWaveSource
+
+   
+   Creates a new AcousticIncidentWaveSource
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticLowReducedFrequency() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticLowReducedFrequency
+
+   
+   Creates a new AcousticLowReducedFrequency
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticMassSource() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticMassSource
+
+   
+   Creates a new AcousticMassSource
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticMassSourceRate() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticMassSourceRate
+
+   
+   Creates a new AcousticMassSourceRate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPort() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticPort
+
+   
+   Creates a new AcousticPort
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPortInDuct() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticPortInDuct
+
+   
+   Creates a new AcousticPortInDuct
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticPressure
+
+   
+   Creates a new AcousticPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticRadiationBoundary() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticRadiationBoundary
+
+   
+   Creates a new AcousticRadiationBoundary
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticRigidWall() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticRigidWall
+
+   
+   Creates a new AcousticRigidWall
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticStaticPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticStaticPressure
+
+   
+   Creates a new AcousticStaticPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticSurfaceAcceleration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticSurfaceAcceleration
+
+   
+   Creates a new AcousticSurfaceAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticSurfaceVelocity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticSurfaceVelocity
+
+   
+   Creates a new AcousticSurfaceVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticSymmetryPlane() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticSymmetryPlane
+
+   
+   Creates a new AcousticSymmetryPlane
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticTemperature() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticTemperature
+
+   
+   Creates a new child ThermalCondition.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticThermoViscousBLIBoundary() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticThermoViscousBLIBoundary
+
+   
+   Creates a new AcousticThermoViscousBLIBoundary
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddAcousticTransferAdmittanceMatrix() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.AcousticTransferAdmittanceMatrix
+
+   
+   Creates a new AcousticTransferAdmittanceMatrix
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBearingLoad() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.BearingLoad
+
+   
+   Creates a new BearingLoad
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBodyControl() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.BodyControl
+
+   
+   Creates a new BodyControl
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBoltPretension() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.BoltPretension
+
+   
+   Creates a new BoltPretension
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCenterOfGravityConstraint() -> Ansys.ACT.Automation.Mechanical.CenterOfGravityConstraint
+
+   
+   Creates a new CenterOfGravityConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComplexityIndexConstraint() -> Ansys.ACT.Automation.Mechanical.ComplexityIndexConstraint
+
+   
+   Creates a new ComplexityIndexConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComplianceConstraint() -> Ansys.ACT.Automation.Mechanical.ComplianceConstraint
+
+   
+   Creates a new ComplianceConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCompressionOnlySupport() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.CompressionOnlySupport
+
+   
+   Creates a new CompressionOnlySupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddConstraintEquation() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ConstraintEquation
+
+   
+   Creates a new ConstraintEquation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactStepControl() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ContactStepControl
+
+   
+   Creates a new ContactStepControl
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddConvection(representation: Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation) -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Convection
+
+   
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCoupling() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Coupling
+
+   
+   Creates a new Coupling
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCriterionConstraint() -> Ansys.ACT.Automation.Mechanical.CriterionConstraint
+
+   
+   Creates a new CriterionConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCurrent() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Current
+
+   
+   Creates a new Current
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCyclicManufacturingConstraint() -> Ansys.ACT.Automation.Mechanical.CyclicManufacturingConstraint
+
+   
+   Creates a new CyclicManufacturingConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCylindricalSupport() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.CylindricalSupport
+
+   
+   Creates a new CylindricalSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDetonationPoint() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.DetonationPoint
+
+   
+   Creates a new DetonationPoint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDisplacement() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Displacement
+
+   
+   Creates a new Displacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDisplacementConstraint() -> Ansys.ACT.Automation.Mechanical.DisplacementConstraint
+
+   
+   Creates a new DisplacementConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDynamicComplianceConstraint() -> Ansys.ACT.Automation.Mechanical.DynamicComplianceConstraint
+
+   
+   Creates a new DynamicComplianceConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEMTransducer() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.EMTransducer
+
+   
+   Creates a new EMTransducer
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEarthGravity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.EarthGravity
+
+   
+   Creates a new EarthGravity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElasticSupport() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ElasticSupport
+
+   
+   Creates a new ElasticSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElectricCharge() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ElectricCharge
+
+   
+   Creates a new ElectricCharge
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementBirthAndDeath() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ElementBirthAndDeath
+
+   
+   Creates a new ElementBirthAndDeath
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddExtrusionManufacturingConstraint() -> Ansys.ACT.Automation.Mechanical.ExtrusionManufacturingConstraint
+
+   
+   Creates a new ExtrusionManufacturingConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFixedRotation() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.FixedRotation
+
+   
+   Creates a new FixedRotation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFixedSupport() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.FixedSupport
+
+   
+   Creates a new FixedSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluidPenetrationPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.FluidPenetrationPressure
+
+.. code-block:: text
+
+   Creates a new Fluid Penetration Pressure object in Mechanical. This load object is used to simulate surrounding fluid or air penetrating into the contact interface.
+       Users can apply this load to flexible-to-flexible or rigid-to-flexible contact pairs. This load object is available for static structural analysis.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFluidSolidInterface() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.FluidSolidInterface
+
+   
+   Creates a new FluidSolidInterface
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddForce() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Force
+
+   
+   Creates a new Force
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFrictionlessSupport() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.FrictionlessSupport
+
+   
+   Creates a new FrictionlessSupport
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGeneralizedPlaneStrain() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.GeneralizedPlaneStrain
+
+   
+   Creates a new GeneralizedPlaneStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGeometryBasedAdaptivity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.GeometryBasedAdaptivity
+
+   
+   Creates a new GeometryBasedAdaptivity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddGlobalVonMisesStressConstraint() -> Ansys.ACT.Automation.Mechanical.GlobalVonMisesStressConstraint
+
+   
+   Creates a new GlobalVonMisesStressConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHeatFlow() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.HeatFlow
+
+   
+   Creates a new HeatFlow
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHeatFlux() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.HeatFlux
+
+   
+   Creates a new HeatFlux
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHousingConstraint() -> Ansys.ACT.Automation.Mechanical.HousingConstraint
+
+   
+   Creates a new HousingConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddHydrostaticPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.HydrostaticPressure
+
+   
+   Creates a new HydrostaticPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImpedanceBoundary() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ImpedanceBoundary
+
+   
+   Creates a new ImpedanceBoundary
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedCFDPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ImportedCFDPressure
+
+   
+   Creates a new ImportedCFDPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedLoadExternalData() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedLoadGroup
+
+   
+   Creates a new Imported Load (External Data).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedLoadFluidsResultsFile() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedLoadGroup
+
+   
+   Creates a new Import Load for Fluids Results File.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedLoadMAPDLResultsFile() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedLoadGroup
+
+   
+   Creates a new Import Load for MAPDL Results File.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedRemoteLoadsGroup() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.LoadGroup
+
+   
+   Creates a new Import Remote Load Group.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInitialVelocity() -> Ansys.ACT.Automation.Mechanical.InitialCondition
+
+   
+   Creates a new child Initial Velocity.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInternalHeatGeneration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.InternalHeatGeneration
+
+   
+   Creates a new InternalHeatGeneration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddJointLoad() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.JointLoad
+
+   
+   Creates a new JointLoad
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLimitBoundary() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.LimitBoundary
+
+   
+   Creates a new LimitBoundary
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinePressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.LinePressure
+
+   
+   Creates a new LinePressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLoadApplication() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.LoadApplication
+   
+
+.. py:method:: AddLocalVonMisesStressConstraint() -> Ansys.ACT.Automation.Mechanical.LocalVonMisesStressConstraint
+
+   
+   Creates a new LocalVonMisesStressConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMagneticFluxParallel() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.MagneticFluxParallel
+
+   
+   Creates a new MagneticFluxParallel
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMassConstraint() -> Ansys.ACT.Automation.Mechanical.MassConstraint
+
+   
+   Creates a new MassConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMassFlowRate() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.MassFlowRate
+
+   
+   Creates a new MassFlowRate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMemberSizeManufacturingConstraint() -> Ansys.ACT.Automation.Mechanical.MemberSizeManufacturingConstraint
+
+   
+   Creates a new MemberSizeManufacturingConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMoment() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Moment
+
+   
+   Creates a new Moment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMomentOfInertiaConstraint() -> Ansys.ACT.Automation.Mechanical.MomentOfInertiaConstraint
+
+   
+   Creates a new MomentOfInertiaConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMorphingRegion() -> Ansys.ACT.Automation.Mechanical.MorphingRegion
+
+   
+   Creates a new MorphingRegion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNaturalFrequencyConstraint() -> Ansys.ACT.Automation.Mechanical.NaturalFrequencyConstraint
+
+   
+   Creates a new NaturalFrequencyConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalDisplacement() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.NodalDisplacement
+
+   
+   Creates a new NodalDisplacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalForce() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.NodalForce
+
+   
+   Creates a new NodalForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalOrientation() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.NodalOrientation
+
+   
+   Creates a new NodalOrientation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.NodalPressure
+
+   
+   Creates a new NodalPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNodalRotation() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.NodalRotation
+
+   
+   Creates a new NodalRotation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNonlinearAdaptiveRegion() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.NonlinearAdaptiveRegion
+
+   
+   Creates a new NonlinearAdaptiveRegion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddObjective() -> Ansys.ACT.Automation.Mechanical.Objective
+
+   
+   Creates a new Objective
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddOptimizationRegion() -> Ansys.ACT.Automation.Mechanical.OptimizationRegion
+
+   
+   Creates a new OptimizationRegion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPSDAcceleration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PSDAcceleration
+
+   
+   Creates a new PSDAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPSDDisplacement() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PSDDisplacement
+
+   
+   Creates a new PSDDisplacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPSDGAcceleration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PSDGAcceleration
+
+   
+   Creates a new PSDGAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPSDPressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PSDPressure
+   
+
+.. py:method:: AddPSDVelocity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PSDVelocity
+
+   
+   Creates a new PSDVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPatternRepetitionConstraint() -> Ansys.ACT.Automation.Mechanical.PatternRepetitionConstraint
+
+   
+   Creates a new PatternRepetitionConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPerfectlyInsulated() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PerfectlyInsulated
+
+   
+   Creates a new PerfectlyInsulated
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPhysicsRegion() -> Ansys.ACT.Automation.Mechanical.PhysicsRegion
+
+   
+   Creates a new PhysicsRegion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPipeIdealization() -> Ansys.ACT.Automation.Mechanical.PipeIdealization
+
+   
+   Creates a new child PipeIdealization.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPipePressure() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PipePressure
+
+   
+   Creates a new PipePressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPipeTemperature() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PipeTemperature
+
+   
+   Creates a new PipeTemperature
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPlasticHeating() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.PlasticHeating
+
+   
+   Creates a new PlasticHeating
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPressure(representation: Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation) -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Pressure
+
+.. code-block:: text
+
+   Creates a new child Pressure.
+   DataRepresentation.Field will use the Field object for working with tabular data
+   DataRepresentation.Flexible allows the use of the following types when the pressure is defined as a normal to a surface:
+   Quantity: The unit must be a valid Pressure unit
+   string: It is interpreted as s table if it matches a Table name. Else it is interpreted as an expresion
+   Table: A table object can be specified.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPullOutDirectionManufacturingConstraint() -> Ansys.ACT.Automation.Mechanical.PullOutDirectionManufacturingConstraint
+
+   
+   Creates a new PullOutDirectionManufacturingConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPythonCodeEventBased() -> Ansys.ACT.Automation.Mechanical.PythonCodeEventBased
+
+   
+   Creates a new PythonCodeEventBased
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRSAcceleration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RSAcceleration
+
+   
+   Creates a new RSAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRSDisplacement() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RSDisplacement
+
+   
+   Creates a new RSDisplacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRSVelocity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RSVelocity
+
+   
+   Creates a new RSVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRadiation() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Radiation
+
+   
+   Creates a new Radiation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddReactionForceConstraint() -> Ansys.ACT.Automation.Mechanical.ReactionForceConstraint
+
+   
+   Creates a new ReactionForceConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRemoteDisplacement() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RemoteDisplacement
+
+   
+   Creates a new RemoteDisplacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRemoteForce() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RemoteForce
+
+   
+   Creates a new RemoteForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRotatingForce() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RotatingForce
+
+   
+   Creates a new RotatingForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRotationalAcceleration() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RotationalAcceleration
+
+   
+   Creates a new RotationalAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddRotationalVelocity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.RotationalVelocity
+
+   
+   Creates a new RotationalVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSimplySupported() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.SimplySupported
+
+   
+   Creates a new SimplySupported
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSourceConductor() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.LoadGroup
+
+   
+   Creates a new child SourceConductor.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSubstructureGenerationCondensedPart() -> Ansys.ACT.Automation.Mechanical.SubstructureGenerationCondensedPart
+
+   
+   Creates a new SubstructureGenerationCondensedPart
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSurfaceChargeDensity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.SurfaceChargeDensity
+
+   
+   Creates a new SurfaceChargeDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSymmetryManufacturingConstraint() -> Ansys.ACT.Automation.Mechanical.SymmetryManufacturingConstraint
+
+   
+   Creates a new SymmetryManufacturingConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSystemCouplingRegion() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.FluidSolidInterface
+
+   
+   Creates a new SystemCouplingRegion
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTemperature(representation: Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation) -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Temperature
+
+   
+   Creates a new child Temperature.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTemperatureConstraint() -> Ansys.ACT.Automation.Mechanical.TemperatureConstraint
+
+   
+   Creates a new TemperatureConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalComplianceConstraint() -> Ansys.ACT.Automation.Mechanical.ThermalComplianceConstraint
+
+   
+   Creates a new ThermalComplianceConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalCondition(representation: Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation) -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ThermalCondition
+
+   
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddUniformConstraint() -> Ansys.ACT.Automation.Mechanical.UniformConstraint
+
+   
+   Creates a new UniformConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVelocity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Velocity
+
+   
+   Creates a new Velocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddViscoelasticHeating() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ViscoelasticHeating
+
+   
+   Creates a new ViscoelasticHeating
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVoltage() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Voltage
+
+   
+   Creates a new Voltage
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVoltageCoupling() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.Coupling
+
+   
+   Creates a new Coupling
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVoltageGround() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.VoltageGround
+
+   
+   Creates a new VoltageGround
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVolumeChargeDensity() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.VolumeChargeDensity
+
+   
+   Creates a new VolumeChargeDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVolumeConstraint() -> Ansys.ACT.Automation.Mechanical.VolumeConstraint
+
+   
+   Creates a new VolumeConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateAutomaticFSI() -> None
+
+   
+   Run the CreateAutomaticFSI action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateAutomaticFSIandFarFieldRadiationSurfaces() -> None
+
+   
+   Run the CreateAutomaticFSIandEquivalentSourceSurfaces action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateAutomaticFarFieldRadiationSurfaces() -> None
+
+   
+   Run the CreateAutomaticEquivalentSourceSurfaces action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Duplicate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportNastranFile(exportOptions: Ansys.ACT.Automation.Mechanical.NastranExportOptions) -> None
+
+   
+   Export Nastran File.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FilterBasedOnEnvironment() -> None
+
+.. code-block:: text
+
+   Enables interface filtering that only displays model-level items applicable to 
+       the currently selected environment type.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportLoad(analysis: Ansys.ACT.Automation.Mechanical.Analysis) -> None
+
+   
+   Import Load action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OpenSolverFilesDirectory() -> None
+
+   
+   Run the OpenSolverFilesDirectory action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SelectBodiesWithMultiplePhysicsRegion() -> None
+
+   
+   Run the SelectBodiesWithMultiplePhysicsRegion action to select the bodies that belong to more than one Physics Region.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SelectBodiesWithoutPhysicsRegion() -> None
+
+   
+   Run the SelectBodiesWithoutPhysicsRegion action to select the bodies that don't belong to a Physics Region. 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Solve(wait: bool) -> None
+
+   
+   Run the Solve action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TransferDataFrom(analysis: Ansys.ACT.Automation.Mechanical.Analysis) -> None
+
+   
+   Transfer Data From action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnlinkDataFrom(analysis: Ansys.ACT.Automation.Mechanical.Analysis) -> None
+
+   
+   Unlink Data From action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WriteSystemCouplingFiles(filename: str) -> None
+
+   
+   Writes the system coupling files. Usage WriteSystemCouplingFiles("C:\Desktop\temp\scp1.scp");
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`AngularVelocityUnitType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.AngularVelocityUnitType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AngularVelocityUnitType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AngularVelocityUnitType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RPM`
+            - 
+          * - :py:attr:`~RadianPerMilliSecond`
+            - 
+          * - :py:attr:`~RadianPerSecond`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: RPM
+   :value: 0
+
+
+.. py:attribute:: RadianPerMilliSecond
+   :value: 2
+
+
+.. py:attribute:: RadianPerSecond
+   :value: 1
+
+
+
+
+
+
+.. vale on

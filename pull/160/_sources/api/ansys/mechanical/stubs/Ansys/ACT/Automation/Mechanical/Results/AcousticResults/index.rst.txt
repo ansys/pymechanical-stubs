@@ -1,0 +1,214 @@
+.. vale off
+
+
+
+
+
+
+
+
+``AcousticResults``
+===================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: AcousticResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticAWeightedSoundPressureLevel`
+            - Defines a AcousticAWeightedSoundPressureLevel.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticAbsorptionCoefficient`
+            - Defines a AcousticAbsorptionCoefficient.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticDiffuseSoundTransmissionLoss`
+            - Defines a AcousticDiffuseSoundTransmissionLoss.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticDirectionalVelocityResult`
+            - Defines a AcousticDirectionalVelocityResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldResult`
+            - Defines a AcousticFarFieldResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldSPLMicWaterfallDiagram`
+            - Defines a AcousticFarFieldSPLMicWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFarFieldSoundPowerLevelWaterfallDiagram`
+            - Defines a AcousticFarFieldSoundPowerLevelWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFrequencyBandAWeightedSPL`
+            - Defines a AcousticFrequencyBandAWeightedSPL.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticFrequencyBandSPL`
+            - Defines a AcousticFrequencyBandSPL.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticKineticEnergy`
+            - Defines a AcousticKineticEnergy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticPotentialEnergy`
+            - Defines a AcousticPotentialEnergy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticPressureResult`
+            - Defines a AcousticPressureResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticResult`
+            - Defines a AcousticResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticReturnLoss`
+            - Defines a AcousticReturnLoss.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticSoundPressureLevel`
+            - Defines a AcousticSoundPressureLevel.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticTotalVelocityResult`
+            - Defines a AcousticTotalVelocityResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.AcousticResults.AcousticTransmissionLoss`
+            - Defines a AcousticTransmissionLoss.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AcousticAWeightedSoundPressureLevel</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticAWeightedSoundPressureLevel>
+    <span class="nf nf-cod-symbol_class"></span> AcousticAbsorptionCoefficient</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticAbsorptionCoefficient>
+    <span class="nf nf-cod-symbol_class"></span> AcousticDiffuseSoundTransmissionLoss</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticDiffuseSoundTransmissionLoss>
+    <span class="nf nf-cod-symbol_class"></span> AcousticDirectionalVelocityResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticDirectionalVelocityResult>
+    <span class="nf nf-cod-symbol_class"></span> AcousticFarFieldResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticFarFieldResult>
+    <span class="nf nf-cod-symbol_class"></span> AcousticFarFieldSPLMicWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticFarFieldSPLMicWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> AcousticFarFieldSoundPowerLevelWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticFarFieldSoundPowerLevelWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> AcousticFrequencyBandAWeightedSPL</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticFrequencyBandAWeightedSPL>
+    <span class="nf nf-cod-symbol_class"></span> AcousticFrequencyBandSPL</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticFrequencyBandSPL>
+    <span class="nf nf-cod-symbol_class"></span> AcousticKineticEnergy</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticKineticEnergy>
+    <span class="nf nf-cod-symbol_class"></span> AcousticPotentialEnergy</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticPotentialEnergy>
+    <span class="nf nf-cod-symbol_class"></span> AcousticPressureResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticPressureResult>
+    <span class="nf nf-cod-symbol_class"></span> AcousticResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticResult>
+    <span class="nf nf-cod-symbol_class"></span> AcousticReturnLoss</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticReturnLoss>
+    <span class="nf nf-cod-symbol_class"></span> AcousticSoundPressureLevel</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticSoundPressureLevel>
+    <span class="nf nf-cod-symbol_class"></span> AcousticTotalVelocityResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticTotalVelocityResult>
+    <span class="nf nf-cod-symbol_class"></span> AcousticTransmissionLoss</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/AcousticTransmissionLoss>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+AcousticResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

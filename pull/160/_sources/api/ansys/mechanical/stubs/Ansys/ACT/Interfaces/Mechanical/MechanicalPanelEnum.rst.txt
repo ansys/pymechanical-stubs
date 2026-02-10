@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`MechanicalPanelEnum`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.MechanicalPanelEnum(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the panel type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MechanicalPanelEnum
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DataView`
+            - 
+          * - :py:attr:`~Graph`
+            - 
+          * - :py:attr:`~Graphics`
+            - 
+          * - :py:attr:`~Outline`
+            - 
+          * - :py:attr:`~TabularData`
+            - 
+          * - :py:attr:`~Wizard`
+            - 
+          * - :py:attr:`~Worksheet`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DataView
+   :value: 0
+
+
+.. py:attribute:: Graph
+   :value: 3
+
+
+.. py:attribute:: Graphics
+   :value: 5
+
+
+.. py:attribute:: Outline
+   :value: 4
+
+
+.. py:attribute:: TabularData
+   :value: 2
+
+
+.. py:attribute:: Wizard
+   :value: 6
+
+
+.. py:attribute:: Worksheet
+   :value: 1
+
+
+
+
+
+
+.. vale on

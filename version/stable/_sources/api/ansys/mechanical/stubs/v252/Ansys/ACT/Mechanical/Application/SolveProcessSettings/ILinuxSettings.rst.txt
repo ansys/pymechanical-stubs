@@ -1,0 +1,126 @@
+.. vale off
+
+
+
+:class:`ILinuxSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ILinuxSettings
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: ILinuxSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - Gets or sets whether or not manual linux settings are enable for the configuration.
+          * - :py:attr:`~UserName`
+            - Gets or sets the user name field for the manual linux settings.
+          * - :py:attr:`~WorkingFolder`
+            - Gets or sets the working folder field for the manual linxus settings.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether or not manual linux settings are enable for the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the user name field for the manual linux settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkingFolder
+   :type: Optional[str]
+
+
+   
+   Gets or sets the working folder field for the manual linxus settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

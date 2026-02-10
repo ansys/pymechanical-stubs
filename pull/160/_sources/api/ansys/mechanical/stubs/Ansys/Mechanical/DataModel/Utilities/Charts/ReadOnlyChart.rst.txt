@@ -1,0 +1,207 @@
+.. vale off
+
+
+
+:class:`ReadOnlyChart`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Utilities.Charts.ReadOnlyChart
+
+   Bases: :py:obj:`object`
+
+
+   
+   ReadOnlyChart is used by objects to display data as a chart.
+   The data itself is treated as read only and cannot be modified.
+   Additional options are provided to customize the presentation of the data itself.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ReadOnlyChart
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetDisplayOptionsForDataset`
+            - Returns a reference to the dataset display options for a specific dataset.
+          * - :py:attr:`~GetLabelCollectionForDataset`
+            - Returns a reference to the label collection for a specific dataset.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Datasets`
+            - Retrieves all datasets of a chart.
+          * - :py:attr:`~NormalizeYAxis`
+            - Allows a normalized display of y-axis values, usually for cases where the axis has mixed quantities.
+          * - :py:attr:`~XAxisDisplayOptions`
+            - Returns a reference to the x-axis display options of a chart.
+          * - :py:attr:`~YAxisDisplayOptions`
+            - Returns a reference to the y-axis display options of a chart.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Datasets
+   :type: Optional[List[Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D]]
+
+
+   
+   Retrieves all datasets of a chart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalizeYAxis
+   :type: Optional[bool]
+
+
+   
+   Allows a normalized display of y-axis values, usually for cases where the axis has mixed quantities.
+   An InvalidOperationException will be thrown if attempting to set to False,
+   when the Y axis datasets have incompatible Quantity types and the UseAutomaticLimits property is also set to False.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XAxisDisplayOptions
+   :type: Optional[Ansys.Mechanical.DataModel.Utilities.Charts.AxisDisplayOptions]
+
+
+   
+   Returns a reference to the x-axis display options of a chart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YAxisDisplayOptions
+   :type: Optional[Ansys.Mechanical.DataModel.Utilities.Charts.AxisDisplayOptions]
+
+
+   
+   Returns a reference to the y-axis display options of a chart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetDisplayOptionsForDataset(dataset: Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D) -> Ansys.Mechanical.DataModel.Utilities.Charts.Dataset2DDisplayOptions
+
+   
+   Returns a reference to the dataset display options for a specific dataset.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLabelCollectionForDataset(dataset: Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D) -> Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection
+
+   
+   Returns a reference to the label collection for a specific dataset.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

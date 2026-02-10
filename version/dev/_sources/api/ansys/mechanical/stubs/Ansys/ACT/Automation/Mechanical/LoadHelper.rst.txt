@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`LoadHelper`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.LoadHelper
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+.. py:currentmodule:: LoadHelper
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SwitchAmbientTemperatureToTabular`
+            - SwitchAmbientTemperatureToTabular method.
+          * - :py:attr:`~SwitchFilmCoefficientToTabular`
+            - SwitchFilmCoefficientToTabular method.
+          * - :py:attr:`~SwitchToTabular`
+            - SwitchToTabular method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: SwitchAmbientTemperatureToTabular(BC: Ansys.ACT.Automation.Mechanical.BoundaryConditions.Convection) -> None
+   :classmethod:
+
+
+   
+   SwitchAmbientTemperatureToTabular method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SwitchFilmCoefficientToTabular(BC: Ansys.ACT.Automation.Mechanical.BoundaryConditions.Convection) -> None
+   :classmethod:
+
+
+   
+   SwitchFilmCoefficientToTabular method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SwitchToTabular(BC: Ansys.ACT.Automation.Mechanical.BoundaryConditions.GenericBoundaryCondition) -> None
+   :classmethod:
+
+
+   
+   SwitchToTabular method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
