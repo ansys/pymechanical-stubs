@@ -17,7 +17,6 @@ on:
         description: "Create stubs using the following python version:"
         type: choice
         options:
-          - '3.10'
           - '3.11'
           - '3.12'
           - '3.13'
@@ -92,7 +91,7 @@ jobs:
       image: ${{ steps.save-versions.outputs.image }}
       # '252'
       version: ${{ steps.save-versions.outputs.version }}
-      # ['3.10', '3.11', '3.12', '3.13']
+      # ['3.11', '3.12', '3.13']
       python-version: ${{ steps.save-versions.outputs.python_version }}
     steps:
       - id: save-versions
@@ -111,10 +110,10 @@ jobs:
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
-            python_version="['3.10', '3.11', '3.12', '3.13']"
+            python_version="['3.11', '3.12', '3.13']"
           else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
-              python_version="['3.10', '3.11', '3.12', '3.13']"
+              python_version="['3.11', '3.12', '3.13']"
             else
               python_version="['${{ inputs.python-version }}']"
             fi
