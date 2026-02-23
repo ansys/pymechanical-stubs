@@ -31,7 +31,7 @@ build = [
     "ansys-pythonnet==3.1.0rc6"
 ]
 doc = [
-    "ansys-tools-common==0.4.3",
+    "ansys-tools-common==0.4.4",
     "ansys-sphinx-theme[autoapi]==1.6.4",
     "Sphinx==7.4.0",
     "sphinx-copybutton==0.5.2",
