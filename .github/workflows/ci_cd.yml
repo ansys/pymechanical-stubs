@@ -17,7 +17,6 @@ on:
         description: "Create stubs using the following python version:"
         type: choice
         options:
-          - '3.10'
           - '3.11'
           - '3.12'
           - '3.13'
@@ -94,6 +93,8 @@ jobs:
       version: ${{ steps.save-versions.outputs.version }}
       # ['3.10', '3.11', '3.12', '3.13']
       python-version: ${{ steps.save-versions.outputs.python_version }}
+      # ['3.11', '3.12', '3.13']
+      stubs-python-version: ${{ steps.save-versions.outputs.stubs_python_version }}
     steps:
       - id: save-versions
         run: |
@@ -112,15 +113,19 @@ jobs:
 
           if [[ -z "${{ inputs.python-version }}" ]]; then
             python_version="['3.10', '3.11', '3.12', '3.13']"
+            stubs_python_version="['3.11', '3.12', '3.13']"
           else
             if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
               python_version="['3.10', '3.11', '3.12', '3.13']"
+              stubs_python_version="['3.11', '3.12', '3.13']"
             else
               python_version="['${{ inputs.python-version }}']"
+              stubs_python_version="['${{ inputs.python-version }}']"
             fi
           fi
 
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
+          echo "stubs_python_version=$stubs_python_version" >> $GITHUB_OUTPUT
 
   config-matrix:
     runs-on: ubuntu-latest
@@ -136,13 +141,12 @@ jobs:
           # For pull requests and merges use latest stable version (252)
           if ${{ github.event_name == 'workflow_dispatch' }}; then
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
-
             echo "doc_build_matrix={\"mechanical-revn\":[${{ needs.set-mechanical-versions.outputs.version }}],\"python-version\":[${{ inputs.python-version }}]}" >> $GITHUB_OUTPUT
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
             echo "doc_build_matrix={\"mechanical-revn\":['241', '242', '251', '252'],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
