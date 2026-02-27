@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`LoadingApplicationType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadingApplicationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadingApplicationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadingApplicationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~LoadVector`
+            - 
+          * - :py:attr:`~Table`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: LoadVector
+   :value: 0
+
+
+.. py:attribute:: Table
+   :value: 1
+
+
+
+
+
+
+.. vale on

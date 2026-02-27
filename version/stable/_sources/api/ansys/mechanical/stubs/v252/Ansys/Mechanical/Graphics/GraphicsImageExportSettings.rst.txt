@@ -1,0 +1,261 @@
+.. vale off
+
+
+
+:class:`GraphicsImageExportSettings`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.GraphicsImageExportSettings
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: GraphicsImageExportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AppendGraph`
+            - Specifies whether to append the viewport graph(s) to the exported image. Defaults to false.
+          * - :py:attr:`~Background`
+            - Specifies the background color. Defaults to GraphicsAppearanceSetting.
+          * - :py:attr:`~Capture`
+            - Specifies what to include in the capture. Defaults to ImageAndLegend.
+          * - :py:attr:`~CurrentGraphicsDisplay`
+            - Specifies whether to use the current graphics display settings. Defaults to true.
+          * - :py:attr:`~FontMagnification`
+            - Specifies the font magnification factor. Defaults to 1.0.
+          * - :py:attr:`~Height`
+            - Specifies the image height. Defaults to 0. If width AND height are zero, this uses the current dimensions. If only one of the two are nonzero, the current dimension’s ratio is used along with the nonzero of the two properties to determine the computed value of the zero property.
+          * - :py:attr:`~Resolution`
+            - Specifies the resolution type. Defaults to NormalResolution.
+          * - :py:attr:`~Width`
+            - Specifies the image width. Defaults to 0. If width AND height are zero, this uses the current dimensions. If only one of the two are nonzero, the current dimension’s ratio is used along with the nonzero of the two properties to determine the computed value of the zero property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AppendGraph
+   :type: Optional[bool]
+
+
+   
+   Specifies whether to append the viewport graph(s) to the exported image. Defaults to false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Background
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GraphicsBackgroundType]
+
+
+   
+   Specifies the background color. Defaults to GraphicsAppearanceSetting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Capture
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GraphicsCaptureType]
+
+
+   
+   Specifies what to include in the capture. Defaults to ImageAndLegend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentGraphicsDisplay
+   :type: Optional[bool]
+
+
+   
+   Specifies whether to use the current graphics display settings. Defaults to true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FontMagnification
+   :type: Optional[float]
+
+
+   
+   Specifies the font magnification factor. Defaults to 1.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Height
+   :type: Optional[int]
+
+
+   
+   Specifies the image height. Defaults to 0. If width AND height are zero, this uses the current dimensions. If only one of the two are nonzero, the current dimension’s ratio is used along with the nonzero of the two properties to determine the computed value of the zero property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Resolution
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GraphicsResolutionType]
+
+
+   
+   Specifies the resolution type. Defaults to NormalResolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Width
+   :type: Optional[int]
+
+
+   
+   Specifies the image width. Defaults to 0. If width AND height are zero, this uses the current dimensions. If only one of the two are nonzero, the current dimension’s ratio is used along with the nonzero of the two properties to determine the computed value of the zero property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

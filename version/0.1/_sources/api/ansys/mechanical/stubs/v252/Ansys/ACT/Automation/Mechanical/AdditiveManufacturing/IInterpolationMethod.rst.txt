@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`IInterpolationMethod`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IInterpolationMethod
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

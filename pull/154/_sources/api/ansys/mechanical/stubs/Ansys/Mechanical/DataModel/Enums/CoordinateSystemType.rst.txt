@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CoordinateSystemType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoordinateSystemType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CoordinateSystemType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoordinateSystemType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Cartesian`
+            - 
+          * - :py:attr:`~Cylindrical`
+            - 
+          * - :py:attr:`~Spherical`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Cartesian
+   :value: 0
+
+
+.. py:attribute:: Cylindrical
+   :value: 1
+
+
+.. py:attribute:: Spherical
+   :value: 2
+
+
+
+
+
+
+.. vale on

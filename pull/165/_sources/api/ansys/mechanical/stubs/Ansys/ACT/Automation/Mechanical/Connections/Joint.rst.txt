@@ -1,0 +1,2521 @@
+.. vale off
+
+
+
+:class:`Joint`
+==============
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.Joint
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Joint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Joint
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~FlipReferenceMobile`
+            - Run the FlipReferenceMobile action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PromoteToNamedSelection`
+            - Run the PromoteToNamedSelection action.
+          * - :py:attr:`~PromoteToRemotePoint`
+            - Run the PromoteToRemotePoint action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BushingWorksheet`
+            - Returns the Bushing Coeffients worksheet associated with Bushing Joint.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConnectionType`
+            - Gets or sets the ConnectionType.
+          * - :py:attr:`~CurveOrientationSurface`
+            - Gets or sets the CurveOrientationSurface.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~EffectiveLength`
+            - Gets or sets the EffectiveLength.
+          * - :py:attr:`~ElementCoordinateSystem`
+            - Gets or sets the ElementCoordinateSystem.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Formulation`
+            - Gets or sets the Formulation.
+          * - :py:attr:`~FrictionCoefficient`
+            - Gets or sets the FrictionCoefficient.
+          * - :py:attr:`~GeneralPrimitiveType`
+            - Gets or sets the GeneralPrimitiveType.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InitialPosition`
+            - Gets or sets the InitialPosition.
+          * - :py:attr:`~InnerRadius`
+            - Gets or sets the InnerRadius.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~JointElementAPDLName`
+            - Gets or sets the JointElementAPDLName.
+          * - :py:attr:`~JointFrictionType`
+            - Gets or sets the JointFrictionType.
+          * - :py:attr:`~MobileAppliedBy`
+            - Gets or sets the MobileAppliedBy.
+          * - :py:attr:`~MobileBeamMaterial`
+            - Gets or sets the MobileBeamMaterial.
+          * - :py:attr:`~MobileBeamRadius`
+            - Gets or sets the MobileBeamRadius.
+          * - :py:attr:`~MobileBehavior`
+            - Gets or sets the MobileBehavior.
+          * - :py:attr:`~MobileBody`
+            - Gets the MobileBody.
+          * - :py:attr:`~MobileCoordinateSystem`
+            - Gets or sets the MobileCoordinateSystem.
+          * - :py:attr:`~MobileFormulation`
+            - Gets or sets the MobileFormulation.
+          * - :py:attr:`~MobileLocation`
+            - Gets or sets the MobileLocation.
+          * - :py:attr:`~MobilePinballRegion`
+            - Gets or sets the MobilePinballRegion.
+          * - :py:attr:`~MobileRelaxationMethod`
+            - Gets or sets the MobileRelaxationMethod.
+          * - :py:attr:`~OuterRadius`
+            - Gets or sets the OuterRadius.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RXMaximum`
+            - Gets or sets the RXMaximum.
+          * - :py:attr:`~RXMaximumType`
+            - Gets or sets the RXMaximumType.
+          * - :py:attr:`~RXMinimum`
+            - Gets or sets the RXMinimum.
+          * - :py:attr:`~RXMinimumType`
+            - Gets or sets the RXMinimumType.
+          * - :py:attr:`~RYMaximum`
+            - Gets or sets the RYMaximum.
+          * - :py:attr:`~RYMaximumType`
+            - Gets or sets the RYMaximumType.
+          * - :py:attr:`~RYMinimum`
+            - Gets or sets the RYMinimum.
+          * - :py:attr:`~RYMinimumType`
+            - Gets or sets the RYMinimumType.
+          * - :py:attr:`~RZMaximum`
+            - Gets or sets the RZMaximum.
+          * - :py:attr:`~RZMaximumType`
+            - Gets or sets the RZMaximumType.
+          * - :py:attr:`~RZMinimum`
+            - Gets or sets the RZMinimum.
+          * - :py:attr:`~RZMinimumType`
+            - Gets or sets the RZMinimumType.
+          * - :py:attr:`~RadialGapHeight`
+            - Gets or sets the RadialGapHeight.
+          * - :py:attr:`~RadialGapInnerDiameter`
+            - Gets or sets the RadialGapInnerDiameter.
+          * - :py:attr:`~RadialGapType`
+            - Gets or sets the RadialGapType.
+          * - :py:attr:`~RadialOuterDiameter`
+            - Gets or sets the RadialOuterDiameter.
+          * - :py:attr:`~Radius`
+            - Gets or sets the Radius.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~ReferenceAppliedBy`
+            - Gets or sets the ReferenceAppliedBy.
+          * - :py:attr:`~ReferenceBeamMaterial`
+            - Gets or sets the ReferenceBeamMaterial.
+          * - :py:attr:`~ReferenceBeamRadius`
+            - Gets or sets the ReferenceBeamRadius.
+          * - :py:attr:`~ReferenceBehavior`
+            - Gets or sets the ReferenceBehavior.
+          * - :py:attr:`~ReferenceBody`
+            - Gets the ReferenceBody.
+          * - :py:attr:`~ReferenceCoordinateSystem`
+            - Gets or sets the ReferenceCoordinateSystem.
+          * - :py:attr:`~ReferenceFormulation`
+            - Gets or sets the ReferenceFormulation.
+          * - :py:attr:`~ReferenceLocation`
+            - Gets or sets the ReferenceLocation.
+          * - :py:attr:`~ReferencePinballRegion`
+            - Gets or sets the ReferencePinballRegion.
+          * - :py:attr:`~ReferenceRelaxationMethod`
+            - Gets or sets the ReferenceRelaxationMethod.
+          * - :py:attr:`~RestitutionFactor`
+            - Gets or sets the RestitutionFactor.
+          * - :py:attr:`~Rotations`
+            - Gets or sets the Rotations.
+          * - :py:attr:`~ScrewPitch`
+            - Gets or sets the ScrewPitch.
+          * - :py:attr:`~SolverElementType`
+            - Gets or sets the SolverElementType.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~SuppressedForSolve`
+            - Gets the SuppressedForSolve.
+          * - :py:attr:`~TorsionalDamping`
+            - Gets or sets the TorsionalDamping.
+          * - :py:attr:`~TorsionalStiffness`
+            - Gets or sets the TorsionalStiffness.
+          * - :py:attr:`~TranslationX`
+            - Gets or sets the TranslationX.
+          * - :py:attr:`~TranslationY`
+            - Gets or sets the TranslationY.
+          * - :py:attr:`~TranslationZ`
+            - Gets or sets the TranslationZ.
+          * - :py:attr:`~Type`
+            - Gets or sets the Type.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~XMaximum`
+            - Gets or sets the XMaximum.
+          * - :py:attr:`~XMaximumType`
+            - Gets or sets the XMaximumType.
+          * - :py:attr:`~XMinimum`
+            - Gets or sets the XMinimum.
+          * - :py:attr:`~XMinimumType`
+            - Gets or sets the XMinimumType.
+          * - :py:attr:`~YMaximum`
+            - Gets or sets the YMaximum.
+          * - :py:attr:`~YMaximumType`
+            - Gets or sets the YMaximumType.
+          * - :py:attr:`~YMinimum`
+            - Gets or sets the YMinimum.
+          * - :py:attr:`~YMinimumType`
+            - Gets or sets the YMinimumType.
+          * - :py:attr:`~ZMaximum`
+            - Gets or sets the ZMaximum.
+          * - :py:attr:`~ZMaximumType`
+            - Gets or sets the ZMaximumType.
+          * - :py:attr:`~ZMinimum`
+            - Gets or sets the ZMinimum.
+          * - :py:attr:`~ZMinimumType`
+            - Gets or sets the ZMinimumType.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BushingWorksheet
+   :type: Optional[Ansys.ACT.Interfaces.Common.IWorksheet]
+
+
+   
+   Returns the Bushing Coeffients worksheet associated with Bushing Joint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointScopingType]
+
+
+   
+   Gets or sets the ConnectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurveOrientationSurface
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the CurveOrientationSurface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EffectiveLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the EffectiveLength.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the ElementCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Formulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointFormulation]
+
+
+   
+   Gets or sets the Formulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FrictionCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the FrictionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeneralPrimitiveType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointGeneralPrimitiveType]
+
+
+   
+   Gets or sets the GeneralPrimitiveType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialPosition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointInitialPosition]
+
+
+   
+   Gets or sets the InitialPosition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InnerRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the InnerRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSJointAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: JointElementAPDLName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the JointElementAPDLName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: JointFrictionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointFrictionType]
+
+
+   
+   Gets or sets the JointFrictionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileAppliedBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RemoteApplicationType]
+
+
+   
+   Gets or sets the MobileAppliedBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBeamMaterial
+   :type: Optional[str]
+
+
+   
+   Gets or sets the MobileBeamMaterial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBeamRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MobileBeamRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadBehavior]
+
+
+   
+   Gets or sets the MobileBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileBody
+   :type: Optional[str]
+
+
+   
+   Gets the MobileBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the MobileCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RemotePointFormulation]
+
+
+   
+   Gets or sets the MobileFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the MobileLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobilePinballRegion
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MobilePinballRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MobileRelaxationMethod
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the MobileRelaxationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OuterRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the OuterRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RXMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RXMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RXMaximumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RXMaximumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RXMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RXMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RXMinimumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RXMinimumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RYMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RYMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RYMaximumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RYMaximumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RYMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RYMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RYMinimumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RYMinimumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RZMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RZMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RZMaximumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RZMaximumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RZMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RZMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RZMinimumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RZMinimumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RadialGapHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RadialGapHeight.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RadialGapInnerDiameter
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RadialGapInnerDiameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RadialGapType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the RadialGapType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RadialOuterDiameter
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RadialOuterDiameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Radius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Radius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceAppliedBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RemoteApplicationType]
+
+
+   
+   Gets or sets the ReferenceAppliedBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBeamMaterial
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ReferenceBeamMaterial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBeamRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ReferenceBeamRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadBehavior]
+
+
+   
+   Gets or sets the ReferenceBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceBody
+   :type: Optional[str]
+
+
+   
+   Gets the ReferenceBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the ReferenceCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RemotePointFormulation]
+
+
+   
+   Gets or sets the ReferenceFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the ReferenceLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferencePinballRegion
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ReferencePinballRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceRelaxationMethod
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReferenceRelaxationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RestitutionFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the RestitutionFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Rotations
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointRotationDOFType]
+
+
+   
+   Gets or sets the Rotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScrewPitch
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ScrewPitch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverElementType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointSolverElementType]
+
+
+   
+   Gets or sets the SolverElementType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SuppressedForSolve
+   :type: Optional[bool]
+
+
+   
+   Gets the SuppressedForSolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TorsionalDamping
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the TorsionalDamping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TorsionalStiffness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the TorsionalStiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TranslationX
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FixedOrFree]
+
+
+   
+   Gets or sets the TranslationX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TranslationY
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FixedOrFree]
+
+
+   
+   Gets or sets the TranslationY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TranslationZ
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FixedOrFree]
+
+
+   
+   Gets or sets the TranslationZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointType]
+
+
+   
+   Gets or sets the Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the XMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XMaximumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the XMaximumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the XMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XMinimumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the XMinimumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the YMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YMaximumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the YMaximumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the YMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YMinimumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the YMinimumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ZMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZMaximumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the ZMaximumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ZMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZMinimumType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.JointStopType]
+
+
+   
+   Gets or sets the ZMinimumType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FlipReferenceMobile() -> None
+
+   
+   Run the FlipReferenceMobile action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToNamedSelection() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Run the PromoteToNamedSelection action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToRemotePoint() -> Iterable[Ansys.ACT.Automation.Mechanical.RemotePoint]
+
+   
+   Run the PromoteToRemotePoint action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

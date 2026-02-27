@@ -1,0 +1,1252 @@
+.. vale off
+
+
+
+:class:`CondensedPart`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.CondensedPart
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a CondensedPart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPart
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~DetectCondensedPartInterface`
+            - Run the DetectCondensedPartInterface action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Export`
+            - Run the Export Condensed Part action.
+          * - :py:attr:`~GenerateCondensedParts`
+            - Run the GenerateCondensedParts action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AttachmentMethod`
+            - Gets or sets the AttachmentMethod.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FutureExpansion`
+            - Gets or sets the FutureExpansion.
+          * - :py:attr:`~FutureIntent`
+            - "FutureIntent" property defines the type of solver supported to perform a use pass with the condensed part.
+          * - :py:attr:`~GenerateDampingMatrix`
+            - Gets or sets the GenerateDampingMatrix.
+          * - :py:attr:`~GeometrySelection`
+            - Gets or sets the GeometrySelection.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InterfaceMethod`
+            - Gets or sets the InterfaceMethod.
+          * - :py:attr:`~Interfaces`
+            - Returns the Interfaces of the condensed part
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~KeepFilesFor`
+            - Gets or sets the KeepFilesFor.
+          * - :py:attr:`~LumpedMassFormulation`
+            - Gets or sets the LumpedMassFormulation.
+          * - :py:attr:`~MaximumFrequency`
+            - Gets or sets the MaximumFrequency.
+          * - :py:attr:`~MinimumFrequency`
+            - Gets or sets the MinimumFrequency.
+          * - :py:attr:`~NumberInterfaceEntries`
+            - Gets the NumberInterfaceEntries.
+          * - :py:attr:`~NumberMasterNodes`
+            - Gets the NumberMasterNodes.
+          * - :py:attr:`~NumberOfModes`
+            - Gets or sets the NumberOfModes.
+          * - :py:attr:`~Physics`
+            - Gets the Physics.
+          * - :py:attr:`~PointMassTreatment`
+            - Gets or sets the PointMassTreatment.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RangeSearch`
+            - Gets or sets the RangeSearch.
+          * - :py:attr:`~ReductionMethod`
+            - Gets or sets the ReductionMethod.
+          * - :py:attr:`~ReferenceTemperature`
+            - Gets or sets the ReferenceTemperature.
+          * - :py:attr:`~SolutionName`
+            - Gets or sets the SolutionName.
+          * - :py:attr:`~SolutionNameMode`
+            - Gets or sets the SolutionNameMode.
+          * - :py:attr:`~SolverFilesDirectory`
+            - Gets the SolverFilesDirectory.
+          * - :py:attr:`~SolverType`
+            - Gets or sets the SolverType.
+          * - :py:attr:`~SolverUnitSystem`
+            - Gets or sets the SolverUnitSystem.
+          * - :py:attr:`~SolverUnits`
+            - Gets or sets the SolverUnits.
+          * - :py:attr:`~StoreBasisResults`
+            - Gets or sets the StoreBasisResults.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~TemperatureUnits`
+            - Gets the TemperatureUnits.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AttachmentMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartCMSAttachmentMethod]
+
+
+   
+   Gets or sets the AttachmentMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FutureExpansion
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoProgrammedControlled]
+
+
+   
+   Gets or sets the FutureExpansion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FutureIntent
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FutureIntentType]
+
+
+   
+   "FutureIntent" property defines the type of solver supported to perform a use pass with the condensed part.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateDampingMatrix
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoProgrammedControlled]
+
+
+   
+   Gets or sets the GenerateDampingMatrix.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the GeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InterfaceMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartInterfaceMethod]
+
+
+   
+   Gets or sets the InterfaceMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Interfaces
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CondensedPartInterfaces]
+
+
+   
+   Returns the Interfaces of the condensed part
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSCondensedPartAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KeepFilesFor
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartKeepFilesFor]
+
+
+   
+   Gets or sets the KeepFilesFor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LumpedMassFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartLumpedMassFormulation]
+
+
+   
+   Gets or sets the LumpedMassFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MaximumFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MinimumFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberInterfaceEntries
+   :type: Optional[int]
+
+
+   
+   Gets the NumberInterfaceEntries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberMasterNodes
+   :type: Optional[int]
+
+
+   
+   Gets the NumberMasterNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfModes
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfModes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Physics
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartPhysics]
+
+
+   
+   Gets the Physics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PointMassTreatment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartPointMassTreatment]
+
+
+   
+   Gets or sets the PointMassTreatment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RangeSearch
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the RangeSearch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReductionMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CondensedPartReductionMethod]
+
+
+   
+   Gets or sets the ReductionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ReferenceTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the SolutionName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionNameMode
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutomaticOrManual]
+
+
+   
+   Gets or sets the SolutionNameMode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the SolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverType]
+
+
+   
+   Gets or sets the SolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverUnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the SolverUnitSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverUnits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverUnitsControlType]
+
+
+   
+   Gets or sets the SolverUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreBasisResults
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoProgrammedControlled]
+
+
+   
+   Gets or sets the StoreBasisResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemperatureUnits
+   :type: Optional[str]
+
+
+   
+   Gets the TemperatureUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DetectCondensedPartInterface() -> None
+
+   
+   Run the DetectCondensedPartInterface action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Export(exportFileName: str, exportFormat: Ansys.Mechanical.DataModel.MechanicalEnums.CondensedParts.ExportFormat, exportSettings: Ansys.ACT.Automation.Mechanical.CondensedParts.ExportSettings) -> None
+
+   
+   Run the Export Condensed Part action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateCondensedParts() -> None
+
+   
+   Run the GenerateCondensedParts action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

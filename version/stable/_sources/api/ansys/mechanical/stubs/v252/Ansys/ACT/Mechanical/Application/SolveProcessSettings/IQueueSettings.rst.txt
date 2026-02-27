@@ -1,0 +1,234 @@
+.. vale off
+
+
+
+:class:`IQueueSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Application.SolveProcessSettings.IQueueSettings
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: IQueueSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DCSPassword`
+            - DCSPassword property.
+          * - :py:attr:`~DCSUrl`
+            - DCSUrl property.
+          * - :py:attr:`~DCSUsername`
+            - DCSUsername property.
+          * - :py:attr:`~JobName`
+            - Gets or sets the Job Name field for the queue settings.
+          * - :py:attr:`~License`
+            - Gets or sets the License field for the queue settings.
+          * - :py:attr:`~Name`
+            - Gets or sets the name of the current queue for the configuration.
+          * - :py:attr:`~SolutionExecutionTarget`
+            - SolutionExecutionTarget property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DCSPassword
+   :type: Optional[str]
+
+
+   
+   DCSPassword property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DCSUrl
+   :type: Optional[str]
+
+
+   
+   DCSUrl property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DCSUsername
+   :type: Optional[str]
+
+
+   
+   DCSUsername property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: JobName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Job Name field for the queue settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: License
+   :type: Optional[str]
+
+
+   
+   Gets or sets the License field for the queue settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets the name of the current queue for the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolutionExecutionTarget
+   :type: Optional[str]
+
+
+   
+   SolutionExecutionTarget property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

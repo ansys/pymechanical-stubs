@@ -1,0 +1,174 @@
+.. vale off
+
+
+
+:class:`CommandNodalLoad`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNodalLoad
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents an nodal load  associated to an FBLOCK or DBlock  command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandNodalLoad
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dof`
+            - Gets the dof.
+          * - :py:attr:`~Node`
+            - Gets the node number.
+          * - :py:attr:`~ValueCount`
+            - Gets the number of values.
+          * - :py:attr:`~Values`
+            - Gets the values.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Dof
+   :type: Optional[str]
+
+
+   
+   Gets the dof.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Node
+   :type: Optional[int]
+
+
+   
+   Gets the node number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ValueCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[tuple[Any]]
+
+
+   
+   Gets the values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

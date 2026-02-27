@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`HourglassDampingType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HourglassDampingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the HourglassDampingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HourglassDampingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AutodynStandard`
+            - 
+          * - :py:attr:`~FlanaganBelytschko`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AutodynStandard
+   :value: 0
+
+
+.. py:attribute:: FlanaganBelytschko
+   :value: 1
+
+
+
+
+
+
+.. vale on

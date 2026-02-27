@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ExclusionType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ExclusionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExclusionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExclusionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Isotropic`
+            - 
+          * - :py:attr:`~Orthotropic`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Isotropic
+   :value: 0
+
+
+.. py:attribute:: Orthotropic
+   :value: 1
+
+
+
+
+
+
+.. vale on

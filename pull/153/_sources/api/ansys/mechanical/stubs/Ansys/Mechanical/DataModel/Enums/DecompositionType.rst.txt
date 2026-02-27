@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`DecompositionType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DecompositionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   The DecompositionType Enum in Multizone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DecompositionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxisSweep`
+            - 
+          * - :py:attr:`~CartSweep`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Standard`
+            - 
+          * - :py:attr:`~ThinSweep`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AxisSweep
+   :value: 4
+
+
+.. py:attribute:: CartSweep
+   :value: 2
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Standard
+   :value: 3
+
+
+.. py:attribute:: ThinSweep
+   :value: 1
+
+
+
+
+
+
+.. vale on

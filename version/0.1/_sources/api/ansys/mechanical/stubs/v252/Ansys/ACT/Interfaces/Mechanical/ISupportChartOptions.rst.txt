@@ -1,0 +1,93 @@
+.. vale off
+
+
+
+:class:`ISupportChartOptions`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.ISupportChartOptions
+
+   Bases: :py:obj:`object`
+
+
+   
+   An interface that provides common functionalities to every object in the Tree that uses the ReadOnlyChart object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISupportChartOptions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Charts`
+            - Gets a list of all charts on the object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Charts
+   :type: Optional[List[Ansys.ACT.Interfaces.Mechanical.IReadOnlyChart]]
+
+
+   
+   Gets a list of all charts on the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

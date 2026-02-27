@@ -1,0 +1,97 @@
+.. vale off
+
+
+
+:class:`UnitsHelper`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Mechanical.UnitsHelper
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines set of methods that can be used to find mechanical unit information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+.. py:currentmodule:: UnitsHelper
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConvertMechanicalUnitToCoreUnit`
+            - Takes input mechanical unit string and category string
+          * - :py:attr:`~GetValidQuantityNamesAndUnits`
+            - Retrieve a dictionary of quantity names to unit strings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: ConvertMechanicalUnitToCoreUnit(mechanicalUnit: str, unitCategory: str) -> str
+   :classmethod:
+
+
+.. code-block:: text
+
+   Takes input mechanical unit string and category string
+   And returns framework unit string which can be used for conversion
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetValidQuantityNamesAndUnits() -> dict[str, str]
+   :classmethod:
+
+
+.. code-block:: text
+
+   Retrieve a dictionary of quantity names to unit strings.
+   These quantity names represent valid quantity names that can be used when defining quantities in 
+   Mechanical ACT extensions.        
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

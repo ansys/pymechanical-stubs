@@ -1,0 +1,1054 @@
+.. vale off
+
+
+
+:class:`ImportedLoadGroup`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedLoadGroup
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ImportedLoadGroup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportedLoadGroup
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddImportedBodyForceDensity`
+            - Creates a new ImportedBodyForceDensity
+          * - :py:attr:`~AddImportedBodyTemperature`
+            - Creates a new ImportedBodyTemperature
+          * - :py:attr:`~AddImportedCFDPressure`
+            - Creates a new Imported CFD Pressure object to map pressure loading read from a Fluent-Mechanical coupling data (.cgns) file.
+          * - :py:attr:`~AddImportedConvection`
+            - Creates a new ImportedConvection
+          * - :py:attr:`~AddImportedCutBoundaryConstraint`
+            - Creates a new ImportedDisplacement
+          * - :py:attr:`~AddImportedCutBoundaryRemoteConstraint`
+            - Creates a new ImportedCutBoundaryRemoteConstraint
+          * - :py:attr:`~AddImportedCutBoundaryRemoteForce`
+            - Creates a new ImportedCutBoundaryRemoteForce
+          * - :py:attr:`~AddImportedDisplacement`
+            - Creates a new ImportedDisplacement
+          * - :py:attr:`~AddImportedElementOrientation`
+            - Creates a new ImportedElementOrientation
+          * - :py:attr:`~AddImportedFiberRatio`
+            - Creates a new ImportedFiberRatio
+          * - :py:attr:`~AddImportedForce`
+            - Creates a new ImportedForce
+          * - :py:attr:`~AddImportedHeatFlux`
+            - Creates a new ImportedHeatFlux
+          * - :py:attr:`~AddImportedHeatGeneration`
+            - Creates a new ImportedHeatGeneration
+          * - :py:attr:`~AddImportedInitialStrain`
+            - Creates a new ImportedInitialStrain
+          * - :py:attr:`~AddImportedInitialStress`
+            - Creates a new ImportedInitialStress
+          * - :py:attr:`~AddImportedMaterialField`
+            - Creates a new ImportedMaterialField
+          * - :py:attr:`~AddImportedPressure`
+            - Creates a new ImportedPressure
+          * - :py:attr:`~AddImportedSurfaceForceDensity`
+            - Creates a new ImportedSurfaceForceDensity
+          * - :py:attr:`~AddImportedTemperature`
+            - Creates a new ImportedTemperature
+          * - :py:attr:`~AddImportedThickness`
+            - Creates a new ImportedThickness
+          * - :py:attr:`~AddImportedTrace`
+            - Creates a new ImportedTrace
+          * - :py:attr:`~AddImportedVelocity`
+            - Creates a new ImportedVelocity
+          * - :py:attr:`~AddImportedWarpWeftRatio`
+            - Creates a new ImportedWarpWeftRatio
+          * - :py:attr:`~AddImportedYarnAngle`
+            - Creates a new ImportedYarnAngle
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateBodyForceDensitiesAndSyncAnalysisSettings`
+            - Create body force densities for all RPMs.
+          * - :py:attr:`~CreateExternalLoadVelocitiesAndSyncAnalysisSettings`
+            - Run the CreateExternalLoadVelocitiesAndSyncAnalysisSettings action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~CreateSurfaceForceDensitiesAndSyncAnalysisSettings`
+            - Create surface force densities for all RPMs.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetExternalDataFiles`
+            - ..
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~ImportExternalDataFiles`
+            - ..
+          * - :py:attr:`~ImportLoad`
+            - Run the ImportLoad action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RefreshImportedLoad`
+            - Run the RefreshImportedLoad action.
+          * - :py:attr:`~ReloadExternalDataFiles`
+            - Reloads the external data files for current Imported Load Group.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SetResultFile`
+            - Sets the ResultFile with unitSystem supplied. For MAPDL Results File without a unit system.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DeleteMappedDataFilesAfterImport`
+            - Gets or sets the DeleteMappedDataFilesAfterImport.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FilesDirectory`
+            - Gets the FilesDirectory.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ResultFile`
+            - Gets or sets the ResultFile.
+          * - :py:attr:`~ResultFileTimestamp`
+            - Gets the ResultFileTimestamp.
+          * - :py:attr:`~ResultFileUnitSystem`
+            - Gets or sets the ResultFileUnitSystem.
+          * - :py:attr:`~Source`
+            - Gets the Source.
+          * - :py:attr:`~SourceDimension`
+            - Gets or sets the SourceDimension.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~TransferStep`
+            - Controls which additive simulation step is used for the data transfer.
+          * - :py:attr:`~TransferTemperaturesDuringSolve`
+            - Gets or sets the TransferTemperaturesDuringSolve.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeleteMappedDataFilesAfterImport
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the DeleteMappedDataFilesAfterImport.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the FilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSExternalLoadGroupAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFile
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ResultFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileTimestamp
+   :type: Optional[str]
+
+
+   
+   Gets the ResultFileTimestamp.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultFileUnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the ResultFileUnitSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Source
+   :type: Optional[str]
+
+
+   
+   Gets the Source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceDimension
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SourceDimension]
+
+
+   
+   Gets or sets the SourceDimension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransferStep
+   :type: Optional[int]
+
+
+   
+   Controls which additive simulation step is used for the data transfer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransferTemperaturesDuringSolve
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the TransferTemperaturesDuringSolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedBodyForceDensity() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedBodyForceDensity
+
+   
+   Creates a new ImportedBodyForceDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedBodyTemperature() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedBodyTemperature
+
+   
+   Creates a new ImportedBodyTemperature
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedCFDPressure() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedPressure
+
+   
+   Creates a new Imported CFD Pressure object to map pressure loading read from a Fluent-Mechanical coupling data (.cgns) file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedConvection() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedConvection
+
+   
+   Creates a new ImportedConvection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedCutBoundaryConstraint() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedDisplacement
+
+   
+   Creates a new ImportedDisplacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedCutBoundaryRemoteConstraint() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedCutBoundaryRemoteConstraint
+
+   
+   Creates a new ImportedCutBoundaryRemoteConstraint
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedCutBoundaryRemoteForce() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedCutBoundaryRemoteForce
+
+   
+   Creates a new ImportedCutBoundaryRemoteForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedDisplacement() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedDisplacement
+
+   
+   Creates a new ImportedDisplacement
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedElementOrientation() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedElementOrientation
+
+   
+   Creates a new ImportedElementOrientation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedFiberRatio() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedFiberRatio
+
+   
+   Creates a new ImportedFiberRatio
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedForce() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedForce
+
+   
+   Creates a new ImportedForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedHeatFlux() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedHeatFlux
+
+   
+   Creates a new ImportedHeatFlux
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedHeatGeneration() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedHeatGeneration
+
+   
+   Creates a new ImportedHeatGeneration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedInitialStrain() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedInitialStrain
+
+   
+   Creates a new ImportedInitialStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedInitialStress() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedInitialStress
+
+   
+   Creates a new ImportedInitialStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedMaterialField() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedMaterialField
+
+   
+   Creates a new ImportedMaterialField
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedPressure() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedPressure
+
+   
+   Creates a new ImportedPressure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedSurfaceForceDensity() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedSurfaceForceDensity
+
+   
+   Creates a new ImportedSurfaceForceDensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedTemperature() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedTemperature
+
+   
+   Creates a new ImportedTemperature
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedThickness() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedThickness
+
+   
+   Creates a new ImportedThickness
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedTrace() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedTrace
+
+   
+   Creates a new ImportedTrace
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedVelocity() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedVelocity
+
+   
+   Creates a new ImportedVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedWarpWeftRatio() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedWarpWeftRatio
+
+   
+   Creates a new ImportedWarpWeftRatio
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedYarnAngle() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedYarnAngle
+
+   
+   Creates a new ImportedYarnAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateBodyForceDensitiesAndSyncAnalysisSettings() -> None
+
+   
+   Create body force densities for all RPMs.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateExternalLoadVelocitiesAndSyncAnalysisSettings() -> None
+
+   
+   Run the CreateExternalLoadVelocitiesAndSyncAnalysisSettings action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateSurfaceForceDensitiesAndSyncAnalysisSettings() -> None
+
+   
+   Create surface force densities for all RPMs.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetExternalDataFiles() -> Ansys.Mechanical.ExternalData.ExternalDataFileCollection
+
+   
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportExternalDataFiles(externalDataFiles: Ansys.Mechanical.ExternalData.ExternalDataFileCollection) -> None
+
+   
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportLoad() -> None
+
+   
+   Run the ImportLoad action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RefreshImportedLoad() -> None
+
+   
+   Run the RefreshImportedLoad action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ReloadExternalDataFiles() -> None
+
+   
+   Reloads the external data files for current Imported Load Group.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetResultFile(resultFile: str, unitSystem: Ansys.Mechanical.DataModel.Enums.WBUnitSystemType) -> None
+
+   
+   Sets the ResultFile with unitSystem supplied. For MAPDL Results File without a unit system.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

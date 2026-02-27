@@ -1,0 +1,214 @@
+.. vale off
+
+
+
+:class:`MappingVariableType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingVariableType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access:
+
+     >>> Color.RED
+     <Color.RED: 1>
+
+   - value lookup:
+
+     >>> Color(1)
+     <Color.RED: 1>
+
+   - name lookup:
+
+     >>> Color['RED']
+     <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MappingVariableType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MappingTransferConvectionCoefficient`
+            - 
+          * - :py:attr:`~MappingTransferDisplacementAndRotation`
+            - 
+          * - :py:attr:`~MappingTransferDisplacements`
+            - 
+          * - :py:attr:`~MappingTransferElementOrientation`
+            - 
+          * - :py:attr:`~MappingTransferForce`
+            - 
+          * - :py:attr:`~MappingTransferForceDensity`
+            - 
+          * - :py:attr:`~MappingTransferHeatFlux`
+            - 
+          * - :py:attr:`~MappingTransferHeatGeneration`
+            - 
+          * - :py:attr:`~MappingTransferHeatRate`
+            - 
+          * - :py:attr:`~MappingTransferMaterialField`
+            - 
+          * - :py:attr:`~MappingTransferMetalFraction`
+            - 
+          * - :py:attr:`~MappingTransferPressure`
+            - 
+          * - :py:attr:`~MappingTransferRotation`
+            - 
+          * - :py:attr:`~MappingTransferStrain`
+            - 
+          * - :py:attr:`~MappingTransferStress`
+            - 
+          * - :py:attr:`~MappingTransferTemperature`
+            - 
+          * - :py:attr:`~MappingTransferThickness`
+            - 
+          * - :py:attr:`~MappingTransferUnknown`
+            - 
+          * - :py:attr:`~MappingTransferVelocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MappingTransferConvectionCoefficient
+   :value: 2
+
+
+.. py:attribute:: MappingTransferDisplacementAndRotation
+   :value: 13
+
+
+.. py:attribute:: MappingTransferDisplacements
+   :value: 7
+
+
+.. py:attribute:: MappingTransferElementOrientation
+   :value: 18
+
+
+.. py:attribute:: MappingTransferForce
+   :value: 10
+
+
+.. py:attribute:: MappingTransferForceDensity
+   :value: 5
+
+
+.. py:attribute:: MappingTransferHeatFlux
+   :value: 4
+
+
+.. py:attribute:: MappingTransferHeatGeneration
+   :value: 3
+
+
+.. py:attribute:: MappingTransferHeatRate
+   :value: 9
+
+
+.. py:attribute:: MappingTransferMaterialField
+   :value: 17
+
+
+.. py:attribute:: MappingTransferMetalFraction
+   :value: 16
+
+
+.. py:attribute:: MappingTransferPressure
+   :value: 6
+
+
+.. py:attribute:: MappingTransferRotation
+   :value: 12
+
+
+.. py:attribute:: MappingTransferStrain
+   :value: 15
+
+
+.. py:attribute:: MappingTransferStress
+   :value: 14
+
+
+.. py:attribute:: MappingTransferTemperature
+   :value: 1
+
+
+.. py:attribute:: MappingTransferThickness
+   :value: 8
+
+
+.. py:attribute:: MappingTransferUnknown
+   :value: 0
+
+
+.. py:attribute:: MappingTransferVelocity
+   :value: 11
+
+
+
+
+
+
+.. vale on

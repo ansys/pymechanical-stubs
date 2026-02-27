@@ -1,0 +1,174 @@
+.. vale off
+
+
+
+:class:`CommandLayer`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandLayer
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a layer associated to a shell SECBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandLayer
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Mat`
+            - Gets the material number.
+          * - :py:attr:`~Numpt`
+            - Gets the number of integration points in the layer.
+          * - :py:attr:`~Theta`
+            - Gets the layer orientation angle.
+          * - :py:attr:`~Thick`
+            - Gets the thickness.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Mat
+   :type: Optional[int]
+
+
+   
+   Gets the material number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Numpt
+   :type: Optional[int]
+
+
+   
+   Gets the number of integration points in the layer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Theta
+   :type: Optional[float]
+
+
+   
+   Gets the layer orientation angle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Thick
+   :type: Optional[float]
+
+
+   
+   Gets the thickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

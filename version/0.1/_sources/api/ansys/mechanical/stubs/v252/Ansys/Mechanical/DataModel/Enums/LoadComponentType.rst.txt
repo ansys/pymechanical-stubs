@@ -1,0 +1,126 @@
+.. vale off
+
+
+
+:class:`LoadComponentType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.LoadComponentType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadComponentType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadComponentType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Magnitude`
+            - 
+          * - :py:attr:`~MagnitudeImag`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~XComponent`
+            - 
+          * - :py:attr:`~XComponentImag`
+            - 
+          * - :py:attr:`~YComponent`
+            - 
+          * - :py:attr:`~YComponentImag`
+            - 
+          * - :py:attr:`~ZComponent`
+            - 
+          * - :py:attr:`~ZComponentImag`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 8
+
+
+.. py:attribute:: Magnitude
+   :value: 0
+
+
+.. py:attribute:: MagnitudeImag
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: -1
+
+
+.. py:attribute:: XComponent
+   :value: 2
+
+
+.. py:attribute:: XComponentImag
+   :value: 5
+
+
+.. py:attribute:: YComponent
+   :value: 3
+
+
+.. py:attribute:: YComponentImag
+   :value: 6
+
+
+.. py:attribute:: ZComponent
+   :value: 4
+
+
+.. py:attribute:: ZComponentImag
+   :value: 7
+
+
+
+
+
+
+.. vale on

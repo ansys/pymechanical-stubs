@@ -1,0 +1,1165 @@
+.. vale off
+
+
+
+:class:`ModelImport`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.ModelImport
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ModelImport.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModelImport
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AnalysisTypeDimensionSetting`
+            - Gets or sets the AnalysisTypeDimensionSetting.
+          * - :py:attr:`~BodyGroupByAnsysElmTypeNumber`
+            - Gets or sets the BodyGroupByAnsysElmTypeNumber.
+          * - :py:attr:`~BodyGroupByMaterialNumber`
+            - Gets or sets the BodyGroupByMaterialNumber.
+          * - :py:attr:`~BodyGroupByThickness`
+            - Gets or sets the BodyGroupByThickness.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CreateGeometry`
+            - Gets or sets the CreateGeometry.
+          * - :py:attr:`~CreateGeometryEdgeComponents`
+            - Gets or sets the CreateGeometryEdgeComponents.
+          * - :py:attr:`~CreateGeometryFaceComponents`
+            - Gets or sets the CreateGeometryFaceComponents.
+          * - :py:attr:`~CreateGeometryVertexComponent`
+            - Gets or sets the CreateGeometryVertexComponent.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~ElementComponentKey`
+            - Gets or sets the ElementComponentKey.
+          * - :py:attr:`~ElementOffset`
+            - Gets or sets the ElementOffset.
+          * - :py:attr:`~FaceComponentKey`
+            - Gets or sets the FaceComponentKey.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GeometryComponentKey`
+            - Gets or sets the GeometryComponentKey.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~ImportMaterials`
+            - Gets or sets the ImportMaterials.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~ModelImportSourceFilePath`
+            - Gets or sets the ModelImportSourceFilePath.
+          * - :py:attr:`~NodalComponentKey`
+            - Gets or sets the NodalComponentKey.
+          * - :py:attr:`~NodeAndElementRenumberingMethod`
+            - Gets or sets the NodeAndElementRenumberingMethod.
+          * - :py:attr:`~NodeOffset`
+            - Gets or sets the NodeOffset.
+          * - :py:attr:`~ProcessElementComponents`
+            - Gets or sets the ProcessElementComponents.
+          * - :py:attr:`~ProcessFaceComponents`
+            - Gets or sets the ProcessFaceComponents.
+          * - :py:attr:`~ProcessLineBodies`
+            - Gets or sets the ProcessLineBodies.
+          * - :py:attr:`~ProcessMesh200Elms`
+            - Gets or sets the ProcessMesh200Elms.
+          * - :py:attr:`~ProcessModelData`
+            - Gets or sets the ProcessModelData.
+          * - :py:attr:`~ProcessNodalComponents`
+            - Gets or sets the ProcessNodalComponents.
+          * - :py:attr:`~ProcessValidBlockedCDBFile`
+            - Gets or sets the ProcessValidBlockedCDBFile.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ToleranceAngle`
+            - Gets or sets the ToleranceAngle.
+          * - :py:attr:`~UnitSystemTypeForImport`
+            - Gets or sets the UnitSystemTypeForImport.
+          * - :py:attr:`~VertexInsertionAngle`
+            - Gets or sets the VertexInsertionAngle.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AnalysisTypeDimensionSetting
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AnalysisTypeDimensionEnum]
+
+
+   
+   Gets or sets the AnalysisTypeDimensionSetting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BodyGroupByAnsysElmTypeNumber
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the BodyGroupByAnsysElmTypeNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BodyGroupByMaterialNumber
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the BodyGroupByMaterialNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BodyGroupByThickness
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the BodyGroupByThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateGeometry
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateGeometryEdgeComponents
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateGeometryEdgeComponents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateGeometryFaceComponents
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateGeometryFaceComponents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateGeometryVertexComponent
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateGeometryVertexComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementComponentKey
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ElementComponentKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementOffset
+   :type: Optional[int]
+
+
+   
+   Gets or sets the ElementOffset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FaceComponentKey
+   :type: Optional[str]
+
+
+   
+   Gets or sets the FaceComponentKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometryComponentKey
+   :type: Optional[str]
+
+
+   
+   Gets or sets the GeometryComponentKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportMaterials
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ImportMaterials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSModelImportAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModelImportSourceFilePath
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ModelImportSourceFilePath.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodalComponentKey
+   :type: Optional[str]
+
+
+   
+   Gets or sets the NodalComponentKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodeAndElementRenumberingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NodeAndElementRenumberingMethodType]
+
+
+   
+   Gets or sets the NodeAndElementRenumberingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodeOffset
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NodeOffset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessElementComponents
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessElementComponents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessFaceComponents
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessFaceComponents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessLineBodies
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessLineBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessMesh200Elms
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessMesh200Elms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessModelData
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessModelData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessNodalComponents
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessNodalComponents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessValidBlockedCDBFile
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ProcessValidBlockedCDBFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToleranceAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ToleranceAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnitSystemTypeForImport
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ModelImportUnitSystemType]
+
+
+   
+   Gets or sets the UnitSystemTypeForImport.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VertexInsertionAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the VertexInsertionAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

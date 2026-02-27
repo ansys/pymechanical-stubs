@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PortAttribution`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PortAttribution(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PortAttribution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PortAttribution
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Inlet`
+            - 
+          * - :py:attr:`~Outlet`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Inlet
+   :value: 0
+
+
+.. py:attribute:: Outlet
+   :value: 1
+
+
+
+
+
+
+.. vale on

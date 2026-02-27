@@ -1,0 +1,165 @@
+.. vale off
+
+
+
+:class:`MAPDLSolverData`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.SolverData.MAPDLSolverData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLSolverData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementIdsByMaterialId`
+            - Returns a list of Element IDs that belong to a given Material ID
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
+          * - :py:attr:`~NodeIdsByMaterialId`
+            - Returns a list of Node IDs that belong to a given Material ID
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MaxElementId`
+            - Gets the Maximum Element Id number.
+          * - :py:attr:`~MaxElementTypeId`
+            - Gets the Maximum Element Type Id number.
+          * - :py:attr:`~MaxNodeId`
+            - Gets the Maximum Node Id number.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: MaxElementId
+   :type: Optional[int]
+
+
+   
+   Gets the Maximum Element Id number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxElementTypeId
+   :type: Optional[int]
+
+
+   
+   Gets the Maximum Element Type Id number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxNodeId
+   :type: Optional[int]
+
+
+   
+   Gets the Maximum Node Id number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: ElementIdsByMaterialId(matId: str) -> int
+
+   
+   Returns a list of Element IDs that belong to a given Material ID
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(obj: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> Any
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: NodeIdsByMaterialId(matId: str) -> int
+
+   
+   Returns a list of Node IDs that belong to a given Material ID
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

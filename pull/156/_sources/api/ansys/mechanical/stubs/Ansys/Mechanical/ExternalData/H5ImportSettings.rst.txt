@@ -1,0 +1,93 @@
+.. vale off
+
+
+
+:class:`H5ImportSettings`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.ExternalData.H5ImportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   T:Ansys.Mechanical.ExternalData.H5ImportSettings defines how to import external data from a H5 file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: H5ImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Format`
+            - Gets the existing corresponding format.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Format
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat]
+
+
+   
+   Gets the existing corresponding format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

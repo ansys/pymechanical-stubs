@@ -1,0 +1,282 @@
+.. vale off
+
+
+
+:class:`CoordinateSystem`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Common.CoordinateSystem
+
+   Bases: :py:obj:`object`
+
+
+   
+   CoordinateSystem class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoordinateSystem
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CoordinateSystemType`
+            - Gets or sets the coordinate system type.
+          * - :py:attr:`~Id`
+            - Gets or sets the ID of the coordinate system.
+          * - :py:attr:`~Matrix`
+            - Gets or sets the matrix definition of the coordinate system.
+          * - :py:attr:`~Name`
+            - Gets or sets the name of the coordinate system.
+          * - :py:attr:`~Origin`
+            - Gets or sets the origin of the coordinate system.
+          * - :py:attr:`~XAxis`
+            - Gets or sets the X axis of the coordinate system.
+          * - :py:attr:`~YAxis`
+            - Gets or sets the Y axis of the coordinate system.
+          * - :py:attr:`~ZAxis`
+            - Gets or sets the Z axis of the coordinate system.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: CoordinateSystemType
+   :type: Optional[Ansys.ACT.Interfaces.Analysis.CoordinateSystemTypeEnum]
+
+
+   
+   Gets or sets the coordinate system type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Gets or sets the ID of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Matrix
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the matrix definition of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets the name of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Origin
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the origin of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XAxis
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the X axis of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YAxis
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the Y axis of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZAxis
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the Z axis of the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

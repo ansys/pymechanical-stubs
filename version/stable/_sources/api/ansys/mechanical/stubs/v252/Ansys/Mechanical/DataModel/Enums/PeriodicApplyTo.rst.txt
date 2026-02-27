@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`PeriodicApplyTo`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PeriodicApplyTo(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PeriodicApplyTo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PeriodicApplyTo
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ApplicableDOF`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~Voltage`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ApplicableDOF
+   :value: 0
+
+
+.. py:attribute:: Displacement
+   :value: 1
+
+
+.. py:attribute:: Voltage
+   :value: 2
+
+
+
+
+
+
+.. vale on

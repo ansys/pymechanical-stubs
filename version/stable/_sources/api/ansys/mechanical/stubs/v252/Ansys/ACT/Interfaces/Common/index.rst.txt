@@ -1,0 +1,268 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Common``
+==========================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Common
+.. tab-set::
+
+
+
+    .. tab-item:: Interfaces
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IAttributeCollection`
+            - Defines a collection of attributes.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IBreakpoint`
+            - A stop point in the source file of a code.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtension`
+            - Defines an extension.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtensionManager`
+            - Defines an extension manager.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ILog`
+            - Defines log engine.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IParameter`
+            - Defines a design parameter.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IParameterManager`
+            - Defines a parameter manager.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IProcessUtilities`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ISelectionInfo`
+            - Defines a selection information.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ISelectionManager`
+            - Defines a selection manager.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ISourceFile`
+            - A file containing source code.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ITools`
+            - Defines common tools.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IWorksheet`
+            - Defines a worksheets information.
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.UserErrorMessageException`
+            - Defines a user exception used to send error message to the end user.
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.AngleUnitType`
+            - Specifies the AngleUnitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.AngularVelocityUnitType`
+            - Specifies the AngularVelocityUnitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.MechanicalUnitSystemEnum`
+            - Specifies the WBUnitSystemType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.MetricTemperatureUnitType`
+            - Specifies the MetricTemperatureUnitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.SelectionTypeEnum`
+            - Specifies the selection type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.State`
+            - General state enumeration to be used across ACT Apps.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.StateMessageTypes`
+            - Specifies the selection type.
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_interface"></span> IAttributeCollection</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IAttributeCollection>
+    <span class="nf nf-cod-symbol_interface"></span> IBreakpoint</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IBreakpoint>
+    <span class="nf nf-cod-symbol_interface"></span> IExtension</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IExtension>
+    <span class="nf nf-cod-symbol_interface"></span> IExtensionManager</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IExtensionManager>
+    <span class="nf nf-cod-symbol_interface"></span> ILog</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/ILog>
+    <span class="nf nf-cod-symbol_interface"></span> IParameter</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IParameter>
+    <span class="nf nf-cod-symbol_interface"></span> IParameterManager</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IParameterManager>
+    <span class="nf nf-cod-symbol_interface"></span> IProcessUtilities</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IProcessUtilities>
+    <span class="nf nf-cod-symbol_interface"></span> ISelectionInfo</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/ISelectionInfo>
+    <span class="nf nf-cod-symbol_interface"></span> ISelectionManager</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/ISelectionManager>
+    <span class="nf nf-cod-symbol_interface"></span> ISourceFile</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/ISourceFile>
+    <span class="nf nf-cod-symbol_interface"></span> ITools</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/ITools>
+    <span class="nf nf-cod-symbol_interface"></span> IWorksheet</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/IWorksheet>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> UserErrorMessageException</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/UserErrorMessageException>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> AngleUnitType</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/AngleUnitType>
+    <span class="nf nf-cod-symbol_enum"></span> AngularVelocityUnitType</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/AngularVelocityUnitType>
+    <span class="nf nf-cod-symbol_enum"></span> MechanicalUnitSystemEnum</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/MechanicalUnitSystemEnum>
+    <span class="nf nf-cod-symbol_enum"></span> MetricTemperatureUnitType</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/MetricTemperatureUnitType>
+    <span class="nf nf-cod-symbol_enum"></span> SelectionTypeEnum</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/SelectionTypeEnum>
+    <span class="nf nf-cod-symbol_enum"></span> State</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/State>
+    <span class="nf nf-cod-symbol_enum"></span> StateMessageTypes</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/StateMessageTypes>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Common module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

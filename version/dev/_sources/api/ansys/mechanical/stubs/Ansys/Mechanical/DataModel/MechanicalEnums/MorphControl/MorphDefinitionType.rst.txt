@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MorphDefinitionType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MorphControl.MorphDefinitionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To specify what the Morph Control is based on. The available options are Mesh Workflow and Displacement File.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MorphDefinitionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DisplacementFile`
+            - 
+          * - :py:attr:`~MeshWorkflowMorph`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: DisplacementFile
+   :value: 1
+
+
+.. py:attribute:: MeshWorkflowMorph
+   :value: 2
+
+
+
+
+
+
+.. vale on

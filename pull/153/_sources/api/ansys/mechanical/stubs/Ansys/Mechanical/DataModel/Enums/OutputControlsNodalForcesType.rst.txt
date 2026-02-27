@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`OutputControlsNodalForcesType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OutputControlsNodalForcesType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the OutputControlsNodalForcesType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OutputControlsNodalForcesType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConstrainNode`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ConstrainNode
+   :value: 2
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: Yes
+   :value: 1
+
+
+
+
+
+
+.. vale on

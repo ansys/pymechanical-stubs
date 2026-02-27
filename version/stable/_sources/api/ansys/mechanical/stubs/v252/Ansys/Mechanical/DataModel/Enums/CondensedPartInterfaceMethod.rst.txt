@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CondensedPartInterfaceMethod`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.CondensedPartInterfaceMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CondensedPartInterfaceMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CondensedPartInterfaceMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Fixed`
+            - 
+          * - :py:attr:`~Free`
+            - 
+          * - :py:attr:`~ResidualFlexibleFree`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Fixed
+   :value: 0
+
+
+.. py:attribute:: Free
+   :value: 1
+
+
+.. py:attribute:: ResidualFlexibleFree
+   :value: 2
+
+
+
+
+
+
+.. vale on

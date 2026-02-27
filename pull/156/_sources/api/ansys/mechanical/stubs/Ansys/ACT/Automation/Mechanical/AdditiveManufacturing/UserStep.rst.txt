@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`UserStep`
+=================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.UserStep
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

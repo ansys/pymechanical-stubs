@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`UnitSystemIDType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.UnitSystemIDType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Unit System ID Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: UnitSystemIDType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~UnitsBFT`
+            - 
+          * - :py:attr:`~UnitsBIN`
+            - 
+          * - :py:attr:`~UnitsCGS`
+            - 
+          * - :py:attr:`~UnitsGMMS`
+            - 
+          * - :py:attr:`~UnitsKNMS`
+            - 
+          * - :py:attr:`~UnitsMKS`
+            - 
+          * - :py:attr:`~UnitsNMM`
+            - 
+          * - :py:attr:`~UnitsUMKS`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: UnitsBFT
+   :value: 5
+
+
+.. py:attribute:: UnitsBIN
+   :value: 6
+
+
+.. py:attribute:: UnitsCGS
+   :value: 1
+
+
+.. py:attribute:: UnitsGMMS
+   :value: 17
+
+
+.. py:attribute:: UnitsKNMS
+   :value: 15
+
+
+.. py:attribute:: UnitsMKS
+   :value: 0
+
+
+.. py:attribute:: UnitsNMM
+   :value: 2
+
+
+.. py:attribute:: UnitsUMKS
+   :value: 7
+
+
+
+
+
+
+.. vale on

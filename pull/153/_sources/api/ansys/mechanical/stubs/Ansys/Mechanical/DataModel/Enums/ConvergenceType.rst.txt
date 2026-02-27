@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`ConvergenceType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConvergenceType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ConvergenceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConvergenceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ForceSummation`
+            - 
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~Maximum`
+            - 
+          * - :py:attr:`~Minimum`
+            - 
+          * - :py:attr:`~Torque`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ForceSummation
+   :value: 2
+
+
+.. py:attribute:: Frequency
+   :value: 4
+
+
+.. py:attribute:: Maximum
+   :value: 1
+
+
+.. py:attribute:: Minimum
+   :value: 0
+
+
+.. py:attribute:: Torque
+   :value: 3
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,151 @@
+.. vale off
+
+
+
+:class:`VariableType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   An enumeration of the different variable types supported by the tabular data
+   T:Ansys.Mechanical.Interfaces.IDataSeries implementation "Ansys.ACT.Automation.Mechanical.Table.Column".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VariableType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AverageFilmTemperature`
+            - 
+          * - :py:attr:`~BulkTemperature`
+            - 
+          * - :py:attr:`~DifferenceBetweenSurfaceAndBulkTemperature`
+            - 
+          * - :py:attr:`~HeatTransferCoefficient`
+            - 
+          * - :py:attr:`~ID`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~StrainScalingFactor`
+            - 
+          * - :py:attr:`~SurfaceTemperature`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~ThetaCoordinate`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~XCoordinate`
+            - 
+          * - :py:attr:`~YCoordinate`
+            - 
+          * - :py:attr:`~ZCoordinate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AverageFilmTemperature
+   :value: 8
+
+
+.. py:attribute:: BulkTemperature
+   :value: 9
+
+
+.. py:attribute:: DifferenceBetweenSurfaceAndBulkTemperature
+   :value: 11
+
+
+.. py:attribute:: HeatTransferCoefficient
+   :value: 5
+
+
+.. py:attribute:: ID
+   :value: 3
+
+
+.. py:attribute:: Pressure
+   :value: 4
+
+
+.. py:attribute:: StrainScalingFactor
+   :value: 17
+
+
+.. py:attribute:: SurfaceTemperature
+   :value: 10
+
+
+.. py:attribute:: Temperature
+   :value: 7
+
+
+.. py:attribute:: ThetaCoordinate
+   :value: 12
+
+
+.. py:attribute:: Time
+   :value: 13
+
+
+.. py:attribute:: XCoordinate
+   :value: 14
+
+
+.. py:attribute:: YCoordinate
+   :value: 15
+
+
+.. py:attribute:: ZCoordinate
+   :value: 16
+
+
+
+
+
+
+.. vale on

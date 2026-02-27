@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PartingSurfaceControl`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PartingSurfaceControl(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Defines the control that must be applied on the parting surface shape and position.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PartingSurfaceControl
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FixedPlane`
+            - 
+          * - :py:attr:`~Free`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FixedPlane
+   :value: 2
+
+
+.. py:attribute:: Free
+   :value: 1
+
+
+
+
+
+
+.. vale on

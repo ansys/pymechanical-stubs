@@ -1,0 +1,116 @@
+.. vale off
+
+
+
+
+
+
+
+
+``SMARTCrackGrowth``
+====================================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: SMARTCrackGrowth
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth.EquivalentSIFMethod`
+            - Enum to specify the Equivalent SIF Method for SMART Crack Growth.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth.MultiplicativeFactorsType`
+            - Enum to specify the Multiplicative Factors type for Equivalent SIF Method.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SMARTCrackGrowth.RichardCoefficientsType`
+            - Enum to specify the Richard Coefficients type for Kink Angle Method.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> EquivalentSIFMethod</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/SMARTCrackGrowth/EquivalentSIFMethod>
+    <span class="nf nf-cod-symbol_enum"></span> MultiplicativeFactorsType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/SMARTCrackGrowth/MultiplicativeFactorsType>
+    <span class="nf nf-cod-symbol_enum"></span> RichardCoefficientsType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/SMARTCrackGrowth/RichardCoefficientsType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+SMARTCrackGrowth module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

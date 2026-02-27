@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`VirtualCellClassType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.VirtualCellClassType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the VirtualCellClassType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VirtualCellClassType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~VirtualEdge`
+            - 
+          * - :py:attr:`~VirtualFace`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: VirtualEdge
+   :value: 1
+
+
+.. py:attribute:: VirtualFace
+   :value: 0
+
+
+
+
+
+
+.. vale on

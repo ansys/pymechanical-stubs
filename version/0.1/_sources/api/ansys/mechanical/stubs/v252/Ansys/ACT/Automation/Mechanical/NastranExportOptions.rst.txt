@@ -1,0 +1,336 @@
+.. vale off
+
+
+
+:class:`NastranExportOptions`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.NastranExportOptions
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the NastranExportOptions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NastranExportOptions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AnalysisType`
+            - Analysis type.
+          * - :py:attr:`~GridCS`
+            - Grid coordinate system number.
+          * - :py:attr:`~GroundCheck`
+            - Ground check.
+          * - :py:attr:`~JointStiffness`
+            - Joint stiffness.
+          * - :py:attr:`~Modes`
+            - Modes.
+          * - :py:attr:`~NastranFilename`
+            - Full path of Nastran export file.
+          * - :py:attr:`~Offset`
+            - Offset.
+          * - :py:attr:`~PyramidElements`
+            - Pyramid elements.
+          * - :py:attr:`~Time`
+            - Time.
+          * - :py:attr:`~WTMass`
+            - WTMass.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AnalysisType
+   :type: Optional[str]
+
+
+   
+   Analysis type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GridCS
+   :type: Optional[int]
+
+
+   
+   Grid coordinate system number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroundCheck
+   :type: Optional[bool]
+
+
+   
+   Ground check.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: JointStiffness
+   :type: Optional[float]
+
+
+   
+   Joint stiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Modes
+   :type: Optional[int]
+
+
+   
+   Modes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NastranFilename
+   :type: Optional[str]
+
+
+   
+   Full path of Nastran export file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Offset
+   :type: Optional[int]
+
+
+   
+   Offset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PyramidElements
+   :type: Optional[str]
+
+
+   
+   Pyramid elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Time
+   :type: Optional[float]
+
+
+   
+   Time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WTMass
+   :type: Optional[float]
+
+
+   
+   WTMass.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

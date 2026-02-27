@@ -1,0 +1,99 @@
+.. vale off
+
+
+
+:class:`MAPDLContactData`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.SolverData.MAPDLContactData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLContactData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SourceId`
+            - Gets the Source Id of the Contact region.
+          * - :py:attr:`~TargetId`
+            - Gets the Target Id of the Contact region.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: SourceId
+   :type: Optional[int]
+
+
+   
+   Gets the Source Id of the Contact region.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetId
+   :type: Optional[int]
+
+
+   
+   Gets the Target Id of the Contact region.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

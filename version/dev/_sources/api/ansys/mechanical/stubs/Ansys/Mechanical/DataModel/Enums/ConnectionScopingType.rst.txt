@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ConnectionScopingType`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConnectionScopingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ConnectionScopingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConnectionScopingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BodyToBody`
+            - 
+          * - :py:attr:`~BodyToGround`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BodyToBody
+   :value: 0
+
+
+.. py:attribute:: BodyToGround
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,147 @@
+.. vale off
+
+
+
+:class:`CommandNode`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNode
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a node associated to a NBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandNode
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Id`
+            - Gets the node number.
+          * - :py:attr:`~Location`
+            - Gets the coordinates.
+          * - :py:attr:`~Rotation`
+            - Gets the rotation angles.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Gets the node number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[tuple[float]]
+
+
+   
+   Gets the coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Rotation
+   :type: Optional[tuple[float]]
+
+
+   
+   Gets the rotation angles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

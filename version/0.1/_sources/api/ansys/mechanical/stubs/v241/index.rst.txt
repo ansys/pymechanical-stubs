@@ -1,0 +1,68 @@
+.. vale off
+
+
+
+
+
+
+
+
+Mechanical 2024 R1
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v241
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Ansys Mechanical v241 module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ThemeName`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.UI.Enums.ThemeName(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Represents the different themes that can be set in Mechanical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ThemeName
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Classic`
+            - 
+          * - :py:attr:`~Dark`
+            - 
+          * - :py:attr:`~Light`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Classic
+   :value: 2
+
+
+.. py:attribute:: Dark
+   :value: 1
+
+
+.. py:attribute:: Light
+   :value: 0
+
+
+
+
+
+
+.. vale on

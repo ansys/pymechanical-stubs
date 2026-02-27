@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`LineType`
+=================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.LineType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   An enum that allows user to control the display of dataset with respect to showing lines and markers on the chart. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

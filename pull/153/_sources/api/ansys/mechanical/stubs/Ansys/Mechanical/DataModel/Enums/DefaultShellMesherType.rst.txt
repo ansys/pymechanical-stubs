@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`DefaultShellMesherType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DefaultShellMesherType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Use this enum to specify the meshing method to be used for sheet bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

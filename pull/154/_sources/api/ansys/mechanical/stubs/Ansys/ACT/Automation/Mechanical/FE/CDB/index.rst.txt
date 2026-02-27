@@ -1,0 +1,459 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CDB``
+=======================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CDB
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.BFBlockCommand`
+            - Represents a BFBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.BFCommand`
+            - Represents a BF command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.BFEBlockCommand`
+            - Represents a BFEBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.BFECommand`
+            - Represents a BFE command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.BeamSecBlockCommand`
+            - Represents a beam SECBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CDBCommand`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CECMODCommand`
+            - Represents a CECMOD command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CECommand`
+            - Represents a CE command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CMBlockCommand`
+            - Represents a CMBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CMEDITCommand`
+            - Represents a CMEDIT command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CMGRPCommand`
+            - Represents a CMGRP command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CPCommand`
+            - Represents a CP command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandCETerm`
+            - Represents a term associated to a CE command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandCell`
+            - Represents cell data associated to a beam SECBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElement`
+            - Represents an element associated to an EBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementBodyForce`
+            - Represents element body-force loads associated to BFEBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementSurfaceLoad`
+            - Represents an element surface load associated to a SFEBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementSurfaceLoadValues`
+            - Values associated to an element surface load from a SFEBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementType`
+            - Represents an element type associated to an ETBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandKeyOpt`
+            - Represents a KEYOPT command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandLayer`
+            - Represents a layer associated to a shell SECBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNodalBodyForce`
+            - Represents a nodal body force associated to a BFBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNodalLoad`
+            - Represents an nodal load  associated to an FBLOCK or DBlock  command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNode`
+            - Represents a node associated to a NBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandReal`
+            - Represent a real constant set associated to a RLBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.DBlockCommand`
+            - Represents a DBlock command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.EBlockCommand`
+            - Represents an EBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.ENCommand`
+            - Represents an EN command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.ETBlockCommand`
+            - Represents a ETBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.ETCommand`
+            - Represents an ET command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.FBlockCommand`
+            - Represents a FBlock command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.GenericCommand`
+            - Represents a generic command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.LocalCommand`
+            - Represents a LOCAL command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.MPCommand`
+            - Represents a MP command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.MPDataCommand`
+            - Represents a MPDATA command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.NBlockCommand`
+            - Represents a NBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.NCommand`
+            - Represents a N command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.PreadCommand`
+            - Represents a *PREAD command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.RCommand`
+            - Represents a R command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.RLBlockCommand`
+            - Represents a RLBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SFEBlockCommand`
+            - Represents a SFEBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SFECommand`
+            - Represents a SFE command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SeccontrolCommand`
+            - Represents a SECCONTROL command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SecdataCommand`
+            - Represents a SECDATA command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SecoffsetCommand`
+            - Represents a SECOFFSET command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SectypeCommand`
+            - Represents a SECTYPE command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.ShellSecBlockCommand`
+            - Represents a shell SECBLOCK command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.TBDataCommand`
+            - Represents a TBDATA command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.TBDataValues`
+            - Represents data for a given temperature.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.TBPTCommand`
+            - Represents a TBPT command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.TBPTData`
+            - Represents data for the TBPT command.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.TBPTValues`
+            - Represents a tuple of values for the TBPT commmand.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> BFBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/BFBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> BFCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/BFCommand>
+    <span class="nf nf-cod-symbol_class"></span> BFEBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/BFEBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> BFECommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/BFECommand>
+    <span class="nf nf-cod-symbol_class"></span> BeamSecBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/BeamSecBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> CDBCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CDBCommand>
+    <span class="nf nf-cod-symbol_class"></span> CECMODCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CECMODCommand>
+    <span class="nf nf-cod-symbol_class"></span> CECommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CECommand>
+    <span class="nf nf-cod-symbol_class"></span> CMBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CMBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> CMEDITCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CMEDITCommand>
+    <span class="nf nf-cod-symbol_class"></span> CMGRPCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CMGRPCommand>
+    <span class="nf nf-cod-symbol_class"></span> CPCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CPCommand>
+    <span class="nf nf-cod-symbol_class"></span> CommandCETerm</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandCETerm>
+    <span class="nf nf-cod-symbol_class"></span> CommandCell</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandCell>
+    <span class="nf nf-cod-symbol_class"></span> CommandElement</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandElement>
+    <span class="nf nf-cod-symbol_class"></span> CommandElementBodyForce</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandElementBodyForce>
+    <span class="nf nf-cod-symbol_class"></span> CommandElementSurfaceLoad</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandElementSurfaceLoad>
+    <span class="nf nf-cod-symbol_class"></span> CommandElementSurfaceLoadValues</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandElementSurfaceLoadValues>
+    <span class="nf nf-cod-symbol_class"></span> CommandElementType</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandElementType>
+    <span class="nf nf-cod-symbol_class"></span> CommandKeyOpt</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandKeyOpt>
+    <span class="nf nf-cod-symbol_class"></span> CommandLayer</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandLayer>
+    <span class="nf nf-cod-symbol_class"></span> CommandNodalBodyForce</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandNodalBodyForce>
+    <span class="nf nf-cod-symbol_class"></span> CommandNodalLoad</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandNodalLoad>
+    <span class="nf nf-cod-symbol_class"></span> CommandNode</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandNode>
+    <span class="nf nf-cod-symbol_class"></span> CommandReal</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/CommandReal>
+    <span class="nf nf-cod-symbol_class"></span> DBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/DBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> EBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/EBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> ENCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/ENCommand>
+    <span class="nf nf-cod-symbol_class"></span> ETBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/ETBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> ETCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/ETCommand>
+    <span class="nf nf-cod-symbol_class"></span> FBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/FBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> GenericCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/GenericCommand>
+    <span class="nf nf-cod-symbol_class"></span> LocalCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/LocalCommand>
+    <span class="nf nf-cod-symbol_class"></span> MPCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/MPCommand>
+    <span class="nf nf-cod-symbol_class"></span> MPDataCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/MPDataCommand>
+    <span class="nf nf-cod-symbol_class"></span> NBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/NBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> NCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/NCommand>
+    <span class="nf nf-cod-symbol_class"></span> PreadCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/PreadCommand>
+    <span class="nf nf-cod-symbol_class"></span> RCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/RCommand>
+    <span class="nf nf-cod-symbol_class"></span> RLBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/RLBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> SFEBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/SFEBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> SFECommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/SFECommand>
+    <span class="nf nf-cod-symbol_class"></span> SeccontrolCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/SeccontrolCommand>
+    <span class="nf nf-cod-symbol_class"></span> SecdataCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/SecdataCommand>
+    <span class="nf nf-cod-symbol_class"></span> SecoffsetCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/SecoffsetCommand>
+    <span class="nf nf-cod-symbol_class"></span> SectypeCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/SectypeCommand>
+    <span class="nf nf-cod-symbol_class"></span> ShellSecBlockCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/ShellSecBlockCommand>
+    <span class="nf nf-cod-symbol_class"></span> TBDataCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/TBDataCommand>
+    <span class="nf nf-cod-symbol_class"></span> TBDataValues</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/TBDataValues>
+    <span class="nf nf-cod-symbol_class"></span> TBPTCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/TBPTCommand>
+    <span class="nf nf-cod-symbol_class"></span> TBPTData</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/TBPTData>
+    <span class="nf nf-cod-symbol_class"></span> TBPTValues</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/CDB/TBPTValues>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CDB module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

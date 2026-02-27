@@ -1,0 +1,121 @@
+.. vale off
+
+
+
+:class:`ITable`
+===============
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Interfaces.ITable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes a table, which is a two-dimensional tabular data structure with labeled columns.
+   The columns are usually instances of IVariable but can be any sort of array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ITable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dependents`
+            - The portion of the table corresponding to dependent variables.
+          * - :py:attr:`~Independents`
+            - The portion of the table corresponding to independent variables.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Dependents
+   :type: Optional[dict[str, Iterable]]
+
+
+   
+   The portion of the table corresponding to dependent variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Independents
+   :type: Optional[dict[str, Iterable]]
+
+
+   
+   The portion of the table corresponding to independent variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

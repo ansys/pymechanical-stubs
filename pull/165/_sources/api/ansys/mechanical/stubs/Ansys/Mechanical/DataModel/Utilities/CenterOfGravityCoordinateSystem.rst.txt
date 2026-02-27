@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`CenterOfGravityCoordinateSystem`
+========================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Utilities.CenterOfGravityCoordinateSystem
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

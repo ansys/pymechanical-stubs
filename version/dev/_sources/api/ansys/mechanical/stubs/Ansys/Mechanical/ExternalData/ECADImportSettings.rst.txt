@@ -1,0 +1,121 @@
+.. vale off
+
+
+
+:class:`ECADImportSettings`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.ExternalData.ECADImportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   T:Ansys.Mechanical.ExternalData.ECADImportSettings defines how to import external data from an ECAD file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ECADImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Format`
+            - Gets the existing corresponding format.
+          * - :py:attr:`~UseDummyNetData`
+            - The UseDummyNetData falg of the ECAD file. For External Data files that include trace mapping,
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Format
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat]
+
+
+   
+   Gets the existing corresponding format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseDummyNetData
+   :type: Optional[bool]
+
+
+   
+   The UseDummyNetData falg of the ECAD file. For External Data files that include trace mapping, 
+   selecting this option enables you to import trace data belonging to the dummy net of the file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

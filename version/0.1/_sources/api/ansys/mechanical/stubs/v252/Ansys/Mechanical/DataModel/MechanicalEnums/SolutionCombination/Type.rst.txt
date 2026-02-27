@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`Type`
+=============
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.Type(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Solution Combination Type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Type
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Envelope`
+            - 
+          * - :py:attr:`~LoadCombinations`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Envelope
+   :value: 2
+
+
+.. py:attribute:: LoadCombinations
+   :value: 1
+
+
+
+
+
+
+.. vale on

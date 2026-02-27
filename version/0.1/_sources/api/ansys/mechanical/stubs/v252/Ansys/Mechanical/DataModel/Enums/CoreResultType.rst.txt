@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`CoreResultType`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.CoreResultType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CoreResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoreResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Acceleration`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~OtherResult`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Acceleration
+   :value: 27
+
+
+.. py:attribute:: Displacement
+   :value: 0
+
+
+.. py:attribute:: OtherResult
+   :value: -1
+
+
+.. py:attribute:: Velocity
+   :value: 39
+
+
+
+
+
+
+.. vale on

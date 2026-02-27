@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`NonlinearAdaptivityOptionType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityOptionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NonlinearAdaptivityOptionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NonlinearAdaptivityOptionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~JacobianRatio`
+            - 
+          * - :py:attr:`~Shape`
+            - 
+          * - :py:attr:`~Skewness`
+            - 
+          * - :py:attr:`~SkewnessAndJacobianRatio`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: JacobianRatio
+   :value: 3
+
+
+.. py:attribute:: Shape
+   :value: 2
+
+
+.. py:attribute:: Skewness
+   :value: 1
+
+
+.. py:attribute:: SkewnessAndJacobianRatio
+   :value: 4
+
+
+
+
+
+
+.. vale on

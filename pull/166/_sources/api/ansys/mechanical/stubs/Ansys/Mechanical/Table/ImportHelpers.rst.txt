@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`ImportHelpers`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.Table.ImportHelpers
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

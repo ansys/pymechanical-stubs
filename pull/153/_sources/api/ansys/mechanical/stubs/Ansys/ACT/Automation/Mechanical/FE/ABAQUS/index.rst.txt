@@ -1,0 +1,137 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ABAQUS``
+==========================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ABAQUS
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.ABAQUSCommand`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeyword`
+            - Represents an Abaqus keyword (with arguments and data lines).
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgument`
+            - Represents a keyword argument (with Key and Value).
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgumentColl`
+            - Collection of keyword arguments.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordDataLine`
+            - Represents a keyword data line.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordDataLineColl`
+            - Collection of keyword data lines.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ABAQUSCommand</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/ABAQUSCommand>
+    <span class="nf nf-cod-symbol_class"></span> AbaqusKeyword</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/AbaqusKeyword>
+    <span class="nf nf-cod-symbol_class"></span> AbaqusKeywordArgument</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/AbaqusKeywordArgument>
+    <span class="nf nf-cod-symbol_class"></span> AbaqusKeywordArgumentColl</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/AbaqusKeywordArgumentColl>
+    <span class="nf nf-cod-symbol_class"></span> AbaqusKeywordDataLine</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/AbaqusKeywordDataLine>
+    <span class="nf nf-cod-symbol_class"></span> AbaqusKeywordDataLineColl</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/FE/ABAQUS/AbaqusKeywordDataLineColl>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ABAQUS module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

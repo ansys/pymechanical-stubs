@@ -1,0 +1,142 @@
+.. vale off
+
+
+
+:class:`ISelectionManager`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.ISelectionManager
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a selection manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISelectionManager
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddSelection`
+            - Adds a new selection to the current selection.
+          * - :py:attr:`~ClearSelection`
+            - Clears the current selection.
+          * - :py:attr:`~CreateSelectionInfo`
+            - Creates a new selection information based on its type.
+          * - :py:attr:`~NewSelection`
+            - Creates a new selection.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CurrentSelection`
+            - Gets the current selection.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: CurrentSelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets the current selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddSelection(info: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> None
+
+   
+   Adds a new selection to the current selection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearSelection() -> None
+
+   
+   Clears the current selection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateSelectionInfo(selectionType: Ansys.ACT.Interfaces.Common.SelectionTypeEnum) -> Ansys.ACT.Interfaces.Common.ISelectionInfo
+
+   
+   Creates a new selection information based on its type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: NewSelection(info: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> None
+
+   
+   Creates a new selection.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

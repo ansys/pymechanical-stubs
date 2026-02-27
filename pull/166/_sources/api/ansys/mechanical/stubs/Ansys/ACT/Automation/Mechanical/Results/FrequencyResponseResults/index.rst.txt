@@ -1,0 +1,263 @@
+.. vale off
+
+
+
+
+
+
+
+
+``FrequencyResponseResults``
+============================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: FrequencyResponseResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AccelerationFrequencyResponse`
+            - Defines a AccelerationFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AccelerationWaterfallDiagram`
+            - Defines a AccelerationWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticAWeightedSPLFrequencyResponse`
+            - Defines a AcousticAWeightedSPLFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticKineticEnergyFrequencyResponse`
+            - Defines a AcousticKineticEnergyFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticPotentialEnergyFrequencyResponse`
+            - Defines a AcousticPotentialEnergyFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticPressureFrequencyResponse`
+            - Defines a AcousticPressureFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticSPLFrequencyResponse`
+            - Defines a AcousticSPLFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.AcousticVelocityFrequencyResponse`
+            - Defines a AcousticVelocityFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ChargeReactionFrequencyResponse`
+            - Defines a ChargeReactionFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.DeformationFrequencyResponse`
+            - Defines a DeformationFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ElasticStrainFrequencyResponse`
+            - Defines a ElasticStrainFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPower`
+            - Defines a EquivalentRadiatedPower.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPowerLevel`
+            - Defines a EquivalentRadiatedPowerLevel.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPowerLevelWaterfallDiagram`
+            - Defines a EquivalentRadiatedPowerLevelWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EquivalentRadiatedPowerWaterfallDiagram`
+            - Defines a EquivalentRadiatedPowerWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ForceReactionFrequencyResponse`
+            - Defines a ForceReactionFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.FrequencyResponseResultChart`
+            - Defines a FrequencyResponseResultChart.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ImpedanceFrequencyResponse`
+            - Defines a ImpedanceFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.KrylovResidualNorm`
+            - Defines a KrylovResidualNorm.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.MCFWaterfallDiagram`
+            - Defines a MCFWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.StressFrequencyResponse`
+            - Defines a StressFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.VelocityFrequencyResponse`
+            - Defines a VelocityFrequencyResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.VelocityWaterfallDiagram`
+            - Defines a VelocityWaterfallDiagram.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.VoltageFrequencyResponse`
+            - Defines a VoltageFrequencyResponse.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AccelerationFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AccelerationFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> AccelerationWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AccelerationWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> AcousticAWeightedSPLFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AcousticAWeightedSPLFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> AcousticKineticEnergyFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AcousticKineticEnergyFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> AcousticPotentialEnergyFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AcousticPotentialEnergyFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> AcousticPressureFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AcousticPressureFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> AcousticSPLFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AcousticSPLFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> AcousticVelocityFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/AcousticVelocityFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> ChargeReactionFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/ChargeReactionFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> DeformationFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/DeformationFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> ElasticStrainFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/ElasticStrainFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentRadiatedPower</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/EquivalentRadiatedPower>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentRadiatedPowerLevel</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/EquivalentRadiatedPowerLevel>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentRadiatedPowerLevelWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/EquivalentRadiatedPowerLevelWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentRadiatedPowerWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/EquivalentRadiatedPowerWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> ForceReactionFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/ForceReactionFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> FrequencyResponseResultChart</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/FrequencyResponseResultChart>
+    <span class="nf nf-cod-symbol_class"></span> ImpedanceFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/ImpedanceFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> KrylovResidualNorm</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/KrylovResidualNorm>
+    <span class="nf nf-cod-symbol_class"></span> MCFWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/MCFWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> StressFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/StressFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> VelocityFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/VelocityFrequencyResponse>
+    <span class="nf nf-cod-symbol_class"></span> VelocityWaterfallDiagram</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/VelocityWaterfallDiagram>
+    <span class="nf nf-cod-symbol_class"></span> VoltageFrequencyResponse</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/VoltageFrequencyResponse>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+FrequencyResponseResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

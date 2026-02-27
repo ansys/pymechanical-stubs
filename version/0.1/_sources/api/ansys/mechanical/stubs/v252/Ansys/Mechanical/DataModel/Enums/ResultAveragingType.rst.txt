@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ResultAveragingType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ResultAveragingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ResultAveragingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ResultAveragingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Averaged`
+            - 
+          * - :py:attr:`~ElementalDifference`
+            - 
+          * - :py:attr:`~ElementalFraction`
+            - 
+          * - :py:attr:`~ElementalMean`
+            - 
+          * - :py:attr:`~NodalDifference`
+            - 
+          * - :py:attr:`~NodalFraction`
+            - 
+          * - :py:attr:`~Unaveraged`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Averaged
+   :value: 1
+
+
+.. py:attribute:: ElementalDifference
+   :value: 4
+
+
+.. py:attribute:: ElementalFraction
+   :value: 5
+
+
+.. py:attribute:: ElementalMean
+   :value: 6
+
+
+.. py:attribute:: NodalDifference
+   :value: 2
+
+
+.. py:attribute:: NodalFraction
+   :value: 3
+
+
+.. py:attribute:: Unaveraged
+   :value: 0
+
+
+
+
+
+
+.. vale on

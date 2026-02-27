@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`MeshSolverPreferenceType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.MeshSolverPreferenceType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Mesh Solver Preference Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshSolverPreferenceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ANSYSRigidDynamics`
+            - 
+          * - :py:attr:`~CFX`
+            - 
+          * - :py:attr:`~Fluent`
+            - 
+          * - :py:attr:`~MechanicalAPDL`
+            - 
+          * - :py:attr:`~Polyflow`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ANSYSRigidDynamics
+   :value: 3
+
+
+.. py:attribute:: CFX
+   :value: 1
+
+
+.. py:attribute:: Fluent
+   :value: 0
+
+
+.. py:attribute:: MechanicalAPDL
+   :value: 2
+
+
+.. py:attribute:: Polyflow
+   :value: 4
+
+
+
+
+
+
+.. vale on

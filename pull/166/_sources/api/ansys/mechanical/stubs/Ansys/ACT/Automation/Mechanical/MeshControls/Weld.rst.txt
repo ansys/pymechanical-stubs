@@ -1,0 +1,3128 @@
+.. vale off
+
+
+
+:class:`Weld`
+=============
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.MeshControls.Weld
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Weld.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Weld
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~ActivateAllWorksheetEntries`
+            - set the ActivateAllWorksheetEntries
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddWeldWorksheetScopeToSelection`
+            - Create worksheet entry scope to selection
+          * - :py:attr:`~AppendWeldControlIntersectionTag`
+            - append the WeldControlIntersectionTag
+          * - :py:attr:`~AppendWeldWorksheetIntersectionTag`
+            - AppendWeldWorksheetIntersectionTag method.
+          * - :py:attr:`~ClearAutoWeldIntersectionTag`
+            - Clear Auto Intersection Tags
+          * - :py:attr:`~ClearWeldControlIntersectionTag`
+            - clear the WeldControlIntersectionTag
+          * - :py:attr:`~ClearWeldWorksheetIntersectionTag`
+            - ClearWeldWorksheetIntersectionTag method.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~DeactivateAllWorksheetEntries`
+            - set the DeactivateAllWorksheetEntries
+          * - :py:attr:`~DeactivateProblematicWorksheetEntries`
+            - Deactivate Problematic Worksheet Entries
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GenerateMesh`
+            - Generate the Mesh.
+          * - :py:attr:`~GenerateWeldIntersectionTag`
+            - Auto detect Intersection Tags within specified tolerance
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetCrossSectionIds`
+            - get CrossSection Ids
+          * - :py:attr:`~GetMaterialIds`
+            - get Material Ids
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetWeldWorksheetAbsTol`
+            - get the WeldControlWorksheetAbsTol
+          * - :py:attr:`~GetWeldWorksheetActive`
+            - get the WeldWorksheetActive
+          * - :py:attr:`~GetWeldWorksheetBottomEntities`
+            - get the WeldControlWorksheetBottomEntities
+          * - :py:attr:`~GetWeldWorksheetEdgeMeshSize`
+            - get the WeldControlWorksheetEdgeMeshSize
+          * - :py:attr:`~GetWeldWorksheetEdgeMeshSizeExpression`
+            - get the WeldControlWorksheetEdgeMeshSizeExpression
+          * - :py:attr:`~GetWeldWorksheetEdges`
+            - get the WeldControlWorksheetEdges
+          * - :py:attr:`~GetWeldWorksheetGenerateEndCaps`
+            - get the WeldControlWorksheetGenerateEndCaps
+          * - :py:attr:`~GetWeldWorksheetHAZDistanceBottomPlate`
+            - get the WeldControlWorksheetHAZDistance
+          * - :py:attr:`~GetWeldWorksheetHAZDistanceExpressionBottomPlate`
+            - get WorksheetHAZDistanceExpressionBottomPlate
+          * - :py:attr:`~GetWeldWorksheetHAZDistanceExpressionTopPlate`
+            - get WorksheetHAZDistanceExpressionTopPlate
+          * - :py:attr:`~GetWeldWorksheetHAZGrowthRate`
+            - get the WeldControlWorksheetHAZGrowthRate
+          * - :py:attr:`~GetWeldWorksheetHeight`
+            - get the WeldControlWorksheetHeight
+          * - :py:attr:`~GetWeldWorksheetIntersectionTag`
+            - get the WeldControlWorksheetIntersectionTag
+          * - :py:attr:`~GetWeldWorksheetLapAngleTol`
+            - get the WeldControlWorksheetLapAngleTol
+          * - :py:attr:`~GetWeldWorksheetLength`
+            - get the WeldControlWorksheetLength
+          * - :py:attr:`~GetWeldWorksheetMaxThicknessFactor`
+            - get the WeldControlWorksheetMaxThicknessFactor
+          * - :py:attr:`~GetWeldWorksheetMinThicknessFactor`
+            - get the WeldControlWorksheetMinThicknessFactor
+          * - :py:attr:`~GetWeldWorksheetNumError`
+            - Get Number of Errored rows
+          * - :py:attr:`~GetWeldWorksheetNumLayers`
+            - get the WeldControlWorksheetNumLayers
+          * - :py:attr:`~GetWeldWorksheetNumWarning`
+            - Get Number of rows with warnings
+          * - :py:attr:`~GetWeldWorksheetNumWelds`
+            - get the WeldControlWorksheetNumWelds
+          * - :py:attr:`~GetWeldWorksheetOffset1`
+            - get the WeldControlWorksheetOffset1
+          * - :py:attr:`~GetWeldWorksheetOffset2`
+            - get the WeldControlWorksheetOffset2
+          * - :py:attr:`~GetWeldWorksheetPitch`
+            - get the WeldControlWorksheetPitch
+          * - :py:attr:`~GetWeldWorksheetSharpAngle`
+            - get the WeldControlWorksheetSharpAngle
+          * - :py:attr:`~GetWeldWorksheetSmoothing`
+            - get the WeldControlWorksheetSmoothing option
+          * - :py:attr:`~GetWeldWorksheetThickness`
+            - get the WeldControlWorksheetThickness
+          * - :py:attr:`~GetWeldWorksheetThicknessExpression`
+            - get the WeldControlWorksheetThicknessExpression
+          * - :py:attr:`~GetWeldWorksheetTopEntities`
+            - get the WeldControlWorksheetTopEntities
+          * - :py:attr:`~GetWeldWorksheetWeldAngle`
+            - get the WeldControlWorksheetWeldAngle
+          * - :py:attr:`~GetWeldWorksheetWeldCurve`
+            - get the WeldControlWorksheetWeldCurve
+          * - :py:attr:`~GetWeldWorksheetWeldHeightExpression`
+            - get the WeldControlWorksheetWeldHeight
+          * - :py:attr:`~GetWeldWorksheetWeldWidthExpression`
+            - get the WeldControlWorksheetWeldWidth
+          * - :py:attr:`~GetWeldWorksheetWidth`
+            - get the WeldControlWorksheetWidth
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PreviewMeshOnWeldWorksheet`
+            - PreviewMeshOnWeldWorksheet method.
+          * - :py:attr:`~PromoteToWeldControl`
+            - PromoteToWeldControl method.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+          * - :py:attr:`~SetWeldWorksheetAbsTol`
+            - SetWeldWorksheetAbsTol method.
+          * - :py:attr:`~SetWeldWorksheetActive`
+            - SetWeldWorksheetActive method.
+          * - :py:attr:`~SetWeldWorksheetBottomEntities`
+            - SetWeldWorksheetBottomEntities method.
+          * - :py:attr:`~SetWeldWorksheetEdgeMeshSize`
+            - SetWeldWorksheetEdgeMeshSize method.
+          * - :py:attr:`~SetWeldWorksheetEdgeMeshSizeExpression`
+            - SetWeldWorksheetEdgeMeshSizeExpression method.
+          * - :py:attr:`~SetWeldWorksheetEdges`
+            - SetWeldWorksheetEdges method.
+          * - :py:attr:`~SetWeldWorksheetGenerateEndCaps`
+            - SetWeldWorksheetGenerateEndCaps method.
+          * - :py:attr:`~SetWeldWorksheetHAZDistanceBottomPlate`
+            - SetWeldWorksheetHAZDistanceBottomPlate method.
+          * - :py:attr:`~SetWeldWorksheetHAZDistanceExpressionBottomPlate`
+            - SetWeldWorksheetHAZDistanceExpressionBottomPlate method.
+          * - :py:attr:`~SetWeldWorksheetHAZDistanceExpressionTopPlate`
+            - SetWeldWorksheetHAZDistanceExpressionTopPlate method.
+          * - :py:attr:`~SetWeldWorksheetHAZDistanceTopPlate`
+            - SetWeldWorksheetHAZDistanceTopPlate method.
+          * - :py:attr:`~SetWeldWorksheetHAZGrowthRate`
+            - SetWeldWorksheetHAZGrowthRate method.
+          * - :py:attr:`~SetWeldWorksheetHeight`
+            - SetWeldWorksheetHeight method.
+          * - :py:attr:`~SetWeldWorksheetIntersectionTag`
+            - SetWeldWorksheetIntersectionTag method.
+          * - :py:attr:`~SetWeldWorksheetLapAngleTol`
+            - SetWeldWorksheetLapAngleTol method.
+          * - :py:attr:`~SetWeldWorksheetLength`
+            - SetWeldWorksheetLength method.
+          * - :py:attr:`~SetWeldWorksheetMaxThicknessFactor`
+            - SetWeldWorksheetMaxThicknessFactor method.
+          * - :py:attr:`~SetWeldWorksheetMinThicknessFactor`
+            - SetWeldWorksheetMinThicknessFactor method.
+          * - :py:attr:`~SetWeldWorksheetNumLayers`
+            - SetWeldWorksheetNumLayers method.
+          * - :py:attr:`~SetWeldWorksheetNumWelds`
+            - SetWeldWorksheetNumWelds method.
+          * - :py:attr:`~SetWeldWorksheetOffset1`
+            - SetWeldWorksheetOffset1 method.
+          * - :py:attr:`~SetWeldWorksheetOffset2`
+            - SetWeldWorksheetOffset2 method.
+          * - :py:attr:`~SetWeldWorksheetPitch`
+            - SetWeldWorksheetPitch method.
+          * - :py:attr:`~SetWeldWorksheetSharpAngle`
+            - SetWeldWorksheetSharpAngle method.
+          * - :py:attr:`~SetWeldWorksheetSmoothing`
+            - SetWeldWorksheetSmoothing method.
+          * - :py:attr:`~SetWeldWorksheetThickness`
+            - SetWeldWorksheetThickness method.
+          * - :py:attr:`~SetWeldWorksheetThicknessExpression`
+            - SetWeldWorksheetThicknessExpression method.
+          * - :py:attr:`~SetWeldWorksheetTopEntities`
+            - SetWeldWorksheetTopEntities method.
+          * - :py:attr:`~SetWeldWorksheetWeldAngle`
+            - SetWeldWorksheetWeldAngle method.
+          * - :py:attr:`~SetWeldWorksheetWeldCurve`
+            - SetWeldWorksheetWeldCurve method.
+          * - :py:attr:`~SetWeldWorksheetWeldHeightExpression`
+            - SetWeldWorksheetWeldHeightExpression method.
+          * - :py:attr:`~SetWeldWorksheetWeldWidthExpression`
+            - SetWeldWorksheetWeldWidthExpression method.
+          * - :py:attr:`~SetWeldWorksheetWidth`
+            - SetWeldWorksheetWidth method.
+          * - :py:attr:`~WeldWorksheetAddEntry`
+            - add an entry to WeldWorksheet
+          * - :py:attr:`~WeldWorksheetCreateControlForCurveBodies`
+            - Create worksheet entries for all curve bodies
+          * - :py:attr:`~WeldWorksheetDeleteEntry`
+            - WeldWorksheetDeleteEntry method.
+          * - :py:attr:`~WeldWorksheetExport`
+            - export WeldWorksheet
+          * - :py:attr:`~WeldWorksheetImport`
+            - import WeldWorksheet
+          * - :py:attr:`~WeldWorksheetNumEntries`
+            - Get total number of entries in worksheet
+          * - :py:attr:`~WeldWorksheetStatus`
+            - Get state of a given row
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AdjustWeldHeight`
+            - Gets or sets the WeldControlAdjustWeldHeight.
+          * - :py:attr:`~AngledDirection`
+            - Gets or sets the WeldControlAngledDirection.
+          * - :py:attr:`~BottomEntities`
+            - Gets or sets the Bottom Entities (Bodies / Faces ) or Extension.
+          * - :py:attr:`~BottomEntitiesNamedSelection`
+            - Gets or sets the BottomEntitiesNamedSelection.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConnectionTolerance`
+            - Gets or sets the WeldControlConnectionTolerance
+          * - :py:attr:`~ControlType`
+            - Gets or sets the WeldControlType.
+          * - :py:attr:`~CreateHAZLayer`
+            - Gets or sets the WeldControlCreateHAZLayer.
+          * - :py:attr:`~CreateUsing`
+            - Gets or sets the WeldControlCreateUsing.
+          * - :py:attr:`~CreationCriteria`
+            - Gets or sets the WeldControlCreationCriteria.
+          * - :py:attr:`~CrossSectionId`
+            - Gets or sets the WeldControlCrossSectionId.
+          * - :py:attr:`~CurveScoping`
+            - Gets or sets the WeldControlCurveScoping.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~EdgeMeshSize`
+            - Gets or sets the WeldControlEdgeMeshSize
+          * - :py:attr:`~EdgeMeshSizeAssignment`
+            - Gets or sets the WeldControlEdgeMeshSizeAssignment.
+          * - :py:attr:`~EdgeMeshSizeExpression`
+            - Gets or sets the WeldControlEdgeMeshSizeExpression Value.
+          * - :py:attr:`~EdgeSelection`
+            - Gets or sets the Edges.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GenerateEndCaps`
+            - Gets or sets the WeldControlSmoothing.
+          * - :py:attr:`~GenerateNamedSelection`
+            - Gets or sets the WeldControlGenerateNamedSelection.
+          * - :py:attr:`~HAZDistanceAssignment`
+            - Gets or sets the WeldControlHAZDistanceAssignment.
+          * - :py:attr:`~HAZDistanceBottomPlate`
+            - Gets or sets HAZDistanceBottomPlate
+          * - :py:attr:`~HAZDistanceExpressionBottomPlate`
+            - Gets or sets HAZDistanceExpressionBottomPlate Value.
+          * - :py:attr:`~HAZDistanceExpressionTopPlate`
+            - Gets or sets the WeldControlHAZDistanceExpression Value.
+          * - :py:attr:`~HAZDistanceOption`
+            - Gets or sets the WeldControlHAZDistanceOption.
+          * - :py:attr:`~HAZDistanceTopPlate`
+            - Gets or sets HAZDistanceTopPlate
+          * - :py:attr:`~HAZGrowthRate`
+            - Gets or sets the WeldControlHAZGrowthRate
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LapWeldAngleTolerance`
+            - Gets or sets the LapWeldAngleTolerance.
+          * - :py:attr:`~MaterialId`
+            - Gets or sets the WeldControlMaterialId.
+          * - :py:attr:`~MaxThicknessFactor`
+            - Gets or sets the WeldControlMaxThicknessFactor
+          * - :py:attr:`~MinThicknessFactor`
+            - Gets or sets the WeldControlMinThicknessFactor
+          * - :py:attr:`~ModeledAs`
+            - Gets or sets the WeldControlModeledAs.
+          * - :py:attr:`~NameFilter`
+            - Gets or sets the NameFilter.
+          * - :py:attr:`~NumberOfLayers`
+            - Gets or sets WeldControlNumberOfLayers
+          * - :py:attr:`~NumberOfWelds`
+            - Gets or sets WeldControlNumberOfLayers
+          * - :py:attr:`~Offset1`
+            - Gets or sets the WeldControlOffsetLayerHeight
+          * - :py:attr:`~Offset2`
+            - Gets or sets the WeldControlOffsetLayerHeight
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~Relaxation`
+            - Gets or sets the WeldControlRelaxation.
+          * - :py:attr:`~ScopingMethod`
+            - Gets or sets the ScopingMethod.
+          * - :py:attr:`~SharpAngle`
+            - Gets or sets the WeldSharpAngle.
+          * - :py:attr:`~Smoothing`
+            - Gets or sets the WeldControlSmoothing.
+          * - :py:attr:`~Source`
+            - Gets or sets the WeldControlSource.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~Thickness`
+            - Gets or sets the WeldControlThickness
+          * - :py:attr:`~ThicknessAssignment`
+            - Gets or sets the WeldControlThicknessAssignment.
+          * - :py:attr:`~TopEntities`
+            - Gets or sets the Top Entities (Bodies / Faces ) or Extension.
+          * - :py:attr:`~TopEntitiesNamedSelection`
+            - Gets or sets the TopEntitiesNamedSelection.
+          * - :py:attr:`~UseWorksheet`
+            - Gets or sets the WeldControlUseWorksheet.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WeldAngle`
+            - Gets or sets the WeldAngle.
+          * - :py:attr:`~WeldControlWeldWidth`
+            - Gets or sets the WeldControlWeldWidth
+          * - :py:attr:`~WeldCurves`
+            - Gets or sets the Weld Curves.
+          * - :py:attr:`~WeldCurvesBody`
+            - WeldCurvesBody property.
+          * - :py:attr:`~WeldDefinitionFileLocation`
+            - Gets or sets the WeldDefinitionFile Location.
+          * - :py:attr:`~WeldEdgesNamedSelection`
+            - Gets or sets the WeldEdgesNamedSelection.
+          * - :py:attr:`~WeldElementRows`
+            - Gets or sets the WeldControlElementRows.
+          * - :py:attr:`~WeldFormulation`
+            - Gets or sets the WeldFormulation.
+          * - :py:attr:`~WeldHeight`
+            - Gets or sets the WeldControlOffsetLayerHeight
+          * - :py:attr:`~WeldHeightAssignment`
+            - Gets or sets the WeldControlWeldHeightAssignment.
+          * - :py:attr:`~WeldHeightExpression`
+            - Gets or sets the WeldControlWeldHeightExpression Value.
+          * - :py:attr:`~WeldIntersectionTag`
+            - Gets or sets the WeldControlIntersectionTag Value.
+          * - :py:attr:`~WeldIntersectionTolerance`
+            - Gets or sets the WeldControlIntersectionTolerance Value.
+          * - :py:attr:`~WeldLength`
+            - Gets or sets the WeldControlOffsetLayerHeight
+          * - :py:attr:`~WeldPinballRadius`
+            - Gets or sets the WeldPinballRadius
+          * - :py:attr:`~WeldPitch`
+            - Gets or sets the WeldControlOffsetLayerHeight
+          * - :py:attr:`~WeldTargetShellFace`
+            - Gets or sets the WeldTargetShellFace.
+          * - :py:attr:`~WeldThicknessExpression`
+            - Gets or sets the WeldControlThicknessExpression Value.
+          * - :py:attr:`~WeldWidthAssignment`
+            - Gets or sets the WeldControlWeldWidthAssignment.
+          * - :py:attr:`~WeldWidthExpression`
+            - Gets or sets the WeldControlWeldWidthExpression Value.
+          * - :py:attr:`~WriteDefinitionFile`
+            - Gets or sets the WeldControlSmoothing.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AdjustWeldHeight
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the WeldControlAdjustWeldHeight.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AngledDirection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldAngledDirection]
+
+
+   
+   Gets or sets the WeldControlAngledDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BottomEntities
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Bottom Entities (Bodies / Faces ) or Extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BottomEntitiesNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+
+   
+   Gets or sets the BottomEntitiesNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlConnectionTolerance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldType]
+
+
+   
+   Gets or sets the WeldControlType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateHAZLayer
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the WeldControlCreateHAZLayer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateUsing
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldCreateUsing]
+
+
+   
+   Gets or sets the WeldControlCreateUsing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreationCriteria
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldCreationCriteria]
+
+
+   
+   Gets or sets the WeldControlCreationCriteria.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CrossSectionId
+   :type: Optional[int]
+
+
+   
+   Gets or sets the WeldControlCrossSectionId.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurveScoping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldCurveScoping]
+
+
+   
+   Gets or sets the WeldControlCurveScoping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlEdgeMeshSize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeMeshSizeAssignment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldEdgeMeshSizeAssignment]
+
+
+   
+   Gets or sets the WeldControlEdgeMeshSizeAssignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeMeshSizeExpression
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldControlEdgeMeshSizeExpression Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeSelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Edges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateEndCaps
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the WeldControlSmoothing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GenerateNamedSelection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldGeneratedNamedSelection]
+
+
+   
+   Gets or sets the WeldControlGenerateNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZDistanceAssignment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldHAZDistanceAssignment]
+
+
+   
+   Gets or sets the WeldControlHAZDistanceAssignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZDistanceBottomPlate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets HAZDistanceBottomPlate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZDistanceExpressionBottomPlate
+   :type: Optional[str]
+
+
+   
+   Gets or sets HAZDistanceExpressionBottomPlate Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZDistanceExpressionTopPlate
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldControlHAZDistanceExpression Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZDistanceOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldHAZDistanceOption]
+
+
+   
+   Gets or sets the WeldControlHAZDistanceOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZDistanceTopPlate
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets HAZDistanceTopPlate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HAZGrowthRate
+   :type: Optional[float]
+
+
+   
+   Gets or sets the WeldControlHAZGrowthRate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSMeshControlAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LapWeldAngleTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the LapWeldAngleTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialId
+   :type: Optional[int]
+
+
+   
+   Gets or sets the WeldControlMaterialId.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxThicknessFactor
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlMaxThicknessFactor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinThicknessFactor
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlMinThicknessFactor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModeledAs
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldModeledAs]
+
+
+   
+   Gets or sets the WeldControlModeledAs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NameFilter
+   :type: Optional[str]
+
+
+   
+   Gets or sets the NameFilter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfLayers
+   :type: Optional[int]
+
+
+   
+   Gets or sets WeldControlNumberOfLayers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfWelds
+   :type: Optional[int]
+
+
+   
+   Gets or sets WeldControlNumberOfLayers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Offset1
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlOffsetLayerHeight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Offset2
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlOffsetLayerHeight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Relaxation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldRelaxation]
+
+
+   
+   Gets or sets the WeldControlRelaxation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+
+   
+   Gets or sets the ScopingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharpAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldSharpAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Smoothing
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the WeldControlSmoothing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Source
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldSource]
+
+
+   
+   Gets or sets the WeldControlSource.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Thickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlThickness
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThicknessAssignment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldThickness]
+
+
+   
+   Gets or sets the WeldControlThicknessAssignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopEntities
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Top Entities (Bodies / Faces ) or Extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopEntitiesNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+
+   
+   Gets or sets the TopEntitiesNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseWorksheet
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the WeldControlUseWorksheet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldControlWeldWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlWeldWidth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldCurves
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Weld Curves.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldCurvesBody
+   :type: Optional[int]
+
+
+   
+   WeldCurvesBody property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldDefinitionFileLocation
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldDefinitionFile Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldEdgesNamedSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+
+   
+   Gets or sets the WeldEdgesNamedSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldElementRows
+   :type: Optional[int]
+
+
+   
+   Gets or sets the WeldControlElementRows.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactFormulation]
+
+
+   
+   Gets or sets the WeldFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlOffsetLayerHeight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldHeightAssignment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldHeightAssignment]
+
+
+   
+   Gets or sets the WeldControlWeldHeightAssignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldHeightExpression
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldControlWeldHeightExpression Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldIntersectionTag
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldControlIntersectionTag Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldIntersectionTolerance
+   :type: Optional[float]
+
+
+   
+   Gets or sets the WeldControlIntersectionTolerance Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlOffsetLayerHeight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldPinballRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldPinballRadius
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldPitch
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WeldControlOffsetLayerHeight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldTargetShellFace
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldTargetShellFaceType]
+
+
+   
+   Gets or sets the WeldTargetShellFace.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldThicknessExpression
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldControlThicknessExpression Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldWidthAssignment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WeldWidthAssignment]
+
+
+   
+   Gets or sets the WeldControlWeldWidthAssignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeldWidthExpression
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WeldControlWeldWidthExpression Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WriteDefinitionFile
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoType]
+
+
+   
+   Gets or sets the WeldControlSmoothing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ActivateAllWorksheetEntries() -> None
+
+   
+   set the ActivateAllWorksheetEntries
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddWeldWorksheetScopeToSelection(index: int, subset: int) -> bool
+
+   
+   Create worksheet entry scope to selection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AppendWeldControlIntersectionTag(val: str) -> None
+
+   
+   append the WeldControlIntersectionTag
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AppendWeldWorksheetIntersectionTag(rowIndices: Iterable[int], val: str) -> None
+
+   
+   AppendWeldWorksheetIntersectionTag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearAutoWeldIntersectionTag(includeInactive: bool) -> None
+
+   
+   Clear Auto Intersection Tags
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearWeldControlIntersectionTag() -> None
+
+   
+   clear the WeldControlIntersectionTag
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearWeldWorksheetIntersectionTag(rowIndices: Iterable[int]) -> None
+
+   
+   ClearWeldWorksheetIntersectionTag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeactivateAllWorksheetEntries() -> None
+
+   
+   set the DeactivateAllWorksheetEntries
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeactivateProblematicWorksheetEntries() -> None
+
+   
+   Deactivate Problematic Worksheet Entries
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateMesh() -> None
+
+   
+   Generate the Mesh.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateWeldIntersectionTag() -> None
+
+   
+   Auto detect Intersection Tags within specified tolerance
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCrossSectionIds(rowIndex: int) -> Ansys.Common.Interop.AnsCoreObjects.IAnsUINTColl
+
+   
+   get CrossSection Ids
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMaterialIds(rowIndex: int) -> Ansys.Common.Interop.AnsCoreObjects.IAnsUINTColl
+
+   
+   get Material Ids
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetAbsTol(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetAbsTol
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetActive(rowIndex: int) -> bool
+
+   
+   get the WeldWorksheetActive
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetBottomEntities(rowIndex: int) -> int
+
+   
+   get the WeldControlWorksheetBottomEntities
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetEdgeMeshSize(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetEdgeMeshSize
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetEdgeMeshSizeExpression(rowIndex: int) -> str
+
+   
+   get the WeldControlWorksheetEdgeMeshSizeExpression
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetEdges(rowIndex: int) -> int
+
+   
+   get the WeldControlWorksheetEdges
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetGenerateEndCaps(rowIndex: int) -> bool
+
+   
+   get the WeldControlWorksheetGenerateEndCaps
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetHAZDistanceBottomPlate(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetHAZDistance
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetHAZDistanceExpressionBottomPlate(rowIndex: int) -> str
+
+   
+   get WorksheetHAZDistanceExpressionBottomPlate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetHAZDistanceExpressionTopPlate(rowIndex: int) -> str
+
+   
+   get WorksheetHAZDistanceExpressionTopPlate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetHAZGrowthRate(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetHAZGrowthRate
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetHeight(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetHeight
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetIntersectionTag(rowIndex: int) -> str
+
+   
+   get the WeldControlWorksheetIntersectionTag
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetLapAngleTol(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetLapAngleTol
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetLength(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetLength
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetMaxThicknessFactor(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetMaxThicknessFactor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetMinThicknessFactor(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetMinThicknessFactor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetNumError() -> int
+
+   
+   Get Number of Errored rows
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetNumLayers(rowIndex: int) -> int
+
+   
+   get the WeldControlWorksheetNumLayers
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetNumWarning() -> int
+
+   
+   Get Number of rows with warnings
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetNumWelds(rowIndex: int) -> int
+
+   
+   get the WeldControlWorksheetNumWelds
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetOffset1(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetOffset1
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetOffset2(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetOffset2
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetPitch(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetPitch
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetSharpAngle(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetSharpAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetSmoothing(rowIndex: int) -> bool
+
+   
+   get the WeldControlWorksheetSmoothing option
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetThickness(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetThickness
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetThicknessExpression(rowIndex: int) -> str
+
+   
+   get the WeldControlWorksheetThicknessExpression
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetTopEntities(rowIndex: int) -> int
+
+   
+   get the WeldControlWorksheetTopEntities
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetWeldAngle(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetWeldAngle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetWeldCurve(rowIndex: int) -> int
+
+   
+   get the WeldControlWorksheetWeldCurve
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetWeldHeightExpression(rowIndex: int) -> str
+
+   
+   get the WeldControlWorksheetWeldHeight
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetWeldWidthExpression(rowIndex: int) -> str
+
+   
+   get the WeldControlWorksheetWeldWidth
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWeldWorksheetWidth(rowIndex: int) -> float
+
+   
+   get the WeldControlWorksheetWidth
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewMeshOnWeldWorksheet(rowIndices: Iterable[int]) -> None
+
+   
+   PreviewMeshOnWeldWorksheet method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToWeldControl(indices: Iterable[int]) -> int
+
+   
+   PromoteToWeldControl method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetAbsTol(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetAbsTol method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetActive(rowIndices: Iterable[int], val: bool) -> None
+
+   
+   SetWeldWorksheetActive method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetBottomEntities(rowIndices: Iterable[int], val: int) -> None
+
+   
+   SetWeldWorksheetBottomEntities method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetEdgeMeshSize(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetEdgeMeshSize method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetEdgeMeshSizeExpression(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetEdgeMeshSizeExpression method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetEdges(rowIndices: Iterable[int], val: int) -> None
+
+   
+   SetWeldWorksheetEdges method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetGenerateEndCaps(rowIndices: Iterable[int], val: bool) -> None
+
+   
+   SetWeldWorksheetGenerateEndCaps method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetHAZDistanceBottomPlate(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetHAZDistanceBottomPlate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetHAZDistanceExpressionBottomPlate(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetHAZDistanceExpressionBottomPlate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetHAZDistanceExpressionTopPlate(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetHAZDistanceExpressionTopPlate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetHAZDistanceTopPlate(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetHAZDistanceTopPlate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetHAZGrowthRate(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetHAZGrowthRate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetHeight(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetHeight method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetIntersectionTag(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetIntersectionTag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetLapAngleTol(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetLapAngleTol method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetLength(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetLength method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetMaxThicknessFactor(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetMaxThicknessFactor method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetMinThicknessFactor(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetMinThicknessFactor method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetNumLayers(rowIndices: Iterable[int], val: int) -> None
+
+   
+   SetWeldWorksheetNumLayers method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetNumWelds(rowIndices: Iterable[int], val: int) -> None
+
+   
+   SetWeldWorksheetNumWelds method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetOffset1(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetOffset1 method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetOffset2(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetOffset2 method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetPitch(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetPitch method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetSharpAngle(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetSharpAngle method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetSmoothing(rowIndices: Iterable[int], val: bool) -> None
+
+   
+   SetWeldWorksheetSmoothing method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetThickness(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetThickness method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetThicknessExpression(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetThicknessExpression method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetTopEntities(rowIndices: Iterable[int], val: int) -> None
+
+   
+   SetWeldWorksheetTopEntities method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetWeldAngle(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetWeldAngle method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetWeldCurve(rowIndices: Iterable[int], val: int) -> None
+
+   
+   SetWeldWorksheetWeldCurve method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetWeldHeightExpression(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetWeldHeightExpression method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetWeldWidthExpression(rowIndices: Iterable[int], val: str) -> None
+
+   
+   SetWeldWorksheetWeldWidthExpression method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetWeldWorksheetWidth(rowIndices: Iterable[int], val: float) -> None
+
+   
+   SetWeldWorksheetWidth method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetAddEntry() -> None
+
+   
+   add an entry to WeldWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetCreateControlForCurveBodies() -> None
+
+   
+   Create worksheet entries for all curve bodies
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetDeleteEntry(indices: Iterable[int]) -> None
+
+   
+   WeldWorksheetDeleteEntry method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetExport(fileName: str) -> None
+
+   
+   export WeldWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetImport(fileName: str) -> None
+
+   
+   import WeldWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetNumEntries() -> int
+
+   
+   Get total number of entries in worksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WeldWorksheetStatus(rowIndex: int) -> Ansys.Mechanical.DataModel.Enums.WeldStatus
+
+   
+   Get state of a given row
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

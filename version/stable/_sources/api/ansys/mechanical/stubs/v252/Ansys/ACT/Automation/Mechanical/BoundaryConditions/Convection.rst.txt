@@ -1,0 +1,1081 @@
+.. vale off
+
+
+
+:class:`Convection`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.BoundaryConditions.Convection
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Convection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Convection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetActivateAtLoadStep`
+            - Gets whether the convection is active at the specified load step.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetComponentActivateAtLoadStep`
+            - GetComponentActivateAtLoadStep method.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PromoteToNamedSelection`
+            - Run the PromoteToNamedSelection action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SetActivateAtLoadStep`
+            - Sets whether the convection is active at the specified load step.
+          * - :py:attr:`~SetComponentActivateAtLoadStep`
+            - SetComponentActivateAtLoadStep method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AmbientTemperature`
+            - Property used to get and set the ambient temperature data
+          * - :py:attr:`~AmbientTemperatureCoordinateSystem`
+            - The coordinate system id used currently to determinine the position of the points of the ambient temperature variable
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~CoefficientType`
+            - Gets or sets the CoefficientType.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConvectionCoefficientCoordinateSystem`
+            - The coordinate system id used currently to determinine the position of the points of the convection coefficient variable
+          * - :py:attr:`~ConvectionMatrix`
+            - Gets or sets the ConvectionMatrix.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DisplayConnectionLines`
+            - Gets or sets the DisplayConnectionLines.
+          * - :py:attr:`~EditDataFor`
+            - Gets or sets the EditDataFor.
+          * - :py:attr:`~ElementAPDLName`
+            - Gets or Sets the ElementAPDLName which stores the element type number of the convection load. This you can reference and use in Command Snippets.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FilmCoefficient`
+            - Property used to get and set the film coefficient data
+          * - :py:attr:`~FluidFlowSelection`
+            - Gets or sets the FluidFlowSelection.
+          * - :py:attr:`~GraphControlsXAxis`
+            - Gets or sets the GraphControlsXAxis.
+          * - :py:attr:`~HasFluidFlow`
+            - Gets or sets the HasFluidFlow.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~IndependentVariable`
+            - Gets or sets the IndependentVariable.
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~NumberOfSegments`
+            - Gets or sets the NumberOfSegments.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RangeMaximum`
+            - Gets or sets the RangeMaximum.
+          * - :py:attr:`~RangeMinimum`
+            - Gets or sets the RangeMinimum.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~SharedRefBody`
+            - Gets or sets the SharedRefBody.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~XYZFunctionCoordinateSystem`
+            - Gets or sets the XYZFunctionCoordinateSystem.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AmbientTemperature
+   :type: Optional[Any]
+
+
+   
+   Property used to get and set the ambient temperature data
+   The setter allows the use of a table T:Ansys.ACT.Automation.Mechanical.Table object, 
+   an expression contained in a string or a quantity T:Ansys.Core.Units.Quantity object as a data source.
+   Depending on the representation T:Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation type, 
+   the getter return type is a field T:Ansys.ACT.Mechanical.Fields.Field object or
+   an object which type depends on the source of the ambient temperature data:
+   - On table assignment mode, it returns the source table T:Ansys.ACT.Automation.Mechanical.Table object.
+   - On function mode, it returns a string containing the expression evaluated to obtain the data.
+   - On constant mode, it returns a quantity T:Ansys.Core.Units.Quantity object containg the value and the units currently assigned to the ambient temperature.
+   - On tabular mode, it returns a tabularDataTable T:Ansys.ACT.Automation.Mechanical.TabularDataTable object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AmbientTemperatureCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   The coordinate system id used currently to determinine the position of the points of the ambient temperature variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoefficientType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadVariationSubOption]
+
+
+   
+   Gets or sets the CoefficientType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConvectionCoefficientCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   The coordinate system id used currently to determinine the position of the points of the convection coefficient variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConvectionMatrix
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DiagonalOrConsistent]
+
+
+   
+   Gets or sets the ConvectionMatrix.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayConnectionLines
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the DisplayConnectionLines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EditDataFor
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ConvectionTableSelection]
+
+
+   
+   Gets or sets the EditDataFor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementAPDLName
+   :type: Optional[str]
+
+
+   
+   Gets or Sets the ElementAPDLName which stores the element type number of the convection load. This you can reference and use in Command Snippets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilmCoefficient
+   :type: Optional[Any]
+
+
+   
+   Property used to get and set the film coefficient data
+   The setter allows the use of a table T:Ansys.ACT.Automation.Mechanical.Table object, 
+   an expression contained in a string or a quantity T:Ansys.Core.Units.Quantity object as a data source.
+   Depending on the representation T:Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation type, 
+   the getter return type is a field T:Ansys.ACT.Mechanical.Fields.Field object or
+   an object which type depends on the source of the film coefficient data:
+   - On table assignment mode, it returns the source table T:Ansys.ACT.Automation.Mechanical.Table object.
+   - On function mode, it returns a string containing the expression evaluated to obtain the data.
+   - On constant mode, it returns a quantity T:Ansys.Core.Units.Quantity object containg the value and the units currently assigned to the film coefficient.
+   - On tabular mode, it returns a tabularDataTable T:Ansys.ACT.Automation.Mechanical.TabularDataTable object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FluidFlowSelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the FluidFlowSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GraphControlsXAxis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadVariableVariationType]
+
+
+   
+   Gets or sets the GraphControlsXAxis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HasFluidFlow
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the HasFluidFlow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IndependentVariable
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadVariableVariationType]
+
+
+   
+   Gets or sets the IndependentVariable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSLoadAuto]
+
+
+   
+   InternalObject property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSegments
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfSegments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RangeMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RangeMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RangeMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RangeMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharedRefBody
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Body]
+
+
+   
+   Gets or sets the SharedRefBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XYZFunctionCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the XYZFunctionCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetActivateAtLoadStep(stepNumber: int) -> bool
+
+   
+   Gets whether the convection is active at the specified load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetComponentActivateAtLoadStep(component: str, stepNumber: int) -> bool
+
+   
+   GetComponentActivateAtLoadStep method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToNamedSelection() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Run the PromoteToNamedSelection action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetActivateAtLoadStep(stepNumber: int, bActive: bool) -> None
+
+   
+   Sets whether the convection is active at the specified load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetComponentActivateAtLoadStep(component: str, stepNumber: int, bActive: bool) -> None
+
+   
+   SetComponentActivateAtLoadStep method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

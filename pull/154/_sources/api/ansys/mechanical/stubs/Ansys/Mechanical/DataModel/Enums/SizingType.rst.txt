@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`SizingType`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SizingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SizingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SizingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BodyOfInfluence`
+            - 
+          * - :py:attr:`~ElementSize`
+            - 
+          * - :py:attr:`~NumberOfDivisions`
+            - 
+          * - :py:attr:`~SphereOfInfluence`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BodyOfInfluence
+   :value: 3
+
+
+.. py:attribute:: ElementSize
+   :value: 0
+
+
+.. py:attribute:: NumberOfDivisions
+   :value: 1
+
+
+.. py:attribute:: SphereOfInfluence
+   :value: 2
+
+
+
+
+
+
+.. vale on

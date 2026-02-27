@@ -1,0 +1,1261 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>LCrossSection &#8212; PyMechanical Stubs</title>
+  
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+
+  <!-- Include desired assets -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
+  
+    <link href="../../../../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
+  
+    <script src="../../../../../../../../_static/documentation_options.js?v=e7fb764e"></script>
+    <script src="../../../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../../../../_static/thebelab-helper.js"></script>
+    <script src="../../../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../../../_static/copybutton.js?v=49e1bf35"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../../../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/LCrossSection';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../../../../../../../_static/ansys-favicon.png"/>
+    <link rel="index" title="Index" href="../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../search.html" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.dev0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../../../_static/pyansys_logo_transparent_black.png" class="logo__image only-light" alt="PyMechanical Stubs - Home"/>
+    <img src="../../../../../../../../_static/pyansys_logo_transparent_white.png" class="logo__image only-dark pst-js-only" alt="PyMechanical Stubs - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../../index.html" title="PyMechanical Stubs home">Home</a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav>
+</div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../../../../../../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+  
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
+<script>
+  // Fetch and inject the announcement HTML content
+  fetch("announcement.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
+      }
+      return response.text();
+    })
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
+</script>
+  
+
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../../index.html" title="PyMechanical Stubs home">Home</a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav>
+</div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../../../../../../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html"> <span class="nf nf-md-package"></span> ACT</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html"> <span class="nf nf-md-package"></span> Automation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html"> <span class="nf nf-md-package"></span> Mechanical</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="AdditiveManufacturing/index.html"> <span class="nf nf-md-package"></span> AdditiveManufacturing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnalysisSettings/index.html"> <span class="nf nf-md-package"></span> AnalysisSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BoundaryConditions/index.html"> <span class="nf nf-md-package"></span> BoundaryConditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedParts/index.html"> <span class="nf nf-md-package"></span> CondensedParts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Connections/index.html"> <span class="nf nf-md-package"></span> Connections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ConstructionLines/index.html"> <span class="nf nf-md-package"></span> ConstructionLines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FE/index.html"> <span class="nf nf-md-package"></span> FE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedLoads/index.html"> <span class="nf nf-md-package"></span> ImportedLoads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MaterialObject/index.html"> <span class="nf nf-md-package"></span> MaterialObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshControls/index.html"> <span class="nf nf-md-package"></span> MeshControls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Results/index.html"> <span class="nf nf-md-package"></span> Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Substructure/index.html"> <span class="nf nf-md-package"></span> Substructure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ICrossSection.html"> <span class="nf nf-cod-symbol_interface"></span> ICrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AMOverhangConstraint.html"> <span class="nf nf-cod-symbol_class"></span> AMOverhangConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AcousticsFarFieldResultWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> AcousticsFarFieldResultWorksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Analysis.html"> <span class="nf nf-cod-symbol_class"></span> Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnalysisPly.html"> <span class="nf nf-cod-symbol_class"></span> AnalysisPly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ArbitraryCrack.html"> <span class="nf nf-cod-symbol_class"></span> ArbitraryCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ArchiveSettings.html"> <span class="nf nf-cod-symbol_class"></span> ArchiveSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BatchConnectionsWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> BatchConnectionsWorksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Body.html"> <span class="nf nf-cod-symbol_class"></span> Body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CenterOfGravityConstraint.html"> <span class="nf nf-cod-symbol_class"></span> CenterOfGravityConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ChannelCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> ChannelCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Chart.html"> <span class="nf nf-cod-symbol_class"></span> Chart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ChartXAxis.html"> <span class="nf nf-cod-symbol_class"></span> ChartXAxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CircularCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> CircularCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CircularTubeCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> CircularTubeCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoSimulationPin.html"> <span class="nf nf-cod-symbol_class"></span> CoSimulationPin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Column.html"> <span class="nf nf-cod-symbol_class"></span> Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CommandSnippet.html"> <span class="nf nf-cod-symbol_class"></span> CommandSnippet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Comment.html"> <span class="nf nf-cod-symbol_class"></span> Comment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ComplexityIndexConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ComplexityIndexConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ComplianceConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ComplianceConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CompositeCriterion.html"> <span class="nf nf-cod-symbol_class"></span> CompositeCriterion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CompositeCriterionDefinition.html"> <span class="nf nf-cod-symbol_class"></span> CompositeCriterionDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CompositeCriterionTerm.html"> <span class="nf nf-cod-symbol_class"></span> CompositeCriterionTerm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedGeometry.html"> <span class="nf nf-cod-symbol_class"></span> CondensedGeometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedPart.html"> <span class="nf nf-cod-symbol_class"></span> CondensedPart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedPartBase.html"> <span class="nf nf-cod-symbol_class"></span> CondensedPartBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedPartExpansionState.html"> <span class="nf nf-cod-symbol_class"></span> CondensedPartExpansionState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedPartInfoTool.html"> <span class="nf nf-cod-symbol_class"></span> CondensedPartInfoTool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedPartInterface.html"> <span class="nf nf-cod-symbol_class"></span> CondensedPartInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CondensedPartInterfaces.html"> <span class="nf nf-cod-symbol_class"></span> CondensedPartInterfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ConstructionGeometry.html"> <span class="nf nf-cod-symbol_class"></span> ConstructionGeometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ConstructionPoint.html"> <span class="nf nf-cod-symbol_class"></span> ConstructionPoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContactDebonding.html"> <span class="nf nf-cod-symbol_class"></span> ContactDebonding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContactMatch.html"> <span class="nf nf-cod-symbol_class"></span> ContactMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContactMatchGroup.html"> <span class="nf nf-cod-symbol_class"></span> ContactMatchGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContactSolutionInformation.html"> <span class="nf nf-cod-symbol_class"></span> ContactSolutionInformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoordinateSystem.html"> <span class="nf nf-cod-symbol_class"></span> CoordinateSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoordinateSystems.html"> <span class="nf nf-cod-symbol_class"></span> CoordinateSystems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CornerCrack.html"> <span class="nf nf-cod-symbol_class"></span> CornerCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Crack.html"> <span class="nf nf-cod-symbol_class"></span> Crack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CrackInitiation.html"> <span class="nf nf-cod-symbol_class"></span> CrackInitiation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Criterion.html"> <span class="nf nf-cod-symbol_class"></span> Criterion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CriterionConstraint.html"> <span class="nf nf-cod-symbol_class"></span> CriterionConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CrossSection.html"> <span class="nf nf-cod-symbol_class"></span> CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CrossSections.html"> <span class="nf nf-cod-symbol_class"></span> CrossSections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CyclicManufacturingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> CyclicManufacturingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CyclicRegion.html"> <span class="nf nf-cod-symbol_class"></span> CyclicRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CylindricalCrack.html"> <span class="nf nf-cod-symbol_class"></span> CylindricalCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DirectMorph.html"> <span class="nf nf-cod-symbol_class"></span> DirectMorph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DisplacementConstraint.html"> <span class="nf nf-cod-symbol_class"></span> DisplacementConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DistributedMass.html"> <span class="nf nf-cod-symbol_class"></span> DistributedMass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DynamicComplianceConstraint.html"> <span class="nf nf-cod-symbol_class"></span> DynamicComplianceConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EdgeCrack.html"> <span class="nf nf-cod-symbol_class"></span> EdgeCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ElementOrientation.html"> <span class="nf nf-cod-symbol_class"></span> ElementOrientation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EllipticalCrack.html"> <span class="nf nf-cod-symbol_class"></span> EllipticalCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EndRelease.html"> <span class="nf nf-cod-symbol_class"></span> EndRelease</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExclusionRegion.html"> <span class="nf nf-cod-symbol_class"></span> ExclusionRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExpansionSettings.html"> <span class="nf nf-cod-symbol_class"></span> ExpansionSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExternalEnhancedModel.html"> <span class="nf nf-cod-symbol_class"></span> ExternalEnhancedModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExternalModelDataColl.html"> <span class="nf nf-cod-symbol_class"></span> ExternalModelDataColl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExtrusionManufacturingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ExtrusionManufacturingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FatigueCombination.html"> <span class="nf nf-cod-symbol_class"></span> FatigueCombination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FatigueTool.html"> <span class="nf nf-cod-symbol_class"></span> FatigueTool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FeatureDetection.html"> <span class="nf nf-cod-symbol_class"></span> FeatureDetection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FeatureDetectionDefinition.html"> <span class="nf nf-cod-symbol_class"></span> FeatureDetectionDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Figure.html"> <span class="nf nf-cod-symbol_class"></span> Figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileBasedImportedLoads.html"> <span class="nf nf-cod-symbol_class"></span> FileBasedImportedLoads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fracture.html"> <span class="nf nf-cod-symbol_class"></span> Fracture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GeneralAxisymmetric.html"> <span class="nf nf-cod-symbol_class"></span> GeneralAxisymmetric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenericCrack.html"> <span class="nf nf-cod-symbol_class"></span> GenericCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenericDelamination.html"> <span class="nf nf-cod-symbol_class"></span> GenericDelamination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenericPointMass.html"> <span class="nf nf-cod-symbol_class"></span> GenericPointMass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry.html"> <span class="nf nf-cod-symbol_class"></span> Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GeometryFileContainer.html"> <span class="nf nf-cod-symbol_class"></span> GeometryFileContainer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GeometryImport.html"> <span class="nf nf-cod-symbol_class"></span> GeometryImport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GeometryImportGroup.html"> <span class="nf nf-cod-symbol_class"></span> GeometryImportGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GlobalVonMisesStressConstraint.html"> <span class="nf nf-cod-symbol_class"></span> GlobalVonMisesStressConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HatCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> HatCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HollowRectangularCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> HollowRectangularCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HousingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> HousingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Image.html"> <span class="nf nf-cod-symbol_class"></span> Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImagePlane.html"> <span class="nf nf-cod-symbol_class"></span> ImagePlane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedBoltPretensions.html"> <span class="nf nf-cod-symbol_class"></span> ImportedBoltPretensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedCondensedPart.html"> <span class="nf nf-cod-symbol_class"></span> ImportedCondensedPart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedConstraintEquations.html"> <span class="nf nf-cod-symbol_class"></span> ImportedConstraintEquations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedContacts.html"> <span class="nf nf-cod-symbol_class"></span> ImportedContacts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedCoordinateSystems.html"> <span class="nf nf-cod-symbol_class"></span> ImportedCoordinateSystems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedElementOrientations.html"> <span class="nf nf-cod-symbol_class"></span> ImportedElementOrientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedFlexibleRemoteConnectors.html"> <span class="nf nf-cod-symbol_class"></span> ImportedFlexibleRemoteConnectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedLayeredSection.html"> <span class="nf nf-cod-symbol_class"></span> ImportedLayeredSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedNodalOrientations.html"> <span class="nf nf-cod-symbol_class"></span> ImportedNodalOrientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedObject.html"> <span class="nf nf-cod-symbol_class"></span> ImportedObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedPlies.html"> <span class="nf nf-cod-symbol_class"></span> ImportedPlies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedPliesCollection.html"> <span class="nf nf-cod-symbol_class"></span> ImportedPliesCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedPointMasses.html"> <span class="nf nf-cod-symbol_class"></span> ImportedPointMasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedPremeshedBoltPretensions.html"> <span class="nf nf-cod-symbol_class"></span> ImportedPremeshedBoltPretensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedRigidRemoteConnectors.html"> <span class="nf nf-cod-symbol_class"></span> ImportedRigidRemoteConnectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedShellThicknesses.html"> <span class="nf nf-cod-symbol_class"></span> ImportedShellThicknesses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedSpringConnectors.html"> <span class="nf nf-cod-symbol_class"></span> ImportedSpringConnectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ImportedStresses.html"> <span class="nf nf-cod-symbol_class"></span> ImportedStresses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="InitialCondition.html"> <span class="nf nf-cod-symbol_class"></span> InitialCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="InitialConditions.html"> <span class="nf nf-cod-symbol_class"></span> InitialConditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="InterfaceDelamination.html"> <span class="nf nf-cod-symbol_class"></span> InterfaceDelamination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="JointBushingWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> JointBushingWorksheet</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#"> <span class="nf nf-cod-symbol_class"></span> LCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LayeredSection.html"> <span class="nf nf-cod-symbol_class"></span> LayeredSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LayeredSectionWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> LayeredSectionWorksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LineChart2D.html"> <span class="nf nf-cod-symbol_class"></span> LineChart2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LoadHelper.html"> <span class="nf nf-cod-symbol_class"></span> LoadHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LocalDesignRestriction.html"> <span class="nf nf-cod-symbol_class"></span> LocalDesignRestriction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LocalVonMisesStressConstraint.html"> <span class="nf nf-cod-symbol_class"></span> LocalVonMisesStressConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ManufacturingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ManufacturingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MappingValidation.html"> <span class="nf nf-cod-symbol_class"></span> MappingValidation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MassConstraint.html"> <span class="nf nf-cod-symbol_class"></span> MassConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material.html"> <span class="nf nf-cod-symbol_class"></span> Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MaterialAssignment.html"> <span class="nf nf-cod-symbol_class"></span> MaterialAssignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MaterialCombination.html"> <span class="nf nf-cod-symbol_class"></span> MaterialCombination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MaterialPlot.html"> <span class="nf nf-cod-symbol_class"></span> MaterialPlot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Materials.html"> <span class="nf nf-cod-symbol_class"></span> Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Measures.html"> <span class="nf nf-cod-symbol_class"></span> Measures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MemberSizeManufacturingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> MemberSizeManufacturingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshConnection.html"> <span class="nf nf-cod-symbol_class"></span> MeshConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshConnectionBase.html"> <span class="nf nf-cod-symbol_class"></span> MeshConnectionBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshConnectionGroup.html"> <span class="nf nf-cod-symbol_class"></span> MeshConnectionGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshControlWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> MeshControlWorksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshEdit.html"> <span class="nf nf-cod-symbol_class"></span> MeshEdit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshExtrude.html"> <span class="nf nf-cod-symbol_class"></span> MeshExtrude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshNumbering.html"> <span class="nf nf-cod-symbol_class"></span> MeshNumbering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflow.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowControl.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowControl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowGroup.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowInput.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowInput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowOutcome.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowOutcome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowOutput.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowStep.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowStep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshWorkflowStepGroup.html"> <span class="nf nf-cod-symbol_class"></span> MeshWorkflowStepGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Model.html"> <span class="nf nf-cod-symbol_class"></span> Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelImport.html"> <span class="nf nf-cod-symbol_class"></span> ModelImport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MomentOfInertiaConstraint.html"> <span class="nf nf-cod-symbol_class"></span> MomentOfInertiaConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MorphingRegion.html"> <span class="nf nf-cod-symbol_class"></span> MorphingRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NamedSelection.html"> <span class="nf nf-cod-symbol_class"></span> NamedSelection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NamedSelectionCriteria.html"> <span class="nf nf-cod-symbol_class"></span> NamedSelectionCriteria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NamedSelectionCriterion.html"> <span class="nf nf-cod-symbol_class"></span> NamedSelectionCriterion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NamedSelections.html"> <span class="nf nf-cod-symbol_class"></span> NamedSelections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NastranExportOptions.html"> <span class="nf nf-cod-symbol_class"></span> NastranExportOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NaturalFrequencyConstraint.html"> <span class="nf nf-cod-symbol_class"></span> NaturalFrequencyConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodeMerge.html"> <span class="nf nf-cod-symbol_class"></span> NodeMerge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodeMergeGroup.html"> <span class="nf nf-cod-symbol_class"></span> NodeMergeGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodeMove.html"> <span class="nf nf-cod-symbol_class"></span> NodeMove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NumberingControl.html"> <span class="nf nf-cod-symbol_class"></span> NumberingControl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Objective.html"> <span class="nf nf-cod-symbol_class"></span> Objective</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ObjectiveWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> ObjectiveWorksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptimizationMaterial.html"> <span class="nf nf-cod-symbol_class"></span> OptimizationMaterial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptimizationRegion.html"> <span class="nf nf-cod-symbol_class"></span> OptimizationRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptimizationRegionBaseClass.html"> <span class="nf nf-cod-symbol_class"></span> OptimizationRegionBaseClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ParameterVariable.html"> <span class="nf nf-cod-symbol_class"></span> ParameterVariable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ParameterVariableGroup.html"> <span class="nf nf-cod-symbol_class"></span> ParameterVariableGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part.html"> <span class="nf nf-cod-symbol_class"></span> Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PartTransform.html"> <span class="nf nf-cod-symbol_class"></span> PartTransform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PartTransformGroup.html"> <span class="nf nf-cod-symbol_class"></span> PartTransformGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Path.html"> <span class="nf nf-cod-symbol_class"></span> Path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PatternRepetitionConstraint.html"> <span class="nf nf-cod-symbol_class"></span> PatternRepetitionConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PeriodicRegion.html"> <span class="nf nf-cod-symbol_class"></span> PeriodicRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicsRegion.html"> <span class="nf nf-cod-symbol_class"></span> PhysicsRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PipeIdealization.html"> <span class="nf nf-cod-symbol_class"></span> PipeIdealization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PointMass.html"> <span class="nf nf-cod-symbol_class"></span> PointMass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PostContactTool.html"> <span class="nf nf-cod-symbol_class"></span> PostContactTool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreContactTool.html"> <span class="nf nf-cod-symbol_class"></span> PreContactTool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreMeshedCrack.html"> <span class="nf nf-cod-symbol_class"></span> PreMeshedCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreMeshedCyclicRegion.html"> <span class="nf nf-cod-symbol_class"></span> PreMeshedCyclicRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PrimaryCriterion.html"> <span class="nf nf-cod-symbol_class"></span> PrimaryCriterion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Project.html"> <span class="nf nf-cod-symbol_class"></span> Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PullOutDirectionManufacturingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> PullOutDirectionManufacturingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PythonCode.html"> <span class="nf nf-cod-symbol_class"></span> PythonCode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PythonCodeEventBased.html"> <span class="nf nf-cod-symbol_class"></span> PythonCodeEventBased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ReactionForceConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ReactionForceConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RectangularCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> RectangularCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RemotePoint.html"> <span class="nf nf-cod-symbol_class"></span> RemotePoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RemotePoints.html"> <span class="nf nf-cod-symbol_class"></span> RemotePoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ResponseConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ResponseConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ResponsePSDTool.html"> <span class="nf nf-cod-symbol_class"></span> ResponsePSDTool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ResultMesh.html"> <span class="nf nf-cod-symbol_class"></span> ResultMesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RingCrack.html"> <span class="nf nf-cod-symbol_class"></span> RingCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SMARTCrackGrowth.html"> <span class="nf nf-cod-symbol_class"></span> SMARTCrackGrowth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STL.html"> <span class="nf nf-cod-symbol_class"></span> STL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SelectionWorksheet.html"> <span class="nf nf-cod-symbol_class"></span> SelectionWorksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SemiEllipticalCrack.html"> <span class="nf nf-cod-symbol_class"></span> SemiEllipticalCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Solid.html"> <span class="nf nf-cod-symbol_class"></span> Solid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Solution.html"> <span class="nf nf-cod-symbol_class"></span> Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SolutionCombination.html"> <span class="nf nf-cod-symbol_class"></span> SolutionCombination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SolutionCombinationDefinition.html"> <span class="nf nf-cod-symbol_class"></span> SolutionCombinationDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SolutionInformation.html"> <span class="nf nf-cod-symbol_class"></span> SolutionInformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Stage.html"> <span class="nf nf-cod-symbol_class"></span> Stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SubstructureGenerationCondensedPart.html"> <span class="nf nf-cod-symbol_class"></span> SubstructureGenerationCondensedPart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Surface.html"> <span class="nf nf-cod-symbol_class"></span> Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SurfaceCoating.html"> <span class="nf nf-cod-symbol_class"></span> SurfaceCoating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Symmetry.html"> <span class="nf nf-cod-symbol_class"></span> Symmetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SymmetryGeneral.html"> <span class="nf nf-cod-symbol_class"></span> SymmetryGeneral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SymmetryManufacturingConstraint.html"> <span class="nf nf-cod-symbol_class"></span> SymmetryManufacturingConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SymmetryRegion.html"> <span class="nf nf-cod-symbol_class"></span> SymmetryRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> TCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Table.html"> <span class="nf nf-cod-symbol_class"></span> Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TableGroup.html"> <span class="nf nf-cod-symbol_class"></span> TableGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TemperatureConstraint.html"> <span class="nf nf-cod-symbol_class"></span> TemperatureConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThermalComplianceConstraint.html"> <span class="nf nf-cod-symbol_class"></span> ThermalComplianceConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThermalPointMass.html"> <span class="nf nf-cod-symbol_class"></span> ThermalPointMass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Thickness.html"> <span class="nf nf-cod-symbol_class"></span> Thickness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThroughCrack.html"> <span class="nf nf-cod-symbol_class"></span> ThroughCrack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Tree.html"> <span class="nf nf-cod-symbol_class"></span> Tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TreeGroupingFolder.html"> <span class="nf nf-cod-symbol_class"></span> TreeGroupingFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UniformConstraint.html"> <span class="nf nf-cod-symbol_class"></span> UniformConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UserDefinedCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> UserDefinedCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VirtualCell.html"> <span class="nf nf-cod-symbol_class"></span> VirtualCell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VirtualTopology.html"> <span class="nf nf-cod-symbol_class"></span> VirtualTopology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VolumeConstraint.html"> <span class="nf nf-cod-symbol_class"></span> VolumeConstraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Worksheet.html"> <span class="nf nf-cod-symbol_class"></span> Worksheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ZCrossSection.html"> <span class="nf nf-cod-symbol_class"></span> ZCrossSection</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Common/index.html"> <span class="nf nf-md-package"></span> Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Interfaces/index.html"> <span class="nf nf-md-package"></span> Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Mechanical/index.html"> <span class="nf nf-md-package"></span> Mechanical</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Core/index.html"> <span class="nf nf-md-package"></span> Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Mechanical/index.html"> <span class="nf nf-md-package"></span> Mechanical</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+         
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="https://docs.pyansys.com/" class="nav-link">PyAnsys</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a
+        href="../../../../../../../../index.html"
+        class="nav-link"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+      
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><code class="xref py py-class docutils literal notranslate"><span class="pre">LCrossSection</span></code></span></li>
+    
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lcrosssection">
+<h1><code class="xref py py-class docutils literal notranslate"><span class="pre">LCrossSection</span></code><a class="headerlink" href="#lcrosssection" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.LCrossSection">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.</span></span><span class="sig-name descname"><span class="pre">LCrossSection</span></span><a class="headerlink" href="#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.LCrossSection" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Defines a LCrossSection.</p>
+</dd></dl>
+
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Methods</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Activate" title="LCrossSection.Activate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Activate</span></code></a></p></td>
+<td><p>Activate the current object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.AddComment" title="LCrossSection.AddComment"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AddComment</span></code></a></p></td>
+<td><p>Creates a new child Comment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.AddFigure" title="LCrossSection.AddFigure"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AddFigure</span></code></a></p></td>
+<td><p>Creates a new child Figure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.AddImage" title="LCrossSection.AddImage"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AddImage</span></code></a></p></td>
+<td><p>Creates a new child Image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.CopyTo" title="LCrossSection.CopyTo"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CopyTo</span></code></a></p></td>
+<td><p>Copies all visible properties from this object to another.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.CreateParameter" title="LCrossSection.CreateParameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CreateParameter</span></code></a></p></td>
+<td><p>Creates a new parameter for a Property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Delete" title="LCrossSection.Delete"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Delete</span></code></a></p></td>
+<td><p>Run the Delete action.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.Duplicate" title="LCrossSection.Duplicate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Duplicate</span></code></a></p></td>
+<td><p>Creates a copy of the current DataModelObject.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.GetChildren" title="LCrossSection.GetChildren"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GetChildren</span></code></a></p></td>
+<td><p>Gets the list of children, filtered by type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.GetParameter" title="LCrossSection.GetParameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GetParameter</span></code></a></p></td>
+<td><p>Gets the parameter corresponding to the given property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.GroupAllSimilarChildren" title="LCrossSection.GroupAllSimilarChildren"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GroupAllSimilarChildren</span></code></a></p></td>
+<td><p>Run the GroupAllSimilarChildren action.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.GroupSimilarObjects" title="LCrossSection.GroupSimilarObjects"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GroupSimilarObjects</span></code></a></p></td>
+<td><p>Run the GroupSimilarObjects action.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.PropertyByAPIName" title="LCrossSection.PropertyByAPIName"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PropertyByAPIName</span></code></a></p></td>
+<td><p>Get a property by its API name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.PropertyByName" title="LCrossSection.PropertyByName"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PropertyByName</span></code></a></p></td>
+<td><p>Get a property by its unique name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.RemoveParameter" title="LCrossSection.RemoveParameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RemoveParameter</span></code></a></p></td>
+<td><p>Removes the parameter from the parameter set corresponding to the given property.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Properties</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Area" title="LCrossSection.Area"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Area</span></code></a></p></td>
+<td><p>Gets the Area.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.Children" title="LCrossSection.Children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Children</span></code></a></p></td>
+<td><p>Gets the list of children.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Comments" title="LCrossSection.Comments"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Comments</span></code></a></p></td>
+<td><p>Gets the list of associated comments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.DataModelObjectCategory" title="LCrossSection.DataModelObjectCategory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DataModelObjectCategory</span></code></a></p></td>
+<td><p>Gets the current DataModelObject's category.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Figures" title="LCrossSection.Figures"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Figures</span></code></a></p></td>
+<td><p>Gets the list of associated figures.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.IYY" title="LCrossSection.IYY"><code class="xref py py-attr docutils literal notranslate"><span class="pre">IYY</span></code></a></p></td>
+<td><p>Gets the IYY.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.IZZ" title="LCrossSection.IZZ"><code class="xref py py-attr docutils literal notranslate"><span class="pre">IZZ</span></code></a></p></td>
+<td><p>Gets the IZZ.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.Images" title="LCrossSection.Images"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Images</span></code></a></p></td>
+<td><p>Gets the list of associated images.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.InternalObject" title="LCrossSection.InternalObject"><code class="xref py py-attr docutils literal notranslate"><span class="pre">InternalObject</span></code></a></p></td>
+<td><p>Gets the internal object. For advanced usage only.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.Properties" title="LCrossSection.Properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Properties</span></code></a></p></td>
+<td><p>Gets the list of properties for this object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.ReadOnly" title="LCrossSection.ReadOnly"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ReadOnly</span></code></a></p></td>
+<td><p>Gets or sets the ReadOnly.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.Thick1" title="LCrossSection.Thick1"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Thick1</span></code></a></p></td>
+<td><p>Gets or sets the Thick1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Thick2" title="LCrossSection.Thick2"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Thick2</span></code></a></p></td>
+<td><p>Gets or sets the Thick2.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.VisibleProperties" title="LCrossSection.VisibleProperties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VisibleProperties</span></code></a></p></td>
+<td><p>Gets the list of properties that are visible for this object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#LCrossSection.Width1" title="LCrossSection.Width1"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Width1</span></code></a></p></td>
+<td><p>Gets or sets the Width1.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#LCrossSection.Width2" title="LCrossSection.Width2"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Width2</span></code></a></p></td>
+<td><p>Gets or sets the Width2.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="property-detail">
+<h2>Property detail<a class="headerlink" href="#property-detail" title="Link to this heading">#</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Area">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Area</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Area" title="Link to this definition">#</a></dt>
+<dd><p>Gets the Area.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Children">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Children</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../Mechanical/DataModel/Interfaces/IDataModelObject.html#ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Interfaces.IDataModelObject" title="ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Interfaces.IDataModelObject"><span class="pre">Ansys.Mechanical.DataModel.Interfaces.IDataModelObject</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Children" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of children.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Comments">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Comments</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Comment.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Comment" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Comment"><span class="pre">Ansys.ACT.Automation.Mechanical.Comment</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Comments" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of associated comments.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.DataModelObjectCategory">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">DataModelObjectCategory</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Mechanical/DataModel/Enums/DataModelObjectCategory.html#ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory" title="ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory"><span class="pre">Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.DataModelObjectCategory" title="Link to this definition">#</a></dt>
+<dd><p>Gets the current DataModelObject's category.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Figures">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Figures</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Figure.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Figure" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Figure"><span class="pre">Ansys.ACT.Automation.Mechanical.Figure</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Figures" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of associated figures.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.IYY">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">IYY</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.IYY" title="Link to this definition">#</a></dt>
+<dd><p>Gets the IYY.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.IZZ">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">IZZ</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.IZZ" title="Link to this definition">#</a></dt>
+<dd><p>Gets the IZZ.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Images">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Images</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Image.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Image" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Image"><span class="pre">Ansys.ACT.Automation.Mechanical.Image</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Images" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of associated images.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.InternalObject">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">InternalObject</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.Common.Interop.DSObjectsAuto.IDSCrossSectionAuto</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.InternalObject" title="Link to this definition">#</a></dt>
+<dd><p>Gets the internal object. For advanced usage only.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Properties">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Properties</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Ansys.ACT.Automation.Mechanical.Property</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Properties" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of properties for this object.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.ReadOnly">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">ReadOnly</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.ReadOnly" title="Link to this definition">#</a></dt>
+<dd><p>Gets or sets the ReadOnly.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Thick1">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Thick1</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Thick1" title="Link to this definition">#</a></dt>
+<dd><p>Gets or sets the Thick1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Thick2">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Thick2</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Thick2" title="Link to this definition">#</a></dt>
+<dd><p>Gets or sets the Thick2.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.VisibleProperties">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">VisibleProperties</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Ansys.ACT.Automation.Mechanical.Property</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.VisibleProperties" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of properties that are visible for this object.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Width1">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Width1</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Width1" title="Link to this definition">#</a></dt>
+<dd><p>Gets or sets the Width1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="LCrossSection.Width2">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Width2</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../Core/Units/Quantity.html#ansys.mechanical.stubs.Ansys.Core.Units.Quantity" title="ansys.mechanical.stubs.Ansys.Core.Units.Quantity"><span class="pre">Ansys.Core.Units.Quantity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#LCrossSection.Width2" title="Link to this definition">#</a></dt>
+<dd><p>Gets or sets the Width2.</p>
+</dd></dl>
+
+</section>
+<section id="method-detail">
+<h2>Method detail<a class="headerlink" href="#method-detail" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.Activate">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#LCrossSection.Activate" title="Link to this definition">#</a></dt>
+<dd><p>Activate the current object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.AddComment">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">AddComment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="Comment.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Comment" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Comment"><span class="pre">Ansys.ACT.Automation.Mechanical.Comment</span></a></span></span><a class="headerlink" href="#LCrossSection.AddComment" title="Link to this definition">#</a></dt>
+<dd><p>Creates a new child Comment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.AddFigure">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">AddFigure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="Figure.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Figure" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Figure"><span class="pre">Ansys.ACT.Automation.Mechanical.Figure</span></a></span></span><a class="headerlink" href="#LCrossSection.AddFigure" title="Link to this definition">#</a></dt>
+<dd><p>Creates a new child Figure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.AddImage">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">AddImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="Image.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Image" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Image"><span class="pre">Ansys.ACT.Automation.Mechanical.Image</span></a></span></span><a class="headerlink" href="#LCrossSection.AddImage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Creates a new child Image.
+If a filePath is provided, the image will be loaded from that file,
+if not, the image will be a screen capture of the Geometry window.
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.CopyTo">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">CopyTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Ansys.ACT.Automation.Mechanical.DataModelObject</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#LCrossSection.CopyTo" title="Link to this definition">#</a></dt>
+<dd><p>Copies all visible properties from this object to another.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.CreateParameter">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">CreateParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.Mechanical.IParameter</span></span></span><a class="headerlink" href="#LCrossSection.CreateParameter" title="Link to this definition">#</a></dt>
+<dd><p>Creates a new parameter for a Property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.Delete">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#LCrossSection.Delete" title="Link to this definition">#</a></dt>
+<dd><p>Run the Delete action.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.Duplicate">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">Duplicate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../../Mechanical/DataModel/Interfaces/IDataModelObject.html#ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Interfaces.IDataModelObject" title="ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Interfaces.IDataModelObject"><span class="pre">Ansys.Mechanical.DataModel.Interfaces.IDataModelObject</span></a></span></span><a class="headerlink" href="#LCrossSection.Duplicate" title="Link to this definition">#</a></dt>
+<dd><p>Creates a copy of the current DataModelObject.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.GetChildren">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">GetChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recurses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ChildrenType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ChildrenType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#LCrossSection.GetChildren" title="Link to this definition">#</a></dt>
+<dd><p>Gets the list of children, filtered by type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.GetParameter">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">GetParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.Mechanical.IParameter</span></span></span><a class="headerlink" href="#LCrossSection.GetParameter" title="Link to this definition">#</a></dt>
+<dd><p>Gets the parameter corresponding to the given property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.GroupAllSimilarChildren">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">GroupAllSimilarChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#LCrossSection.GroupAllSimilarChildren" title="Link to this definition">#</a></dt>
+<dd><p>Run the GroupAllSimilarChildren action.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.GroupSimilarObjects">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">GroupSimilarObjects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="TreeGroupingFolder.html#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.TreeGroupingFolder" title="ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.TreeGroupingFolder"><span class="pre">Ansys.ACT.Automation.Mechanical.TreeGroupingFolder</span></a></span></span><a class="headerlink" href="#LCrossSection.GroupSimilarObjects" title="Link to this definition">#</a></dt>
+<dd><p>Run the GroupSimilarObjects action.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.PropertyByAPIName">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">PropertyByAPIName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Automation.Mechanical.Property</span></span></span><a class="headerlink" href="#LCrossSection.PropertyByAPIName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Get a property by its API name.
+If multiple properties have the same API Name, only the first property with that name will be returned.
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.PropertyByName">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">PropertyByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Automation.Mechanical.Property</span></span></span><a class="headerlink" href="#LCrossSection.PropertyByName" title="Link to this definition">#</a></dt>
+<dd><p>Get a property by its unique name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="LCrossSection.RemoveParameter">
+<span class="sig-prename descclassname"><span class="pre">LCrossSection.</span></span><span class="sig-name descname"><span class="pre">RemoveParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#LCrossSection.RemoveParameter" title="Link to this definition">#</a></dt>
+<dd><p>Removes the parameter from the parameter set corresponding to the given property.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.LCrossSection"><code class="docutils literal notranslate"><span class="pre">ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.LCrossSection</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#property-detail">Property detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Area"><code class="docutils literal notranslate"><span class="pre">Area</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Children"><code class="docutils literal notranslate"><span class="pre">Children</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Comments"><code class="docutils literal notranslate"><span class="pre">Comments</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.DataModelObjectCategory"><code class="docutils literal notranslate"><span class="pre">DataModelObjectCategory</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Figures"><code class="docutils literal notranslate"><span class="pre">Figures</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.IYY"><code class="docutils literal notranslate"><span class="pre">IYY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.IZZ"><code class="docutils literal notranslate"><span class="pre">IZZ</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Images"><code class="docutils literal notranslate"><span class="pre">Images</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.InternalObject"><code class="docutils literal notranslate"><span class="pre">InternalObject</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Properties"><code class="docutils literal notranslate"><span class="pre">Properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.ReadOnly"><code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Thick1"><code class="docutils literal notranslate"><span class="pre">Thick1</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Thick2"><code class="docutils literal notranslate"><span class="pre">Thick2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.VisibleProperties"><code class="docutils literal notranslate"><span class="pre">VisibleProperties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Width1"><code class="docutils literal notranslate"><span class="pre">Width1</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Width2"><code class="docutils literal notranslate"><span class="pre">Width2</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-detail">Method detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Activate"><code class="docutils literal notranslate"><span class="pre">Activate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.AddComment"><code class="docutils literal notranslate"><span class="pre">AddComment()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.AddFigure"><code class="docutils literal notranslate"><span class="pre">AddFigure()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.AddImage"><code class="docutils literal notranslate"><span class="pre">AddImage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.CopyTo"><code class="docutils literal notranslate"><span class="pre">CopyTo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.CreateParameter"><code class="docutils literal notranslate"><span class="pre">CreateParameter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Delete"><code class="docutils literal notranslate"><span class="pre">Delete()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.Duplicate"><code class="docutils literal notranslate"><span class="pre">Duplicate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.GetChildren"><code class="docutils literal notranslate"><span class="pre">GetChildren()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.GetParameter"><code class="docutils literal notranslate"><span class="pre">GetParameter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.GroupAllSimilarChildren"><code class="docutils literal notranslate"><span class="pre">GroupAllSimilarChildren()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.GroupSimilarObjects"><code class="docutils literal notranslate"><span class="pre">GroupSimilarObjects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.PropertyByAPIName"><code class="docutils literal notranslate"><span class="pre">PropertyByAPIName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.PropertyByName"><code class="docutils literal notranslate"><span class="pre">PropertyByName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#LCrossSection.RemoveParameter"><code class="docutils literal notranslate"><span class="pre">RemoveParameter()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="http://github.com/ansys/pymechanical-stubs/edit/main/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/LCrossSection.py" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </nav>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <ul class="this-page-menu">
+      <li><a href="../../../../../../../../_sources/api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/LCrossSection.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+  <!-- Include desired assets -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+
+<script>
+// Passing the search options to the search.js file
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
+const SEARCH_FILE = "../../../../../../../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../../../../../../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
+</script>
+
+
+<script src="../../../../../../../../_static/js/search.js"></script>
+
+  
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright (c) 2026 ANSYS, Inc. All rights reserved.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<!--
+  Theme Version Footer
+  Displays the Sphinx theme version and the last updated date.
+  Accessibility and semantic improvements included.
+-->
+<footer class="theme-version" aria-label="Theme version and last update">
+  <span>
+    
+      Built with the
+      <a href="https://sphinxdocs.ansys.com/version/stable/index.html" target="_blank" rel="noopener noreferrer">
+        Ansys Sphinx Theme
+      </a>
+      1.7.0.
+    
+  </span>
+  <br />
+  <span>Last updated on <time id="ast_build_date"></time></span>
+</footer>
+<script>
+  // Set the last updated date in a readable format
+  (function() {
+    var options = { day: "numeric", month: "long", year: "numeric" };
+    var ast_lastModifiedDate = new Date(document.lastModified);
+    var ast_build_date = ast_lastModifiedDate.toLocaleDateString("en-US", options);
+    var dateElem = document.getElementById("ast_build_date");
+    if (dateElem) {
+      dateElem.textContent = ast_build_date;
+    }
+  })();
+</script></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

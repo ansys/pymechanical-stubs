@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`ContactSearchingType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ContactSearchingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContactSearchingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactSearchingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AcrossAssemblies`
+            - 
+          * - :py:attr:`~AcrossBodies`
+            - 
+          * - :py:attr:`~AcrossFiles`
+            - 
+          * - :py:attr:`~AcrossParts`
+            - 
+          * - :py:attr:`~Anywhere`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AcrossAssemblies
+   :value: 3
+
+
+.. py:attribute:: AcrossBodies
+   :value: 0
+
+
+.. py:attribute:: AcrossFiles
+   :value: 4
+
+
+.. py:attribute:: AcrossParts
+   :value: 1
+
+
+.. py:attribute:: Anywhere
+   :value: 2
+
+
+
+
+
+
+.. vale on

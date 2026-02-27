@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ControlDataDefinedByType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlDataDefinedByType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the 'Control' tree node and reflects the type of the definition for the control data of the specific control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ControlDataDefinedByType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BySettings`
+            - 
+          * - :py:attr:`~ByValue`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BySettings
+   :value: 1
+
+
+.. py:attribute:: ByValue
+   :value: 0
+
+
+
+
+
+
+.. vale on

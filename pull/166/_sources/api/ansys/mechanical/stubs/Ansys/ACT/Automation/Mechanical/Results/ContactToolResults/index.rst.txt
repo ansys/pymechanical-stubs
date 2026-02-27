@@ -1,0 +1,158 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ContactToolResults``
+======================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ContactToolResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactFluidPressure`
+            - Defines a ContactFluidPressure.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactFrictionalStress`
+            - Defines a ContactFrictionalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactGap`
+            - Defines a ContactGap.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactHeatFlux`
+            - Defines a ContactHeatFlux.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactPenetration`
+            - Defines a ContactPenetration.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactPressure`
+            - Defines a ContactPressure.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactSlidingDistance`
+            - Defines a ContactSlidingDistance.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactStatus`
+            - Defines a ContactStatus.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults.ContactToolResult`
+            - Defines a ContactToolResult.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ContactFluidPressure</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactFluidPressure>
+    <span class="nf nf-cod-symbol_class"></span> ContactFrictionalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactFrictionalStress>
+    <span class="nf nf-cod-symbol_class"></span> ContactGap</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactGap>
+    <span class="nf nf-cod-symbol_class"></span> ContactHeatFlux</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactHeatFlux>
+    <span class="nf nf-cod-symbol_class"></span> ContactPenetration</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactPenetration>
+    <span class="nf nf-cod-symbol_class"></span> ContactPressure</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactPressure>
+    <span class="nf nf-cod-symbol_class"></span> ContactSlidingDistance</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactSlidingDistance>
+    <span class="nf nf-cod-symbol_class"></span> ContactStatus</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactStatus>
+    <span class="nf nf-cod-symbol_class"></span> ContactToolResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/ContactToolResult>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ContactToolResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

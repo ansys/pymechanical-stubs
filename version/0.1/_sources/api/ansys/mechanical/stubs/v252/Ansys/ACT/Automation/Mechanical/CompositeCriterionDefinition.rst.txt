@@ -1,0 +1,169 @@
+.. vale off
+
+
+
+:class:`CompositeCriterionDefinition`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.CompositeCriterionDefinition
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: CompositeCriterionDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Adds a CompositeCriterionTerm at the end in the definition.
+          * - :py:attr:`~Clear`
+            - Clears all the CompositeCriterionTerms in the definition.
+          * - :py:attr:`~IndexOf`
+            - Gives the index where the specified CompositeCriterionTerm exists in the definition.
+          * - :py:attr:`~Insert`
+            - Inserts a CompositeCriterionTerm at a specified index in the definition.
+          * - :py:attr:`~RemoveAt`
+            - Removes the CompositeCriterionTerm at a specified index in the definition.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Gives the number of CompositeCriterionTerms in the definition.
+          * - :py:attr:`~Item`
+            - Item property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Gives the number of CompositeCriterionTerms in the definition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(item: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm) -> None
+
+.. code-block:: text
+
+   Adds a CompositeCriterionTerm at the end in the definition.
+   Usage:
+       CriterionDefinition.Add(Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm(primCritObj, 1.3))
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> None
+
+   
+   Clears all the CompositeCriterionTerms in the definition.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IndexOf(item: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm) -> int
+
+.. code-block:: text
+
+   Gives the index where the specified CompositeCriterionTerm exists in the definition.
+   Returns -1 if the term is not found in the definition.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Insert(index: int, item: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm) -> None
+
+.. code-block:: text
+
+   Inserts a CompositeCriterionTerm at a specified index in the definition.
+   Returns IndexOutOfRangeException for invalid index.
+   Usage:
+       CriterionDefinition.Insert(1, Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm(primCritObj, 1.3))
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveAt(index: int) -> None
+
+.. code-block:: text
+
+   Removes the CompositeCriterionTerm at a specified index in the definition.
+   Returns IndexOutOfRangeException for invalid index.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

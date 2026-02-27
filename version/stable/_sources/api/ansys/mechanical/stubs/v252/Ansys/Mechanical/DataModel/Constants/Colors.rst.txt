@@ -1,0 +1,269 @@
+.. vale off
+
+
+
+:class:`Colors`
+===============
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Constants.Colors
+
+   Bases: :py:obj:`object`
+
+
+   
+   Color constants, in BGR bitfield layout.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Colors
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Blue`
+            - Blue property.
+          * - :py:attr:`~Cyan`
+            - Cyan property.
+          * - :py:attr:`~Gray`
+            - Gray property.
+          * - :py:attr:`~Green`
+            - Green property.
+          * - :py:attr:`~Red`
+            - Red property.
+          * - :py:attr:`~White`
+            - White property.
+          * - :py:attr:`~Yellow`
+            - Yellow property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Blue
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   Blue property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Cyan
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   Cyan property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Gray
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   Gray property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Green
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   Green property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Red
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   Red property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: White
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   White property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Yellow
+   :type: Optional[int]
+
+   :classmethod:
+
+
+   
+   Yellow property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

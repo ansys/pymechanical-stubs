@@ -1,0 +1,204 @@
+.. vale off
+
+
+
+:class:`LayeredSectionWorksheet`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.LayeredSectionWorksheet
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: LayeredSectionWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddThicknessLayer`
+            - Add a row to the LayeredSectionWorksheet
+          * - :py:attr:`~DeleteRow`
+            - Delete a row from the LayeredSectionWorksheet
+          * - :py:attr:`~GetAngle`
+            - Gets the angle for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~GetMaterial`
+            - Gets the material for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~GetThickness`
+            - Gets the thickness for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~InsertThicknessLayerAbove`
+            - Insert a new layer to the LayeredSectionWorksheet
+          * - :py:attr:`~InsertThicknessLayerBelow`
+            - Insert a new layer to the LayeredSectionWorksheet
+          * - :py:attr:`~SetAngle`
+            - Set the angle for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~SetMaterial`
+            - Set the material for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~SetThickness`
+            - Set the thickness for the LayeredSection at the row index specifiied.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Gets the number of entries (rows) in the worksheet.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of entries (rows) in the worksheet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddThicknessLayer(materialname: str, thickness: float, angle: float) -> int
+
+.. code-block:: text
+
+   Add a row to the LayeredSectionWorksheet
+   New layers are added as the top most layer in the Z direction.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+.. code-block:: text
+
+   Delete a row from the LayeredSectionWorksheet
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAngle(index: int) -> float
+
+.. code-block:: text
+
+   Gets the angle for the LayeredSection at the row index specifiied.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMaterial(index: int) -> str
+
+.. code-block:: text
+
+   Gets the material for the LayeredSection at the row index specifiied.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetThickness(index: int) -> float
+
+.. code-block:: text
+
+   Gets the thickness for the LayeredSection at the row index specifiied.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: InsertThicknessLayerAbove(materialname: str, thickness: float, angle: float, index: int) -> int
+
+.. code-block:: text
+
+   Insert a new layer to the LayeredSectionWorksheet
+   The new layer will be inserted above the layer indicated by the given index.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: InsertThicknessLayerBelow(materialname: str, thickness: float, angle: float, index: int) -> int
+
+.. code-block:: text
+
+   Insert a new layer to the LayeredSectionWorksheet
+   The new layer will be inserted below the layer indicated by the given index.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetAngle(index: int, angle: float) -> None
+
+.. code-block:: text
+
+   Set the angle for the LayeredSection at the row index specifiied.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMaterial(index: int, materialname: str) -> None
+
+.. code-block:: text
+
+   Set the material for the LayeredSection at the row index specifiied.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetThickness(index: int, thickness: float) -> None
+
+.. code-block:: text
+
+   Set the thickness for the LayeredSection at the row index specifiied.
+   LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,192 @@
+.. vale off
+
+
+
+
+
+
+
+
+``SolveProcessSettings``
+========================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: SolveProcessSettings
+.. tab-set::
+
+
+
+    .. tab-item:: Interfaces
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ILinuxSettings`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.IQueueSettings`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveConfiguration`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveProcessSettings`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolverMemorySettings`
+            - 
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.LinuxSettings`
+            - The class representing the linux settings portion of the solve process settings.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.QueueSettings`
+            - The class representing queue settings.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.RSMQueue`
+            - The class representing an RSM Queue.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration`
+            - The class representing a solve configuration.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfigurations`
+            - The application's collection of solve configurations.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveProcessSettings`
+            - The class representing solve process settings.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolverMemorySettings`
+            - The class representing the solver memory settings portion of the solve process settings.
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_interface"></span> ILinuxSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/ILinuxSettings>
+    <span class="nf nf-cod-symbol_interface"></span> IQueueSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/IQueueSettings>
+    <span class="nf nf-cod-symbol_interface"></span> ISolveConfiguration</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/ISolveConfiguration>
+    <span class="nf nf-cod-symbol_interface"></span> ISolveProcessSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/ISolveProcessSettings>
+    <span class="nf nf-cod-symbol_interface"></span> ISolverMemorySettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/ISolverMemorySettings>
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> LinuxSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/LinuxSettings>
+    <span class="nf nf-cod-symbol_class"></span> QueueSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/QueueSettings>
+    <span class="nf nf-cod-symbol_class"></span> RSMQueue</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/RSMQueue>
+    <span class="nf nf-cod-symbol_class"></span> SolveConfiguration</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/SolveConfiguration>
+    <span class="nf nf-cod-symbol_class"></span> SolveConfigurations</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/SolveConfigurations>
+    <span class="nf nf-cod-symbol_class"></span> SolveProcessSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/SolveProcessSettings>
+    <span class="nf nf-cod-symbol_class"></span> SolverMemorySettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/SolverMemorySettings>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+SolveProcessSettings module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,123 @@
+.. vale off
+
+
+
+
+
+
+
+
+``CompositeFailureResults``
+===========================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: CompositeFailureResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureResult`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureTool`
+            - Defines a CompositeFailureTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeSamplingPoint`
+            - Defines a CompositeSamplingPoint.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeSamplingPointTool`
+            - Defines a CompositeSamplingPointTool.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CompositeFailureResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeFailureResult>
+    <span class="nf nf-cod-symbol_class"></span> CompositeFailureTool</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeFailureTool>
+    <span class="nf nf-cod-symbol_class"></span> CompositeSamplingPoint</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeSamplingPoint>
+    <span class="nf nf-cod-symbol_class"></span> CompositeSamplingPointTool</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/CompositeSamplingPointTool>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+CompositeFailureResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

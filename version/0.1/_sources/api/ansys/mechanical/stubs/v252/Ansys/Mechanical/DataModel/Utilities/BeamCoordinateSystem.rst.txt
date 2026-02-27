@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`BeamCoordinateSystem`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.BeamCoordinateSystem
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

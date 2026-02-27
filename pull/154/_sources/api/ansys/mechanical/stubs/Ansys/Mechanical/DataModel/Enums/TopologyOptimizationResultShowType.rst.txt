@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`TopologyOptimizationResultShowType`
+===========================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopologyOptimizationResultShowType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Topology Optimization Result Show Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopologyOptimizationResultShowType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllRegions`
+            - 
+          * - :py:attr:`~RemovedRegion`
+            - 
+          * - :py:attr:`~RetainedRegion`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllRegions
+   :value: 0
+
+
+.. py:attribute:: RemovedRegion
+   :value: 2
+
+
+.. py:attribute:: RetainedRegion
+   :value: 1
+
+
+
+
+
+
+.. vale on

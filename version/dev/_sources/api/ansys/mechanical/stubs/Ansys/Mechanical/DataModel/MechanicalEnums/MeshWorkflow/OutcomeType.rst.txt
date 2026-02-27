@@ -1,0 +1,174 @@
+.. vale off
+
+
+
+:class:`OutcomeType`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the “Outcome” tree node and reflects the type of outcome being configured. Based on the type of an outcome different rules are applied which define the applicable list of outcome data to be used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OutcomeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CSVProcessingInfo`
+            - 
+          * - :py:attr:`~EnclosureExternalScope`
+            - 
+          * - :py:attr:`~EnclosureInternalScope`
+            - 
+          * - :py:attr:`~ExtrusionEndScope`
+            - 
+          * - :py:attr:`~ExtrusionStartScope`
+            - 
+          * - :py:attr:`~FaceZoneScope`
+            - 
+          * - :py:attr:`~FailureInfo`
+            - 
+          * - :py:attr:`~InternalVolumeZoneScope`
+            - 
+          * - :py:attr:`~MultiZoneVolumeMesherDiagnostics`
+            - 
+          * - :py:attr:`~NonStackableBodies`
+            - 
+          * - :py:attr:`~Scope`
+            - 
+          * - :py:attr:`~SizeFieldName`
+            - 
+          * - :py:attr:`~StackerBaseEdge`
+            - 
+          * - :py:attr:`~StackerBaseFace`
+            - 
+          * - :py:attr:`~StackerDiagnostics`
+            - 
+          * - :py:attr:`~StackerSeedFace`
+            - 
+          * - :py:attr:`~VolumeZoneScope`
+            - 
+          * - :py:attr:`~WarningInfo`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CSVProcessingInfo
+   :value: 27
+
+
+.. py:attribute:: EnclosureExternalScope
+   :value: 14
+
+
+.. py:attribute:: EnclosureInternalScope
+   :value: 13
+
+
+.. py:attribute:: ExtrusionEndScope
+   :value: 16
+
+
+.. py:attribute:: ExtrusionStartScope
+   :value: 15
+
+
+.. py:attribute:: FaceZoneScope
+   :value: 19
+
+
+.. py:attribute:: FailureInfo
+   :value: 11
+
+
+.. py:attribute:: InternalVolumeZoneScope
+   :value: 21
+
+
+.. py:attribute:: MultiZoneVolumeMesherDiagnostics
+   :value: 41
+
+
+.. py:attribute:: NonStackableBodies
+   :value: 25
+
+
+.. py:attribute:: Scope
+   :value: 4
+
+
+.. py:attribute:: SizeFieldName
+   :value: 5
+
+
+.. py:attribute:: StackerBaseEdge
+   :value: 23
+
+
+.. py:attribute:: StackerBaseFace
+   :value: 22
+
+
+.. py:attribute:: StackerDiagnostics
+   :value: 29
+
+
+.. py:attribute:: StackerSeedFace
+   :value: 24
+
+
+.. py:attribute:: VolumeZoneScope
+   :value: 20
+
+
+.. py:attribute:: WarningInfo
+   :value: 26
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,126 @@
+.. vale off
+
+
+
+:class:`MeanStressTheoryType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.MeanStressTheoryType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the EnclosureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeanStressTheoryType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ASMEElliptical`
+            - 
+          * - :py:attr:`~Gerber`
+            - 
+          * - :py:attr:`~Goodman`
+            - 
+          * - :py:attr:`~MansonHalford`
+            - 
+          * - :py:attr:`~MeanStressCurves`
+            - 
+          * - :py:attr:`~Morrow`
+            - 
+          * - :py:attr:`~NoneStrain`
+            - 
+          * - :py:attr:`~NoneStress`
+            - 
+          * - :py:attr:`~SWT`
+            - 
+          * - :py:attr:`~Soderberg`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ASMEElliptical
+   :value: 15
+
+
+.. py:attribute:: Gerber
+   :value: 2
+
+
+.. py:attribute:: Goodman
+   :value: 0
+
+
+.. py:attribute:: MansonHalford
+   :value: 10
+
+
+.. py:attribute:: MeanStressCurves
+   :value: 4
+
+
+.. py:attribute:: Morrow
+   :value: 7
+
+
+.. py:attribute:: NoneStrain
+   :value: 6
+
+
+.. py:attribute:: NoneStress
+   :value: 5
+
+
+.. py:attribute:: SWT
+   :value: 8
+
+
+.. py:attribute:: Soderberg
+   :value: 1
+
+
+
+
+
+
+.. vale on

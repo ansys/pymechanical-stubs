@@ -1,0 +1,1348 @@
+.. vale off
+
+
+
+:class:`CoordinateSystem`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.CoordinateSystem
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a CoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoordinateSystem
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddTransformation`
+            - Adds a new transformation.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateConstructionSurface`
+            - Run the CreateConstructionSurface action.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~CreateSectionPlane`
+            - Run the CreateSectionPlane action.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~FlipX`
+            - Flips the X Axis of the coordinate system
+          * - :py:attr:`~FlipY`
+            - Flips the Y Axis of the coordinate system
+          * - :py:attr:`~FlipZ`
+            - Flips the Z Axis of the coordinate system
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetTransformationValue`
+            - Gets the value of a transformation.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~MoveTransformationDown`
+            - Moves a transformation down.
+          * - :py:attr:`~MoveTransformationUp`
+            - Moves a transformation up.
+          * - :py:attr:`~OffsetX`
+            - Creates an offset in the X Axis direction of the coordinate system
+          * - :py:attr:`~OffsetY`
+            - Creates an offset in the Y Axis direction of the coordinate system
+          * - :py:attr:`~OffsetZ`
+            - Creates an offset in the Z Axis direction of the coordinate system
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RemoveTransformation`
+            - Removes a tranformation.
+          * - :py:attr:`~RotateX`
+            - Creates a rotation about the X Axis of the coordinate system
+          * - :py:attr:`~RotateY`
+            - Creates a rotation about the Y Axis of the coordinate system
+          * - :py:attr:`~RotateZ`
+            - Creates a rotation about the Z Axis of the coordinate system
+          * - :py:attr:`~SetCoordinateSystemOriginAtCenterOfMass`
+            - SetCoordinateSystemOriginAtCenterOfMass method.
+          * - :py:attr:`~SetOriginLocation`
+            - Changes the origin location.
+          * - :py:attr:`~SetPrimaryAxisUsingCenterOfMass`
+            - Sets the primary axis using a 1 or 2 point selection and the center of mass
+          * - :py:attr:`~SetTransformationValue`
+            - Sets the value of a transformation.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~APDLName`
+            - Gets or sets the APDLName.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CoordinateSystemID`
+            - Gets or sets the CoordinateSystemID.
+          * - :py:attr:`~CoordinateSystemIDGeneration`
+            - Gets or sets the CoordinateSystemIDGeneration.
+          * - :py:attr:`~CoordinateSystemType`
+            - Gets or sets the CoordinateSystemType.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GloballyAvailable`
+            - Gets or sets the GloballyAvailable.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsGlobal`
+            - Gets the IsGlobal.
+          * - :py:attr:`~OriginDefineBy`
+            - Gets or sets the origin define by.
+          * - :py:attr:`~OriginLocation`
+            - Gets or sets the origin location.
+          * - :py:attr:`~OriginX`
+            - Gets or sets the origin X coordinate.
+          * - :py:attr:`~OriginY`
+            - Gets or sets the origin Y coordinate.
+          * - :py:attr:`~OriginZ`
+            - Gets or sets the origin Z coordinate.
+          * - :py:attr:`~PrimaryAxis`
+            - Gets or sets the PrimaryAxis.
+          * - :py:attr:`~PrimaryAxisDefineBy`
+            - Gets or sets the PrimaryAxisDefineBy.
+          * - :py:attr:`~PrimaryAxisDirection`
+            - Gets or sets the Principal Axis Direction.
+          * - :py:attr:`~PrimaryAxisLocation`
+            - Gets or sets the principal axis geometry selection.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~SecondaryAxis`
+            - Gets or sets the SecondaryAxis.
+          * - :py:attr:`~SecondaryAxisDefineBy`
+            - Gets or sets the SecondaryAxisDefineBy.
+          * - :py:attr:`~SecondaryAxisDirection`
+            - Gets the Secondary Axis Direction.
+          * - :py:attr:`~SecondaryAxisLocation`
+            - Gets or sets the orientation about principal axis geometry selection.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~TransformationCount`
+            - Gets the number of transformations.
+          * - :py:attr:`~TransformedConfiguration`
+            - Gets the TransformedConfiguration.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~XAxisData`
+            - Gets the XAxisData.
+          * - :py:attr:`~YAxisData`
+            - Gets the YAxisData.
+          * - :py:attr:`~ZAxisData`
+            - Gets the ZAxisData.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: APDLName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the APDLName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystemID
+   :type: Optional[int]
+
+
+   
+   Gets or sets the CoordinateSystemID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystemIDGeneration
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutomaticOrManual]
+
+
+   
+   Gets or sets the CoordinateSystemIDGeneration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystemType
+   :type: Optional[Ansys.ACT.Interfaces.Analysis.CoordinateSystemTypeEnum]
+
+
+   
+   Gets or sets the CoordinateSystemType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GloballyAvailable
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the GloballyAvailable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSCoordinateSystemAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsGlobal
+   :type: Optional[bool]
+
+
+   
+   Gets the IsGlobal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType]
+
+
+   
+   Gets or sets the origin define by.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the origin location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the origin X coordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the origin Y coordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the origin Z coordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimaryAxis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CoordinateSystemAxisType]
+
+
+   
+   Gets or sets the PrimaryAxis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimaryAxisDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType]
+
+
+   
+   Gets or sets the PrimaryAxisDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimaryAxisDirection
+   :type: Optional[Ansys.ACT.Math.Vector3D]
+
+
+   
+   Gets or sets the Principal Axis Direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimaryAxisLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the principal axis geometry selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SecondaryAxis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CoordinateSystemAxisType]
+
+
+   
+   Gets or sets the SecondaryAxis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SecondaryAxisDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType]
+
+
+   
+   Gets or sets the SecondaryAxisDefineBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SecondaryAxisDirection
+   :type: Optional[Ansys.ACT.Math.Vector3D]
+
+
+   
+   Gets the Secondary Axis Direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SecondaryAxisLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the orientation about principal axis geometry selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransformationCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of transformations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransformedConfiguration
+   :type: Optional[str]
+
+
+   
+   Gets the TransformedConfiguration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XAxisData
+   :type: Optional[str]
+
+
+   
+   Gets the XAxisData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YAxisData
+   :type: Optional[str]
+
+
+   
+   Gets the YAxisData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZAxisData
+   :type: Optional[str]
+
+
+   
+   Gets the ZAxisData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTransformation(trans: Ansys.Mechanical.DataModel.Enums.TransformationType, axis: Ansys.Mechanical.DataModel.Enums.CoordinateSystemAxisType) -> None
+
+   
+   Adds a new transformation.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateConstructionSurface() -> None
+
+   
+   Run the CreateConstructionSurface action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateSectionPlane() -> None
+
+   
+   Run the CreateSectionPlane action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FlipX() -> None
+
+   
+   Flips the X Axis of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FlipY() -> None
+
+   
+   Flips the Y Axis of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FlipZ() -> None
+
+   
+   Flips the Z Axis of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTransformationValue(index: int) -> Any
+
+   
+   Gets the value of a transformation.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: MoveTransformationDown(index: int) -> None
+
+   
+   Moves a transformation down.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: MoveTransformationUp(index: int) -> None
+
+   
+   Moves a transformation up.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OffsetX() -> None
+
+   
+   Creates an offset in the X Axis direction of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OffsetY() -> None
+
+   
+   Creates an offset in the Y Axis direction of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OffsetZ() -> None
+
+   
+   Creates an offset in the Z Axis direction of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveTransformation(index: int) -> None
+
+   
+   Removes a tranformation.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RotateX() -> None
+
+   
+   Creates a rotation about the X Axis of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RotateY() -> None
+
+   
+   Creates a rotation about the Y Axis of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RotateZ() -> None
+
+   
+   Creates a rotation about the Z Axis of the coordinate system
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCoordinateSystemOriginAtCenterOfMass(geoBodies: List[Ansys.ACT.Interfaces.Geometry.IBaseGeoBody], pointMasses: List[Ansys.ACT.Automation.Mechanical.PointMass], distributedMasses: List[Ansys.ACT.Automation.Mechanical.DistributedMass]) -> None
+
+   
+   SetCoordinateSystemOriginAtCenterOfMass method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetOriginLocation(originX: Ansys.Core.Units.Quantity, originY: Ansys.Core.Units.Quantity, originZ: Ansys.Core.Units.Quantity) -> None
+
+   
+   Changes the origin location.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPrimaryAxisUsingCenterOfMass() -> None
+
+   
+   Sets the primary axis using a 1 or 2 point selection and the center of mass
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTransformationValue(index: int, value: Any) -> None
+
+   
+   Sets the value of a transformation.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

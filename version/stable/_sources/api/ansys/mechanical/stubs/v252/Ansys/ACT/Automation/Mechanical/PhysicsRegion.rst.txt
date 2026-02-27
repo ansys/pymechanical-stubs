@@ -1,0 +1,1168 @@
+.. vale off
+
+
+
+:class:`PhysicsRegion`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.PhysicsRegion
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a PhysicsRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PhysicsRegion
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+          * - :py:attr:`~SelectInvalidBodiesOnPhysicsRegion`
+            - Run the SelectInvalidBodiesOnPhysicsRegion action to select bodies that are not valid.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Acoustics`
+            - Gets or sets the Acoustics.
+          * - :py:attr:`~ArtificiallyMatchedLayers`
+            - Gets or sets the ArtificiallyMatchedLayers.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Electric`
+            - Gets or sets the Electric.
+          * - :py:attr:`~ElectrostaticForce`
+            - Gets or sets the ElectrostaticForce.
+          * - :py:attr:`~ElementMorphing`
+            - Gets or sets the ElementMorphing.
+          * - :py:attr:`~EvanescentWaveAttenuation`
+            - Gets or sets the EvanescentWaveAttenuation.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FluidBehavior`
+            - Gets or sets the FluidBehavior.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~PMLElementCoordinateSystem`
+            - Gets or sets the PMLElementCoordinateSystem.
+          * - :py:attr:`~PMLOptions`
+            - Gets or sets the PMLOptions.
+          * - :py:attr:`~Piezoelectric`
+            - Gets the Piezoelectric.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReferencePressure`
+            - Gets or sets the ReferencePressure.
+          * - :py:attr:`~ReferenceStaticPressure`
+            - Gets or sets the ReferenceStaticPressure.
+          * - :py:attr:`~ReflectionCoefficient`
+            - Gets or sets the ReflectionCoefficient.
+          * - :py:attr:`~ReflectionCoefficientInNegativeXDirection`
+            - Gets or sets the ReflectionCoefficientInNegativeXDirection.
+          * - :py:attr:`~ReflectionCoefficientInNegativeYDirection`
+            - Gets or sets the ReflectionCoefficientInNegativeYDirection.
+          * - :py:attr:`~ReflectionCoefficientInNegativeZDirection`
+            - Gets or sets the ReflectionCoefficientInNegativeZDirection.
+          * - :py:attr:`~ReflectionCoefficientInPositiveXDirection`
+            - Gets or sets the ReflectionCoefficientInPositiveXDirection.
+          * - :py:attr:`~ReflectionCoefficientInPositiveYDirection`
+            - Gets or sets the ReflectionCoefficientInPositiveYDirection.
+          * - :py:attr:`~ReflectionCoefficientInPositiveZDirection`
+            - Gets or sets the ReflectionCoefficientInPositiveZDirection.
+          * - :py:attr:`~ReflectionCoefficientsType`
+            - Gets or sets the ReflectionCoefficientsType.
+          * - :py:attr:`~Structural`
+            - Gets or sets the Structural.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~Thermal`
+            - Gets or sets the Thermal.
+          * - :py:attr:`~ThermalStrain`
+            - Gets or sets the ThermalStrain.
+          * - :py:attr:`~ThermoelasticDamping`
+            - Gets or sets the ThermoelasticDamping.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Acoustics
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Acoustics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ArtificiallyMatchedLayers
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ArtificiallyMatchedLayers]
+
+
+   
+   Gets or sets the ArtificiallyMatchedLayers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Electric
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ElectricType]
+
+
+   
+   Gets or sets the Electric.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElectrostaticForce
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ElectrostaticForce]
+
+
+   
+   Gets or sets the ElectrostaticForce.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementMorphing
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ElementMorphingType]
+
+
+   
+   Gets or sets the ElementMorphing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EvanescentWaveAttenuation
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the EvanescentWaveAttenuation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FluidBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FluidBehavior]
+
+
+   
+   Gets or sets the FluidBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSPhysicsRegionAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PMLElementCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the PMLElementCoordinateSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PMLOptions
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PMLOptions]
+
+
+   
+   Gets or sets the PMLOptions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Piezoelectric
+   :type: Optional[bool]
+
+
+   
+   Gets the Piezoelectric.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferencePressure
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ReferencePressure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceStaticPressure
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ReferenceStaticPressure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientInNegativeXDirection
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficientInNegativeXDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientInNegativeYDirection
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficientInNegativeYDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientInNegativeZDirection
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficientInNegativeZDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientInPositiveXDirection
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficientInPositiveXDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientInPositiveYDirection
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficientInPositiveYDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientInPositiveZDirection
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ReflectionCoefficientInPositiveZDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReflectionCoefficientsType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ReflectionCoefficientsType]
+
+
+   
+   Gets or sets the ReflectionCoefficientsType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Structural
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Structural.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Thermal
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Thermal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalStrain
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ThermalStrainType]
+
+
+   
+   Gets or sets the ThermalStrain.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermoelasticDamping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ThermoelasticDampingType]
+
+
+   
+   Gets or sets the ThermoelasticDamping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SelectInvalidBodiesOnPhysicsRegion() -> None
+
+   
+   Run the SelectInvalidBodiesOnPhysicsRegion action to select bodies that are not valid.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

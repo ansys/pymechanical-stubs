@@ -1,0 +1,174 @@
+.. vale off
+
+
+
+:class:`ISelectionInfo`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ISelectionInfo
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a selection information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ISelectionInfo
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Id`
+            - Gets the selection identifier.
+          * - :py:attr:`~Ids`
+            - Gets or sets selected IDs.
+          * - :py:attr:`~Name`
+            - Gets or sets the selection name.
+          * - :py:attr:`~SelectionType`
+            - Gets or sets the selection type.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Gets the selection identifier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Ids
+   :type: Optional[List[int]]
+
+
+   
+   Gets or sets selected IDs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets the selection name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SelectionType
+   :type: Optional[Ansys.ACT.Interfaces.Common.SelectionTypeEnum]
+
+
+   
+   Gets or sets the selection type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

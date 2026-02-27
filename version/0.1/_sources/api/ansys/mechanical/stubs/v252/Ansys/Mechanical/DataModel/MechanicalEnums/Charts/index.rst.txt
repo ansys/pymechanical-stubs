@@ -1,0 +1,98 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Charts``
+==========================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Charts
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Charts
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D`
+            - Dataset2D module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Dataset2D</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/Charts/Dataset2D/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Charts module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

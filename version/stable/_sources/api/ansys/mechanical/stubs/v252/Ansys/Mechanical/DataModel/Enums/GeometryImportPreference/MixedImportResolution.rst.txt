@@ -1,0 +1,103 @@
+.. vale off
+
+
+
+:class:`MixedImportResolution`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.MixedImportResolution(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Describes how parts of mixed dimension will be treated, i.e., to be imported as components
+   of assemblies which have parts of different dimension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MixedImportResolution
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Line`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Solid`
+            - 
+          * - :py:attr:`~SolidSurface`
+            - 
+          * - :py:attr:`~Surface`
+            - 
+          * - :py:attr:`~SurfaceLine`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Line
+   :value: 3
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Solid
+   :value: 1
+
+
+.. py:attribute:: SolidSurface
+   :value: 5
+
+
+.. py:attribute:: Surface
+   :value: 2
+
+
+.. py:attribute:: SurfaceLine
+   :value: 8
+
+
+
+
+
+
+.. vale on

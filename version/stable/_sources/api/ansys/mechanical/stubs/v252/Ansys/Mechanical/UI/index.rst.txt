@@ -1,0 +1,103 @@
+.. vale off
+
+
+
+
+
+
+
+
+``UI``
+======================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.Mechanical.UI
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: UI
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.UI.Enums`
+            - Enums module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.UI.Interfaces`
+            - Interfaces module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Enums</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/UI/Enums/index>
+    <span class="nf nf-md-package"></span> Interfaces</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/UI/Interfaces/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+UI module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

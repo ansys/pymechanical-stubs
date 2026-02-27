@@ -1,0 +1,226 @@
+.. vale off
+
+
+
+:class:`LabelInfo`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Charts.LabelInfo
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: LabelInfo
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Move`
+            - Moves the label to the position on the X axis and the Y axis. An InvalidOperationException will be thrown when moving a Label that does not exist.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IsVisible`
+            - IsVisible property.
+          * - :py:attr:`~Text`
+            - Text property.
+          * - :py:attr:`~X`
+            - X property.
+          * - :py:attr:`~XDisplay`
+            - XDisplay property.
+          * - :py:attr:`~Y`
+            - Y property.
+          * - :py:attr:`~YDisplay`
+            - YDisplay property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: IsVisible
+   :type: Optional[bool]
+
+
+   
+   IsVisible property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Text
+   :type: Optional[str]
+
+
+   
+   Text property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: X
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   X property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XDisplay
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   XDisplay property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Y
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Y property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YDisplay
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   YDisplay property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Move(x_display: Ansys.Core.Units.Quantity, y_display: Ansys.Core.Units.Quantity) -> None
+
+   
+   Moves the label to the position on the X axis and the Y axis. An InvalidOperationException will be thrown when moving a Label that does not exist.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

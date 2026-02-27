@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SpringType`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpringType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpringType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Longitudinal`
+            - 
+          * - :py:attr:`~Torsional`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Longitudinal
+   :value: 0
+
+
+.. py:attribute:: Torsional
+   :value: 1
+
+
+
+
+
+
+.. vale on

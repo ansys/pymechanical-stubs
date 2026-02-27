@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MaterialPolarizationDirection`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MaterialPolarizationDirection(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MaterialPolarizationDirection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MaterialPolarizationDirection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NegativeXDirection`
+            - 
+          * - :py:attr:`~PositiveXDirection`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NegativeXDirection
+   :value: 1
+
+
+.. py:attribute:: PositiveXDirection
+   :value: 0
+
+
+
+
+
+
+.. vale on

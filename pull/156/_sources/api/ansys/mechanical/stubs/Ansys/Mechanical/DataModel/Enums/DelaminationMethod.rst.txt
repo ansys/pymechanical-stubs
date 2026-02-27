@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`DelaminationMethod`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DelaminationMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DelaminationMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DelaminationMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CZM`
+            - 
+          * - :py:attr:`~SMART`
+            - 
+          * - :py:attr:`~VCCT`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CZM
+   :value: 2
+
+
+.. py:attribute:: SMART
+   :value: 3
+
+
+.. py:attribute:: VCCT
+   :value: 1
+
+
+
+
+
+
+.. vale on

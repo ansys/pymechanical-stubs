@@ -1,0 +1,1255 @@
+.. vale off
+
+
+
+:class:`STLAMSupport`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.STLAMSupport
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a STLAMSupport.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: STLAMSupport
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateNamedSelectionOfExternalElementFaces`
+            - Create a named selection of the generated exterior element faces.
+          * - :py:attr:`~CreateNamedSelectionOfGeneratedElements`
+            - Create a named selection of the generated elements.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~ExportStl`
+            - Export STL data.
+          * - :py:attr:`~GenerateSupportBodies`
+            - Generate Support Bodies.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetGeneratedBody`
+            - Returns the generated body object
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~ImportSTL`
+            - Run the ImportSTL action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DensityMultiple`
+            - Gets or sets the DensityMultiple.
+          * - :py:attr:`~ElasticModulusMultipleInX`
+            - Gets or sets the ElasticModulusMultipleInX.
+          * - :py:attr:`~ElasticModulusMultipleInY`
+            - Gets or sets the ElasticModulusMultipleInY.
+          * - :py:attr:`~ElasticModulusMultipleInZ`
+            - Gets or sets the ElasticModulusMultipleInZ.
+          * - :py:attr:`~ElementSize`
+            - Gets the ElementSize.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Filename`
+            - Gets or sets the Filename.
+          * - :py:attr:`~GeometrySelection`
+            - Gets or sets the GeometrySelection.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LengthUnits`
+            - Gets or sets the LengthUnits.
+          * - :py:attr:`~MaterialMultiplier`
+            - Gets or sets the MaterialMultiplier.
+          * - :py:attr:`~MultiplierEntry`
+            - Gets or sets the MultiplierEntry.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~STL`
+            - Gets or sets the STL.
+          * - :py:attr:`~STLSupportType`
+            - Gets or sets the STLSupportType.
+          * - :py:attr:`~STLSupportView`
+            - Gets or sets the STLSupportView.
+          * - :py:attr:`~ShearModulusMultipleInXY`
+            - Gets or sets the ShearModulusMultipleInXY.
+          * - :py:attr:`~ShearModulusMultipleInXZ`
+            - Gets or sets the ShearModulusMultipleInXZ.
+          * - :py:attr:`~ShearModulusMultipleInYZ`
+            - Gets or sets the ShearModulusMultipleInYZ.
+          * - :py:attr:`~Source`
+            - Gets or sets the Source.
+          * - :py:attr:`~StlWallThickness`
+            - Gets or sets the StlWallThickness.
+          * - :py:attr:`~SubsampleRate`
+            - Gets or sets the SubsampleRate.
+          * - :py:attr:`~SupportType`
+            - Gets or sets the SupportType.
+          * - :py:attr:`~ThermalConductivityMultipleInX`
+            - Gets or sets the ThermalConductivityMultipleInX.
+          * - :py:attr:`~ThermalConductivityMultipleInY`
+            - Gets or sets the ThermalConductivityMultipleInY.
+          * - :py:attr:`~ThermalConductivityMultipleInZ`
+            - Gets or sets the ThermalConductivityMultipleInZ.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~Volume`
+            - Gets or sets the Volume.
+          * - :py:attr:`~VoxelSize`
+            - Gets the VoxelSize.
+          * - :py:attr:`~WallSpacing`
+            - Gets or sets the WallSpacing.
+          * - :py:attr:`~WallThickness`
+            - Gets or sets the WallThickness.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DensityMultiple
+   :type: Optional[float]
+
+
+   
+   Gets or sets the DensityMultiple.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElasticModulusMultipleInX
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ElasticModulusMultipleInX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElasticModulusMultipleInY
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ElasticModulusMultipleInY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElasticModulusMultipleInZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ElasticModulusMultipleInZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the ElementSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Filename
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Filename.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometrySelection
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the GeometrySelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAMSupportAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthUnits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the LengthUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialMultiplier
+   :type: Optional[float]
+
+
+   
+   Gets or sets the MaterialMultiplier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiplierEntry
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMMultiplierEntryType]
+
+
+   
+   Gets or sets the MultiplierEntry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: STL
+   :type: Optional[Ansys.ACT.Automation.Mechanical.STL]
+
+
+   
+   Gets or sets the STL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: STLSupportType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMSupportSTLType]
+
+
+   
+   Gets or sets the STLSupportType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: STLSupportView
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.STLSupportViewType]
+
+
+   
+   Gets or sets the STLSupportView.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearModulusMultipleInXY
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ShearModulusMultipleInXY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearModulusMultipleInXZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ShearModulusMultipleInXZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearModulusMultipleInYZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ShearModulusMultipleInYZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Source
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMStlSource]
+
+
+   
+   Gets or sets the Source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StlWallThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the StlWallThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SubsampleRate
+   :type: Optional[int]
+
+
+   
+   Gets or sets the SubsampleRate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMSupportType]
+
+
+   
+   Gets or sets the SupportType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalConductivityMultipleInX
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ThermalConductivityMultipleInX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalConductivityMultipleInY
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ThermalConductivityMultipleInY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalConductivityMultipleInZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ThermalConductivityMultipleInZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Volume
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Volume.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VoxelSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the VoxelSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WallSpacing
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WallSpacing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WallThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the WallThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateNamedSelectionOfExternalElementFaces() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Create a named selection of the generated exterior element faces.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateNamedSelectionOfGeneratedElements() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Create a named selection of the generated elements.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportStl(filename: str, progress: Ansys.Mechanical.Application.Progress) -> None
+
+   
+   Export STL data.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateSupportBodies(progress: Ansys.Mechanical.Application.Progress) -> None
+
+   
+   Generate Support Bodies.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetGeneratedBody() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Returns the generated body object
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportSTL() -> None
+
+   
+   Run the ImportSTL action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

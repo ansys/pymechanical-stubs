@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ResultAnimationRangeType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultAnimationRangeType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Result Animation Range Type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ResultAnimationRangeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Distributed`
+            - 
+          * - :py:attr:`~ResultSets`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Distributed
+   :value: 1
+
+
+.. py:attribute:: ResultSets
+   :value: 0
+
+
+
+
+
+
+.. vale on

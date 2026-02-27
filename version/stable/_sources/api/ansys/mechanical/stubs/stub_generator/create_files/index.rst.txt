@@ -1,0 +1,311 @@
+.. vale off
+
+
+
+
+
+
+
+The ``create_files.py`` module
+==============================
+
+.. py:module:: ansys.mechanical.stubs.stub_generator.create_files
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: create_files
+.. tab-set::
+
+
+
+
+
+
+
+    .. tab-item:: Functions
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~clean`
+            - Remove src/ansys/mechanical/stubs directory.
+
+
+          * - :py:obj:`~get_version`
+            - Get the install directory and version of Ansys Mechanical installed on the system.
+
+
+          * - :py:obj:`~is_type_published`
+            - Get published type if it exists.
+
+
+          * - :py:obj:`~main`
+            - Generate the Mechanical stubs based on assembly files.
+
+
+          * - :py:obj:`~make`
+            - Generate the __init__.py files from assembly files.
+
+
+          * - :py:obj:`~resolve`
+            - Add assembly resolver for the Ansys Mechanical install.
+
+
+          * - :py:obj:`~write_docs`
+            - Output to the tinypages directory.
+
+
+
+
+    .. tab-item:: Constants
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ACCEPTED_TYPES`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+Create __init__.py files from the content of the assembly XML files.
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+Module detail
+-------------
+
+.. py:function:: clean(outdir)
+
+   
+   Remove src/ansys/mechanical/stubs directory.
+
+
+   :Parameters:
+
+       **outdir: pathlib.Path**
+           Path to where the init files are generated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_version()
+
+   
+   Get the install directory and version of Ansys Mechanical installed on the system.
+
+
+
+   :Returns:
+
+       :class:`python:str`
+           Path of the Ansys install set in the AWP_ROOTDV_DEV environment variable.
+
+       :class:`python:int`
+           The version of the Ansys install set in the AWP_ROOTDV_DEV environment variable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: is_type_published(mod_type: System.RuntimeType)
+
+   
+   Get published type if it exists.
+
+
+   :Parameters:
+
+       **mod_type: System.RuntimeType**
+           A module type.
+
+   :Returns:
+
+       :ref:`bool <python:bltin-boolean-values>`
+           `True` if "Ansys.Utilities.Sdk.PublishedAttribute" is in map(str, attrs)
+           `False` if "Ansys.Utilities.Sdk.PublishedAttribute" is not in map(str, attrs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: main()
+
+   
+   Generate the Mechanical stubs based on assembly files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: make(base_dir, outdir, assemblies, str_version)
+
+   
+   Generate the __init__.py files from assembly files.
+
+   Make __init__.py files in src/ansys/mechanical/stubs, generate
+   classes, properties, and methods with their docstrings from assembly files from the
+   Ansys Mechanical install, and add import statements to the __init__.py files.
+
+   :Parameters:
+
+       **outdir: pathlib.Path**
+           Path to where the init files are generated.
+
+       **assemblies: list**
+           List of Mechanical assembly files to create classes, properties, and methods from.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: resolve()
+
+   
+   Add assembly resolver for the Ansys Mechanical install.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: write_docs(commands, tiny_pages_path)
+
+   
+   Output to the tinypages directory.
+
+
+   :Parameters:
+
+       **tiny_pages_path** : :class:`python:str`
+           Path to the tiny pages directory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:data:: ACCEPTED_TYPES
+
+
+
+
+.. vale on

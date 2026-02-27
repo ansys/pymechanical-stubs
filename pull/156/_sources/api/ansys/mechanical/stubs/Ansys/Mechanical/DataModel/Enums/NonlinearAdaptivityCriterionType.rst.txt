@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`NonlinearAdaptivityCriterionType`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityCriterionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the NonlinearAdaptivityCriterionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NonlinearAdaptivityCriterionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AMOctree`
+            - 
+          * - :py:attr:`~Box`
+            - 
+          * - :py:attr:`~Energy`
+            - 
+          * - :py:attr:`~Mesh`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AMOctree
+   :value: 5
+
+
+.. py:attribute:: Box
+   :value: 3
+
+
+.. py:attribute:: Energy
+   :value: 2
+
+
+.. py:attribute:: Mesh
+   :value: 4
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+
+
+
+
+.. vale on

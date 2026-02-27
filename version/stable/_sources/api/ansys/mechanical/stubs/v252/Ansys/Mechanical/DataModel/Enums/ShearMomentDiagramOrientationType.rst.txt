@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ShearMomentDiagramOrientationType`
+==========================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ShearMomentDiagramOrientationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ShearMomentDiagramOrientationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ShearMomentDiagramOrientationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BendingMoment`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~ShearForce`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BendingMoment
+   :value: 1
+
+
+.. py:attribute:: Displacement
+   :value: 2
+
+
+.. py:attribute:: ShearForce
+   :value: 0
+
+
+
+
+
+
+.. vale on

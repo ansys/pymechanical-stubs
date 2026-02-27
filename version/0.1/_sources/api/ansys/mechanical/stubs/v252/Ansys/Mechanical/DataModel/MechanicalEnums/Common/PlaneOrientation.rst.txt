@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`PlaneOrientation`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Common.PlaneOrientation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PlaneOrientation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PlaneOrientation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PlaneOrientation_XY`
+            - 
+          * - :py:attr:`~PlaneOrientation_XZ`
+            - 
+          * - :py:attr:`~PlaneOrientation_YZ`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: PlaneOrientation_XY
+   :value: 2
+
+
+.. py:attribute:: PlaneOrientation_XZ
+   :value: 1
+
+
+.. py:attribute:: PlaneOrientation_YZ
+   :value: 3
+
+
+
+
+
+
+.. vale on

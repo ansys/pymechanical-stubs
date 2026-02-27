@@ -1,0 +1,1926 @@
+.. vale off
+
+
+
+:class:`ResultType`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ResultType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AWeightedFrequencyBandSPL`
+            - 
+          * - :py:attr:`~AWeightedSoundPressureLevel`
+            - 
+          * - :py:attr:`~AbsorptionCoefficient`
+            - 
+          * - :py:attr:`~AccelerationWaterfallDiagram`
+            - 
+          * - :py:attr:`~AccumulatedEquivalentPlasticStrain`
+            - 
+          * - :py:attr:`~AcousticFarFieldSPLMicWaterfallDiagram`
+            - 
+          * - :py:attr:`~AcousticFarFieldSoundPowerLevelWaterfallDiagram`
+            - 
+          * - :py:attr:`~ArtificialEnergy`
+            - 
+          * - :py:attr:`~BendingStressEquivalent`
+            - 
+          * - :py:attr:`~BendingStressIntensity`
+            - 
+          * - :py:attr:`~BoltAdjustment`
+            - 
+          * - :py:attr:`~BoltWorkingLoad`
+            - 
+          * - :py:attr:`~CampbellDiagram`
+            - 
+          * - :py:attr:`~ContactChattering`
+            - 
+          * - :py:attr:`~ContactContactingArea`
+            - 
+          * - :py:attr:`~ContactFluidPressure`
+            - 
+          * - :py:attr:`~ContactFrictionalStress`
+            - 
+          * - :py:attr:`~ContactGap`
+            - 
+          * - :py:attr:`~ContactHeatFlux`
+            - 
+          * - :py:attr:`~ContactMaximumDampingPressure`
+            - 
+          * - :py:attr:`~ContactMaximumNormalStiffness`
+            - 
+          * - :py:attr:`~ContactMaximumTangentialStiffness`
+            - 
+          * - :py:attr:`~ContactMaxiumGeometricSlidingDistance`
+            - 
+          * - :py:attr:`~ContactMinimumGeometricSlidingDistance`
+            - 
+          * - :py:attr:`~ContactMinimumTangentialStiffness`
+            - 
+          * - :py:attr:`~ContactNumberContacting`
+            - 
+          * - :py:attr:`~ContactNumberSticking`
+            - 
+          * - :py:attr:`~ContactPenetration`
+            - 
+          * - :py:attr:`~ContactPressure`
+            - 
+          * - :py:attr:`~ContactResultingPinball`
+            - 
+          * - :py:attr:`~ContactSlidingDistance`
+            - 
+          * - :py:attr:`~ContactStatus`
+            - 
+          * - :py:attr:`~CurrentDensity`
+            - 
+          * - :py:attr:`~DamageStatus`
+            - 
+          * - :py:attr:`~DampingEnergy`
+            - 
+          * - :py:attr:`~Density`
+            - 
+          * - :py:attr:`~DiffuseSoundTransmissionLoss`
+            - 
+          * - :py:attr:`~DirectStress`
+            - 
+          * - :py:attr:`~ElectricPotential`
+            - 
+          * - :py:attr:`~ElectricVoltage`
+            - 
+          * - :py:attr:`~ElementalEulerXYAngle`
+            - 
+          * - :py:attr:`~ElementalEulerXZAngle`
+            - 
+          * - :py:attr:`~ElementalEulerYZAngle`
+            - 
+          * - :py:attr:`~ElementalStrainEnergy`
+            - 
+          * - :py:attr:`~ElementalTriads`
+            - 
+          * - :py:attr:`~EnergyDissipatedPerUnitVolume`
+            - 
+          * - :py:attr:`~EquivalentCreepStrain`
+            - 
+          * - :py:attr:`~EquivalentCreepStrainRST`
+            - 
+          * - :py:attr:`~EquivalentElasticStrain`
+            - 
+          * - :py:attr:`~EquivalentElasticStrainRST`
+            - 
+          * - :py:attr:`~EquivalentPlasticStrain`
+            - 
+          * - :py:attr:`~EquivalentPlasticStrainRST`
+            - 
+          * - :py:attr:`~EquivalentRadiatedPower`
+            - 
+          * - :py:attr:`~EquivalentRadiatedPowerLevel`
+            - 
+          * - :py:attr:`~EquivalentRadiatedPowerLevelWaterfallDiagram`
+            - 
+          * - :py:attr:`~EquivalentRadiatedPowerWaterfallDiagram`
+            - 
+          * - :py:attr:`~EquivalentStress`
+            - 
+          * - :py:attr:`~EquivalentStressPSD`
+            - 
+          * - :py:attr:`~EquivalentStressRS`
+            - 
+          * - :py:attr:`~EquivalentTotalStrainRST`
+            - 
+          * - :py:attr:`~FactorReserveInverseCompositeFailure`
+            - 
+          * - :py:attr:`~FarFieldAWeightedSPL`
+            - 
+          * - :py:attr:`~FarFieldAWeightedSPLMic`
+            - 
+          * - :py:attr:`~FarFieldDirectivity`
+            - 
+          * - :py:attr:`~FarFieldMaximumPressure`
+            - 
+          * - :py:attr:`~FarFieldMaximumPressureMic`
+            - 
+          * - :py:attr:`~FarFieldMaximumScatteredPressure`
+            - 
+          * - :py:attr:`~FarFieldPhase`
+            - 
+          * - :py:attr:`~FarFieldPhaseMic`
+            - 
+          * - :py:attr:`~FarFieldSPL`
+            - 
+          * - :py:attr:`~FarFieldSPLMic`
+            - 
+          * - :py:attr:`~FarFieldSoundPowerLevel`
+            - 
+          * - :py:attr:`~FarFieldTargetStrength`
+            - 
+          * - :py:attr:`~FatigueDamage`
+            - 
+          * - :py:attr:`~FatigueEquivalentReversedStress`
+            - 
+          * - :py:attr:`~FatigueLife`
+            - 
+          * - :py:attr:`~FatigueResultBiaxialityIndication`
+            - 
+          * - :py:attr:`~FatigueSensitivity`
+            - 
+          * - :py:attr:`~FiberCompressiveDamageVariable`
+            - 
+          * - :py:attr:`~FiberCompressiveFailureCriterion`
+            - 
+          * - :py:attr:`~FiberTensileDamageVariable`
+            - 
+          * - :py:attr:`~FiberTensileFailureCriterion`
+            - 
+          * - :py:attr:`~FluidFlowRate`
+            - 
+          * - :py:attr:`~FluidHeatConductionRate`
+            - 
+          * - :py:attr:`~FluidHeatTransportRate`
+            - 
+          * - :py:attr:`~ForceReaction`
+            - 
+          * - :py:attr:`~FractureCSTAR`
+            - 
+          * - :py:attr:`~FractureEquivalentSIFSRange`
+            - 
+          * - :py:attr:`~FractureJINT`
+            - 
+          * - :py:attr:`~FractureMaterialForceX`
+            - 
+          * - :py:attr:`~FractureMaterialForceY`
+            - 
+          * - :py:attr:`~FractureMaterialForceZ`
+            - 
+          * - :py:attr:`~FractureSIFSK1`
+            - 
+          * - :py:attr:`~FractureSIFSK2`
+            - 
+          * - :py:attr:`~FractureSIFSK3`
+            - 
+          * - :py:attr:`~FractureTSTRESS`
+            - 
+          * - :py:attr:`~FractureVCCTG1`
+            - 
+          * - :py:attr:`~FractureVCCTG2`
+            - 
+          * - :py:attr:`~FractureVCCTG3`
+            - 
+          * - :py:attr:`~FractureVCCTGT`
+            - 
+          * - :py:attr:`~FrequencyBandSPL`
+            - 
+          * - :py:attr:`~Hysteresis`
+            - 
+          * - :py:attr:`~JouleHeat`
+            - 
+          * - :py:attr:`~KineticEnergy`
+            - 
+          * - :py:attr:`~LSDYNAGeneralTracker`
+            - 
+          * - :py:attr:`~LatticeDensity`
+            - 
+          * - :py:attr:`~LatticeElementalDensity`
+            - 
+          * - :py:attr:`~LinePressure`
+            - 
+          * - :py:attr:`~MCFWaterfallDiagram`
+            - 
+          * - :py:attr:`~MagneticCoenergy`
+            - 
+          * - :py:attr:`~MagneticError`
+            - 
+          * - :py:attr:`~MagneticPotential`
+            - 
+          * - :py:attr:`~MagneticXDirectionalForces`
+            - 
+          * - :py:attr:`~MagneticYDirectionalForces`
+            - 
+          * - :py:attr:`~MagneticZDirectionalForces`
+            - 
+          * - :py:attr:`~MarginSafetyCompositeFailure`
+            - 
+          * - :py:attr:`~MatrixCompressiveDamageVariable`
+            - 
+          * - :py:attr:`~MatrixCompressiveFailureCriterion`
+            - 
+          * - :py:attr:`~MatrixTensileDamageVariable`
+            - 
+          * - :py:attr:`~MatrixTensileFailureCriterion`
+            - 
+          * - :py:attr:`~MaximumBendingStress`
+            - 
+          * - :py:attr:`~MaximumCombinedStress`
+            - 
+          * - :py:attr:`~MaximumFailureCriteria`
+            - 
+          * - :py:attr:`~MaximumPrincipalElasticStrain`
+            - 
+          * - :py:attr:`~MaximumPrincipalStress`
+            - 
+          * - :py:attr:`~MaximumPrincipalThermalStrain`
+            - 
+          * - :py:attr:`~MaximumShearElasticStrain`
+            - 
+          * - :py:attr:`~MaximumShearStress`
+            - 
+          * - :py:attr:`~MembraneStressEquivalent`
+            - 
+          * - :py:attr:`~MembraneStressIntensity`
+            - 
+          * - :py:attr:`~MiddlePrincipalElasticStrain`
+            - 
+          * - :py:attr:`~MiddlePrincipalStress`
+            - 
+          * - :py:attr:`~MiddlePrincipalThermalStrain`
+            - 
+          * - :py:attr:`~MinimumBendingStress`
+            - 
+          * - :py:attr:`~MinimumCombinedStress`
+            - 
+          * - :py:attr:`~MinimumPrincipalElasticStrain`
+            - 
+          * - :py:attr:`~MinimumPrincipalStress`
+            - 
+          * - :py:attr:`~MinimumPrincipalThermalStrain`
+            - 
+          * - :py:attr:`~MomentReactionTracker`
+            - 
+          * - :py:attr:`~MullinsDamageVariable`
+            - 
+          * - :py:attr:`~MullinsMaximumPreviousStrainEnergy`
+            - 
+          * - :py:attr:`~NewtonRaphsonResidualCharge`
+            - 
+          * - :py:attr:`~NewtonRaphsonResidualForce`
+            - 
+          * - :py:attr:`~NewtonRaphsonResidualHeat`
+            - 
+          * - :py:attr:`~NewtonRaphsonResidualMoment`
+            - 
+          * - :py:attr:`~NodalEulerXYAngle`
+            - 
+          * - :py:attr:`~NodalEulerXZAngle`
+            - 
+          * - :py:attr:`~NodalEulerYZNodal`
+            - 
+          * - :py:attr:`~NodalTriads`
+            - 
+          * - :py:attr:`~NonLinearStabilizationEnergy`
+            - 
+          * - :py:attr:`~NormalGasketPressure`
+            - 
+          * - :py:attr:`~NormalGasketTotalClosure`
+            - 
+          * - :py:attr:`~PlasticWork`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~ReturnLoss`
+            - 
+          * - :py:attr:`~SafetyFactor`
+            - 
+          * - :py:attr:`~SafetyFactorCompositeFailure`
+            - 
+          * - :py:attr:`~SafetyFactorFatigue`
+            - 
+          * - :py:attr:`~SafetyMargin`
+            - 
+          * - :py:attr:`~ShapeFinder`
+            - 
+          * - :py:attr:`~ShapeFinderElemental`
+            - 
+          * - :py:attr:`~ShearDamageVariable`
+            - 
+          * - :py:attr:`~ShearMomentDiagramMSUM`
+            - 
+          * - :py:attr:`~ShearMomentDiagramMY`
+            - 
+          * - :py:attr:`~ShearMomentDiagramMZ`
+            - 
+          * - :py:attr:`~ShearMomentDiagramUSUM`
+            - 
+          * - :py:attr:`~ShearMomentDiagramUY`
+            - 
+          * - :py:attr:`~ShearMomentDiagramUZ`
+            - 
+          * - :py:attr:`~ShearMomentDiagramVSUM`
+            - 
+          * - :py:attr:`~ShearMomentDiagramVY`
+            - 
+          * - :py:attr:`~ShearMomentDiagramVZ`
+            - 
+          * - :py:attr:`~ShellBendingStress11`
+            - 
+          * - :py:attr:`~ShellBendingStress12`
+            - 
+          * - :py:attr:`~ShellBendingStress22`
+            - 
+          * - :py:attr:`~ShellBottomPeakStress11`
+            - 
+          * - :py:attr:`~ShellBottomPeakStress12`
+            - 
+          * - :py:attr:`~ShellBottomPeakStress22`
+            - 
+          * - :py:attr:`~ShellMembraneStress11`
+            - 
+          * - :py:attr:`~ShellMembraneStress12`
+            - 
+          * - :py:attr:`~ShellMembraneStress22`
+            - 
+          * - :py:attr:`~ShellTopPeakStress11`
+            - 
+          * - :py:attr:`~ShellTopPeakStress12`
+            - 
+          * - :py:attr:`~ShellTopPeakStress22`
+            - 
+          * - :py:attr:`~SoundPressureLevel`
+            - 
+          * - :py:attr:`~SpringTrackerDampingForce`
+            - 
+          * - :py:attr:`~SpringTrackerElasticForce`
+            - 
+          * - :py:attr:`~SpringTrackerElongation`
+            - 
+          * - :py:attr:`~SpringTrackerVelocity`
+            - 
+          * - :py:attr:`~StabilizationEnergy`
+            - 
+          * - :py:attr:`~StiffnessEnergy`
+            - 
+          * - :py:attr:`~StrainIntensity`
+            - 
+          * - :py:attr:`~StressIntensity`
+            - 
+          * - :py:attr:`~StressRatio`
+            - 
+          * - :py:attr:`~StructuralError`
+            - 
+          * - :py:attr:`~StructuralStrainEnergy`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~ThermalError`
+            - 
+          * - :py:attr:`~ThermalStrainEnergy`
+            - 
+          * - :py:attr:`~TopologyDensity`
+            - 
+          * - :py:attr:`~TopologyElementalDensity`
+            - 
+          * - :py:attr:`~TopologyMultiDensity`
+            - 
+          * - :py:attr:`~TotalAcceleration`
+            - 
+          * - :py:attr:`~TotalAxialForceDiagram`
+            - 
+          * - :py:attr:`~TotalBendingMomentDiagram`
+            - 
+          * - :py:attr:`~TotalCurrentDensity`
+            - 
+          * - :py:attr:`~TotalDeformation`
+            - 
+          * - :py:attr:`~TotalElectricFieldIntensity`
+            - 
+          * - :py:attr:`~TotalElectricFluxDensity`
+            - 
+          * - :py:attr:`~TotalEnergy`
+            - 
+          * - :py:attr:`~TotalHeatFlux`
+            - 
+          * - :py:attr:`~TotalMagneticFieldIntensity`
+            - 
+          * - :py:attr:`~TotalMagneticFluxDensity`
+            - 
+          * - :py:attr:`~TotalMagneticForces`
+            - 
+          * - :py:attr:`~TotalShearForce`
+            - 
+          * - :py:attr:`~TotalTorsionalMoment`
+            - 
+          * - :py:attr:`~TotalVelocity`
+            - 
+          * - :py:attr:`~TransmissionLoss`
+            - 
+          * - :py:attr:`~VariableGraph`
+            - 
+          * - :py:attr:`~VectorAxialForce`
+            - 
+          * - :py:attr:`~VectorBendingMoment`
+            - 
+          * - :py:attr:`~VectorDeformation`
+            - 
+          * - :py:attr:`~VectorHeatFlux`
+            - 
+          * - :py:attr:`~VectorPrincipalElasticStrain`
+            - 
+          * - :py:attr:`~VectorPrincipalStress`
+            - 
+          * - :py:attr:`~VectorShearForce`
+            - 
+          * - :py:attr:`~VectorTorsionalMoment`
+            - 
+          * - :py:attr:`~VelocityWaterfallDiagram`
+            - 
+          * - :py:attr:`~Volume`
+            - 
+          * - :py:attr:`~XContactForce`
+            - 
+          * - :py:attr:`~XDirectionalAcceleration`
+            - 
+          * - :py:attr:`~XDirectionalAccelerationPSD`
+            - 
+          * - :py:attr:`~XDirectionalAccelerationRS`
+            - 
+          * - :py:attr:`~XDirectionalAxialForce`
+            - 
+          * - :py:attr:`~XDirectionalBendingMoment`
+            - 
+          * - :py:attr:`~XDirectionalCurrentDensity`
+            - 
+          * - :py:attr:`~XDirectionalDisplacement`
+            - 
+          * - :py:attr:`~XDirectionalElectricFieldIntensity`
+            - 
+          * - :py:attr:`~XDirectionalElectricFluxDensity`
+            - 
+          * - :py:attr:`~XDirectionalHeatFlux`
+            - 
+          * - :py:attr:`~XDirectionalMagneticFieldIntensity`
+            - 
+          * - :py:attr:`~XDirectionalMagneticFluxDensity`
+            - 
+          * - :py:attr:`~XDirectionalShearForce`
+            - 
+          * - :py:attr:`~XDirectionalTorsionalMoment`
+            - 
+          * - :py:attr:`~XDirectionalVelocity`
+            - 
+          * - :py:attr:`~XDirectionalVelocityPSD`
+            - 
+          * - :py:attr:`~XDirectionalVelocityRS`
+            - 
+          * - :py:attr:`~XExternalForce`
+            - 
+          * - :py:attr:`~XMomentum`
+            - 
+          * - :py:attr:`~XNormalElasticStrain`
+            - 
+          * - :py:attr:`~XNormalStress`
+            - 
+          * - :py:attr:`~XThermalStrain`
+            - 
+          * - :py:attr:`~XTotalMassAverageVelocity`
+            - 
+          * - :py:attr:`~XYShearElasticStrain`
+            - 
+          * - :py:attr:`~XYShearGasketPressure`
+            - 
+          * - :py:attr:`~XYShearGasketTotalClosure`
+            - 
+          * - :py:attr:`~XYShearStress`
+            - 
+          * - :py:attr:`~XZShearElasticStrain`
+            - 
+          * - :py:attr:`~XZShearGasketPressure`
+            - 
+          * - :py:attr:`~XZShearGasketTotalClosure`
+            - 
+          * - :py:attr:`~XZShearStress`
+            - 
+          * - :py:attr:`~YContactForce`
+            - 
+          * - :py:attr:`~YDirectionalAcceleration`
+            - 
+          * - :py:attr:`~YDirectionalAccelerationPSD`
+            - 
+          * - :py:attr:`~YDirectionalAccelerationRS`
+            - 
+          * - :py:attr:`~YDirectionalAxialForce`
+            - 
+          * - :py:attr:`~YDirectionalBendingMoment`
+            - 
+          * - :py:attr:`~YDirectionalCurrentDensity`
+            - 
+          * - :py:attr:`~YDirectionalDisplacement`
+            - 
+          * - :py:attr:`~YDirectionalElectricFieldIntensity`
+            - 
+          * - :py:attr:`~YDirectionalElectricFluxDensity`
+            - 
+          * - :py:attr:`~YDirectionalHeatFlux`
+            - 
+          * - :py:attr:`~YDirectionalMagneticFieldIntensity`
+            - 
+          * - :py:attr:`~YDirectionalMagneticFluxDensity`
+            - 
+          * - :py:attr:`~YDirectionalShearForce`
+            - 
+          * - :py:attr:`~YDirectionalTorsionalMoment`
+            - 
+          * - :py:attr:`~YDirectionalVelocity`
+            - 
+          * - :py:attr:`~YDirectionalVelocityPSD`
+            - 
+          * - :py:attr:`~YDirectionalVelocityRS`
+            - 
+          * - :py:attr:`~YExternalForce`
+            - 
+          * - :py:attr:`~YMomentum`
+            - 
+          * - :py:attr:`~YNormalElasticStrain`
+            - 
+          * - :py:attr:`~YNormalStress`
+            - 
+          * - :py:attr:`~YThermalStrain`
+            - 
+          * - :py:attr:`~YTotalMassAverageVelocity`
+            - 
+          * - :py:attr:`~YZShearElasticStrain`
+            - 
+          * - :py:attr:`~YZShearStress`
+            - 
+          * - :py:attr:`~ZContactForce`
+            - 
+          * - :py:attr:`~ZDirectionalAcceleration`
+            - 
+          * - :py:attr:`~ZDirectionalAccelerationRS`
+            - 
+          * - :py:attr:`~ZDirectionalAxialForce`
+            - 
+          * - :py:attr:`~ZDirectionalBendingMoment`
+            - 
+          * - :py:attr:`~ZDirectionalCurrentDensity`
+            - 
+          * - :py:attr:`~ZDirectionalDisplacement`
+            - 
+          * - :py:attr:`~ZDirectionalElectricFieldIntensity`
+            - 
+          * - :py:attr:`~ZDirectionalElectricFluxDensity`
+            - 
+          * - :py:attr:`~ZDirectionalHeatFlux`
+            - 
+          * - :py:attr:`~ZDirectionalMagneticFieldIntensity`
+            - 
+          * - :py:attr:`~ZDirectionalMagneticFluxDensity`
+            - 
+          * - :py:attr:`~ZDirectionalShearForce`
+            - 
+          * - :py:attr:`~ZDirectionalTorsionalMoment`
+            - 
+          * - :py:attr:`~ZDirectionalVelocity`
+            - 
+          * - :py:attr:`~ZDirectionalVelocityPSD`
+            - 
+          * - :py:attr:`~ZDirectionalVelocityRS`
+            - 
+          * - :py:attr:`~ZExternalForce`
+            - 
+          * - :py:attr:`~ZMomentum`
+            - 
+          * - :py:attr:`~ZNormalElasticStrain`
+            - 
+          * - :py:attr:`~ZNormalStress`
+            - 
+          * - :py:attr:`~ZThermalStrain`
+            - 
+          * - :py:attr:`~ZTotalMassAverageVelocity`
+            - 
+          * - :py:attr:`~ZdirectionalAccelerationPSD`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AWeightedFrequencyBandSPL
+   :value: 361
+
+
+.. py:attribute:: AWeightedSoundPressureLevel
+   :value: 359
+
+
+.. py:attribute:: AbsorptionCoefficient
+   :value: 370
+
+
+.. py:attribute:: AccelerationWaterfallDiagram
+   :value: 406
+
+
+.. py:attribute:: AccumulatedEquivalentPlasticStrain
+   :value: 386
+
+
+.. py:attribute:: AcousticFarFieldSPLMicWaterfallDiagram
+   :value: 388
+
+
+.. py:attribute:: AcousticFarFieldSoundPowerLevelWaterfallDiagram
+   :value: 387
+
+
+.. py:attribute:: ArtificialEnergy
+   :value: 401
+
+
+.. py:attribute:: BendingStressEquivalent
+   :value: 121
+
+
+.. py:attribute:: BendingStressIntensity
+   :value: 123
+
+
+.. py:attribute:: BoltAdjustment
+   :value: 294
+
+
+.. py:attribute:: BoltWorkingLoad
+   :value: 295
+
+
+.. py:attribute:: CampbellDiagram
+   :value: 248
+
+
+.. py:attribute:: ContactChattering
+   :value: 101
+
+
+.. py:attribute:: ContactContactingArea
+   :value: 245
+
+
+.. py:attribute:: ContactFluidPressure
+   :value: 265
+
+
+.. py:attribute:: ContactFrictionalStress
+   :value: 71
+
+
+.. py:attribute:: ContactGap
+   :value: 70
+
+
+.. py:attribute:: ContactHeatFlux
+   :value: 334
+
+
+.. py:attribute:: ContactMaximumDampingPressure
+   :value: 249
+
+
+.. py:attribute:: ContactMaximumNormalStiffness
+   :value: 103
+
+
+.. py:attribute:: ContactMaximumTangentialStiffness
+   :value: 104
+
+
+.. py:attribute:: ContactMaxiumGeometricSlidingDistance
+   :value: 289
+
+
+.. py:attribute:: ContactMinimumGeometricSlidingDistance
+   :value: 288
+
+
+.. py:attribute:: ContactMinimumTangentialStiffness
+   :value: 108
+
+
+.. py:attribute:: ContactNumberContacting
+   :value: 100
+
+
+.. py:attribute:: ContactNumberSticking
+   :value: 106
+
+
+.. py:attribute:: ContactPenetration
+   :value: 69
+
+
+.. py:attribute:: ContactPressure
+   :value: 68
+
+
+.. py:attribute:: ContactResultingPinball
+   :value: 105
+
+
+.. py:attribute:: ContactSlidingDistance
+   :value: 72
+
+
+.. py:attribute:: ContactStatus
+   :value: 73
+
+
+.. py:attribute:: CurrentDensity
+   :value: 118
+
+
+.. py:attribute:: DamageStatus
+   :value: 281
+
+
+.. py:attribute:: DampingEnergy
+   :value: 400
+
+
+.. py:attribute:: Density
+   :value: 195
+
+
+.. py:attribute:: DiffuseSoundTransmissionLoss
+   :value: 377
+
+
+.. py:attribute:: DirectStress
+   :value: 109
+
+
+.. py:attribute:: ElectricPotential
+   :value: 114
+
+
+.. py:attribute:: ElectricVoltage
+   :value: 153
+
+
+.. py:attribute:: ElementalEulerXYAngle
+   :value: 197
+
+
+.. py:attribute:: ElementalEulerXZAngle
+   :value: 199
+
+
+.. py:attribute:: ElementalEulerYZAngle
+   :value: 198
+
+
+.. py:attribute:: ElementalStrainEnergy
+   :value: 135
+
+
+.. py:attribute:: ElementalTriads
+   :value: 200
+
+
+.. py:attribute:: EnergyDissipatedPerUnitVolume
+   :value: 287
+
+
+.. py:attribute:: EquivalentCreepStrain
+   :value: 242
+
+
+.. py:attribute:: EquivalentCreepStrainRST
+   :value: 252
+
+
+.. py:attribute:: EquivalentElasticStrain
+   :value: 13
+
+
+.. py:attribute:: EquivalentElasticStrainRST
+   :value: 250
+
+
+.. py:attribute:: EquivalentPlasticStrain
+   :value: 84
+
+
+.. py:attribute:: EquivalentPlasticStrainRST
+   :value: 251
+
+
+.. py:attribute:: EquivalentRadiatedPower
+   :value: 378
+
+
+.. py:attribute:: EquivalentRadiatedPowerLevel
+   :value: 379
+
+
+.. py:attribute:: EquivalentRadiatedPowerLevelWaterfallDiagram
+   :value: 385
+
+
+.. py:attribute:: EquivalentRadiatedPowerWaterfallDiagram
+   :value: 384
+
+
+.. py:attribute:: EquivalentStress
+   :value: 1
+
+
+.. py:attribute:: EquivalentStressPSD
+   :value: 138
+
+
+.. py:attribute:: EquivalentStressRS
+   :value: 173
+
+
+.. py:attribute:: EquivalentTotalStrainRST
+   :value: 243
+
+
+.. py:attribute:: FactorReserveInverseCompositeFailure
+   :value: 321
+
+
+.. py:attribute:: FarFieldAWeightedSPL
+   :value: 351
+
+
+.. py:attribute:: FarFieldAWeightedSPLMic
+   :value: 373
+
+
+.. py:attribute:: FarFieldDirectivity
+   :value: 354
+
+
+.. py:attribute:: FarFieldMaximumPressure
+   :value: 352
+
+
+.. py:attribute:: FarFieldMaximumPressureMic
+   :value: 374
+
+
+.. py:attribute:: FarFieldMaximumScatteredPressure
+   :value: 355
+
+
+.. py:attribute:: FarFieldPhase
+   :value: 353
+
+
+.. py:attribute:: FarFieldPhaseMic
+   :value: 375
+
+
+.. py:attribute:: FarFieldSPL
+   :value: 350
+
+
+.. py:attribute:: FarFieldSPLMic
+   :value: 372
+
+
+.. py:attribute:: FarFieldSoundPowerLevel
+   :value: 357
+
+
+.. py:attribute:: FarFieldTargetStrength
+   :value: 356
+
+
+.. py:attribute:: FatigueDamage
+   :value: 62
+
+
+.. py:attribute:: FatigueEquivalentReversedStress
+   :value: 74
+
+
+.. py:attribute:: FatigueLife
+   :value: 60
+
+
+.. py:attribute:: FatigueResultBiaxialityIndication
+   :value: 63
+
+
+.. py:attribute:: FatigueSensitivity
+   :value: 66
+
+
+.. py:attribute:: FiberCompressiveDamageVariable
+   :value: 283
+
+
+.. py:attribute:: FiberCompressiveFailureCriterion
+   :value: 278
+
+
+.. py:attribute:: FiberTensileDamageVariable
+   :value: 282
+
+
+.. py:attribute:: FiberTensileFailureCriterion
+   :value: 277
+
+
+.. py:attribute:: FluidFlowRate
+   :value: 296
+
+
+.. py:attribute:: FluidHeatConductionRate
+   :value: 297
+
+
+.. py:attribute:: FluidHeatTransportRate
+   :value: 298
+
+
+.. py:attribute:: ForceReaction
+   :value: 246
+
+
+.. py:attribute:: FractureCSTAR
+   :value: 311
+
+
+.. py:attribute:: FractureEquivalentSIFSRange
+   :value: 314
+
+
+.. py:attribute:: FractureJINT
+   :value: 266
+
+
+.. py:attribute:: FractureMaterialForceX
+   :value: 308
+
+
+.. py:attribute:: FractureMaterialForceY
+   :value: 309
+
+
+.. py:attribute:: FractureMaterialForceZ
+   :value: 310
+
+
+.. py:attribute:: FractureSIFSK1
+   :value: 267
+
+
+.. py:attribute:: FractureSIFSK2
+   :value: 268
+
+
+.. py:attribute:: FractureSIFSK3
+   :value: 269
+
+
+.. py:attribute:: FractureTSTRESS
+   :value: 307
+
+
+.. py:attribute:: FractureVCCTG1
+   :value: 270
+
+
+.. py:attribute:: FractureVCCTG2
+   :value: 271
+
+
+.. py:attribute:: FractureVCCTG3
+   :value: 272
+
+
+.. py:attribute:: FractureVCCTGT
+   :value: 273
+
+
+.. py:attribute:: FrequencyBandSPL
+   :value: 360
+
+
+.. py:attribute:: Hysteresis
+   :value: 115
+
+
+.. py:attribute:: JouleHeat
+   :value: 154
+
+
+.. py:attribute:: KineticEnergy
+   :value: 139
+
+
+.. py:attribute:: LSDYNAGeneralTracker
+   :value: 403
+
+
+.. py:attribute:: LatticeDensity
+   :value: 381
+
+
+.. py:attribute:: LatticeElementalDensity
+   :value: 380
+
+
+.. py:attribute:: LinePressure
+   :value: 396
+
+
+.. py:attribute:: MCFWaterfallDiagram
+   :value: 404
+
+
+.. py:attribute:: MagneticCoenergy
+   :value: 193
+
+
+.. py:attribute:: MagneticError
+   :value: 134
+
+
+.. py:attribute:: MagneticPotential
+   :value: 192
+
+
+.. py:attribute:: MagneticXDirectionalForces
+   :value: 97
+
+
+.. py:attribute:: MagneticYDirectionalForces
+   :value: 98
+
+
+.. py:attribute:: MagneticZDirectionalForces
+   :value: 99
+
+
+.. py:attribute:: MarginSafetyCompositeFailure
+   :value: 323
+
+
+.. py:attribute:: MatrixCompressiveDamageVariable
+   :value: 285
+
+
+.. py:attribute:: MatrixCompressiveFailureCriterion
+   :value: 280
+
+
+.. py:attribute:: MatrixTensileDamageVariable
+   :value: 284
+
+
+.. py:attribute:: MatrixTensileFailureCriterion
+   :value: 279
+
+
+.. py:attribute:: MaximumBendingStress
+   :value: 111
+
+
+.. py:attribute:: MaximumCombinedStress
+   :value: 113
+
+
+.. py:attribute:: MaximumFailureCriteria
+   :value: 276
+
+
+.. py:attribute:: MaximumPrincipalElasticStrain
+   :value: 14
+
+
+.. py:attribute:: MaximumPrincipalStress
+   :value: 2
+
+
+.. py:attribute:: MaximumPrincipalThermalStrain
+   :value: 54
+
+
+.. py:attribute:: MaximumShearElasticStrain
+   :value: 17
+
+
+.. py:attribute:: MaximumShearStress
+   :value: 5
+
+
+.. py:attribute:: MembraneStressEquivalent
+   :value: 120
+
+
+.. py:attribute:: MembraneStressIntensity
+   :value: 122
+
+
+.. py:attribute:: MiddlePrincipalElasticStrain
+   :value: 15
+
+
+.. py:attribute:: MiddlePrincipalStress
+   :value: 3
+
+
+.. py:attribute:: MiddlePrincipalThermalStrain
+   :value: 55
+
+
+.. py:attribute:: MinimumBendingStress
+   :value: 110
+
+
+.. py:attribute:: MinimumCombinedStress
+   :value: 112
+
+
+.. py:attribute:: MinimumPrincipalElasticStrain
+   :value: 16
+
+
+.. py:attribute:: MinimumPrincipalStress
+   :value: 4
+
+
+.. py:attribute:: MinimumPrincipalThermalStrain
+   :value: 56
+
+
+.. py:attribute:: MomentReactionTracker
+   :value: 247
+
+
+.. py:attribute:: MullinsDamageVariable
+   :value: 274
+
+
+.. py:attribute:: MullinsMaximumPreviousStrainEnergy
+   :value: 275
+
+
+.. py:attribute:: NewtonRaphsonResidualCharge
+   :value: 399
+
+
+.. py:attribute:: NewtonRaphsonResidualForce
+   :value: 85
+
+
+.. py:attribute:: NewtonRaphsonResidualHeat
+   :value: 87
+
+
+.. py:attribute:: NewtonRaphsonResidualMoment
+   :value: 86
+
+
+.. py:attribute:: NodalEulerXYAngle
+   :value: 201
+
+
+.. py:attribute:: NodalEulerXZAngle
+   :value: 203
+
+
+.. py:attribute:: NodalEulerYZNodal
+   :value: 202
+
+
+.. py:attribute:: NodalTriads
+   :value: 204
+
+
+.. py:attribute:: NonLinearStabilizationEnergy
+   :value: 402
+
+
+.. py:attribute:: NormalGasketPressure
+   :value: 236
+
+
+.. py:attribute:: NormalGasketTotalClosure
+   :value: 239
+
+
+.. py:attribute:: PlasticWork
+   :value: 176
+
+
+.. py:attribute:: Pressure
+   :value: 194
+
+
+.. py:attribute:: ReturnLoss
+   :value: 371
+
+
+.. py:attribute:: SafetyFactor
+   :value: 30
+
+
+.. py:attribute:: SafetyFactorCompositeFailure
+   :value: 322
+
+
+.. py:attribute:: SafetyFactorFatigue
+   :value: 61
+
+
+.. py:attribute:: SafetyMargin
+   :value: 29
+
+
+.. py:attribute:: ShapeFinder
+   :value: 47
+
+
+.. py:attribute:: ShapeFinderElemental
+   :value: 185
+
+
+.. py:attribute:: ShearDamageVariable
+   :value: 286
+
+
+.. py:attribute:: ShearMomentDiagramMSUM
+   :value: 231
+
+
+.. py:attribute:: ShearMomentDiagramMY
+   :value: 225
+
+
+.. py:attribute:: ShearMomentDiagramMZ
+   :value: 226
+
+
+.. py:attribute:: ShearMomentDiagramUSUM
+   :value: 233
+
+
+.. py:attribute:: ShearMomentDiagramUY
+   :value: 229
+
+
+.. py:attribute:: ShearMomentDiagramUZ
+   :value: 230
+
+
+.. py:attribute:: ShearMomentDiagramVSUM
+   :value: 232
+
+
+.. py:attribute:: ShearMomentDiagramVY
+   :value: 227
+
+
+.. py:attribute:: ShearMomentDiagramVZ
+   :value: 228
+
+
+.. py:attribute:: ShellBendingStress11
+   :value: 256
+
+
+.. py:attribute:: ShellBendingStress12
+   :value: 258
+
+
+.. py:attribute:: ShellBendingStress22
+   :value: 257
+
+
+.. py:attribute:: ShellBottomPeakStress11
+   :value: 259
+
+
+.. py:attribute:: ShellBottomPeakStress12
+   :value: 261
+
+
+.. py:attribute:: ShellBottomPeakStress22
+   :value: 260
+
+
+.. py:attribute:: ShellMembraneStress11
+   :value: 253
+
+
+.. py:attribute:: ShellMembraneStress12
+   :value: 255
+
+
+.. py:attribute:: ShellMembraneStress22
+   :value: 254
+
+
+.. py:attribute:: ShellTopPeakStress11
+   :value: 262
+
+
+.. py:attribute:: ShellTopPeakStress12
+   :value: 264
+
+
+.. py:attribute:: ShellTopPeakStress22
+   :value: 263
+
+
+.. py:attribute:: SoundPressureLevel
+   :value: 358
+
+
+.. py:attribute:: SpringTrackerDampingForce
+   :value: 293
+
+
+.. py:attribute:: SpringTrackerElasticForce
+   :value: 292
+
+
+.. py:attribute:: SpringTrackerElongation
+   :value: 290
+
+
+.. py:attribute:: SpringTrackerVelocity
+   :value: 291
+
+
+.. py:attribute:: StabilizationEnergy
+   :value: 244
+
+
+.. py:attribute:: StiffnessEnergy
+   :value: 140
+
+
+.. py:attribute:: StrainIntensity
+   :value: 18
+
+
+.. py:attribute:: StressIntensity
+   :value: 6
+
+
+.. py:attribute:: StressRatio
+   :value: 31
+
+
+.. py:attribute:: StructuralError
+   :value: 116
+
+
+.. py:attribute:: StructuralStrainEnergy
+   :value: 136
+
+
+.. py:attribute:: Temperature
+   :value: 49
+
+
+.. py:attribute:: ThermalError
+   :value: 117
+
+
+.. py:attribute:: ThermalStrainEnergy
+   :value: 137
+
+
+.. py:attribute:: TopologyDensity
+   :value: 338
+
+
+.. py:attribute:: TopologyElementalDensity
+   :value: 335
+
+
+.. py:attribute:: TopologyMultiDensity
+   :value: 411
+
+
+.. py:attribute:: TotalAcceleration
+   :value: 79
+
+
+.. py:attribute:: TotalAxialForceDiagram
+   :value: 208
+
+
+.. py:attribute:: TotalBendingMomentDiagram
+   :value: 213
+
+
+.. py:attribute:: TotalCurrentDensity
+   :value: 149
+
+
+.. py:attribute:: TotalDeformation
+   :value: 25
+
+
+.. py:attribute:: TotalElectricFieldIntensity
+   :value: 145
+
+
+.. py:attribute:: TotalElectricFluxDensity
+   :value: 141
+
+
+.. py:attribute:: TotalEnergy
+   :value: 174
+
+
+.. py:attribute:: TotalHeatFlux
+   :value: 50
+
+
+.. py:attribute:: TotalMagneticFieldIntensity
+   :value: 92
+
+
+.. py:attribute:: TotalMagneticFluxDensity
+   :value: 88
+
+
+.. py:attribute:: TotalMagneticForces
+   :value: 96
+
+
+.. py:attribute:: TotalShearForce
+   :value: 223
+
+
+.. py:attribute:: TotalTorsionalMoment
+   :value: 218
+
+
+.. py:attribute:: TotalVelocity
+   :value: 124
+
+
+.. py:attribute:: TransmissionLoss
+   :value: 369
+
+
+.. py:attribute:: VariableGraph
+   :value: 67
+
+
+.. py:attribute:: VectorAxialForce
+   :value: 209
+
+
+.. py:attribute:: VectorBendingMoment
+   :value: 214
+
+
+.. py:attribute:: VectorDeformation
+   :value: 75
+
+
+.. py:attribute:: VectorHeatFlux
+   :value: 76
+
+
+.. py:attribute:: VectorPrincipalElasticStrain
+   :value: 78
+
+
+.. py:attribute:: VectorPrincipalStress
+   :value: 77
+
+
+.. py:attribute:: VectorShearForce
+   :value: 224
+
+
+.. py:attribute:: VectorTorsionalMoment
+   :value: 219
+
+
+.. py:attribute:: VelocityWaterfallDiagram
+   :value: 405
+
+
+.. py:attribute:: Volume
+   :value: 382
+
+
+.. py:attribute:: XContactForce
+   :value: 186
+
+
+.. py:attribute:: XDirectionalAcceleration
+   :value: 80
+
+
+.. py:attribute:: XDirectionalAccelerationPSD
+   :value: 131
+
+
+.. py:attribute:: XDirectionalAccelerationRS
+   :value: 170
+
+
+.. py:attribute:: XDirectionalAxialForce
+   :value: 205
+
+
+.. py:attribute:: XDirectionalBendingMoment
+   :value: 210
+
+
+.. py:attribute:: XDirectionalCurrentDensity
+   :value: 150
+
+
+.. py:attribute:: XDirectionalDisplacement
+   :value: 26
+
+
+.. py:attribute:: XDirectionalElectricFieldIntensity
+   :value: 146
+
+
+.. py:attribute:: XDirectionalElectricFluxDensity
+   :value: 142
+
+
+.. py:attribute:: XDirectionalHeatFlux
+   :value: 51
+
+
+.. py:attribute:: XDirectionalMagneticFieldIntensity
+   :value: 93
+
+
+.. py:attribute:: XDirectionalMagneticFluxDensity
+   :value: 89
+
+
+.. py:attribute:: XDirectionalShearForce
+   :value: 220
+
+
+.. py:attribute:: XDirectionalTorsionalMoment
+   :value: 215
+
+
+.. py:attribute:: XDirectionalVelocity
+   :value: 125
+
+
+.. py:attribute:: XDirectionalVelocityPSD
+   :value: 128
+
+
+.. py:attribute:: XDirectionalVelocityRS
+   :value: 167
+
+
+.. py:attribute:: XExternalForce
+   :value: 189
+
+
+.. py:attribute:: XMomentum
+   :value: 177
+
+
+.. py:attribute:: XNormalElasticStrain
+   :value: 19
+
+
+.. py:attribute:: XNormalStress
+   :value: 7
+
+
+.. py:attribute:: XThermalStrain
+   :value: 57
+
+
+.. py:attribute:: XTotalMassAverageVelocity
+   :value: 180
+
+
+.. py:attribute:: XYShearElasticStrain
+   :value: 22
+
+
+.. py:attribute:: XYShearGasketPressure
+   :value: 237
+
+
+.. py:attribute:: XYShearGasketTotalClosure
+   :value: 240
+
+
+.. py:attribute:: XYShearStress
+   :value: 10
+
+
+.. py:attribute:: XZShearElasticStrain
+   :value: 24
+
+
+.. py:attribute:: XZShearGasketPressure
+   :value: 238
+
+
+.. py:attribute:: XZShearGasketTotalClosure
+   :value: 241
+
+
+.. py:attribute:: XZShearStress
+   :value: 12
+
+
+.. py:attribute:: YContactForce
+   :value: 187
+
+
+.. py:attribute:: YDirectionalAcceleration
+   :value: 81
+
+
+.. py:attribute:: YDirectionalAccelerationPSD
+   :value: 132
+
+
+.. py:attribute:: YDirectionalAccelerationRS
+   :value: 171
+
+
+.. py:attribute:: YDirectionalAxialForce
+   :value: 206
+
+
+.. py:attribute:: YDirectionalBendingMoment
+   :value: 211
+
+
+.. py:attribute:: YDirectionalCurrentDensity
+   :value: 151
+
+
+.. py:attribute:: YDirectionalDisplacement
+   :value: 27
+
+
+.. py:attribute:: YDirectionalElectricFieldIntensity
+   :value: 147
+
+
+.. py:attribute:: YDirectionalElectricFluxDensity
+   :value: 143
+
+
+.. py:attribute:: YDirectionalHeatFlux
+   :value: 52
+
+
+.. py:attribute:: YDirectionalMagneticFieldIntensity
+   :value: 94
+
+
+.. py:attribute:: YDirectionalMagneticFluxDensity
+   :value: 90
+
+
+.. py:attribute:: YDirectionalShearForce
+   :value: 221
+
+
+.. py:attribute:: YDirectionalTorsionalMoment
+   :value: 216
+
+
+.. py:attribute:: YDirectionalVelocity
+   :value: 126
+
+
+.. py:attribute:: YDirectionalVelocityPSD
+   :value: 129
+
+
+.. py:attribute:: YDirectionalVelocityRS
+   :value: 168
+
+
+.. py:attribute:: YExternalForce
+   :value: 190
+
+
+.. py:attribute:: YMomentum
+   :value: 178
+
+
+.. py:attribute:: YNormalElasticStrain
+   :value: 20
+
+
+.. py:attribute:: YNormalStress
+   :value: 8
+
+
+.. py:attribute:: YThermalStrain
+   :value: 58
+
+
+.. py:attribute:: YTotalMassAverageVelocity
+   :value: 181
+
+
+.. py:attribute:: YZShearElasticStrain
+   :value: 23
+
+
+.. py:attribute:: YZShearStress
+   :value: 11
+
+
+.. py:attribute:: ZContactForce
+   :value: 188
+
+
+.. py:attribute:: ZDirectionalAcceleration
+   :value: 82
+
+
+.. py:attribute:: ZDirectionalAccelerationRS
+   :value: 172
+
+
+.. py:attribute:: ZDirectionalAxialForce
+   :value: 207
+
+
+.. py:attribute:: ZDirectionalBendingMoment
+   :value: 212
+
+
+.. py:attribute:: ZDirectionalCurrentDensity
+   :value: 152
+
+
+.. py:attribute:: ZDirectionalDisplacement
+   :value: 28
+
+
+.. py:attribute:: ZDirectionalElectricFieldIntensity
+   :value: 148
+
+
+.. py:attribute:: ZDirectionalElectricFluxDensity
+   :value: 144
+
+
+.. py:attribute:: ZDirectionalHeatFlux
+   :value: 53
+
+
+.. py:attribute:: ZDirectionalMagneticFieldIntensity
+   :value: 95
+
+
+.. py:attribute:: ZDirectionalMagneticFluxDensity
+   :value: 91
+
+
+.. py:attribute:: ZDirectionalShearForce
+   :value: 222
+
+
+.. py:attribute:: ZDirectionalTorsionalMoment
+   :value: 217
+
+
+.. py:attribute:: ZDirectionalVelocity
+   :value: 127
+
+
+.. py:attribute:: ZDirectionalVelocityPSD
+   :value: 130
+
+
+.. py:attribute:: ZDirectionalVelocityRS
+   :value: 169
+
+
+.. py:attribute:: ZExternalForce
+   :value: 191
+
+
+.. py:attribute:: ZMomentum
+   :value: 179
+
+
+.. py:attribute:: ZNormalElasticStrain
+   :value: 21
+
+
+.. py:attribute:: ZNormalStress
+   :value: 9
+
+
+.. py:attribute:: ZThermalStrain
+   :value: 59
+
+
+.. py:attribute:: ZTotalMassAverageVelocity
+   :value: 182
+
+
+.. py:attribute:: ZdirectionalAccelerationPSD
+   :value: 133
+
+
+
+
+
+
+.. vale on

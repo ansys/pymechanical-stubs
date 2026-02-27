@@ -1,0 +1,147 @@
+.. vale off
+
+
+
+:class:`IBreakpoint`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.IBreakpoint
+
+   Bases: :py:obj:`object`
+
+
+   
+   A stop point in the source file of a code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IBreakpoint
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IsEnabled`
+            - Specifies whether the breakpoint is enabled or not.
+          * - :py:attr:`~Line`
+            - The line number on which the breakpoint is.
+          * - :py:attr:`~SourceFile`
+            - The file to which the breakpoint is attached.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: IsEnabled
+   :type: Optional[bool]
+
+
+   
+   Specifies whether the breakpoint is enabled or not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Line
+   :type: Optional[int]
+
+
+   
+   The line number on which the breakpoint is.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceFile
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISourceFile]
+
+
+   
+   The file to which the breakpoint is attached.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

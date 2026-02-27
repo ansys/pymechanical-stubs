@@ -1,0 +1,147 @@
+.. vale off
+
+
+
+:class:`MAPDLImportSettings`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.ExternalData.MAPDLImportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   T:Ansys.Mechanical.ExternalData.MAPDLImportSettings defines how to import external data from a MAPDL CDB file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MAPDLImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dimension`
+            - The dimension of the MAPDL CDB file.
+          * - :py:attr:`~Format`
+            - Gets the existing corresponding format.
+          * - :py:attr:`~LengthUnit`
+            - The length unit of the MAPDL CDB file.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Dimension
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SourceDimension]
+
+
+   
+   The dimension of the MAPDL CDB file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Format
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat]
+
+
+   
+   Gets the existing corresponding format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthUnit
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.LengthUnit]
+
+
+   
+   The length unit of the MAPDL CDB file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

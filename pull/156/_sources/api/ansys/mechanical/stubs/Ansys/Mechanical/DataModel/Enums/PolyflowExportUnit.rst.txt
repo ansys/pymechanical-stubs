@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`PolyflowExportUnit`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PolyflowExportUnit(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Polyflow Export Unit Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PolyflowExportUnit
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Centimeters`
+            - 
+          * - :py:attr:`~Feet`
+            - 
+          * - :py:attr:`~Inches`
+            - 
+          * - :py:attr:`~Meters`
+            - 
+          * - :py:attr:`~Micrometers`
+            - 
+          * - :py:attr:`~Millimeters`
+            - 
+          * - :py:attr:`~UseProjectUnit`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Centimeters
+   :value: 2
+
+
+.. py:attribute:: Feet
+   :value: 6
+
+
+.. py:attribute:: Inches
+   :value: 5
+
+
+.. py:attribute:: Meters
+   :value: 1
+
+
+.. py:attribute:: Micrometers
+   :value: 4
+
+
+.. py:attribute:: Millimeters
+   :value: 3
+
+
+.. py:attribute:: UseProjectUnit
+   :value: 0
+
+
+
+
+
+
+.. vale on

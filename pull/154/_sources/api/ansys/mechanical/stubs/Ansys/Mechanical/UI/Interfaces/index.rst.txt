@@ -1,0 +1,109 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Interfaces``
+==============================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.UI.Interfaces
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Interfaces
+.. tab-set::
+
+
+
+    .. tab-item:: Interfaces
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.UI.Interfaces.IMechanicalTheme`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.UI.Interfaces.IMechanicalUserInterface`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalTheme</api/ansys/mechanical/stubs/Ansys/Mechanical/UI/Interfaces/IMechanicalTheme>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserInterface</api/ansys/mechanical/stubs/Ansys/Mechanical/UI/Interfaces/IMechanicalUserInterface>
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Interfaces module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

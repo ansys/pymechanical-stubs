@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AMStlSource`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMStlSource(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the AMStlSource.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMStlSource
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConstructionGeometry`
+            - 
+          * - :py:attr:`~File`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ConstructionGeometry
+   :value: 1
+
+
+.. py:attribute:: File
+   :value: 0
+
+
+
+
+
+
+.. vale on

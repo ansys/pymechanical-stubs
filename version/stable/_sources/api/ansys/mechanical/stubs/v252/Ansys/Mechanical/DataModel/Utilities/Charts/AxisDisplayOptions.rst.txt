@@ -1,0 +1,305 @@
+.. vale off
+
+
+
+:class:`AxisDisplayOptions`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Charts.AxisDisplayOptions
+
+   Bases: :py:obj:`object`
+
+
+   
+   A class that exposes methods/properties to customize the display of a chart axis. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AxisDisplayOptions
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CopySettingsFrom`
+            - Copies the settings used in the input AxisDisplayOptions reference to the AxisDisplayOptions calling this method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxisLabel`
+            - Gets or sets the axis label.
+          * - :py:attr:`~IsLogarithmic`
+            - Gets or sets whether the axis is logarithmic.
+          * - :py:attr:`~LowerLimit`
+            - Gets the default lower limit of the axis range.
+          * - :py:attr:`~MaximumLimit`
+            - Gets or sets the Maximum limit used for the chart display.
+          * - :py:attr:`~MinimumLimit`
+            - Gets or sets the Minimum limit used for the chart display.
+          * - :py:attr:`~ShowGridLines`
+            - Gets or sets the visibility of the axis gridlines.
+          * - :py:attr:`~UpperLimit`
+            - Gets the default higher limit of the axis range.
+          * - :py:attr:`~UseAutomaticLimits`
+            - Gets or sets whether axis limits are automatic or user-defined.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AxisLabel
+   :type: Optional[str]
+
+
+   
+   Gets or sets the axis label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsLogarithmic
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the axis is logarithmic.
+   A NotSupportedException is thrown if a dataset contains a non-positive value on the chosen axis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowerLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the default lower limit of the axis range.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Maximum limit used for the chart display.
+   If UseAutomaticLimits is True, a NotSupportedException is thrown on the setter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Minimum limit used for the chart display.
+   If UseAutomaticLimits is True, a NotSupportedException is thrown on the setter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowGridLines
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the visibility of the axis gridlines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UpperLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the default higher limit of the axis range.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseAutomaticLimits
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether axis limits are automatic or user-defined.
+   When True, the MinimumLimit and MaximumLimit will be set to the LowerLimit and UpperLimit respectively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CopySettingsFrom(display_options_original: Ansys.Mechanical.DataModel.Utilities.Charts.AxisDisplayOptions) -> None
+
+   
+   Copies the settings used in the input AxisDisplayOptions reference to the AxisDisplayOptions calling this method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SpatialRadiationType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpatialRadiationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpatialRadiationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpatialRadiationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Full`
+            - 
+          * - :py:attr:`~Partial`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Full
+   :value: 0
+
+
+.. py:attribute:: Partial
+   :value: 1
+
+
+
+
+
+
+.. vale on

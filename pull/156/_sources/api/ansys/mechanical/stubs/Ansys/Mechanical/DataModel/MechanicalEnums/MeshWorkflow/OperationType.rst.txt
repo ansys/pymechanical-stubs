@@ -1,0 +1,216 @@
+.. vale off
+
+
+
+:class:`OperationType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the “Step” tree node and reflects the type of operation being configured. Based on the type of an operation different rules are applied which define the applicable list of controls and outcomes which can be added.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OperationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddPrescribedPoints`
+            - 
+          * - :py:attr:`~CreateEnclosure`
+            - 
+          * - :py:attr:`~CreateSurfaceMesh`
+            - 
+          * - :py:attr:`~CreateTopology`
+            - 
+          * - :py:attr:`~CreateVolumeMesh`
+            - 
+          * - :py:attr:`~CreateVolumetricSizeField`
+            - 
+          * - :py:attr:`~DeleteTopology`
+            - 
+          * - :py:attr:`~DetectStackableBodies`
+            - 
+          * - :py:attr:`~ExportMesh`
+            - 
+          * - :py:attr:`~Extrude`
+            - 
+          * - :py:attr:`~FillHoles`
+            - 
+          * - :py:attr:`~ImportMesh`
+            - 
+          * - :py:attr:`~ImproveSurfaceMesh`
+            - 
+          * - :py:attr:`~ImproveVolumeMesh`
+            - 
+          * - :py:attr:`~ManageZoneProperties`
+            - 
+          * - :py:attr:`~MergeNodes`
+            - 
+          * - :py:attr:`~MergeParts`
+            - 
+          * - :py:attr:`~MergeVolumes`
+            - 
+          * - :py:attr:`~MultiZoneVolumeMesher`
+            - 
+          * - :py:attr:`~PatchHoles`
+            - 
+          * - :py:attr:`~ReplicateMesh`
+            - 
+          * - :py:attr:`~StackerDiagnostics`
+            - 
+          * - :py:attr:`~StackerFlattenVolume`
+            - 
+          * - :py:attr:`~StackerMeshVolume`
+            - 
+          * - :py:attr:`~Wrap`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AddPrescribedPoints
+   :value: 33
+
+
+.. py:attribute:: CreateEnclosure
+   :value: 7
+
+
+.. py:attribute:: CreateSurfaceMesh
+   :value: 26
+
+
+.. py:attribute:: CreateTopology
+   :value: 9
+
+
+.. py:attribute:: CreateVolumeMesh
+   :value: 27
+
+
+.. py:attribute:: CreateVolumetricSizeField
+   :value: 11
+
+
+.. py:attribute:: DeleteTopology
+   :value: 10
+
+
+.. py:attribute:: DetectStackableBodies
+   :value: 38
+
+
+.. py:attribute:: ExportMesh
+   :value: 5
+
+
+.. py:attribute:: Extrude
+   :value: 12
+
+
+.. py:attribute:: FillHoles
+   :value: 13
+
+
+.. py:attribute:: ImportMesh
+   :value: 4
+
+
+.. py:attribute:: ImproveSurfaceMesh
+   :value: 30
+
+
+.. py:attribute:: ImproveVolumeMesh
+   :value: 31
+
+
+.. py:attribute:: ManageZoneProperties
+   :value: 8
+
+
+.. py:attribute:: MergeNodes
+   :value: 50
+
+
+.. py:attribute:: MergeParts
+   :value: 46
+
+
+.. py:attribute:: MergeVolumes
+   :value: 15
+
+
+.. py:attribute:: MultiZoneVolumeMesher
+   :value: 29
+
+
+.. py:attribute:: PatchHoles
+   :value: 14
+
+
+.. py:attribute:: ReplicateMesh
+   :value: 32
+
+
+.. py:attribute:: StackerDiagnostics
+   :value: 39
+
+
+.. py:attribute:: StackerFlattenVolume
+   :value: 36
+
+
+.. py:attribute:: StackerMeshVolume
+   :value: 37
+
+
+.. py:attribute:: Wrap
+   :value: 34
+
+
+
+
+
+
+.. vale on

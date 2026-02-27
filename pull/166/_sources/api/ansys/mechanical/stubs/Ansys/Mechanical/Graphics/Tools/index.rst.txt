@@ -1,0 +1,109 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Tools``
+=========================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.Graphics.Tools
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Tools
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.Graphics.Tools.CurrentLegendSettings`
+            - Represents a CurrentLegendSettings object. This object holds properties of the CurrentLegendSettings.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.Graphics.Tools.LegendSettings`
+            - Represents a LegendSettings object. This object holds properties of the Standalone LegendSettings.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CurrentLegendSettings</api/ansys/mechanical/stubs/Ansys/Mechanical/Graphics/Tools/CurrentLegendSettings>
+    <span class="nf nf-cod-symbol_class"></span> LegendSettings</api/ansys/mechanical/stubs/Ansys/Mechanical/Graphics/Tools/LegendSettings>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Tools module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

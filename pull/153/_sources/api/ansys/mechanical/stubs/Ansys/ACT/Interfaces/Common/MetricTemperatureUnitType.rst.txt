@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MetricTemperatureUnitType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.MetricTemperatureUnitType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MetricTemperatureUnitType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MetricTemperatureUnitType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Celsius`
+            - 
+          * - :py:attr:`~Kelvin`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Celsius
+   :value: 1
+
+
+.. py:attribute:: Kelvin
+   :value: 0
+
+
+
+
+
+
+.. vale on

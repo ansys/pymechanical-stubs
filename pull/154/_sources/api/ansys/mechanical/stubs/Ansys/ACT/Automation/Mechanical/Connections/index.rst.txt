@@ -1,0 +1,186 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Connections``
+===============================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Connections
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.AMBondConnection`
+            - Defines a AMBondConnection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.Beam`
+            - Defines a Beam.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.Bearing`
+            - Defines a Bearing.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.BodyInteraction`
+            - Defines a BodyInteraction.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.BodyInteractions`
+            - Defines a BodyInteractions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.ConnectionGroup`
+            - Defines a ConnectionGroup.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.Connections`
+            - Defines a Connections.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.ContactRegion`
+            - Defines a ContactRegion.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.ContactTool`
+            - Defines a ContactTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.Joint`
+            - Defines a Joint.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.SpotWeldConnection`
+            - Defines a SpotWeldConnection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.SpotWeldGroup`
+            - Defines a SpotWeldGroup.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.Spring`
+            - Defines a Spring.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AMBondConnection</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/AMBondConnection>
+    <span class="nf nf-cod-symbol_class"></span> Beam</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/Beam>
+    <span class="nf nf-cod-symbol_class"></span> Bearing</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/Bearing>
+    <span class="nf nf-cod-symbol_class"></span> BodyInteraction</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/BodyInteraction>
+    <span class="nf nf-cod-symbol_class"></span> BodyInteractions</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/BodyInteractions>
+    <span class="nf nf-cod-symbol_class"></span> ConnectionGroup</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/ConnectionGroup>
+    <span class="nf nf-cod-symbol_class"></span> Connections</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/Connections>
+    <span class="nf nf-cod-symbol_class"></span> ContactRegion</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/ContactRegion>
+    <span class="nf nf-cod-symbol_class"></span> ContactTool</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/ContactTool>
+    <span class="nf nf-cod-symbol_class"></span> Joint</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/Joint>
+    <span class="nf nf-cod-symbol_class"></span> SpotWeldConnection</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/SpotWeldConnection>
+    <span class="nf nf-cod-symbol_class"></span> SpotWeldGroup</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/SpotWeldGroup>
+    <span class="nf nf-cod-symbol_class"></span> Spring</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Connections/Spring>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Connections module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

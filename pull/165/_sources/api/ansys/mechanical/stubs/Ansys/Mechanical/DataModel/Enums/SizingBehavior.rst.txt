@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SizingBehavior`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SizingBehavior(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SizingBehaviorType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SizingBehavior
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Hard`
+            - 
+          * - :py:attr:`~Soft`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Hard
+   :value: 1
+
+
+.. py:attribute:: Soft
+   :value: 0
+
+
+
+
+
+
+.. vale on

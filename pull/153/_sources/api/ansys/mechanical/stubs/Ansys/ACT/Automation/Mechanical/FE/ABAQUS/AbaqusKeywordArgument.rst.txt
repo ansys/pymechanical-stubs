@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`AbaqusKeywordArgument`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgument
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a keyword argument (with Key and Value).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AbaqusKeywordArgument
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Key`
+            - Gets the Key.
+          * - :py:attr:`~Value`
+            - Gets the Value.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Key
+   :type: Optional[str]
+
+
+   
+   Gets the Key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Value
+   :type: Optional[str]
+
+
+   
+   Gets the Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

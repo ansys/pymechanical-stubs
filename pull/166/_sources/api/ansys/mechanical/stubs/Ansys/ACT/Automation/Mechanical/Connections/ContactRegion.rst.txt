@@ -1,0 +1,3175 @@
+.. vale off
+
+
+
+:class:`ContactRegion`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Connections.ContactRegion
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ContactRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContactRegion
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddCommandSnippet`
+            - Creates a new CommandSnippet
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddPythonCodeEventBased`
+            - Creates a new PythonCodeEventBased
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~FlipContactTarget`
+            - Run the FlipContactTarget action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~LoadContactRegionSettings`
+            - Run the LoadContactRegionSettings action.
+          * - :py:attr:`~PromoteToNamedSelection`
+            - Run the PromoteToNamedSelection action.
+          * - :py:attr:`~PromoteToRemotePoint`
+            - Run the PromoteToRemotePoint action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+          * - :py:attr:`~ResetToDefault`
+            - Run the ResetToDefault action.
+          * - :py:attr:`~SaveContactRegionSettings`
+            - Run the SaveContactRegionSettings action.
+          * - :py:attr:`~SearchConnectionsForDuplicatePairs`
+            - Run the SearchConnectionsForDuplicatePairs action.
+          * - :py:attr:`~SetDefaultAPDLNames`
+            - Run the SetDefaultAPDLNames action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AutomaticDetectionValue`
+            - Gets the AutomaticDetectionValue.
+          * - :py:attr:`~AutomaticElectricCapacitance`
+            - Gets or sets the AutomaticElectricCapacitance.
+          * - :py:attr:`~AutomaticElectricConductance`
+            - Gets or sets the AutomaticElectricConductance.
+          * - :py:attr:`~AutomaticNormalStiffness`
+            - Gets or sets the AutomaticNormalStiffness.
+          * - :py:attr:`~AutomaticThermalConductance`
+            - Gets or sets the AutomaticThermalConductance.
+          * - :py:attr:`~BeamBeamDetection`
+            - Gets or sets the BeamBeamDetection.
+          * - :py:attr:`~BeamBeamModel`
+            - Gets or sets the BeamBeamModel.
+          * - :py:attr:`~BeamMaterialName`
+            - Gets or sets the BeamMaterialName.
+          * - :py:attr:`~BeamRadius`
+            - Gets or sets the BeamRadius.
+          * - :py:attr:`~Behavior`
+            - Gets or sets the Behavior.
+          * - :py:attr:`~BondedMaximumOffset`
+            - Gets or sets the BondedMaximumOffset.
+          * - :py:attr:`~Breakable`
+            - Gets or sets the Breakable.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConstraintType`
+            - Gets or sets the ConstraintType.
+          * - :py:attr:`~ContactAPDLName`
+            - Gets or sets the ContactAPDLName.
+          * - :py:attr:`~ContactBodies`
+            - Gets the ContactBodies.
+          * - :py:attr:`~ContactCenterPoint`
+            - Gets or sets the ContactCenterPoint.
+          * - :py:attr:`~ContactEndingPoint`
+            - Gets or sets the ContactEndingPoint.
+          * - :py:attr:`~ContactFormulation`
+            - Gets or sets the ContactFormulation.
+          * - :py:attr:`~ContactGeometryCorrection`
+            - Gets or sets the ContactGeometryCorrection.
+          * - :py:attr:`~ContactOrientation`
+            - Gets or sets the ContactOrientation.
+          * - :py:attr:`~ContactShellFace`
+            - Gets or sets the ContactShellFace.
+          * - :py:attr:`~ContactStartingPoint`
+            - Gets or sets the ContactStartingPoint.
+          * - :py:attr:`~ContactType`
+            - Gets or sets the ContactType.
+          * - :py:attr:`~ContinuousDistanceComputation`
+            - Gets or sets the ContinuousDistanceComputation.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DecayConstant`
+            - Gets or sets the DecayConstant.
+          * - :py:attr:`~DetectionMethod`
+            - Gets or sets the DetectionMethod.
+          * - :py:attr:`~DisplayElementNormal`
+            - Gets or sets the DisplayElementNormal.
+          * - :py:attr:`~DynamicCoefficient`
+            - Gets or sets the DynamicCoefficient.
+          * - :py:attr:`~EdgeContactType`
+            - Gets or sets the EdgeContactType.
+          * - :py:attr:`~ElasticSlipTolerance`
+            - Gets or sets the ElasticSlipTolerance.
+          * - :py:attr:`~ElasticSlipToleranceFactor`
+            - Gets or sets the ElasticSlipToleranceFactor.
+          * - :py:attr:`~ElasticSlipToleranceValue`
+            - Gets or sets the ElasticSlipToleranceValue.
+          * - :py:attr:`~ElectricCapacitanceValue`
+            - Gets or sets the ElectricCapacitanceValue.
+          * - :py:attr:`~ElectricConductanceValue`
+            - Gets or sets the ElectricConductanceValue.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~FlipContact`
+            - Gets or sets the FlipContact.
+          * - :py:attr:`~FlipTarget`
+            - Gets or sets the FlipTarget.
+          * - :py:attr:`~FrictionCoefficient`
+            - Gets or sets the FrictionCoefficient.
+          * - :py:attr:`~Handedness`
+            - Gets or sets the Handedness.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InitialClearance`
+            - Gets or sets the InitialClearance.
+          * - :py:attr:`~InitialClearanceFactor`
+            - Gets or sets the InitialClearanceFactor.
+          * - :py:attr:`~InitialClearanceValue`
+            - Gets or sets the InitialClearanceValue.
+          * - :py:attr:`~InterfaceTreatment`
+            - Gets or sets the InterfaceTreatment.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LineLineDetection`
+            - Gets or sets the LineLineDetection.
+          * - :py:attr:`~Material`
+            - Gets or sets the Material.
+          * - :py:attr:`~MeanPitchDiameter`
+            - Gets or sets the MeanPitchDiameter.
+          * - :py:attr:`~NormalForceExponent`
+            - Gets or sets the NormalForceExponent.
+          * - :py:attr:`~NormalForceLimit`
+            - Gets or sets the NormalForceLimit.
+          * - :py:attr:`~NormalStiffnessFactor`
+            - Gets or sets the NormalStiffnessFactor.
+          * - :py:attr:`~NormalStiffnessValue`
+            - Gets or sets the NormalStiffnessValue.
+          * - :py:attr:`~NormalStiffnessValueType`
+            - Gets or sets the NormalStiffnessValueType.
+          * - :py:attr:`~NormalStressExponent`
+            - Gets or sets the NormalStressExponent.
+          * - :py:attr:`~NormalStressLimit`
+            - Gets or sets the NormalStressLimit.
+          * - :py:attr:`~PenetrationTolerance`
+            - Gets or sets the PenetrationTolerance.
+          * - :py:attr:`~PenetrationToleranceFactor`
+            - Gets or sets the PenetrationToleranceFactor.
+          * - :py:attr:`~PenetrationToleranceValue`
+            - Gets or sets the PenetrationToleranceValue.
+          * - :py:attr:`~PinballFactor`
+            - Gets or sets the PinballFactor.
+          * - :py:attr:`~PinballRadius`
+            - Gets or sets the PinballRadius.
+          * - :py:attr:`~PinballRegion`
+            - Gets or sets the PinballRegion.
+          * - :py:attr:`~PitchDistance`
+            - Gets or sets the PitchDistance.
+          * - :py:attr:`~PressureAtZeroPenetration`
+            - Gets or sets the PressureAtZeroPenetration.
+          * - :py:attr:`~PressureAtZeroPenetrationFactor`
+            - Gets or sets the PressureAtZeroPenetrationFactor.
+          * - :py:attr:`~PressureAtZeroPenetrationValue`
+            - Gets or sets the PressureAtZeroPenetrationValue.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~Protected`
+            - Gets or sets the Protected.
+          * - :py:attr:`~RBDContactDetection`
+            - Gets or sets the RBDContactDetection.
+          * - :py:attr:`~ReadOnly`
+            - Gets or sets the ReadOnly.
+          * - :py:attr:`~RestitutionFactor`
+            - Gets or sets the RestitutionFactor.
+          * - :py:attr:`~ScopeMode`
+            - Gets the ScopeMode.
+          * - :py:attr:`~SharedSourceBody`
+            - Gets or sets the SharedSourceBody.
+          * - :py:attr:`~SharedSourceReverseNormalLocation`
+            - Gets or sets the SharedSourceReverseNormalLocation.
+          * - :py:attr:`~SharedTargetBody`
+            - Gets or sets the SharedTargetBody.
+          * - :py:attr:`~SharedTargetReverseNormalLocation`
+            - Gets or sets the SharedTargetReverseNormalLocation.
+          * - :py:attr:`~ShearForceExponent`
+            - Gets or sets the ShearForceExponent.
+          * - :py:attr:`~ShearForceLimit`
+            - Gets or sets the ShearForceLimit.
+          * - :py:attr:`~ShearStressExponent`
+            - Gets or sets the ShearStressExponent.
+          * - :py:attr:`~ShearStressLimit`
+            - Gets or sets the ShearStressLimit.
+          * - :py:attr:`~ShellThicknessEffect`
+            - Gets or sets the ShellThicknessEffect.
+          * - :py:attr:`~SmallSliding`
+            - Gets or sets the SmallSliding.
+          * - :py:attr:`~SourceLocation`
+            - Gets or sets the SourceLocation.
+          * - :py:attr:`~StabilizationDampingFactor`
+            - Gets or sets the StabilizationDampingFactor.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~TargetAPDLName`
+            - Gets or sets the TargetAPDLName.
+          * - :py:attr:`~TargetBodies`
+            - Gets the TargetBodies.
+          * - :py:attr:`~TargetCenterPoint`
+            - Gets or sets the TargetCenterPoint.
+          * - :py:attr:`~TargetEndingPoint`
+            - Gets or sets the TargetEndingPoint.
+          * - :py:attr:`~TargetGeometryCorrection`
+            - Gets or sets the TargetGeometryCorrection.
+          * - :py:attr:`~TargetLocation`
+            - Gets or sets the TargetLocation.
+          * - :py:attr:`~TargetOrientation`
+            - Gets or sets the TargetOrientation.
+          * - :py:attr:`~TargetShellFace`
+            - Gets or sets the TargetShellFace.
+          * - :py:attr:`~TargetStartingPoint`
+            - Gets or sets the TargetStartingPoint.
+          * - :py:attr:`~ThermalConductanceValue`
+            - Gets or sets the ThermalConductanceValue.
+          * - :py:attr:`~ThreadAngle`
+            - Gets or sets the ThreadAngle.
+          * - :py:attr:`~ThreadType`
+            - Gets or sets the ThreadType.
+          * - :py:attr:`~TimeStepControls`
+            - Gets or sets the TimeStepControls.
+          * - :py:attr:`~TrimContact`
+            - Gets or sets the TrimContact.
+          * - :py:attr:`~TrimTolerance`
+            - Gets or sets the TrimTolerance.
+          * - :py:attr:`~UpdateStiffness`
+            - Gets or sets the UpdateStiffness.
+          * - :py:attr:`~UserOffset`
+            - Gets or sets the UserOffset.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AutomaticDetectionValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the AutomaticDetectionValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticElectricCapacitance
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AutomaticElectricCapacitance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticElectricConductance
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AutomaticElectricConductance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticNormalStiffness
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AutomaticNormalStiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticThermalConductance
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AutomaticThermalConductance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamBeamDetection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.BeamBeamContactDetectionType]
+
+
+   
+   Gets or sets the BeamBeamDetection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamBeamModel
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.BeamBeamModel]
+
+
+   
+   Gets or sets the BeamBeamModel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamMaterialName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the BeamMaterialName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the BeamRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Behavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactBehavior]
+
+
+   
+   Gets or sets the Behavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BondedMaximumOffset
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the BondedMaximumOffset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Breakable
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.BondedBreakableType]
+
+
+   
+   Gets or sets the Breakable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConstraintType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactConstraintType]
+
+
+   
+   Gets or sets the ConstraintType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactAPDLName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ContactAPDLName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactBodies
+   :type: Optional[str]
+
+
+   
+   Gets the ContactBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactCenterPoint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the ContactCenterPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactEndingPoint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the ContactEndingPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactFormulation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactFormulation]
+
+
+   
+   Gets or sets the ContactFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactGeometryCorrection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactCorrection]
+
+
+   
+   Gets or sets the ContactGeometryCorrection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactOrientation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactOrientation]
+
+
+   
+   Gets or sets the ContactOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactShellFace
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ShellFaceType]
+
+
+   
+   Gets or sets the ContactShellFace.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactStartingPoint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the ContactStartingPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContactType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactType]
+
+
+   
+   Gets or sets the ContactType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContinuousDistanceComputation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.YesNoProgrammedControlled]
+
+
+   
+   Gets or sets the ContinuousDistanceComputation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DecayConstant
+   :type: Optional[float]
+
+
+   
+   Gets or sets the DecayConstant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DetectionMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactDetectionPoint]
+
+
+   
+   Gets or sets the DetectionMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayElementNormal
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the DisplayElementNormal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DynamicCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the DynamicCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeContactType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EdgeContactType]
+
+
+   
+   Gets or sets the EdgeContactType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElasticSlipTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactElasticSlipToleranceType]
+
+
+   
+   Gets or sets the ElasticSlipTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElasticSlipToleranceFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ElasticSlipToleranceFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElasticSlipToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ElasticSlipToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElectricCapacitanceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ElectricCapacitanceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElectricConductanceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ElectricConductanceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FlipContact
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the FlipContact.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FlipTarget
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the FlipTarget.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FrictionCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the FrictionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Handedness
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactBoltThreadHand]
+
+
+   
+   Gets or sets the Handedness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialClearance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.InitialClearanceType]
+
+
+   
+   Gets or sets the InitialClearance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialClearanceFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the InitialClearanceFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialClearanceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the InitialClearanceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InterfaceTreatment
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactInitialEffect]
+
+
+   
+   Gets or sets the InterfaceTreatment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSContactRegionAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineLineDetection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LineLineContactDetectionType]
+
+
+   
+   Gets or sets the LineLineDetection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Material
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Material.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeanPitchDiameter
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MeanPitchDiameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalForceExponent
+   :type: Optional[float]
+
+
+   
+   Gets or sets the NormalForceExponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalForceLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the NormalForceLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalStiffnessFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the NormalStiffnessFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalStiffnessValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the NormalStiffnessValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalStiffnessValueType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ElementControlsNormalStiffnessType]
+
+
+   
+   Gets or sets the NormalStiffnessValueType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalStressExponent
+   :type: Optional[float]
+
+
+   
+   Gets or sets the NormalStressExponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalStressLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the NormalStressLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PenetrationTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactPenetrationToleranceType]
+
+
+   
+   Gets or sets the PenetrationTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PenetrationToleranceFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the PenetrationToleranceFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PenetrationToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the PenetrationToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinballFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the PinballFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinballRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the PinballRadius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinballRegion
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactPinballType]
+
+
+   
+   Gets or sets the PinballRegion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PitchDistance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the PitchDistance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PressureAtZeroPenetration
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PressureAtZeroPenetrationType]
+
+
+   
+   Gets or sets the PressureAtZeroPenetration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PressureAtZeroPenetrationFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the PressureAtZeroPenetrationFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PressureAtZeroPenetrationValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the PressureAtZeroPenetrationValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Protected
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Protected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RBDContactDetection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DSRBDContactDetection]
+
+
+   
+   Gets or sets the RBDContactDetection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReadOnly
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RestitutionFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the RestitutionFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopeMode
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AutomaticOrManual]
+
+
+   
+   Gets the ScopeMode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharedSourceBody
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Body]
+
+
+   
+   Gets or sets the SharedSourceBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharedSourceReverseNormalLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the SharedSourceReverseNormalLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharedTargetBody
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Body]
+
+
+   
+   Gets or sets the SharedTargetBody.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SharedTargetReverseNormalLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the SharedTargetReverseNormalLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearForceExponent
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ShearForceExponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearForceLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ShearForceLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearStressExponent
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ShearStressExponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearStressLimit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ShearStressLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellThicknessEffect
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ShellThicknessEffect.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SmallSliding
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactSmallSlidingType]
+
+
+   
+   Gets or sets the SmallSliding.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the SourceLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StabilizationDampingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the StabilizationDampingFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetAPDLName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the TargetAPDLName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetBodies
+   :type: Optional[str]
+
+
+   
+   Gets the TargetBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetCenterPoint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the TargetCenterPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetEndingPoint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the TargetEndingPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetGeometryCorrection
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TargetCorrection]
+
+
+   
+   Gets or sets the TargetGeometryCorrection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetLocation
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the TargetLocation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetOrientation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TargetOrientation]
+
+
+   
+   Gets or sets the TargetOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetShellFace
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ShellFaceType]
+
+
+   
+   Gets or sets the TargetShellFace.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetStartingPoint
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the TargetStartingPoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalConductanceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ThermalConductanceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThreadAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ThreadAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThreadType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactBoltThreadType]
+
+
+   
+   Gets or sets the ThreadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeStepControls
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactTimeStepControls]
+
+
+   
+   Gets or sets the TimeStepControls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimContact
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ContactTrimType]
+
+
+   
+   Gets or sets the TrimContact.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the TrimTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UpdateStiffness
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.UpdateContactStiffness]
+
+
+   
+   Gets or sets the UpdateStiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserOffset
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the UserOffset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCommandSnippet() -> Ansys.ACT.Automation.Mechanical.CommandSnippet
+
+   
+   Creates a new CommandSnippet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPythonCodeEventBased() -> Ansys.ACT.Automation.Mechanical.PythonCodeEventBased
+
+   
+   Creates a new PythonCodeEventBased
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FlipContactTarget() -> None
+
+   
+   Run the FlipContactTarget action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: LoadContactRegionSettings(fName: str) -> None
+
+   
+   Run the LoadContactRegionSettings action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToNamedSelection() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
+
+   
+   Run the PromoteToNamedSelection action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PromoteToRemotePoint() -> Iterable[Ansys.ACT.Automation.Mechanical.RemotePoint]
+
+   
+   Run the PromoteToRemotePoint action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ResetToDefault() -> None
+
+   
+   Run the ResetToDefault action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveContactRegionSettings(fName: str) -> None
+
+   
+   Run the SaveContactRegionSettings action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SearchConnectionsForDuplicatePairs() -> None
+
+   
+   Run the SearchConnectionsForDuplicatePairs action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDefaultAPDLNames() -> None
+
+   
+   Run the SetDefaultAPDLNames action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

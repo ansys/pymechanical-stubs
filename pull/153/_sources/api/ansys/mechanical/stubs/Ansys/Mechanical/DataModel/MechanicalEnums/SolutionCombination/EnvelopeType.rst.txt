@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`EnvelopeType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.EnvelopeType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Solution Combination Envelope Type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EnvelopeType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Maximum`
+            - 
+          * - :py:attr:`~MaximumLoadCase`
+            - 
+          * - :py:attr:`~Minimum`
+            - 
+          * - :py:attr:`~MinimumLoadCase`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Maximum
+   :value: 0
+
+
+.. py:attribute:: MaximumLoadCase
+   :value: 2
+
+
+.. py:attribute:: Minimum
+   :value: 1
+
+
+.. py:attribute:: MinimumLoadCase
+   :value: 3
+
+
+
+
+
+
+.. vale on

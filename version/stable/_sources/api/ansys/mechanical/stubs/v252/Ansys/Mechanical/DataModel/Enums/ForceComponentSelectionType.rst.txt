@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ForceComponentSelectionType`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ForceComponentSelectionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ForceComponentType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ForceComponentSelectionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Contact`
+            - 
+          * - :py:attr:`~Coupling`
+            - 
+          * - :py:attr:`~Support`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 4
+
+
+.. py:attribute:: Contact
+   :value: 2
+
+
+.. py:attribute:: Coupling
+   :value: 3
+
+
+.. py:attribute:: Support
+   :value: 1
+
+
+
+
+
+
+.. vale on

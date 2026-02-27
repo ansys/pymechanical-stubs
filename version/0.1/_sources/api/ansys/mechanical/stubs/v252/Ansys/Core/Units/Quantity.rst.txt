@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`Quantity`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Core.Units.Quantity
+
+   Bases: :py:obj:`object`
+
+
+   
+   Quantity class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

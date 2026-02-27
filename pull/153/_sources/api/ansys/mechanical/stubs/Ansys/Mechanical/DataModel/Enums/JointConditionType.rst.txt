@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`JointConditionType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointConditionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Joint Condition Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: JointConditionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Acceleration`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~Moment`
+            - 
+          * - :py:attr:`~Rotation`
+            - 
+          * - :py:attr:`~RotationalAcceleration`
+            - 
+          * - :py:attr:`~RotationalVelocity`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Acceleration
+   :value: 110
+
+
+.. py:attribute:: Displacement
+   :value: 105
+
+
+.. py:attribute:: Force
+   :value: 102
+
+
+.. py:attribute:: Moment
+   :value: 106
+
+
+.. py:attribute:: Rotation
+   :value: 111
+
+
+.. py:attribute:: RotationalAcceleration
+   :value: 113
+
+
+.. py:attribute:: RotationalVelocity
+   :value: 109
+
+
+.. py:attribute:: Velocity
+   :value: 112
+
+
+
+
+
+
+.. vale on

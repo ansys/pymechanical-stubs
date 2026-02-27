@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ElementControlsNormalStiffnessType`
+===========================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ElementControlsNormalStiffnessType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ElementControlsNormalStiffnessType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ElementControlsNormalStiffnessType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AbsoluteValue`
+            - 
+          * - :py:attr:`~Factor`
+            - 
+          * - :py:attr:`~FromContactRegion`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AbsoluteValue
+   :value: 2
+
+
+.. py:attribute:: Factor
+   :value: 1
+
+
+.. py:attribute:: FromContactRegion
+   :value: 0
+
+
+
+
+
+
+.. vale on

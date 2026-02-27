@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`MeshMethodAlgorithm`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshMethodAlgorithm(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MeshMethodAlgorithm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshMethodAlgorithm
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AutomaticSweep`
+            - 
+          * - :py:attr:`~Axisymmetric`
+            - 
+          * - :py:attr:`~PatchConforming`
+            - 
+          * - :py:attr:`~PatchIndependent`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AutomaticSweep
+   :value: 4
+
+
+.. py:attribute:: Axisymmetric
+   :value: 0
+
+
+.. py:attribute:: PatchConforming
+   :value: 1
+
+
+.. py:attribute:: PatchIndependent
+   :value: 3
+
+
+
+
+
+
+.. vale on

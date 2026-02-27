@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`DelaminationFailureCriteriaOption`
+==========================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.DelaminationFailureCriteriaOption(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DelaminationFailureCriteriaOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DelaminationFailureCriteriaOption
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EnergyReleaseRate`
+            - 
+          * - :py:attr:`~JIntegral`
+            - 
+          * - :py:attr:`~MaterialDataTable`
+            - 
+          * - :py:attr:`~StressIntensityFactor`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EnergyReleaseRate
+   :value: 2
+
+
+.. py:attribute:: JIntegral
+   :value: 4
+
+
+.. py:attribute:: MaterialDataTable
+   :value: 1
+
+
+.. py:attribute:: StressIntensityFactor
+   :value: 3
+
+
+
+
+
+
+.. vale on

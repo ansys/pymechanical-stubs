@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`LinePressureResultBasedOnType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LinePressureResultBasedOnType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LinePressureResultBasedOnType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LinePressureResultBasedOnType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NodalForce`
+            - 
+          * - :py:attr:`~NormalGasketPressure`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NodalForce
+   :value: 1
+
+
+.. py:attribute:: NormalGasketPressure
+   :value: 0
+
+
+
+
+
+
+.. vale on

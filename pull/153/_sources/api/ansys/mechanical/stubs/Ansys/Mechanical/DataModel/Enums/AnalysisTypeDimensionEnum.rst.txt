@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AnalysisTypeDimensionEnum`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AnalysisTypeDimensionEnum(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the analysis type dimension for the Model Import Object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AnalysisTypeDimensionEnum
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ThreeD`
+            - 
+          * - :py:attr:`~TwoD`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ThreeD
+   :value: 2
+
+
+.. py:attribute:: TwoD
+   :value: 1
+
+
+
+
+
+
+.. vale on

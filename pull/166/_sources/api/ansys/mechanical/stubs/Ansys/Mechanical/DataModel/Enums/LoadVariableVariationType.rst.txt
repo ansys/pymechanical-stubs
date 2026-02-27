@@ -1,0 +1,1092 @@
+.. vale off
+
+
+
+:class:`LoadVariableVariationType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVariableVariationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadVariableVariationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadVariableVariationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Acceleration`
+            - 
+          * - :py:attr:`~AxisComponentX`
+            - 
+          * - :py:attr:`~AxisComponentY`
+            - 
+          * - :py:attr:`~AxisComponentZ`
+            - 
+          * - :py:attr:`~AxisLocationX`
+            - 
+          * - :py:attr:`~AxisLocationY`
+            - 
+          * - :py:attr:`~AxisLocationZ`
+            - 
+          * - :py:attr:`~BearingDampingC11`
+            - 
+          * - :py:attr:`~BearingDampingC12`
+            - 
+          * - :py:attr:`~BearingDampingC21`
+            - 
+          * - :py:attr:`~BearingDampingC22`
+            - 
+          * - :py:attr:`~BearingPropertiesBegin`
+            - 
+          * - :py:attr:`~BearingPropertiesEnd`
+            - 
+          * - :py:attr:`~BearingStiffnessK11`
+            - 
+          * - :py:attr:`~BearingStiffnessK12`
+            - 
+          * - :py:attr:`~BearingStiffnessK21`
+            - 
+          * - :py:attr:`~BearingStiffnessK22`
+            - 
+          * - :py:attr:`~Behavior`
+            - 
+          * - :py:attr:`~BoltBegin`
+            - 
+          * - :py:attr:`~BoltEnd`
+            - 
+          * - :py:attr:`~BoltIncrement`
+            - 
+          * - :py:attr:`~BoltLoadDefineBy`
+            - 
+          * - :py:attr:`~BulkTemperature`
+            - 
+          * - :py:attr:`~BushingNonlinStiffness`
+            - 
+          * - :py:attr:`~Capacitance`
+            - 
+          * - :py:attr:`~ComponentX`
+            - 
+          * - :py:attr:`~ComponentY`
+            - 
+          * - :py:attr:`~ComponentZ`
+            - 
+          * - :py:attr:`~ConvectionCoefficient`
+            - 
+          * - :py:attr:`~Current`
+            - 
+          * - :py:attr:`~Damping`
+            - 
+          * - :py:attr:`~DependentDataIndex`
+            - 
+          * - :py:attr:`~DependentsBegin`
+            - 
+          * - :py:attr:`~DependentsEnd`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~EMagBegin`
+            - 
+          * - :py:attr:`~EMagEnd`
+            - 
+          * - :py:attr:`~ElementFace`
+            - 
+          * - :py:attr:`~ElementType`
+            - 
+          * - :py:attr:`~Emissivity`
+            - 
+          * - :py:attr:`~End`
+            - 
+          * - :py:attr:`~Energy`
+            - 
+          * - :py:attr:`~EntityId`
+            - 
+          * - :py:attr:`~ExtLayeredSectionID`
+            - 
+          * - :py:attr:`~ExtLayeredSectionOffset`
+            - 
+          * - :py:attr:`~ExternalBegin`
+            - 
+          * - :py:attr:`~ExternalEnd`
+            - 
+          * - :py:attr:`~ExternalEnhancedModelBegin`
+            - 
+          * - :py:attr:`~ExternalEnhancedModelEnd`
+            - 
+          * - :py:attr:`~ExternalImagValue`
+            - 
+          * - :py:attr:`~ExternalImagValueX`
+            - 
+          * - :py:attr:`~ExternalImagValueY`
+            - 
+          * - :py:attr:`~ExternalImagValueZ`
+            - 
+          * - :py:attr:`~ExternalImagVectorI`
+            - 
+          * - :py:attr:`~ExternalImagVectorJ`
+            - 
+          * - :py:attr:`~ExternalImagVectorK`
+            - 
+          * - :py:attr:`~ExternalRealValue`
+            - 
+          * - :py:attr:`~ExternalRealValueX`
+            - 
+          * - :py:attr:`~ExternalRealValueX2`
+            - 
+          * - :py:attr:`~ExternalRealValueY`
+            - 
+          * - :py:attr:`~ExternalRealValueY2`
+            - 
+          * - :py:attr:`~ExternalRealValueZ`
+            - 
+          * - :py:attr:`~ExternalRealValueZ2`
+            - 
+          * - :py:attr:`~ExternalRealVectorI`
+            - 
+          * - :py:attr:`~ExternalRealVectorJ`
+            - 
+          * - :py:attr:`~ExternalRealVectorK`
+            - 
+          * - :py:attr:`~ExternalTemperature`
+            - 
+          * - :py:attr:`~FluidBegin`
+            - 
+          * - :py:attr:`~FluidDensity`
+            - 
+          * - :py:attr:`~FluidEnd`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~ForceIntensity`
+            - 
+          * - :py:attr:`~FoundationStiffness`
+            - 
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~Friction`
+            - 
+          * - :py:attr:`~GraphEnd`
+            - 
+          * - :py:attr:`~GraphPSDFittedValue`
+            - 
+          * - :py:attr:`~HarmonicIndex`
+            - 
+          * - :py:attr:`~HeatFlow`
+            - 
+          * - :py:attr:`~HeatFlux`
+            - 
+          * - :py:attr:`~HeatGenerationRate`
+            - 
+          * - :py:attr:`~IndependentsBegin`
+            - 
+          * - :py:attr:`~IndependentsEnd`
+            - 
+          * - :py:attr:`~IndexBegin`
+            - 
+          * - :py:attr:`~IndexEnd`
+            - 
+          * - :py:attr:`~LocationX`
+            - 
+          * - :py:attr:`~LocationY`
+            - 
+          * - :py:attr:`~LocationZ`
+            - 
+          * - :py:attr:`~Mass`
+            - 
+          * - :py:attr:`~MassFlowRate`
+            - 
+          * - :py:attr:`~MaterialID`
+            - 
+          * - :py:attr:`~Moment`
+            - 
+          * - :py:attr:`~NodeId0`
+            - 
+          * - :py:attr:`~NodeId1`
+            - 
+          * - :py:attr:`~NodeId10`
+            - 
+          * - :py:attr:`~NodeId11`
+            - 
+          * - :py:attr:`~NodeId12`
+            - 
+          * - :py:attr:`~NodeId13`
+            - 
+          * - :py:attr:`~NodeId14`
+            - 
+          * - :py:attr:`~NodeId15`
+            - 
+          * - :py:attr:`~NodeId16`
+            - 
+          * - :py:attr:`~NodeId17`
+            - 
+          * - :py:attr:`~NodeId18`
+            - 
+          * - :py:attr:`~NodeId19`
+            - 
+          * - :py:attr:`~NodeId2`
+            - 
+          * - :py:attr:`~NodeId3`
+            - 
+          * - :py:attr:`~NodeId4`
+            - 
+          * - :py:attr:`~NodeId5`
+            - 
+          * - :py:attr:`~NodeId6`
+            - 
+          * - :py:attr:`~NodeId7`
+            - 
+          * - :py:attr:`~NodeId8`
+            - 
+          * - :py:attr:`~NodeId9`
+            - 
+          * - :py:attr:`~NonlinearAdaptivity`
+            - 
+          * - :py:attr:`~NonlinearAdaptivityBegin`
+            - 
+          * - :py:attr:`~NonlinearAdaptivityEnd`
+            - 
+          * - :py:attr:`~NonlinearStiffnessBegin`
+            - 
+          * - :py:attr:`~NonlinearStiffnessEnd`
+            - 
+          * - :py:attr:`~NormalizedS`
+            - 
+          * - :py:attr:`~Offset`
+            - 
+          * - :py:attr:`~PSDAcceleration`
+            - 
+          * - :py:attr:`~PSDBegin`
+            - 
+          * - :py:attr:`~PSDDisplacement`
+            - 
+          * - :py:attr:`~PSDEnd`
+            - 
+          * - :py:attr:`~PSDGAcceleration`
+            - 
+          * - :py:attr:`~PSDVelocity`
+            - 
+          * - :py:attr:`~PathLength`
+            - 
+          * - :py:attr:`~PhaseAngle`
+            - 
+          * - :py:attr:`~Preadjustment`
+            - 
+          * - :py:attr:`~Preload`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~RSAcceleration`
+            - 
+          * - :py:attr:`~RSBegin`
+            - 
+          * - :py:attr:`~RSDisplacement`
+            - 
+          * - :py:attr:`~RSEnd`
+            - 
+          * - :py:attr:`~RSGAcceleration`
+            - 
+          * - :py:attr:`~RSVelocity`
+            - 
+          * - :py:attr:`~Reactance`
+            - 
+          * - :py:attr:`~RefId`
+            - 
+          * - :py:attr:`~Resistance`
+            - 
+          * - :py:attr:`~RotatingForceBegin`
+            - 
+          * - :py:attr:`~RotatingForceEnd`
+            - 
+          * - :py:attr:`~RotatingRadius`
+            - 
+          * - :py:attr:`~Rotation`
+            - 
+          * - :py:attr:`~RotationX`
+            - 
+          * - :py:attr:`~RotationY`
+            - 
+          * - :py:attr:`~RotationZ`
+            - 
+          * - :py:attr:`~RotationalAcceleration`
+            - 
+          * - :py:attr:`~RotationalVelocity`
+            - 
+          * - :py:attr:`~Scale`
+            - 
+          * - :py:attr:`~Sector`
+            - 
+          * - :py:attr:`~SectorNumber`
+            - 
+          * - :py:attr:`~ShellThickness`
+            - 
+          * - :py:attr:`~ShellThicknessEnd`
+            - 
+          * - :py:attr:`~SpringNonLinearStiffness`
+            - 
+          * - :py:attr:`~Step`
+            - 
+          * - :py:attr:`~StructuralBegin`
+            - 
+          * - :py:attr:`~StructuralEnd`
+            - 
+          * - :py:attr:`~SynchronousRatio`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~ThermalBegin`
+            - 
+          * - :py:attr:`~ThermalCompliance`
+            - 
+          * - :py:attr:`~ThermalEnd`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~UnbalancedForce`
+            - 
+          * - :py:attr:`~UnbalancedMass`
+            - 
+          * - :py:attr:`~Value`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+          * - :py:attr:`~Voltage`
+            - 
+          * - :py:attr:`~XValue`
+            - 
+          * - :py:attr:`~YValue`
+            - 
+          * - :py:attr:`~ZValue`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Acceleration
+   :value: 201
+
+
+.. py:attribute:: AxisComponentX
+   :value: 767
+
+
+.. py:attribute:: AxisComponentY
+   :value: 768
+
+
+.. py:attribute:: AxisComponentZ
+   :value: 769
+
+
+.. py:attribute:: AxisLocationX
+   :value: 764
+
+
+.. py:attribute:: AxisLocationY
+   :value: 765
+
+
+.. py:attribute:: AxisLocationZ
+   :value: 766
+
+
+.. py:attribute:: BearingDampingC11
+   :value: 780
+
+
+.. py:attribute:: BearingDampingC12
+   :value: 782
+
+
+.. py:attribute:: BearingDampingC21
+   :value: 783
+
+
+.. py:attribute:: BearingDampingC22
+   :value: 781
+
+
+.. py:attribute:: BearingPropertiesBegin
+   :value: 775
+
+
+.. py:attribute:: BearingPropertiesEnd
+   :value: 784
+
+
+.. py:attribute:: BearingStiffnessK11
+   :value: 776
+
+
+.. py:attribute:: BearingStiffnessK12
+   :value: 778
+
+
+.. py:attribute:: BearingStiffnessK21
+   :value: 779
+
+
+.. py:attribute:: BearingStiffnessK22
+   :value: 777
+
+
+.. py:attribute:: Behavior
+   :value: 1014
+
+
+.. py:attribute:: BoltBegin
+   :value: 575
+
+
+.. py:attribute:: BoltEnd
+   :value: 580
+
+
+.. py:attribute:: BoltIncrement
+   :value: 579
+
+
+.. py:attribute:: BoltLoadDefineBy
+   :value: 576
+
+
+.. py:attribute:: BulkTemperature
+   :value: 303
+
+
+.. py:attribute:: BushingNonlinStiffness
+   :value: 754
+
+
+.. py:attribute:: Capacitance
+   :value: 308
+
+
+.. py:attribute:: ComponentX
+   :value: 151
+
+
+.. py:attribute:: ComponentY
+   :value: 152
+
+
+.. py:attribute:: ComponentZ
+   :value: 153
+
+
+.. py:attribute:: ConvectionCoefficient
+   :value: 302
+
+
+.. py:attribute:: Current
+   :value: 402
+
+
+.. py:attribute:: Damping
+   :value: 211
+
+
+.. py:attribute:: DependentDataIndex
+   :value: 676
+
+
+.. py:attribute:: DependentsBegin
+   :value: 150
+
+
+.. py:attribute:: DependentsEnd
+   :value: 678
+
+
+.. py:attribute:: Displacement
+   :value: 202
+
+
+.. py:attribute:: EMagBegin
+   :value: 400
+
+
+.. py:attribute:: EMagEnd
+   :value: 403
+
+
+.. py:attribute:: ElementFace
+   :value: 20
+
+
+.. py:attribute:: ElementType
+   :value: 21
+
+
+.. py:attribute:: Emissivity
+   :value: 307
+
+
+.. py:attribute:: End
+   :value: 1010
+
+
+.. py:attribute:: Energy
+   :value: 215
+
+
+.. py:attribute:: EntityId
+   :value: 19
+
+
+.. py:attribute:: ExtLayeredSectionID
+   :value: 45
+
+
+.. py:attribute:: ExtLayeredSectionOffset
+   :value: 652
+
+
+.. py:attribute:: ExternalBegin
+   :value: 600
+
+
+.. py:attribute:: ExternalEnd
+   :value: 619
+
+
+.. py:attribute:: ExternalEnhancedModelBegin
+   :value: 650
+
+
+.. py:attribute:: ExternalEnhancedModelEnd
+   :value: 668
+
+
+.. py:attribute:: ExternalImagValue
+   :value: 605
+
+
+.. py:attribute:: ExternalImagValueX
+   :value: 613
+
+
+.. py:attribute:: ExternalImagValueY
+   :value: 614
+
+
+.. py:attribute:: ExternalImagValueZ
+   :value: 615
+
+
+.. py:attribute:: ExternalImagVectorI
+   :value: 606
+
+
+.. py:attribute:: ExternalImagVectorJ
+   :value: 607
+
+
+.. py:attribute:: ExternalImagVectorK
+   :value: 608
+
+
+.. py:attribute:: ExternalRealValue
+   :value: 601
+
+
+.. py:attribute:: ExternalRealValueX
+   :value: 610
+
+
+.. py:attribute:: ExternalRealValueX2
+   :value: 616
+
+
+.. py:attribute:: ExternalRealValueY
+   :value: 611
+
+
+.. py:attribute:: ExternalRealValueY2
+   :value: 617
+
+
+.. py:attribute:: ExternalRealValueZ
+   :value: 612
+
+
+.. py:attribute:: ExternalRealValueZ2
+   :value: 618
+
+
+.. py:attribute:: ExternalRealVectorI
+   :value: 602
+
+
+.. py:attribute:: ExternalRealVectorJ
+   :value: 603
+
+
+.. py:attribute:: ExternalRealVectorK
+   :value: 604
+
+
+.. py:attribute:: ExternalTemperature
+   :value: 609
+
+
+.. py:attribute:: FluidBegin
+   :value: 500
+
+
+.. py:attribute:: FluidDensity
+   :value: 501
+
+
+.. py:attribute:: FluidEnd
+   :value: 503
+
+
+.. py:attribute:: Force
+   :value: 203
+
+
+.. py:attribute:: ForceIntensity
+   :value: 209
+
+
+.. py:attribute:: FoundationStiffness
+   :value: 210
+
+
+.. py:attribute:: Frequency
+   :value: 16
+
+
+.. py:attribute:: Friction
+   :value: 212
+
+
+.. py:attribute:: GraphEnd
+   :value: 1013
+
+
+.. py:attribute:: GraphPSDFittedValue
+   :value: 1012
+
+
+.. py:attribute:: HarmonicIndex
+   :value: 47
+
+
+.. py:attribute:: HeatFlow
+   :value: 304
+
+
+.. py:attribute:: HeatFlux
+   :value: 306
+
+
+.. py:attribute:: HeatGenerationRate
+   :value: 305
+
+
+.. py:attribute:: IndependentsBegin
+   :value: 10
+
+
+.. py:attribute:: IndependentsEnd
+   :value: 49
+
+
+.. py:attribute:: IndexBegin
+   :value: 675
+
+
+.. py:attribute:: IndexEnd
+   :value: 677
+
+
+.. py:attribute:: LocationX
+   :value: 1019
+
+
+.. py:attribute:: LocationY
+   :value: 1020
+
+
+.. py:attribute:: LocationZ
+   :value: 1021
+
+
+.. py:attribute:: Mass
+   :value: 214
+
+
+.. py:attribute:: MassFlowRate
+   :value: 502
+
+
+.. py:attribute:: MaterialID
+   :value: 651
+
+
+.. py:attribute:: Moment
+   :value: 204
+
+
+.. py:attribute:: NodeId0
+   :value: 23
+
+
+.. py:attribute:: NodeId1
+   :value: 24
+
+
+.. py:attribute:: NodeId10
+   :value: 33
+
+
+.. py:attribute:: NodeId11
+   :value: 34
+
+
+.. py:attribute:: NodeId12
+   :value: 35
+
+
+.. py:attribute:: NodeId13
+   :value: 36
+
+
+.. py:attribute:: NodeId14
+   :value: 37
+
+
+.. py:attribute:: NodeId15
+   :value: 38
+
+
+.. py:attribute:: NodeId16
+   :value: 39
+
+
+.. py:attribute:: NodeId17
+   :value: 40
+
+
+.. py:attribute:: NodeId18
+   :value: 41
+
+
+.. py:attribute:: NodeId19
+   :value: 42
+
+
+.. py:attribute:: NodeId2
+   :value: 25
+
+
+.. py:attribute:: NodeId3
+   :value: 26
+
+
+.. py:attribute:: NodeId4
+   :value: 27
+
+
+.. py:attribute:: NodeId5
+   :value: 28
+
+
+.. py:attribute:: NodeId6
+   :value: 29
+
+
+.. py:attribute:: NodeId7
+   :value: 30
+
+
+.. py:attribute:: NodeId8
+   :value: 31
+
+
+.. py:attribute:: NodeId9
+   :value: 32
+
+
+.. py:attribute:: NonlinearAdaptivity
+   :value: 801
+
+
+.. py:attribute:: NonlinearAdaptivityBegin
+   :value: 800
+
+
+.. py:attribute:: NonlinearAdaptivityEnd
+   :value: 802
+
+
+.. py:attribute:: NonlinearStiffnessBegin
+   :value: 752
+
+
+.. py:attribute:: NonlinearStiffnessEnd
+   :value: 755
+
+
+.. py:attribute:: NormalizedS
+   :value: 44
+
+
+.. py:attribute:: Offset
+   :value: 155
+
+
+.. py:attribute:: PSDAcceleration
+   :value: 552
+
+
+.. py:attribute:: PSDBegin
+   :value: 550
+
+
+.. py:attribute:: PSDDisplacement
+   :value: 553
+
+
+.. py:attribute:: PSDEnd
+   :value: 555
+
+
+.. py:attribute:: PSDGAcceleration
+   :value: 551
+
+
+.. py:attribute:: PSDVelocity
+   :value: 554
+
+
+.. py:attribute:: PathLength
+   :value: 43
+
+
+.. py:attribute:: PhaseAngle
+   :value: 18
+
+
+.. py:attribute:: Preadjustment
+   :value: 578
+
+
+.. py:attribute:: Preload
+   :value: 577
+
+
+.. py:attribute:: Pressure
+   :value: 205
+
+
+.. py:attribute:: RSAcceleration
+   :value: 702
+
+
+.. py:attribute:: RSBegin
+   :value: 700
+
+
+.. py:attribute:: RSDisplacement
+   :value: 703
+
+
+.. py:attribute:: RSEnd
+   :value: 705
+
+
+.. py:attribute:: RSGAcceleration
+   :value: 701
+
+
+.. py:attribute:: RSVelocity
+   :value: 704
+
+
+.. py:attribute:: Reactance
+   :value: 843
+
+
+.. py:attribute:: RefId
+   :value: 22
+
+
+.. py:attribute:: Resistance
+   :value: 842
+
+
+.. py:attribute:: RotatingForceBegin
+   :value: 760
+
+
+.. py:attribute:: RotatingForceEnd
+   :value: 771
+
+
+.. py:attribute:: RotatingRadius
+   :value: 770
+
+
+.. py:attribute:: Rotation
+   :value: 206
+
+
+.. py:attribute:: RotationX
+   :value: 1016
+
+
+.. py:attribute:: RotationY
+   :value: 1017
+
+
+.. py:attribute:: RotationZ
+   :value: 1018
+
+
+.. py:attribute:: RotationalAcceleration
+   :value: 213
+
+
+.. py:attribute:: RotationalVelocity
+   :value: 207
+
+
+.. py:attribute:: Scale
+   :value: 154
+
+
+.. py:attribute:: Sector
+   :value: 15
+
+
+.. py:attribute:: SectorNumber
+   :value: 48
+
+
+.. py:attribute:: ShellThickness
+   :value: 750
+
+
+.. py:attribute:: ShellThicknessEnd
+   :value: 751
+
+
+.. py:attribute:: SpringNonLinearStiffness
+   :value: 753
+
+
+.. py:attribute:: Step
+   :value: 17
+
+
+.. py:attribute:: StructuralBegin
+   :value: 200
+
+
+.. py:attribute:: StructuralEnd
+   :value: 224
+
+
+.. py:attribute:: SynchronousRatio
+   :value: 763
+
+
+.. py:attribute:: Temperature
+   :value: 301
+
+
+.. py:attribute:: ThermalBegin
+   :value: 300
+
+
+.. py:attribute:: ThermalCompliance
+   :value: 309
+
+
+.. py:attribute:: ThermalEnd
+   :value: 310
+
+
+.. py:attribute:: Time
+   :value: 11
+
+
+.. py:attribute:: UnbalancedForce
+   :value: 762
+
+
+.. py:attribute:: UnbalancedMass
+   :value: 761
+
+
+.. py:attribute:: Value
+   :value: 1015
+
+
+.. py:attribute:: Velocity
+   :value: 208
+
+
+.. py:attribute:: Voltage
+   :value: 401
+
+
+.. py:attribute:: XValue
+   :value: 12
+
+
+.. py:attribute:: YValue
+   :value: 13
+
+
+.. py:attribute:: ZValue
+   :value: 14
+
+
+
+
+
+
+.. vale on

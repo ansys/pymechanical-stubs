@@ -1,0 +1,4360 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Enums``
+=========================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Enums
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalModel`
+            - ExternalModel module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference`
+            - GeometryImportPreference module.
+
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMBaseRemovalType`
+            - Specifies the AMBaseRemovalType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMBuildMachineType`
+            - Specifies the AMBuildMachineType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMCooldownTimeType`
+            - Specifies the AMCooldownTimeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMHeatingDurationType`
+            - Specifies the AMHeatingDurationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMHeatingMethod`
+            - Specifies the AMHeatingMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMInherentStrainDefinition`
+            - Specifies the AMInherentStrainDefinition.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMLayerHeightType`
+            - Specifies the AMLayerHeightType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMMachineLearningModel`
+            - Specifies the AMMachineLearningModel.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMMultiplierEntryType`
+            - Specifies the AMSupportSubtype.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMProcessSettingsType`
+            - Specifies the AMProcessSettingsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMProcessSimulationType`
+            - Specifies the AMProcessSimulationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMProcessStepType`
+            - Specifies the AMProcessStepType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMProcessType`
+            - Specifies the AMProcessType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMReferenceTemperatureType`
+            - Specifies the AMReferenceTemperatureType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMRelaxationTemperatureType`
+            - Specifies the AMRelaxationTemperatureType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMScanPatternDefinition`
+            - Specifies the AMScanPatternDefinition.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMStlSource`
+            - Specifies the AMStlSource.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMSupportGroupOutputType`
+            - Specifies the AMSupportGroupOutputType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMSupportSTLType`
+            - Specifies the AMSupportSTLType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMSupportType`
+            - Specifies the AMSupportType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMThermalStrainMaterialModel`
+            - Specifies the AMThermalStrainMaterialModel.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AMThermalStrainMethod`
+            - Specifies the AMThermalStrainMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ActiveOrInactive`
+            - Specifies the ActiveOrInactive.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AggressiveRemeshingType`
+            - Specifies the AggressiveRemeshingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AlgorithmType`
+            - Specifies the AlgorithmType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AnalysisType`
+            - Specifies the AnalysisType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AnalysisTypeDimensionEnum`
+            - To select the analysis type dimension for the Model Import Object.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ApplicationType`
+            - Specifies the Application type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ArtificiallyMatchedLayers`
+            - Specifies the ArtificiallyMatchedLayers.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AutoDetectionType`
+            - Specifies the AutoDetectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AutomaticNodeMovementMethod`
+            - To select the method of AutoNodeMove under PCTet.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AutomaticOrManual`
+            - Specifies the AutomaticOrManual.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AutomaticTimeStepping`
+            - Specifies the AutomaticTimeStepping.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.AxisSelectionType`
+            - Specifies the AxisSelectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BaseResultType`
+            - Specifies the BaseResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BeamBeamContactDetectionType`
+            - Specifies the BeamBeamContactDetectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BeamBeamModel`
+            - Specifies the BeamBeamModel.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BeamEndReleaseBehavior`
+            - Specifies the BeamEndReleaseBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BeamOffsetType`
+            - Specifies the BeamOffsetType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BeamSolutionType`
+            - Specifies the BeamSolutionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BeamToolStressResultType`
+            - Specifies the BeamToolStressResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BodyInteractionFormulation`
+            - Specifies the BodyInteractionFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BodyTreatment`
+            - Specifies the BodyTreatment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BodyType`
+            - Specifies the BodyType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BoltLoadDefineBy`
+            - Specifies the BoltLoadDefineBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BoltResultType`
+            - Specifies the BoltResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BondedBreakableType`
+            - Specifies the BondedBreakableType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BoundaryConditionAlongFiber`
+            - Specifies the BoundaryConditionAlongFiber.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BoundaryConditionForRotation`
+            - Specifies the BoundaryConditionForRotation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BoundaryConditionSelectionType`
+            - Specifies the BoundaryConditionSelection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BoundaryConditionType`
+            - Specifies the BoundaryConditionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.BrickIntegrationScheme`
+            - Specifies the BrickIntegrationScheme.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CacheResultsInMemory`
+            - Specifies the CacheResultsInMemory.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CalculateParticipationFactorResult`
+            - Specifies the CalculateParticipationFactorResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CameraAxisType`
+            - Specifies the Axis type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CampbellDiagramRotationalVelocitySelectionType`
+            - Specifies the Campbell Diagram Rotational Velocity Selection Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartAxisScaleType`
+            - Specifies the Chart Axis Scale Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartDimensions`
+            - Specifies the Chart Viewing Style.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartGridlines`
+            - Specifies the ChartGridlines.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartModalType`
+            - Specifies the ChartModalType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartPlotStyle`
+            - Specifies the ChartPlotStyle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartReportType`
+            - Specifies the ChartReportType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartResultType`
+            - Specifies the Chart Result Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartScale`
+            - Specifies the ChartScale.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CombineRestartFilesType`
+            - Specifies the CombineRestartFilesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CommandEditorTarget`
+            - Specifies the CommandEditorTarget.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ComparePartsOnUpdateType`
+            - Specifies the ComparePartsOnUpdateType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ComparePartsToleranceType`
+            - Specifies the ComparePartsTolerance Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartCMSAttachmentMethod`
+            - Specifies the CondensedPartCMSAttachmentMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartExpansionType`
+            - Specifies the CondensedPartExpansionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartFileFormat`
+            - Specifies the CondensedPartFileFormat.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartInterfaceMethod`
+            - Specifies the CondensedPartInterfaceMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartInterfaceType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartKeepFilesFor`
+            - Specifies the CondensedPartKeepFilesFor.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartLumpedMassFormulation`
+            - Specifies the CondensedPartLumpedMassFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartPhysics`
+            - Specifies the CondensedPartPhysics.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartPointMassTreatment`
+            - Specifies the CondensedPartPointMassTreatment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CondensedPartReductionMethod`
+            - Specifies the CondensedPartReductionMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConnectionCreationMethod`
+            - Specifies the ConnectionCreationMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConnectionOptions`
+            - Specifies the ConnectionOptions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConnectionScopingType`
+            - Specifies the ConnectionScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConstantDampingType`
+            - Specifies the ConstantDampingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactBehavior`
+            - Specifies the ContactBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactBoltThreadHand`
+            - Specifies the ContactBoltThreadHand.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactBoltThreadType`
+            - Specifies the ContactBoltThreadType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactConstraintType`
+            - Specifies the ContactConstraintType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactCorrection`
+            - Specifies the ContactCorrection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactDetection`
+            - Specifies the ContactDetection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactDetectionPoint`
+            - Specifies the ContactDetectionPoint.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactEdgeEdgeOption`
+            - Specifies the ContactEdgeEdgeOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactElasticSlipToleranceType`
+            - Specifies the ContactElasticSlipToleranceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactFaceEdgeOption`
+            - Specifies the ContactFaceEdgeOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactFaceEdgePriority`
+            - Specifies the ContactFaceEdgePriority.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactForceType`
+            - Specifies the ContactForceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactFormulation`
+            - Specifies the ContactFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactGroupingType`
+            - Specifies the ContactGroupingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactInitialEffect`
+            - Specifies the ContactInitialEffect.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactOrientation`
+            - Specifies the ContactOrientation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactPenetrationToleranceType`
+            - Specifies the ContactPenetrationToleranceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactPinballType`
+            - Specifies the ContactPinballType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactResultType`
+            - Specifies the ContactResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactScopingType`
+            - Specifies the ContactScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactSearchingType`
+            - Specifies the ContactSearchingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactSideScopingType`
+            - Specifies the ContactSideScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactSmallSlidingType`
+            - Specifies the ContactSmallSlidingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactSplitType`
+            - Specifies the ContactSplitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactSummaryType`
+            - Specifies the ContactSummaryType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactTimeStepControls`
+            - Specifies the ContactTimeStepControls.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactToleranceType`
+            - Specifies the ContactToleranceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactTrimType`
+            - Specifies the ContactTrimType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ContactType`
+            - Specifies the ContactType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConvectionTableSelection`
+            - Specifies the ConvectionTableSelection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConvergenceControlType`
+            - Specifies the ConvergenceControlType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConvergenceToleranceType`
+            - Specifies the ConvergenceToleranceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ConvergenceType`
+            - Specifies the ConvergenceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType`
+            - Specifies the CoordinateSystemAlignmentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoordinateSystemAxisType`
+            - Specifies the CoordinateSystemAxisType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoordinateSystemBehavior`
+            - Specifies the CoordinateSystemBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoordinateSystemType`
+            - Specifies the CoordinateSystemType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoreResultType`
+            - Specifies the CoreResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CoriolisEffectType`
+            - Specifies the CoriolisEffectType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CouplingConditionDOFType`
+            - Specifies the CouplingConditionDOFType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackGrowthIncrementType`
+            - Specifies the CrackGrowthIncrementType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackGrowthMeshCoarsening`
+            - Specifies the CrackGrowthMeshCoarsening.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackGrowthMethodology`
+            - Specifies the CrackGrowthMethodology.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackGrowthOption`
+            - Specifies the CrackGrowthOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackMeshMethod`
+            - Specifies the CrackMeshMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackSelectionModeType`
+            - Specifies the CrackSelectionModeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackShapeType`
+            - Specifies the CrackShapeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackSourceType`
+            - Specifies the CrackSourceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.Creep`
+            - Specifies the Creep.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CriterionFrequencyRangeType`
+            - Specifies the CriterionFrequencyRangeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrossSectionType`
+            - Specifies the CrossSectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CyclicHarmonicIndex`
+            - Specifies the CyclicHarmonicIndex.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CylindricalFacesOption`
+            - Specifies the CylindricalFacesOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DBWeightingType`
+            - Specifies the dB Weighting Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DSCampbellAxisRange`
+            - Specifies the DSCampbellAxisRange.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DSCampbellYAxisDataType`
+            - Specifies the DSCampbellYAxisDataType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DSRBDContactDetection`
+            - Specifies the DSRBDContactDetection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DamageResultType`
+            - Specifies the DamageResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DampingDefineBy`
+            - Specifies the DampingDefineBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DampingType`
+            - Specifies the DampingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DataImportStatus`
+            - Specifies the DataImportStatus.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory`
+            - Specifies the category of the F:Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory.DataModelObject.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DataTypeOptions`
+            - Specifies the DataTypeOptions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DeformationType`
+            - Specifies the DeformationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DelaminationFailureCriteriaOption`
+            - Specifies the DelaminationFailureCriteriaOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DelaminationGenerationMethod`
+            - Specifies the DelaminationGenerationMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DelaminationMethod`
+            - Specifies the DelaminationMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DelaminationType`
+            - Specifies the DelaminationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DiagonalOrConsistent`
+            - Specifies the DiagonalOrConsistent.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DistributedMassInputType`
+            - Specifies the DistributedMassInputType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DpfEvaluationType`
+            - Specifies the DpfEvaluationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DropDirection`
+            - Specifies the DropDirection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DropTestDefineBy`
+            - Specifies the DropTestDefineBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DynamicRelaxationBehaviorType`
+            - Specifies the DynamicRelaxationBehaviorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ECADFidelity`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDADRConvergenceMethod`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDArtificialViscosityForShellsType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDAutomaticMassScalingType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDBeamSolutionType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDCharZoneDimensionType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDDensityUpdateType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDDetonationBurnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDErosionOnGeomStrainType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDErosionOnMaterialFailureType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDErosionOnMinElemTimestepType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDErosionRetainIntertiaType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerDomScopeDefType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerDomainType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerGradedDefinition`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerResolutionDefType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerSizeDefType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDEulerTrackType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDHexIntegrationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDHourglassDampingType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDLinearViscosityExpansionType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDLoadStepType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDOutputContactForcesOnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDPreferenceType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSPHNodeDensityCutoffOption`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSavePrintSummaryOnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSaveProbeDataOnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSaveRestartsOnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSaveResultsOnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSaveUserEditOnType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDShellInertiaUpdateType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDShellThicknessUpdateType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDShellWarpCorrectionType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSolveUnitsType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDSolverPrecisionType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDStepawareOutputControlsType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EXDTetPressureIntegrationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EdgeContactType`
+            - Specifies the EdgeContactType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EdgeType`
+            - Specifies the EdgeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EigenSolverType`
+            - Specifies the EigenSolverType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElectricType`
+            - Specifies the Electric Physics Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElectrostaticForce`
+            - Specifies the ElectrostaticForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementControl`
+            - Specifies the ElementControl.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementControlsNormalStiffnessType`
+            - Specifies the ElementControlsNormalStiffnessType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementControlsStatus`
+            - Specifies the ElementControlsStatus.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementMidsideNodesType`
+            - Specifies the ElementMidsideNodesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementMorphingType`
+            - Specifies the ElementMorphingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementOrder`
+            - Specifies the ElementOrder.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementOrientationAxisType`
+            - Specifies the ElementOrientationAxisType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ElementOrientationGuide`
+            - Specifies the ElementOrientationGuide.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EnclosureType`
+            - Specifies the EnclosureType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.EquationSolverType`
+            - Specifies the EquationSolverType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExcitationType`
+            - Specifies the ExcitationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExclusionParticipantType`
+            - Specifies the ExclusionParticipantType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExclusionType`
+            - Specifies the ExclusionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExpandResultFrom`
+            - Specifies the ExpandResultFrom.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExpandResultsSubType`
+            - Specifies the ExpandResultsSubType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExportTopologyFileOption`
+            - Specifies the ExportTopologyFileOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalEnhancedModelType`
+            - Specifies the ExternalEnhancedModelType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalLoadApplicationType`
+            - Specifies the ExternalLoadApplicationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalLoadDefineActiveSequenceBy`
+            - Specifies the ExternalLoadDefineActiveSequenceBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplacementType`
+            - Specifies the ExternalLoadDisplacementType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplayComponentType`
+            - Specifies the ExternalLoadDisplayComponentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplayDataType`
+            - Specifies the ExternalLoadDisplayDataType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ExtrudeBy`
+            - To specify the method of extrusion. The available options are Use Coordinate System, Face Normal and Face Normal (Reversed).
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FEConnectionDisplay`
+            - Specifies the FEConnectionDisplay.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FEConnectionDisplayType`
+            - Specifies the FEConnectionDisplayType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FEConnectionLineColor`
+            - Specifies the FEConnectionLineColor.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FEConnectionLineThicknessType`
+            - Specifies the FEConnectionLineThicknessType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FaceMeshingMethod`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FaceType`
+            - Specifies the FaceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FarFieldMicrophoneDefinitionMethodType`
+            - Specifies the FarFieldMicrophoneDefinitionMethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FarFieldRadiationSurfaceType`
+            - Specifies the FarFieldRadiationSurfaceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueAnalysisType`
+            - Specifies the Fatigue Analysis Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueFrequencySelection`
+            - Specifies the EnclosureType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueLoadType`
+            - Specifies the FatigueLoadType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueSensitivityType`
+            - Specifies the RadiationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueStressComponentType`
+            - Specifies the Fatigue Stress Component Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueToolAnalysisType`
+            - Specifies the FatigueToolAnalysisType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueToolMethod`
+            - Specifies the FatigueToolMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FatigueToolResultsInputType`
+            - Specifies the FatigueToolResultsInputType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FeatureSuppressMethod`
+            - To select the method of FeatureSuppress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FilterType`
+            - Specifies the FilterType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FittingMethodType`
+            - Specifies the FittingMethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FixedOrFree`
+            - Specifies the FixedOrFree.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FluentExportMeshType`
+            - Specifies the Fluent Export Mesh Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FluidBehavior`
+            - Specifies the FluidBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FluidDiscretizationType`
+            - Specifies the Fluid Discretization Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ForceComponentSelectionType`
+            - Specifies the ForceComponentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FormulationType`
+            - Specifies the FormulationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FractureAffectedZone`
+            - Specifies the FractureAffectedZone.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FractureSIFSProbeSubType`
+            - Specifies the FractureSIFSProbeSubType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FractureToolScopeType`
+            - Specifies the FractureToolScopeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FrequencyRangeType`
+            - Specifies the Selected Frequency Range Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FrequencyReductionType`
+            - Specifies the FrequencyReductionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FrequencySpacingType`
+            - Specifies the FrequencySpacingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.FutureIntentType`
+            - Specifies the FutureIntentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GAPDirectionType`
+            - Specifies the GAPDirectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GPUAccelerationDevicesType`
+            - Specifies the GPUAccelerationDevicesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GapDefinedBy`
+            - Specifies the GapDefinedBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GapDensityType`
+            - Specifies the GapDensityType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GasketResultType`
+            - Specifies the GasketResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeneralMiscellaneousOptionType`
+            - Specifies the GeneralMiscellaneousOptionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryDefineByType`
+            - Specifies the GeometryDefineByType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryDimensionType`
+            - Specifies the GeometryDimensionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryType`
+            - Specifies the GeometryType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphControlsXAxis`
+            - Specifies the GraphControlsXAxis.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.Graphics3DExportFormat`
+            - Specifies the 3D Format.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsAnimationExportFormat`
+            - Specifies the Animation Export File Format.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsBackgroundType`
+            - Specifies the Graphics Image Background Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsCaptureType`
+            - Specifies the Graphics Image Capture Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsImageExportFormat`
+            - Specifies the 2D Image Format.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsResolutionType`
+            - Specifies the Graphics Image Resolution Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GraphicsViewportsExportBorderStyle`
+            - Specifies which borders to add, if any, to the images produced by MechanicalGraphicsWrapper.ExportViewports.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GravityOrientationType`
+            - Specifies the GravityOrientationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GrowElbowElementsBy`
+            - Specifies the GrowElbowElementsBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HarmonicMSUPStorage`
+            - Specifies the HarmonicMSUPStorage.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HarmonicMethod`
+            - Specifies the HarmonicMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HarmonicMultiStepType`
+            - Specifies the HarmonicMultiStepType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HarmonicVariationalTechnology`
+            - Specifies the HarmonicVariationalTechnology.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HexIntegrationType`
+            - Specifies the HexIntegrationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HourglassDampingType`
+            - Specifies the HourglassDampingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.HyperbolicProjectionType`
+            - Specifies the HyperbolicProjectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ICEMCFDBehavior`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ImportParameterType`
+            - Specifies the MethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ImportedCondensedPartStatus`
+            - Specifies the ImportedCondensedPartStatus.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ImportedLoadType`
+            - Specifies the ImportedLoadType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.IncidentWaveLocation`
+            - Specifies the IncidentWaveLocation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InitialClearanceType`
+            - Specifies the InitialClearanceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InitialConditionsType`
+            - Specifies the InitialConditionsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InitialTemperatureType`
+            - Specifies the InitialTemperatureType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InitializationModifierType`
+            - Specifies the InitializationModifierType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InterpolationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.IterationOptions`
+            - Specifies the IterationOptions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointConditionType`
+            - Specifies the Joint Condition Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointFormulation`
+            - Specifies the JointFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointFrictionType`
+            - Specifies the JointFrictionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointGeneralPrimitiveType`
+            - Specifies the JointGeneralPrimitiveType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointInitialPosition`
+            - Specifies the JointInitialPosition.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointRotationDOFType`
+            - Specifies the JointRotationDOFType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointScopingType`
+            - Specifies the JointScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointSolverElementType`
+            - Specifies the JointSolverElementType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointStopType`
+            - Specifies the JointStopType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.JointType`
+            - Specifies the JointType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.KinematicDOF`
+            - Specifies the KinematicDOF.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.KrigingCorrFuncType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.KrigingPolynomType`
+            - Represents the various types of Polynomial which combines with Kriging model.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LatticeType`
+            - Specifies the LatticeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LegendColorSchemeType`
+            - Specifies the Legend Color Scheme type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LegendOrientationType`
+            - Specifies the Legend Orientation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LegendRangeType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LifeUnitsType`
+            - Specifies the Life Units Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LimitBCDirection`
+            - Specifies the LimitBCDirection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LineLineContactDetectionType`
+            - Specifies the LineLineContactDetectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LinePressureResultBasedOnType`
+            - Specifies the LinePressureResultBasedOnType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LineSearchType`
+            - Specifies the LineSearchType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.Linearized2DBehavior`
+            - Specifies the Linearized2DBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LinearizedSubtype`
+            - Specifies the LinearizedSubtype.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadAppliedBy`
+            - Specifies the LoadAppliedBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadBehavior`
+            - Specifies the LoadBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadCombinationType`
+            - Specifies the Load Combination type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadDefineBy`
+            - Specifies the LoadDefineBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadGroupingType`
+            - Specifies the LoadGroupingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVariableVariationType`
+            - Specifies the LoadVariableVariationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVariationSubOption`
+            - Specifies the LoadVariationSubOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVariationType`
+            - Specifies the LoadVariationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVectorAssignment`
+            - Specifies the LoadVectorAssignment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadedArea`
+            - Specifies the LoadedArea.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadingApplicationType`
+            - Specifies the LoadingApplicationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LocationDefinitionMethod`
+            - Specifies the LocationDefinitionMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LowReducedFrequencyModelType`
+            - Specifies the LowReducedFrequencyModelType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MPIType`
+            - Specifies the MPIType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ManuMemberSizeControlledType`
+            - Specifies the ManuMemberSizeControlledType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ManualContactTreatmentType`
+            - Specifies the ManualContactTreatmentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ManufacturingConstraintSubtype`
+            - Specifies the ManufacturingConstraintSubtype.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingAlgorithm`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingControlType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingInterpolationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingIsolineLineType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingIsolineThicknessType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingMethod`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingOutsideOption`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingValidationDisplayOption`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingValidationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MappingVariableType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MaterialPolarizationDirection`
+            - Specifies the MaterialPolarizationDirection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeanStressTheoryType`
+            - Specifies the EnclosureType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshControlGroupRigidBodyBehaviorType`
+            - Specifies the MeshControlGroupRigidBodyBehaviorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshControlGroupRigidBodyFaceMeshType`
+            - Specifies the MeshControlGroupRigidBodyFaceMeshType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshControlPinchGeomtryType`
+            - Specifies the MeshControlPinchGeomtryType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshDisplayStyle`
+            - Specifies the MeshDisplayStyle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshElementShape`
+            - Defines the Mesh Element Types
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshFlowControlMethod`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshInflationElementType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshMethodAlgorithm`
+            - Specifies the MeshMethodAlgorithm.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshMetricType`
+            - Specifies the MeshMetricType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshNodeType`
+            - Specifies the MeshNodeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshPhysicsPreferenceType`
+            - Specifies the Mesh Physics Preference Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshRestartControlsType`
+            - Specifies the MeshRestartControlsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshRestartRetainFilesType`
+            - Specifies the MeshRestartRetainFilesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshRestartSaveAtLoadStep`
+            - Specifies the MeshRestartSaveAtLoadStep.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshRestartSaveAtSubstep`
+            - Specifies the MeshRestartSaveAtSubstep.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshSolverPreferenceType`
+            - Specifies the Mesh Solver Preference Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshSourceType`
+            - Specifies the MeshSourceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MessageSeverityType`
+            - Specifies the Message Severity Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MethodMeshType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MethodType`
+            - Specifies the MethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MinimumOrMaximum`
+            - Specifies the MinimumOrMaximum.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModalFrequencyRangeType`
+            - Specifies the ModalFrequencyRangeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModeSelectionMethod`
+            - Specifies the ModeSelectionMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.Model2DBehavior`
+            - Specifies the Model2DBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModelColoring`
+            - Specifies the Model display coloring.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModelDisplay`
+            - Specifies the Model display options.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModelImportUnitSystemType`
+            - To select the Unit System Type for the Model Import File being imported.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModelType`
+            - Specifies the ModelType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModesCombinationType`
+            - Specifies the ModesCombinationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MomentsAtSummationPointType`
+            - Specifies the Moments at summation point type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MultiOptimTypeStrategyType`
+            - Specifies the MultiOptimTypeStrategyType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MultipleNodeType`
+            - Specifies the MultipleNodeType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NLADControlProjectToGeometry`
+            - Specifies the NLADControlProjectToGeometry.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator`
+            - Specifies the Worksheet Enumeration Wrappers.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NewtonRaphsonType`
+            - Specifies the NewtonRaphsonType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NodalPlanesVisible`
+            - Specifies the NodalPlanesVisible.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NodeAndElementRenumberingMethodType`
+            - To select the method of Node And Element Renumbering under the Model Import Object.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NodeMergeToleranceMethod`
+            - To select the method of AutoNodeMove under PCTet.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NodeMoveInformationType`
+            - Specifies the NodeMoveInformationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NodeSelection`
+            - Specifies the NodeSelection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonCyclicLoadingType`
+            - Specifies the NonCyclicLoadingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonLinearFormulationType`
+            - Specifies the NonLinearFormulationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonLinearValueType`
+            - Specifies the NonLinearValueType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityControlsRefinementAlgorithmType`
+            - Specifies the NonlinearAdaptivityControlsRefinementAlgorithmType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityControlsRemeshingGradientType`
+            - Specifies the NonlinearAdaptivityControlsRemeshingGradientType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityCriterionType`
+            - Specifies the NonlinearAdaptivityCriterionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityOptionType`
+            - Specifies the NonlinearAdaptivityOptionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityTimeRange`
+            - Specifies the NonlinearAdaptivityTimeRange.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityUpdateType`
+            - Specifies the NonlinearAdaptivityUpdateType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.NormalOrientationType`
+            - Specifies the NormalOrientationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ObjectState`
+            - Specifies the Object State type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ObjectiveType`
+            - Specifies the Objective Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OnDemandExpansionType`
+            - Specifies the OnDemandExpansionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OptimizationResponseConstraintComponentType`
+            - Specifies the OptimizationResponseConstraintComponentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OptimizationSolverType`
+            - Specifies the OptimizationSolverType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OptimizationType`
+            - Specifies the OptimizationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.OutputControlsNodalForcesType`
+            - Specifies the OutputControlsNodalForcesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PFactorResultType`
+            - Specifies the PFactorResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PMLOptions`
+            - Specifies the PMLOptions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PSDBoundaryConditionSelectionType`
+            - Specifies the PSDBoundaryConditionSelectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PanelsToDisplayType`
+            - Specifies the PanelsToDisplayType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PartTransformationDefinitionType`
+            - Specifies the PartTransformationDefinitionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PassFailResult`
+            - Specifies the PassFailResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PatchIndependentDefineType`
+            - Specifies the PatchIndependentDefineType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PathScopingType`
+            - Specifies the PathScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PeriodicApplyTo`
+            - Specifies the PeriodicApplyTo.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PeriodicRegionType`
+            - Specifies the PeriodicRegionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PeriodicityDirectionType`
+            - Specifies the PeriodicityDirectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PhaseType`
+            - Specifies the Prototype Phase Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PhysicsType`
+            - Specifies the PhysicsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PilotNodeScopingType`
+            - Specifies the PilotNodeScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PinBehavior`
+            - Specifies the PinBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PinNature`
+            - FMI standards
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PipeLoadingType`
+            - Specifies the PipeLoadingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PolyflowExportUnit`
+            - Specifies the Polyflow Export Unit Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PortAttribution`
+            - Specifies the PortAttribution.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PortBehavior`
+            - Specifies the PortBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PortPosition`
+            - Specifies the PortPosition.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PreStressContactStatus`
+            - Specifies the PreStressContactStatus.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PreStressLoadControl`
+            - Specifies the PreStressLoadControl.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PreStressMode`
+            - Specifies the PreStressMode.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PreStressStateType`
+            - Specifies the PreStressStateType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PressureAtZeroPenetrationType`
+            - Specifies the PressureAtZeroPenetrationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PressureInitializationType`
+            - Specifies the PressureInitializationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ProbeDisplayFilter`
+            - Specifies the ProbeDisplayFilter.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ProbeExtractionType`
+            - Specifies the ProbeExtractionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ProbeResultType`
+            - Specifies the ProbeResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PrototypeDisplayStyleType`
+            - Specifies the PrototypeDisplayStyleType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PrototypeLinkBehavior`
+            - Specifies the PrototypeLinkBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PrototypeModelType`
+            - Specifies the PrototypeModelType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ProximitySFSourcesType`
+            - Specifies the ProximitySFSourcesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PullMethod`
+            - To select the method of Pull. There are three methods. They are Extrude, Revolve and Surface Coating.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PullOutConstraintSubtype`
+            - Specifies the PullOutConstraintSubtype.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PullOutDirectionType`
+            - Specifies the PullOutDirectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PythonCodeTargetCallback`
+            - Specifies the PythonCodeTargetCallback.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RBDCorrectionType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RBDDoStaticAnalysisType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RBDProgramControlType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RBDTimeIntegrationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RSBoundaryConditionSelectionType`
+            - Specifies the RSBoundaryConditionSelectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RadiationType`
+            - Specifies the RadiationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RadiositySolverType`
+            - Specifies the RadiositySolverType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RadiosityViewFactorType`
+            - Specifies the RadiosityViewFactorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RadiusOfReferenceSphereDefineBy`
+            - Specifies the RadiusOfReferenceSphereDefineBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RandomSamplingType`
+            - Specifies the RandomSamplingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ReactionForceCriteriaType`
+            - Specifies the ReactionForceCriteriaType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ReferenceFrameType`
+            - Specifies the ReferenceFrameType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ReflectionCoefficientsType`
+            - Specifies the ReflectionCoefficientsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ReinforcingStressState`
+            - Specifies the ReinforcingStressState.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RemoteApplicationType`
+            - Specifies the RemoteApplicationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RemotePointDOFSelectionType`
+            - Specifies the RemotePointDOFSelectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RemotePointFormulation`
+            - Specifies the RemotePointFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RemotePointUpdateOptions`
+            - Specifies the RemotePointUpdateOptions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResponseConstraintDefineBy`
+            - Specifies the ResponseConstraintDefineBy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResponseConstraintType`
+            - Specifies the ResponseConstraintType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RestartControlsType`
+            - Specifies the RestartControlsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RestartRetainFilesType`
+            - Specifies the RestartRetainFilesType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RestartSaveAtLoadStep`
+            - Specifies the RestartSaveAtLoadStep.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RestartSaveAtSubstep`
+            - Specifies the RestartSaveAtSubstep.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RestartType`
+            - Specifies the RestartType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultAnimationRangeType`
+            - Specifies the Result Animation Range Type
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultAveragingType`
+            - Specifies the ResultAveragingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultFileCompressionType`
+            - Specifies the ResultFileCompressionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultFileItemType`
+            - Specifies the ResultFileItemType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultRelativityType`
+            - Specifies the ResultRelativityType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ResultType`
+            - Specifies the ResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RigidBodyTransformationType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RigidResponseEffectType`
+            - Specifies the RigidResponseEffectType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RobustFrequenciesReductionType`
+            - Specifies the RobustFrequenciesReductionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.RotationPlane`
+            - Specifies the RotationPlane.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.STLSupportViewType`
+            - Specifies the STLSupportViewType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SafetyLimitType`
+            - Specifies the SafetyLimitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SafetyTheoryType`
+            - Specifies the Stress Safety Theory Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ScaleFactorType`
+            - Specifies the ScaleFactorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ScatteredFieldFormulation`
+            - Specifies the ScatteredFieldFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ScatteringOutputType`
+            - Specifies the ScatteringOutputType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SecondaryImportPrefType`
+            - Specifies the SecondaryImportPrefType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SectionPlaneCappingType`
+            - Specifies the Section Plane Capping Style
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SectionPlaneType`
+            - Specifies the Section Plane type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SelectionActionType`
+            - Specifies the selction action type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SelectionCriterionType`
+            - Specifies the selection criterion type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SelectionOperatorType`
+            - Specifies the selection operator type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SelectionType`
+            - Specifies the selection type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SendAs`
+            - Specifies the SendAs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SeqSelectionMode`
+            - Specifies the SeqSelectionMode.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SequenceSelectionType`
+            - Specifies the SequenceSelectionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SetDriverStyle`
+            - Specifies the SetDriverStyle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShearMomentDiagramOrientationType`
+            - Specifies the ShearMomentDiagramOrientationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShearMomentType`
+            - Specifies the ShearMomentType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShearOrientationType`
+            - Specifies the ShearOrientationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellBodyDimension`
+            - Specifies the ShellBodyDimension.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellElementStiffnessOption`
+            - Specifies the ShellElementStiffnessOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellFaceType`
+            - Specifies the ShellFaceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellInertiaUpdate`
+            - Specifies the ShellInertiaUpdate.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellMBPOrientationType`
+            - Specifies the ShellMBPOrientationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellMBPType`
+            - Specifies the ShellMBPType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellOffsetType`
+            - Specifies the ShellOffsetType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ShellThicknessUpdate`
+            - Specifies the ShellThicknessUpdate.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SizingBehavior`
+            - Specifies the SizingBehaviorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SizingType`
+            - Specifies the SizingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SlidingContactType`
+            - Specifies the SlidingContactType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SnapType`
+            - Specifies the SnapType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolutionCombinationDriverStyle`
+            - Specifies the SolutionCombinationDriverStyle.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolutionCombinationWorksheetType`
+            - Specifies the SolutionCombinationWorksheetType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolutionOutputType`
+            - Specifies the SolutionOutputType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolutionStatusType`
+            - Specifies the SolutionStatusType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolveBehaviourType`
+            - Specifies the SolveBehaviourType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolverControlsIncludeNegativeLoadMultiplier`
+            - Specifies the SolverControlsIncludeNegativeLoadMultiplier.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolverControlsModeReuse`
+            - Specifies the SolverControlsModeReuse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolverPivotChecking`
+            - Specifies the SolverPivotChecking.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolverType`
+            - Specifies the SolverType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SolverUnitsControlType`
+            - Specifies the SolverUnitsControlType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SortingType`
+            - Specifies the Sorting type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SourceConductorType`
+            - Specifies the SourceConductorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SourceDimension`
+            - Specifies the SourceDimension.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SourceTimeDefinitionType`
+            - Specifies the SourceTimeDefinitionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpacingOptionType`
+            - Specifies the SpacingOptionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpatialRadiationType`
+            - Specifies the SpatialRadiationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpatialReductionMethodType`
+            - Specifies the SpatialReductionMethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpatialReductionType`
+            - Specifies the SpatialReductionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpectrumType`
+            - Specifies the SpectrumType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpinSofteningType`
+            - Specifies the SpinSofteningType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpotWeldTypes`
+            - Specifies the SpotWeldTypes.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringBehavior`
+            - Specifies the SpringBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringPreloadType`
+            - Specifies the SpringPreloadType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringResultType`
+            - Specifies the SpringResultType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringScopingType`
+            - Specifies the SpringScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringType`
+            - Specifies the SpringType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SpringsStiffnessType`
+            - Specifies the SpringsStiffnessType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StabilizationFirstSubstepOption`
+            - Specifies the StabilizationFirstSubstepOption.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StabilizationMethod`
+            - Specifies the StabilizationMethod.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StabilizationType`
+            - Specifies the StabilizationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StackerMethodMeshType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StageBehavior`
+            - Specifies the StageBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StepVarying`
+            - Specifies the StepVarying.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StiffnessBehavior`
+            - Specifies the StiffnessBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StiffnessMethodType`
+            - Specifies the StiffnessMethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StopCriterion`
+            - Specifies the StopCriterion.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StoreModalResult`
+            - Specifies the StoreModalResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StressStrainType`
+            - Specifies the StressStrainType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SubScopingDefineByType`
+            - Specifies the SubScopingDefineByType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SurfaceCoatingStiffnessBehavior`
+            - Specifies the SurfaceCoatingStiffnessBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SweepElementOptionType`
+            - Specifies the SweepElementOptionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SymmetryBehavior`
+            - Specifies the SymmetryBehavior.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SymmetryBoundaryDOFOrientation`
+            - Specifies the SymmetryBoundaryDOFOrientation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SymmetryNormalType`
+            - Specifies the SymmetryNormalType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SymmetryRegionType`
+            - Specifies the SymmetryRegionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TargetCorrection`
+            - Specifies the TargetCorrection.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TargetOrientation`
+            - Specifies the TargetOrientation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TetIntegrationType`
+            - Specifies the TetIntegrationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ThermalPointMassBehavior`
+            - Specifies the Behavior for ThermalPointMass.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ThermalStrainType`
+            - Specifies the ThermalStrainType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ThermoelasticDampingType`
+            - Specifies the ThermoelasticDampingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ThroughThicknessBendingStress`
+            - Specifies the ThroughThicknessBendingStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TimeHistoryDisplayType`
+            - Specifies the Time History Display Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TimePointsOptions`
+            - Specifies the TimePointsOptions.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TimeStepDefineByType`
+            - Specifies the TimeStepDefineByType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ToleranceType`
+            - Specifies the ToleranceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoBoundType`
+            - Specifies the TopoBoundType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoConstraintStressType`
+            - Specifies the TopoConstraintStressType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoConstraintType`
+            - Specifies the TopoConstraintType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoEnvironmentType`
+            - Specifies the Topology Environment Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoObjectiveFormulation`
+            - Specifies the TopoObjectiveFormulation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoOptimizationDensityFilter`
+            - Specifies the TopoOptimizationDensityFilter.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoOptimizationExportDesignProperties`
+            - Specifies the TopoOptimizationExportDesignProperties.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoOptimizationExportDesignPropertiesFileFormat`
+            - Specifies the TopoOptimizationExportDesignPropertiesFileFormat.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoOptimizationOutputLog`
+            - Specifies the TopoOptimizationOutputLog.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoPropertyControlType`
+            - Specifies the TopoPropertyControlType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopologyOptimizationResultShowType`
+            - Specifies the Topology Optimization Result Show Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TotalOrDirectional`
+            - Specifies the TotalOrDirectional.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TransferAdmittanceModelType`
+            - Specifies the TransferAdmittanceModelType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TransformationType`
+            - Specifies the TransformationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TransientApplicationType`
+            - Specifies the TransientApplicationType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TransientDampingType`
+            - Specifies the TransientDampingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TreeFilterObjectClass`
+            - Specifies the TreeFilterObjectClass.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TreeFilterObjectState`
+            - Specifies the TreeFilterObjectState.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TreeFilterScopingType`
+            - Specifies the TreeFilterScopingType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TriangleReduction`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UnitCategoryType`
+            - Specifies the WB Unit Category Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UnitSystemIDType`
+            - Specifies the Unit System ID Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UpdateContactStiffness`
+            - Specifies the UpdateContactStiffness.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UseExistingModesymFile`
+            - Specifies the UseExistingModesymFile.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UserUnitSystemType`
+            - Specifies the UserUnitSystemType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VectorDisplayType`
+            - Specifies the VectorDisplayType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VectorLengthType`
+            - Specifies the VectorLengthType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VectorReductionReferenceType`
+            - Specifies the VectorReductionReferenceType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VectorReductionType`
+            - Specifies the VectorReductionType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ViewOrientationType`
+            - Specifies the View Orientation type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VirtualCellClassType`
+            - Specifies the VirtualCellClassType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VirtualCellGroupAutomaticBehaviorType`
+            - Specifies the VirtualCellGroupAutomaticBehaviorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VirtualCellGroupMethodType`
+            - Specifies the VirtualCellGroupMethodType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VirtualCellGroupRepairBehaviorType`
+            - Specifies the VirtualCellGroupRepairBehaviorType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.VisibilityType`
+            - Specifies the Tree Graphic Filter type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WBUnitSystemType`
+            - Specifies the WBUnitSystemType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WaterfallDisplaySelectionMode`
+            - Specifies the Selection Mode Type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WaveType`
+            - Specifies the WaveType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WeakSpringsType`
+            - Specifies the WeakSpringsType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WeightingType`
+            - Create a collection of name/value pairs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WindowType`
+            - Specifies the WindowType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.XAxisValues`
+            - Specifies the XAxisValues.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.YesNoProgrammedControlled`
+            - Specifies the YesNoProgrammedControlled.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.YesNoType`
+            - Specifies the YesNoType.
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> ExternalModel</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalModel/index>
+    <span class="nf nf-md-package"></span> GeometryImportPreference</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryImportPreference/index>
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> AMBaseRemovalType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMBaseRemovalType>
+    <span class="nf nf-cod-symbol_enum"></span> AMBuildMachineType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMBuildMachineType>
+    <span class="nf nf-cod-symbol_enum"></span> AMCooldownTimeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMCooldownTimeType>
+    <span class="nf nf-cod-symbol_enum"></span> AMHeatingDurationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMHeatingDurationType>
+    <span class="nf nf-cod-symbol_enum"></span> AMHeatingMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMHeatingMethod>
+    <span class="nf nf-cod-symbol_enum"></span> AMInherentStrainDefinition</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMInherentStrainDefinition>
+    <span class="nf nf-cod-symbol_enum"></span> AMLayerHeightType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMLayerHeightType>
+    <span class="nf nf-cod-symbol_enum"></span> AMMachineLearningModel</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMMachineLearningModel>
+    <span class="nf nf-cod-symbol_enum"></span> AMMultiplierEntryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMMultiplierEntryType>
+    <span class="nf nf-cod-symbol_enum"></span> AMProcessSettingsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMProcessSettingsType>
+    <span class="nf nf-cod-symbol_enum"></span> AMProcessSimulationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMProcessSimulationType>
+    <span class="nf nf-cod-symbol_enum"></span> AMProcessStepType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMProcessStepType>
+    <span class="nf nf-cod-symbol_enum"></span> AMProcessType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMProcessType>
+    <span class="nf nf-cod-symbol_enum"></span> AMReferenceTemperatureType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMReferenceTemperatureType>
+    <span class="nf nf-cod-symbol_enum"></span> AMRelaxationTemperatureType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMRelaxationTemperatureType>
+    <span class="nf nf-cod-symbol_enum"></span> AMScanPatternDefinition</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMScanPatternDefinition>
+    <span class="nf nf-cod-symbol_enum"></span> AMStlSource</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMStlSource>
+    <span class="nf nf-cod-symbol_enum"></span> AMSupportGroupOutputType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMSupportGroupOutputType>
+    <span class="nf nf-cod-symbol_enum"></span> AMSupportSTLType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMSupportSTLType>
+    <span class="nf nf-cod-symbol_enum"></span> AMSupportType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMSupportType>
+    <span class="nf nf-cod-symbol_enum"></span> AMThermalStrainMaterialModel</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMThermalStrainMaterialModel>
+    <span class="nf nf-cod-symbol_enum"></span> AMThermalStrainMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AMThermalStrainMethod>
+    <span class="nf nf-cod-symbol_enum"></span> ActiveOrInactive</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ActiveOrInactive>
+    <span class="nf nf-cod-symbol_enum"></span> AggressiveRemeshingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AggressiveRemeshingType>
+    <span class="nf nf-cod-symbol_enum"></span> AlgorithmType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AlgorithmType>
+    <span class="nf nf-cod-symbol_enum"></span> AnalysisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AnalysisType>
+    <span class="nf nf-cod-symbol_enum"></span> AnalysisTypeDimensionEnum</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AnalysisTypeDimensionEnum>
+    <span class="nf nf-cod-symbol_enum"></span> ApplicationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ApplicationType>
+    <span class="nf nf-cod-symbol_enum"></span> ArtificiallyMatchedLayers</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ArtificiallyMatchedLayers>
+    <span class="nf nf-cod-symbol_enum"></span> AutoDetectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AutoDetectionType>
+    <span class="nf nf-cod-symbol_enum"></span> AutomaticNodeMovementMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AutomaticNodeMovementMethod>
+    <span class="nf nf-cod-symbol_enum"></span> AutomaticOrManual</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AutomaticOrManual>
+    <span class="nf nf-cod-symbol_enum"></span> AutomaticTimeStepping</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AutomaticTimeStepping>
+    <span class="nf nf-cod-symbol_enum"></span> AxisSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/AxisSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> BaseResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BaseResultType>
+    <span class="nf nf-cod-symbol_enum"></span> BeamBeamContactDetectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BeamBeamContactDetectionType>
+    <span class="nf nf-cod-symbol_enum"></span> BeamBeamModel</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BeamBeamModel>
+    <span class="nf nf-cod-symbol_enum"></span> BeamEndReleaseBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BeamEndReleaseBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> BeamOffsetType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BeamOffsetType>
+    <span class="nf nf-cod-symbol_enum"></span> BeamSolutionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BeamSolutionType>
+    <span class="nf nf-cod-symbol_enum"></span> BeamToolStressResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BeamToolStressResultType>
+    <span class="nf nf-cod-symbol_enum"></span> BodyInteractionFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BodyInteractionFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> BodyTreatment</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BodyTreatment>
+    <span class="nf nf-cod-symbol_enum"></span> BodyType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BodyType>
+    <span class="nf nf-cod-symbol_enum"></span> BoltLoadDefineBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BoltLoadDefineBy>
+    <span class="nf nf-cod-symbol_enum"></span> BoltResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BoltResultType>
+    <span class="nf nf-cod-symbol_enum"></span> BondedBreakableType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BondedBreakableType>
+    <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionAlongFiber</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BoundaryConditionAlongFiber>
+    <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionForRotation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BoundaryConditionForRotation>
+    <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BoundaryConditionSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BoundaryConditionType>
+    <span class="nf nf-cod-symbol_enum"></span> BrickIntegrationScheme</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/BrickIntegrationScheme>
+    <span class="nf nf-cod-symbol_enum"></span> CacheResultsInMemory</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CacheResultsInMemory>
+    <span class="nf nf-cod-symbol_enum"></span> CalculateParticipationFactorResult</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CalculateParticipationFactorResult>
+    <span class="nf nf-cod-symbol_enum"></span> CameraAxisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CameraAxisType>
+    <span class="nf nf-cod-symbol_enum"></span> CampbellDiagramRotationalVelocitySelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CampbellDiagramRotationalVelocitySelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> ChartAxisScaleType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartAxisScaleType>
+    <span class="nf nf-cod-symbol_enum"></span> ChartDimensions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartDimensions>
+    <span class="nf nf-cod-symbol_enum"></span> ChartGridlines</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartGridlines>
+    <span class="nf nf-cod-symbol_enum"></span> ChartModalType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartModalType>
+    <span class="nf nf-cod-symbol_enum"></span> ChartPlotStyle</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartPlotStyle>
+    <span class="nf nf-cod-symbol_enum"></span> ChartReportType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartReportType>
+    <span class="nf nf-cod-symbol_enum"></span> ChartResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartResultType>
+    <span class="nf nf-cod-symbol_enum"></span> ChartScale</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ChartScale>
+    <span class="nf nf-cod-symbol_enum"></span> CombineRestartFilesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CombineRestartFilesType>
+    <span class="nf nf-cod-symbol_enum"></span> CommandEditorTarget</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CommandEditorTarget>
+    <span class="nf nf-cod-symbol_enum"></span> ComparePartsOnUpdateType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ComparePartsOnUpdateType>
+    <span class="nf nf-cod-symbol_enum"></span> ComparePartsToleranceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ComparePartsToleranceType>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartCMSAttachmentMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartCMSAttachmentMethod>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartExpansionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartExpansionType>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartFileFormat</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartFileFormat>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartInterfaceMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartInterfaceMethod>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartInterfaceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartInterfaceType>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartKeepFilesFor</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartKeepFilesFor>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartLumpedMassFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartLumpedMassFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartPhysics</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartPhysics>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartPointMassTreatment</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartPointMassTreatment>
+    <span class="nf nf-cod-symbol_enum"></span> CondensedPartReductionMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CondensedPartReductionMethod>
+    <span class="nf nf-cod-symbol_enum"></span> ConnectionCreationMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConnectionCreationMethod>
+    <span class="nf nf-cod-symbol_enum"></span> ConnectionOptions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConnectionOptions>
+    <span class="nf nf-cod-symbol_enum"></span> ConnectionScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConnectionScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> ConstantDampingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConstantDampingType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> ContactBoltThreadHand</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactBoltThreadHand>
+    <span class="nf nf-cod-symbol_enum"></span> ContactBoltThreadType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactBoltThreadType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactConstraintType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactConstraintType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactCorrection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactCorrection>
+    <span class="nf nf-cod-symbol_enum"></span> ContactDetection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactDetection>
+    <span class="nf nf-cod-symbol_enum"></span> ContactDetectionPoint</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactDetectionPoint>
+    <span class="nf nf-cod-symbol_enum"></span> ContactEdgeEdgeOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactEdgeEdgeOption>
+    <span class="nf nf-cod-symbol_enum"></span> ContactElasticSlipToleranceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactElasticSlipToleranceType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactFaceEdgeOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactFaceEdgeOption>
+    <span class="nf nf-cod-symbol_enum"></span> ContactFaceEdgePriority</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactFaceEdgePriority>
+    <span class="nf nf-cod-symbol_enum"></span> ContactForceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactForceType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> ContactGroupingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactGroupingType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactInitialEffect</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactInitialEffect>
+    <span class="nf nf-cod-symbol_enum"></span> ContactOrientation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactOrientation>
+    <span class="nf nf-cod-symbol_enum"></span> ContactPenetrationToleranceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactPenetrationToleranceType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactPinballType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactPinballType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactResultType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactSearchingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactSearchingType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactSideScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactSideScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactSmallSlidingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactSmallSlidingType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactSplitType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactSplitType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactSummaryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactSummaryType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactTimeStepControls</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactTimeStepControls>
+    <span class="nf nf-cod-symbol_enum"></span> ContactToleranceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactToleranceType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactTrimType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactTrimType>
+    <span class="nf nf-cod-symbol_enum"></span> ContactType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ContactType>
+    <span class="nf nf-cod-symbol_enum"></span> ConvectionTableSelection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConvectionTableSelection>
+    <span class="nf nf-cod-symbol_enum"></span> ConvergenceControlType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConvergenceControlType>
+    <span class="nf nf-cod-symbol_enum"></span> ConvergenceToleranceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConvergenceToleranceType>
+    <span class="nf nf-cod-symbol_enum"></span> ConvergenceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ConvergenceType>
+    <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemAlignmentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CoordinateSystemAlignmentType>
+    <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemAxisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CoordinateSystemAxisType>
+    <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CoordinateSystemBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CoordinateSystemType>
+    <span class="nf nf-cod-symbol_enum"></span> CoreResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CoreResultType>
+    <span class="nf nf-cod-symbol_enum"></span> CoriolisEffectType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CoriolisEffectType>
+    <span class="nf nf-cod-symbol_enum"></span> CouplingConditionDOFType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CouplingConditionDOFType>
+    <span class="nf nf-cod-symbol_enum"></span> CrackGrowthIncrementType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackGrowthIncrementType>
+    <span class="nf nf-cod-symbol_enum"></span> CrackGrowthMeshCoarsening</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackGrowthMeshCoarsening>
+    <span class="nf nf-cod-symbol_enum"></span> CrackGrowthMethodology</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackGrowthMethodology>
+    <span class="nf nf-cod-symbol_enum"></span> CrackGrowthOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackGrowthOption>
+    <span class="nf nf-cod-symbol_enum"></span> CrackMeshMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackMeshMethod>
+    <span class="nf nf-cod-symbol_enum"></span> CrackSelectionModeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackSelectionModeType>
+    <span class="nf nf-cod-symbol_enum"></span> CrackShapeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackShapeType>
+    <span class="nf nf-cod-symbol_enum"></span> CrackSourceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrackSourceType>
+    <span class="nf nf-cod-symbol_enum"></span> Creep</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/Creep>
+    <span class="nf nf-cod-symbol_enum"></span> CriterionFrequencyRangeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CriterionFrequencyRangeType>
+    <span class="nf nf-cod-symbol_enum"></span> CrossSectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CrossSectionType>
+    <span class="nf nf-cod-symbol_enum"></span> CyclicHarmonicIndex</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CyclicHarmonicIndex>
+    <span class="nf nf-cod-symbol_enum"></span> CylindricalFacesOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/CylindricalFacesOption>
+    <span class="nf nf-cod-symbol_enum"></span> DBWeightingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DBWeightingType>
+    <span class="nf nf-cod-symbol_enum"></span> DSCampbellAxisRange</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DSCampbellAxisRange>
+    <span class="nf nf-cod-symbol_enum"></span> DSCampbellYAxisDataType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DSCampbellYAxisDataType>
+    <span class="nf nf-cod-symbol_enum"></span> DSRBDContactDetection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DSRBDContactDetection>
+    <span class="nf nf-cod-symbol_enum"></span> DamageResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DamageResultType>
+    <span class="nf nf-cod-symbol_enum"></span> DampingDefineBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DampingDefineBy>
+    <span class="nf nf-cod-symbol_enum"></span> DampingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DampingType>
+    <span class="nf nf-cod-symbol_enum"></span> DataImportStatus</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DataImportStatus>
+    <span class="nf nf-cod-symbol_enum"></span> DataModelObjectCategory</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DataModelObjectCategory>
+    <span class="nf nf-cod-symbol_enum"></span> DataTypeOptions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DataTypeOptions>
+    <span class="nf nf-cod-symbol_enum"></span> DeformationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DeformationType>
+    <span class="nf nf-cod-symbol_enum"></span> DelaminationFailureCriteriaOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DelaminationFailureCriteriaOption>
+    <span class="nf nf-cod-symbol_enum"></span> DelaminationGenerationMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DelaminationGenerationMethod>
+    <span class="nf nf-cod-symbol_enum"></span> DelaminationMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DelaminationMethod>
+    <span class="nf nf-cod-symbol_enum"></span> DelaminationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DelaminationType>
+    <span class="nf nf-cod-symbol_enum"></span> DiagonalOrConsistent</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DiagonalOrConsistent>
+    <span class="nf nf-cod-symbol_enum"></span> DistributedMassInputType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DistributedMassInputType>
+    <span class="nf nf-cod-symbol_enum"></span> DpfEvaluationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DpfEvaluationType>
+    <span class="nf nf-cod-symbol_enum"></span> DropDirection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DropDirection>
+    <span class="nf nf-cod-symbol_enum"></span> DropTestDefineBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DropTestDefineBy>
+    <span class="nf nf-cod-symbol_enum"></span> DynamicRelaxationBehaviorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/DynamicRelaxationBehaviorType>
+    <span class="nf nf-cod-symbol_enum"></span> ECADFidelity</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ECADFidelity>
+    <span class="nf nf-cod-symbol_enum"></span> EXDADRConvergenceMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDADRConvergenceMethod>
+    <span class="nf nf-cod-symbol_enum"></span> EXDArtificialViscosityForShellsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDArtificialViscosityForShellsType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDAutomaticMassScalingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDAutomaticMassScalingType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDBeamSolutionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDBeamSolutionType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDCharZoneDimensionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDCharZoneDimensionType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDDensityUpdateType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDDensityUpdateType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDDetonationBurnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDDetonationBurnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDErosionOnGeomStrainType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDErosionOnGeomStrainType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDErosionOnMaterialFailureType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDErosionOnMaterialFailureType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDErosionOnMinElemTimestepType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDErosionOnMinElemTimestepType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDErosionRetainIntertiaType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDErosionRetainIntertiaType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerBoundaryDefType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerBoundaryDefType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerDomScopeDefType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerDomScopeDefType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerDomainType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerDomainType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerGradedDefinition</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerGradedDefinition>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerResolutionDefType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerResolutionDefType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerSizeDefType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerSizeDefType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDEulerTrackType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDEulerTrackType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDHexIntegrationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDHexIntegrationType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDHourglassDampingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDHourglassDampingType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDLinearViscosityExpansionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDLinearViscosityExpansionType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDLoadStepType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDLoadStepType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDOutputContactForcesOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDOutputContactForcesOnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDPreferenceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDPreferenceType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSPHNodeDensityCutoffOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSPHNodeDensityCutoffOption>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSavePrintSummaryOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSavePrintSummaryOnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSaveProbeDataOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSaveProbeDataOnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSaveRestartsOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSaveRestartsOnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSaveResultsOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSaveResultsOnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSaveUserEditOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSaveUserEditOnType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDShellInertiaUpdateType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDShellInertiaUpdateType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDShellThicknessUpdateType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDShellThicknessUpdateType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDShellWarpCorrectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDShellWarpCorrectionType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSolveUnitsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSolveUnitsType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDSolverPrecisionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDSolverPrecisionType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDStepawareOutputControlsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDStepawareOutputControlsType>
+    <span class="nf nf-cod-symbol_enum"></span> EXDTetPressureIntegrationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EXDTetPressureIntegrationType>
+    <span class="nf nf-cod-symbol_enum"></span> EdgeContactType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EdgeContactType>
+    <span class="nf nf-cod-symbol_enum"></span> EdgeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EdgeType>
+    <span class="nf nf-cod-symbol_enum"></span> EigenSolverType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EigenSolverType>
+    <span class="nf nf-cod-symbol_enum"></span> ElectricType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElectricType>
+    <span class="nf nf-cod-symbol_enum"></span> ElectrostaticForce</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElectrostaticForce>
+    <span class="nf nf-cod-symbol_enum"></span> ElementControl</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementControl>
+    <span class="nf nf-cod-symbol_enum"></span> ElementControlsNormalStiffnessType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementControlsNormalStiffnessType>
+    <span class="nf nf-cod-symbol_enum"></span> ElementControlsStatus</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementControlsStatus>
+    <span class="nf nf-cod-symbol_enum"></span> ElementMidsideNodesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementMidsideNodesType>
+    <span class="nf nf-cod-symbol_enum"></span> ElementMorphingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementMorphingType>
+    <span class="nf nf-cod-symbol_enum"></span> ElementOrder</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementOrder>
+    <span class="nf nf-cod-symbol_enum"></span> ElementOrientationAxisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementOrientationAxisType>
+    <span class="nf nf-cod-symbol_enum"></span> ElementOrientationGuide</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ElementOrientationGuide>
+    <span class="nf nf-cod-symbol_enum"></span> EnclosureType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EnclosureType>
+    <span class="nf nf-cod-symbol_enum"></span> EquationSolverType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/EquationSolverType>
+    <span class="nf nf-cod-symbol_enum"></span> ExcitationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExcitationType>
+    <span class="nf nf-cod-symbol_enum"></span> ExclusionParticipantType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExclusionParticipantType>
+    <span class="nf nf-cod-symbol_enum"></span> ExclusionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExclusionType>
+    <span class="nf nf-cod-symbol_enum"></span> ExpandResultFrom</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExpandResultFrom>
+    <span class="nf nf-cod-symbol_enum"></span> ExpandResultsSubType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExpandResultsSubType>
+    <span class="nf nf-cod-symbol_enum"></span> ExportTopologyFileOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExportTopologyFileOption>
+    <span class="nf nf-cod-symbol_enum"></span> ExternalEnhancedModelType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalEnhancedModelType>
+    <span class="nf nf-cod-symbol_enum"></span> ExternalLoadApplicationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalLoadApplicationType>
+    <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDefineActiveSequenceBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalLoadDefineActiveSequenceBy>
+    <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDisplacementType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalLoadDisplacementType>
+    <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDisplayComponentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalLoadDisplayComponentType>
+    <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDisplayDataType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExternalLoadDisplayDataType>
+    <span class="nf nf-cod-symbol_enum"></span> ExtrudeBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ExtrudeBy>
+    <span class="nf nf-cod-symbol_enum"></span> FEConnectionDisplay</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FEConnectionDisplay>
+    <span class="nf nf-cod-symbol_enum"></span> FEConnectionDisplayType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FEConnectionDisplayType>
+    <span class="nf nf-cod-symbol_enum"></span> FEConnectionLineColor</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FEConnectionLineColor>
+    <span class="nf nf-cod-symbol_enum"></span> FEConnectionLineThicknessType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FEConnectionLineThicknessType>
+    <span class="nf nf-cod-symbol_enum"></span> FaceMeshingMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FaceMeshingMethod>
+    <span class="nf nf-cod-symbol_enum"></span> FaceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FaceType>
+    <span class="nf nf-cod-symbol_enum"></span> FarFieldMicrophoneDefinitionMethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FarFieldMicrophoneDefinitionMethodType>
+    <span class="nf nf-cod-symbol_enum"></span> FarFieldRadiationSurfaceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FarFieldRadiationSurfaceType>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueAnalysisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueAnalysisType>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueFrequencySelection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueFrequencySelection>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueLoadType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueLoadType>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueSensitivityType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueSensitivityType>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueStressComponentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueStressComponentType>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueToolAnalysisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueToolAnalysisType>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueToolMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueToolMethod>
+    <span class="nf nf-cod-symbol_enum"></span> FatigueToolResultsInputType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FatigueToolResultsInputType>
+    <span class="nf nf-cod-symbol_enum"></span> FeatureSuppressMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FeatureSuppressMethod>
+    <span class="nf nf-cod-symbol_enum"></span> FilterType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FilterType>
+    <span class="nf nf-cod-symbol_enum"></span> FittingMethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FittingMethodType>
+    <span class="nf nf-cod-symbol_enum"></span> FixedOrFree</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FixedOrFree>
+    <span class="nf nf-cod-symbol_enum"></span> FluentExportMeshType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FluentExportMeshType>
+    <span class="nf nf-cod-symbol_enum"></span> FluidBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FluidBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> FluidDiscretizationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FluidDiscretizationType>
+    <span class="nf nf-cod-symbol_enum"></span> ForceComponentSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ForceComponentSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> FormulationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FormulationType>
+    <span class="nf nf-cod-symbol_enum"></span> FractureAffectedZone</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FractureAffectedZone>
+    <span class="nf nf-cod-symbol_enum"></span> FractureSIFSProbeSubType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FractureSIFSProbeSubType>
+    <span class="nf nf-cod-symbol_enum"></span> FractureToolScopeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FractureToolScopeType>
+    <span class="nf nf-cod-symbol_enum"></span> FrequencyRangeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FrequencyRangeType>
+    <span class="nf nf-cod-symbol_enum"></span> FrequencyReductionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FrequencyReductionType>
+    <span class="nf nf-cod-symbol_enum"></span> FrequencySpacingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FrequencySpacingType>
+    <span class="nf nf-cod-symbol_enum"></span> FutureIntentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/FutureIntentType>
+    <span class="nf nf-cod-symbol_enum"></span> GAPDirectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GAPDirectionType>
+    <span class="nf nf-cod-symbol_enum"></span> GPUAccelerationDevicesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GPUAccelerationDevicesType>
+    <span class="nf nf-cod-symbol_enum"></span> GapDefinedBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GapDefinedBy>
+    <span class="nf nf-cod-symbol_enum"></span> GapDensityType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GapDensityType>
+    <span class="nf nf-cod-symbol_enum"></span> GasketResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GasketResultType>
+    <span class="nf nf-cod-symbol_enum"></span> GeneralMiscellaneousOptionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeneralMiscellaneousOptionType>
+    <span class="nf nf-cod-symbol_enum"></span> GeometryDefineByType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryDefineByType>
+    <span class="nf nf-cod-symbol_enum"></span> GeometryDimensionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryDimensionType>
+    <span class="nf nf-cod-symbol_enum"></span> GeometryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GeometryType>
+    <span class="nf nf-cod-symbol_enum"></span> GraphControlsXAxis</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphControlsXAxis>
+    <span class="nf nf-cod-symbol_enum"></span> Graphics3DExportFormat</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/Graphics3DExportFormat>
+    <span class="nf nf-cod-symbol_enum"></span> GraphicsAnimationExportFormat</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphicsAnimationExportFormat>
+    <span class="nf nf-cod-symbol_enum"></span> GraphicsBackgroundType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphicsBackgroundType>
+    <span class="nf nf-cod-symbol_enum"></span> GraphicsCaptureType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphicsCaptureType>
+    <span class="nf nf-cod-symbol_enum"></span> GraphicsImageExportFormat</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphicsImageExportFormat>
+    <span class="nf nf-cod-symbol_enum"></span> GraphicsResolutionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphicsResolutionType>
+    <span class="nf nf-cod-symbol_enum"></span> GraphicsViewportsExportBorderStyle</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GraphicsViewportsExportBorderStyle>
+    <span class="nf nf-cod-symbol_enum"></span> GravityOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GravityOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> GrowElbowElementsBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/GrowElbowElementsBy>
+    <span class="nf nf-cod-symbol_enum"></span> HarmonicMSUPStorage</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HarmonicMSUPStorage>
+    <span class="nf nf-cod-symbol_enum"></span> HarmonicMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HarmonicMethod>
+    <span class="nf nf-cod-symbol_enum"></span> HarmonicMultiStepType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HarmonicMultiStepType>
+    <span class="nf nf-cod-symbol_enum"></span> HarmonicVariationalTechnology</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HarmonicVariationalTechnology>
+    <span class="nf nf-cod-symbol_enum"></span> HexIntegrationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HexIntegrationType>
+    <span class="nf nf-cod-symbol_enum"></span> HourglassDampingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HourglassDampingType>
+    <span class="nf nf-cod-symbol_enum"></span> HyperbolicProjectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/HyperbolicProjectionType>
+    <span class="nf nf-cod-symbol_enum"></span> ICEMCFDBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ICEMCFDBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> ImportParameterType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ImportParameterType>
+    <span class="nf nf-cod-symbol_enum"></span> ImportedCondensedPartStatus</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ImportedCondensedPartStatus>
+    <span class="nf nf-cod-symbol_enum"></span> ImportedLoadType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ImportedLoadType>
+    <span class="nf nf-cod-symbol_enum"></span> IncidentWaveLocation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/IncidentWaveLocation>
+    <span class="nf nf-cod-symbol_enum"></span> InitialClearanceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/InitialClearanceType>
+    <span class="nf nf-cod-symbol_enum"></span> InitialConditionsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/InitialConditionsType>
+    <span class="nf nf-cod-symbol_enum"></span> InitialTemperatureType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/InitialTemperatureType>
+    <span class="nf nf-cod-symbol_enum"></span> InitializationModifierType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/InitializationModifierType>
+    <span class="nf nf-cod-symbol_enum"></span> InterpolationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/InterpolationType>
+    <span class="nf nf-cod-symbol_enum"></span> IterationOptions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/IterationOptions>
+    <span class="nf nf-cod-symbol_enum"></span> JointConditionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointConditionType>
+    <span class="nf nf-cod-symbol_enum"></span> JointFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> JointFrictionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointFrictionType>
+    <span class="nf nf-cod-symbol_enum"></span> JointGeneralPrimitiveType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointGeneralPrimitiveType>
+    <span class="nf nf-cod-symbol_enum"></span> JointInitialPosition</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointInitialPosition>
+    <span class="nf nf-cod-symbol_enum"></span> JointRotationDOFType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointRotationDOFType>
+    <span class="nf nf-cod-symbol_enum"></span> JointScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> JointSolverElementType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointSolverElementType>
+    <span class="nf nf-cod-symbol_enum"></span> JointStopType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointStopType>
+    <span class="nf nf-cod-symbol_enum"></span> JointType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/JointType>
+    <span class="nf nf-cod-symbol_enum"></span> KinematicDOF</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/KinematicDOF>
+    <span class="nf nf-cod-symbol_enum"></span> KrigingCorrFuncType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/KrigingCorrFuncType>
+    <span class="nf nf-cod-symbol_enum"></span> KrigingPolynomType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/KrigingPolynomType>
+    <span class="nf nf-cod-symbol_enum"></span> LatticeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LatticeType>
+    <span class="nf nf-cod-symbol_enum"></span> LegendColorSchemeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LegendColorSchemeType>
+    <span class="nf nf-cod-symbol_enum"></span> LegendOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LegendOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> LegendRangeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LegendRangeType>
+    <span class="nf nf-cod-symbol_enum"></span> LifeUnitsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LifeUnitsType>
+    <span class="nf nf-cod-symbol_enum"></span> LimitBCDirection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LimitBCDirection>
+    <span class="nf nf-cod-symbol_enum"></span> LineLineContactDetectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LineLineContactDetectionType>
+    <span class="nf nf-cod-symbol_enum"></span> LinePressureResultBasedOnType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LinePressureResultBasedOnType>
+    <span class="nf nf-cod-symbol_enum"></span> LineSearchType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LineSearchType>
+    <span class="nf nf-cod-symbol_enum"></span> Linearized2DBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/Linearized2DBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> LinearizedSubtype</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LinearizedSubtype>
+    <span class="nf nf-cod-symbol_enum"></span> LoadAppliedBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadAppliedBy>
+    <span class="nf nf-cod-symbol_enum"></span> LoadBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> LoadCombinationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadCombinationType>
+    <span class="nf nf-cod-symbol_enum"></span> LoadDefineBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadDefineBy>
+    <span class="nf nf-cod-symbol_enum"></span> LoadGroupingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadGroupingType>
+    <span class="nf nf-cod-symbol_enum"></span> LoadVariableVariationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadVariableVariationType>
+    <span class="nf nf-cod-symbol_enum"></span> LoadVariationSubOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadVariationSubOption>
+    <span class="nf nf-cod-symbol_enum"></span> LoadVariationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadVariationType>
+    <span class="nf nf-cod-symbol_enum"></span> LoadVectorAssignment</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadVectorAssignment>
+    <span class="nf nf-cod-symbol_enum"></span> LoadedArea</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadedArea>
+    <span class="nf nf-cod-symbol_enum"></span> LoadingApplicationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LoadingApplicationType>
+    <span class="nf nf-cod-symbol_enum"></span> LocationDefinitionMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LocationDefinitionMethod>
+    <span class="nf nf-cod-symbol_enum"></span> LowReducedFrequencyModelType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/LowReducedFrequencyModelType>
+    <span class="nf nf-cod-symbol_enum"></span> MPIType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MPIType>
+    <span class="nf nf-cod-symbol_enum"></span> ManuMemberSizeControlledType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ManuMemberSizeControlledType>
+    <span class="nf nf-cod-symbol_enum"></span> ManualContactTreatmentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ManualContactTreatmentType>
+    <span class="nf nf-cod-symbol_enum"></span> ManufacturingConstraintSubtype</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ManufacturingConstraintSubtype>
+    <span class="nf nf-cod-symbol_enum"></span> MappingAlgorithm</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingAlgorithm>
+    <span class="nf nf-cod-symbol_enum"></span> MappingControlType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingControlType>
+    <span class="nf nf-cod-symbol_enum"></span> MappingInterpolationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingInterpolationType>
+    <span class="nf nf-cod-symbol_enum"></span> MappingIsolineLineType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingIsolineLineType>
+    <span class="nf nf-cod-symbol_enum"></span> MappingIsolineThicknessType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingIsolineThicknessType>
+    <span class="nf nf-cod-symbol_enum"></span> MappingMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingMethod>
+    <span class="nf nf-cod-symbol_enum"></span> MappingOutsideOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingOutsideOption>
+    <span class="nf nf-cod-symbol_enum"></span> MappingValidationDisplayOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingValidationDisplayOption>
+    <span class="nf nf-cod-symbol_enum"></span> MappingValidationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingValidationType>
+    <span class="nf nf-cod-symbol_enum"></span> MappingVariableType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MappingVariableType>
+    <span class="nf nf-cod-symbol_enum"></span> MaterialPolarizationDirection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MaterialPolarizationDirection>
+    <span class="nf nf-cod-symbol_enum"></span> MeanStressTheoryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeanStressTheoryType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshControlGroupRigidBodyBehaviorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshControlGroupRigidBodyBehaviorType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshControlGroupRigidBodyFaceMeshType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshControlGroupRigidBodyFaceMeshType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshControlPinchGeomtryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshControlPinchGeomtryType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshDisplayStyle</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshDisplayStyle>
+    <span class="nf nf-cod-symbol_enum"></span> MeshElementShape</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshElementShape>
+    <span class="nf nf-cod-symbol_enum"></span> MeshFlowControlMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshFlowControlMethod>
+    <span class="nf nf-cod-symbol_enum"></span> MeshInflationElementType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshInflationElementType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshMethodAlgorithm</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshMethodAlgorithm>
+    <span class="nf nf-cod-symbol_enum"></span> MeshMetricType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshMetricType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshNodeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshNodeType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshPhysicsPreferenceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshPhysicsPreferenceType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshRestartControlsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshRestartControlsType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshRestartRetainFilesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshRestartRetainFilesType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshRestartSaveAtLoadStep</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshRestartSaveAtLoadStep>
+    <span class="nf nf-cod-symbol_enum"></span> MeshRestartSaveAtSubstep</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshRestartSaveAtSubstep>
+    <span class="nf nf-cod-symbol_enum"></span> MeshSolverPreferenceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshSolverPreferenceType>
+    <span class="nf nf-cod-symbol_enum"></span> MeshSourceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MeshSourceType>
+    <span class="nf nf-cod-symbol_enum"></span> MessageSeverityType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MessageSeverityType>
+    <span class="nf nf-cod-symbol_enum"></span> MethodMeshType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MethodMeshType>
+    <span class="nf nf-cod-symbol_enum"></span> MethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MethodType>
+    <span class="nf nf-cod-symbol_enum"></span> MinimumOrMaximum</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MinimumOrMaximum>
+    <span class="nf nf-cod-symbol_enum"></span> ModalFrequencyRangeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModalFrequencyRangeType>
+    <span class="nf nf-cod-symbol_enum"></span> ModeSelectionMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModeSelectionMethod>
+    <span class="nf nf-cod-symbol_enum"></span> Model2DBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/Model2DBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> ModelColoring</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModelColoring>
+    <span class="nf nf-cod-symbol_enum"></span> ModelDisplay</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModelDisplay>
+    <span class="nf nf-cod-symbol_enum"></span> ModelImportUnitSystemType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModelImportUnitSystemType>
+    <span class="nf nf-cod-symbol_enum"></span> ModelType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModelType>
+    <span class="nf nf-cod-symbol_enum"></span> ModesCombinationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ModesCombinationType>
+    <span class="nf nf-cod-symbol_enum"></span> MomentsAtSummationPointType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MomentsAtSummationPointType>
+    <span class="nf nf-cod-symbol_enum"></span> MultiOptimTypeStrategyType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MultiOptimTypeStrategyType>
+    <span class="nf nf-cod-symbol_enum"></span> MultipleNodeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/MultipleNodeType>
+    <span class="nf nf-cod-symbol_enum"></span> NLADControlProjectToGeometry</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NLADControlProjectToGeometry>
+    <span class="nf nf-cod-symbol_enum"></span> NamedSelectionWorksheetOperator</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NamedSelectionWorksheetOperator>
+    <span class="nf nf-cod-symbol_enum"></span> NewtonRaphsonType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NewtonRaphsonType>
+    <span class="nf nf-cod-symbol_enum"></span> NodalPlanesVisible</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NodalPlanesVisible>
+    <span class="nf nf-cod-symbol_enum"></span> NodeAndElementRenumberingMethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NodeAndElementRenumberingMethodType>
+    <span class="nf nf-cod-symbol_enum"></span> NodeMergeToleranceMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NodeMergeToleranceMethod>
+    <span class="nf nf-cod-symbol_enum"></span> NodeMoveInformationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NodeMoveInformationType>
+    <span class="nf nf-cod-symbol_enum"></span> NodeSelection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NodeSelection>
+    <span class="nf nf-cod-symbol_enum"></span> NonCyclicLoadingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonCyclicLoadingType>
+    <span class="nf nf-cod-symbol_enum"></span> NonLinearFormulationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonLinearFormulationType>
+    <span class="nf nf-cod-symbol_enum"></span> NonLinearValueType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonLinearValueType>
+    <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityControlsRefinementAlgorithmType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityControlsRefinementAlgorithmType>
+    <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityControlsRemeshingGradientType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityControlsRemeshingGradientType>
+    <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityCriterionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityCriterionType>
+    <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityOptionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityOptionType>
+    <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityTimeRange</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityTimeRange>
+    <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityUpdateType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityUpdateType>
+    <span class="nf nf-cod-symbol_enum"></span> NormalOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/NormalOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> ObjectState</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ObjectState>
+    <span class="nf nf-cod-symbol_enum"></span> ObjectiveType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ObjectiveType>
+    <span class="nf nf-cod-symbol_enum"></span> OnDemandExpansionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/OnDemandExpansionType>
+    <span class="nf nf-cod-symbol_enum"></span> OptimizationResponseConstraintComponentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/OptimizationResponseConstraintComponentType>
+    <span class="nf nf-cod-symbol_enum"></span> OptimizationSolverType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/OptimizationSolverType>
+    <span class="nf nf-cod-symbol_enum"></span> OptimizationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/OptimizationType>
+    <span class="nf nf-cod-symbol_enum"></span> OutputControlsNodalForcesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/OutputControlsNodalForcesType>
+    <span class="nf nf-cod-symbol_enum"></span> PFactorResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PFactorResultType>
+    <span class="nf nf-cod-symbol_enum"></span> PMLOptions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PMLOptions>
+    <span class="nf nf-cod-symbol_enum"></span> PSDBoundaryConditionSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PSDBoundaryConditionSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> PanelsToDisplayType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PanelsToDisplayType>
+    <span class="nf nf-cod-symbol_enum"></span> PartTransformationDefinitionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PartTransformationDefinitionType>
+    <span class="nf nf-cod-symbol_enum"></span> PassFailResult</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PassFailResult>
+    <span class="nf nf-cod-symbol_enum"></span> PatchIndependentDefineType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PatchIndependentDefineType>
+    <span class="nf nf-cod-symbol_enum"></span> PathScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PathScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> PeriodicApplyTo</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PeriodicApplyTo>
+    <span class="nf nf-cod-symbol_enum"></span> PeriodicRegionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PeriodicRegionType>
+    <span class="nf nf-cod-symbol_enum"></span> PeriodicityDirectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PeriodicityDirectionType>
+    <span class="nf nf-cod-symbol_enum"></span> PhaseType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PhaseType>
+    <span class="nf nf-cod-symbol_enum"></span> PhysicsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PhysicsType>
+    <span class="nf nf-cod-symbol_enum"></span> PilotNodeScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PilotNodeScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> PinBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PinBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> PinNature</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PinNature>
+    <span class="nf nf-cod-symbol_enum"></span> PipeLoadingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PipeLoadingType>
+    <span class="nf nf-cod-symbol_enum"></span> PolyflowExportUnit</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PolyflowExportUnit>
+    <span class="nf nf-cod-symbol_enum"></span> PortAttribution</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PortAttribution>
+    <span class="nf nf-cod-symbol_enum"></span> PortBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PortBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> PortPosition</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PortPosition>
+    <span class="nf nf-cod-symbol_enum"></span> PreStressContactStatus</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PreStressContactStatus>
+    <span class="nf nf-cod-symbol_enum"></span> PreStressLoadControl</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PreStressLoadControl>
+    <span class="nf nf-cod-symbol_enum"></span> PreStressMode</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PreStressMode>
+    <span class="nf nf-cod-symbol_enum"></span> PreStressStateType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PreStressStateType>
+    <span class="nf nf-cod-symbol_enum"></span> PressureAtZeroPenetrationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PressureAtZeroPenetrationType>
+    <span class="nf nf-cod-symbol_enum"></span> PressureInitializationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PressureInitializationType>
+    <span class="nf nf-cod-symbol_enum"></span> ProbeDisplayFilter</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ProbeDisplayFilter>
+    <span class="nf nf-cod-symbol_enum"></span> ProbeExtractionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ProbeExtractionType>
+    <span class="nf nf-cod-symbol_enum"></span> ProbeResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ProbeResultType>
+    <span class="nf nf-cod-symbol_enum"></span> PrototypeDisplayStyleType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PrototypeDisplayStyleType>
+    <span class="nf nf-cod-symbol_enum"></span> PrototypeLinkBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PrototypeLinkBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> PrototypeModelType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PrototypeModelType>
+    <span class="nf nf-cod-symbol_enum"></span> ProximitySFSourcesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ProximitySFSourcesType>
+    <span class="nf nf-cod-symbol_enum"></span> PullMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PullMethod>
+    <span class="nf nf-cod-symbol_enum"></span> PullOutConstraintSubtype</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PullOutConstraintSubtype>
+    <span class="nf nf-cod-symbol_enum"></span> PullOutDirectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PullOutDirectionType>
+    <span class="nf nf-cod-symbol_enum"></span> PythonCodeTargetCallback</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/PythonCodeTargetCallback>
+    <span class="nf nf-cod-symbol_enum"></span> RBDCorrectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RBDCorrectionType>
+    <span class="nf nf-cod-symbol_enum"></span> RBDDoStaticAnalysisType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RBDDoStaticAnalysisType>
+    <span class="nf nf-cod-symbol_enum"></span> RBDProgramControlType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RBDProgramControlType>
+    <span class="nf nf-cod-symbol_enum"></span> RBDTimeIntegrationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RBDTimeIntegrationType>
+    <span class="nf nf-cod-symbol_enum"></span> RSBoundaryConditionSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RSBoundaryConditionSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> RadiationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RadiationType>
+    <span class="nf nf-cod-symbol_enum"></span> RadiositySolverType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RadiositySolverType>
+    <span class="nf nf-cod-symbol_enum"></span> RadiosityViewFactorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RadiosityViewFactorType>
+    <span class="nf nf-cod-symbol_enum"></span> RadiusOfReferenceSphereDefineBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RadiusOfReferenceSphereDefineBy>
+    <span class="nf nf-cod-symbol_enum"></span> RandomSamplingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RandomSamplingType>
+    <span class="nf nf-cod-symbol_enum"></span> ReactionForceCriteriaType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ReactionForceCriteriaType>
+    <span class="nf nf-cod-symbol_enum"></span> ReferenceFrameType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ReferenceFrameType>
+    <span class="nf nf-cod-symbol_enum"></span> ReflectionCoefficientsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ReflectionCoefficientsType>
+    <span class="nf nf-cod-symbol_enum"></span> ReinforcingStressState</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ReinforcingStressState>
+    <span class="nf nf-cod-symbol_enum"></span> RemoteApplicationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RemoteApplicationType>
+    <span class="nf nf-cod-symbol_enum"></span> RemotePointDOFSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RemotePointDOFSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> RemotePointFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RemotePointFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> RemotePointUpdateOptions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RemotePointUpdateOptions>
+    <span class="nf nf-cod-symbol_enum"></span> ResponseConstraintDefineBy</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResponseConstraintDefineBy>
+    <span class="nf nf-cod-symbol_enum"></span> ResponseConstraintType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResponseConstraintType>
+    <span class="nf nf-cod-symbol_enum"></span> RestartControlsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RestartControlsType>
+    <span class="nf nf-cod-symbol_enum"></span> RestartRetainFilesType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RestartRetainFilesType>
+    <span class="nf nf-cod-symbol_enum"></span> RestartSaveAtLoadStep</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RestartSaveAtLoadStep>
+    <span class="nf nf-cod-symbol_enum"></span> RestartSaveAtSubstep</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RestartSaveAtSubstep>
+    <span class="nf nf-cod-symbol_enum"></span> RestartType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RestartType>
+    <span class="nf nf-cod-symbol_enum"></span> ResultAnimationRangeType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResultAnimationRangeType>
+    <span class="nf nf-cod-symbol_enum"></span> ResultAveragingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResultAveragingType>
+    <span class="nf nf-cod-symbol_enum"></span> ResultFileCompressionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResultFileCompressionType>
+    <span class="nf nf-cod-symbol_enum"></span> ResultFileItemType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResultFileItemType>
+    <span class="nf nf-cod-symbol_enum"></span> ResultRelativityType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResultRelativityType>
+    <span class="nf nf-cod-symbol_enum"></span> ResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ResultType>
+    <span class="nf nf-cod-symbol_enum"></span> RigidBodyTransformationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RigidBodyTransformationType>
+    <span class="nf nf-cod-symbol_enum"></span> RigidResponseEffectType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RigidResponseEffectType>
+    <span class="nf nf-cod-symbol_enum"></span> RobustFrequenciesReductionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RobustFrequenciesReductionType>
+    <span class="nf nf-cod-symbol_enum"></span> RotationPlane</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/RotationPlane>
+    <span class="nf nf-cod-symbol_enum"></span> STLSupportViewType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/STLSupportViewType>
+    <span class="nf nf-cod-symbol_enum"></span> SafetyLimitType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SafetyLimitType>
+    <span class="nf nf-cod-symbol_enum"></span> SafetyTheoryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SafetyTheoryType>
+    <span class="nf nf-cod-symbol_enum"></span> ScaleFactorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ScaleFactorType>
+    <span class="nf nf-cod-symbol_enum"></span> ScatteredFieldFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ScatteredFieldFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> ScatteringOutputType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ScatteringOutputType>
+    <span class="nf nf-cod-symbol_enum"></span> SecondaryImportPrefType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SecondaryImportPrefType>
+    <span class="nf nf-cod-symbol_enum"></span> SectionPlaneCappingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SectionPlaneCappingType>
+    <span class="nf nf-cod-symbol_enum"></span> SectionPlaneType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SectionPlaneType>
+    <span class="nf nf-cod-symbol_enum"></span> SelectionActionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SelectionActionType>
+    <span class="nf nf-cod-symbol_enum"></span> SelectionCriterionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SelectionCriterionType>
+    <span class="nf nf-cod-symbol_enum"></span> SelectionOperatorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SelectionOperatorType>
+    <span class="nf nf-cod-symbol_enum"></span> SelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> SendAs</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SendAs>
+    <span class="nf nf-cod-symbol_enum"></span> SeqSelectionMode</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SeqSelectionMode>
+    <span class="nf nf-cod-symbol_enum"></span> SequenceSelectionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SequenceSelectionType>
+    <span class="nf nf-cod-symbol_enum"></span> SetDriverStyle</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SetDriverStyle>
+    <span class="nf nf-cod-symbol_enum"></span> ShearMomentDiagramOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShearMomentDiagramOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> ShearMomentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShearMomentType>
+    <span class="nf nf-cod-symbol_enum"></span> ShearOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShearOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> ShellBodyDimension</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellBodyDimension>
+    <span class="nf nf-cod-symbol_enum"></span> ShellElementStiffnessOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellElementStiffnessOption>
+    <span class="nf nf-cod-symbol_enum"></span> ShellFaceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellFaceType>
+    <span class="nf nf-cod-symbol_enum"></span> ShellInertiaUpdate</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellInertiaUpdate>
+    <span class="nf nf-cod-symbol_enum"></span> ShellMBPOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellMBPOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> ShellMBPType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellMBPType>
+    <span class="nf nf-cod-symbol_enum"></span> ShellOffsetType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellOffsetType>
+    <span class="nf nf-cod-symbol_enum"></span> ShellThicknessUpdate</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ShellThicknessUpdate>
+    <span class="nf nf-cod-symbol_enum"></span> SizingBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SizingBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> SizingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SizingType>
+    <span class="nf nf-cod-symbol_enum"></span> SlidingContactType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SlidingContactType>
+    <span class="nf nf-cod-symbol_enum"></span> SnapType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SnapType>
+    <span class="nf nf-cod-symbol_enum"></span> SolutionCombinationDriverStyle</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolutionCombinationDriverStyle>
+    <span class="nf nf-cod-symbol_enum"></span> SolutionCombinationWorksheetType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolutionCombinationWorksheetType>
+    <span class="nf nf-cod-symbol_enum"></span> SolutionOutputType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolutionOutputType>
+    <span class="nf nf-cod-symbol_enum"></span> SolutionStatusType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolutionStatusType>
+    <span class="nf nf-cod-symbol_enum"></span> SolveBehaviourType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolveBehaviourType>
+    <span class="nf nf-cod-symbol_enum"></span> SolverControlsIncludeNegativeLoadMultiplier</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolverControlsIncludeNegativeLoadMultiplier>
+    <span class="nf nf-cod-symbol_enum"></span> SolverControlsModeReuse</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolverControlsModeReuse>
+    <span class="nf nf-cod-symbol_enum"></span> SolverPivotChecking</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolverPivotChecking>
+    <span class="nf nf-cod-symbol_enum"></span> SolverType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolverType>
+    <span class="nf nf-cod-symbol_enum"></span> SolverUnitsControlType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SolverUnitsControlType>
+    <span class="nf nf-cod-symbol_enum"></span> SortingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SortingType>
+    <span class="nf nf-cod-symbol_enum"></span> SourceConductorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SourceConductorType>
+    <span class="nf nf-cod-symbol_enum"></span> SourceDimension</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SourceDimension>
+    <span class="nf nf-cod-symbol_enum"></span> SourceTimeDefinitionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SourceTimeDefinitionType>
+    <span class="nf nf-cod-symbol_enum"></span> SpacingOptionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpacingOptionType>
+    <span class="nf nf-cod-symbol_enum"></span> SpatialRadiationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpatialRadiationType>
+    <span class="nf nf-cod-symbol_enum"></span> SpatialReductionMethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpatialReductionMethodType>
+    <span class="nf nf-cod-symbol_enum"></span> SpatialReductionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpatialReductionType>
+    <span class="nf nf-cod-symbol_enum"></span> SpectrumType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpectrumType>
+    <span class="nf nf-cod-symbol_enum"></span> SpinSofteningType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpinSofteningType>
+    <span class="nf nf-cod-symbol_enum"></span> SpotWeldTypes</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpotWeldTypes>
+    <span class="nf nf-cod-symbol_enum"></span> SpringBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpringBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> SpringPreloadType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpringPreloadType>
+    <span class="nf nf-cod-symbol_enum"></span> SpringResultType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpringResultType>
+    <span class="nf nf-cod-symbol_enum"></span> SpringScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpringScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> SpringType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpringType>
+    <span class="nf nf-cod-symbol_enum"></span> SpringsStiffnessType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SpringsStiffnessType>
+    <span class="nf nf-cod-symbol_enum"></span> StabilizationFirstSubstepOption</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StabilizationFirstSubstepOption>
+    <span class="nf nf-cod-symbol_enum"></span> StabilizationMethod</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StabilizationMethod>
+    <span class="nf nf-cod-symbol_enum"></span> StabilizationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StabilizationType>
+    <span class="nf nf-cod-symbol_enum"></span> StackerMethodMeshType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StackerMethodMeshType>
+    <span class="nf nf-cod-symbol_enum"></span> StageBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StageBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> StepVarying</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StepVarying>
+    <span class="nf nf-cod-symbol_enum"></span> StiffnessBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StiffnessBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> StiffnessMethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StiffnessMethodType>
+    <span class="nf nf-cod-symbol_enum"></span> StopCriterion</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StopCriterion>
+    <span class="nf nf-cod-symbol_enum"></span> StoreModalResult</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StoreModalResult>
+    <span class="nf nf-cod-symbol_enum"></span> StressStrainType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/StressStrainType>
+    <span class="nf nf-cod-symbol_enum"></span> SubScopingDefineByType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SubScopingDefineByType>
+    <span class="nf nf-cod-symbol_enum"></span> SurfaceCoatingStiffnessBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SurfaceCoatingStiffnessBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> SweepElementOptionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SweepElementOptionType>
+    <span class="nf nf-cod-symbol_enum"></span> SymmetryBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SymmetryBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> SymmetryBoundaryDOFOrientation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SymmetryBoundaryDOFOrientation>
+    <span class="nf nf-cod-symbol_enum"></span> SymmetryNormalType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SymmetryNormalType>
+    <span class="nf nf-cod-symbol_enum"></span> SymmetryRegionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/SymmetryRegionType>
+    <span class="nf nf-cod-symbol_enum"></span> TargetCorrection</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TargetCorrection>
+    <span class="nf nf-cod-symbol_enum"></span> TargetOrientation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TargetOrientation>
+    <span class="nf nf-cod-symbol_enum"></span> TetIntegrationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TetIntegrationType>
+    <span class="nf nf-cod-symbol_enum"></span> ThermalPointMassBehavior</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ThermalPointMassBehavior>
+    <span class="nf nf-cod-symbol_enum"></span> ThermalStrainType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ThermalStrainType>
+    <span class="nf nf-cod-symbol_enum"></span> ThermoelasticDampingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ThermoelasticDampingType>
+    <span class="nf nf-cod-symbol_enum"></span> ThroughThicknessBendingStress</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ThroughThicknessBendingStress>
+    <span class="nf nf-cod-symbol_enum"></span> TimeHistoryDisplayType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TimeHistoryDisplayType>
+    <span class="nf nf-cod-symbol_enum"></span> TimePointsOptions</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TimePointsOptions>
+    <span class="nf nf-cod-symbol_enum"></span> TimeStepDefineByType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TimeStepDefineByType>
+    <span class="nf nf-cod-symbol_enum"></span> ToleranceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ToleranceType>
+    <span class="nf nf-cod-symbol_enum"></span> TopoBoundType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoBoundType>
+    <span class="nf nf-cod-symbol_enum"></span> TopoConstraintStressType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoConstraintStressType>
+    <span class="nf nf-cod-symbol_enum"></span> TopoConstraintType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoConstraintType>
+    <span class="nf nf-cod-symbol_enum"></span> TopoEnvironmentType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoEnvironmentType>
+    <span class="nf nf-cod-symbol_enum"></span> TopoObjectiveFormulation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoObjectiveFormulation>
+    <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationDensityFilter</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoOptimizationDensityFilter>
+    <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationExportDesignProperties</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoOptimizationExportDesignProperties>
+    <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationExportDesignPropertiesFileFormat</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoOptimizationExportDesignPropertiesFileFormat>
+    <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationOutputLog</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoOptimizationOutputLog>
+    <span class="nf nf-cod-symbol_enum"></span> TopoPropertyControlType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopoPropertyControlType>
+    <span class="nf nf-cod-symbol_enum"></span> TopologyOptimizationResultShowType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TopologyOptimizationResultShowType>
+    <span class="nf nf-cod-symbol_enum"></span> TotalOrDirectional</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TotalOrDirectional>
+    <span class="nf nf-cod-symbol_enum"></span> TransferAdmittanceModelType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TransferAdmittanceModelType>
+    <span class="nf nf-cod-symbol_enum"></span> TransformationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TransformationType>
+    <span class="nf nf-cod-symbol_enum"></span> TransientApplicationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TransientApplicationType>
+    <span class="nf nf-cod-symbol_enum"></span> TransientDampingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TransientDampingType>
+    <span class="nf nf-cod-symbol_enum"></span> TreeFilterObjectClass</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TreeFilterObjectClass>
+    <span class="nf nf-cod-symbol_enum"></span> TreeFilterObjectState</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TreeFilterObjectState>
+    <span class="nf nf-cod-symbol_enum"></span> TreeFilterScopingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TreeFilterScopingType>
+    <span class="nf nf-cod-symbol_enum"></span> TriangleReduction</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/TriangleReduction>
+    <span class="nf nf-cod-symbol_enum"></span> UnitCategoryType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/UnitCategoryType>
+    <span class="nf nf-cod-symbol_enum"></span> UnitSystemIDType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/UnitSystemIDType>
+    <span class="nf nf-cod-symbol_enum"></span> UpdateContactStiffness</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/UpdateContactStiffness>
+    <span class="nf nf-cod-symbol_enum"></span> UseExistingModesymFile</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/UseExistingModesymFile>
+    <span class="nf nf-cod-symbol_enum"></span> UserUnitSystemType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/UserUnitSystemType>
+    <span class="nf nf-cod-symbol_enum"></span> VectorDisplayType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VectorDisplayType>
+    <span class="nf nf-cod-symbol_enum"></span> VectorLengthType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VectorLengthType>
+    <span class="nf nf-cod-symbol_enum"></span> VectorReductionReferenceType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VectorReductionReferenceType>
+    <span class="nf nf-cod-symbol_enum"></span> VectorReductionType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VectorReductionType>
+    <span class="nf nf-cod-symbol_enum"></span> ViewOrientationType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/ViewOrientationType>
+    <span class="nf nf-cod-symbol_enum"></span> VirtualCellClassType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VirtualCellClassType>
+    <span class="nf nf-cod-symbol_enum"></span> VirtualCellGroupAutomaticBehaviorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VirtualCellGroupAutomaticBehaviorType>
+    <span class="nf nf-cod-symbol_enum"></span> VirtualCellGroupMethodType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VirtualCellGroupMethodType>
+    <span class="nf nf-cod-symbol_enum"></span> VirtualCellGroupRepairBehaviorType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VirtualCellGroupRepairBehaviorType>
+    <span class="nf nf-cod-symbol_enum"></span> VisibilityType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/VisibilityType>
+    <span class="nf nf-cod-symbol_enum"></span> WBUnitSystemType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/WBUnitSystemType>
+    <span class="nf nf-cod-symbol_enum"></span> WaterfallDisplaySelectionMode</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/WaterfallDisplaySelectionMode>
+    <span class="nf nf-cod-symbol_enum"></span> WaveType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/WaveType>
+    <span class="nf nf-cod-symbol_enum"></span> WeakSpringsType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/WeakSpringsType>
+    <span class="nf nf-cod-symbol_enum"></span> WeightingType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/WeightingType>
+    <span class="nf nf-cod-symbol_enum"></span> WindowType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/WindowType>
+    <span class="nf nf-cod-symbol_enum"></span> XAxisValues</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/XAxisValues>
+    <span class="nf nf-cod-symbol_enum"></span> YesNoProgrammedControlled</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/YesNoProgrammedControlled>
+    <span class="nf nf-cod-symbol_enum"></span> YesNoType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/Enums/YesNoType>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Enums module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

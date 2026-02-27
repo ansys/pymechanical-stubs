@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ChartReportType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ChartReportType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ChartReportType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ChartReportType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ChartAndTabularData`
+            - 
+          * - :py:attr:`~ChartOnly`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~TabularDataOnly`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ChartAndTabularData
+   :value: 3
+
+
+.. py:attribute:: ChartOnly
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: 4
+
+
+.. py:attribute:: TabularDataOnly
+   :value: 1
+
+
+
+
+
+
+.. vale on

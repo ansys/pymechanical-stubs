@@ -1,0 +1,121 @@
+.. vale off
+
+
+
+:class:`VariableType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   An enumeration of the different variable types supported by the tabular data
+   T:Ansys.Mechanical.Interfaces.IDataSeries implementation "Ansys.ACT.Automation.Mechanical.Table.Column".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VariableType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HeatTransferCoefficient`
+            - 
+          * - :py:attr:`~ID`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~ThetaCoordinate`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~XCoordinate`
+            - 
+          * - :py:attr:`~YCoordinate`
+            - 
+          * - :py:attr:`~ZCoordinate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HeatTransferCoefficient
+   :value: 5
+
+
+.. py:attribute:: ID
+   :value: 3
+
+
+.. py:attribute:: Pressure
+   :value: 4
+
+
+.. py:attribute:: Temperature
+   :value: 7
+
+
+.. py:attribute:: ThetaCoordinate
+   :value: 8
+
+
+.. py:attribute:: Time
+   :value: 9
+
+
+.. py:attribute:: XCoordinate
+   :value: 10
+
+
+.. py:attribute:: YCoordinate
+   :value: 11
+
+
+.. py:attribute:: ZCoordinate
+   :value: 12
+
+
+
+
+
+
+.. vale on

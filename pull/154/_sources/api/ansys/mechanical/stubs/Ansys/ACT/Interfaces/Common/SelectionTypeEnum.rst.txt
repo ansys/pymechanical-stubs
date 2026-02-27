@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`SelectionTypeEnum`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.SelectionTypeEnum(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the selection type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SelectionTypeEnum
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GeometryEntities`
+            - 
+          * - :py:attr:`~MeshElementFaces`
+            - 
+          * - :py:attr:`~MeshElements`
+            - 
+          * - :py:attr:`~MeshNodes`
+            - 
+          * - :py:attr:`~PathSpecific`
+            - 
+          * - :py:attr:`~SurfaceSpecific`
+            - 
+          * - :py:attr:`~WorksheetSpecific`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: GeometryEntities
+   :value: 0
+
+
+.. py:attribute:: MeshElementFaces
+   :value: 6
+
+
+.. py:attribute:: MeshElements
+   :value: 2
+
+
+.. py:attribute:: MeshNodes
+   :value: 1
+
+
+.. py:attribute:: PathSpecific
+   :value: 3
+
+
+.. py:attribute:: SurfaceSpecific
+   :value: 4
+
+
+.. py:attribute:: WorksheetSpecific
+   :value: 5
+
+
+
+
+
+
+.. vale on

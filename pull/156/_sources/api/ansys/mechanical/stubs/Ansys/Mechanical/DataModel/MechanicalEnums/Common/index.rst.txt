@@ -1,0 +1,109 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Common``
+==========================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Common
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Common
+.. tab-set::
+
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Common.PathType`
+            - This enum specifies how a path should be interpreted.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.Common.PlaneOrientation`
+            - Specifies the PlaneOrientation
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> PathType</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Common/PathType>
+    <span class="nf nf-cod-symbol_enum"></span> PlaneOrientation</api/ansys/mechanical/stubs/Ansys/Mechanical/DataModel/MechanicalEnums/Common/PlaneOrientation>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Common module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

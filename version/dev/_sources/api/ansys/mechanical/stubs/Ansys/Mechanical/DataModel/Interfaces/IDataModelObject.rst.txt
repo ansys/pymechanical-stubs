@@ -1,0 +1,199 @@
+.. vale off
+
+
+
+:class:`IDataModelObject`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: IDataModelObject
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetPath`
+            - Gets the path of the object.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the name of the current DataModelObject's category.
+          * - :py:attr:`~Name`
+            - Gets the name of the object.
+          * - :py:attr:`~ObjectId`
+            - Gets the internal id of the object.
+          * - :py:attr:`~ObjectTags`
+            - Gets an IEnumerable object of the tags that 'this' is a part of.
+          * - :py:attr:`~Parent`
+            - Gets the parent object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the name of the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the name of the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   Gets the internal id of the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   Gets an IEnumerable object of the tags that 'this' is a part of.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Gets the parent object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetPath() -> str
+
+   
+   Gets the path of the object.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

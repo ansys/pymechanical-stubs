@@ -1,0 +1,1175 @@
+.. vale off
+
+
+
+:class:`TopoOptAnalysisSettings`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AnalysisSettings.TopoOptAnalysisSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a TopoOptAnalysisSettings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoOptAnalysisSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~DeleteAllRestartPoints`
+            - DeleteAllRestartPoints method.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Algorithm`
+            - Gets or sets the Algorithm.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConvergenceAccuracy`
+            - Gets or sets the ConvergenceAccuracy.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DeleteUnneededFiles`
+            - Gets or sets the DeleteUnneededFiles.
+          * - :py:attr:`~ExportDesignProperties`
+            - Gets or sets the ExportDesignProperties.
+          * - :py:attr:`~ExportDesignPropertiesFileFormat`
+            - Gets or sets the ExportDesignPropertiesFileFormat.
+          * - :py:attr:`~ExportKnockdownFilePath`
+            - Gets or sets the ExportKnockdownFilePath.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Filter`
+            - Gets or sets the Filter.
+          * - :py:attr:`~FutureAnalysis`
+            - Gets or sets the FutureAnalysis.
+          * - :py:attr:`~Graph`
+            - Graph property.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~MaxNumOfIntermediateFiles`
+            - Gets or sets the MaxNumOfIntermediateFiles.
+          * - :py:attr:`~MaximumNumberOfIterations`
+            - Gets or sets the MaximumNumberOfIterations.
+          * - :py:attr:`~MinimumNormalizedDensity`
+            - Gets or sets the MinimumNormalizedDensity.
+          * - :py:attr:`~MultiOptimTypeStrategy`
+            - Gets or sets the MultiOptimTypeStrategy.
+          * - :py:attr:`~OptimizationOutputLog`
+            - Gets or sets the OptimizationOutputLog.
+          * - :py:attr:`~PenaltyFactor`
+            - Gets or sets the PenaltyFactor.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RegionOfAMOverhangConstraint`
+            - Gets or sets the RegionOfAMOverhangConstraint.
+          * - :py:attr:`~RegionOfManufacturingConstraint`
+            - Gets or sets the RegionOfManufacturingConstraint.
+          * - :py:attr:`~RegionOfMinMemberSize`
+            - Gets or sets the RegionOfMinMemberSize.
+          * - :py:attr:`~SaveMAPDLDB`
+            - Gets or sets the SaveMAPDLDB.
+          * - :py:attr:`~ScratchSolverFilesDirectory`
+            - Gets the ScratchSolverFilesDirectory.
+          * - :py:attr:`~SolverFilesDirectory`
+            - Gets the SolverFilesDirectory.
+          * - :py:attr:`~SolverType`
+            - Gets or sets the SolverType.
+          * - :py:attr:`~SolverUnitSystem`
+            - Gets or sets the SolverUnitSystem.
+          * - :py:attr:`~SolverUnits`
+            - Gets or sets the SolverUnits.
+          * - :py:attr:`~StoreResultsAt`
+            - Gets or sets the StoreResultsAt.
+          * - :py:attr:`~StoreResultsAtValue`
+            - Gets or sets the StoreResultsAtValue.
+          * - :py:attr:`~TopoOptInitialDensity`
+            - Gets or sets the TopoOptInitialDensity.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Algorithm
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AlgorithmType]
+
+
+   
+   Gets or sets the Algorithm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConvergenceAccuracy
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ConvergenceAccuracy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeleteUnneededFiles
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the DeleteUnneededFiles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportDesignProperties
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoOptimizationExportDesignProperties]
+
+
+   
+   Gets or sets the ExportDesignProperties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportDesignPropertiesFileFormat
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoOptimizationExportDesignPropertiesFileFormat]
+
+
+   
+   Gets or sets the ExportDesignPropertiesFileFormat.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExportKnockdownFilePath
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ExportKnockdownFilePath.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Filter
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoOptimizationDensityFilter]
+
+
+   
+   Gets or sets the Filter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FutureAnalysis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FutureIntentType]
+
+
+   
+   Gets or sets the FutureAnalysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Graph
+   :type: Optional[Ansys.Mechanical.Graphics.AnalysisSettingsGraph]
+
+
+   
+   Graph property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAnalysisSettings]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxNumOfIntermediateFiles
+   :type: Optional[int]
+
+
+   
+   Gets or sets the MaxNumOfIntermediateFiles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumNumberOfIterations
+   :type: Optional[int]
+
+
+   
+   Gets or sets the MaximumNumberOfIterations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumNormalizedDensity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the MinimumNormalizedDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiOptimTypeStrategy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MultiOptimTypeStrategyType]
+
+
+   
+   Gets or sets the MultiOptimTypeStrategy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OptimizationOutputLog
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TopoOptimizationOutputLog]
+
+
+   
+   Gets or sets the OptimizationOutputLog.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PenaltyFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the PenaltyFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RegionOfAMOverhangConstraint
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExclusionParticipantType]
+
+
+   
+   Gets or sets the RegionOfAMOverhangConstraint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RegionOfManufacturingConstraint
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExclusionParticipantType]
+
+
+   
+   Gets or sets the RegionOfManufacturingConstraint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RegionOfMinMemberSize
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExclusionParticipantType]
+
+
+   
+   Gets or sets the RegionOfMinMemberSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveMAPDLDB
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the SaveMAPDLDB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScratchSolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the ScratchSolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the SolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.OptimizationSolverType]
+
+
+   
+   Gets or sets the SolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverUnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the SolverUnitSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverUnits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SolverUnitsControlType]
+
+
+   
+   Gets or sets the SolverUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreResultsAt
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.IterationOptions]
+
+
+   
+   Gets or sets the StoreResultsAt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StoreResultsAtValue
+   :type: Optional[int]
+
+
+   
+   Gets or sets the StoreResultsAtValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopoOptInitialDensity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the TopoOptInitialDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllRestartPoints() -> None
+
+   
+   DeleteAllRestartPoints method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

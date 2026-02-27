@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`TransformationType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TransformationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TransformationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TransformationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~Flip`
+            - 
+          * - :py:attr:`~Offset`
+            - 
+          * - :py:attr:`~Rotation`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Custom
+   :value: 0
+
+
+.. py:attribute:: Flip
+   :value: 3
+
+
+.. py:attribute:: Offset
+   :value: 1
+
+
+.. py:attribute:: Rotation
+   :value: 2
+
+
+
+
+
+
+.. vale on

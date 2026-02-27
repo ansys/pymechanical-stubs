@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`AnalysisType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.AnalysisType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the type of analysis to target during import.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AnalysisType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Type2D`
+            - 
+          * - :py:attr:`~Type3D`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Type2D
+   :value: 1
+
+
+.. py:attribute:: Type3D
+   :value: 0
+
+
+
+
+
+
+.. vale on

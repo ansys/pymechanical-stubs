@@ -1,0 +1,2155 @@
+.. vale off
+
+
+
+:class:`Geometry`
+=================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Geometry
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Geometry
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddDistributedMass`
+            - Creates a new DistributedMass
+          * - :py:attr:`~AddElementOrientation`
+            - Creates a new ElementOrientation
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddImportedElementOrientationExternalData`
+            - Creates a new Imported Element Orientation (External Data).
+          * - :py:attr:`~AddImportedThicknessExternalData`
+            - Creates a new Imported Thickness (External Data).
+          * - :py:attr:`~AddLayeredSection`
+            - Creates a new child LayeredSection.
+          * - :py:attr:`~AddPointMass`
+            - Creates a new PointMass
+          * - :py:attr:`~AddSurfaceCoating`
+            - Creates a new SurfaceCoating
+          * - :py:attr:`~AddThermalPointMass`
+            - Creates a new ThermalPointMass
+          * - :py:attr:`~AddThickness`
+            - Creates a new child Thickness.
+          * - :py:attr:`~CenterOfMass`
+            - CenterOfMass method.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~FreezeMeshOnAllParts`
+            - Run the FreezeMeshOnAllParts action.
+          * - :py:attr:`~GetBody`
+            - Gets the Body associated with the given IGeoBody
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPart`
+            - Gets the Part associated with the given IGeoPart
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InvertSuppressedBodySet`
+            - Invert all parts Suppressed property.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ResetBodyColors`
+            - Run the ResetBodyColors action.
+          * - :py:attr:`~UnfreezeMeshOnAllParts`
+            - Run the UnfreezeMeshOnAllParts action.
+          * - :py:attr:`~UnsuppressAllBodies`
+            - Unsuppress all the bodies that were suppressed.
+          * - :py:attr:`~UpdateGeometryFromSource`
+            - Run the UpdateGeometryFromSource action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ActiveBodies`
+            - Gets the ActiveBodies.
+          * - :py:attr:`~AnalysisType`
+            - Gets the AnalysisType.
+          * - :py:attr:`~AssignMaterialOnUpdate`
+            - Gets or sets the AssignMaterialOnUpdate.
+          * - :py:attr:`~AttachFileViaTempFile`
+            - Gets or sets the AttachFileViaTempFile.
+          * - :py:attr:`~AttributeKey`
+            - Gets the AttributeKey.
+          * - :py:attr:`~Attributes`
+            - Gets the Attributes.
+          * - :py:attr:`~Average`
+            - Gets the Average.
+          * - :py:attr:`~Bodies`
+            - Gets the Bodies.
+          * - :py:attr:`~CanChangeCADUnits`
+            - Gets the CanChangeCADUnits.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ComparePartsOnUpdate`
+            - Gets the ComparePartsOnUpdate.
+          * - :py:attr:`~ComparePartsTolerance`
+            - Gets the ComparePartsTolerance.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DecomposeDisjointGeometry`
+            - Gets the DecomposeDisjointGeometry.
+          * - :py:attr:`~DisplayStyle`
+            - Gets or sets the DisplayStyle.
+          * - :py:attr:`~ElementControl`
+            - Gets or sets the ElementControl.
+          * - :py:attr:`~Elements`
+            - Gets the Elements.
+          * - :py:attr:`~EnclosureAndSymmetryProcessing`
+            - Gets the EnclosureAndSymmetryProcessing.
+          * - :py:attr:`~EndPlaneRotationAboutX`
+            - Gets or sets the EndPlaneRotationAboutX.
+          * - :py:attr:`~EndPlaneRotationAboutY`
+            - Gets or sets the EndPlaneRotationAboutY.
+          * - :py:attr:`~FiberLength`
+            - Gets or sets the FiberLength.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GeometryPreferencesReadOnly`
+            - Gets the GeometryPreferencesReadOnly.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~ImportCoordinateSystems`
+            - Gets the ImportCoordinateSystems.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LengthUnit`
+            - Gets or sets the LengthUnit.
+          * - :py:attr:`~LengthX`
+            - Gets the LengthX.
+          * - :py:attr:`~LengthY`
+            - Gets the LengthY.
+          * - :py:attr:`~LengthZ`
+            - Gets the LengthZ.
+          * - :py:attr:`~LineBodies`
+            - Gets the LineBodies.
+          * - :py:attr:`~Mass`
+            - Gets the Mass.
+          * - :py:attr:`~MaterialProperties`
+            - Gets the MaterialProperties.
+          * - :py:attr:`~Maximum`
+            - Gets the Maximum.
+          * - :py:attr:`~MeshMetric`
+            - Gets the MeshMetric.
+          * - :py:attr:`~MeshVolume`
+            - Gets the MeshVolume.
+          * - :py:attr:`~Minimum`
+            - Gets the Minimum.
+          * - :py:attr:`~MixedImportResolution`
+            - Gets the MixedImportResolution.
+          * - :py:attr:`~Model2DBehavior`
+            - Gets or sets the Model2DBehavior.
+          * - :py:attr:`~NamedSelectionKey`
+            - Gets the NamedSelectionKey.
+          * - :py:attr:`~NamedSelections`
+            - Gets the NamedSelections.
+          * - :py:attr:`~Nodes`
+            - Gets the Nodes.
+          * - :py:attr:`~ParameterKey`
+            - Gets the ParameterKey.
+          * - :py:attr:`~Parameters`
+            - Gets the Parameters.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ReaderModeSavesUpdatedFile`
+            - Gets or sets the ReaderModeSavesUpdatedFile.
+          * - :py:attr:`~ScaleFactorValue`
+            - Gets or sets the ScaleFactorValue.
+          * - :py:attr:`~SheetSurfaceArea`
+            - Gets the SheetSurfaceArea.
+          * - :py:attr:`~SmartCADUpdate`
+            - Gets the SmartCADUpdate.
+          * - :py:attr:`~SolidBodies`
+            - Gets the SolidBodies.
+          * - :py:attr:`~Source`
+            - Gets the Source.
+          * - :py:attr:`~StandardDeviation`
+            - Gets the StandardDeviation.
+          * - :py:attr:`~SurfaceArea`
+            - Gets the SurfaceArea.
+          * - :py:attr:`~SurfaceBodies`
+            - Gets the SurfaceBodies.
+          * - :py:attr:`~TemporaryDirectory`
+            - Gets or sets the TemporaryDirectory.
+          * - :py:attr:`~Tolerance2D`
+            - Gets or sets the Tolerance2D.
+          * - :py:attr:`~Type`
+            - Gets the Type.
+          * - :py:attr:`~UseAssociativity`
+            - Gets the UseAssociativity.
+          * - :py:attr:`~UseInstances`
+            - Gets the UseInstances.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~Volume`
+            - Gets the Volume.
+          * - :py:attr:`~XCentroid`
+            - Gets the XCentroid.
+          * - :py:attr:`~YCentroid`
+            - Gets the YCentroid.
+          * - :py:attr:`~ZCentroid`
+            - Gets the ZCentroid.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ActiveBodies
+   :type: Optional[int]
+
+
+   
+   Gets the ActiveBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDimensionType]
+
+
+   
+   Gets the AnalysisType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AssignMaterialOnUpdate
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AssignMaterialOnUpdate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachFileViaTempFile
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AttachFileViaTempFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttributeKey
+   :type: Optional[str]
+
+
+   
+   Gets the AttributeKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Attributes
+   :type: Optional[bool]
+
+
+   
+   Gets the Attributes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Average
+   :type: Optional[float]
+
+
+   
+   Gets the Average.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Bodies
+   :type: Optional[int]
+
+
+   
+   Gets the Bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CanChangeCADUnits
+   :type: Optional[bool]
+
+
+   
+   Gets the CanChangeCADUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ComparePartsOnUpdate
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ComparePartsOnUpdateType]
+
+
+   
+   Gets the ComparePartsOnUpdate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ComparePartsTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ComparePartsToleranceType]
+
+
+   
+   Gets the ComparePartsTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DecomposeDisjointGeometry
+   :type: Optional[bool]
+
+
+   
+   Gets the DecomposeDisjointGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DisplayStyle
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PrototypeDisplayStyleType]
+
+
+   
+   Gets or sets the DisplayStyle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementControl
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ElementControl]
+
+
+   
+   Gets or sets the ElementControl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Elements
+   :type: Optional[int]
+
+
+   
+   Gets the Elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnclosureAndSymmetryProcessing
+   :type: Optional[bool]
+
+
+   
+   Gets the EnclosureAndSymmetryProcessing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EndPlaneRotationAboutX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the EndPlaneRotationAboutX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EndPlaneRotationAboutY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the EndPlaneRotationAboutY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FiberLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the FiberLength.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometryPreferencesReadOnly
+   :type: Optional[bool]
+
+
+   
+   Gets the GeometryPreferencesReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportCoordinateSystems
+   :type: Optional[bool]
+
+
+   
+   Gets the ImportCoordinateSystems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSPrototypeGroupAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthUnit
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the LengthUnit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the LengthX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the LengthY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the LengthZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineBodies
+   :type: Optional[bool]
+
+
+   
+   Gets the LineBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Mass
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the Mass.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialProperties
+   :type: Optional[bool]
+
+
+   
+   Gets the MaterialProperties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Maximum
+   :type: Optional[float]
+
+
+   
+   Gets the Maximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshMetric
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshMetricType]
+
+
+   
+   Gets the MeshMetric.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshVolume
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the MeshVolume.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Minimum
+   :type: Optional[float]
+
+
+   
+   Gets the Minimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MixedImportResolution
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SecondaryImportPrefType]
+
+
+   
+   Gets the MixedImportResolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Model2DBehavior
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Model2DBehavior]
+
+
+   
+   Gets or sets the Model2DBehavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelectionKey
+   :type: Optional[str]
+
+
+   
+   Gets the NamedSelectionKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelections
+   :type: Optional[bool]
+
+
+   
+   Gets the NamedSelections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Nodes
+   :type: Optional[int]
+
+
+   
+   Gets the Nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ParameterKey
+   :type: Optional[str]
+
+
+   
+   Gets the ParameterKey.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parameters
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ImportParameterType]
+
+
+   
+   Gets the Parameters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReaderModeSavesUpdatedFile
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ReaderModeSavesUpdatedFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScaleFactorValue
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ScaleFactorValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SheetSurfaceArea
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the SheetSurfaceArea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SmartCADUpdate
+   :type: Optional[bool]
+
+
+   
+   Gets the SmartCADUpdate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidBodies
+   :type: Optional[bool]
+
+
+   
+   Gets the SolidBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Source
+   :type: Optional[str]
+
+
+   
+   Gets the Source.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StandardDeviation
+   :type: Optional[float]
+
+
+   
+   Gets the StandardDeviation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SurfaceArea
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the SurfaceArea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SurfaceBodies
+   :type: Optional[bool]
+
+
+   
+   Gets the SurfaceBodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TemporaryDirectory
+   :type: Optional[str]
+
+
+   
+   Gets or sets the TemporaryDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Tolerance2D
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Tolerance2D.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[str]
+
+
+   
+   Gets the Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseAssociativity
+   :type: Optional[bool]
+
+
+   
+   Gets the UseAssociativity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseInstances
+   :type: Optional[bool]
+
+
+   
+   Gets the UseInstances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Volume
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the Volume.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XCentroid
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the XCentroid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YCentroid
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the YCentroid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZCentroid
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the ZCentroid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDistributedMass() -> Ansys.ACT.Automation.Mechanical.DistributedMass
+
+   
+   Creates a new DistributedMass
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElementOrientation() -> Ansys.ACT.Automation.Mechanical.ElementOrientation
+
+   
+   Creates a new ElementOrientation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedElementOrientationExternalData() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedElementOrientationGroup
+
+   
+   Creates a new Imported Element Orientation (External Data).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImportedThicknessExternalData() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedThicknessGroup
+
+   
+   Creates a new Imported Thickness (External Data).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLayeredSection() -> Ansys.ACT.Automation.Mechanical.LayeredSection
+
+   
+   Creates a new child LayeredSection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddPointMass() -> Ansys.ACT.Automation.Mechanical.PointMass
+
+   
+   Creates a new PointMass
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddSurfaceCoating() -> Ansys.ACT.Automation.Mechanical.SurfaceCoating
+
+   
+   Creates a new SurfaceCoating
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThermalPointMass() -> Ansys.ACT.Automation.Mechanical.ThermalPointMass
+
+   
+   Creates a new ThermalPointMass
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddThickness() -> Ansys.ACT.Automation.Mechanical.Thickness
+
+   
+   Creates a new child Thickness.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CenterOfMass(geoBodies: List[Ansys.ACT.Interfaces.Geometry.IBaseGeoBody], pointMasses: List[Ansys.ACT.Automation.Mechanical.PointMass], distributedMasses: List[Ansys.ACT.Automation.Mechanical.DistributedMass]) -> Ansys.Core.Units.Quantity
+
+   
+   CenterOfMass method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(paramPath: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FreezeMeshOnAllParts() -> None
+
+   
+   Run the FreezeMeshOnAllParts action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBody(geoBody: Ansys.ACT.Interfaces.Geometry.IBaseGeoBody) -> Ansys.ACT.Automation.Mechanical.Body
+
+   
+   Gets the Body associated with the given IGeoBody
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPart(geoPart: Ansys.ACT.Interfaces.Geometry.IBaseGeoPart) -> Ansys.ACT.Automation.Mechanical.Part
+
+   
+   Gets the Part associated with the given IGeoPart
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InvertSuppressedBodySet() -> None
+
+   
+   Invert all parts Suppressed property. 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(paramPath: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ResetBodyColors() -> None
+
+   
+   Run the ResetBodyColors action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnfreezeMeshOnAllParts() -> None
+
+   
+   Run the UnfreezeMeshOnAllParts action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnsuppressAllBodies() -> None
+
+   
+   Unsuppress all the bodies that were suppressed. 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UpdateGeometryFromSource() -> None
+
+   
+   Run the UpdateGeometryFromSource action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

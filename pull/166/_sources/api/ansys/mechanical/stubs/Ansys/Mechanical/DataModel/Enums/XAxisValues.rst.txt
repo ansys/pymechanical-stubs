@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`XAxisValues`
+====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.XAxisValues(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the XAxisValues.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: XAxisValues
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CumulativeIteration`
+            - 
+          * - :py:attr:`~Time`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CumulativeIteration
+   :value: 1
+
+
+.. py:attribute:: Time
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,162 @@
+.. vale off
+
+
+
+:class:`ExternalLoadDisplayDataType`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplayDataType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ExternalLoadDisplayDataType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ExternalLoadDisplayDataType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ConvectionCoefficient`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~ForceDensity`
+            - 
+          * - :py:attr:`~HeatFlux`
+            - 
+          * - :py:attr:`~HeatGeneration`
+            - 
+          * - :py:attr:`~MetalFraction`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~Rotation`
+            - 
+          * - :py:attr:`~RotationPrincipals`
+            - 
+          * - :py:attr:`~Strain`
+            - 
+          * - :py:attr:`~Stress`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~Thickness`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ConvectionCoefficient
+   :value: 6
+
+
+.. py:attribute:: Displacement
+   :value: 8
+
+
+.. py:attribute:: Force
+   :value: 11
+
+
+.. py:attribute:: ForceDensity
+   :value: 19
+
+
+.. py:attribute:: HeatFlux
+   :value: 16
+
+
+.. py:attribute:: HeatGeneration
+   :value: 17
+
+
+.. py:attribute:: MetalFraction
+   :value: 20
+
+
+.. py:attribute:: Pressure
+   :value: 12
+
+
+.. py:attribute:: Rotation
+   :value: 9
+
+
+.. py:attribute:: RotationPrincipals
+   :value: 10
+
+
+.. py:attribute:: Strain
+   :value: 15
+
+
+.. py:attribute:: Stress
+   :value: 14
+
+
+.. py:attribute:: Temperature
+   :value: 7
+
+
+.. py:attribute:: Thickness
+   :value: 18
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: Velocity
+   :value: 13
+
+
+
+
+
+
+.. vale on

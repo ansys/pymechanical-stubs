@@ -1,0 +1,132 @@
+.. vale off
+
+
+
+:class:`ModelColoring`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModelColoring(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Model display coloring.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModelColoring
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ByAssembly`
+            - 
+          * - :py:attr:`~ByBodyColor`
+            - 
+          * - :py:attr:`~ByBodyType`
+            - 
+          * - :py:attr:`~ByCondensedParts`
+            - 
+          * - :py:attr:`~ByCrossSection`
+            - 
+          * - :py:attr:`~ByMaterial`
+            - 
+          * - :py:attr:`~ByNonLinear`
+            - 
+          * - :py:attr:`~ByPart`
+            - 
+          * - :py:attr:`~ByStiffness`
+            - 
+          * - :py:attr:`~ByThickness`
+            - 
+          * - :py:attr:`~ByVisibleThickness`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ByAssembly
+   :value: 7
+
+
+.. py:attribute:: ByBodyColor
+   :value: 0
+
+
+.. py:attribute:: ByBodyType
+   :value: 10
+
+
+.. py:attribute:: ByCondensedParts
+   :value: 8
+
+
+.. py:attribute:: ByCrossSection
+   :value: 9
+
+
+.. py:attribute:: ByMaterial
+   :value: 2
+
+
+.. py:attribute:: ByNonLinear
+   :value: 3
+
+
+.. py:attribute:: ByPart
+   :value: 5
+
+
+.. py:attribute:: ByStiffness
+   :value: 4
+
+
+.. py:attribute:: ByThickness
+   :value: 1
+
+
+.. py:attribute:: ByVisibleThickness
+   :value: 6
+
+
+
+
+
+
+.. vale on

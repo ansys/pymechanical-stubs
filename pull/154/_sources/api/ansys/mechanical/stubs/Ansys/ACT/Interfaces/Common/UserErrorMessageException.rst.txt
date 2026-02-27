@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`UserErrorMessageException`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.UserErrorMessageException
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a user exception used to send error message to the end user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

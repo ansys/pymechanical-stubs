@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`LoadVariationSubOption`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVariationSubOption(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadVariationSubOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadVariationSubOption
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AverageFilmTemperature`
+            - 
+          * - :py:attr:`~BulkTemperature`
+            - 
+          * - :py:attr:`~ConvectionEnd`
+            - 
+          * - :py:attr:`~DifferenceOfSurfaceAndBulkTemperature`
+            - 
+          * - :py:attr:`~SurfaceTemperature`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AverageFilmTemperature
+   :value: 2
+
+
+.. py:attribute:: BulkTemperature
+   :value: 4
+
+
+.. py:attribute:: ConvectionEnd
+   :value: 6
+
+
+.. py:attribute:: DifferenceOfSurfaceAndBulkTemperature
+   :value: 5
+
+
+.. py:attribute:: SurfaceTemperature
+   :value: 3
+
+
+
+
+
+
+.. vale on

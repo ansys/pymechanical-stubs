@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`StateMessageTypes`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.StateMessageTypes(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the selection type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StateMessageTypes
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Error`
+            - 
+          * - :py:attr:`~Information`
+            - 
+          * - :py:attr:`~Warning`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Error
+   :value: 2
+
+
+.. py:attribute:: Information
+   :value: 0
+
+
+.. py:attribute:: Warning
+   :value: 1
+
+
+
+
+
+
+.. vale on

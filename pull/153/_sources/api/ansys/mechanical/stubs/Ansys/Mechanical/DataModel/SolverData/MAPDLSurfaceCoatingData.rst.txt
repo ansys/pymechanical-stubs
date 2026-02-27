@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`MAPDLSurfaceCoatingData`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.SolverData.MAPDLSurfaceCoatingData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLSurfaceCoatingData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MaterialId`
+            - Gets the Material Id number for the surface coating.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: MaterialId
+   :type: Optional[int]
+
+
+   
+   Gets the Material Id number for the surface coating.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

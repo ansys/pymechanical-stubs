@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`IMechanicalUserLoad`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserLoad
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Mechanical user load.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

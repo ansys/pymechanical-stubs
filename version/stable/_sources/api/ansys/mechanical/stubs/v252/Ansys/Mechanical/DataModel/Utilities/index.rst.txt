@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Utilities``
+=============================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Utilities
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Charts`
+            - Charts module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Dataset`
+            - Dataset module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.TabularData`
+            - TabularData module.
+
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.BeamCoordinateSystem`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.CenterOfGravityCoordinateSystem`
+            - 
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.RigidBodyTransformationMatrix`
+            - A 4x4 transformation matrix, to be used explicitly for rigid body transformations. The
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Charts</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Utilities/Charts/index>
+    <span class="nf nf-md-package"></span> Dataset</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Utilities/Dataset/index>
+    <span class="nf nf-md-package"></span> TabularData</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Utilities/TabularData/index>
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> BeamCoordinateSystem</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Utilities/BeamCoordinateSystem>
+    <span class="nf nf-cod-symbol_class"></span> CenterOfGravityCoordinateSystem</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Utilities/CenterOfGravityCoordinateSystem>
+    <span class="nf nf-cod-symbol_class"></span> RigidBodyTransformationMatrix</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Utilities/RigidBodyTransformationMatrix>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Utilities module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

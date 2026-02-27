@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`WorkflowType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.WorkflowType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the “Steps” tree node and reflects the type of workflow being configured. Based on the type of workflow different rules are applied which define the applicable order and type of operations which can be added.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: WorkflowType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BEMAcoustics`
+            - 
+          * - :py:attr:`~FEMAcousticsExternal`
+            - 
+          * - :py:attr:`~FEMAcousticsInternal`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BEMAcoustics
+   :value: 6
+
+
+.. py:attribute:: FEMAcousticsExternal
+   :value: 4
+
+
+.. py:attribute:: FEMAcousticsInternal
+   :value: 5
+
+
+
+
+
+
+.. vale on

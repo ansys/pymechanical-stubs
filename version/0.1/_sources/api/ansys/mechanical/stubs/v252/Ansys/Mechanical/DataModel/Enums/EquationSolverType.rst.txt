@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`EquationSolverType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.EquationSolverType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the EquationSolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EquationSolverType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AMG`
+            - 
+          * - :py:attr:`~Frontal`
+            - 
+          * - :py:attr:`~ICCG`
+            - 
+          * - :py:attr:`~JCG`
+            - 
+          * - :py:attr:`~PCG`
+            - 
+          * - :py:attr:`~QMR`
+            - 
+          * - :py:attr:`~Sparse`
+            - 
+          * - :py:attr:`~Supplied`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AMG
+   :value: 6
+
+
+.. py:attribute:: Frontal
+   :value: 0
+
+
+.. py:attribute:: ICCG
+   :value: 3
+
+
+.. py:attribute:: JCG
+   :value: 1
+
+
+.. py:attribute:: PCG
+   :value: 2
+
+
+.. py:attribute:: QMR
+   :value: 7
+
+
+.. py:attribute:: Sparse
+   :value: 4
+
+
+.. py:attribute:: Supplied
+   :value: 5
+
+
+
+
+
+
+.. vale on

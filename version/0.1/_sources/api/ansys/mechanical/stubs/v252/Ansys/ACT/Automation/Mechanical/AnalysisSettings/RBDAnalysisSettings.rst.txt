@@ -1,0 +1,1253 @@
+.. vale off
+
+
+
+:class:`RBDAnalysisSettings`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AnalysisSettings.RBDAnalysisSettings
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: RBDAnalysisSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~DeleteAllRestartPoints`
+            - DeleteAllRestartPoints method.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetAutomaticTimeStepping`
+            - Gets the Automatic Time Stepping at a given solution step.
+          * - :py:attr:`~GetCarryOverTimeStep`
+            - Gets the Carry Over Time Step at a given solution step.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetInitialTimeStep`
+            - Gets the Initial Time Step at a given solution step.
+          * - :py:attr:`~GetMaximumTimeStep`
+            - Gets the Maximum Time Step at a given solution step.
+          * - :py:attr:`~GetMinimumTimeStep`
+            - Gets the Minimum Time Step at a given solution step.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetStepEndTime`
+            - Gets the Step End Time at a given solution step.
+          * - :py:attr:`~GetStoreResultAt`
+            - Gets the StoreResultAt setting at a given solution step.
+          * - :py:attr:`~GetStoreResultAtValue`
+            - Gets the StoreResultAtValue setting at a given solution step.
+          * - :py:attr:`~GetTimeStep`
+            - Gets the (fixed) Time Step at a given solution step.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SetAutomaticTimeStepping`
+            - Sets the Automatic Time Stepping for a given solution step.
+          * - :py:attr:`~SetCarryOverTimeStep`
+            - Sets the Carry Over Time Step for a given solution step.
+          * - :py:attr:`~SetInitialTimeStep`
+            - Sets the Initial Time Step for a given solution step.
+          * - :py:attr:`~SetMaximumTimeStep`
+            - Sets the Maximum Time Step for a given solution step.
+          * - :py:attr:`~SetMinimumTimeStep`
+            - Sets the Minimum Time Step for a given solution step.
+          * - :py:attr:`~SetStepEndTime`
+            - Sets the Step End Time for a given solution step.
+          * - :py:attr:`~SetStoreResultAt`
+            - Sets the StoreResultAt setting for a given solution step.
+          * - :py:attr:`~SetStoreResultAtValue`
+            - Sets the StoreResultAtValue setting for a given solution step.
+          * - :py:attr:`~SetTimeStep`
+            - Sets the (fixed) Time Step for a given solution step.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AssemblyType`
+            - Gets or sets the AssemblyType.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~ConstraintEquationResidualTolerance`
+            - Gets or sets the ConstraintEquationResidualTolerance activity.
+          * - :py:attr:`~ConstraintEquationResidualToleranceValue`
+            - Gets or sets the ConstraintEquationResidualToleranceValue.
+          * - :py:attr:`~CorrectionType`
+            - Gets or sets the CorrectionType.
+          * - :py:attr:`~CurrentStepNumber`
+            - Gets or sets the CurrentStepNumber.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DropoffTolerance`
+            - Gets or sets the DropoffTolerance.
+          * - :py:attr:`~EnergyAccuracyTolerance`
+            - Gets or sets the EnergyAccuracyTolerance activity.
+          * - :py:attr:`~EnergyAccuracyToleranceValue`
+            - Gets or sets the EnergyAccuracyToleranceValue.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~ForceResidualTolerance`
+            - Gets or sets the ForceResidualTolerance activity.
+          * - :py:attr:`~ForceResidualToleranceValue`
+            - Gets or sets the ForceResidualToleranceValue.
+          * - :py:attr:`~Graph`
+            - Graph property.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
+          * - :py:attr:`~NumberOfSteps`
+            - Gets or sets the NumberOfSteps.
+          * - :py:attr:`~NumericalDampingTolerance`
+            - Gets or sets the NumericalDamping activity.
+          * - :py:attr:`~NumericalDampingValue`
+            - Gets or sets the NumericalDampingValue.
+          * - :py:attr:`~PerformStaticAnalysis`
+            - Gets or sets the .
+          * - :py:attr:`~PositionCorrection`
+            - Gets or sets the PositionCorrection.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RelativeAssemblyTolerance`
+            - Gets or sets the RelativeAssemblyTolerance activity.
+          * - :py:attr:`~RelativeAssemblyToleranceValue`
+            - Gets or sets the RelativeAssemblyToleranceValue.
+          * - :py:attr:`~ScratchSolverFilesDirectory`
+            - Gets the ScratchSolverFilesDirectory.
+          * - :py:attr:`~SolverFilesDirectory`
+            - Gets the SolverFilesDirectory.
+          * - :py:attr:`~TimeIntegrationType`
+            - Gets or sets the Integration Method.
+          * - :py:attr:`~VelocityConstraintEquationResidualTolerance`
+            - Gets or sets the VelocityConstraintEquationResidualTolerance activity.
+          * - :py:attr:`~VelocityConstraintEquationResidualToleranceValue`
+            - Gets or sets the ConstraintEquationResidualToleranceValue.
+          * - :py:attr:`~VelocityCorrection`
+            - Gets or sets the VelocityCorrection.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AssemblyType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDCorrectionType]
+
+
+   
+   Gets or sets the AssemblyType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConstraintEquationResidualTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDProgramControlType]
+
+
+   
+   Gets or sets the ConstraintEquationResidualTolerance activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConstraintEquationResidualToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ConstraintEquationResidualToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CorrectionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDCorrectionType]
+
+
+   
+   Gets or sets the CorrectionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentStepNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the CurrentStepNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DropoffTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the DropoffTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnergyAccuracyTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDProgramControlType]
+
+
+   
+   Gets or sets the EnergyAccuracyTolerance activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnergyAccuracyToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the EnergyAccuracyToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ForceResidualTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDProgramControlType]
+
+
+   
+   Gets or sets the ForceResidualTolerance activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ForceResidualToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ForceResidualToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Graph
+   :type: Optional[Ansys.Mechanical.Graphics.AnalysisSettingsGraph]
+
+
+   
+   Graph property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Any]
+
+
+   
+   InternalObject property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSteps
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumericalDampingTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDProgramControlType]
+
+
+   
+   Gets or sets the NumericalDamping activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumericalDampingValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the NumericalDampingValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PerformStaticAnalysis
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDDoStaticAnalysisType]
+
+
+   
+   Gets or sets the .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PositionCorrection
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the PositionCorrection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RelativeAssemblyTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDProgramControlType]
+
+
+   
+   Gets or sets the RelativeAssemblyTolerance activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RelativeAssemblyToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RelativeAssemblyToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScratchSolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the ScratchSolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the SolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeIntegrationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDTimeIntegrationType]
+
+
+   
+   Gets or sets the Integration Method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VelocityConstraintEquationResidualTolerance
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDProgramControlType]
+
+
+   
+   Gets or sets the VelocityConstraintEquationResidualTolerance activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VelocityConstraintEquationResidualToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ConstraintEquationResidualToleranceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VelocityCorrection
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the VelocityCorrection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllRestartPoints() -> None
+
+   
+   DeleteAllRestartPoints method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAutomaticTimeStepping(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.AutomaticTimeStepping
+
+   
+   Gets the Automatic Time Stepping at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCarryOverTimeStep(stepNumber: int) -> bool
+
+   
+   Gets the Carry Over Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetInitialTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Initial Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMaximumTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Maximum Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMinimumTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Minimum Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStepEndTime(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Step End Time at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStoreResultAt(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.TimePointsOptions
+
+   
+   Gets the StoreResultAt setting at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStoreResultAtValue(stepNumber: int) -> int
+
+   
+   Gets the StoreResultAtValue setting at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the (fixed) Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetAutomaticTimeStepping(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.AutomaticTimeStepping) -> None
+
+   
+   Sets the Automatic Time Stepping for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCarryOverTimeStep(stepNumber: int, value: bool) -> None
+
+   
+   Sets the Carry Over Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetInitialTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Initial Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMaximumTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Maximum Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMinimumTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Minimum Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStepEndTime(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Step End Time for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStoreResultAt(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.TimePointsOptions) -> None
+
+   
+   Sets the StoreResultAt setting for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStoreResultAtValue(stepNumber: int, value: int) -> None
+
+   
+   Sets the StoreResultAtValue setting for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the (fixed) Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

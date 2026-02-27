@@ -1,0 +1,85 @@
+.. vale off
+
+
+
+:class:`InterpolateRPM`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.InterpolateRPM(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Interpolate RPM enables users to perform linear interpolation of RPM
+           and the corresponding harmonic forces and moments between two known RPM results from the maxwell solution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: InterpolateRPM
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EquallySpacedPoints`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EquallySpacedPoints
+   :value: 1
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+.. py:attribute:: UserDefined
+   :value: 2
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PortPosition`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PortPosition(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PortPosition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PortPosition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Exterior`
+            - 
+          * - :py:attr:`~Interior`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Exterior
+   :value: 0
+
+
+.. py:attribute:: Interior
+   :value: 1
+
+
+
+
+
+
+.. vale on

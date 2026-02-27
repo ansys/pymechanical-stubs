@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`DataRepresentation`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   enumeration used to set the return object for the magnitude property in boundary conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DataRepresentation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Field`
+            - 
+          * - :py:attr:`~Flexible`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Field
+   :value: 1
+
+
+.. py:attribute:: Flexible
+   :value: 2
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`CylindricalFacesOption`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CylindricalFacesOption(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CylindricalFacesOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CylindricalFacesOption
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Exclude`
+            - 
+          * - :py:attr:`~Include`
+            - 
+          * - :py:attr:`~Only`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Exclude
+   :value: 1
+
+
+.. py:attribute:: Include
+   :value: 0
+
+
+.. py:attribute:: Only
+   :value: 2
+
+
+
+
+
+
+.. vale on

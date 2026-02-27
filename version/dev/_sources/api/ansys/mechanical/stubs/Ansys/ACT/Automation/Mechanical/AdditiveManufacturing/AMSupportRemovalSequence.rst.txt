@@ -1,0 +1,179 @@
+.. vale off
+
+
+
+:class:`AMSupportRemovalSequence`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportRemovalSequence
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: AMSupportRemovalSequence
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Adds a support or base removal step.
+          * - :py:attr:`~Contains`
+            - Returns true if the step exists in the sequencer. If not, returns false
+          * - :py:attr:`~IndexOf`
+            - Returns index of removal object
+          * - :py:attr:`~Insert`
+            - Inserts a given step at particular index(zero based)
+          * - :py:attr:`~RemoveAt`
+            - Remove AM step at index.
+          * - :py:attr:`~Swap`
+            - Swaps two steps in the Removal sequence.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> None
+
+.. code-block:: text
+
+   Adds a support or base removal step.
+   Throws a notSupportedException if the same step was already added.
+   Usage:
+    removalSequence.Add(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval())
+    removalSequence.Add(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj))
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Contains(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> bool
+
+.. code-block:: text
+
+   Returns true if the step exists in the sequencer. If not, returns false
+   Usage:
+       index1 = removalSequence.Contains(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval());
+       index2 = removalSequence.Contains(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: IndexOf(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> int
+
+.. code-block:: text
+
+   Returns index of removal object
+   Returns -1 if removal object not found
+   Usage:
+   C#
+       index1 = removalSequence.IndexOf(new Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval());
+       index2 = removalSequence.IndexOf(new Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
+   Python
+       index1 = removalSequence.IndexOf(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval());
+       index2 = removalSequence.IndexOf(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Insert(index: int, item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> None
+
+.. code-block:: text
+
+   Inserts a given step at particular index(zero based)
+   Throws an IndexOutOfRangeException if the step is being inserted out of range.
+   Throws a NotSupportedException if the insertion is invalid
+   Usage:
+    Sequence.Insert(0,Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.UserStep())
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveAt(index: int) -> None
+
+.. code-block:: text
+
+   Remove AM step at index.
+   Throws IndexOutOfRangeException if index is out of range
+   Usage:
+    removalSequence.RemoveAt(0)
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Swap(item1: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep, item2: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> bool
+
+.. code-block:: text
+
+   Swaps two steps in the Removal sequence.
+   Returns true if successful and false if unsuccessful
+   Usage:
+   C#
+    removalSequence.Swap(
+       new Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval(),
+       new Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
+   Python
+    removalSequence.Swap(
+       Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval(),
+       Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj))
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

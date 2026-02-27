@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`BoundaryConditionAlongFiber`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.BoundaryConditionAlongFiber(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the BoundaryConditionAlongFiber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BoundaryConditionAlongFiber
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~Free`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Displacement
+   :value: 2
+
+
+.. py:attribute:: Force
+   :value: 1
+
+
+.. py:attribute:: Free
+   :value: 0
+
+
+
+
+
+
+.. vale on

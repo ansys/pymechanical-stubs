@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`AutomaticNodeMovementMethod`
+====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.AutomaticNodeMovementMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the method of AutoNodeMove under PCTet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AutomaticNodeMovementMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Aggressive`
+            - 
+          * - :py:attr:`~Conservative`
+            - 
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Aggressive
+   :value: 3
+
+
+.. py:attribute:: Conservative
+   :value: 2
+
+
+.. py:attribute:: Custom
+   :value: 4
+
+
+.. py:attribute:: Off
+   :value: 0
+
+
+.. py:attribute:: ProgramControlled
+   :value: 1
+
+
+
+
+
+
+.. vale on

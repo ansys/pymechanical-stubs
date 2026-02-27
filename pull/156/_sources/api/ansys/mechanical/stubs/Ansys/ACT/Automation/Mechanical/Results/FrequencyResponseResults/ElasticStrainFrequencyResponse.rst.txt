@@ -1,0 +1,1637 @@
+.. vale off
+
+
+
+:class:`ElasticStrainFrequencyResponse`
+=======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ElasticStrainFrequencyResponse
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a ElasticStrainFrequencyResponse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ElasticStrainFrequencyResponse
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateAllResults`
+            - Run the EvaluateAllResults action.
+          * - :py:attr:`~ExportAnimation`
+            - Run the ExportAnimation action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnDefinition`
+            - Run the RenameBasedOnDefinition action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AccelerationType`
+            - Gets or sets the AccelerationType.
+          * - :py:attr:`~BoundaryCondition`
+            - Gets or sets the BoundaryCondition.
+          * - :py:attr:`~ChartDimensions`
+            - Gets or sets the Chart Dimensions
+          * - :py:attr:`~ChartViewingStyle`
+            - Gets or sets the ChartViewingStyle.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CoordinateSystem`
+            - Gets or sets the CoordinateSystem. Accepts/Returns None if it is the Solution Coordinate System.
+          * - :py:attr:`~CurvesAppearanceDisplay`
+            - Gets or sets the CurvesAppearanceDisplay.
+          * - :py:attr:`~CutFrequency`
+            - Gets or sets the CutFrequency.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DeformationType`
+            - Gets or sets the DeformationType.
+          * - :py:attr:`~DpfEvaluation`
+            - Gets or sets the DpfEvaluation.
+          * - :py:attr:`~Duration`
+            - Gets or sets the Duration.
+          * - :py:attr:`~EnhancedTracking`
+            - Gets the EnhancedTracking.
+          * - :py:attr:`~FilterMaximum`
+            - Gets the FilterMaximum.
+          * - :py:attr:`~FilterMinimum`
+            - Gets the FilterMinimum.
+          * - :py:attr:`~FilterType`
+            - Gets or sets the FilterType.
+          * - :py:attr:`~FrequencyAtMaximumAmplitude`
+            - Gets the FrequencyAtMaximumAmplitude.
+          * - :py:attr:`~GeometrySelectionString`
+            - Gets or sets the GeometrySelectionString.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~ImaginaryAtMaximumAmplitude`
+            - Gets the ImaginaryAtMaximumAmplitude.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsSolved`
+            - Gets the IsSolved.
+          * - :py:attr:`~LoadStepNumber`
+            - Gets or sets the LoadStepNumber.
+          * - :py:attr:`~Location`
+            - Gets or sets the Location.
+          * - :py:attr:`~Maximum`
+            - Gets the Maximum.
+          * - :py:attr:`~MaximumAmplitude`
+            - Gets the MaximumAmplitude.
+          * - :py:attr:`~MaximumFrequency`
+            - Gets or sets the MaximumFrequency.
+          * - :py:attr:`~Minimum`
+            - Gets the Minimum.
+          * - :py:attr:`~MinimumFrequency`
+            - Gets or sets the MinimumFrequency.
+          * - :py:attr:`~NamedSelections`
+            - Gets or sets the NamedSelections.
+          * - :py:attr:`~NormalOrientation`
+            - Gets or sets the NormalOrientation.
+          * - :py:attr:`~PhaseAngle`
+            - Gets the PhaseAngle.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RPMSelection`
+            - Gets or sets the RPM Selection value at which the results are evaluated.
+          * - :py:attr:`~RealAtMaximumAmplitude`
+            - Gets the RealAtMaximumAmplitude.
+          * - :py:attr:`~RemotePointSelection`
+            - Gets or sets the RemotePointSelection.
+          * - :py:attr:`~ReportedFrequency`
+            - Gets the ReportedFrequency.
+          * - :py:attr:`~RequestedFrequency`
+            - Gets or sets the RequestedFrequency.
+          * - :py:attr:`~ResultChartType`
+            - Gets the ResultChartType.
+          * - :py:attr:`~SectorNumber`
+            - Gets or sets the SectorNumber.
+          * - :py:attr:`~ShearOrientation`
+            - Gets or sets the ShearOrientation.
+          * - :py:attr:`~SpatialResolution`
+            - Gets or sets the SpatialResolution.
+          * - :py:attr:`~Spring`
+            - Gets or sets the Spring.
+          * - :py:attr:`~StressStrainType`
+            - Gets or sets the StressStrainType.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~TimeHistoryDisplay`
+            - Gets or sets the TimeHistoryDisplay.
+          * - :py:attr:`~UseParentFrequencyRange`
+            - Gets or sets the UseParentFrequencyRange.
+          * - :py:attr:`~VelocityType`
+            - Gets or sets the VelocityType.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~XAxisValues`
+            - Gets or sets the XAxisValues.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AccelerationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TotalOrDirectional]
+
+
+   
+   Gets or sets the AccelerationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BoundaryCondition
+   :type: Optional[Ansys.ACT.Automation.Mechanical.BoundaryConditions.GenericBoundaryCondition]
+
+
+   
+   Gets or sets the BoundaryCondition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ChartDimensions
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ChartDimensions]
+
+
+   
+   Gets or sets the Chart Dimensions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ChartViewingStyle
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ChartAxisScaleType]
+
+
+   
+   Gets or sets the ChartViewingStyle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   Gets or sets the CoordinateSystem. Accepts/Returns None if it is the Solution Coordinate System.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurvesAppearanceDisplay
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ChartPlotStyle]
+
+
+   
+   Gets or sets the CurvesAppearanceDisplay.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CutFrequency
+   :type: Optional[float]
+
+
+   
+   Gets or sets the CutFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeformationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TotalOrDirectional]
+
+
+   
+   Gets or sets the DeformationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DpfEvaluation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DpfEvaluationType]
+
+
+   
+   Gets or sets the DpfEvaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Duration
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Duration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnhancedTracking
+   :type: Optional[bool]
+
+
+   
+   Gets the EnhancedTracking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilterMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the FilterMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilterMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the FilterMinimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FilterType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.FilterType]
+
+
+   
+   Gets or sets the FilterType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FrequencyAtMaximumAmplitude
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the FrequencyAtMaximumAmplitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometrySelectionString
+   :type: Optional[str]
+
+
+   
+   Gets or sets the GeometrySelectionString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImaginaryAtMaximumAmplitude
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the ImaginaryAtMaximumAmplitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSResultChartAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsSolved
+   :type: Optional[bool]
+
+
+   
+   Gets the IsSolved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadStepNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the LoadStepNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionInfo]
+
+
+   
+   Gets or sets the Location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Maximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the Maximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumAmplitude
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the MaximumAmplitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MaximumFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Minimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the Minimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MinimumFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NamedSelections
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets or sets the NamedSelections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalOrientation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.NormalOrientationType]
+
+
+   
+   Gets or sets the NormalOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PhaseAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the PhaseAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RPMSelection
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RPM Selection value at which the results are evaluated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RealAtMaximumAmplitude
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the RealAtMaximumAmplitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RemotePointSelection
+   :type: Optional[Ansys.ACT.Automation.Mechanical.RemotePoint]
+
+
+   
+   Gets or sets the RemotePointSelection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReportedFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the ReportedFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RequestedFrequency
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RequestedFrequency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultChartType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ChartResultType]
+
+
+   
+   Gets the ResultChartType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SectorNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the SectorNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShearOrientation
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ShearOrientationType]
+
+
+   
+   Gets or sets the ShearOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SpatialResolution
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MultipleNodeType]
+
+
+   
+   Gets or sets the SpatialResolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Spring
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Connections.Spring]
+
+
+   
+   Gets or sets the Spring.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StressStrainType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.StressStrainType]
+
+
+   
+   Gets or sets the StressStrainType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeHistoryDisplay
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TimeHistoryDisplayType]
+
+
+   
+   Gets or sets the TimeHistoryDisplay.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseParentFrequencyRange
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the UseParentFrequencyRange.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VelocityType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.TotalOrDirectional]
+
+
+   
+   Gets or sets the VelocityType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XAxisValues
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.XAxisValues]
+
+
+   
+   Gets or sets the XAxisValues.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllResults() -> None
+
+   
+   Run the EvaluateAllResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportAnimation(filePath: str, format: Ansys.Mechanical.DataModel.Enums.GraphicsAnimationExportFormat, settings: Ansys.Mechanical.Graphics.AnimationExportSettings) -> None
+
+   
+   Run the ExportAnimation action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnDefinition() -> None
+
+   
+   Run the RenameBasedOnDefinition action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

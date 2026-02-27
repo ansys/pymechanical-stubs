@@ -1,0 +1,193 @@
+.. vale off
+
+
+
+:class:`VariableType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.VariableType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   An enumeration of the different variable types supported by the tabular data
+   T:Ansys.Mechanical.Interfaces.IDataSeries implementation "Ansys.ACT.Automation.Mechanical.Table.Column".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VariableType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BodyForceDensity`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~ElementId`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~HeatFlux`
+            - 
+          * - :py:attr:`~HeatGeneration`
+            - 
+          * - :py:attr:`~HeatRate`
+            - 
+          * - :py:attr:`~HeatTransferCoefficient`
+            - 
+          * - :py:attr:`~NodeId`
+            - 
+          * - :py:attr:`~OrientationAngle`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~Strain`
+            - 
+          * - :py:attr:`~Stress`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~Thickness`
+            - 
+          * - :py:attr:`~UserField`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+          * - :py:attr:`~Volume`
+            - 
+          * - :py:attr:`~XCoordinate`
+            - 
+          * - :py:attr:`~YCoordinate`
+            - 
+          * - :py:attr:`~ZCoordinate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BodyForceDensity
+   :value: 17
+
+
+.. py:attribute:: Displacement
+   :value: 12
+
+
+.. py:attribute:: ElementId
+   :value: 4
+
+
+.. py:attribute:: Force
+   :value: 13
+
+
+.. py:attribute:: HeatFlux
+   :value: 8
+
+
+.. py:attribute:: HeatGeneration
+   :value: 9
+
+
+.. py:attribute:: HeatRate
+   :value: 10
+
+
+.. py:attribute:: HeatTransferCoefficient
+   :value: 7
+
+
+.. py:attribute:: NodeId
+   :value: 3
+
+
+.. py:attribute:: OrientationAngle
+   :value: 18
+
+
+.. py:attribute:: Pressure
+   :value: 6
+
+
+.. py:attribute:: Strain
+   :value: 16
+
+
+.. py:attribute:: Stress
+   :value: 15
+
+
+.. py:attribute:: Temperature
+   :value: 5
+
+
+.. py:attribute:: Thickness
+   :value: 11
+
+
+.. py:attribute:: UserField
+   :value: 20
+
+
+.. py:attribute:: Velocity
+   :value: 14
+
+
+.. py:attribute:: Volume
+   :value: 19
+
+
+.. py:attribute:: XCoordinate
+   :value: 0
+
+
+.. py:attribute:: YCoordinate
+   :value: 1
+
+
+.. py:attribute:: ZCoordinate
+   :value: 2
+
+
+
+
+
+
+.. vale on

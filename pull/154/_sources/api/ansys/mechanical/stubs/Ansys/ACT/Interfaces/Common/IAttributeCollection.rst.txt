@@ -1,0 +1,179 @@
+.. vale off
+
+
+
+:class:`IAttributeCollection`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Common.IAttributeCollection
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a collection of attributes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IAttributeCollection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Contains`
+            - Checks if the collection contains the attribute identified by its name.
+          * - :py:attr:`~GetStringValue`
+            - Returns the string value of the attribute identified by its name.
+          * - :py:attr:`~GetValue`
+            - Returns the value of the attribute identified by its name.
+          * - :py:attr:`~Remove`
+            - Removes the attribute identified by its name.
+          * - :py:attr:`~SetValue`
+            - Sets the value of an attribute identified by its name.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Keys`
+            - Gets the list of attribute names.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Item
+   :type: Optional[Any]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Keys
+   :type: Optional[System.Collections.Generic.ICollection[str]]
+
+
+   
+   Gets the list of attribute names.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Contains(name: str) -> bool
+
+   
+   Checks if the collection contains the attribute identified by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStringValue(name: str) -> str
+
+   
+   Returns the string value of the attribute identified by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetValue(name: str, defaultValue: Any) -> Any
+
+   
+   Returns the value of the attribute identified by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(name: str) -> bool
+
+   
+   Removes the attribute identified by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetValue(name: str, value: Any) -> None
+
+   
+   Sets the value of an attribute identified by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

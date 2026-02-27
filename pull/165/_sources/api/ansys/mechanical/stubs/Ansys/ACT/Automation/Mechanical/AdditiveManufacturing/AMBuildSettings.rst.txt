@@ -1,0 +1,1718 @@
+.. vale off
+
+
+
+:class:`AMBuildSettings`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a AMBuildSettings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AMBuildSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~LoadBuildSettings`
+            - Run the LoadBuildSettings action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ResetToDefault`
+            - ResetToDefault - Restores default values of all properties.
+          * - :py:attr:`~SaveBuildSettings`
+            - Run the SaveBuildSettings action.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ASCParallel`
+            - Gets or sets the ASCParallel.
+          * - :py:attr:`~ASCPerpendicular`
+            - Gets or sets the ASCPerpendicular.
+          * - :py:attr:`~ASCVertical`
+            - Gets or sets the ASCVertical.
+          * - :py:attr:`~Absorptivity`
+            - Gets or sets the Absorptivity.
+          * - :py:attr:`~AdditiveProcess`
+            - Gets or sets the AdditiveProcess.
+          * - :py:attr:`~BeamDiameter`
+            - Gets or sets the BeamDiameter.
+          * - :py:attr:`~BeamPower`
+            - Gets or sets the BeamPower.
+          * - :py:attr:`~BuildGasConvectionCoefficient`
+            - Gets or sets the BuildGasConvectionCoefficient.
+          * - :py:attr:`~BuildGasOrPowderTemperatureType`
+            - Gets or sets the BuildGasOrPowderTemperatureType.
+          * - :py:attr:`~BuildGasTemperature`
+            - Gets or sets the BuildGasTemperature.
+          * - :py:attr:`~BuildMachineType`
+            - Gets or sets the BuildMachineType.
+          * - :py:attr:`~BuildPowderConvectionCoefficient`
+            - Gets or sets the BuildPowderConvectionCoefficient.
+          * - :py:attr:`~BuildPowderTemperature`
+            - Gets or sets the BuildPowderTemperature.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CooldownGasConvectionCoefficient`
+            - Gets or sets the CooldownGasConvectionCoefficient.
+          * - :py:attr:`~CooldownGasOrPowderTemperatureType`
+            - Gets or sets the CooldownGasOrPowderTemperatureType.
+          * - :py:attr:`~CooldownGasTemperature`
+            - Gets or sets the CooldownGasTemperature.
+          * - :py:attr:`~CooldownPowderConvectionCoefficient`
+            - Gets or sets the CooldownPowderConvectionCoefficient.
+          * - :py:attr:`~CooldownPowderTemperature`
+            - Gets or sets the CooldownPowderTemperature.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DepositionThickness`
+            - Gets or sets the DepositionThickness.
+          * - :py:attr:`~DwellTime`
+            - Gets or sets the DwellTime.
+          * - :py:attr:`~DwellTimeMultiple`
+            - Gets or sets the DwellTimeMultiple.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GeneratedLayerRotationAngle`
+            - Gets or sets the GeneratedLayerRotationAngle.
+          * - :py:attr:`~GeneratedStartLayerAngle`
+            - Gets or sets the GeneratedStartLayerAngle.
+          * - :py:attr:`~HatchSpacing`
+            - Gets or sets the HatchSpacing.
+          * - :py:attr:`~HeatingDuration`
+            - Gets or sets the HeatingDuration.
+          * - :py:attr:`~HeatingMethod`
+            - Gets or sets the HeatingMethod.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InherentStrain`
+            - Gets or sets the InherentStrain.
+          * - :py:attr:`~InherentStrainDefinition`
+            - Gets or sets the InherentStrainDefinition.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LayerHeightType`
+            - LayerHeightType - Get/Sets the layer height type.
+          * - :py:attr:`~LayerHeightValue`
+            - Gets or sets the LayerHeightValue.
+          * - :py:attr:`~MachineLearningModel`
+            - Gets or sets the MachineLearningModel.
+          * - :py:attr:`~NumberOfHeatSources`
+            - Gets or sets the NumberOfHeatSources.
+          * - :py:attr:`~PowderPropertyFactor`
+            - Gets or sets the PowderPropertyFactor.
+          * - :py:attr:`~PreheatTemperature`
+            - Gets or sets the PreheatTemperature.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~RoomTemperature`
+            - Gets or sets the RoomTemperature.
+          * - :py:attr:`~ScanPatternBuildFilePath`
+            - Gets or sets the ScanPatternBuildFilePath.
+          * - :py:attr:`~ScanPatternDefinition`
+            - Gets or sets the ScanPatternDefinition.
+          * - :py:attr:`~ScanSpeed`
+            - Gets or sets the ScanSpeed.
+          * - :py:attr:`~ScanStripeWidth`
+            - Gets or sets the ScanStripeWidth.
+          * - :py:attr:`~StrainScalingFactor`
+            - Gets or sets the StrainScalingFactor.
+          * - :py:attr:`~StrainScalingFactorX`
+            - Gets or sets the StrainScalingFactorX.
+          * - :py:attr:`~StrainScalingFactorY`
+            - Gets or sets the StrainScalingFactorY.
+          * - :py:attr:`~StrainScalingFactorZ`
+            - Gets or sets the StrainScalingFactorZ.
+          * - :py:attr:`~ThermalStrainMaterialModel`
+            - Gets or sets the MachineLearningModel using the deprecated ThermalStrainMaterialModel methods.
+          * - :py:attr:`~ThermalStrainMethod`
+            - Gets or sets the ThermalStrainMethod.
+          * - :py:attr:`~ThermalStrainScalingFactor`
+            - Gets or sets the ThermalStrainScalingFactor.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ASCParallel
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ASCParallel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ASCPerpendicular
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ASCPerpendicular.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ASCVertical
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ASCVertical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Absorptivity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Absorptivity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AdditiveProcess
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessType]
+
+
+   
+   Gets or sets the AdditiveProcess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamDiameter
+   :type: Optional[float]
+
+
+   
+   Gets or sets the BeamDiameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamPower
+   :type: Optional[float]
+
+
+   
+   Gets or sets the BeamPower.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildGasConvectionCoefficient
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the BuildGasConvectionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildGasOrPowderTemperatureType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessSettingsType]
+
+
+   
+   Gets or sets the BuildGasOrPowderTemperatureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildGasTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the BuildGasTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildMachineType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMBuildMachineType]
+
+
+   
+   Gets or sets the BuildMachineType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildPowderConvectionCoefficient
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the BuildPowderConvectionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BuildPowderTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the BuildPowderTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownGasConvectionCoefficient
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the CooldownGasConvectionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownGasOrPowderTemperatureType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessSettingsType]
+
+
+   
+   Gets or sets the CooldownGasOrPowderTemperatureType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownGasTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the CooldownGasTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownPowderConvectionCoefficient
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the CooldownPowderConvectionCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CooldownPowderTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the CooldownPowderTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DepositionThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the DepositionThickness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DwellTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the DwellTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DwellTimeMultiple
+   :type: Optional[float]
+
+
+   
+   Gets or sets the DwellTimeMultiple.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeneratedLayerRotationAngle
+   :type: Optional[float]
+
+
+   
+   Gets or sets the GeneratedLayerRotationAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeneratedStartLayerAngle
+   :type: Optional[float]
+
+
+   
+   Gets or sets the GeneratedStartLayerAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HatchSpacing
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the HatchSpacing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatingDuration
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMHeatingDurationType]
+
+
+   
+   Gets or sets the HeatingDuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HeatingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMHeatingMethod]
+
+
+   
+   Gets or sets the HeatingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InherentStrain
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the InherentStrain.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InherentStrainDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMInherentStrainDefinition]
+
+
+   
+   Gets or sets the InherentStrainDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAMProcessSettingsAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LayerHeightType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMLayerHeightType]
+
+
+   
+   LayerHeightType - Get/Sets the layer height type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LayerHeightValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the LayerHeightValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MachineLearningModel
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMMachineLearningModel]
+
+
+   
+   Gets or sets the MachineLearningModel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfHeatSources
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfHeatSources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PowderPropertyFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the PowderPropertyFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreheatTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the PreheatTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RoomTemperature
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the RoomTemperature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScanPatternBuildFilePath
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ScanPatternBuildFilePath.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScanPatternDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMScanPatternDefinition]
+
+
+   
+   Gets or sets the ScanPatternDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScanSpeed
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ScanSpeed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScanStripeWidth
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ScanStripeWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StrainScalingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the StrainScalingFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StrainScalingFactorX
+   :type: Optional[float]
+
+
+   
+   Gets or sets the StrainScalingFactorX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StrainScalingFactorY
+   :type: Optional[float]
+
+
+   
+   Gets or sets the StrainScalingFactorY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StrainScalingFactorZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the StrainScalingFactorZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalStrainMaterialModel
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMThermalStrainMaterialModel]
+
+
+   
+   Gets or sets the MachineLearningModel using the deprecated ThermalStrainMaterialModel methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalStrainMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMThermalStrainMethod]
+
+
+   
+   Gets or sets the ThermalStrainMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThermalStrainScalingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ThermalStrainScalingFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: LoadBuildSettings(fName: str) -> None
+
+   
+   Run the LoadBuildSettings action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ResetToDefault() -> None
+
+   
+   ResetToDefault - Restores default values of all properties.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveBuildSettings(fName: str) -> None
+
+   
+   Run the SaveBuildSettings action.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

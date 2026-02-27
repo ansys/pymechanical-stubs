@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`WaterfallDisplaySelectionMode`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.WaterfallDisplaySelectionMode(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Selection Mode Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: WaterfallDisplaySelectionMode
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NotApplicable`
+            - 
+          * - :py:attr:`~Order`
+            - 
+          * - :py:attr:`~RPM`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NotApplicable
+   :value: 2
+
+
+.. py:attribute:: Order
+   :value: 1
+
+
+.. py:attribute:: RPM
+   :value: 0
+
+
+
+
+
+
+.. vale on

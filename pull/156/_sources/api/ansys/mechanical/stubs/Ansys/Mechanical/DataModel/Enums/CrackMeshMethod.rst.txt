@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`CrackMeshMethod`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.CrackMeshMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CrackMeshMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CrackMeshMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HexDominant`
+            - 
+          * - :py:attr:`~Tetrahedrons`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HexDominant
+   :value: 1
+
+
+.. py:attribute:: Tetrahedrons
+   :value: 2
+
+
+
+
+
+
+.. vale on

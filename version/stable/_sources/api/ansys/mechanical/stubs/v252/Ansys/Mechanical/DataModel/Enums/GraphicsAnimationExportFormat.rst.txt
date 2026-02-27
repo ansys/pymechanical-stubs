@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`GraphicsAnimationExportFormat`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.GraphicsAnimationExportFormat(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Animation Export File Format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: GraphicsAnimationExportFormat
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AVI`
+            - 
+          * - :py:attr:`~GIF`
+            - 
+          * - :py:attr:`~MP4`
+            - 
+          * - :py:attr:`~WMV`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AVI
+   :value: 2
+
+
+.. py:attribute:: GIF
+   :value: 3
+
+
+.. py:attribute:: MP4
+   :value: 0
+
+
+.. py:attribute:: WMV
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,249 @@
+.. vale off
+
+
+
+
+
+
+
+
+``StressResults``
+=================================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: StressResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.BendingStressEquivalent`
+            - Defines a BendingStressEquivalent.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.BendingStressIntensity`
+            - Defines a BendingStressIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.DirectionalStress`
+            - Defines a DirectionalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStress`
+            - Defines a EquivalentStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStressPSD`
+            - Defines a EquivalentStressPSD.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStressRS`
+            - Defines a EquivalentStressRS.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.MaximumPrincipalStress`
+            - Defines a MaximumPrincipalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.MaximumShearStress`
+            - Defines a MaximumShearStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.MembraneStressEquivalent`
+            - Defines a MembraneStressEquivalent.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.MembraneStressIntensity`
+            - Defines a MembraneStressIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.MiddlePrincipalStress`
+            - Defines a MiddlePrincipalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.MinimumPrincipalStress`
+            - Defines a MinimumPrincipalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.NormalStress`
+            - Defines a NormalStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.ShearStress`
+            - Defines a ShearStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellBendingStress`
+            - Defines a ShellBendingStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellBottomPeakStress`
+            - Defines a ShellBottomPeakStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellMembraneStress`
+            - Defines a ShellMembraneStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.ShellTopPeakStress`
+            - Defines a ShellTopPeakStress.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.StressIntensity`
+            - Defines a StressIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.StressResult`
+            - Defines a StressResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.StructuralError`
+            - Defines a StructuralError.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.StressResults.VectorPrincipalStress`
+            - Defines a VectorPrincipalStress.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> BendingStressEquivalent</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/BendingStressEquivalent>
+    <span class="nf nf-cod-symbol_class"></span> BendingStressIntensity</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/BendingStressIntensity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/DirectionalStress>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/EquivalentStress>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentStressPSD</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/EquivalentStressPSD>
+    <span class="nf nf-cod-symbol_class"></span> EquivalentStressRS</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/EquivalentStressRS>
+    <span class="nf nf-cod-symbol_class"></span> MaximumPrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/MaximumPrincipalStress>
+    <span class="nf nf-cod-symbol_class"></span> MaximumShearStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/MaximumShearStress>
+    <span class="nf nf-cod-symbol_class"></span> MembraneStressEquivalent</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/MembraneStressEquivalent>
+    <span class="nf nf-cod-symbol_class"></span> MembraneStressIntensity</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/MembraneStressIntensity>
+    <span class="nf nf-cod-symbol_class"></span> MiddlePrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/MiddlePrincipalStress>
+    <span class="nf nf-cod-symbol_class"></span> MinimumPrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/MinimumPrincipalStress>
+    <span class="nf nf-cod-symbol_class"></span> NormalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/NormalStress>
+    <span class="nf nf-cod-symbol_class"></span> ShearStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/ShearStress>
+    <span class="nf nf-cod-symbol_class"></span> ShellBendingStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/ShellBendingStress>
+    <span class="nf nf-cod-symbol_class"></span> ShellBottomPeakStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/ShellBottomPeakStress>
+    <span class="nf nf-cod-symbol_class"></span> ShellMembraneStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/ShellMembraneStress>
+    <span class="nf nf-cod-symbol_class"></span> ShellTopPeakStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/ShellTopPeakStress>
+    <span class="nf nf-cod-symbol_class"></span> StressIntensity</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/StressIntensity>
+    <span class="nf nf-cod-symbol_class"></span> StressResult</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/StressResult>
+    <span class="nf nf-cod-symbol_class"></span> StructuralError</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/StructuralError>
+    <span class="nf nf-cod-symbol_class"></span> VectorPrincipalStress</api/ansys/mechanical/stubs/Ansys/ACT/Automation/Mechanical/Results/StressResults/VectorPrincipalStress>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+StressResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

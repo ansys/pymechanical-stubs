@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`DSCampbellYAxisDataType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.DSCampbellYAxisDataType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the DSCampbellYAxisDataType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DSCampbellYAxisDataType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~LogarithmicDecrement`
+            - 
+          * - :py:attr:`~ModalDampingRatio`
+            - 
+          * - :py:attr:`~Stability`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Frequency
+   :value: 0
+
+
+.. py:attribute:: LogarithmicDecrement
+   :value: 2
+
+
+.. py:attribute:: ModalDampingRatio
+   :value: 3
+
+
+.. py:attribute:: Stability
+   :value: 1
+
+
+
+
+
+
+.. vale on

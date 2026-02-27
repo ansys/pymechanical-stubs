@@ -1,0 +1,167 @@
+.. vale off
+
+
+
+:class:`FaceSheetWrinklingSettings`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.FaceSheetWrinklingSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Face Sheet Wrinkling failure criterion for sandwich structures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FaceSheetWrinklingSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HomogeneousCoreCoefficient`
+            - Gets or sets the wrinkling coefficient of homogeneous core materials.
+          * - :py:attr:`~HoneycombCoreCoefficient`
+            - Gets or sets the wrinkling coefficient of honeycomb core materials.
+          * - :py:attr:`~WeightingFactor`
+            - Gets or sets the weighting factor for the face sheet wrinkling criterion. The corresponding failure
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: HomogeneousCoreCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the wrinkling coefficient of homogeneous core materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HoneycombCoreCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the wrinkling coefficient of honeycomb core materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the face sheet wrinkling criterion. The corresponding failure
+       label is 'wt' for wrinkling at the top face, 'wb' at the bottom face.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ModesCombinationType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ModesCombinationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ModesCombinationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ModesCombinationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CQC`
+            - 
+          * - :py:attr:`~NONE`
+            - 
+          * - :py:attr:`~ROSE`
+            - 
+          * - :py:attr:`~SRSS`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CQC
+   :value: 2
+
+
+.. py:attribute:: NONE
+   :value: 0
+
+
+.. py:attribute:: ROSE
+   :value: 3
+
+
+.. py:attribute:: SRSS
+   :value: 1
+
+
+
+
+
+
+.. vale on

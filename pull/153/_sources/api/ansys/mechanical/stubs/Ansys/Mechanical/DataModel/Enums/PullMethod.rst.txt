@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`PullMethod`
+===================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.PullMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select the method of Pull: Extrude (default), Revolve, Surface Coating and Line Coating.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PullMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Extrude`
+            - 
+          * - :py:attr:`~LineCoating`
+            - 
+          * - :py:attr:`~Revolve`
+            - 
+          * - :py:attr:`~SurfaceCoating`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Extrude
+   :value: 0
+
+
+.. py:attribute:: LineCoating
+   :value: 3
+
+
+.. py:attribute:: Revolve
+   :value: 1
+
+
+.. py:attribute:: SurfaceCoating
+   :value: 2
+
+
+
+
+
+
+.. vale on

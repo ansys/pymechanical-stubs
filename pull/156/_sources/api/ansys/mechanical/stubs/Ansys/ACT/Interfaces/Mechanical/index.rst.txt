@@ -1,0 +1,178 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Mechanical``
+==============================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Mechanical
+.. tab-set::
+
+
+
+    .. tab-item:: Interfaces
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalDataModel`
+            - Defines the data model of the Mechanical application.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalExtAPI`
+            - Exposes the main entry point of all ATC APIs.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalGraphics`
+            - Interface for MechanicalGraphics.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalSelectionInfo`
+            - Defines the mechanical selection information.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserLoad`
+            - Defines a Mechanical user load.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserObject`
+            - Defines a Mechanical user object.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserResult`
+            - Defines a Mechanical user result.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserSolver`
+            - Defines a Mechanical user solver.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.ISupportChartOptions`
+            - An interface that provides common functionalities to every object in the Tree that uses the ReadOnlyChart object.
+
+
+
+
+    .. tab-item:: Enums
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Interfaces.Mechanical.MechanicalPanelEnum`
+            - Specifies the panel type.
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalDataModel</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalDataModel>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalExtAPI</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalExtAPI>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalGraphics</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalGraphics>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalSelectionInfo</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalSelectionInfo>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserLoad</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserLoad>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserObject</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserObject>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserResult</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserResult>
+    <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserSolver</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserSolver>
+    <span class="nf nf-cod-symbol_interface"></span> ISupportChartOptions</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/ISupportChartOptions>
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_enum"></span> MechanicalPanelEnum</api/ansys/mechanical/stubs/Ansys/ACT/Interfaces/Mechanical/MechanicalPanelEnum>
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Mechanical module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

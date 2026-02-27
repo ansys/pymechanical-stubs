@@ -1,0 +1,255 @@
+.. vale off
+
+
+
+:class:`SectypeCommand`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.FE.CDB.SectypeCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a SECTYPE command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SectypeCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~RefineKey`
+            - Mesh refinement level for thin-walled beam sections. Default is zero. Meaningless if type is not BEAM.
+          * - :py:attr:`~Secid`
+            - Gets the section type number.
+          * - :py:attr:`~Secname`
+            - Gets the section name.
+          * - :py:attr:`~Subtype`
+            - Gets the subtype.
+          * - :py:attr:`~Type`
+            - Get the type.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RefineKey
+   :type: Optional[int]
+
+
+   
+   Mesh refinement level for thin-walled beam sections. Default is zero. Meaningless if type is not BEAM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Secid
+   :type: Optional[int]
+
+
+   
+   Gets the section type number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Secname
+   :type: Optional[str]
+
+
+   
+   Gets the section name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Subtype
+   :type: Optional[str]
+
+
+   
+   Gets the subtype.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[str]
+
+
+   
+   Get the type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

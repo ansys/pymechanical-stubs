@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FreeFaceMeshType`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.FreeFaceMeshType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in MultiZone mesher controls. It specifies the element type for the MultiZone free face mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FreeFaceMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllQuads`
+            - 
+          * - :py:attr:`~AllTris`
+            - 
+          * - :py:attr:`~SomeTris`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllQuads
+   :value: 4
+
+
+.. py:attribute:: AllTris
+   :value: 3
+
+
+.. py:attribute:: SomeTris
+   :value: 2
+
+
+
+
+
+
+.. vale on

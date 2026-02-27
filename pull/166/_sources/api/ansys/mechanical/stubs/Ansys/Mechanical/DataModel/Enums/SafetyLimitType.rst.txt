@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`SafetyLimitType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.SafetyLimitType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SafetyLimitType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SafetyLimitType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CustomValue`
+            - 
+          * - :py:attr:`~UltimatePerMaterial`
+            - 
+          * - :py:attr:`~YieldPerMaterial`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CustomValue
+   :value: 3
+
+
+.. py:attribute:: UltimatePerMaterial
+   :value: 2
+
+
+.. py:attribute:: YieldPerMaterial
+   :value: 1
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`IVariable`
+==================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.Interfaces.IVariable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes a variable, which is a one dimensional array of real numbers with a unit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IVariable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~QuantityName`
+            - The quantity name of the variable.  For example, this could be "Length".
+          * - :py:attr:`~Unit`
+            - The unit of the variable.  For example, this could be "mm".
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: QuantityName
+   :type: Optional[str]
+
+
+   
+   The quantity name of the variable.  For example, this could be "Length".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   The unit of the variable.  For example, this could be "mm".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

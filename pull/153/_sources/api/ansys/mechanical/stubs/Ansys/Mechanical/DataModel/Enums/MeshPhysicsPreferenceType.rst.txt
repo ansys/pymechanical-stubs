@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`MeshPhysicsPreferenceType`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.MeshPhysicsPreferenceType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Mesh Physics Preference Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshPhysicsPreferenceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CFD`
+            - 
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~Electromagnetics`
+            - 
+          * - :py:attr:`~Explicit`
+            - 
+          * - :py:attr:`~Hydrodynamics`
+            - 
+          * - :py:attr:`~Mechanical`
+            - 
+          * - :py:attr:`~NonlinearMechanical`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CFD
+   :value: 2
+
+
+.. py:attribute:: Custom
+   :value: 4
+
+
+.. py:attribute:: Electromagnetics
+   :value: 1
+
+
+.. py:attribute:: Explicit
+   :value: 3
+
+
+.. py:attribute:: Hydrodynamics
+   :value: 6
+
+
+.. py:attribute:: Mechanical
+   :value: 0
+
+
+.. py:attribute:: NonlinearMechanical
+   :value: 5
+
+
+
+
+
+
+.. vale on

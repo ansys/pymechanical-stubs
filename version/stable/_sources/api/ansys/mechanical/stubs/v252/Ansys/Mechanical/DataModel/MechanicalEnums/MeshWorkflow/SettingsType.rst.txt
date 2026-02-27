@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`SettingsType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   A SettingsType allows the user to add the additional specific Settings type entries to the Steps. The additional entries can be set by the user to automatically define the attributes of different operation Controls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SettingsType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Acoustic`
+            - 
+          * - :py:attr:`~Global`
+            - 
+          * - :py:attr:`~Stacker`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Acoustic
+   :value: 2
+
+
+.. py:attribute:: Global
+   :value: 5
+
+
+.. py:attribute:: Stacker
+   :value: 4
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`TopoLocalDesignRestrictionNature`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.TopoLocalDesignRestrictionNature(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TopoLocalDesignRestrictionNature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoLocalDesignRestrictionNature
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AlongDirection`
+            - 
+          * - :py:attr:`~AlongNormal`
+            - 
+          * - :py:attr:`~InPlane`
+            - 
+          * - :py:attr:`~NonOptimizable`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AlongDirection
+   :value: 5
+
+
+.. py:attribute:: AlongNormal
+   :value: 6
+
+
+.. py:attribute:: InPlane
+   :value: 2
+
+
+.. py:attribute:: NonOptimizable
+   :value: 1
+
+
+
+
+
+
+.. vale on

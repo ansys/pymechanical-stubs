@@ -1,0 +1,174 @@
+.. vale off
+
+
+
+:class:`RSMQueue`
+=================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings.RSMQueue
+
+   Bases: :py:obj:`object`
+
+
+   
+   The class representing an RSM Queue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RSMQueue
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HPCConfiguration`
+            - The HPC configuration of the RSM Queue.
+          * - :py:attr:`~HPCQueue`
+            - The HPC Queue of the RSM Queue.
+          * - :py:attr:`~HPCType`
+            - The HPC type of the RSM Queue
+          * - :py:attr:`~Name`
+            - The name of the RSM Queue.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: HPCConfiguration
+   :type: Optional[str]
+
+
+   
+   The HPC configuration of the RSM Queue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HPCQueue
+   :type: Optional[str]
+
+
+   
+   The HPC Queue of the RSM Queue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HPCType
+   :type: Optional[str]
+
+
+   
+   The HPC type of the RSM Queue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   The name of the RSM Queue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

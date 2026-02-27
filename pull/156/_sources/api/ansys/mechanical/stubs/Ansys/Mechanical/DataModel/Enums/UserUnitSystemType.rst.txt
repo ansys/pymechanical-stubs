@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`UserUnitSystemType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.UserUnitSystemType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the UserUnitSystemType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: UserUnitSystemType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NoUnitSystem`
+            - 
+          * - :py:attr:`~StandardBFT`
+            - 
+          * - :py:attr:`~StandardBIN`
+            - 
+          * - :py:attr:`~StandardCGS`
+            - 
+          * - :py:attr:`~StandardCUST`
+            - 
+          * - :py:attr:`~StandardGMMS`
+            - 
+          * - :py:attr:`~StandardKNMS`
+            - 
+          * - :py:attr:`~StandardMKS`
+            - 
+          * - :py:attr:`~StandardNMM`
+            - 
+          * - :py:attr:`~StandardNMMdat`
+            - 
+          * - :py:attr:`~StandardNMMton`
+            - 
+          * - :py:attr:`~StandardUMKS`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NoUnitSystem
+   :value: 19
+
+
+.. py:attribute:: StandardBFT
+   :value: 3
+
+
+.. py:attribute:: StandardBIN
+   :value: 4
+
+
+.. py:attribute:: StandardCGS
+   :value: 1
+
+
+.. py:attribute:: StandardCUST
+   :value: 12
+
+
+.. py:attribute:: StandardGMMS
+   :value: 17
+
+
+.. py:attribute:: StandardKNMS
+   :value: 15
+
+
+.. py:attribute:: StandardMKS
+   :value: 0
+
+
+.. py:attribute:: StandardNMM
+   :value: 2
+
+
+.. py:attribute:: StandardNMMdat
+   :value: 14
+
+
+.. py:attribute:: StandardNMMton
+   :value: 13
+
+
+.. py:attribute:: StandardUMKS
+   :value: 9
+
+
+
+
+
+
+.. vale on

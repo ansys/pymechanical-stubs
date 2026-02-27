@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`ProbeExtractionType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ProbeExtractionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ProbeExtractionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ProbeExtractionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ContactElements`
+            - 
+          * - :py:attr:`~ContactSide`
+            - 
+          * - :py:attr:`~Master`
+            - 
+          * - :py:attr:`~MeshNegative`
+            - 
+          * - :py:attr:`~MeshPositive`
+            - 
+          * - :py:attr:`~Slave`
+            - 
+          * - :py:attr:`~TargetSide`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ContactElements
+   :value: 5
+
+
+.. py:attribute:: ContactSide
+   :value: 1
+
+
+.. py:attribute:: Master
+   :value: 1
+
+
+.. py:attribute:: MeshNegative
+   :value: 2
+
+
+.. py:attribute:: MeshPositive
+   :value: 1
+
+
+.. py:attribute:: Slave
+   :value: 2
+
+
+.. py:attribute:: TargetSide
+   :value: 2
+
+
+
+
+
+
+.. vale on

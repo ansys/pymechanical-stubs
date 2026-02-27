@@ -1,0 +1,21 @@
+.. vale off
+
+
+
+:class:`SupportRemoval`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+
+
+
+.. vale on

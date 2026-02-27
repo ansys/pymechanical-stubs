@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`StabilizationType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.StabilizationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the StabilizationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: StabilizationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Constant`
+            - 
+          * - :py:attr:`~Off`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Reduce`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Constant
+   :value: 1
+
+
+.. py:attribute:: Off
+   :value: 0
+
+
+.. py:attribute:: ProgramControlled
+   :value: 3
+
+
+.. py:attribute:: Reduce
+   :value: 2
+
+
+
+
+
+
+.. vale on

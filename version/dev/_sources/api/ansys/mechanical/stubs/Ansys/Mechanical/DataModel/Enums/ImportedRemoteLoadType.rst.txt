@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ImportedRemoteLoadType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.ImportedRemoteLoadType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ImportedRemoteLoadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ImportedRemoteLoadType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Moment`
+            - 
+          * - :py:attr:`~RemoteForce`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Moment
+   :value: 21
+
+
+.. py:attribute:: RemoteForce
+   :value: 5
+
+
+
+
+
+
+.. vale on

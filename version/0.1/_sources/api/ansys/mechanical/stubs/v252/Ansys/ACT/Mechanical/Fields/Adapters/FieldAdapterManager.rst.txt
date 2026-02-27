@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+:class:`FieldAdapterManager`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Fields.Adapters.FieldAdapterManager
+
+   Bases: :py:obj:`object`
+
+
+   
+   Static class that operates like a factory to create field adapters from Mechanical objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+.. py:currentmodule:: FieldAdapterManager
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RegisterNewAdapter`
+            - Register the instance object that defines a type of field adapter.
+          * - :py:attr:`~UnregisterAdapter`
+            - Removes the instance object that defines a type of field adapter from this manager.
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AdapterDefinitions`
+            - Gets the collection of adapters in this manager.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AdapterDefinitions
+   :type: Optional[List[Ansys.ACT.Mechanical.Fields.Adapters.FieldAdapter.IDefinition]]
+
+   :classmethod:
+
+
+   
+   Gets the collection of adapters in this manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: RegisterNewAdapter(definition: Ansys.ACT.Mechanical.Fields.Adapters.FieldAdapter.IDefinition) -> None
+   :classmethod:
+
+
+   
+   Register the instance object that defines a type of field adapter.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnregisterAdapter(index: int) -> None
+   :classmethod:
+
+
+   
+   Removes the instance object that defines a type of field adapter from this manager.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

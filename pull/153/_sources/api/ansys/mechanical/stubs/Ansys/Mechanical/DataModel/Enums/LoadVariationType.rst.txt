@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`LoadVariationType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.Enums.LoadVariationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LoadVariationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadVariationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CFXResults`
+            - 
+          * - :py:attr:`~ConstantOrHeatFlow`
+            - 
+          * - :py:attr:`~LoadHistoryOrHeatFlow`
+            - 
+          * - :py:attr:`~PerfectInsulation`
+            - 
+          * - :py:attr:`~TemperatureDependent`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CFXResults
+   :value: 4
+
+
+.. py:attribute:: ConstantOrHeatFlow
+   :value: 0
+
+
+.. py:attribute:: LoadHistoryOrHeatFlow
+   :value: 1
+
+
+.. py:attribute:: PerfectInsulation
+   :value: 2
+
+
+.. py:attribute:: TemperatureDependent
+   :value: 3
+
+
+
+
+
+
+.. vale on

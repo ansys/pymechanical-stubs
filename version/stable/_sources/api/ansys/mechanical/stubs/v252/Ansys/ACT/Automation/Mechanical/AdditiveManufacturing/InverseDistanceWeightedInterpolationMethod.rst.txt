@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`InverseDistanceWeightedInterpolationMethod`
+===================================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.InverseDistanceWeightedInterpolationMethod
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: InverseDistanceWeightedInterpolationMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Power`
+            - Power property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Power
+   :type: Optional[float]
+
+
+   
+   Power property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

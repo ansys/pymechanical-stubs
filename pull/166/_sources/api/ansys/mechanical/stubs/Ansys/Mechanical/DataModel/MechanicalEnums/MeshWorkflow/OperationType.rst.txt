@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`OperationType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the “Step” tree node and reflects the type of operation being configured. Based on the type of an operation different rules are applied which define the applicable list of controls and outcomes which can be added.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OperationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CreateEnclosure`
+            - 
+          * - :py:attr:`~CreateSurfaceMesh`
+            - 
+          * - :py:attr:`~CreateTopology`
+            - 
+          * - :py:attr:`~CreateVolumeMesh`
+            - 
+          * - :py:attr:`~ExportMesh`
+            - 
+          * - :py:attr:`~Extrude`
+            - 
+          * - :py:attr:`~FillHoles`
+            - 
+          * - :py:attr:`~ImportMesh`
+            - 
+          * - :py:attr:`~ImproveSurfaceMesh`
+            - 
+          * - :py:attr:`~ImproveVolumeMesh`
+            - 
+          * - :py:attr:`~ManageZoneProperties`
+            - 
+          * - :py:attr:`~MergeVolumes`
+            - 
+          * - :py:attr:`~Wrap`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CreateEnclosure
+   :value: 7
+
+
+.. py:attribute:: CreateSurfaceMesh
+   :value: 19
+
+
+.. py:attribute:: CreateTopology
+   :value: 9
+
+
+.. py:attribute:: CreateVolumeMesh
+   :value: 20
+
+
+.. py:attribute:: ExportMesh
+   :value: 5
+
+
+.. py:attribute:: Extrude
+   :value: 11
+
+
+.. py:attribute:: FillHoles
+   :value: 12
+
+
+.. py:attribute:: ImportMesh
+   :value: 4
+
+
+.. py:attribute:: ImproveSurfaceMesh
+   :value: 21
+
+
+.. py:attribute:: ImproveVolumeMesh
+   :value: 22
+
+
+.. py:attribute:: ManageZoneProperties
+   :value: 8
+
+
+.. py:attribute:: MergeVolumes
+   :value: 13
+
+
+.. py:attribute:: Wrap
+   :value: 23
+
+
+
+
+
+
+.. vale on

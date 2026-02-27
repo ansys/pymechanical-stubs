@@ -1,0 +1,98 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Application``
+===============================
+
+
+.. py:module:: ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Application
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.Ansys.ACT.Mechanical.Application.SolveProcessSettings`
+            - SolveProcessSettings module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> SolveProcessSettings</api/ansys/mechanical/stubs/Ansys/ACT/Mechanical/Application/SolveProcessSettings/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Application module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on
