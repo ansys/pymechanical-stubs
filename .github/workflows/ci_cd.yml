@@ -31,6 +31,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.12'
+  DEBIAN_FRONTEND: noninteractive
   DEFAULT_MECHANICAL_VERSION: '261'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
