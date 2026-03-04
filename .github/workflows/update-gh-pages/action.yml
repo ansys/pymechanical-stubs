@@ -42,7 +42,9 @@ runs:
       shell: bash
       working-directory: /tmp
       run: |
-        cp doc/versions.json .
+        cwd=$(pwd)
+        echo "Current working directory: $cwd"
+        cp pymechanical_stubs/doc/versions.json .
 
     - name: Checkout repository gh-pages branch
       uses: actions/checkout@v6
