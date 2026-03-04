@@ -45,11 +45,11 @@ def get_version():
     Returns
     -------
     str
-        Path of the Ansys install set in the AWP_ROOT261 environment variable.
+        Path of the Ansys install set in the AWP_ROOTDV environment variable.
     int
-        The version of the Ansys install set in the AWP_ROOT261 environment variable.
+        The version of the Ansys install set in the AWP_ROOTDV environment variable.
     """
-    install_dir = os.environ["AWP_ROOT261"]
+    install_dir = os.environ["AWP_ROOTDV"]
     version = int(install_dir[-3:])
 
     return install_dir, version
