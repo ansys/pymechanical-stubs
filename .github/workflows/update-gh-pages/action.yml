@@ -38,13 +38,12 @@ runs:
     - name: Checkout repository
       uses: actions/checkout@v6
 
-    - name: Copy tools folder to /tmp and run sitemap script
+    - name: Copy versions.json to /tmp
       shell: bash
-      working-directory: /tmp
       run: |
         cwd=$(pwd)
         echo "Current working directory: $cwd"
-        cp pymechanical_stubs/doc/versions.json .
+        cp pymechanical_stubs/doc/versions.json /tmp/versions.json
 
     - name: Checkout repository gh-pages branch
       uses: actions/checkout@v6
