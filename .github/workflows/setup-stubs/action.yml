@@ -58,7 +58,7 @@ runs:
     - name: List directory and move to correct version dir
       shell: bash
       run: |
-        ls -l
+        ls -lR src/ansys/mechanical/stubs
 
     - name: Rename folders
       shell: python
