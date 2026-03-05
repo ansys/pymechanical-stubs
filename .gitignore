@@ -162,4 +162,5 @@ cython_debug/
 #.idea/
 
 # Ignore auto-generated source code
-src
+src/ansys/mechanical/stubs/v*
+doc/source/api/*
