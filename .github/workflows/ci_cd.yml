@@ -252,7 +252,7 @@ jobs:
   doc-build:
     name: Make html and markdown documentation
     if: github.event.action != 'closed'
-    needs: [config-matrix] # [smoke-tests, config-matrix]
+    needs: [gen-stubs, config-matrix] # [smoke-tests, config-matrix]
     runs-on: ubuntu-latest
     strategy:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
@@ -299,7 +299,7 @@ jobs:
   combine-docs:
     name: Combine documentation
     runs-on: ubuntu-latest
-    needs: [doc-build, config-matrix]
+    needs: [gen-stubs, doc-build, config-matrix]
     strategy:
       matrix:
         python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
