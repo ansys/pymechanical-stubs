@@ -26,6 +26,14 @@ inputs:
     required: true
     type: string
 
+  # Optional inputs
+  mechanical-revn:
+    description: >
+      Mechanical revn. For example, v241
+    required: false
+    default: ""
+    type: string
+
 runs:
   using: "composite"
   steps:
@@ -45,7 +53,7 @@ runs:
       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
       with:
         pattern: ${{ inputs.folder-pattern }}
-        path: ${{ inputs.package-path }}/
+        path: ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
 
     - name: Rename folders
       shell: python

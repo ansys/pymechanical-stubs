@@ -266,6 +266,7 @@ jobs:
         folder-pattern: "v${{ matrix.mechanical-revn }}-${{ matrix.python-version }}"
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ matrix.python-version }}
+        mechanical-revn: "v${{ matrix.mechanical-revn }}"
 
     - name: "Install project & doc dependencies"
       run: |
