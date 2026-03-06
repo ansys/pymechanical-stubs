@@ -1,0 +1,93 @@
+name: >
+  Update gh-pages for Mechanical versions
+
+description: |
+  Update the gh-pages branch with the latest versions of the Mechanical stubs for
+  the version switcher.
+
+inputs:
+
+  # Required inputs
+  python-version:
+    description: >
+      Python version in the folder pattern. For example, 3.10
+    required: true
+    type: string
+
+  doc-type:
+    description: >
+      Type of documentation to update. For example, stable or dev.
+    required: true
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: Install Python
+      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install Python dependencies
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install requests
+
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Copy versions.json to /tmp
+      shell: bash
+      run: |
+        cwd=$(pwd)
+        echo "Current working directory: $cwd"
+        cp doc/versions.json /tmp/versions.json
+
+    - name: Checkout repository gh-pages branch
+      uses: actions/checkout@v6
+      with:
+        ref: gh-pages
+
+    - name: Replace the versions.json file
+      shell: bash
+      run: |
+        cp /tmp/versions.json versions.json
+
+    - name: "Update theme switcher version matches"
+      shell: shell
+      run: |
+        [[ if "${{ inputs.doc-type }}" == "pull" ]]; then
+          pr_number=${{ github.event.pull_request.number }}
+          echo "Updating theme switcher for pull request #${pr_number}"
+          mv pull/$pr_number/api/ansys/mechanical/stubs/v241 pull/$pr_number/v241
+          mv pull/$pr_number/api/ansys/mechanical/stubs/v242 pull/$pr_number/v242
+          mv pull/$pr_number/api/ansys/mechanical/stubs/v251 pull/$pr_number/v251
+          mv pull/$pr_number/api/ansys/mechanical/stubs/v252 pull/$pr_number/v252
+          rm -rf pull/$pr_number/api
+
+          ls -lR pull/$pr_number/
+        fi
+
+        # [[ if "${{ inputs.doc-type }}" == "dev" ]]; then
+        #   cp /tmp/versions.json versions.json
+
+        #   rm -rf version/0.1
+        #   rm -rf version/stable
+
+        #   mv version/dev/* version
+        #   rm -rf version/dev
+
+        #   mv version/api/ansys/mechanical/stubs/v241/* version/v241
+        #   mv version/api/ansys/mechanical/stubs/v242/* version/v242
+        #   mv version/api/ansys/mechanical/stubs/v251/* version/v251
+        #   mv version/api/ansys/mechanical/stubs/v252/* version/v252
+        #   rm -rf version/api
+        # fi
+
+    - name: "Commit changes"
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: ${{ github.actor }}
+        message: "Update versions.json and theme switcher version matches"
