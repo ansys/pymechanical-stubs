@@ -67,7 +67,7 @@ runs:
           mv pull/$pr_number/api/ansys/mechanical/stubs/v252 pull/$pr_number/v252
           rm -rf pull/$pr_number/api
 
-          ls -l pull/$pr_number/
+          ls -lR pull/$pr_number/
         fi
 
         # [[ if "${{ inputs.doc-type }}" == "dev" ]]; then
