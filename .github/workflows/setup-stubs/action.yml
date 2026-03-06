@@ -26,6 +26,14 @@ inputs:
     required: true
     type: string
 
+  # Optional inputs
+  mechanical-revn:
+    description: >
+      Mechanical revn. For example, v241
+    required: false
+    default: ""
+    type: string
+
 runs:
   using: "composite"
   steps:
@@ -41,11 +49,30 @@ runs:
 
         print(os.getcwd())
 
+    - name: Make mechanical version dir
+      if: ${{ inputs.mechanical-revn != '' }}
+      shell: bash
+      run: |
+        mkdir -p ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
+
     - name: Download the library artifacts
       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
       with:
         pattern: ${{ inputs.folder-pattern }}
-        path: ${{ inputs.package-path }}/
+        path: ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
+
+    - name: Ensure the Mechanical version folder is not empty
+      if: ${{ inputs.mechanical-revn != '' }}
+      shell: bash
+      run: |
+        revn_folder="${{ inputs.package-path }}/${{ inputs.mechanical-revn }}"
+        if [ "$(find "$revn_folder" -mindepth 1 -print -quit)" ]; then
+          echo "$revn_folder is not empty."
+        else
+          echo "$revn_folder is empty."
+          echo "Please check the stubs were downloaded to the correct location."
+          return 2
+        fi
 
     - name: Rename folders
       shell: python

@@ -32,14 +32,14 @@ build = [
 ]
 doc = [
     "ansys-tools-common==0.4.5",
-    "ansys-sphinx-theme[autoapi]==1.7.0",
+    "ansys-sphinx-theme[autoapi]==1.7.2",
     "sphinx-copybutton==0.5.2",
     "sphinx-notfound-page==1.1.0",
     "autodoc_pydantic==2.2.0",
     "jupyter_sphinx==0.5.3",
     "numpydoc==1.10.0",
     "sphinx-autodoc-typehints==3.0.1",
-    "sphinxcontrib-globalsubs==1.0.0",
+    "sphinxcontrib-globalsubs==1.1.0",
     "sphinxcontrib-httpdomain==2.0.0",
     "sphinx-markdown-builder==0.6.9",
     "sphinxnotes-strike==1.2.1",
