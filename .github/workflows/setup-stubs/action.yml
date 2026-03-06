@@ -62,6 +62,7 @@ runs:
         path: ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
 
     - name: Ensure the Mechanical version folder is not empty
+      if: ${{ inputs.mechanical-revn != '' }}
       shell: bash
       run: |
         revn_folder="${{ inputs.package-path }}/${{ inputs.mechanical-revn }}"
