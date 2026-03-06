@@ -20,3 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 """Init file for Mechanical Stubs."""
+
+from importlib.metadata import version
+
+__version__ = version("ansys-mechanical-stubs")
