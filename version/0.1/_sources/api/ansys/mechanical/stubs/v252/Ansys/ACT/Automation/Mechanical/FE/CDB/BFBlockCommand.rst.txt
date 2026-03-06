@@ -1,0 +1,283 @@
+.. vale off
+
+
+
+:class:`BFBlockCommand`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CDB.BFBlockCommand
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a BFBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BFBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Format`
+            - Gets the format.
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~IsDefinedFromTable`
+            - Gets whether the values are defined using a table.
+          * - :py:attr:`~Lab`
+            - Gets the label.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~NodalBodyForceCount`
+            - Gets the number of nodal body-force loads.
+          * - :py:attr:`~NodalBodyForces`
+            - Gets the nodal body-force loads.
+          * - :py:attr:`~ToCdbCommandString`
+            - Gets the command text formatted as a CDB file entry.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Format
+   :type: Optional[str]
+
+
+   
+   Gets the format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsDefinedFromTable
+   :type: Optional[bool]
+
+
+   
+   Gets whether the values are defined using a table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Lab
+   :type: Optional[str]
+
+
+   
+   Gets the label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodalBodyForceCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of nodal body-force loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodalBodyForces
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandNodalBodyForce]]
+
+
+   
+   Gets the nodal body-force loads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ToCdbCommandString
+   :type: Optional[Ansys.ACT.Automation.Mechanical.FE.CDB.CdbCommandFormatAndParameter]
+
+
+   
+   Gets the command text formatted as a CDB file entry.
+   Gets the command parameters formatted as a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

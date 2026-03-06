@@ -1,0 +1,98 @@
+.. vale off
+
+
+
+
+
+
+
+
+Mechanical 2025 R2
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v252
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: v252
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys`
+            - Ansys module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Ansys</api/ansys/mechanical/stubs/v252/Ansys/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Ansys Mechanical v252 module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

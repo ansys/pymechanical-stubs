@@ -1,0 +1,315 @@
+.. vale off
+
+
+
+:class:`ResultPreference`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.ResultPreference
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: ResultPreference
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CappingType`
+            - Sets the result capping type.
+          * - :py:attr:`~ContourView`
+            - Sets the result contour view.
+          * - :py:attr:`~DeformationScaleMultiplier`
+            - Sets the deformation scale multiplier.
+          * - :py:attr:`~DeformationScaling`
+            - Sets the deformation scale multiplier to either AutoScale or TrueScale.
+          * - :py:attr:`~ExtraModelDisplay`
+            - Sets the result edge display option.
+          * - :py:attr:`~GeometryView`
+            - Sets the result geometry view.
+          * - :py:attr:`~IsoSurfaceValue`
+            - Sets the capping value for capped iso surface view .
+          * - :py:attr:`~ScopingDisplay`
+            - Sets the result scoping display.
+          * - :py:attr:`~ShowMaximum`
+            - Displays the result maximum value annotation label.
+          * - :py:attr:`~ShowMinimum`
+            - Displays the result minimum value annotation label.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: CappingType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.CappingType]
+
+
+   
+   Sets the result capping type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ContourView
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ContourView]
+
+
+   
+   Sets the result contour view.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeformationScaleMultiplier
+   :type: Optional[float]
+
+
+   
+   Sets the deformation scale multiplier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeformationScaling
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.DeformationScaling]
+
+
+   
+   Sets the deformation scale multiplier to either AutoScale or TrueScale.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExtraModelDisplay
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ExtraModelDisplay]
+
+
+   
+   Sets the result edge display option.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometryView
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.GeometryView]
+
+
+   
+   Sets the result geometry view.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsoSurfaceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Sets the capping value for capped iso surface view .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopingDisplay
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ScopingDisplay]
+
+
+   
+   Sets the result scoping display.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowMaximum
+   :type: Optional[bool]
+
+
+   
+   Displays the result maximum value annotation label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowMinimum
+   :type: Optional[bool]
+
+
+   
+   Displays the result minimum value annotation label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

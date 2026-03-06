@@ -1,0 +1,1340 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:site_name" content="PyAnsys" />
+    <title>NonlinearAdaptivityCriterionType &#8212; PyMechanical Stubs</title>
+  
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/styles/ansys-sphinx-theme.css?v=ce7f2556" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/styles/ansys-sphinx-theme.css?v=ce7f2556" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+
+  <!-- Include desired assets -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
+  
+    <link href="../../../../../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
+  
+    <script src="../../../../../../../../../_static/documentation_options.js?v=dba2a9e9"></script>
+    <script src="../../../../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../../../../../_static/thebelab-helper.js"></script>
+    <script src="../../../../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../../../../_static/copybutton.js?v=49e1bf35"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../../../../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityCriterionType';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../../../../../../../../_static/ansys-favicon.png"/>
+    <link rel="index" title="Index" href="../../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../../search.html" />
+    <link rel="next" title="NonlinearAdaptivityOptionType" href="NonlinearAdaptivityOptionType.html" />
+    <link rel="prev" title="NonlinearAdaptivityControlsRemeshingGradientType" href="NonlinearAdaptivityControlsRemeshingGradientType.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.9" />
+  <link rel="canonical" href="https://scripting.mechanical.docs.pyansys.com/version/stable/api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityCriterionType.html" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../../../../_static/pyansys_logo_transparent_black.png" class="logo__image only-light" alt="PyMechanical Stubs - Home"/>
+    <img src="../../../../../../../../../_static/pyansys_logo_transparent_white.png" class="logo__image only-dark pst-js-only" alt="PyMechanical Stubs - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../../../../../../../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+</div></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+  
+    <div id="announcement_msg"></div>
+<script>
+  fetch("announcement.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(
+      (text) => (document.getElementById("announcement_msg").innerHTML = text),
+    )
+    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+</script>
+  
+
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../../../../../../../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+</div></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../index.html"> <span class="nf nf-md-package"></span> Ansys</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../ACT/index.html"> <span class="nf nf-md-package"></span> ACT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Core/index.html"> <span class="nf nf-md-package"></span> Core</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../index.html"> <span class="nf nf-md-package"></span> Mechanical</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Application/index.html"> <span class="nf nf-md-package"></span> Application</a></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../index.html"> <span class="nf nf-md-package"></span> DataModel</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Constants/index.html"> <span class="nf nf-md-package"></span> Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ConstructionLines/index.html"> <span class="nf nf-md-package"></span> ConstructionLines</a></li>
+<li class="toctree-l4 current active has-children"><a class="reference internal" href="index.html"> <span class="nf nf-md-package"></span> Enums</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ExternalModel/index.html"> <span class="nf nf-md-package"></span> ExternalModel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GeometryImportPreference/index.html"> <span class="nf nf-md-package"></span> GeometryImportPreference</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMBaseRemovalType.html"> <span class="nf nf-cod-symbol_enum"></span> AMBaseRemovalType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMBuildMachineType.html"> <span class="nf nf-cod-symbol_enum"></span> AMBuildMachineType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMCooldownTimeType.html"> <span class="nf nf-cod-symbol_enum"></span> AMCooldownTimeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMHeatingDurationType.html"> <span class="nf nf-cod-symbol_enum"></span> AMHeatingDurationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMHeatingMethod.html"> <span class="nf nf-cod-symbol_enum"></span> AMHeatingMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMInherentStrainDefinition.html"> <span class="nf nf-cod-symbol_enum"></span> AMInherentStrainDefinition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMLayerHeightType.html"> <span class="nf nf-cod-symbol_enum"></span> AMLayerHeightType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMMachineLearningModel.html"> <span class="nf nf-cod-symbol_enum"></span> AMMachineLearningModel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMMultiplierEntryType.html"> <span class="nf nf-cod-symbol_enum"></span> AMMultiplierEntryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMProcessSettingsType.html"> <span class="nf nf-cod-symbol_enum"></span> AMProcessSettingsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMProcessSimulationType.html"> <span class="nf nf-cod-symbol_enum"></span> AMProcessSimulationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMProcessStepType.html"> <span class="nf nf-cod-symbol_enum"></span> AMProcessStepType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMProcessType.html"> <span class="nf nf-cod-symbol_enum"></span> AMProcessType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMReferenceTemperatureType.html"> <span class="nf nf-cod-symbol_enum"></span> AMReferenceTemperatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMRelaxationTemperatureType.html"> <span class="nf nf-cod-symbol_enum"></span> AMRelaxationTemperatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMScanPatternDefinition.html"> <span class="nf nf-cod-symbol_enum"></span> AMScanPatternDefinition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMStlSource.html"> <span class="nf nf-cod-symbol_enum"></span> AMStlSource</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMSupportGroupOutputType.html"> <span class="nf nf-cod-symbol_enum"></span> AMSupportGroupOutputType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMSupportSTLType.html"> <span class="nf nf-cod-symbol_enum"></span> AMSupportSTLType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMSupportType.html"> <span class="nf nf-cod-symbol_enum"></span> AMSupportType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMThermalStrainMaterialModel.html"> <span class="nf nf-cod-symbol_enum"></span> AMThermalStrainMaterialModel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AMThermalStrainMethod.html"> <span class="nf nf-cod-symbol_enum"></span> AMThermalStrainMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ActiveOrInactive.html"> <span class="nf nf-cod-symbol_enum"></span> ActiveOrInactive</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AggressiveRemeshingType.html"> <span class="nf nf-cod-symbol_enum"></span> AggressiveRemeshingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AlgorithmType.html"> <span class="nf nf-cod-symbol_enum"></span> AlgorithmType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AnalysisType.html"> <span class="nf nf-cod-symbol_enum"></span> AnalysisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AnalysisTypeDimensionEnum.html"> <span class="nf nf-cod-symbol_enum"></span> AnalysisTypeDimensionEnum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ApplicationType.html"> <span class="nf nf-cod-symbol_enum"></span> ApplicationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ArtificiallyMatchedLayers.html"> <span class="nf nf-cod-symbol_enum"></span> ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AutoDetectionType.html"> <span class="nf nf-cod-symbol_enum"></span> AutoDetectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AutomaticNodeMovementMethod.html"> <span class="nf nf-cod-symbol_enum"></span> AutomaticNodeMovementMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AutomaticOrManual.html"> <span class="nf nf-cod-symbol_enum"></span> AutomaticOrManual</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AutomaticTimeStepping.html"> <span class="nf nf-cod-symbol_enum"></span> AutomaticTimeStepping</a></li>
+<li class="toctree-l5"><a class="reference internal" href="AxisSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> AxisSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BaseResultType.html"> <span class="nf nf-cod-symbol_enum"></span> BaseResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BeamBeamContactDetectionType.html"> <span class="nf nf-cod-symbol_enum"></span> BeamBeamContactDetectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BeamBeamModel.html"> <span class="nf nf-cod-symbol_enum"></span> BeamBeamModel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BeamEndReleaseBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> BeamEndReleaseBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BeamOffsetType.html"> <span class="nf nf-cod-symbol_enum"></span> BeamOffsetType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BeamSolutionType.html"> <span class="nf nf-cod-symbol_enum"></span> BeamSolutionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BeamToolStressResultType.html"> <span class="nf nf-cod-symbol_enum"></span> BeamToolStressResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BodyInteractionFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> BodyInteractionFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BodyTreatment.html"> <span class="nf nf-cod-symbol_enum"></span> BodyTreatment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BodyType.html"> <span class="nf nf-cod-symbol_enum"></span> BodyType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BoltLoadDefineBy.html"> <span class="nf nf-cod-symbol_enum"></span> BoltLoadDefineBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BoltResultType.html"> <span class="nf nf-cod-symbol_enum"></span> BoltResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BondedBreakableType.html"> <span class="nf nf-cod-symbol_enum"></span> BondedBreakableType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BoundaryConditionAlongFiber.html"> <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionAlongFiber</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BoundaryConditionForRotation.html"> <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionForRotation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BoundaryConditionSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BoundaryConditionType.html"> <span class="nf nf-cod-symbol_enum"></span> BoundaryConditionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="BrickIntegrationScheme.html"> <span class="nf nf-cod-symbol_enum"></span> BrickIntegrationScheme</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CacheResultsInMemory.html"> <span class="nf nf-cod-symbol_enum"></span> CacheResultsInMemory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CalculateParticipationFactorResult.html"> <span class="nf nf-cod-symbol_enum"></span> CalculateParticipationFactorResult</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CameraAxisType.html"> <span class="nf nf-cod-symbol_enum"></span> CameraAxisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CampbellDiagramRotationalVelocitySelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> CampbellDiagramRotationalVelocitySelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartAxisScaleType.html"> <span class="nf nf-cod-symbol_enum"></span> ChartAxisScaleType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartDimensions.html"> <span class="nf nf-cod-symbol_enum"></span> ChartDimensions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartGridlines.html"> <span class="nf nf-cod-symbol_enum"></span> ChartGridlines</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartModalType.html"> <span class="nf nf-cod-symbol_enum"></span> ChartModalType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartPlotStyle.html"> <span class="nf nf-cod-symbol_enum"></span> ChartPlotStyle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartReportType.html"> <span class="nf nf-cod-symbol_enum"></span> ChartReportType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartResultType.html"> <span class="nf nf-cod-symbol_enum"></span> ChartResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ChartScale.html"> <span class="nf nf-cod-symbol_enum"></span> ChartScale</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CombineRestartFilesType.html"> <span class="nf nf-cod-symbol_enum"></span> CombineRestartFilesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CommandEditorTarget.html"> <span class="nf nf-cod-symbol_enum"></span> CommandEditorTarget</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ComparePartsOnUpdateType.html"> <span class="nf nf-cod-symbol_enum"></span> ComparePartsOnUpdateType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ComparePartsToleranceType.html"> <span class="nf nf-cod-symbol_enum"></span> ComparePartsToleranceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartCMSAttachmentMethod.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartCMSAttachmentMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartExpansionType.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartExpansionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartFileFormat.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartFileFormat</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartInterfaceMethod.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartInterfaceMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartInterfaceType.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartInterfaceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartKeepFilesFor.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartKeepFilesFor</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartLumpedMassFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartLumpedMassFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartPhysics.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartPhysics</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartPointMassTreatment.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartPointMassTreatment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CondensedPartReductionMethod.html"> <span class="nf nf-cod-symbol_enum"></span> CondensedPartReductionMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConnectionCreationMethod.html"> <span class="nf nf-cod-symbol_enum"></span> ConnectionCreationMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConnectionOptions.html"> <span class="nf nf-cod-symbol_enum"></span> ConnectionOptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConnectionScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> ConnectionScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConstantDampingType.html"> <span class="nf nf-cod-symbol_enum"></span> ConstantDampingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> ContactBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactBoltThreadHand.html"> <span class="nf nf-cod-symbol_enum"></span> ContactBoltThreadHand</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactBoltThreadType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactBoltThreadType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactConstraintType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactConstraintType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactCorrection.html"> <span class="nf nf-cod-symbol_enum"></span> ContactCorrection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactDetection.html"> <span class="nf nf-cod-symbol_enum"></span> ContactDetection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactDetectionPoint.html"> <span class="nf nf-cod-symbol_enum"></span> ContactDetectionPoint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactEdgeEdgeOption.html"> <span class="nf nf-cod-symbol_enum"></span> ContactEdgeEdgeOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactElasticSlipToleranceType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactElasticSlipToleranceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactFaceEdgeOption.html"> <span class="nf nf-cod-symbol_enum"></span> ContactFaceEdgeOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactFaceEdgePriority.html"> <span class="nf nf-cod-symbol_enum"></span> ContactFaceEdgePriority</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactForceType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactForceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> ContactFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactGroupingType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactGroupingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactInitialEffect.html"> <span class="nf nf-cod-symbol_enum"></span> ContactInitialEffect</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactOrientation.html"> <span class="nf nf-cod-symbol_enum"></span> ContactOrientation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactPenetrationToleranceType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactPenetrationToleranceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactPinballType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactPinballType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactResultType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactSearchingType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactSearchingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactSideScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactSideScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactSmallSlidingType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactSmallSlidingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactSplitType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactSplitType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactSummaryType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactSummaryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactTimeStepControls.html"> <span class="nf nf-cod-symbol_enum"></span> ContactTimeStepControls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactToleranceType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactToleranceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactTrimType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactTrimType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ContactType.html"> <span class="nf nf-cod-symbol_enum"></span> ContactType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConvectionTableSelection.html"> <span class="nf nf-cod-symbol_enum"></span> ConvectionTableSelection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConvergenceControlType.html"> <span class="nf nf-cod-symbol_enum"></span> ConvergenceControlType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConvergenceToleranceType.html"> <span class="nf nf-cod-symbol_enum"></span> ConvergenceToleranceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ConvergenceType.html"> <span class="nf nf-cod-symbol_enum"></span> ConvergenceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CoordinateSystemAlignmentType.html"> <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemAlignmentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CoordinateSystemAxisType.html"> <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemAxisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CoordinateSystemBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CoordinateSystemType.html"> <span class="nf nf-cod-symbol_enum"></span> CoordinateSystemType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CoreResultType.html"> <span class="nf nf-cod-symbol_enum"></span> CoreResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CoriolisEffectType.html"> <span class="nf nf-cod-symbol_enum"></span> CoriolisEffectType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CouplingConditionDOFType.html"> <span class="nf nf-cod-symbol_enum"></span> CouplingConditionDOFType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackGrowthIncrementType.html"> <span class="nf nf-cod-symbol_enum"></span> CrackGrowthIncrementType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackGrowthMeshCoarsening.html"> <span class="nf nf-cod-symbol_enum"></span> CrackGrowthMeshCoarsening</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackGrowthMethodology.html"> <span class="nf nf-cod-symbol_enum"></span> CrackGrowthMethodology</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackGrowthOption.html"> <span class="nf nf-cod-symbol_enum"></span> CrackGrowthOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackMeshMethod.html"> <span class="nf nf-cod-symbol_enum"></span> CrackMeshMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackSelectionModeType.html"> <span class="nf nf-cod-symbol_enum"></span> CrackSelectionModeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackShapeType.html"> <span class="nf nf-cod-symbol_enum"></span> CrackShapeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrackSourceType.html"> <span class="nf nf-cod-symbol_enum"></span> CrackSourceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Creep.html"> <span class="nf nf-cod-symbol_enum"></span> Creep</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CriterionFrequencyRangeType.html"> <span class="nf nf-cod-symbol_enum"></span> CriterionFrequencyRangeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CrossSectionType.html"> <span class="nf nf-cod-symbol_enum"></span> CrossSectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CyclicHarmonicIndex.html"> <span class="nf nf-cod-symbol_enum"></span> CyclicHarmonicIndex</a></li>
+<li class="toctree-l5"><a class="reference internal" href="CylindricalFacesOption.html"> <span class="nf nf-cod-symbol_enum"></span> CylindricalFacesOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DBWeightingType.html"> <span class="nf nf-cod-symbol_enum"></span> DBWeightingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DSCampbellAxisRange.html"> <span class="nf nf-cod-symbol_enum"></span> DSCampbellAxisRange</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DSCampbellYAxisDataType.html"> <span class="nf nf-cod-symbol_enum"></span> DSCampbellYAxisDataType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DSRBDContactDetection.html"> <span class="nf nf-cod-symbol_enum"></span> DSRBDContactDetection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DamageResultType.html"> <span class="nf nf-cod-symbol_enum"></span> DamageResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DampingDefineBy.html"> <span class="nf nf-cod-symbol_enum"></span> DampingDefineBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DampingType.html"> <span class="nf nf-cod-symbol_enum"></span> DampingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DataImportStatus.html"> <span class="nf nf-cod-symbol_enum"></span> DataImportStatus</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DataModelObjectCategory.html"> <span class="nf nf-cod-symbol_enum"></span> DataModelObjectCategory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DataTypeOptions.html"> <span class="nf nf-cod-symbol_enum"></span> DataTypeOptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DeformationType.html"> <span class="nf nf-cod-symbol_enum"></span> DeformationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DelaminationFailureCriteriaOption.html"> <span class="nf nf-cod-symbol_enum"></span> DelaminationFailureCriteriaOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DelaminationGenerationMethod.html"> <span class="nf nf-cod-symbol_enum"></span> DelaminationGenerationMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DelaminationMethod.html"> <span class="nf nf-cod-symbol_enum"></span> DelaminationMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DelaminationType.html"> <span class="nf nf-cod-symbol_enum"></span> DelaminationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DiagonalOrConsistent.html"> <span class="nf nf-cod-symbol_enum"></span> DiagonalOrConsistent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DistributedMassInputType.html"> <span class="nf nf-cod-symbol_enum"></span> DistributedMassInputType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DpfEvaluationType.html"> <span class="nf nf-cod-symbol_enum"></span> DpfEvaluationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DropDirection.html"> <span class="nf nf-cod-symbol_enum"></span> DropDirection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DropTestDefineBy.html"> <span class="nf nf-cod-symbol_enum"></span> DropTestDefineBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="DynamicRelaxationBehaviorType.html"> <span class="nf nf-cod-symbol_enum"></span> DynamicRelaxationBehaviorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ECADFidelity.html"> <span class="nf nf-cod-symbol_enum"></span> ECADFidelity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDADRConvergenceMethod.html"> <span class="nf nf-cod-symbol_enum"></span> EXDADRConvergenceMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDArtificialViscosityForShellsType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDArtificialViscosityForShellsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDAutomaticMassScalingType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDAutomaticMassScalingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDBeamSolutionType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDBeamSolutionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDCharZoneDimensionType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDCharZoneDimensionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDDensityUpdateType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDDensityUpdateType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDDetonationBurnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDDetonationBurnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDErosionOnGeomStrainType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDErosionOnGeomStrainType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDErosionOnMaterialFailureType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDErosionOnMaterialFailureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDErosionOnMinElemTimestepType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDErosionOnMinElemTimestepType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDErosionRetainIntertiaType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDErosionRetainIntertiaType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerBoundaryDefType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerBoundaryDefType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerDomScopeDefType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerDomScopeDefType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerDomainType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerDomainType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerGradedDefinition.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerGradedDefinition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerResolutionDefType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerResolutionDefType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerSizeDefType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerSizeDefType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDEulerTrackType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDEulerTrackType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDHexIntegrationType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDHexIntegrationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDHourglassDampingType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDHourglassDampingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDLinearViscosityExpansionType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDLinearViscosityExpansionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDLoadStepType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDLoadStepType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDOutputContactForcesOnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDOutputContactForcesOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDPreferenceType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDPreferenceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSPHNodeDensityCutoffOption.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSPHNodeDensityCutoffOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSavePrintSummaryOnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSavePrintSummaryOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSaveProbeDataOnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSaveProbeDataOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSaveRestartsOnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSaveRestartsOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSaveResultsOnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSaveResultsOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSaveUserEditOnType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSaveUserEditOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDShellInertiaUpdateType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDShellInertiaUpdateType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDShellThicknessUpdateType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDShellThicknessUpdateType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDShellWarpCorrectionType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDShellWarpCorrectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSolveUnitsType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSolveUnitsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDSolverPrecisionType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDSolverPrecisionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDStepawareOutputControlsType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDStepawareOutputControlsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EXDTetPressureIntegrationType.html"> <span class="nf nf-cod-symbol_enum"></span> EXDTetPressureIntegrationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EdgeContactType.html"> <span class="nf nf-cod-symbol_enum"></span> EdgeContactType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EdgeType.html"> <span class="nf nf-cod-symbol_enum"></span> EdgeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EigenSolverType.html"> <span class="nf nf-cod-symbol_enum"></span> EigenSolverType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElectricType.html"> <span class="nf nf-cod-symbol_enum"></span> ElectricType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElectrostaticForce.html"> <span class="nf nf-cod-symbol_enum"></span> ElectrostaticForce</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementControl.html"> <span class="nf nf-cod-symbol_enum"></span> ElementControl</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementControlsNormalStiffnessType.html"> <span class="nf nf-cod-symbol_enum"></span> ElementControlsNormalStiffnessType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementControlsStatus.html"> <span class="nf nf-cod-symbol_enum"></span> ElementControlsStatus</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementMidsideNodesType.html"> <span class="nf nf-cod-symbol_enum"></span> ElementMidsideNodesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementMorphingType.html"> <span class="nf nf-cod-symbol_enum"></span> ElementMorphingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementOrder.html"> <span class="nf nf-cod-symbol_enum"></span> ElementOrder</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementOrientationAxisType.html"> <span class="nf nf-cod-symbol_enum"></span> ElementOrientationAxisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ElementOrientationGuide.html"> <span class="nf nf-cod-symbol_enum"></span> ElementOrientationGuide</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EnclosureType.html"> <span class="nf nf-cod-symbol_enum"></span> EnclosureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="EquationSolverType.html"> <span class="nf nf-cod-symbol_enum"></span> EquationSolverType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExcitationType.html"> <span class="nf nf-cod-symbol_enum"></span> ExcitationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExclusionParticipantType.html"> <span class="nf nf-cod-symbol_enum"></span> ExclusionParticipantType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExclusionType.html"> <span class="nf nf-cod-symbol_enum"></span> ExclusionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExpandResultFrom.html"> <span class="nf nf-cod-symbol_enum"></span> ExpandResultFrom</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExpandResultsSubType.html"> <span class="nf nf-cod-symbol_enum"></span> ExpandResultsSubType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExportTopologyFileOption.html"> <span class="nf nf-cod-symbol_enum"></span> ExportTopologyFileOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExternalEnhancedModelType.html"> <span class="nf nf-cod-symbol_enum"></span> ExternalEnhancedModelType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExternalLoadApplicationType.html"> <span class="nf nf-cod-symbol_enum"></span> ExternalLoadApplicationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExternalLoadDefineActiveSequenceBy.html"> <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDefineActiveSequenceBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExternalLoadDisplacementType.html"> <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDisplacementType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExternalLoadDisplayComponentType.html"> <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDisplayComponentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExternalLoadDisplayDataType.html"> <span class="nf nf-cod-symbol_enum"></span> ExternalLoadDisplayDataType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ExtrudeBy.html"> <span class="nf nf-cod-symbol_enum"></span> ExtrudeBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FEConnectionDisplay.html"> <span class="nf nf-cod-symbol_enum"></span> FEConnectionDisplay</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FEConnectionDisplayType.html"> <span class="nf nf-cod-symbol_enum"></span> FEConnectionDisplayType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FEConnectionLineColor.html"> <span class="nf nf-cod-symbol_enum"></span> FEConnectionLineColor</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FEConnectionLineThicknessType.html"> <span class="nf nf-cod-symbol_enum"></span> FEConnectionLineThicknessType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FaceMeshingMethod.html"> <span class="nf nf-cod-symbol_enum"></span> FaceMeshingMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FaceType.html"> <span class="nf nf-cod-symbol_enum"></span> FaceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FarFieldMicrophoneDefinitionMethodType.html"> <span class="nf nf-cod-symbol_enum"></span> FarFieldMicrophoneDefinitionMethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FarFieldRadiationSurfaceType.html"> <span class="nf nf-cod-symbol_enum"></span> FarFieldRadiationSurfaceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueAnalysisType.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueAnalysisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueFrequencySelection.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueFrequencySelection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueLoadType.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueLoadType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueSensitivityType.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueSensitivityType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueStressComponentType.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueStressComponentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueToolAnalysisType.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueToolAnalysisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueToolMethod.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueToolMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FatigueToolResultsInputType.html"> <span class="nf nf-cod-symbol_enum"></span> FatigueToolResultsInputType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FeatureSuppressMethod.html"> <span class="nf nf-cod-symbol_enum"></span> FeatureSuppressMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FilterType.html"> <span class="nf nf-cod-symbol_enum"></span> FilterType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FittingMethodType.html"> <span class="nf nf-cod-symbol_enum"></span> FittingMethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FixedOrFree.html"> <span class="nf nf-cod-symbol_enum"></span> FixedOrFree</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FluentExportMeshType.html"> <span class="nf nf-cod-symbol_enum"></span> FluentExportMeshType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FluidBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> FluidBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FluidDiscretizationType.html"> <span class="nf nf-cod-symbol_enum"></span> FluidDiscretizationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ForceComponentSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> ForceComponentSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FormulationType.html"> <span class="nf nf-cod-symbol_enum"></span> FormulationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FractureAffectedZone.html"> <span class="nf nf-cod-symbol_enum"></span> FractureAffectedZone</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FractureSIFSProbeSubType.html"> <span class="nf nf-cod-symbol_enum"></span> FractureSIFSProbeSubType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FractureToolScopeType.html"> <span class="nf nf-cod-symbol_enum"></span> FractureToolScopeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FrequencyRangeType.html"> <span class="nf nf-cod-symbol_enum"></span> FrequencyRangeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FrequencyReductionType.html"> <span class="nf nf-cod-symbol_enum"></span> FrequencyReductionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FrequencySpacingType.html"> <span class="nf nf-cod-symbol_enum"></span> FrequencySpacingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="FutureIntentType.html"> <span class="nf nf-cod-symbol_enum"></span> FutureIntentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GAPDirectionType.html"> <span class="nf nf-cod-symbol_enum"></span> GAPDirectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GPUAccelerationDevicesType.html"> <span class="nf nf-cod-symbol_enum"></span> GPUAccelerationDevicesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GapDefinedBy.html"> <span class="nf nf-cod-symbol_enum"></span> GapDefinedBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GapDensityType.html"> <span class="nf nf-cod-symbol_enum"></span> GapDensityType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GasketResultType.html"> <span class="nf nf-cod-symbol_enum"></span> GasketResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GeneralMiscellaneousOptionType.html"> <span class="nf nf-cod-symbol_enum"></span> GeneralMiscellaneousOptionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GeometryDefineByType.html"> <span class="nf nf-cod-symbol_enum"></span> GeometryDefineByType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GeometryDimensionType.html"> <span class="nf nf-cod-symbol_enum"></span> GeometryDimensionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GeometryType.html"> <span class="nf nf-cod-symbol_enum"></span> GeometryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphControlsXAxis.html"> <span class="nf nf-cod-symbol_enum"></span> GraphControlsXAxis</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Graphics3DExportFormat.html"> <span class="nf nf-cod-symbol_enum"></span> Graphics3DExportFormat</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphicsAnimationExportFormat.html"> <span class="nf nf-cod-symbol_enum"></span> GraphicsAnimationExportFormat</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphicsBackgroundType.html"> <span class="nf nf-cod-symbol_enum"></span> GraphicsBackgroundType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphicsCaptureType.html"> <span class="nf nf-cod-symbol_enum"></span> GraphicsCaptureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphicsImageExportFormat.html"> <span class="nf nf-cod-symbol_enum"></span> GraphicsImageExportFormat</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphicsResolutionType.html"> <span class="nf nf-cod-symbol_enum"></span> GraphicsResolutionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GraphicsViewportsExportBorderStyle.html"> <span class="nf nf-cod-symbol_enum"></span> GraphicsViewportsExportBorderStyle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GravityOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> GravityOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="GrowElbowElementsBy.html"> <span class="nf nf-cod-symbol_enum"></span> GrowElbowElementsBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HarmonicMSUPStorage.html"> <span class="nf nf-cod-symbol_enum"></span> HarmonicMSUPStorage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HarmonicMethod.html"> <span class="nf nf-cod-symbol_enum"></span> HarmonicMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HarmonicMultiStepType.html"> <span class="nf nf-cod-symbol_enum"></span> HarmonicMultiStepType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HarmonicVariationalTechnology.html"> <span class="nf nf-cod-symbol_enum"></span> HarmonicVariationalTechnology</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HexIntegrationType.html"> <span class="nf nf-cod-symbol_enum"></span> HexIntegrationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HourglassDampingType.html"> <span class="nf nf-cod-symbol_enum"></span> HourglassDampingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="HyperbolicProjectionType.html"> <span class="nf nf-cod-symbol_enum"></span> HyperbolicProjectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ICEMCFDBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> ICEMCFDBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ImportParameterType.html"> <span class="nf nf-cod-symbol_enum"></span> ImportParameterType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ImportedCondensedPartStatus.html"> <span class="nf nf-cod-symbol_enum"></span> ImportedCondensedPartStatus</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ImportedLoadType.html"> <span class="nf nf-cod-symbol_enum"></span> ImportedLoadType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="IncidentWaveLocation.html"> <span class="nf nf-cod-symbol_enum"></span> IncidentWaveLocation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="InitialClearanceType.html"> <span class="nf nf-cod-symbol_enum"></span> InitialClearanceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="InitialConditionsType.html"> <span class="nf nf-cod-symbol_enum"></span> InitialConditionsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="InitialTemperatureType.html"> <span class="nf nf-cod-symbol_enum"></span> InitialTemperatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="InitializationModifierType.html"> <span class="nf nf-cod-symbol_enum"></span> InitializationModifierType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="InterpolationType.html"> <span class="nf nf-cod-symbol_enum"></span> InterpolationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="IterationOptions.html"> <span class="nf nf-cod-symbol_enum"></span> IterationOptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointConditionType.html"> <span class="nf nf-cod-symbol_enum"></span> JointConditionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> JointFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointFrictionType.html"> <span class="nf nf-cod-symbol_enum"></span> JointFrictionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointGeneralPrimitiveType.html"> <span class="nf nf-cod-symbol_enum"></span> JointGeneralPrimitiveType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointInitialPosition.html"> <span class="nf nf-cod-symbol_enum"></span> JointInitialPosition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointRotationDOFType.html"> <span class="nf nf-cod-symbol_enum"></span> JointRotationDOFType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> JointScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointSolverElementType.html"> <span class="nf nf-cod-symbol_enum"></span> JointSolverElementType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointStopType.html"> <span class="nf nf-cod-symbol_enum"></span> JointStopType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="JointType.html"> <span class="nf nf-cod-symbol_enum"></span> JointType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="KinematicDOF.html"> <span class="nf nf-cod-symbol_enum"></span> KinematicDOF</a></li>
+<li class="toctree-l5"><a class="reference internal" href="KrigingCorrFuncType.html"> <span class="nf nf-cod-symbol_enum"></span> KrigingCorrFuncType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="KrigingPolynomType.html"> <span class="nf nf-cod-symbol_enum"></span> KrigingPolynomType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LatticeType.html"> <span class="nf nf-cod-symbol_enum"></span> LatticeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LegendColorSchemeType.html"> <span class="nf nf-cod-symbol_enum"></span> LegendColorSchemeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LegendOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> LegendOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LegendRangeType.html"> <span class="nf nf-cod-symbol_enum"></span> LegendRangeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LifeUnitsType.html"> <span class="nf nf-cod-symbol_enum"></span> LifeUnitsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LimitBCDirection.html"> <span class="nf nf-cod-symbol_enum"></span> LimitBCDirection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LineLineContactDetectionType.html"> <span class="nf nf-cod-symbol_enum"></span> LineLineContactDetectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LinePressureResultBasedOnType.html"> <span class="nf nf-cod-symbol_enum"></span> LinePressureResultBasedOnType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LineSearchType.html"> <span class="nf nf-cod-symbol_enum"></span> LineSearchType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Linearized2DBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> Linearized2DBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LinearizedSubtype.html"> <span class="nf nf-cod-symbol_enum"></span> LinearizedSubtype</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadAppliedBy.html"> <span class="nf nf-cod-symbol_enum"></span> LoadAppliedBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> LoadBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadCombinationType.html"> <span class="nf nf-cod-symbol_enum"></span> LoadCombinationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadDefineBy.html"> <span class="nf nf-cod-symbol_enum"></span> LoadDefineBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadGroupingType.html"> <span class="nf nf-cod-symbol_enum"></span> LoadGroupingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadVariableVariationType.html"> <span class="nf nf-cod-symbol_enum"></span> LoadVariableVariationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadVariationSubOption.html"> <span class="nf nf-cod-symbol_enum"></span> LoadVariationSubOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadVariationType.html"> <span class="nf nf-cod-symbol_enum"></span> LoadVariationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadVectorAssignment.html"> <span class="nf nf-cod-symbol_enum"></span> LoadVectorAssignment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadedArea.html"> <span class="nf nf-cod-symbol_enum"></span> LoadedArea</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LoadingApplicationType.html"> <span class="nf nf-cod-symbol_enum"></span> LoadingApplicationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LocationDefinitionMethod.html"> <span class="nf nf-cod-symbol_enum"></span> LocationDefinitionMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LowReducedFrequencyModelType.html"> <span class="nf nf-cod-symbol_enum"></span> LowReducedFrequencyModelType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MPIType.html"> <span class="nf nf-cod-symbol_enum"></span> MPIType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ManuMemberSizeControlledType.html"> <span class="nf nf-cod-symbol_enum"></span> ManuMemberSizeControlledType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ManualContactTreatmentType.html"> <span class="nf nf-cod-symbol_enum"></span> ManualContactTreatmentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ManufacturingConstraintSubtype.html"> <span class="nf nf-cod-symbol_enum"></span> ManufacturingConstraintSubtype</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingAlgorithm.html"> <span class="nf nf-cod-symbol_enum"></span> MappingAlgorithm</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingControlType.html"> <span class="nf nf-cod-symbol_enum"></span> MappingControlType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingInterpolationType.html"> <span class="nf nf-cod-symbol_enum"></span> MappingInterpolationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingIsolineLineType.html"> <span class="nf nf-cod-symbol_enum"></span> MappingIsolineLineType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingIsolineThicknessType.html"> <span class="nf nf-cod-symbol_enum"></span> MappingIsolineThicknessType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingMethod.html"> <span class="nf nf-cod-symbol_enum"></span> MappingMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingOutsideOption.html"> <span class="nf nf-cod-symbol_enum"></span> MappingOutsideOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingValidationDisplayOption.html"> <span class="nf nf-cod-symbol_enum"></span> MappingValidationDisplayOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingValidationType.html"> <span class="nf nf-cod-symbol_enum"></span> MappingValidationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MappingVariableType.html"> <span class="nf nf-cod-symbol_enum"></span> MappingVariableType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MaterialPolarizationDirection.html"> <span class="nf nf-cod-symbol_enum"></span> MaterialPolarizationDirection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeanStressTheoryType.html"> <span class="nf nf-cod-symbol_enum"></span> MeanStressTheoryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshControlGroupRigidBodyBehaviorType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshControlGroupRigidBodyBehaviorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshControlGroupRigidBodyFaceMeshType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshControlGroupRigidBodyFaceMeshType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshControlPinchGeomtryType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshControlPinchGeomtryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshDisplayStyle.html"> <span class="nf nf-cod-symbol_enum"></span> MeshDisplayStyle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshElementShape.html"> <span class="nf nf-cod-symbol_enum"></span> MeshElementShape</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshFlowControlMethod.html"> <span class="nf nf-cod-symbol_enum"></span> MeshFlowControlMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshInflationElementType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshInflationElementType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshMethodAlgorithm.html"> <span class="nf nf-cod-symbol_enum"></span> MeshMethodAlgorithm</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshMetricType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshMetricType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshNodeType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshNodeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshPhysicsPreferenceType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshPhysicsPreferenceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshRestartControlsType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshRestartControlsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshRestartRetainFilesType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshRestartRetainFilesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshRestartSaveAtLoadStep.html"> <span class="nf nf-cod-symbol_enum"></span> MeshRestartSaveAtLoadStep</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshRestartSaveAtSubstep.html"> <span class="nf nf-cod-symbol_enum"></span> MeshRestartSaveAtSubstep</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshSolverPreferenceType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshSolverPreferenceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MeshSourceType.html"> <span class="nf nf-cod-symbol_enum"></span> MeshSourceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MessageSeverityType.html"> <span class="nf nf-cod-symbol_enum"></span> MessageSeverityType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MethodMeshType.html"> <span class="nf nf-cod-symbol_enum"></span> MethodMeshType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MethodType.html"> <span class="nf nf-cod-symbol_enum"></span> MethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MinimumOrMaximum.html"> <span class="nf nf-cod-symbol_enum"></span> MinimumOrMaximum</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModalFrequencyRangeType.html"> <span class="nf nf-cod-symbol_enum"></span> ModalFrequencyRangeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModeSelectionMethod.html"> <span class="nf nf-cod-symbol_enum"></span> ModeSelectionMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Model2DBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> Model2DBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModelColoring.html"> <span class="nf nf-cod-symbol_enum"></span> ModelColoring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModelDisplay.html"> <span class="nf nf-cod-symbol_enum"></span> ModelDisplay</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModelImportUnitSystemType.html"> <span class="nf nf-cod-symbol_enum"></span> ModelImportUnitSystemType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModelType.html"> <span class="nf nf-cod-symbol_enum"></span> ModelType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ModesCombinationType.html"> <span class="nf nf-cod-symbol_enum"></span> ModesCombinationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MomentsAtSummationPointType.html"> <span class="nf nf-cod-symbol_enum"></span> MomentsAtSummationPointType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MultiOptimTypeStrategyType.html"> <span class="nf nf-cod-symbol_enum"></span> MultiOptimTypeStrategyType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="MultipleNodeType.html"> <span class="nf nf-cod-symbol_enum"></span> MultipleNodeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NLADControlProjectToGeometry.html"> <span class="nf nf-cod-symbol_enum"></span> NLADControlProjectToGeometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NamedSelectionWorksheetOperator.html"> <span class="nf nf-cod-symbol_enum"></span> NamedSelectionWorksheetOperator</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NewtonRaphsonType.html"> <span class="nf nf-cod-symbol_enum"></span> NewtonRaphsonType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NodalPlanesVisible.html"> <span class="nf nf-cod-symbol_enum"></span> NodalPlanesVisible</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NodeAndElementRenumberingMethodType.html"> <span class="nf nf-cod-symbol_enum"></span> NodeAndElementRenumberingMethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NodeMergeToleranceMethod.html"> <span class="nf nf-cod-symbol_enum"></span> NodeMergeToleranceMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NodeMoveInformationType.html"> <span class="nf nf-cod-symbol_enum"></span> NodeMoveInformationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NodeSelection.html"> <span class="nf nf-cod-symbol_enum"></span> NodeSelection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonCyclicLoadingType.html"> <span class="nf nf-cod-symbol_enum"></span> NonCyclicLoadingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonLinearFormulationType.html"> <span class="nf nf-cod-symbol_enum"></span> NonLinearFormulationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonLinearValueType.html"> <span class="nf nf-cod-symbol_enum"></span> NonLinearValueType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonlinearAdaptivityControlsRefinementAlgorithmType.html"> <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityControlsRefinementAlgorithmType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonlinearAdaptivityControlsRemeshingGradientType.html"> <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityControlsRemeshingGradientType</a></li>
+<li class="toctree-l5 current active"><a class="current reference internal" href="#"> <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityCriterionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonlinearAdaptivityOptionType.html"> <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityOptionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonlinearAdaptivityTimeRange.html"> <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityTimeRange</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NonlinearAdaptivityUpdateType.html"> <span class="nf nf-cod-symbol_enum"></span> NonlinearAdaptivityUpdateType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="NormalOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> NormalOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ObjectState.html"> <span class="nf nf-cod-symbol_enum"></span> ObjectState</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ObjectiveType.html"> <span class="nf nf-cod-symbol_enum"></span> ObjectiveType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="OnDemandExpansionType.html"> <span class="nf nf-cod-symbol_enum"></span> OnDemandExpansionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="OptimizationResponseConstraintComponentType.html"> <span class="nf nf-cod-symbol_enum"></span> OptimizationResponseConstraintComponentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="OptimizationSolverType.html"> <span class="nf nf-cod-symbol_enum"></span> OptimizationSolverType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="OptimizationType.html"> <span class="nf nf-cod-symbol_enum"></span> OptimizationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="OutputControlsNodalForcesType.html"> <span class="nf nf-cod-symbol_enum"></span> OutputControlsNodalForcesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PFactorResultType.html"> <span class="nf nf-cod-symbol_enum"></span> PFactorResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PMLOptions.html"> <span class="nf nf-cod-symbol_enum"></span> PMLOptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PSDBoundaryConditionSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> PSDBoundaryConditionSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PanelsToDisplayType.html"> <span class="nf nf-cod-symbol_enum"></span> PanelsToDisplayType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PartTransformationDefinitionType.html"> <span class="nf nf-cod-symbol_enum"></span> PartTransformationDefinitionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PassFailResult.html"> <span class="nf nf-cod-symbol_enum"></span> PassFailResult</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PatchIndependentDefineType.html"> <span class="nf nf-cod-symbol_enum"></span> PatchIndependentDefineType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PathScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> PathScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PeriodicApplyTo.html"> <span class="nf nf-cod-symbol_enum"></span> PeriodicApplyTo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PeriodicRegionType.html"> <span class="nf nf-cod-symbol_enum"></span> PeriodicRegionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PeriodicityDirectionType.html"> <span class="nf nf-cod-symbol_enum"></span> PeriodicityDirectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PhaseType.html"> <span class="nf nf-cod-symbol_enum"></span> PhaseType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PhysicsType.html"> <span class="nf nf-cod-symbol_enum"></span> PhysicsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PilotNodeScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> PilotNodeScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PinBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> PinBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PinNature.html"> <span class="nf nf-cod-symbol_enum"></span> PinNature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PipeLoadingType.html"> <span class="nf nf-cod-symbol_enum"></span> PipeLoadingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PolyflowExportUnit.html"> <span class="nf nf-cod-symbol_enum"></span> PolyflowExportUnit</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PortAttribution.html"> <span class="nf nf-cod-symbol_enum"></span> PortAttribution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PortBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> PortBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PortPosition.html"> <span class="nf nf-cod-symbol_enum"></span> PortPosition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PreStressContactStatus.html"> <span class="nf nf-cod-symbol_enum"></span> PreStressContactStatus</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PreStressLoadControl.html"> <span class="nf nf-cod-symbol_enum"></span> PreStressLoadControl</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PreStressMode.html"> <span class="nf nf-cod-symbol_enum"></span> PreStressMode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PreStressStateType.html"> <span class="nf nf-cod-symbol_enum"></span> PreStressStateType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PressureAtZeroPenetrationType.html"> <span class="nf nf-cod-symbol_enum"></span> PressureAtZeroPenetrationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PressureInitializationType.html"> <span class="nf nf-cod-symbol_enum"></span> PressureInitializationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ProbeDisplayFilter.html"> <span class="nf nf-cod-symbol_enum"></span> ProbeDisplayFilter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ProbeExtractionType.html"> <span class="nf nf-cod-symbol_enum"></span> ProbeExtractionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ProbeResultType.html"> <span class="nf nf-cod-symbol_enum"></span> ProbeResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PrototypeDisplayStyleType.html"> <span class="nf nf-cod-symbol_enum"></span> PrototypeDisplayStyleType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PrototypeLinkBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> PrototypeLinkBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PrototypeModelType.html"> <span class="nf nf-cod-symbol_enum"></span> PrototypeModelType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ProximitySFSourcesType.html"> <span class="nf nf-cod-symbol_enum"></span> ProximitySFSourcesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PullMethod.html"> <span class="nf nf-cod-symbol_enum"></span> PullMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PullOutConstraintSubtype.html"> <span class="nf nf-cod-symbol_enum"></span> PullOutConstraintSubtype</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PullOutDirectionType.html"> <span class="nf nf-cod-symbol_enum"></span> PullOutDirectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="PythonCodeTargetCallback.html"> <span class="nf nf-cod-symbol_enum"></span> PythonCodeTargetCallback</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RBDCorrectionType.html"> <span class="nf nf-cod-symbol_enum"></span> RBDCorrectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RBDDoStaticAnalysisType.html"> <span class="nf nf-cod-symbol_enum"></span> RBDDoStaticAnalysisType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RBDProgramControlType.html"> <span class="nf nf-cod-symbol_enum"></span> RBDProgramControlType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RBDTimeIntegrationType.html"> <span class="nf nf-cod-symbol_enum"></span> RBDTimeIntegrationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RSBoundaryConditionSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> RSBoundaryConditionSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadiationType.html"> <span class="nf nf-cod-symbol_enum"></span> RadiationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadiositySolverType.html"> <span class="nf nf-cod-symbol_enum"></span> RadiositySolverType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadiosityViewFactorType.html"> <span class="nf nf-cod-symbol_enum"></span> RadiosityViewFactorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadiusOfReferenceSphereDefineBy.html"> <span class="nf nf-cod-symbol_enum"></span> RadiusOfReferenceSphereDefineBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RandomSamplingType.html"> <span class="nf nf-cod-symbol_enum"></span> RandomSamplingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ReactionForceCriteriaType.html"> <span class="nf nf-cod-symbol_enum"></span> ReactionForceCriteriaType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ReferenceFrameType.html"> <span class="nf nf-cod-symbol_enum"></span> ReferenceFrameType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ReflectionCoefficientsType.html"> <span class="nf nf-cod-symbol_enum"></span> ReflectionCoefficientsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ReinforcingStressState.html"> <span class="nf nf-cod-symbol_enum"></span> ReinforcingStressState</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RemoteApplicationType.html"> <span class="nf nf-cod-symbol_enum"></span> RemoteApplicationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RemotePointDOFSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> RemotePointDOFSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RemotePointFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> RemotePointFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RemotePointUpdateOptions.html"> <span class="nf nf-cod-symbol_enum"></span> RemotePointUpdateOptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResponseConstraintDefineBy.html"> <span class="nf nf-cod-symbol_enum"></span> ResponseConstraintDefineBy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResponseConstraintType.html"> <span class="nf nf-cod-symbol_enum"></span> ResponseConstraintType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RestartControlsType.html"> <span class="nf nf-cod-symbol_enum"></span> RestartControlsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RestartRetainFilesType.html"> <span class="nf nf-cod-symbol_enum"></span> RestartRetainFilesType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RestartSaveAtLoadStep.html"> <span class="nf nf-cod-symbol_enum"></span> RestartSaveAtLoadStep</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RestartSaveAtSubstep.html"> <span class="nf nf-cod-symbol_enum"></span> RestartSaveAtSubstep</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RestartType.html"> <span class="nf nf-cod-symbol_enum"></span> RestartType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResultAnimationRangeType.html"> <span class="nf nf-cod-symbol_enum"></span> ResultAnimationRangeType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResultAveragingType.html"> <span class="nf nf-cod-symbol_enum"></span> ResultAveragingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResultFileCompressionType.html"> <span class="nf nf-cod-symbol_enum"></span> ResultFileCompressionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResultFileItemType.html"> <span class="nf nf-cod-symbol_enum"></span> ResultFileItemType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResultRelativityType.html"> <span class="nf nf-cod-symbol_enum"></span> ResultRelativityType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ResultType.html"> <span class="nf nf-cod-symbol_enum"></span> ResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RigidBodyTransformationType.html"> <span class="nf nf-cod-symbol_enum"></span> RigidBodyTransformationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RigidResponseEffectType.html"> <span class="nf nf-cod-symbol_enum"></span> RigidResponseEffectType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RobustFrequenciesReductionType.html"> <span class="nf nf-cod-symbol_enum"></span> RobustFrequenciesReductionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RotationPlane.html"> <span class="nf nf-cod-symbol_enum"></span> RotationPlane</a></li>
+<li class="toctree-l5"><a class="reference internal" href="STLSupportViewType.html"> <span class="nf nf-cod-symbol_enum"></span> STLSupportViewType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SafetyLimitType.html"> <span class="nf nf-cod-symbol_enum"></span> SafetyLimitType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SafetyTheoryType.html"> <span class="nf nf-cod-symbol_enum"></span> SafetyTheoryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ScaleFactorType.html"> <span class="nf nf-cod-symbol_enum"></span> ScaleFactorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ScatteredFieldFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> ScatteredFieldFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ScatteringOutputType.html"> <span class="nf nf-cod-symbol_enum"></span> ScatteringOutputType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SecondaryImportPrefType.html"> <span class="nf nf-cod-symbol_enum"></span> SecondaryImportPrefType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SectionPlaneCappingType.html"> <span class="nf nf-cod-symbol_enum"></span> SectionPlaneCappingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SectionPlaneType.html"> <span class="nf nf-cod-symbol_enum"></span> SectionPlaneType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SelectionActionType.html"> <span class="nf nf-cod-symbol_enum"></span> SelectionActionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SelectionCriterionType.html"> <span class="nf nf-cod-symbol_enum"></span> SelectionCriterionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SelectionOperatorType.html"> <span class="nf nf-cod-symbol_enum"></span> SelectionOperatorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> SelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SendAs.html"> <span class="nf nf-cod-symbol_enum"></span> SendAs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SeqSelectionMode.html"> <span class="nf nf-cod-symbol_enum"></span> SeqSelectionMode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SequenceSelectionType.html"> <span class="nf nf-cod-symbol_enum"></span> SequenceSelectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SetDriverStyle.html"> <span class="nf nf-cod-symbol_enum"></span> SetDriverStyle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShearMomentDiagramOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> ShearMomentDiagramOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShearMomentType.html"> <span class="nf nf-cod-symbol_enum"></span> ShearMomentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShearOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> ShearOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellBodyDimension.html"> <span class="nf nf-cod-symbol_enum"></span> ShellBodyDimension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellElementStiffnessOption.html"> <span class="nf nf-cod-symbol_enum"></span> ShellElementStiffnessOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellFaceType.html"> <span class="nf nf-cod-symbol_enum"></span> ShellFaceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellInertiaUpdate.html"> <span class="nf nf-cod-symbol_enum"></span> ShellInertiaUpdate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellMBPOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> ShellMBPOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellMBPType.html"> <span class="nf nf-cod-symbol_enum"></span> ShellMBPType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellOffsetType.html"> <span class="nf nf-cod-symbol_enum"></span> ShellOffsetType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ShellThicknessUpdate.html"> <span class="nf nf-cod-symbol_enum"></span> ShellThicknessUpdate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SizingBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> SizingBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SizingType.html"> <span class="nf nf-cod-symbol_enum"></span> SizingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SlidingContactType.html"> <span class="nf nf-cod-symbol_enum"></span> SlidingContactType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SnapType.html"> <span class="nf nf-cod-symbol_enum"></span> SnapType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolutionCombinationDriverStyle.html"> <span class="nf nf-cod-symbol_enum"></span> SolutionCombinationDriverStyle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolutionCombinationWorksheetType.html"> <span class="nf nf-cod-symbol_enum"></span> SolutionCombinationWorksheetType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolutionOutputType.html"> <span class="nf nf-cod-symbol_enum"></span> SolutionOutputType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolutionStatusType.html"> <span class="nf nf-cod-symbol_enum"></span> SolutionStatusType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolveBehaviourType.html"> <span class="nf nf-cod-symbol_enum"></span> SolveBehaviourType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolverControlsIncludeNegativeLoadMultiplier.html"> <span class="nf nf-cod-symbol_enum"></span> SolverControlsIncludeNegativeLoadMultiplier</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolverControlsModeReuse.html"> <span class="nf nf-cod-symbol_enum"></span> SolverControlsModeReuse</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolverPivotChecking.html"> <span class="nf nf-cod-symbol_enum"></span> SolverPivotChecking</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolverType.html"> <span class="nf nf-cod-symbol_enum"></span> SolverType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SolverUnitsControlType.html"> <span class="nf nf-cod-symbol_enum"></span> SolverUnitsControlType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SortingType.html"> <span class="nf nf-cod-symbol_enum"></span> SortingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SourceConductorType.html"> <span class="nf nf-cod-symbol_enum"></span> SourceConductorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SourceDimension.html"> <span class="nf nf-cod-symbol_enum"></span> SourceDimension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SourceTimeDefinitionType.html"> <span class="nf nf-cod-symbol_enum"></span> SourceTimeDefinitionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpacingOptionType.html"> <span class="nf nf-cod-symbol_enum"></span> SpacingOptionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpatialRadiationType.html"> <span class="nf nf-cod-symbol_enum"></span> SpatialRadiationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpatialReductionMethodType.html"> <span class="nf nf-cod-symbol_enum"></span> SpatialReductionMethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpatialReductionType.html"> <span class="nf nf-cod-symbol_enum"></span> SpatialReductionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpectrumType.html"> <span class="nf nf-cod-symbol_enum"></span> SpectrumType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpinSofteningType.html"> <span class="nf nf-cod-symbol_enum"></span> SpinSofteningType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpotWeldTypes.html"> <span class="nf nf-cod-symbol_enum"></span> SpotWeldTypes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpringBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> SpringBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpringPreloadType.html"> <span class="nf nf-cod-symbol_enum"></span> SpringPreloadType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpringResultType.html"> <span class="nf nf-cod-symbol_enum"></span> SpringResultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpringScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> SpringScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpringType.html"> <span class="nf nf-cod-symbol_enum"></span> SpringType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SpringsStiffnessType.html"> <span class="nf nf-cod-symbol_enum"></span> SpringsStiffnessType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StabilizationFirstSubstepOption.html"> <span class="nf nf-cod-symbol_enum"></span> StabilizationFirstSubstepOption</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StabilizationMethod.html"> <span class="nf nf-cod-symbol_enum"></span> StabilizationMethod</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StabilizationType.html"> <span class="nf nf-cod-symbol_enum"></span> StabilizationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StackerMethodMeshType.html"> <span class="nf nf-cod-symbol_enum"></span> StackerMethodMeshType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StageBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> StageBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StepVarying.html"> <span class="nf nf-cod-symbol_enum"></span> StepVarying</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StiffnessBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> StiffnessBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StiffnessMethodType.html"> <span class="nf nf-cod-symbol_enum"></span> StiffnessMethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StopCriterion.html"> <span class="nf nf-cod-symbol_enum"></span> StopCriterion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StoreModalResult.html"> <span class="nf nf-cod-symbol_enum"></span> StoreModalResult</a></li>
+<li class="toctree-l5"><a class="reference internal" href="StressStrainType.html"> <span class="nf nf-cod-symbol_enum"></span> StressStrainType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SubScopingDefineByType.html"> <span class="nf nf-cod-symbol_enum"></span> SubScopingDefineByType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SurfaceCoatingStiffnessBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> SurfaceCoatingStiffnessBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SweepElementOptionType.html"> <span class="nf nf-cod-symbol_enum"></span> SweepElementOptionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SymmetryBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> SymmetryBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SymmetryBoundaryDOFOrientation.html"> <span class="nf nf-cod-symbol_enum"></span> SymmetryBoundaryDOFOrientation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SymmetryNormalType.html"> <span class="nf nf-cod-symbol_enum"></span> SymmetryNormalType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SymmetryRegionType.html"> <span class="nf nf-cod-symbol_enum"></span> SymmetryRegionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TargetCorrection.html"> <span class="nf nf-cod-symbol_enum"></span> TargetCorrection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TargetOrientation.html"> <span class="nf nf-cod-symbol_enum"></span> TargetOrientation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TetIntegrationType.html"> <span class="nf nf-cod-symbol_enum"></span> TetIntegrationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ThermalPointMassBehavior.html"> <span class="nf nf-cod-symbol_enum"></span> ThermalPointMassBehavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ThermalStrainType.html"> <span class="nf nf-cod-symbol_enum"></span> ThermalStrainType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ThermoelasticDampingType.html"> <span class="nf nf-cod-symbol_enum"></span> ThermoelasticDampingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ThroughThicknessBendingStress.html"> <span class="nf nf-cod-symbol_enum"></span> ThroughThicknessBendingStress</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TimeHistoryDisplayType.html"> <span class="nf nf-cod-symbol_enum"></span> TimeHistoryDisplayType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TimePointsOptions.html"> <span class="nf nf-cod-symbol_enum"></span> TimePointsOptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TimeStepDefineByType.html"> <span class="nf nf-cod-symbol_enum"></span> TimeStepDefineByType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ToleranceType.html"> <span class="nf nf-cod-symbol_enum"></span> ToleranceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoBoundType.html"> <span class="nf nf-cod-symbol_enum"></span> TopoBoundType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoConstraintStressType.html"> <span class="nf nf-cod-symbol_enum"></span> TopoConstraintStressType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoConstraintType.html"> <span class="nf nf-cod-symbol_enum"></span> TopoConstraintType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoEnvironmentType.html"> <span class="nf nf-cod-symbol_enum"></span> TopoEnvironmentType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoObjectiveFormulation.html"> <span class="nf nf-cod-symbol_enum"></span> TopoObjectiveFormulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoOptimizationDensityFilter.html"> <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationDensityFilter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoOptimizationExportDesignProperties.html"> <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationExportDesignProperties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoOptimizationExportDesignPropertiesFileFormat.html"> <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationExportDesignPropertiesFileFormat</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoOptimizationOutputLog.html"> <span class="nf nf-cod-symbol_enum"></span> TopoOptimizationOutputLog</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopoPropertyControlType.html"> <span class="nf nf-cod-symbol_enum"></span> TopoPropertyControlType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TopologyOptimizationResultShowType.html"> <span class="nf nf-cod-symbol_enum"></span> TopologyOptimizationResultShowType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TotalOrDirectional.html"> <span class="nf nf-cod-symbol_enum"></span> TotalOrDirectional</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TransferAdmittanceModelType.html"> <span class="nf nf-cod-symbol_enum"></span> TransferAdmittanceModelType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TransformationType.html"> <span class="nf nf-cod-symbol_enum"></span> TransformationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TransientApplicationType.html"> <span class="nf nf-cod-symbol_enum"></span> TransientApplicationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TransientDampingType.html"> <span class="nf nf-cod-symbol_enum"></span> TransientDampingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TreeFilterObjectClass.html"> <span class="nf nf-cod-symbol_enum"></span> TreeFilterObjectClass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TreeFilterObjectState.html"> <span class="nf nf-cod-symbol_enum"></span> TreeFilterObjectState</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TreeFilterScopingType.html"> <span class="nf nf-cod-symbol_enum"></span> TreeFilterScopingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="TriangleReduction.html"> <span class="nf nf-cod-symbol_enum"></span> TriangleReduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="UnitCategoryType.html"> <span class="nf nf-cod-symbol_enum"></span> UnitCategoryType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="UnitSystemIDType.html"> <span class="nf nf-cod-symbol_enum"></span> UnitSystemIDType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="UpdateContactStiffness.html"> <span class="nf nf-cod-symbol_enum"></span> UpdateContactStiffness</a></li>
+<li class="toctree-l5"><a class="reference internal" href="UseExistingModesymFile.html"> <span class="nf nf-cod-symbol_enum"></span> UseExistingModesymFile</a></li>
+<li class="toctree-l5"><a class="reference internal" href="UserUnitSystemType.html"> <span class="nf nf-cod-symbol_enum"></span> UserUnitSystemType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VectorDisplayType.html"> <span class="nf nf-cod-symbol_enum"></span> VectorDisplayType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VectorLengthType.html"> <span class="nf nf-cod-symbol_enum"></span> VectorLengthType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VectorReductionReferenceType.html"> <span class="nf nf-cod-symbol_enum"></span> VectorReductionReferenceType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VectorReductionType.html"> <span class="nf nf-cod-symbol_enum"></span> VectorReductionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ViewOrientationType.html"> <span class="nf nf-cod-symbol_enum"></span> ViewOrientationType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VirtualCellClassType.html"> <span class="nf nf-cod-symbol_enum"></span> VirtualCellClassType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VirtualCellGroupAutomaticBehaviorType.html"> <span class="nf nf-cod-symbol_enum"></span> VirtualCellGroupAutomaticBehaviorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VirtualCellGroupMethodType.html"> <span class="nf nf-cod-symbol_enum"></span> VirtualCellGroupMethodType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VirtualCellGroupRepairBehaviorType.html"> <span class="nf nf-cod-symbol_enum"></span> VirtualCellGroupRepairBehaviorType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="VisibilityType.html"> <span class="nf nf-cod-symbol_enum"></span> VisibilityType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="WBUnitSystemType.html"> <span class="nf nf-cod-symbol_enum"></span> WBUnitSystemType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="WaterfallDisplaySelectionMode.html"> <span class="nf nf-cod-symbol_enum"></span> WaterfallDisplaySelectionMode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="WaveType.html"> <span class="nf nf-cod-symbol_enum"></span> WaveType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="WeakSpringsType.html"> <span class="nf nf-cod-symbol_enum"></span> WeakSpringsType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="WeightingType.html"> <span class="nf nf-cod-symbol_enum"></span> WeightingType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="WindowType.html"> <span class="nf nf-cod-symbol_enum"></span> WindowType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="XAxisValues.html"> <span class="nf nf-cod-symbol_enum"></span> XAxisValues</a></li>
+<li class="toctree-l5"><a class="reference internal" href="YesNoProgrammedControlled.html"> <span class="nf nf-cod-symbol_enum"></span> YesNoProgrammedControlled</a></li>
+<li class="toctree-l5"><a class="reference internal" href="YesNoType.html"> <span class="nf nf-cod-symbol_enum"></span> YesNoType</a></li>
+</ul>
+</details></li>
+<li class="toctree-l4"><a class="reference internal" href="../Interfaces/index.html"> <span class="nf nf-md-package"></span> Interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../MechanicalEnums/index.html"> <span class="nf nf-md-package"></span> MechanicalEnums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Results/index.html"> <span class="nf nf-md-package"></span> Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../SolverData/index.html"> <span class="nf nf-md-package"></span> SolverData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Utilities/index.html"> <span class="nf nf-md-package"></span> Utilities</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ExternalData/index.html"> <span class="nf nf-md-package"></span> ExternalData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Graphics/index.html"> <span class="nf nf-md-package"></span> Graphics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Interfaces/index.html"> <span class="nf nf-md-package"></span> Interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Materials/index.html"> <span class="nf nf-md-package"></span> Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Math/index.html"> <span class="nf nf-md-package"></span> Math</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Selection/index.html"> <span class="nf nf-md-package"></span> Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Table/index.html"> <span class="nf nf-md-package"></span> Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UI/index.html"> <span class="nf nf-md-package"></span> UI</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+         
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="https://docs.pyansys.com/" class="nav-link">PyAnsys</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a
+        href="../../../../../../../../../index.html"
+        class="nav-link"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../../../../../../index.html" class="nav-link">API reference</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../../index.html" class="nav-link">Mechanical 2024 R1</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Ansys</span></code></a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Mechanical</span></code></a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">DataModel</span></code></a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Enums</span></code></a>
+    </li>
+      
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><code class="xref py py-class docutils literal notranslate"><span class="pre">NonlinearAdaptivityCriterionType</span></code></span></li>
+    
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="nonlinearadaptivitycriteriontype">
+<h1><code class="xref py py-class docutils literal notranslate"><span class="pre">NonlinearAdaptivityCriterionType</span></code><a class="headerlink" href="#nonlinearadaptivitycriteriontype" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityCriterionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.</span></span><span class="sig-name descname"><span class="pre">NonlinearAdaptivityCriterionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityCriterionType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Specifies the NonlinearAdaptivityCriterionType.</p>
+</dd></dl>
+
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Attributes</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#NonlinearAdaptivityCriterionType.AMOctree" title="NonlinearAdaptivityCriterionType.AMOctree"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AMOctree</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#NonlinearAdaptivityCriterionType.Box" title="NonlinearAdaptivityCriterionType.Box"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Box</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#NonlinearAdaptivityCriterionType.Energy" title="NonlinearAdaptivityCriterionType.Energy"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Energy</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#NonlinearAdaptivityCriterionType.Mesh" title="NonlinearAdaptivityCriterionType.Mesh"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mesh</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#NonlinearAdaptivityCriterionType.Undefined" title="NonlinearAdaptivityCriterionType.Undefined"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Undefined</span></code></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="attribute-detail">
+<h2>Attribute detail<a class="headerlink" href="#attribute-detail" title="Link to this heading">#</a></h2>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NonlinearAdaptivityCriterionType.AMOctree">
+<span class="sig-prename descclassname"><span class="pre">NonlinearAdaptivityCriterionType.</span></span><span class="sig-name descname"><span class="pre">AMOctree</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#NonlinearAdaptivityCriterionType.AMOctree" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NonlinearAdaptivityCriterionType.Box">
+<span class="sig-prename descclassname"><span class="pre">NonlinearAdaptivityCriterionType.</span></span><span class="sig-name descname"><span class="pre">Box</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#NonlinearAdaptivityCriterionType.Box" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NonlinearAdaptivityCriterionType.Energy">
+<span class="sig-prename descclassname"><span class="pre">NonlinearAdaptivityCriterionType.</span></span><span class="sig-name descname"><span class="pre">Energy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#NonlinearAdaptivityCriterionType.Energy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NonlinearAdaptivityCriterionType.Mesh">
+<span class="sig-prename descclassname"><span class="pre">NonlinearAdaptivityCriterionType.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#NonlinearAdaptivityCriterionType.Mesh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NonlinearAdaptivityCriterionType.Undefined">
+<span class="sig-prename descclassname"><span class="pre">NonlinearAdaptivityCriterionType.</span></span><span class="sig-name descname"><span class="pre">Undefined</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#NonlinearAdaptivityCriterionType.Undefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityCriterionType"><code class="docutils literal notranslate"><span class="pre">ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.Enums.NonlinearAdaptivityCriterionType</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-detail">Attribute detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#NonlinearAdaptivityCriterionType.AMOctree"><code class="docutils literal notranslate"><span class="pre">AMOctree</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#NonlinearAdaptivityCriterionType.Box"><code class="docutils literal notranslate"><span class="pre">Box</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#NonlinearAdaptivityCriterionType.Energy"><code class="docutils literal notranslate"><span class="pre">Energy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#NonlinearAdaptivityCriterionType.Mesh"><code class="docutils literal notranslate"><span class="pre">Mesh</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#NonlinearAdaptivityCriterionType.Undefined"><code class="docutils literal notranslate"><span class="pre">Undefined</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item"> 
+<div class="tocsection editthispage">
+  <a href="http://github.com/ansys/pymechanical-stubs/edit/main/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityCriterionType.py">
+    <i class="fa-solid fa-pencil"></i>
+       Edit
+    on GitHub  
+  </a>
+</div>
+
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <ul class="this-page-menu">
+      <li><a href="../../../../../../../../../_sources/api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/Enums/NonlinearAdaptivityCriterionType.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+  <!-- Include desired assets -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+
+<script>
+// Passing the search options to the search.js file
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
+const SEARCH_FILE = "../../../../../../../../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../../../../../../../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
+</script>
+
+
+<script src="../../../../../../../../../_static/js/search.js"></script>
+
+  
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright (c) 2025 ANSYS, Inc. All rights reserved.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the
+  <a href="https://sphinxdocs.ansys.com/version/stable/index.html"
+    >Ansys Sphinx Theme</a
+  >
+  1.5.3. <br />Last updated on
+  <span id="ast_build_date"></span>
+</p>
+<script>
+  var options = { day: "numeric", month: "long", year: "numeric" };
+  var ast_lastModifiedDate = new Date(document.lastModified);
+  var ast_build_date = ast_lastModifiedDate.toLocaleDateString("en-US", options);
+  document.getElementById("ast_build_date").innerHTML = ast_build_date;
+</script></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

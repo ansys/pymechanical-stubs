@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PartTransformationDefinitionType`
+=========================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PartTransformationDefinitionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PartTransformationDefinitionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PartTransformationDefinitionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CoordinateSystem`
+            - 
+          * - :py:attr:`~RotationAndTranslation`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CoordinateSystem
+   :value: 2
+
+
+.. py:attribute:: RotationAndTranslation
+   :value: 1
+
+
+
+
+
+
+.. vale on
