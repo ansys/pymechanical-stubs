@@ -66,6 +66,11 @@ EXCLUDED_TYPES_LIST = [
     "System.Delegate",
 ]
 
+# Maps interface return types to their concrete runtime types for more accurate stubs.
+TYPE_OVERRIDES = {
+    "Ansys.ACT.Interfaces.Mechanical.IMechanicalDataModel": "Ansys.ACT.Mechanical.MechanicalDataModel",
+}
+
 
 def c_types_to_python(type_str):
     """Replace C# types with Python types.
@@ -380,6 +385,8 @@ def fix_str(input_str: str):
         input_str = input_str.replace("+", ".")
     if "[]" in input_str:
         input_str = input_str.replace("[]", "")
+    if "&" in input_str:
+        input_str = input_str.replace("&", "")
     if "`" in input_str:
         input_str = remove_backtick(input_str)
     return input_str
@@ -417,6 +424,52 @@ class Property:
     value: typing.Optional[typing.Any]  # may be used if static
 
 
+def _get_all_interface_members(
+    class_type: typing.Any, member_getter: typing.Callable, type_filter: typing.Callable = None
+) -> typing.List:
+    """Collect members from an interface and all its inherited interfaces.
+
+    In .NET, Type.GetProperties() / Type.GetMethods() on an interface
+    does not include members inherited from base interfaces. This function
+    walks the full interface hierarchy via GetInterfaces() and collects
+    all members, deduplicating by name.
+
+    For generic interfaces (e.g. IApplicationExtAPI<IMechanicalApplication>),
+    the constructed type returned by GetInterfaces() already has generic
+    type parameters resolved to concrete types.
+
+    Parameters
+    ----------
+    class_type: typing.Any
+        The interface type to collect members from.
+    member_getter: typing.Callable
+        A callable that takes a type and returns its members
+        (e.g. lambda t: t.GetProperties()).
+    type_filter: typing.Callable, optional
+        Filter applied only to the direct members of class_type.
+        Inherited interface members are included unconditionally.
+
+    Returns
+    -------
+    typing.List
+        A deduplicated list of members from the interface hierarchy.
+    """
+    seen = set()
+    members = []
+    for member in member_getter(class_type):
+        if type_filter is not None and not type_filter(member):
+            continue
+        if member.Name not in seen:
+            seen.add(member.Name)
+            members.append(member)
+    for iface in class_type.GetInterfaces():
+        for member in member_getter(iface):
+            if member.Name not in seen:
+                seen.add(member.Name)
+                members.append(member)
+    return members
+
+
 def get_properties(
     class_type: typing.Any,
     doc: typing.Dict[str, DocMember],
@@ -438,12 +491,21 @@ def get_properties(
     typing.List[Property]
         A list of properties
     """
-    props = [
-        prop for prop in class_type.GetProperties() if (type_filter is None or type_filter(prop))
-    ]
+    if class_type.IsInterface:
+        props = _get_all_interface_members(class_type, lambda t: t.GetProperties(), type_filter)
+    else:
+        props = [
+            prop
+            for prop in class_type.GetProperties()
+            if (type_filter is None or type_filter(prop))
+        ]
     output = []
     for prop in props:
         prop_type = f'"{prop.PropertyType.ToString()}"'
+        # Apply type overrides for concrete runtime types
+        raw_type = prop.PropertyType.ToString()
+        if raw_type in TYPE_OVERRIDES:
+            prop_type = f'"{TYPE_OVERRIDES[raw_type]}"'
         prop_name = prop.Name
         declaring_type_name = prop.DeclaringType.ToString()
         method_doc_key = f"P:{declaring_type_name}.{prop_name}"
@@ -521,7 +583,10 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
             if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
                 prop.value = fix_str(f"{prop.value}")
 
-            buffer.write(f"{indent}return {prop.value}\n")
+            if isinstance(prop.value, str):
+                buffer.write(f"{indent}return {repr(prop.value)}\n")
+            else:
+                buffer.write(f"{indent}return {prop.value}\n")
         else:
             buffer.write(f"{indent}return None\n")
     else:
@@ -681,9 +746,12 @@ def get_methods(
     typing.List[Method]
         A list of methods
     """
-    methods = [
-        prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
-    ]
+    if class_type.IsInterface:
+        methods = _get_all_interface_members(class_type, lambda t: t.GetMethods(), type_filter)
+    else:
+        methods = [
+            prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
+        ]
     output = []
     for method in methods:
         method_return_type = f'"{method.ReturnType.ToString()}"'
