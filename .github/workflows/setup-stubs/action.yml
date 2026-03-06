@@ -61,10 +61,17 @@ runs:
         pattern: ${{ inputs.folder-pattern }}
         path: ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
 
-    - name: List directory and move to correct version dir
+    - name: Ensure the Mechanical version folder is not empty
       shell: bash
       run: |
-        ls -lR src/ansys/mechanical/stubs
+        revn_folder="${{ inputs.package-path }}/${{ inputs.mechanical-revn }}"
+        if [ "$(find "$revn_folder" -mindepth 1 -print -quit)" ]; then
+          echo "$revn_folder is not empty."
+        else
+          echo "$revn_folder is empty."
+          echo "Please check the stubs were downloaded to the correct location."
+          return 2
+        fi
 
     - name: Rename folders
       shell: python
