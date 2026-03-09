@@ -56,7 +56,7 @@ runs:
         cp /tmp/versions.json versions.json
 
     - name: "Update theme switcher version matches"
-      shell: shell
+      shell: bash
       run: |
         [[ if "${{ inputs.doc-type }}" == "pull" ]]; then
           pr_number=${{ github.event.pull_request.number }}
