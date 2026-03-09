@@ -257,11 +257,11 @@ def main():
 
     # Assembly files to read from the Ansys Mechanical install.
     assemblies = [
-        # "Ansys.Mechanical.DataModel",
-        # "Ansys.Mechanical.Interfaces",
+        "Ansys.Mechanical.DataModel",
+        "Ansys.Mechanical.Interfaces",
         "Ansys.ACT.Interfaces",
-        # "Ansys.ACT.WB1",
-        # "Ans.Core",
+        "Ansys.ACT.WB1",
+        "Ans.Core",
     ]
 
     resolve()
