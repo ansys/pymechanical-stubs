@@ -59,7 +59,7 @@ runs:
       shell: bash
       run: |
         [[ if "${{ inputs.doc-type }}" == "pull" ]]; then
-          pr_number=${{ github.event.pull_request.number }}
+          pr_number="${{ github.event.pull_request.number }}"
           echo "Updating theme switcher for pull request #${pr_number}"
           mv pull/$pr_number/api/ansys/mechanical/stubs/v241 pull/$pr_number/v241
           mv pull/$pr_number/api/ansys/mechanical/stubs/v242 pull/$pr_number/v242
