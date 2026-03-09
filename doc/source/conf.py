@@ -140,10 +140,13 @@ html_context = {
     "doc_path": "doc/source",
 }
 
+# Hardcode latest version
+latest_version = "252"
+
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": get_version_match(version),
+        "version_match": latest_version,
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
