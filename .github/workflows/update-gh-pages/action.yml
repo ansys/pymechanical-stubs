@@ -44,8 +44,9 @@ runs:
       if: steps.check-versions.outputs.versions_changed == 'true'
       shell: bash
       run: |
+        cp doc/versions.json /tmp/versions.json
         git checkout gh-pages
-        cp doc/versions.json versions.json
+        cp /tmp/versions.json versions.json
         git config user.name "${{ inputs.bot-username }}"
         git config user.email "${{ inputs.bot-email }}"
         git add versions.json
