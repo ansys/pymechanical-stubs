@@ -488,6 +488,12 @@ jobs:
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
           maximum-pr-doc-deployments: 10
 
+      - name: "Update gh-pages versions.json"
+        uses: ./.github/workflows/update-gh-pages/
+        with:
+          bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+
   build-library:
     name: Build library
     runs-on: ubuntu-latest
@@ -561,6 +567,13 @@ jobs:
           bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
 
+      - name: "Update gh-pages versions.json"
+        uses: ./.github/workflows/update-gh-pages/
+        with:
+          bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+
+
   doc-deploy-stable:
     name: "Deploy stable documentation"
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
@@ -573,4 +586,10 @@ jobs:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
           bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+
+      - name: "Update gh-pages versions.json"
+        uses: ./.github/workflows/update-gh-pages/
+        with:
+          bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
