@@ -1,0 +1,408 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Results``
+===========================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Results
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.AcousticResults`
+            - AcousticResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamResults`
+            - BeamResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BeamToolResults`
+            - BeamToolResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.BoltToolResults`
+            - BoltToolResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults`
+            - CompositeFailureResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ContactToolResults`
+            - ContactToolResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.CoordinateSystemsResults`
+            - CoordinateSystemsResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.DamageResults`
+            - DamageResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.DeformationResults`
+            - DeformationResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults`
+            - ElectricResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults`
+            - ElectromagneticResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.EnergyResults`
+            - EnergyResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.FatigueToolResults`
+            - FatigueToolResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults`
+            - FractureToolResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults`
+            - FrequencyResponseResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults`
+            - GasketResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults`
+            - LinearizedStressResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults`
+            - PhaseResponseResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ProbeResults`
+            - ProbeResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ResultTrackers`
+            - ResultTrackers module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ScriptableResults`
+            - ScriptableResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.StrainResults`
+            - StrainResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.StressResults`
+            - StressResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.StressToolResults`
+            - StressToolResults module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ThermalResults`
+            - ThermalResults module.
+
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.Alert`
+            - Defines a Alert.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ContactDataTable`
+            - Defines a ContactDataTable.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.Convergence`
+            - Defines a Convergence.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.LatticeDensity`
+            - Defines a LatticeDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.LatticeElementalDensity`
+            - Defines a LatticeElementalDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.LinePressureResult`
+            - Defines a LinePressureResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.MagneticCoenergy`
+            - Defines a MagneticCoenergy.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.MagneticPotential`
+            - Defines a MagneticPotential.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualCharge`
+            - Defines a NewtonRaphsonResidualCharge.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualForce`
+            - Defines a NewtonRaphsonResidualForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualHeat`
+            - Defines a NewtonRaphsonResidualHeat.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.NewtonRaphsonResidualMoment`
+            - Defines a NewtonRaphsonResidualMoment.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.Result`
+            - Defines a Result.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ResultChart`
+            - Defines a ResultChart.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ResultTable`
+            - Defines a ResultTable.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ShapeFinder`
+            - Defines a ShapeFinder.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ShapeFinderElemental`
+            - Defines a ShapeFinderElemental.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.Smoothing`
+            - Defines a Smoothing.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.TopologyDensity`
+            - Defines a TopologyDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.TopologyElementalDensity`
+            - Defines a TopologyElementalDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.TopologyMultiDensity`
+            - Defines a TopologyMultiDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.TopologyOptimizationResult`
+            - Defines a TopologyOptimizationResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.UserDefinedResult`
+            - Defines a UserDefinedResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.VariableGraph`
+            - Defines a VariableGraph.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.Volume`
+            - Defines a Volume.
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> AcousticResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/AcousticResults/index>
+    <span class="nf nf-md-package"></span> BeamResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamResults/index>
+    <span class="nf nf-md-package"></span> BeamToolResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BeamToolResults/index>
+    <span class="nf nf-md-package"></span> BoltToolResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/BoltToolResults/index>
+    <span class="nf nf-md-package"></span> CompositeFailureResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/CompositeFailureResults/index>
+    <span class="nf nf-md-package"></span> ContactToolResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ContactToolResults/index>
+    <span class="nf nf-md-package"></span> CoordinateSystemsResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/CoordinateSystemsResults/index>
+    <span class="nf nf-md-package"></span> DamageResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/DamageResults/index>
+    <span class="nf nf-md-package"></span> DeformationResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/index>
+    <span class="nf nf-md-package"></span> ElectricResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/index>
+    <span class="nf nf-md-package"></span> ElectromagneticResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/index>
+    <span class="nf nf-md-package"></span> EnergyResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/EnergyResults/index>
+    <span class="nf nf-md-package"></span> FatigueToolResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/FatigueToolResults/index>
+    <span class="nf nf-md-package"></span> FractureToolResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/index>
+    <span class="nf nf-md-package"></span> FrequencyResponseResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/FrequencyResponseResults/index>
+    <span class="nf nf-md-package"></span> GasketResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/GasketResults/index>
+    <span class="nf nf-md-package"></span> LinearizedStressResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/LinearizedStressResults/index>
+    <span class="nf nf-md-package"></span> PhaseResponseResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/PhaseResponseResults/index>
+    <span class="nf nf-md-package"></span> ProbeResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/index>
+    <span class="nf nf-md-package"></span> ResultTrackers</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ResultTrackers/index>
+    <span class="nf nf-md-package"></span> ScriptableResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ScriptableResults/index>
+    <span class="nf nf-md-package"></span> StrainResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/StrainResults/index>
+    <span class="nf nf-md-package"></span> StressResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/StressResults/index>
+    <span class="nf nf-md-package"></span> StressToolResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/StressToolResults/index>
+    <span class="nf nf-md-package"></span> ThermalResults</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/index>
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> Alert</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/Alert>
+    <span class="nf nf-cod-symbol_class"></span> ContactDataTable</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ContactDataTable>
+    <span class="nf nf-cod-symbol_class"></span> Convergence</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/Convergence>
+    <span class="nf nf-cod-symbol_class"></span> LatticeDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/LatticeDensity>
+    <span class="nf nf-cod-symbol_class"></span> LatticeElementalDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/LatticeElementalDensity>
+    <span class="nf nf-cod-symbol_class"></span> LinePressureResult</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/LinePressureResult>
+    <span class="nf nf-cod-symbol_class"></span> MagneticCoenergy</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/MagneticCoenergy>
+    <span class="nf nf-cod-symbol_class"></span> MagneticPotential</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/MagneticPotential>
+    <span class="nf nf-cod-symbol_class"></span> NewtonRaphsonResidualCharge</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/NewtonRaphsonResidualCharge>
+    <span class="nf nf-cod-symbol_class"></span> NewtonRaphsonResidualForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/NewtonRaphsonResidualForce>
+    <span class="nf nf-cod-symbol_class"></span> NewtonRaphsonResidualHeat</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/NewtonRaphsonResidualHeat>
+    <span class="nf nf-cod-symbol_class"></span> NewtonRaphsonResidualMoment</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/NewtonRaphsonResidualMoment>
+    <span class="nf nf-cod-symbol_class"></span> Result</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/Result>
+    <span class="nf nf-cod-symbol_class"></span> ResultChart</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ResultChart>
+    <span class="nf nf-cod-symbol_class"></span> ResultTable</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ResultTable>
+    <span class="nf nf-cod-symbol_class"></span> ShapeFinder</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ShapeFinder>
+    <span class="nf nf-cod-symbol_class"></span> ShapeFinderElemental</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ShapeFinderElemental>
+    <span class="nf nf-cod-symbol_class"></span> Smoothing</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/Smoothing>
+    <span class="nf nf-cod-symbol_class"></span> TopologyDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/TopologyDensity>
+    <span class="nf nf-cod-symbol_class"></span> TopologyElementalDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/TopologyElementalDensity>
+    <span class="nf nf-cod-symbol_class"></span> TopologyMultiDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/TopologyMultiDensity>
+    <span class="nf nf-cod-symbol_class"></span> TopologyOptimizationResult</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/TopologyOptimizationResult>
+    <span class="nf nf-cod-symbol_class"></span> UserDefinedResult</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/UserDefinedResult>
+    <span class="nf nf-cod-symbol_class"></span> VariableGraph</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/VariableGraph>
+    <span class="nf nf-cod-symbol_class"></span> Volume</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/Volume>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Results module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

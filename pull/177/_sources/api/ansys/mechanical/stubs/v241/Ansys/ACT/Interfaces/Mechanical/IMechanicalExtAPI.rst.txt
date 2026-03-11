@@ -1,0 +1,478 @@
+.. vale off
+
+
+
+:class:`IMechanicalExtAPI`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Interfaces.Mechanical.IMechanicalExtAPI
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes the main entry point of all ATC APIs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalExtAPI
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ExecuteCommand`
+            - ExecuteCommand method.
+          * - :py:attr:`~LockPrePostLicense`
+            - Locks the license used by the PRE/POST application.
+          * - :py:attr:`~UnlockPrePostLicense`
+            - R
+          * - :py:attr:`~get_Application`
+            - get_Application method.
+          * - :py:attr:`~get_Context`
+            - get_Context method.
+          * - :py:attr:`~get_DataModel`
+            - get_DataModel method.
+          * - :py:attr:`~get_ExtensionManager`
+            - get_ExtensionManager method.
+          * - :py:attr:`~get_ExtensionMgr`
+            - get_ExtensionMgr method.
+          * - :py:attr:`~get_Graphics`
+            - get_Graphics method.
+          * - :py:attr:`~get_Log`
+            - get_Log method.
+          * - :py:attr:`~get_SelectionManager`
+            - get_SelectionManager method.
+          * - :py:attr:`~get_Tools`
+            - get_Tools method.
+          * - :py:attr:`~get_UserInterface`
+            - get_UserInterface method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Application`
+            - Application property.
+          * - :py:attr:`~Context`
+            - Context property.
+          * - :py:attr:`~DataModel`
+            - DataModel property.
+          * - :py:attr:`~ExtensionManager`
+            - ExtensionManager property.
+          * - :py:attr:`~ExtensionMgr`
+            - ExtensionMgr property.
+          * - :py:attr:`~Graphics`
+            - Graphics property.
+          * - :py:attr:`~Log`
+            - Log property.
+          * - :py:attr:`~SelectionManager`
+            - SelectionManager property.
+          * - :py:attr:`~Tools`
+            - Tools property.
+          * - :py:attr:`~UserInterface`
+            - UserInterface property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Application
+   :type: Optional[Ansys.ACT.Interfaces.Mechanical.IMechanicalApplication]
+
+
+   
+   Application property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Context
+   :type: Optional[str]
+
+
+   
+   Context property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModel
+   :type: Optional[Ansys.ACT.Mechanical.MechanicalDataModel]
+
+
+   
+   DataModel property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExtensionManager
+   :type: Optional[Ansys.ACT.Interfaces.Common.IExtensionManager]
+
+
+   
+   ExtensionManager property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExtensionMgr
+   :type: Optional[Ansys.ACT.Interfaces.Common.IExtensionManager]
+
+
+   
+   ExtensionMgr property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Graphics
+   :type: Optional[Ansys.ACT.Common.Graphics.MechanicalGraphicsWrapper]
+
+
+   
+   Graphics property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Log
+   :type: Optional[Ansys.ACT.Interfaces.Common.ILog]
+
+
+   
+   Log property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SelectionManager
+   :type: Optional[Ansys.ACT.Interfaces.Common.ISelectionManager]
+
+
+   
+   SelectionManager property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Tools
+   :type: Optional[Ansys.ACT.Interfaces.Common.ITools]
+
+
+   
+   Tools property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserInterface
+   :type: Optional[Ansys.ACT.Interfaces.UserInterface.IUserInterface]
+
+
+   
+   UserInterface property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: ExecuteCommand(cmd: str, args: System.Collections.Generic.Dictionary[str, Any], vars: str) -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   ExecuteCommand method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: LockPrePostLicense() -> None
+
+   
+   Locks the license used by the PRE/POST application.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnlockPrePostLicense() -> None
+
+.. code-block:: text
+
+   R
+       Unlocks the license used by the PRE/POST application. This is required if you want to manually launch the Ansys solver.
+       You must relock the license after its use. If you don't relock the license, the PRE/POST application will be in read-only mode.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Application() -> Ansys.ACT.Interfaces.Mechanical.IMechanicalApplication
+
+   
+   get_Application method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Context() -> str
+
+   
+   get_Context method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_DataModel() -> Ansys.ACT.Interfaces.Mechanical.IMechanicalDataModel
+
+   
+   get_DataModel method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ExtensionManager() -> Ansys.ACT.Interfaces.Common.IExtensionManager
+
+   
+   get_ExtensionManager method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ExtensionMgr() -> Ansys.ACT.Interfaces.Common.IExtensionManager
+
+   
+   get_ExtensionMgr method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Graphics() -> Ansys.ACT.Common.Graphics.MechanicalGraphicsWrapper
+
+   
+   get_Graphics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Log() -> Ansys.ACT.Interfaces.Common.ILog
+
+   
+   get_Log method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_SelectionManager() -> Ansys.ACT.Interfaces.Common.ISelectionManager
+
+   
+   get_SelectionManager method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Tools() -> Ansys.ACT.Interfaces.Common.ITools
+
+   
+   get_Tools method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_UserInterface() -> Ansys.ACT.Interfaces.UserInterface.IUserInterface
+
+   
+   get_UserInterface method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

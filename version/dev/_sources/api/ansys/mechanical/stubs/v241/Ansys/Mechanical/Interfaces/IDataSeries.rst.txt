@@ -1,0 +1,511 @@
+.. vale off
+
+
+
+:class:`IDataSeries`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Interfaces.IDataSeries
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: IDataSeries
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Add method.
+          * - :py:attr:`~Clear`
+            - Clear method.
+          * - :py:attr:`~Contains`
+            - Contains method.
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~IndexOf`
+            - IndexOf method.
+          * - :py:attr:`~Insert`
+            - Insert method.
+          * - :py:attr:`~Remove`
+            - Remove method.
+          * - :py:attr:`~RemoveAt`
+            - RemoveAt method.
+          * - :py:attr:`~add_PropertyChanged`
+            - add_PropertyChanged method.
+          * - :py:attr:`~get_Count`
+            - get_Count method.
+          * - :py:attr:`~get_IsFixedSize`
+            - get_IsFixedSize method.
+          * - :py:attr:`~get_IsReadOnly`
+            - get_IsReadOnly method.
+          * - :py:attr:`~get_IsSynchronized`
+            - get_IsSynchronized method.
+          * - :py:attr:`~get_Item`
+            - get_Item method.
+          * - :py:attr:`~get_SyncRoot`
+            - get_SyncRoot method.
+          * - :py:attr:`~remove_PropertyChanged`
+            - remove_PropertyChanged method.
+          * - :py:attr:`~set_Item`
+            - set_Item method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+          * - :py:attr:`~DataType`
+            - 
+          * - :py:attr:`~IsFixedSize`
+            - IsFixedSize property.
+          * - :py:attr:`~IsReadOnly`
+            - IsReadOnly property.
+          * - :py:attr:`~IsSynchronized`
+            - IsSynchronized property.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Name`
+            - Gets or sets the name of the data series.
+          * - :py:attr:`~QuantityName`
+            - Gets or sets the quantity name of the data series, e.g., “Length”, “Pressure”, or “Heat Flux”.
+          * - :py:attr:`~SyncRoot`
+            - SyncRoot property.
+          * - :py:attr:`~Unit`
+            - Gets or sets a string representation of the data series units, e.g., “m”,
+          * - :py:attr:`~Values`
+            - Explicitly gets or sets the values of the data series.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataType
+   :type: Optional[type]
+
+
+.. py:property:: IsFixedSize
+   :type: Optional[bool]
+
+
+   
+   IsFixedSize property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsReadOnly
+   :type: Optional[bool]
+
+
+   
+   IsReadOnly property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsSynchronized
+   :type: Optional[bool]
+
+
+   
+   IsSynchronized property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[Any]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets the name of the data series.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuantityName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the quantity name of the data series, e.g., “Length”, “Pressure”, or “Heat Flux”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SyncRoot
+   :type: Optional[Any]
+
+
+   
+   SyncRoot property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Gets or sets a string representation of the data series units, e.g., “m”,
+   “kg m^-1 s^-2”, or “kg m^2 s^-3”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[Collection]
+
+
+   
+   Explicitly gets or sets the values of the data series.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(value: Any) -> int
+
+   
+   Add method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> None
+
+   
+   Clear method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Contains(value: Any) -> bool
+
+   
+   Contains method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(array: List, index: int) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IndexOf(value: Any) -> int
+
+   
+   IndexOf method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Insert(index: int, value: Any) -> None
+
+   
+   Insert method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(value: Any) -> None
+
+   
+   Remove method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveAt(index: int) -> None
+
+   
+   RemoveAt method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: add_PropertyChanged(value: System.ComponentModel.PropertyChangedEventHandler) -> None
+
+   
+   add_PropertyChanged method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Count() -> int
+
+   
+   get_Count method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_IsFixedSize() -> bool
+
+   
+   get_IsFixedSize method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_IsReadOnly() -> bool
+
+   
+   get_IsReadOnly method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_IsSynchronized() -> bool
+
+   
+   get_IsSynchronized method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Item(index: int) -> Any
+
+   
+   get_Item method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_SyncRoot() -> Any
+
+   
+   get_SyncRoot method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: remove_PropertyChanged(value: System.ComponentModel.PropertyChangedEventHandler) -> None
+
+   
+   remove_PropertyChanged method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_Item(index: int, value: Any) -> None
+
+   
+   set_Item method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

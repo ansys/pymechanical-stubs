@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>IMechanicalUserSolver &#8212; PyMechanical Stubs</title>
+  
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+
+  <!-- Include desired assets -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
+  
+    <link href="../../../../../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
+  
+    <script src="../../../../../../../../../_static/documentation_options.js?v=e7fb764e"></script>
+    <script src="../../../../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../../../../../_static/thebelab-helper.js"></script>
+    <script src="../../../../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../../../../_static/copybutton.js?v=49e1bf35"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../../../../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserSolver';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../../../../../../../../_static/ansys-favicon.png"/>
+    <link rel="index" title="Index" href="../../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../../search.html" />
+    <link rel="next" title="ISupportChartOptions" href="ISupportChartOptions.html" />
+    <link rel="prev" title="IMechanicalUserResult" href="IMechanicalUserResult.html" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.dev0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../../../../_static/pyansys_logo_transparent_black.png" class="logo__image only-light" alt="PyMechanical Stubs - Home"/>
+    <img src="../../../../../../../../../_static/pyansys_logo_transparent_white.png" class="logo__image only-dark pst-js-only" alt="PyMechanical Stubs - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../../../index.html" title="PyMechanical Stubs home">Home</a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav>
+</div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../../../../../../../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+  
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
+<script>
+  // Fetch and inject the announcement HTML content
+  fetch("announcement.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
+      }
+      return response.text();
+    })
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
+</script>
+  
+
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../../../index.html" title="PyMechanical Stubs home">Home</a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../../../../../../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav>
+</div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../../../../../../../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ansys/pymechanical-stubs/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Support</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../v242/index.html"><span class="nf nf-md-package"></span>Mechanical 2024 R2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../v251/index.html"><span class="nf nf-md-package"></span>Mechanical 2025 R1</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../../index.html"><span class="nf nf-md-package"></span>Mechanical 2025 R2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../index.html"> <span class="nf nf-md-package"></span> Ansys</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../../index.html"> <span class="nf nf-md-package"></span> ACT</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../Automation/index.html"> <span class="nf nf-md-package"></span> Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Common/index.html"> <span class="nf nf-md-package"></span> Common</a></li>
+<li class="toctree-l4 current active has-children"><a class="reference internal" href="../index.html"> <span class="nf nf-md-package"></span> Interfaces</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../Common/index.html"> <span class="nf nf-md-package"></span> Common</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Graphics/index.html"> <span class="nf nf-md-package"></span> Graphics</a></li>
+<li class="toctree-l5 current active has-children"><a class="reference internal" href="index.html"> <span class="nf nf-md-package"></span> Mechanical</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalDataModel.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalDataModel</a></li>
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalExtAPI.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalExtAPI</a></li>
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalGraphics.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalGraphics</a></li>
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalSelectionInfo.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalSelectionInfo</a></li>
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalUserLoad.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserLoad</a></li>
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalUserObject.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserObject</a></li>
+<li class="toctree-l6"><a class="reference internal" href="IMechanicalUserResult.html"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserResult</a></li>
+<li class="toctree-l6 current active"><a class="current reference internal" href="#"> <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserSolver</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ISupportChartOptions.html"> <span class="nf nf-cod-symbol_interface"></span> ISupportChartOptions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="MechanicalPanelEnum.html"> <span class="nf nf-cod-symbol_enum"></span> MechanicalPanelEnum</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Mechanical/index.html"> <span class="nf nf-md-package"></span> Mechanical</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Core/index.html"> <span class="nf nf-md-package"></span> Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Mechanical/index.html"> <span class="nf nf-md-package"></span> Mechanical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../v241/index.html"><span class="nf nf-md-package"></span>Mechanical 2024 R1</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+         
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="https://docs.pyansys.com/" class="nav-link">PyAnsys</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a
+        href="../../../../../../../../../index.html"
+        class="nav-link"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../../../../../../index.html" class="nav-link">API reference</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../../index.html" class="nav-link">Mechanical 2025 R2</a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../../index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Ansys</span></code></a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../../index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">ACT</span></code></a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Interfaces</span></code></a>
+    </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Mechanical</span></code></a>
+    </li>
+      
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMechanicalUserSolver</span></code></span></li>
+    
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="imechanicalusersolver">
+<h1><code class="xref py py-class docutils literal notranslate"><span class="pre">IMechanicalUserSolver</span></code><a class="headerlink" href="#imechanicalusersolver" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserSolver">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.</span></span><span class="sig-name descname"><span class="pre">IMechanicalUserSolver</span></span><a class="headerlink" href="#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserSolver" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Defines a Mechanical user solver.</p>
+</dd></dl>
+
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Methods</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.NotifyChange" title="IMechanicalUserSolver.NotifyChange"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NotifyChange</span></code></a></p></td>
+<td><p>NotifyChange method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.SetDefaultSelection" title="IMechanicalUserSolver.SetDefaultSelection"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SetDefaultSelection</span></code></a></p></td>
+<td><p>Sets the default selection of the entity.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_AllProperties" title="IMechanicalUserSolver.get_AllProperties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_AllProperties</span></code></a></p></td>
+<td><p>get_AllProperties method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Analysis" title="IMechanicalUserSolver.get_Analysis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Analysis</span></code></a></p></td>
+<td><p>get_Analysis method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_AnalysisType" title="IMechanicalUserSolver.get_AnalysisType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_AnalysisType</span></code></a></p></td>
+<td><p>get_AnalysisType method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Attributes" title="IMechanicalUserSolver.get_Attributes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Attributes</span></code></a></p></td>
+<td><p>get_Attributes method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Caption" title="IMechanicalUserSolver.get_Caption"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Caption</span></code></a></p></td>
+<td><p>get_Caption method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Children" title="IMechanicalUserSolver.get_Children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Children</span></code></a></p></td>
+<td><p>get_Children method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Controller" title="IMechanicalUserSolver.get_Controller"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Controller</span></code></a></p></td>
+<td><p>get_Controller method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Extension" title="IMechanicalUserSolver.get_Extension"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Extension</span></code></a></p></td>
+<td><p>get_Extension method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Icon" title="IMechanicalUserSolver.get_Icon"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Icon</span></code></a></p></td>
+<td><p>get_Icon method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Id" title="IMechanicalUserSolver.get_Id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Id</span></code></a></p></td>
+<td><p>get_Id method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_InternalCaption" title="IMechanicalUserSolver.get_InternalCaption"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_InternalCaption</span></code></a></p></td>
+<td><p>get_InternalCaption method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Name" title="IMechanicalUserSolver.get_Name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Name</span></code></a></p></td>
+<td><p>get_Name method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_ObjectLocation" title="IMechanicalUserSolver.get_ObjectLocation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_ObjectLocation</span></code></a></p></td>
+<td><p>get_ObjectLocation method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_ObjectType" title="IMechanicalUserSolver.get_ObjectType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_ObjectType</span></code></a></p></td>
+<td><p>get_ObjectType method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Parent" title="IMechanicalUserSolver.get_Parent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Parent</span></code></a></p></td>
+<td><p>get_Parent method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_PhysicsType" title="IMechanicalUserSolver.get_PhysicsType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_PhysicsType</span></code></a></p></td>
+<td><p>get_PhysicsType method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Properties" title="IMechanicalUserSolver.get_Properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Properties</span></code></a></p></td>
+<td><p>get_Properties method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_State" title="IMechanicalUserSolver.get_State"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_State</span></code></a></p></td>
+<td><p>get_State method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_SupportedLocations" title="IMechanicalUserSolver.get_SupportedLocations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_SupportedLocations</span></code></a></p></td>
+<td><p>get_SupportedLocations method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.get_Version" title="IMechanicalUserSolver.get_Version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">get_Version</span></code></a></p></td>
+<td><p>get_Version method.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Properties</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.AllProperties" title="IMechanicalUserSolver.AllProperties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AllProperties</span></code></a></p></td>
+<td><p>AllProperties property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Analysis" title="IMechanicalUserSolver.Analysis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Analysis</span></code></a></p></td>
+<td><p>Gets the associated analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.AnalysisType" title="IMechanicalUserSolver.AnalysisType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AnalysisType</span></code></a></p></td>
+<td><p>AnalysisType property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Attributes" title="IMechanicalUserSolver.Attributes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Attributes</span></code></a></p></td>
+<td><p>Attributes property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Caption" title="IMechanicalUserSolver.Caption"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Caption</span></code></a></p></td>
+<td><p>Caption property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Children" title="IMechanicalUserSolver.Children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Children</span></code></a></p></td>
+<td><p>Children property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Controller" title="IMechanicalUserSolver.Controller"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Controller</span></code></a></p></td>
+<td><p>Controller property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Extension" title="IMechanicalUserSolver.Extension"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Extension</span></code></a></p></td>
+<td><p>Extension property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Icon" title="IMechanicalUserSolver.Icon"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Icon</span></code></a></p></td>
+<td><p>Icon property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Id" title="IMechanicalUserSolver.Id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Id</span></code></a></p></td>
+<td><p>Id property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.InternalCaption" title="IMechanicalUserSolver.InternalCaption"><code class="xref py py-attr docutils literal notranslate"><span class="pre">InternalCaption</span></code></a></p></td>
+<td><p>InternalCaption property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Name" title="IMechanicalUserSolver.Name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Name</span></code></a></p></td>
+<td><p>Name property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.ObjectLocation" title="IMechanicalUserSolver.ObjectLocation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ObjectLocation</span></code></a></p></td>
+<td><p>ObjectLocation property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.ObjectType" title="IMechanicalUserSolver.ObjectType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ObjectType</span></code></a></p></td>
+<td><p>ObjectType property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Parent" title="IMechanicalUserSolver.Parent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Parent</span></code></a></p></td>
+<td><p>Parent property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.PhysicsType" title="IMechanicalUserSolver.PhysicsType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PhysicsType</span></code></a></p></td>
+<td><p>PhysicsType property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Properties" title="IMechanicalUserSolver.Properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Properties</span></code></a></p></td>
+<td><p>Properties property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.State" title="IMechanicalUserSolver.State"><code class="xref py py-attr docutils literal notranslate"><span class="pre">State</span></code></a></p></td>
+<td><p>State property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#IMechanicalUserSolver.SupportedLocations" title="IMechanicalUserSolver.SupportedLocations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SupportedLocations</span></code></a></p></td>
+<td><p>SupportedLocations property.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#IMechanicalUserSolver.Version" title="IMechanicalUserSolver.Version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Version</span></code></a></p></td>
+<td><p>Version property.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="property-detail">
+<h2>Property detail<a class="headerlink" href="#property-detail" title="Link to this heading">#</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.AllProperties">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">AllProperties</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Ansys.ACT.Interfaces.UserObject.ISimProperty</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.AllProperties" title="Link to this definition">#</a></dt>
+<dd><p>AllProperties property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Analysis">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Analysis</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.ACT.Interfaces.Analysis.IAnalysis</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Analysis" title="Link to this definition">#</a></dt>
+<dd><p>Gets the associated analysis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.AnalysisType">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">AnalysisType</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.AnalysisType" title="Link to this definition">#</a></dt>
+<dd><p>AnalysisType property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Attributes">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Attributes</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../Common/IAttributeCollection.html#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IAttributeCollection" title="ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IAttributeCollection"><span class="pre">Ansys.ACT.Interfaces.Common.IAttributeCollection</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Attributes" title="Link to this definition">#</a></dt>
+<dd><p>Attributes property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Caption">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Caption</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Caption" title="Link to this definition">#</a></dt>
+<dd><p>Caption property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Children">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Children</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Ansys.ACT.Interfaces.UserObject.IUserObject</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Children" title="Link to this definition">#</a></dt>
+<dd><p>Children property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Controller">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Controller" title="Link to this definition">#</a></dt>
+<dd><p>Controller property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Extension">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Extension</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../Common/IExtension.html#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtension" title="ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtension"><span class="pre">Ansys.ACT.Interfaces.Common.IExtension</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Extension" title="Link to this definition">#</a></dt>
+<dd><p>Extension property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Icon">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Icon</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Icon" title="Link to this definition">#</a></dt>
+<dd><p>Icon property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Id">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Id</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Id" title="Link to this definition">#</a></dt>
+<dd><p>Id property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.InternalCaption">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">InternalCaption</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.InternalCaption" title="Link to this definition">#</a></dt>
+<dd><p>InternalCaption property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Name">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Name</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Name" title="Link to this definition">#</a></dt>
+<dd><p>Name property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.ObjectLocation">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">ObjectLocation</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.ObjectLocation" title="Link to this definition">#</a></dt>
+<dd><p>ObjectLocation property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.ObjectType">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">ObjectType</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.ACT.Interfaces.UserObject.ObjectTypeEnum</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.ObjectType" title="Link to this definition">#</a></dt>
+<dd><p>ObjectType property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Parent">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Parent</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.ACT.Interfaces.DataModel.IDataModelObject</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Parent" title="Link to this definition">#</a></dt>
+<dd><p>Parent property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.PhysicsType">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">PhysicsType</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.PhysicsType" title="Link to this definition">#</a></dt>
+<dd><p>PhysicsType property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Properties">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Properties</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.ACT.Interfaces.UserObject.IPropertyCollection</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Properties" title="Link to this definition">#</a></dt>
+<dd><p>Properties property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.State">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">State</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.State" title="Link to this definition">#</a></dt>
+<dd><p>State property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.SupportedLocations">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">SupportedLocations</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.SupportedLocations" title="Link to this definition">#</a></dt>
+<dd><p>SupportedLocations property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.Version">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">Version</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#IMechanicalUserSolver.Version" title="Link to this definition">#</a></dt>
+<dd><p>Version property.</p>
+</dd></dl>
+
+</section>
+<section id="method-detail">
+<h2>Method detail<a class="headerlink" href="#method-detail" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.NotifyChange">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">NotifyChange</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.NotifyChange" title="Link to this definition">#</a></dt>
+<dd><p>NotifyChange method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.SetDefaultSelection">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">SetDefaultSelection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../Common/ISelectionInfo.html#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ISelectionInfo" title="ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.ISelectionInfo"><span class="pre">Ansys.ACT.Interfaces.Common.ISelectionInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">notifyChange</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.SetDefaultSelection" title="Link to this definition">#</a></dt>
+<dd><p>Sets the default selection of the entity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_AllProperties">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_AllProperties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Ansys.ACT.Interfaces.UserObject.ISimProperty</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_AllProperties" title="Link to this definition">#</a></dt>
+<dd><p>get_AllProperties method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Analysis">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Analysis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.Analysis.IAnalysis</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Analysis" title="Link to this definition">#</a></dt>
+<dd><p>get_Analysis method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_AnalysisType">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_AnalysisType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_AnalysisType" title="Link to this definition">#</a></dt>
+<dd><p>get_AnalysisType method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Attributes">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../Common/IAttributeCollection.html#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IAttributeCollection" title="ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IAttributeCollection"><span class="pre">Ansys.ACT.Interfaces.Common.IAttributeCollection</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Attributes" title="Link to this definition">#</a></dt>
+<dd><p>get_Attributes method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Caption">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Caption</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Caption" title="Link to this definition">#</a></dt>
+<dd><p>get_Caption method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Children">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Ansys.ACT.Interfaces.UserObject.IUserObject</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Children" title="Link to this definition">#</a></dt>
+<dd><p>get_Children method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Controller">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Controller</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Controller" title="Link to this definition">#</a></dt>
+<dd><p>get_Controller method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Extension">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Extension</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../Common/IExtension.html#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtension" title="ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtension"><span class="pre">Ansys.ACT.Interfaces.Common.IExtension</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Extension" title="Link to this definition">#</a></dt>
+<dd><p>get_Extension method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Icon">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Icon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Icon" title="Link to this definition">#</a></dt>
+<dd><p>get_Icon method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Id">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Id" title="Link to this definition">#</a></dt>
+<dd><p>get_Id method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_InternalCaption">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_InternalCaption</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_InternalCaption" title="Link to this definition">#</a></dt>
+<dd><p>get_InternalCaption method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Name">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Name" title="Link to this definition">#</a></dt>
+<dd><p>get_Name method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_ObjectLocation">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_ObjectLocation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_ObjectLocation" title="Link to this definition">#</a></dt>
+<dd><p>get_ObjectLocation method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_ObjectType">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_ObjectType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.UserObject.ObjectTypeEnum</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_ObjectType" title="Link to this definition">#</a></dt>
+<dd><p>get_ObjectType method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Parent">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.DataModel.IDataModelObject</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Parent" title="Link to this definition">#</a></dt>
+<dd><p>get_Parent method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_PhysicsType">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_PhysicsType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_PhysicsType" title="Link to this definition">#</a></dt>
+<dd><p>get_PhysicsType method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Properties">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Properties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.UserObject.IPropertyCollection</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Properties" title="Link to this definition">#</a></dt>
+<dd><p>get_Properties method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_State">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_State</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_State" title="Link to this definition">#</a></dt>
+<dd><p>get_State method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_SupportedLocations">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_SupportedLocations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum</span></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_SupportedLocations" title="Link to this definition">#</a></dt>
+<dd><p>get_SupportedLocations method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IMechanicalUserSolver.get_Version">
+<span class="sig-prename descclassname"><span class="pre">IMechanicalUserSolver.</span></span><span class="sig-name descname"><span class="pre">get_Version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#IMechanicalUserSolver.get_Version" title="Link to this definition">#</a></dt>
+<dd><p>get_Version method.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserSolver"><code class="docutils literal notranslate"><span class="pre">ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserSolver</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#property-detail">Property detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.AllProperties"><code class="docutils literal notranslate"><span class="pre">AllProperties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Analysis"><code class="docutils literal notranslate"><span class="pre">Analysis</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.AnalysisType"><code class="docutils literal notranslate"><span class="pre">AnalysisType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Attributes"><code class="docutils literal notranslate"><span class="pre">Attributes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Caption"><code class="docutils literal notranslate"><span class="pre">Caption</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Children"><code class="docutils literal notranslate"><span class="pre">Children</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Controller"><code class="docutils literal notranslate"><span class="pre">Controller</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Extension"><code class="docutils literal notranslate"><span class="pre">Extension</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Icon"><code class="docutils literal notranslate"><span class="pre">Icon</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Id"><code class="docutils literal notranslate"><span class="pre">Id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.InternalCaption"><code class="docutils literal notranslate"><span class="pre">InternalCaption</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Name"><code class="docutils literal notranslate"><span class="pre">Name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.ObjectLocation"><code class="docutils literal notranslate"><span class="pre">ObjectLocation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.ObjectType"><code class="docutils literal notranslate"><span class="pre">ObjectType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Parent"><code class="docutils literal notranslate"><span class="pre">Parent</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.PhysicsType"><code class="docutils literal notranslate"><span class="pre">PhysicsType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Properties"><code class="docutils literal notranslate"><span class="pre">Properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.State"><code class="docutils literal notranslate"><span class="pre">State</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.SupportedLocations"><code class="docutils literal notranslate"><span class="pre">SupportedLocations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.Version"><code class="docutils literal notranslate"><span class="pre">Version</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-detail">Method detail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.NotifyChange"><code class="docutils literal notranslate"><span class="pre">NotifyChange()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.SetDefaultSelection"><code class="docutils literal notranslate"><span class="pre">SetDefaultSelection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_AllProperties"><code class="docutils literal notranslate"><span class="pre">get_AllProperties()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Analysis"><code class="docutils literal notranslate"><span class="pre">get_Analysis()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_AnalysisType"><code class="docutils literal notranslate"><span class="pre">get_AnalysisType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Attributes"><code class="docutils literal notranslate"><span class="pre">get_Attributes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Caption"><code class="docutils literal notranslate"><span class="pre">get_Caption()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Children"><code class="docutils literal notranslate"><span class="pre">get_Children()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Controller"><code class="docutils literal notranslate"><span class="pre">get_Controller()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Extension"><code class="docutils literal notranslate"><span class="pre">get_Extension()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Icon"><code class="docutils literal notranslate"><span class="pre">get_Icon()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Id"><code class="docutils literal notranslate"><span class="pre">get_Id()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_InternalCaption"><code class="docutils literal notranslate"><span class="pre">get_InternalCaption()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Name"><code class="docutils literal notranslate"><span class="pre">get_Name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_ObjectLocation"><code class="docutils literal notranslate"><span class="pre">get_ObjectLocation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_ObjectType"><code class="docutils literal notranslate"><span class="pre">get_ObjectType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Parent"><code class="docutils literal notranslate"><span class="pre">get_Parent()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_PhysicsType"><code class="docutils literal notranslate"><span class="pre">get_PhysicsType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Properties"><code class="docutils literal notranslate"><span class="pre">get_Properties()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_State"><code class="docutils literal notranslate"><span class="pre">get_State()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_SupportedLocations"><code class="docutils literal notranslate"><span class="pre">get_SupportedLocations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#IMechanicalUserSolver.get_Version"><code class="docutils literal notranslate"><span class="pre">get_Version()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="http://github.com/ansys/pymechanical-stubs/edit/main/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserSolver.py" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </nav>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <ul class="this-page-menu">
+      <li><a href="../../../../../../../../../_sources/api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserSolver.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+  <!-- Include desired assets -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+
+<script>
+// Passing the search options to the search.js file
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
+const SEARCH_FILE = "../../../../../../../../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../../../../../../../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
+</script>
+
+
+<script src="../../../../../../../../../_static/js/search.js"></script>
+
+  
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright (c) 2026 ANSYS, Inc. All rights reserved.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<!--
+  Theme Version Footer
+  Displays the Sphinx theme version and the last updated date.
+  Accessibility and semantic improvements included.
+-->
+<footer class="theme-version" aria-label="Theme version and last update">
+  <span>
+    
+      Built with the
+      <a href="https://sphinxdocs.ansys.com/version/stable/index.html" target="_blank" rel="noopener noreferrer">
+        Ansys Sphinx Theme
+      </a>
+      1.7.2.
+    
+  </span>
+  <br />
+  <span>Last updated on <time id="ast_build_date"></time></span>
+</footer>
+<script>
+  // Set the last updated date in a readable format
+  (function() {
+    var options = { day: "numeric", month: "long", year: "numeric" };
+    var ast_lastModifiedDate = new Date(document.lastModified);
+    var ast_build_date = ast_lastModifiedDate.toLocaleDateString("en-US", options);
+    var dateElem = document.getElementById("ast_build_date");
+    if (dateElem) {
+      dateElem.textContent = ast_build_date;
+    }
+  })();
+</script></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

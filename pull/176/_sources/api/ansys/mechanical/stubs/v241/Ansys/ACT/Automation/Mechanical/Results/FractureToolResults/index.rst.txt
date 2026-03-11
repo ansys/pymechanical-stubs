@@ -1,0 +1,151 @@
+.. vale off
+
+
+
+
+
+
+
+
+``FractureToolResults``
+=======================================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: FractureToolResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureCrackExtensionProbe`
+            - Defines a FractureCrackExtensionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureEquivalentSIFSRangeProbe`
+            - Defines a FractureEquivalentSIFSRangeProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureJINTProbe`
+            - Defines a FractureJINTProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureSIFSProbe`
+            - Defines a FractureSIFSProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureTool`
+            - Defines a FractureTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolProbe`
+            - Defines a FractureToolProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureToolResult`
+            - Defines a FractureToolResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.Results.FractureToolResults.FractureTotalNumberOfCyclesProbe`
+            - Defines a FractureTotalNumberOfCyclesProbe.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> FractureCrackExtensionProbe</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureCrackExtensionProbe>
+    <span class="nf nf-cod-symbol_class"></span> FractureEquivalentSIFSRangeProbe</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureEquivalentSIFSRangeProbe>
+    <span class="nf nf-cod-symbol_class"></span> FractureJINTProbe</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureJINTProbe>
+    <span class="nf nf-cod-symbol_class"></span> FractureSIFSProbe</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureSIFSProbe>
+    <span class="nf nf-cod-symbol_class"></span> FractureTool</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureTool>
+    <span class="nf nf-cod-symbol_class"></span> FractureToolProbe</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureToolProbe>
+    <span class="nf nf-cod-symbol_class"></span> FractureToolResult</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureToolResult>
+    <span class="nf nf-cod-symbol_class"></span> FractureTotalNumberOfCyclesProbe</api/ansys/mechanical/stubs/v241/Ansys/ACT/Automation/Mechanical/Results/FractureToolResults/FractureTotalNumberOfCyclesProbe>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+FractureToolResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

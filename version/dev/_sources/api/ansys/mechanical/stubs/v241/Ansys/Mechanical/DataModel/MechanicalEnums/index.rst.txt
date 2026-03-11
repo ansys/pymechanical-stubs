@@ -1,0 +1,123 @@
+.. vale off
+
+
+
+
+
+
+
+
+``MechanicalEnums``
+===================================
+
+
+.. py:module:: ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+.. py:currentmodule:: MechanicalEnums
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Common`
+            - Common module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData`
+            - ExternalData module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics`
+            - Graphics module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Materials`
+            - Materials module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow`
+            - MeshWorkflow module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v241.Ansys.Mechanical.DataModel.MechanicalEnums.Table`
+            - Table module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Common</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Common/index>
+    <span class="nf nf-md-package"></span> ExternalData</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/index>
+    <span class="nf nf-md-package"></span> Graphics</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Graphics/index>
+    <span class="nf nf-md-package"></span> Materials</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Materials/index>
+    <span class="nf nf-md-package"></span> MeshWorkflow</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/MeshWorkflow/index>
+    <span class="nf nf-md-package"></span> Table</api/ansys/mechanical/stubs/v241/Ansys/Mechanical/DataModel/MechanicalEnums/Table/index>
+
+
+
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+MechanicalEnums module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+.. vale on

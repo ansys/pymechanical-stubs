@@ -1,0 +1,313 @@
+.. vale off
+
+
+
+:class:`IMechanicalUserInterface`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.UI.Interfaces.IMechanicalUserInterface
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: IMechanicalUserInterface
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetExtensionToolbars`
+            - GetExtensionToolbars method.
+          * - :py:attr:`~get_IsBatchMode`
+            - get_IsBatchMode method.
+          * - :py:attr:`~get_MainHandle`
+            - get_MainHandle method.
+          * - :py:attr:`~get_MainWindow`
+            - get_MainWindow method.
+          * - :py:attr:`~get_ProgressMonitor`
+            - get_ProgressMonitor method.
+          * - :py:attr:`~get_Toolbars`
+            - get_Toolbars method.
+          * - :py:attr:`~get_UIRenderer`
+            - get_UIRenderer method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IsBatchMode`
+            - IsBatchMode property.
+          * - :py:attr:`~MainHandle`
+            - MainHandle property.
+          * - :py:attr:`~MainWindow`
+            - MainWindow property.
+          * - :py:attr:`~ProgressMonitor`
+            - ProgressMonitor property.
+          * - :py:attr:`~Theme`
+            - Information about the current theme being in Mechanical.
+          * - :py:attr:`~Toolbars`
+            - Toolbars property.
+          * - :py:attr:`~UIRenderer`
+            - UIRenderer property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: IsBatchMode
+   :type: Optional[bool]
+
+
+   
+   IsBatchMode property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MainHandle
+   :type: Optional[System.IntPtr]
+
+
+   
+   MainHandle property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MainWindow
+   :type: Optional[Any]
+
+
+   
+   MainWindow property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProgressMonitor
+   :type: Optional[Ansys.ACT.Interfaces.UserInterface.IProgressMonitor]
+
+
+   
+   ProgressMonitor property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Theme
+   :type: Optional[Ansys.Mechanical.UI.Interfaces.IMechanicalTheme]
+
+
+   
+   Information about the current theme being in Mechanical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Toolbars
+   :type: Optional[System.Collections.ObjectModel.ReadOnlyCollection[Ansys.ACT.Interfaces.UserInterface.IToolbar]]
+
+
+   
+   Toolbars property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UIRenderer
+   :type: Optional[Ansys.ACT.Interfaces.UserInterface.IRenderer]
+
+
+   
+   UIRenderer property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetExtensionToolbars(extension: Ansys.ACT.Interfaces.Common.IExtension) -> Ansys.ACT.Interfaces.UserInterface.INamedCollection[Ansys.ACT.Interfaces.UserInterface.IToolbar]
+
+   
+   GetExtensionToolbars method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_IsBatchMode() -> bool
+
+   
+   get_IsBatchMode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_MainHandle() -> System.IntPtr
+
+   
+   get_MainHandle method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_MainWindow() -> Any
+
+   
+   get_MainWindow method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ProgressMonitor() -> Ansys.ACT.Interfaces.UserInterface.IProgressMonitor
+
+   
+   get_ProgressMonitor method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Toolbars() -> System.Collections.ObjectModel.ReadOnlyCollection[Ansys.ACT.Interfaces.UserInterface.IToolbar]
+
+   
+   get_Toolbars method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_UIRenderer() -> Ansys.ACT.Interfaces.UserInterface.IRenderer
+
+   
+   get_UIRenderer method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

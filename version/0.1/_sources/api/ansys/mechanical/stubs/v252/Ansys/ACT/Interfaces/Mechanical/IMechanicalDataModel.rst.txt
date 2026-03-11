@@ -1,0 +1,176 @@
+.. vale off
+
+
+
+:class:`IMechanicalDataModel`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.IMechanicalDataModel
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the data model of the Mechanical application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalDataModel
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CurrentUnitFromQuantityName`
+            - Returns the current unit from a quantity name.
+          * - :py:attr:`~GetUserObjectById`
+            - Gets the user object based on the application id.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ObjectTags`
+            - Gets the ObjectTags object for the Data Model, which represents the current list of tags visable in the User Interface.
+          * - :py:attr:`~Project`
+            - Gets the project object. Main object of the tree of Mechanical.
+          * - :py:attr:`~Tree`
+            - Gets the tree of Mechanical.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ObjectTags
+   :type: Optional[Ansys.Mechanical.Application.ObjectTags]
+
+
+   
+   Gets the ObjectTags object for the Data Model, which represents the current list of tags visable in the User Interface. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Project
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Project]
+
+
+   
+   Gets the project object. Main object of the tree of Mechanical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Tree
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Tree]
+
+
+   
+   Gets the tree of Mechanical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CurrentUnitFromQuantityName(quantityName: str) -> str
+
+   
+   Returns the current unit from a quantity name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUserObjectById(id: int) -> Ansys.ACT.Interfaces.UserObject.IUserObject
+
+   
+   Gets the user object based on the application id.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
