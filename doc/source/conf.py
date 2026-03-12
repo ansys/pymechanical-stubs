@@ -20,8 +20,16 @@ from ansys.mechanical.stubs import __version__
 project = "ansys.mechanical.stubs"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS Inc."
-release = version = __version__
 cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com")
+
+# If a mechanical revision is supplied (e.g. "252"), use it as the Sphinx
+# version so that doc-deploy-* actions publish under /version/v252/.
+# Fall back to the package version for local/dev builds.
+_mech_revn = os.getenv("MECHANICAL_REVN", "")
+if _mech_revn:
+    release = version = f"v{_mech_revn}"
+else:
+    release = version = __version__
 
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -146,13 +154,15 @@ latest_version = "252"
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": latest_version,
+        "version_match": version,
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
     "show_prev_next": False,
     "show_breadcrumbs": True,
-    "collapse_navigation": True,
+    "collapse_navigation": False,
+    "navigation_depth": -1,  # Show all levels
+    "show_nav_level": 3,  # Show up to 3 levels in the navigation sidebar
     "use_edit_page_button": True,
     "header_links_before_dropdown": 4,  # number of links before the dropdown menu
     "additional_breadcrumbs": [
@@ -170,7 +180,7 @@ html_theme_options = {
         "templates": "_templates/autoapi",
         "member_order": "alphabetical",
     },
-    "navigation_depth": 10,
+    # "navigation_depth": 10,
 }
 
 markdown_anchor_sections = True
