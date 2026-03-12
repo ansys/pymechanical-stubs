@@ -194,8 +194,9 @@ linkcheck_anchors = False
 
 # If we are on a release, we have to ignore the "release" URLs, since it is not
 # available until the release is published.
-switcher_version = get_version_match(version)
-if switcher_version != "dev":
-    linkcheck_ignore.append(
-        f"https://github.com/ansys/pymechanical-stubs/releases/tag/v{__version__}"
-    )
+if _mech_revn:
+    switcher_version = get_version_match(version)
+    if switcher_version != "dev":
+        linkcheck_ignore.append(
+            f"https://github.com/ansys/pymechanical-stubs/releases/tag/v{__version__}"
+        )
