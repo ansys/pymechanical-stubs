@@ -273,8 +273,41 @@ jobs:
         python -m pip install -e .[doc]
 
     - name: "Generate HTML documentation"
+      env:
+        MECHANICAL_REVN: ${{ matrix.mechanical-revn }}
       run: |
         make -C doc html
+
+    - name: "Change version switcher"
+      shell: python
+      env:
+        MECHANICAL_REVN: ${{ matrix.mechanical-revn }}
+      run: |
+        import os
+        import re
+
+        def replace_version_match(html_folder, mechanical_revn):
+            """Replace wildcard version match with the actual mechanical revision
+            in all JS and HTML files under the given HTML folder."""
+            pattern = re.compile(
+                r"DOCUMENTATION_OPTIONS\.theme_switcher_version_match\s*=\s*'\*';"
+            )
+            replacement = (
+                "DOCUMENTATION_OPTIONS.theme_switcher_version_match = '" + mechanical_revn + "';"
+            )
+            for root, dirs, files in os.walk(html_folder):
+                for filename in files:
+                    if filename.endswith(".js") or filename.endswith(".html"):
+                        filepath = os.path.join(root, filename)
+                        with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
+                            content = f.read()
+                        updated = pattern.sub(replacement, content)
+                        if updated != content:
+                            with open(filepath, "w", encoding="utf-8") as f:
+                                f.write(updated)
+                            print("Updated: " + filepath)
+
+        replace_version_match("doc/_build/html", os.getenv("MECHANICAL_REVN"))
 
     - name: "Upload version Sphinx HTML documentation"
       uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
