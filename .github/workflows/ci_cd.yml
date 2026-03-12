@@ -530,8 +530,6 @@ jobs:
           bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
 
-      - name: ""
-
   build-library:
     name: Build library
     runs-on: ubuntu-latest
