@@ -8,9 +8,7 @@ descriptions of the objects, methods, and properties for all namespaces.
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 3
-
-   {% for page in pages %}
+   :maxdepth: 3   {% for page in pages | sort(attribute='name', reverse=True) %}
    {% if (page.top_level_object or page.name.split('.') | length == 4) and page.display %}
    {% if page.name.startswith("ansys.mechanical.stubs.v") %}
    {% set page_name = page.name.split('.')|list %}
