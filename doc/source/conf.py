@@ -20,16 +20,8 @@ from ansys.mechanical.stubs import __version__
 project = "ansys.mechanical.stubs"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS Inc."
+release = version = __version__
 cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyansys.com")
-
-# If a mechanical revision is supplied (e.g. "252"), use it as the Sphinx
-# version so that doc-deploy-* actions publish under /version/v252/.
-# Fall back to the package version for local/dev builds.
-_mech_revn = os.getenv("MECHANICAL_REVN", "")
-if _mech_revn:
-    release = version = f"v{_mech_revn}"
-else:
-    release = version = __version__
 
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -112,6 +104,9 @@ source_suffix = ".rst"
 
 latex_engine = "xelatex"
 
+# Latest version — used as the redirect fallback on the root index page
+latest_version = 261  # os.getenv("MECHANICAL_REVN", "261")
+
 # The master toctree document.
 master_doc = "index"
 
@@ -148,13 +143,10 @@ html_context = {
     "doc_path": "doc/source",
 }
 
-# Hardcode latest version
-latest_version = "252"
-
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": version,
+        "version_match": latest_version,
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
@@ -180,11 +172,21 @@ html_theme_options = {
         "templates": "_templates/autoapi",
         "member_order": "alphabetical",
     },
-    # "navigation_depth": 10,
 }
 
 markdown_anchor_sections = True
 markdown_anchor_signatures = True
+
+# Make |latest_version| available as an RST substitution across all pages
+rst_prolog = f".. |latest_version| replace:: {latest_version}\n"
+
+# Render a pure-HTML redirect page as the site root.
+# Sphinx fills {{ redirect_url }} in _templates/redirect.html at build time.
+_redirect_url = f"api/ansys/mechanical/stubs/v{latest_version}/index.html"
+html_additional_pages = {
+    "index": "redirect.html",
+}
+html_context["redirect_url"] = _redirect_url
 
 # -- Linkcheck config --------------------------------------------------------
 
@@ -194,9 +196,8 @@ linkcheck_anchors = False
 
 # If we are on a release, we have to ignore the "release" URLs, since it is not
 # available until the release is published.
-if _mech_revn:
-    switcher_version = get_version_match(version)
-    if switcher_version != "dev":
-        linkcheck_ignore.append(
-            f"https://github.com/ansys/pymechanical-stubs/releases/tag/v{__version__}"
-        )
+switcher_version = get_version_match(version)
+if switcher_version != "dev":
+    linkcheck_ignore.append(
+        f"https://github.com/ansys/pymechanical-stubs/releases/tag/v{__version__}"
+    )

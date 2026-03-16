@@ -273,8 +273,6 @@ jobs:
         python -m pip install -e .[doc]
 
     - name: "Generate HTML documentation"
-      env:
-        MECHANICAL_REVN: ${{ matrix.mechanical-revn }}
       run: |
         make -C doc html
 
