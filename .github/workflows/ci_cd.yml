@@ -273,6 +273,8 @@ jobs:
         python -m pip install -e .[doc]
 
     - name: "Generate HTML documentation"
+      env:
+        MECHANICAL_REVN: ${{ matrix.mechanical-revn }}
       run: |
         make -C doc html
 
@@ -362,14 +364,21 @@ jobs:
                   cp -r $folder/$version_path/* $combined_folder_path/$version_path
               else
                   mkdir -p "$combined_folder_path"
-                  echo "$combined_folder_path folder created."
-                  cp -r "$folder/"* "$combined_folder_path"
+                  echo "$combined_folder_path folder created."                  cp -r "$folder/"* "$combined_folder_path"
               fi
             done
           }
 
           combine_documentation "documentation-html"
           combine_documentation "documentation-md"
+
+          # Regenerate index.html redirect after combining, pointing to the
+          # highest (latest) v*** version present in the combined output.
+          latest=$(find documentation-html/api/ansys/mechanical/stubs -maxdepth 1 -type d -name "v[0-9][0-9][0-9]" | sort | tail -1 | xargs basename)
+          if [ -n "$latest" ]; then
+            printf '<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset="utf-8" />\n    <meta http-equiv="refresh" content="0; url=api/ansys/mechanical/stubs/%s/index.html" />\n    <title>PyMechanical Stubs</title>\n    <script>window.location.replace("api/ansys/mechanical/stubs/%s/index.html");</script>\n  </head>\n  <body>\n    <p>Redirecting to the latest API version. If not redirected, <a href="api/ansys/mechanical/stubs/%s/index.html">click here</a>.</p>\n  </body>\n</html>\n' "$latest" "$latest" "$latest" > documentation-html/index.html
+            echo "index.html updated to redirect to ${latest}"
+          fi
 
       - name: "Upload HTML documentation"
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
@@ -517,7 +526,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
-          maximum-pr-doc-deployments: 10
+          maximum-pr-doc-deployments: 50
 
       - name: "Install Git and clone project"
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2

@@ -104,8 +104,9 @@ source_suffix = ".rst"
 
 latex_engine = "xelatex"
 
-# Latest version — used as the redirect fallback on the root index page
-latest_version = 261  # os.getenv("MECHANICAL_REVN", "261")
+# Latest version — used as the redirect fallback on the root index page.
+# In CI, MECHANICAL_REVN is set per matrix (e.g. "252"). Locally falls back to "261".
+latest_version = os.getenv("MECHANICAL_REVN", "261")
 
 # The master toctree document.
 master_doc = "index"
