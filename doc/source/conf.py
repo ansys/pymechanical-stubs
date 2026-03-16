@@ -98,6 +98,8 @@ numpydoc_validation_exclude = {  # set of regex
 html_favicon = ansys_favicon
 
 # static path
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
 templates_path = ["_templates"]
 # The suffix(es) of source filenames.
 source_suffix = ".rst"
@@ -151,6 +153,7 @@ html_theme_options = {
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
+    "navbar_center": [],
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "collapse_navigation": False,
