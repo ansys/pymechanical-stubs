@@ -364,7 +364,8 @@ jobs:
                   cp -r $folder/$version_path/* $combined_folder_path/$version_path
               else
                   mkdir -p "$combined_folder_path"
-                  echo "$combined_folder_path folder created."                  cp -r "$folder/"* "$combined_folder_path"
+                  echo "$combined_folder_path folder created."
+                  cp -r "$folder/"* "$combined_folder_path"
               fi
             done
           }
