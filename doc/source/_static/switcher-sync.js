@@ -1,128 +1,121 @@
 /**
  * switcher-sync.js
  *
- * Rewrites version-switcher links so that each v### entry stays within the
- * same deployment context as the page currently being viewed:
+ * Keeps the version-switcher in sync with the current deployment context so
+ * that clicking a version entry stays within the same deploy root:
  *
- *   PR preview  → https://<cname>/pull/<N>/api/ansys/mechanical/stubs/v###
- *   dev branch  → https://<cname>/version/dev/api/ansys/mechanical/stubs/v###
- *   stable      → https://<cname>/version/stable/api/ansys/mechanical/stubs/v###
- *                 (versions.json already contains stable URLs, so no rewrite
- *                  is needed there – but we normalise them for consistency)
+ *   PR preview  → https://<cname>/pull/<N>/api/ansys/mechanical/stubs/v###/index.html
+ *   dev branch  → https://<cname>/version/dev/api/ansys/mechanical/stubs/v###/index.html
+ *   stable      → https://<cname>/version/stable/api/ansys/mechanical/stubs/v###/index.html
  *
- * The script waits for the pydata-sphinx-theme to finish populating the
- * dropdown (it does so asynchronously after DOMContentLoaded), then patches
- * every anchor whose href contains "/api/ansys/mechanical/stubs/v".
+ * How the pydata-sphinx-theme switcher works
+ * ------------------------------------------
+ * The theme builds each dropdown anchor href as:
+ *
+ *   href = versions_json_entry.url + current_pagename_path
+ *
+ * e.g. "https://cname/version/stable/api/ansys/mechanical/stubs/v252"
+ *    + "api/ansys/mechanical/stubs/v261/index.html"
+ *  →   "https://cname/version/stable/api/ansys/mechanical/stubs/v252api/..."  ← broken
+ *
+ * Its click handler (function S) does a HEAD request on that combined href,
+ * then falls back to the bare entry URL — always landing on the stable root,
+ * even when the user is browsing a PR preview.
+ *
+ * The fix
+ * -------
+ * We intercept clicks on switcher anchors in the *capture* phase (before the
+ * theme's bubble-phase handler), read the target version from the anchor's
+ * data-version attribute (set by the theme, e.g. "252"), build the correct
+ * context-aware URL, and navigate directly.
  */
 (function () {
   "use strict";
 
-  // ── 1. Detect deployment context from window.location ──────────────────────
+  // ── 1. Detect deployment context ──────────────────────────────────────────
 
-  var loc = window.location;
-  var pathname = loc.pathname; // e.g. /pull/42/api/ansys/...  or  /version/stable/api/...
+  var pathname = window.location.pathname;
 
-  /**
-   * Returns the base prefix for the current deployment context, e.g.:
-   *   "/pull/42"          for PR previews
-   *   "/version/dev"      for the dev branch
-   *   "/version/stable"   for stable releases
-   *   ""                  for local / unknown builds
-   */
+  // Returns "/pull/42", "/version/dev", "/version/stable", or "" (local)
   function getContextPrefix() {
-    var prMatch = pathname.match(/^(\/pull\/\d+)/);
-    if (prMatch) return prMatch[1];
-
-    var versionMatch = pathname.match(/^(\/version\/[^/]+)/);
-    if (versionMatch) return versionMatch[1];
-
-    return ""; // local build or unknown – leave links untouched
+    var pr = pathname.match(/^(\/pull\/\d+)/);
+    if (pr) return pr[1];
+    var ver = pathname.match(/^(\/version\/[^/]+)/);
+    if (ver) return ver[1];
+    return "";
   }
 
   var contextPrefix = getContextPrefix();
 
-  // Nothing to patch on a plain local build.
+  // On a local build there is nothing to fix.
   if (contextPrefix === "") return;
 
-  // ── 2. Build a rewritten href for a given v### token ───────────────────────
-
-  var STUBS_PATH = "/api/ansys/mechanical/stubs/";
+  // ── 2. Build a context-aware URL for a given switcher anchor ──────────────
 
   /**
-   * Given any URL that contains "/api/ansys/mechanical/stubs/v###", return a
-   * rewritten URL rooted at contextPrefix.
-   * e.g. "https://cname/version/stable/api/ansys/mechanical/stubs/v252"
-   *   →  "https://cname/pull/99/api/ansys/mechanical/stubs/v252"
+   * Returns the URL to navigate to, or null if this entry should be left
+   * to the theme (e.g. "dev" or "0.1" entries without a 3-digit revn).
+   *
+   * The pydata-sphinx-theme sets data-version on every switcher anchor to
+   * the "version" field from versions.json — e.g. "252", "dev", "0.1".
+   * We only rewrite 3-digit Mechanical revision entries.
    */
-  function rewriteUrl(originalHref) {
-    var stubsIdx = originalHref.indexOf(STUBS_PATH);
-    if (stubsIdx === -1) return null; // not an API stubs link
+  function buildTargetUrl(anchor) {
+    var version = anchor.getAttribute("data-version"); // "252", "251", "dev", …
+    if (!version || !/^\d{3}$/.test(version)) return null;
 
-    // Extract everything from /api/... onwards (may include a trailing path)
-    var stubsSuffix = originalHref.slice(stubsIdx); // "/api/ansys/mechanical/stubs/v###..."
-    return loc.origin + contextPrefix + stubsSuffix;
-  }
-
-  // ── 3. Patch all switcher anchors that point to a v### stubs page ──────────
-
-  function patchSwitcher() {
-    // The switcher dropdown is inside .version-switcher__menu or
-    // #pst-version-switcher-list-* depending on theme version.
-    var menus = document.querySelectorAll(
-      ".version-switcher__menu a, [id^='pst-version-switcher-list-'] a"
+    return (
+      window.location.origin +
+      contextPrefix +
+      "/api/ansys/mechanical/stubs/v" +
+      version +
+      "/index.html"
     );
-
-    menus.forEach(function (anchor) {
-      var patched = rewriteUrl(anchor.href);
-      if (patched) {
-        anchor.href = patched;
-      }
-    });
   }
 
-  // ── 4. Wait for the switcher to be populated, then patch ───────────────────
+  // ── 3. Attach a capture-phase click interceptor to a switcher anchor ──────
+
+  function attachInterceptor(anchor) {
+    if (anchor.dataset.switcherSyncBound) return; // already handled
+    anchor.dataset.switcherSyncBound = "1";
+
+    anchor.addEventListener(
+      "click",
+      function (e) {
+        var target = buildTargetUrl(anchor);
+        if (!target) return; // let the theme handle non-v### entries normally
+
+        e.preventDefault();
+        e.stopImmediatePropagation(); // prevent the theme's own click handler
+        window.location.href = target;
+      },
+      true // capture phase — fires before the theme's bubbling handler
+    );
+  }
+
+  // ── 4. Process all current switcher anchors and watch for new ones ────────
   //
-  // pydata-sphinx-theme populates the dropdown asynchronously (fetch +
-  // DOM insertion), so we use a MutationObserver on the navbar to catch the
-  // moment the <a> elements appear, and also run once on DOMContentLoaded as
-  // a best-effort fallback.
+  // The theme populates the dropdown asynchronously after fetching
+  // versions.json, so we use a MutationObserver to catch newly added anchors.
 
-  function observeAndPatch() {
-    var navbar = document.querySelector(".bd-header, header.bd-header, nav");
+  function processAllSwitcherAnchors() {
+    document
+      .querySelectorAll(
+        ".version-switcher__menu a, [id^='pst-version-switcher-list-'] a"
+      )
+      .forEach(attachInterceptor);
+  }
 
-    if (navbar) {
-      var observer = new MutationObserver(function (mutations) {
-        // Check whether any switcher links have been added
-        var hasSwitcherLink = mutations.some(function (m) {
-          return Array.from(m.addedNodes).some(function (node) {
-            return (
-              node.nodeType === 1 &&
-              (node.matches("a") || node.querySelector("a")) &&
-              (node.closest
-                ? node.closest(".version-switcher__menu, [id^='pst-version-switcher-list-']")
-                : false)
-            );
-          });
-        });
+  var observer = new MutationObserver(processAllSwitcherAnchors);
 
-        if (hasSwitcherLink) {
-          patchSwitcher();
-          // Keep observing – the theme may re-render the list on navigation
-        }
-      });
-
-      observer.observe(navbar, { childList: true, subtree: true });
-    }
-
-    // Also run after a short delay in case the switcher was already rendered
-    // before our observer was attached (e.g. restored from bfcache).
-    setTimeout(patchSwitcher, 500);
-    setTimeout(patchSwitcher, 1500);
+  function start() {
+    observer.observe(document.body, { childList: true, subtree: true });
+    processAllSwitcherAnchors(); // handle any anchors already in the DOM
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", observeAndPatch);
+    document.addEventListener("DOMContentLoaded", start);
   } else {
-    observeAndPatch();
+    start();
   }
 })();
