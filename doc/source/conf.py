@@ -100,7 +100,6 @@ html_favicon = ansys_favicon
 # static path
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
-html_js_files = ["switcher-sync.js"]
 templates_path = ["_templates"]
 # The suffix(es) of source filenames.
 source_suffix = ".rst"
