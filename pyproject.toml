@@ -41,7 +41,7 @@ doc = [
     "sphinx-autodoc-typehints==3.0.1",
     "sphinxcontrib-globalsubs==1.1.0",
     "sphinxcontrib-httpdomain==2.0.0",
-    "sphinx-markdown-builder==0.6.9",
+    "sphinx-markdown-builder==0.6.10",
     "sphinxnotes-strike==1.2.1",
 ]
 tests = [
