@@ -6,6 +6,46 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.10](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.10) - March 19, 2026
+
+
+### Added
+
+- Make version switcher correspond to Mechanical version [#173](https://github.com/ansys/pymechanical-stubs/pull/173)
+
+
+### Fixed
+
+- Documentation  building and generation [#174](https://github.com/ansys/pymechanical-stubs/pull/174)
+
+
+### Maintenance
+
+- Pre-commit automatic update [#140](https://github.com/ansys/pymechanical-stubs/pull/140), [#159](https://github.com/ansys/pymechanical-stubs/pull/159), [#161](https://github.com/ansys/pymechanical-stubs/pull/161), [#163](https://github.com/ansys/pymechanical-stubs/pull/163), [#171](https://github.com/ansys/pymechanical-stubs/pull/171), [#176](https://github.com/ansys/pymechanical-stubs/pull/176)
+- Update CHANGELOG for v0.1.9 [#145](https://github.com/ansys/pymechanical-stubs/pull/145)
+- Update dependencies [#149](https://github.com/ansys/pymechanical-stubs/pull/149)
+- Bump ansys/actions from 10.1.4 to 10.2.4 [#150](https://github.com/ansys/pymechanical-stubs/pull/150)
+- Bump actions/checkout from 6.0.1 to 6.0.2 [#151](https://github.com/ansys/pymechanical-stubs/pull/151)
+- Bump actions-ecosystem/action-add-labels from 1.1.0 to 1.1.3 [#152](https://github.com/ansys/pymechanical-stubs/pull/152)
+- Bump sphinx-autodoc-typehints from 2.3.0 to 3.0.1 [#153](https://github.com/ansys/pymechanical-stubs/pull/153)
+- Bump sphinxcontrib-globalsubs from 0.1.2 to 1.0.0 [#154](https://github.com/ansys/pymechanical-stubs/pull/154)
+- Bump ansys-tools-common from 0.4.2 to 0.4.3 [#155](https://github.com/ansys/pymechanical-stubs/pull/155)
+- Bump ansys-sphinx-theme[autoapi] from 1.6.4 to 1.7.0 [#156](https://github.com/ansys/pymechanical-stubs/pull/156)
+- Add CODEOWNERS file [#157](https://github.com/ansys/pymechanical-stubs/pull/157)
+- Bump ansys/actions from 10.2.4 to 10.2.5 [#160](https://github.com/ansys/pymechanical-stubs/pull/160)
+- Bump ansys-tools-common from 0.4.3 to 0.4.4 [#162](https://github.com/ansys/pymechanical-stubs/pull/162)
+- Bump ansys/actions from 10.2.5 to 10.2.6 [#164](https://github.com/ansys/pymechanical-stubs/pull/164)
+- Bump actions/download-artifact from 7.0.0 to 8.0.0 [#166](https://github.com/ansys/pymechanical-stubs/pull/166)
+- Bump ansys/actions from 10.2.6 to 10.2.7 [#167](https://github.com/ansys/pymechanical-stubs/pull/167)
+- Bump actions/upload-artifact from 6.0.0 to 7.0.0 [#168](https://github.com/ansys/pymechanical-stubs/pull/168)
+- Bump sphinxcontrib-globalsubs from 1.0.0 to 1.1.0 [#169](https://github.com/ansys/pymechanical-stubs/pull/169)
+- Bump ansys-sphinx-theme[autoapi] from 1.7.0 to 1.7.2 [#170](https://github.com/ansys/pymechanical-stubs/pull/170)
+- Bump ansys-tools-common from 0.4.4 to 0.4.5 [#172](https://github.com/ansys/pymechanical-stubs/pull/172)
+- Update \`versions.json\` file based on \`doc/versions.json\` [#175](https://github.com/ansys/pymechanical-stubs/pull/175)
+- Bump actions/download-artifact from 8.0.0 to 8.0.1 [#177](https://github.com/ansys/pymechanical-stubs/pull/177)
+- Bump sphinx-markdown-builder from 0.6.9 to 0.6.10 [#179](https://github.com/ansys/pymechanical-stubs/pull/179)
+- Bump ansys-tools-common from 0.4.5 to 0.5.0 [#182](https://github.com/ansys/pymechanical-stubs/pull/182)
+
 ## [0.1.9](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.9) - October 09, 2025
 
 
