@@ -1,0 +1,121 @@
+name: >
+  Update gh-pages versions.json
+
+description: |
+  Checks if the versions.json file in the doc folder differs from the one on
+  the gh-pages branch. If it has changed (or does not yet exist on gh-pages),
+  the file is committed and pushed to gh-pages.
+
+inputs:
+
+  bot-username:
+    description: >
+      Git username to use for the commit.
+    required: true
+
+  bot-email:
+    description: >
+      Git email to use for the commit.
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: "Check if versions.json has changed"
+      id: check-versions
+      shell: bash
+      run: |
+        git fetch origin gh-pages
+        if git show origin/gh-pages:versions.json > /tmp/gh-pages-versions.json 2>/dev/null; then
+          if diff -q doc/versions.json /tmp/gh-pages-versions.json > /dev/null 2>&1; then
+            echo "versions_changed=false" >> $GITHUB_OUTPUT
+            echo "versions.json is unchanged, skipping update."
+          else
+            echo "versions_changed=true" >> $GITHUB_OUTPUT
+            echo "versions.json has changed, update required."
+          fi
+        else
+          echo "versions_changed=true" >> $GITHUB_OUTPUT
+          echo "versions.json not found on gh-pages, update required."
+        fi
+
+    - name: "Update versions.json file"
+      if: steps.check-versions.outputs.versions_changed == 'true'
+      shell: bash
+      run: |
+        cp doc/versions.json /tmp/versions.json
+        git checkout gh-pages
+        cp /tmp/versions.json versions.json
+        git config user.name "${{ inputs.bot-username }}"
+        git config user.email "${{ inputs.bot-email }}"
+        git add versions.json
+        git commit -m "Update versions.json [skip ci]"
+        git push origin gh-pages
+        git checkout -
+
+    - name: "Fix redirect paths in index.html files on gh-pages"
+      shell: bash
+      run: |
+        git fetch origin gh-pages
+
+        # The doc-deploy-dev/stable actions copy version/stable/index.html to the
+        # root index.html and update href/src attributes via sed, but do NOT update
+        # the <meta http-equiv="refresh"> content or <script>window.location.replace()
+        # redirects. This step patches those two remaining redirect targets.
+
+        root_needs_fix=false
+        version_needs_fix=false
+
+        if git show origin/gh-pages:index.html 2>/dev/null | grep -q 'content="0; url=api/'; then
+          root_needs_fix=true
+        fi
+
+        if git show origin/gh-pages:version/index.html 2>/dev/null | grep -q 'content="0; url=api/'; then
+          version_needs_fix=true
+        fi
+
+        if [[ "$root_needs_fix" == "false" && "$version_needs_fix" == "false" ]]; then
+          echo "No redirect path fixes needed."
+          exit 0
+        fi
+
+        git checkout gh-pages
+
+        if [[ "$root_needs_fix" == "true" && -f 'index.html' ]]; then
+          # Determine whether the landing page was built from stable or dev by
+          # inspecting the already-fixed href attributes (updated by ansys/actions).
+          if grep -q 'href="version/stable/' index.html; then
+            sed -i 's|content="0; url=api/|content="0; url=version/stable/api/|g' index.html
+            sed -i 's|window\.location\.replace("api/|window.location.replace("version/stable/api/|g' index.html
+          elif grep -q 'href="version/dev/' index.html; then
+            sed -i 's|content="0; url=api/|content="0; url=version/dev/api/|g' index.html
+            sed -i 's|window\.location\.replace("api/|window.location.replace("version/dev/api/|g' index.html
+          fi
+          echo "Fixed root index.html redirects"
+        fi
+
+        if [[ "$version_needs_fix" == "true" && -f 'version/index.html' ]]; then
+          # Determine stable vs dev from the _static references already updated by
+          # the _doc-gen-versions-page action inside ansys/actions.
+          if grep -q 'stable/_static' version/index.html; then
+            sed -i 's|content="0; url=api/|content="0; url=stable/api/|g' version/index.html
+            sed -i 's|window\.location\.replace("api/|window.location.replace("stable/api/|g' version/index.html
+            sed -i 's|href="api/|href="stable/api/|g' version/index.html
+          elif grep -q 'dev/_static' version/index.html; then
+            sed -i 's|content="0; url=api/|content="0; url=dev/api/|g' version/index.html
+            sed -i 's|window\.location\.replace("api/|window.location.replace("dev/api/|g' version/index.html
+            sed -i 's|href="api/|href="dev/api/|g' version/index.html
+          fi
+          echo "Fixed version/index.html redirects"
+        fi
+
+        git config user.name "${{ inputs.bot-username }}"
+        git config user.email "${{ inputs.bot-email }}"
+        [[ "$root_needs_fix" == "true" ]] && git add index.html
+        [[ "$version_needs_fix" == "true" ]] && git add version/index.html
+        if ! git diff --cached --quiet; then
+          git commit -m "Fix redirect paths in index.html files [skip ci]"
+          git push origin gh-pages
+        fi
+        git checkout -
