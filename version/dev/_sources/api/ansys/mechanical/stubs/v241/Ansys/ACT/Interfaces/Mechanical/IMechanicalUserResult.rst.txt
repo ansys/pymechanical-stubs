@@ -1,0 +1,1090 @@
+.. vale off
+
+
+
+:class:`IMechanicalUserResult`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserResult
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Mechanical user result.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalUserResult
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NotifyChange`
+            - NotifyChange method.
+          * - :py:attr:`~SetDefaultSelection`
+            - Sets the default selection of the entity.
+          * - :py:attr:`~get_AllProperties`
+            - get_AllProperties method.
+          * - :py:attr:`~get_Analysis`
+            - get_Analysis method.
+          * - :py:attr:`~get_Attributes`
+            - get_Attributes method.
+          * - :py:attr:`~get_CalculateTimeHistory`
+            - get_CalculateTimeHistory method.
+          * - :py:attr:`~get_Caption`
+            - get_Caption method.
+          * - :py:attr:`~get_Children`
+            - get_Children method.
+          * - :py:attr:`~get_Controller`
+            - get_Controller method.
+          * - :py:attr:`~get_Extension`
+            - get_Extension method.
+          * - :py:attr:`~get_HasImaginary`
+            - get_HasImaginary method.
+          * - :py:attr:`~get_Icon`
+            - get_Icon method.
+          * - :py:attr:`~get_Id`
+            - get_Id method.
+          * - :py:attr:`~get_InternalCaption`
+            - get_InternalCaption method.
+          * - :py:attr:`~get_Name`
+            - get_Name method.
+          * - :py:attr:`~get_ObjectLocation`
+            - get_ObjectLocation method.
+          * - :py:attr:`~get_ObjectType`
+            - get_ObjectType method.
+          * - :py:attr:`~get_Parent`
+            - get_Parent method.
+          * - :py:attr:`~get_Properties`
+            - get_Properties method.
+          * - :py:attr:`~get_ResultAveraging`
+            - get_ResultAveraging method.
+          * - :py:attr:`~get_ResultLocation`
+            - get_ResultLocation method.
+          * - :py:attr:`~get_ResultType`
+            - get_ResultType method.
+          * - :py:attr:`~get_State`
+            - get_State method.
+          * - :py:attr:`~get_SupportedLocations`
+            - get_SupportedLocations method.
+          * - :py:attr:`~get_Suppressed`
+            - get_Suppressed method.
+          * - :py:attr:`~get_Unit`
+            - get_Unit method.
+          * - :py:attr:`~get_Version`
+            - get_Version method.
+          * - :py:attr:`~set_CalculateTimeHistory`
+            - set_CalculateTimeHistory method.
+          * - :py:attr:`~set_HasImaginary`
+            - set_HasImaginary method.
+          * - :py:attr:`~set_ResultAveraging`
+            - set_ResultAveraging method.
+          * - :py:attr:`~set_ResultLocation`
+            - set_ResultLocation method.
+          * - :py:attr:`~set_ResultType`
+            - set_ResultType method.
+          * - :py:attr:`~set_Suppressed`
+            - set_Suppressed method.
+          * - :py:attr:`~set_Unit`
+            - set_Unit method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllProperties`
+            - AllProperties property.
+          * - :py:attr:`~Analysis`
+            - Gets the associated analysis.
+          * - :py:attr:`~Attributes`
+            - Attributes property.
+          * - :py:attr:`~CalculateTimeHistory`
+            - CalculateTimeHistory property.
+          * - :py:attr:`~Caption`
+            - Caption property.
+          * - :py:attr:`~Children`
+            - Children property.
+          * - :py:attr:`~Controller`
+            - Controller property.
+          * - :py:attr:`~Extension`
+            - Extension property.
+          * - :py:attr:`~HasImaginary`
+            - HasImaginary property.
+          * - :py:attr:`~Icon`
+            - Icon property.
+          * - :py:attr:`~Id`
+            - Id property.
+          * - :py:attr:`~InternalCaption`
+            - InternalCaption property.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~ObjectLocation`
+            - ObjectLocation property.
+          * - :py:attr:`~ObjectType`
+            - ObjectType property.
+          * - :py:attr:`~Parent`
+            - Parent property.
+          * - :py:attr:`~Properties`
+            - Properties property.
+          * - :py:attr:`~ResultAveraging`
+            - ResultAveraging property.
+          * - :py:attr:`~ResultLocation`
+            - ResultLocation property.
+          * - :py:attr:`~ResultType`
+            - ResultType property.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~SupportedLocations`
+            - SupportedLocations property.
+          * - :py:attr:`~Suppressed`
+            - Suppressed property.
+          * - :py:attr:`~Unit`
+            - Unit property.
+          * - :py:attr:`~Version`
+            - Version property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AllProperties
+   :type: Optional[Iterable[Ansys.ACT.Interfaces.UserObject.ISimProperty]]
+
+
+   
+   AllProperties property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Analysis
+   :type: Optional[Ansys.ACT.Interfaces.Analysis.IAnalysis]
+
+
+   
+   Gets the associated analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Attributes
+   :type: Optional[Ansys.ACT.Interfaces.Common.IAttributeCollection]
+
+
+   
+   Attributes property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CalculateTimeHistory
+   :type: Optional[bool]
+
+
+   
+   CalculateTimeHistory property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Caption
+   :type: Optional[str]
+
+
+   
+   Caption property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]]
+
+
+   
+   Children property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Controller
+   :type: Optional[Any]
+
+
+   
+   Controller property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Extension
+   :type: Optional[Ansys.ACT.Interfaces.Common.IExtension]
+
+
+   
+   Extension property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HasImaginary
+   :type: Optional[bool]
+
+
+   
+   HasImaginary property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Icon
+   :type: Optional[str]
+
+
+   
+   Icon property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Id property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalCaption
+   :type: Optional[str]
+
+
+   
+   InternalCaption property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectLocation
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum]
+
+
+   
+   ObjectLocation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectType
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectTypeEnum]
+
+
+   
+   ObjectType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.ACT.Interfaces.DataModel.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.IPropertyCollection]
+
+
+   
+   Properties property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultAveraging
+   :type: Optional[Ansys.ACT.Interfaces.Post.ResultAveragingEnum]
+
+
+   
+   ResultAveraging property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultLocation
+   :type: Optional[Ansys.ACT.Interfaces.Post.ResultLocationEnum]
+
+
+   
+   ResultLocation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultType
+   :type: Optional[Ansys.ACT.Interfaces.Post.ResultTypeEnum]
+
+
+   
+   ResultType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[str]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportedLocations
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum]
+
+
+   
+   SupportedLocations property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Suppressed property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Unit property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Version
+   :type: Optional[int]
+
+
+   
+   Version property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: NotifyChange() -> None
+
+   
+   NotifyChange method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDefaultSelection(selection: Ansys.ACT.Interfaces.Common.ISelectionInfo, notifyChange: bool) -> None
+
+   
+   Sets the default selection of the entity.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_AllProperties() -> Iterable[Ansys.ACT.Interfaces.UserObject.ISimProperty]
+
+   
+   get_AllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Analysis() -> Ansys.ACT.Interfaces.Analysis.IAnalysis
+
+   
+   get_Analysis method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Attributes() -> Ansys.ACT.Interfaces.Common.IAttributeCollection
+
+   
+   get_Attributes method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_CalculateTimeHistory() -> bool
+
+   
+   get_CalculateTimeHistory method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Caption() -> str
+
+   
+   get_Caption method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Children() -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]
+
+   
+   get_Children method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Controller() -> Any
+
+   
+   get_Controller method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Extension() -> Ansys.ACT.Interfaces.Common.IExtension
+
+   
+   get_Extension method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_HasImaginary() -> bool
+
+   
+   get_HasImaginary method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Icon() -> str
+
+   
+   get_Icon method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Id() -> int
+
+   
+   get_Id method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_InternalCaption() -> str
+
+   
+   get_InternalCaption method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Name() -> str
+
+   
+   get_Name method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ObjectLocation() -> Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum
+
+   
+   get_ObjectLocation method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ObjectType() -> Ansys.ACT.Interfaces.UserObject.ObjectTypeEnum
+
+   
+   get_ObjectType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Parent() -> Ansys.ACT.Interfaces.DataModel.IDataModelObject
+
+   
+   get_Parent method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Properties() -> Ansys.ACT.Interfaces.UserObject.IPropertyCollection
+
+   
+   get_Properties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ResultAveraging() -> Ansys.ACT.Interfaces.Post.ResultAveragingEnum
+
+   
+   get_ResultAveraging method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ResultLocation() -> Ansys.ACT.Interfaces.Post.ResultLocationEnum
+
+   
+   get_ResultLocation method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_ResultType() -> Ansys.ACT.Interfaces.Post.ResultTypeEnum
+
+   
+   get_ResultType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_State() -> str
+
+   
+   get_State method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_SupportedLocations() -> Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum
+
+   
+   get_SupportedLocations method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Suppressed() -> bool
+
+   
+   get_Suppressed method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Unit() -> str
+
+   
+   get_Unit method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Version() -> int
+
+   
+   get_Version method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_CalculateTimeHistory(value: bool) -> None
+
+   
+   set_CalculateTimeHistory method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_HasImaginary(value: bool) -> None
+
+   
+   set_HasImaginary method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_ResultAveraging(value: Ansys.ACT.Interfaces.Post.ResultAveragingEnum) -> None
+
+   
+   set_ResultAveraging method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_ResultLocation(value: Ansys.ACT.Interfaces.Post.ResultLocationEnum) -> None
+
+   
+   set_ResultLocation method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_ResultType(value: Ansys.ACT.Interfaces.Post.ResultTypeEnum) -> None
+
+   
+   set_ResultType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_Suppressed(value: bool) -> None
+
+   
+   set_Suppressed method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_Unit(value: str) -> None
+
+   
+   set_Unit method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

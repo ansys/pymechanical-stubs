@@ -1,0 +1,308 @@
+.. vale off
+
+
+
+:class:`ITable`
+===============
+
+.. py:class:: ansys.mechanical.stubs.v241.Ansys.Mechanical.Interfaces.ITable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes a table, which is a two-dimensional tabular data structure with labeled columns.
+   The columns are usually instances of IVariable but can be any sort of array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ITable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ContainsKey`
+            - ContainsKey method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~TryGetValue`
+            - TryGetValue method.
+          * - :py:attr:`~get_Count`
+            - get_Count method.
+          * - :py:attr:`~get_Item`
+            - get_Item method.
+          * - :py:attr:`~get_Keys`
+            - get_Keys method.
+          * - :py:attr:`~get_Values`
+            - get_Values method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+          * - :py:attr:`~Dependents`
+            - The portion of the table corresponding to dependent variables.
+          * - :py:attr:`~Independents`
+            - The portion of the table corresponding to independent variables.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Keys`
+            - Keys property.
+          * - :py:attr:`~Values`
+            - Values property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Dependents
+   :type: Optional[dict[str, Iterable]]
+
+
+   
+   The portion of the table corresponding to dependent variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Independents
+   :type: Optional[dict[str, Iterable]]
+
+
+   
+   The portion of the table corresponding to independent variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[Iterable]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Keys
+   :type: Optional[Iterable[str]]
+
+
+   
+   Keys property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[Iterable[Iterable]]
+
+
+   
+   Values property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: ContainsKey(key: str) -> bool
+
+   
+   ContainsKey method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TryGetValue(key: str, value: Iterable) -> bool
+
+   
+   TryGetValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Count() -> int
+
+   
+   get_Count method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Item(key: str) -> Iterable
+
+   
+   get_Item method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Keys() -> Iterable[str]
+
+   
+   get_Keys method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Values() -> Iterable[Iterable]
+
+   
+   get_Values method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
