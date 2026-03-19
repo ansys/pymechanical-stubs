@@ -1,0 +1,55 @@
+name: >
+  Update gh-pages versions.json
+
+description: |
+  Checks if the versions.json file in the doc folder differs from the one on
+  the gh-pages branch. If it has changed (or does not yet exist on gh-pages),
+  the file is committed and pushed to gh-pages.
+
+inputs:
+
+  bot-username:
+    description: >
+      Git username to use for the commit.
+    required: true
+
+  bot-email:
+    description: >
+      Git email to use for the commit.
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: "Check if versions.json has changed"
+      id: check-versions
+      shell: bash
+      run: |
+        git fetch origin gh-pages
+        if git show origin/gh-pages:versions.json > /tmp/gh-pages-versions.json 2>/dev/null; then
+          if diff -q doc/versions.json /tmp/gh-pages-versions.json > /dev/null 2>&1; then
+            echo "versions_changed=false" >> $GITHUB_OUTPUT
+            echo "versions.json is unchanged, skipping update."
+          else
+            echo "versions_changed=true" >> $GITHUB_OUTPUT
+            echo "versions.json has changed, update required."
+          fi
+        else
+          echo "versions_changed=true" >> $GITHUB_OUTPUT
+          echo "versions.json not found on gh-pages, update required."
+        fi
+
+    - name: "Update versions.json file"
+      if: steps.check-versions.outputs.versions_changed == 'true'
+      shell: bash
+      run: |
+        cp doc/versions.json /tmp/versions.json
+        git checkout gh-pages
+        cp /tmp/versions.json versions.json
+        git config user.name "${{ inputs.bot-username }}"
+        git config user.email "${{ inputs.bot-email }}"
+        git add versions.json
+        git commit -m "Update versions.json [skip ci]"
+        git push origin gh-pages
+        git checkout -

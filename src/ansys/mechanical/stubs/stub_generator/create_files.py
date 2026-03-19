@@ -1,4 +1,4 @@
-# Copyright (C) 2023 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2023 - 2026 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -36,6 +36,8 @@ ACCEPTED_TYPES = {
     "Ansys.Core.Units.Quantity",
     "Ansys.ACT.Interfaces.Common",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
+    "Ansys.ACT.Mechanical.MechanicalDataModel",
+    "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
 }
 
 

@@ -31,26 +31,21 @@ build = [
     "ansys-pythonnet==3.1.0rc6"
 ]
 doc = [
-    "ansys-sphinx-theme[autoapi]==1.5.3",
-    "ansys-tools-path==0.7.3",
-    "Sphinx==7.4.0",
+    "ansys-tools-common==0.5.0",
+    "ansys-sphinx-theme[autoapi]==1.7.2",
     "sphinx-copybutton==0.5.2",
-    "sphinx-notfound-page==1.0.2",
-    "sphinx-design==0.6.1",
-    "sphinx-jinja==2.0.2",
-    "autodoc_pydantic==2.0.1",
+    "sphinx-notfound-page==1.1.0",
+    "autodoc_pydantic==2.2.0",
     "jupyter_sphinx==0.5.3",
-    "numpydoc==1.6.0",
-    "sphinx-autodoc-typehints==1.25.3",
-    "sphinxcontrib-globalsubs==0.1.1",
-    "sphinxcontrib-httpdomain==1.8.1",
-    "sphinx-copybutton==0.5.2",
-    "sphinx_design==0.6.1",
-    "sphinx-markdown-builder==0.6.6",
+    "numpydoc==1.10.0",
+    "sphinx-autodoc-typehints==3.0.1",
+    "sphinxcontrib-globalsubs==1.1.0",
+    "sphinxcontrib-httpdomain==2.0.0",
+    "sphinx-markdown-builder==0.6.10",
     "sphinxnotes-strike==1.2.1",
 ]
 tests = [
-    "pytest==8.3.3",
+    "pytest==9.0.2",
     "pytest-cov==7.0.0",
 ]
 

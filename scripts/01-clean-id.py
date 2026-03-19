@@ -1,4 +1,4 @@
-# Copyright (C) 2023 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2023 - 2026 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -52,7 +52,7 @@ def remove_links_from_markdown_files(directory_path):
                         # Delete the <!-- vale on --> comment
                         joined_lines = joined_lines.replace("<!-- vale on -->", "")
 
-                with pathlib.Path.open(file_path, "w") as myfile:
+                with pathlib.Path.open(file_path, "w", encoding="utf-8") as myfile:
                     myfile.write(joined_lines)
 
 

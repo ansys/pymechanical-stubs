@@ -98,11 +98,17 @@ numpydoc_validation_exclude = {  # set of regex
 html_favicon = ansys_favicon
 
 # static path
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
 templates_path = ["_templates"]
 # The suffix(es) of source filenames.
 source_suffix = ".rst"
 
 latex_engine = "xelatex"
+
+# Latest version — used as the redirect fallback on the root index page.
+# In CI, MECHANICAL_REVN is set per matrix (e.g. "252"). Locally falls back to "261".
+latest_version = os.getenv("MECHANICAL_REVN", "261")
 
 # The master toctree document.
 master_doc = "index"
@@ -143,13 +149,16 @@ html_context = {
 html_theme_options = {
     "switcher": {
         "json_url": f"https://{cname}/versions.json",
-        "version_match": get_version_match(version),
+        "version_match": latest_version,
     },
     "check_switcher": False,
     "github_url": "https://github.com/ansys/pymechanical-stubs",
+    "navbar_center": [],
     "show_prev_next": False,
     "show_breadcrumbs": True,
-    "collapse_navigation": True,
+    "collapse_navigation": False,
+    "navigation_depth": -1,  # Show all levels
+    "show_nav_level": 3,  # Show up to 3 levels in the navigation sidebar
     "use_edit_page_button": True,
     "header_links_before_dropdown": 4,  # number of links before the dropdown menu
     "additional_breadcrumbs": [
@@ -167,11 +176,21 @@ html_theme_options = {
         "templates": "_templates/autoapi",
         "member_order": "alphabetical",
     },
-    "navigation_depth": 10,
 }
 
 markdown_anchor_sections = True
 markdown_anchor_signatures = True
+
+# Make |latest_version| available as an RST substitution across all pages
+rst_prolog = f".. |latest_version| replace:: {latest_version}\n"
+
+# Render a pure-HTML redirect page as the site root.
+# Sphinx fills {{ redirect_url }} in _templates/redirect.html at build time.
+_redirect_url = f"api/ansys/mechanical/stubs/v{latest_version}/index.html"
+html_additional_pages = {
+    "index": "redirect.html",
+}
+html_context["redirect_url"] = _redirect_url
 
 # -- Linkcheck config --------------------------------------------------------
 
