@@ -58,14 +58,18 @@ runs:
       shell: bash
       run: |
         git checkout gh-pages
-        rm -rf version/0.1/ version/dev/
-        rm index.html
-        cp -rf version/stable/* version/
-        rm -rf version/stable/
-        ls -l version/
-        git config user.name "${{ inputs.bot-username }}"
-        git config user.email "${{ inputs.bot-email }}"
-        git add .
-        git commit -m "Reorganize version directory structure [skip ci]"
-        git push origin gh-pages
+        if [ -d "version/0.1" ] && [ -d "version/dev" ]; then
+          rm -rf version/0.1/ version/dev/
+          rm index.html
+          cp -rf version/stable/* version/
+          rm -rf version/stable/
+          ls -l version/
+          git config user.name "${{ inputs.bot-username }}"
+          git config user.email "${{ inputs.bot-email }}"
+          git add .
+          git commit -m "Reorganize version directory structure [skip ci]"
+          git push origin gh-pages
+        else
+          echo "version/0.1 or version/dev not found, skipping reorganization."
+        fi
         git checkout -
