@@ -65,7 +65,7 @@ runs:
         ls -l version/
         git config user.name "${{ inputs.bot-username }}"
         git config user.email "${{ inputs.bot-email }}"
-        git add versions.json
+        git add .
         git commit -m "Reorganize version directory structure [skip ci]"
         git push origin gh-pages
         git checkout -
