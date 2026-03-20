@@ -58,9 +58,9 @@ runs:
       shell: bash
       run: |
         git checkout gh-pages
-        rm -rf 0.1/ dev/
+        rm -rf version/0.1/ version/dev/
         rm index.html
-        cp -rf stable/* version/
-        rm -rf stable/
-        ls -l
+        cp -rf version/stable/* version/
+        rm -rf version/stable/
+        ls -l version/
         git checkout -
