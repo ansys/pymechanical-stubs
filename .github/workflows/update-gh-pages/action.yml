@@ -53,3 +53,52 @@ runs:
         git commit -m "Update versions.json [skip ci]"
         git push origin gh-pages
         git checkout -
+
+    - name: "Move content of stable folder to version folder"
+      shell: bash
+      run: |
+        git checkout gh-pages
+        if [ -d "version/0.1" ] && [ -d "version/dev" ]; then
+          rm -rf version/0.1/ version/dev/
+          rm -f index.html
+          cp -rf version/stable/* version/
+          rm -rf version/stable/
+          ls -l version/
+          git config user.name "${{ inputs.bot-username }}"
+          git config user.email "${{ inputs.bot-email }}"
+          git add .
+          git commit -m "Reorganize version directory structure [skip ci]"
+          git push origin gh-pages
+        else
+          echo "version/0.1 or version/dev not found, skipping reorganization."
+        fi
+        git checkout -
+
+    - name: "Create root index.html redirect"
+      shell: bash
+      run: |
+        git checkout gh-pages
+        # Extract the latest version number from versions.json (first entry)
+        LATEST_VERSION=$(python3 -c "import json; data=json.load(open('versions.json')); print(data[0]['version'])")
+        echo "Latest version: $LATEST_VERSION"
+        REDIRECT_URL="version/api/ansys/mechanical/stubs/v${LATEST_VERSION}/index.html"
+        cat > index.html <<EOF
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="refresh" content="0; url=${REDIRECT_URL}" />
+            <title>PyMechanical Stubs</title>
+            <script>window.location.replace("${REDIRECT_URL}");</script>
+          </head>
+          <body>
+            <p>Redirecting to the latest API version. If not redirected, <a href="${REDIRECT_URL}">click here</a>.</p>
+          </body>
+        </html>
+        EOF
+        git config user.name "${{ inputs.bot-username }}"
+        git config user.email "${{ inputs.bot-email }}"
+        git add index.html
+        git diff --cached --quiet || git commit -m "Update root index.html redirect to v${LATEST_VERSION} [skip ci]"
+        git push origin gh-pages
+        git checkout -
