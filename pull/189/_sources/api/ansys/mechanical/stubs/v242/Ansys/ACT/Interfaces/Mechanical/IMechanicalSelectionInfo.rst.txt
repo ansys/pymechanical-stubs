@@ -1,0 +1,307 @@
+.. vale off
+
+
+
+:class:`IMechanicalSelectionInfo`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Mechanical.IMechanicalSelectionInfo
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the mechanical selection information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalSelectionInfo
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~get_Id`
+            - get_Id method.
+          * - :py:attr:`~get_Ids`
+            - get_Ids method.
+          * - :py:attr:`~get_Name`
+            - get_Name method.
+          * - :py:attr:`~get_SelectionType`
+            - get_SelectionType method.
+          * - :py:attr:`~set_Ids`
+            - set_Ids method.
+          * - :py:attr:`~set_Name`
+            - set_Name method.
+          * - :py:attr:`~set_SelectionType`
+            - set_SelectionType method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementFaceIndices`
+            - Gets the list indices needed to define the face of an element.
+          * - :py:attr:`~Entities`
+            - Gets the list of selected geometry entities.
+          * - :py:attr:`~Id`
+            - Id property.
+          * - :py:attr:`~Ids`
+            - Ids property.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~SelectionType`
+            - SelectionType property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ElementFaceIndices
+   :type: Optional[List[int]]
+
+
+   
+   Gets the list indices needed to define the face of an element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Entities
+   :type: Optional[List[Ansys.ACT.Interfaces.Geometry.IGeoEntity]]
+
+
+   
+   Gets the list of selected geometry entities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Id property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Ids
+   :type: Optional[List[int]]
+
+
+   
+   Ids property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SelectionType
+   :type: Optional[Ansys.ACT.Interfaces.Common.SelectionTypeEnum]
+
+
+   
+   SelectionType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: get_Id() -> int
+
+   
+   get_Id method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Ids() -> List[int]
+
+   
+   get_Ids method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Name() -> str
+
+   
+   get_Name method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_SelectionType() -> Ansys.ACT.Interfaces.Common.SelectionTypeEnum
+
+   
+   get_SelectionType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_Ids(value: List[int]) -> None
+
+   
+   set_Ids method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_Name(value: str) -> None
+
+   
+   set_Name method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: set_SelectionType(value: Ansys.ACT.Interfaces.Common.SelectionTypeEnum) -> None
+
+   
+   set_SelectionType method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,5 @@
+/* Push navbar end items (search, version switcher, buttons) to the right
+   when there is no center nav element (e.g. Home tab removed). */
+.navbar-header-items__end {
+    margin-left: auto;
+}

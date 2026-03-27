@@ -1,0 +1,55 @@
+.. vale off
+
+
+
+:class:`MechanicalDataModel`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.MechanicalDataModel
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MechanicalDataModel
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Remove`
+            - Remove method.
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Remove(dataModelObjects: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+
+   
+   Remove method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

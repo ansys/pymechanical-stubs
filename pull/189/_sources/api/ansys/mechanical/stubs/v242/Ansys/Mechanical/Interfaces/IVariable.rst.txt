@@ -1,0 +1,213 @@
+.. vale off
+
+
+
+:class:`IVariable`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Interfaces.IVariable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes a variable, which is a one dimensional array of real numbers with a unit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IVariable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~get_Count`
+            - get_Count method.
+          * - :py:attr:`~get_Item`
+            - get_Item method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~QuantityName`
+            - The quantity name of the variable.  For example, this could be "Length".
+          * - :py:attr:`~Unit`
+            - The unit of the variable.  For example, this could be "mm".
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[float]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuantityName
+   :type: Optional[str]
+
+
+   
+   The quantity name of the variable.  For example, this could be "Length".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   The unit of the variable.  For example, this could be "mm".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetEnumerator() -> Iterator
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Count() -> int
+
+   
+   get_Count method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: get_Item(index: int) -> float
+
+   
+   get_Item method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
