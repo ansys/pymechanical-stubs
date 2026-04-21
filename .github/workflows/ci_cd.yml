@@ -218,7 +218,7 @@ jobs:
           fi
 
       - name: "Upload v${{ matrix.mechanical.version }} stubs"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: v${{ matrix.mechanical.version }}-${{ matrix.python-version }}
           path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
@@ -310,7 +310,7 @@ jobs:
         replace_version_match("doc/_build/html", os.getenv("MECHANICAL_REVN"))
 
     - name: "Upload version Sphinx HTML documentation"
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-html-v${{ matrix.mechanical-revn }}
@@ -322,7 +322,7 @@ jobs:
         make -C doc markdown
 
     - name: "Upload version markdown documentation"
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-md-v${{ matrix.mechanical-revn }}
@@ -382,7 +382,7 @@ jobs:
           fi
 
       - name: "Upload HTML documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -392,7 +392,7 @@ jobs:
           retention-days: 7
 
       - name: "Upload Markdown documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -410,7 +410,7 @@ jobs:
           touch doc/_build/latex/doc.pdf
 
       - name: Upload PDF Documentation
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -482,7 +482,7 @@ jobs:
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: toc-file
           path: output/
@@ -496,7 +496,7 @@ jobs:
           python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
       - name: "Upload HTML documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -506,7 +506,7 @@ jobs:
           retention-days: 7
 
       - name: "Upload Markdown documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
