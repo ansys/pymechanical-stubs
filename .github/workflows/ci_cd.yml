@@ -198,7 +198,7 @@ jobs:
               echo "  Digest: ${DIGEST}"
             fi
 
-            DIGESTS_JSON=$(echo "${DIGESTS_JSON}" | jq --arg k "${image}" --arg v "${DIGEST}" '. + {($k): $v}')
+            DIGESTS_JSON=$(echo "${DIGESTS_JSON}" | jq -c --arg k "${image}" --arg v "${DIGEST}" '. + {($k): $v}')
           done < <(echo "${MATRIX_JSON}" | jq -r '.mechanical[].image')
 
           echo "digests=${DIGESTS_JSON}" >> $GITHUB_OUTPUT
