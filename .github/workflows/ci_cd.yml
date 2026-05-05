@@ -22,6 +22,9 @@ on:
           - '3.13'
           - 'All of the above'
         default: 'All of the above'
+  schedule:
+    # Nightly build at 02:00 UTC — runs against all supported Mechanical versions
+    - cron: '0 2 * * *'
   push:
     tags:
       - "*"
@@ -137,22 +140,32 @@ jobs:
     steps:
       - id: set-matrix
         run: |
-          # Run all stable mechanical versions release tags
-          # For pull requests and merges use latest stable version (252)
+          # workflow_dispatch: use the version/python selected by the user
           if ${{ github.event_name == 'workflow_dispatch' }}; then
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
             echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
             echo "doc_build_matrix={\"mechanical-revn\":[${{ needs.set-mechanical-versions.outputs.version }}],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
+            echo "test_matrix={\"os\":[\"ubuntu-latest\",\"windows-latest\"],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
+
+          # pull_request: latest version + main Python only to keep CI fast
+          elif ${{ github.event_name == 'pull_request' }}; then
+            default_v="${{ env.DEFAULT_MECHANICAL_VERSION }}"
+            default_img="${default_v:0:2}.${default_v:2}.0"
+            echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"${default_img}\",\"version\":\"${default_v}\"}],\"python-version\":[\"${{ env.MAIN_PYTHON_VERSION }}\"]}"\ >> ${GITHUB_OUTPUT}
+            echo "DELIMITER" >> ${GITHUB_OUTPUT}
+            echo "doc_build_matrix={\"mechanical-revn\":[\"${default_v}\"],\"python-version\":[\"${{ env.MAIN_PYTHON_VERSION }}\"]}" >> $GITHUB_OUTPUT
+            echo "test_matrix={\"os\":[\"ubuntu-latest\",\"windows-latest\"],\"python-version\":[\"${{ env.MAIN_PYTHON_VERSION }}\"]}" >> $GITHUB_OUTPUT
+
+          # push (tags/main) and nightly schedule: all versions, all Python versions
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
             echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
-
             echo "doc_build_matrix={\"mechanical-revn\":['241', '242', '251', '252'],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
+            echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
           fi
-
-          echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
 
 
   check-image-digests:
