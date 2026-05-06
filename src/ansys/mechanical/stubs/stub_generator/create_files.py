@@ -66,6 +66,11 @@ def resolve():
     # Append path for Ansys.Mechanical.Embedding
     sys.path.append(ansys_mech_embedding_path)
     clr.AddReference("Ansys.Mechanical.Embedding")
+
+    # Add path for Ans.Core
+    ans_core_path = str(Path(install_dir, "Framework", "bin", "Linux64" if os.name != "nt" else "winx64"))
+    sys.path.append(ans_core_path)
+    clr.AddReference("Ansys.Mechanical.Embedding")
     import Ansys
 
     assembly_resolver = Ansys.Mechanical.Embedding.AssemblyResolver

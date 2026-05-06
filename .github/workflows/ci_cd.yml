@@ -201,21 +201,7 @@ jobs:
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
-
-          # Make Mono able to resolve Mechanical's .NET dependencies
-          MONO_PATH: >-
-            /install/ansys_inc/v${{ matrix.mechanical.version }}/aisol/bin/linx64:
-            /install/ansys_inc/v${{ matrix.mechanical.version }}/commonfiles/Assemblies:
-            /install/ansys_inc/v${{ matrix.mechanical.version }}/commonfiles/mono/linx64/lib:
-            /install/ansys_inc/v${{ matrix.mechanical.version }}/commonfiles/mono/linx64/bin
-
-          LD_LIBRARY_PATH: >-
-            /install/ansys_inc/v${{ matrix.mechanical.version }}/aisol/bin/linx64:
-            /install/ansys_inc/v${{ matrix.mechanical.version }}/commonfiles/mono/linx64/lib:${LD_LIBRARY_PATH}
         run: |
-          ls -l /install/ansys_inc/v${{ matrix.mechanical.version }}/commonfiles/Assemblies/Ans.Utilities.dll
-          ls -l /install/ansys_inc/v${{ matrix.mechanical.version }}/commonfiles/Assemblies/Ansys.ACT.Interfaces.dll
-
           python src/ansys/mechanical/stubs/stub_generator/create_files.py > results.txt
         continue-on-error: True
 
