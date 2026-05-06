@@ -202,7 +202,8 @@ jobs:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
         run: |
-          python src/ansys/mechanical/stubs/stub_generator/create_files.py > results.txt
+          set -o pipefail
+          python -X faulthandler src/ansys/mechanical/stubs/stub_generator/create_files.py 2>&1 | tee results.txt
         continue-on-error: True
 
       - name: "Check stubs were generated"
