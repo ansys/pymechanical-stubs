@@ -1,6 +1,11 @@
 [
+    {
+    "name": "2026 R1 (latest)",
+    "version": "261",
+    "url": "https://scripting.mechanical.docs.pyansys.com/version/api/ansys/mechanical/stubs/v261"
+  },
   {
-    "name": "2025 R2 (latest)",
+    "name": "2025 R2",
     "version": "252",
     "url": "https://scripting.mechanical.docs.pyansys.com/version/api/ansys/mechanical/stubs/v252"
   },
@@ -13,10 +18,5 @@
     "name": "2024 R2",
     "version": "242",
     "url": "https://scripting.mechanical.docs.pyansys.com/version/api/ansys/mechanical/stubs/v242"
-  },
-  {
-    "name": "2024 R1",
-    "version": "241",
-    "url": "https://scripting.mechanical.docs.pyansys.com/version/api/ansys/mechanical/stubs/v241"
   }
 ]
