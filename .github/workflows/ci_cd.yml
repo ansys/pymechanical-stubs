@@ -363,6 +363,7 @@ jobs:
               if [ -d "$combined_folder_path" ]; then
                   folder_version="${folder##*-}"
                   version_path="api/ansys/mechanical/stubs/${folder_version}"
+                  mkdir -p "$combined_folder_path/$version_path"
                   cp -r $folder/$version_path/* $combined_folder_path/$version_path
               else
                   mkdir -p "$combined_folder_path"
