@@ -31,13 +31,10 @@ cname = os.getenv("DOCUMENTATION_CNAME", default="scripting.mechanical.docs.pyan
 # Sphinx extensions
 extensions = [
     "ansys_sphinx_theme.extension.autoapi",
-    "jupyter_sphinx",
     "notfound.extension",
     "numpydoc",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-    "sphinx.ext.coverage",
-    "sphinx.ext.doctest",
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx_autodoc_typehints",
@@ -73,7 +70,9 @@ exclude_patterns = [
 numpydoc_use_plots = True
 numpydoc_show_class_members = False
 numpydoc_xref_param_type = True
-numpydoc_validate = True
+# Disable validation in CI (GitHub Actions sets CI=true) — validating thousands
+# of stub symbols is a significant overhead that isn't useful in automated builds.
+numpydoc_validate = not bool(os.getenv("CI"))
 numpydoc_validation_checks = {
     "GL06",  # Found unknown section
     "GL07",  # Sections are in the wrong order.
