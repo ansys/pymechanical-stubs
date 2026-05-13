@@ -155,9 +155,42 @@ jobs:
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
 
 
+  get-image-digests:
+    name: Get Mechanical image digests
+    runs-on: ubuntu-latest
+    needs: [config-matrix]
+    permissions:
+      packages: read
+    outputs:
+      digests: ${{ steps.get-digests.outputs.digests }}
+    steps:
+      - name: "Log in to GHCR"
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: "Get image digests"
+        id: get-digests
+        run: |
+          STUBS_MATRIX='${{ needs.config-matrix.outputs.stubs-matrix }}'
+          IMAGES=$(echo "$STUBS_MATRIX" | python3 -c "import sys,json; m=json.load(sys.stdin); print(' '.join(i['image'] for i in m['mechanical']))")
+
+          json="{"
+          first=true
+          for img in $IMAGES; do
+            digest=$(docker manifest inspect "ghcr.io/ansys/mechanical:${img}" 2>/dev/null \
+              | python3 -c "import sys,json; print(json.dumps(json.load(sys.stdin),sort_keys=True))" \
+              | sha256sum | cut -c1-16 || echo "${img}")
+            echo "  ghcr.io/ansys/mechanical:${img} -> ${digest}"
+            if $first; then first=false; else json="${json},"; fi
+            json="${json}\"${img}\":\"${digest}\""
+          done
+          json="${json}}"
+          echo "digests=${json}" >> $GITHUB_OUTPUT
+
+
   gen-stubs:
     name: Generate Mechanical stubs
-    needs: [style, doc-style, config-matrix]
+    needs: [style, doc-style, config-matrix, get-image-digests]
     runs-on: public-ubuntu-latest-8-cores
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
@@ -168,12 +201,30 @@ jobs:
       - name: "Install Git and clone project"
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - name: "Extract image digest for cache key"
+        id: image-digest
+        run: |
+          DIGESTS='${{ needs.get-image-digests.outputs.digests }}'
+          IMAGE="${{ matrix.mechanical.image }}"
+          DIGEST=$(echo "$DIGESTS" | grep -o "\"${IMAGE}\":\"[^\"]*\"" | cut -d'"' -f4)
+          echo "digest=${DIGEST:-${{ matrix.mechanical.image }}}" >> $GITHUB_OUTPUT
+
+      - name: "Restore stubs cache"
+        id: cache-stubs
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
+          key: stubs-v${{ matrix.mechanical.version }}-py${{ matrix.python-version }}-${{ steps.image-digest.outputs.digest }}-${{ hashFiles('src/ansys/mechanical/stubs/stub_generator/**') }}
+
       - name: "Set up Python"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         uses: ./.github/workflows/setup-python/
         with:
           python-version: ${{ matrix.python-version }}
+          cache-key-suffix: ${{ steps.image-digest.outputs.digest }}
 
       - name: "Configure Python"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         run: |
           # Link python to the installed version
           ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
@@ -183,7 +234,17 @@ jobs:
           python --version
           python -m pip --version
 
+      - name: "Cache pip packages"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            pip-${{ matrix.python-version }}-
+
       - name: "Install dependencies"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
@@ -196,6 +257,7 @@ jobs:
           python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
       - name: "Generate the Mechanical stub files"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
@@ -204,6 +266,7 @@ jobs:
         continue-on-error: True
 
       - name: "Check stubs were generated"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         run: |
           cat results.txt
 

@@ -29,6 +29,14 @@ inputs:
     type: boolean
     default: true
 
+  cache-key-suffix:
+    description: >
+      Suffix for the Python build cache key (e.g., Mechanical image version or digest).
+      Used to scope the cache to a specific container environment.
+    required: false
+    type: string
+    default: ""
+
 runs:
   using: "composite"
   steps:
@@ -63,6 +71,21 @@ runs:
         # Install dependencies to build Python
         apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y
 
+    - name: "Restore compiled Python from cache"
+      id: cache-python
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      with:
+        path: |
+          /usr/local/lib/python${{ inputs.python-version }}
+          /usr/local/bin/python${{ inputs.python-version }}
+          /usr/local/bin/python${{ inputs.python-version }}-config
+          /usr/local/include/python${{ inputs.python-version }}*
+        key: python-${{ env.PYTHON_VERSION_PATCH }}-${{ inputs.cache-key-suffix }}
+
+    - name: "Build and install Python"
+      if: steps.cache-python.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
         # Download the specified Python version from python.org
         version=${{ env.PYTHON_VERSION_PATCH }}
         wget https://www.python.org/ftp/python/$version/Python-$version.tgz
@@ -78,7 +101,7 @@ runs:
         else
           optimization_flag=""
         fi
-        ./configure $optimizations_flag
+        ./configure $optimization_flag
 
         # Build Python
         make -j $(nproc)
