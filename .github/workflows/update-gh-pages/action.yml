@@ -78,9 +78,15 @@ runs:
       shell: bash
       run: |
         git checkout gh-pages
-        # Extract the latest version number from versions.json (first entry)
-        LATEST_VERSION=$(python3 -c "import json; data=json.load(open('versions.json')); print(data[0]['version'])")
-        echo "Latest version: $LATEST_VERSION"
+        # Find the highest v### version folder that actually exists on gh-pages,
+        # rather than trusting versions.json which may list versions not yet deployed.
+        LATEST_VERSION=$(find version/api/ansys/mechanical/stubs -maxdepth 1 -type d -name "v[0-9][0-9][0-9]" 2>/dev/null | sort | tail -1 | xargs -r basename | sed 's/^v//')
+        if [ -z "$LATEST_VERSION" ]; then
+          echo "No deployed version folders found under version/api/ansys/mechanical/stubs, skipping index.html update."
+          git checkout -
+          exit 0
+        fi
+        echo "Latest deployed version: $LATEST_VERSION"
         REDIRECT_URL="version/api/ansys/mechanical/stubs/v${LATEST_VERSION}/index.html"
         cat > index.html <<EOF
         <!DOCTYPE html>
