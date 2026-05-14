@@ -224,14 +224,10 @@ jobs:
         uses: ./.github/workflows/setup-python/
         with:
           python-version: ${{ matrix.python-version }}
-          cache-key-suffix: ${{ steps.image-digest.outputs.digest }}
 
       - name: "Configure Python"
         if: steps.cache-stubs.outputs.cache-hit != 'true'
         run: |
-          # Link python to the installed version
-          ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
-
           # Verify Python installation
           python -m pip install --upgrade pip
           python --version
