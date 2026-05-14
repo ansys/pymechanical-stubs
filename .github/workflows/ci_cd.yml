@@ -229,8 +229,11 @@ jobs:
         if: steps.cache-stubs.outputs.cache-hit != 'true'
         run: |
           # Verify Python installation
-          python -m pip install --upgrade pip
           python --version
+          if ! python -m pip --version >/dev/null 2>&1; then
+            python -m ensurepip --default-pip
+          fi
+          python -m pip install --upgrade pip
           python -m pip --version
 
       - name: "Cache pip packages"
