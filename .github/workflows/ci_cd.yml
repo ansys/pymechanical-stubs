@@ -436,7 +436,23 @@ jobs:
         with:
           pattern: documentation-md-v*
 
+      - name: "Compute artifact hash for cache key"
+        id: artifact-hash
+        run: |
+          hash=$(find documentation-html-v* documentation-md-v* -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
+          echo "hash=${hash}" >> $GITHUB_OUTPUT
+
+      - name: "Restore combined docs cache"
+        id: cache-combined
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: |
+            documentation-html
+            documentation-md
+          key: combined-docs-${{ steps.artifact-hash.outputs.hash }}
+
       - name: "Combine HTML and Markdown documentation"
+        if: steps.cache-combined.outputs.cache-hit != 'true'
         run: |
           combine_documentation() {
             combined_folder_name=$1
@@ -517,6 +533,14 @@ jobs:
       - name: "Install Git and clone project"
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - name: "Cache pip packages"
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ~/.cache/pip
+          key: pip-clean-docs-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            pip-clean-docs-${{ matrix.python-version }}-
+
       - name: "Install project & doc dependencies"
         run: |
           python -m pip install -e .[doc]
@@ -535,31 +559,54 @@ jobs:
           pattern: combined-documentation-md
           path: combined-documentation-md
 
+      - name: "Compute artifact hash for cache key"
+        id: artifact-hash
+        run: |
+          hash=$(find combined-documentation-html combined-documentation-md -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
+          echo "hash=${hash}" >> $GITHUB_OUTPUT
+
+      - name: "Restore cleaned docs cache"
+        id: cache-cleaned
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: |
+            combined-documentation-html
+            combined-documentation-md
+            output
+          key: clean-docs-${{ steps.artifact-hash.outputs.hash }}-${{ hashFiles('scripts/**') }}
+
       - name: "Replace Windows apostrophes with single quotes"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --markdown_api_folder combined-documentation-md/api
 
       - name: "Markdown: Make all hrefs local"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/fix-href-md.py --api_folder combined-documentation-md/api
 
       - name: "HTML: Make all hrefs local"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/fix-href-html.py --api_folder combined-documentation-html/api
 
       - name: "Markdown: Clean ID in first row"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/01-clean-id.py --input_folder combined-documentation-md
 
       - name: "Markdown: Clean empty rows"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/02-clean-empty-row.py --input_folder combined-documentation-md
 
       - name: "Create table of contents"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/03-create-toc-from-html-mechanical.py --api_folder combined-documentation-html/api
 
       - name: "Fix paths in toc.yml"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         shell: bash
         run: |
           # Remove doc/_build/html from paths in toc.yml file
@@ -575,10 +622,12 @@ jobs:
           path: output/
 
       - name: "Markdown: Add header to tables"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/04-add-header-to-tables.py --input_folder combined-documentation-md
 
       - name: "Markdown: Remove links in heading"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
