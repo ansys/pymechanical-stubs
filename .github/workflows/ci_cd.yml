@@ -214,7 +214,7 @@ jobs:
 
       - name: "Restore stubs cache"
         id: cache-stubs
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
           key: stubs-v${{ matrix.mechanical.version }}-py${{ matrix.python-version }}-${{ steps.image-digest.outputs.digest }}-${{ hashFiles('src/ansys/mechanical/stubs/stub_generator/**') }}
@@ -238,7 +238,7 @@ jobs:
 
       - name: "Cache pip packages"
         if: steps.cache-stubs.outputs.cache-hit != 'true'
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: ~/.cache/pip
           key: pip-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -340,7 +340,7 @@ jobs:
         echo "stubs-hash=${stubs_hash}" >> $GITHUB_OUTPUT
 
     - name: "Cache pip packages"
-      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
       with:
         path: ~/.cache/pip
         key: pip-doc-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -353,7 +353,7 @@ jobs:
 
     - name: "Restore documentation build cache"
       id: cache-docs
-      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
       with:
         path: doc/_build
         key: doc-build-v${{ matrix.mechanical-revn }}-py${{ matrix.python-version }}-${{ steps.doc-cache-key.outputs.stubs-hash }}-${{ hashFiles('doc/source/**', 'pyproject.toml') }}
@@ -447,7 +447,7 @@ jobs:
 
       - name: "Restore combined docs cache"
         id: cache-combined
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: |
             documentation-html
@@ -537,7 +537,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: "Cache pip packages"
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: ~/.cache/pip
           key: pip-clean-docs-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -570,7 +570,7 @@ jobs:
 
       - name: "Restore cleaned docs cache"
         id: cache-cleaned
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: |
             combined-documentation-html
