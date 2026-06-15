@@ -12,7 +12,6 @@ on:
           - '252'
           - '251'
           - '242'
-          - '241'
         default: '261'
       python-version:
         description: "Create stubs using the following python version:"
@@ -43,9 +42,6 @@ env:
   ANSYS_WORKBENCH_LOGGING: 0
   ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
   NUM_CORES: 1
-  MEILISEARCH_API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
-  MEILISEARCH_HOST_URL: ${{ vars.MEILISEARCH_HOST_URL }}
-  MEILISEARCH_PUBLIC_API_KEY: ${{ secrets.MEILISEARCH_PUBLIC_API_KEY }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -140,7 +136,7 @@ jobs:
       - id: set-matrix
         run: |
           # Run all stable mechanical versions release tags
-          # For pull requests and merges use latest stable versions (241-261)
+          # For pull requests and merges use latest stable versions (242-261)
           # Documentation is only generated for 242-261
           if ${{ github.event_name == 'workflow_dispatch' }}; then
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
@@ -149,7 +145,7 @@ jobs:
             echo "doc_build_matrix={\"mechanical-revn\":[${{ needs.set-mechanical-versions.outputs.version }}],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"},{\"image\":\"26.1.0\",\"version\":\"261\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"},{\"image\":\"26.1.0\",\"version\":\"261\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
             echo "doc_build_matrix={\"mechanical-revn\":['242', '251', '252', '261'],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT

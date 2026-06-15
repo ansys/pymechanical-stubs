@@ -164,7 +164,7 @@ def make(base_dir, outdir, assemblies, str_version):
     path = outdir / "Ansys"
     path_init = path / "__init__.py"
 
-    # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
+    # Make src/ansys/mechanical/stubs/v<version>/Ansys/__init__.py
     with path_init.open("w") as f:
         f.write('"""Ansys module."""\n')
         for directory in path.iterdir():
@@ -193,7 +193,7 @@ def make(base_dir, outdir, assemblies, str_version):
                 ]
 
                 # Create list of import statements for each submodule. For example,
-                # "import ansys.mechanical.stubs.v241.Ansys.ACT.Common as Common"
+                # "import ansys.mechanical.stubs.v<version>.Ansys.ACT.Common as Common"
                 # in Ansys/ACT/__init__.py
                 import_statements = []
                 for module in module_list:

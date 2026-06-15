@@ -29,7 +29,7 @@ inputs:
   # Optional inputs
   mechanical-revn:
     description: >
-      Mechanical revn. For example, v241
+      Mechanical revn. For example, v242
     required: false
     default: ""
     type: string
@@ -76,7 +76,7 @@ runs:
                 else:
                     os.rename(original, renamed)
 
-        mechanical_versions = ["241", "242", "251", "252", "261"]
+        mechanical_versions = ["242", "251", "252", "261"]
         for version in mechanical_versions:
             version_dir = os.path.join(base_path, f"v{version}")
             init_file = os.path.join(version_dir, "__init__.py")
