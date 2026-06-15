@@ -190,7 +190,7 @@ jobs:
   gen-stubs:
     name: Generate Mechanical stubs
     needs: [style, doc-style, config-matrix, get-image-digests]
-    runs-on: public-ubuntu-latest-8-cores
+    runs-on: public-ubuntu-latest-16-cores
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
       options: --entrypoint /bin/bash
@@ -314,7 +314,7 @@ jobs:
     name: Make html and markdown documentation
     if: github.event.action != 'closed'
     needs: [set-mechanical-versions, gen-stubs, smoke-tests, config-matrix]
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     strategy:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
     steps:
@@ -416,7 +416,7 @@ jobs:
 
   combine-docs:
     name: Combine documentation
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [doc-build, config-matrix]
     strategy:
       matrix:
@@ -523,7 +523,7 @@ jobs:
 
   clean-docs:
     name: Clean HTML and Markdown documentation
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [combine-docs, config-matrix]
     strategy:
       matrix:
