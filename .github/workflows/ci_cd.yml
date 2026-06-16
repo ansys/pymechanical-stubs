@@ -652,7 +652,7 @@ jobs:
 
   doc-deploy-pr:
     name: "Deploy PR documentation"
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [clean-docs]
     if: always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
     steps:
@@ -735,7 +735,7 @@ jobs:
   doc-deploy-dev:
     name: "Deploy development documentation"
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [clean-docs]
     steps:
       - name: "Deploy development documentation"
@@ -759,7 +759,7 @@ jobs:
   doc-deploy-stable:
     name: "Deploy stable documentation"
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: release
     steps:
       - name: "Deploy stable documentation"
