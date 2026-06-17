@@ -29,7 +29,7 @@ inputs:
   # Optional inputs
   mechanical-revn:
     description: >
-      Mechanical revn. For example, v241
+      Mechanical revn. For example, v242
     required: false
     default: ""
     type: string
@@ -49,17 +49,41 @@ runs:
 
         print(os.getcwd())
 
-    - name: Make mechanical version dir
-      if: ${{ inputs.mechanical-revn != '' }}
-      shell: bash
-      run: |
-        mkdir -p ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
-
     - name: Download the library artifacts
       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
       with:
         pattern: ${{ inputs.folder-pattern }}
-        path: ${{ inputs.package-path }}/${{ inputs.mechanical-revn }}
+        path: ${{ inputs.package-path }}
+
+    - name: Rename folders
+      shell: python
+      run: |
+        import os
+        import shutil
+
+        base_path = "${{ inputs.package-path }}"
+        py_suffix = "-${{ inputs.python-version }}"
+
+        for entry in os.listdir(base_path):
+            if py_suffix in entry:
+                original = os.path.join(base_path, entry)
+                if not os.path.isdir(original):
+                    continue
+                renamed = os.path.join(base_path, entry.replace(py_suffix, ""))
+                if os.path.exists(renamed):
+                    shutil.copytree(original, renamed, dirs_exist_ok=True)
+                    shutil.rmtree(original)
+                else:
+                    os.rename(original, renamed)
+
+        mechanical_versions = ["242", "251", "252", "261"]
+        for version in mechanical_versions:
+            version_dir = os.path.join(base_path, f"v{version}")
+            init_file = os.path.join(version_dir, "__init__.py")
+            if not os.path.exists(init_file):
+                os.makedirs(version_dir, exist_ok=True)
+                with open(init_file, "w") as f:
+                    f.write(f'"""Ansys Mechanical v{version} module."""\n')
 
     - name: Ensure the Mechanical version folder is not empty
       if: ${{ inputs.mechanical-revn != '' }}
@@ -73,25 +97,6 @@ runs:
           echo "Please check the stubs were downloaded to the correct location."
           return 2
         fi
-
-    - name: Rename folders
-      shell: python
-      run: |
-        import os
-
-        for dirpath, dirnames, filenames in os.walk("${{ inputs.package-path }}"):
-          for dir in dirnames:
-              original_dir = os.path.join(dirpath, dir)
-              new_dir = dir.replace("-${{ inputs.python-version }}", "")
-              renamed_dir = os.path.join(dirpath, new_dir)
-              os.rename(original_dir, renamed_dir)
-
-        mechanical_versions = ["241", "242", "251", "252"]
-        for version in mechanical_versions:
-            if not os.path.exists(f"${{ inputs.package-path }}/v{version}"):
-                os.makedirs(f"${{ inputs.package-path }}/v{version}")
-                with open(f"${{ inputs.package-path }}/v{version}/__init__.py", "w") as f:
-                    f.write(f'"""Ansys Mechanical v{version} module."""\n')
 
     - name: Create __init__.py in ${{ inputs.package-path }}
       shell: python

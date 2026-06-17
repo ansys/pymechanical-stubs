@@ -8,11 +8,11 @@ on:
         description: "Create stubs for the following Mechanical version:"
         type: choice
         options:
+          - '261'
           - '252'
           - '251'
           - '242'
-          - '241'
-        default: '252'
+        default: '261'
       python-version:
         description: "Create stubs using the following python version:"
         type: choice
@@ -30,6 +30,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.12'
+  DEBIAN_FRONTEND: 'noninteractive'
   DEFAULT_MECHANICAL_VERSION: '252'
   PACKAGE_NAME: ansys-mechanical-stubs
   PACKAGE_NAMESPACE: ansys.mechanical.stubs
@@ -41,9 +42,6 @@ env:
   ANSYS_WORKBENCH_LOGGING: 0
   ANSYS_WORKBENCH_LOGGING_FILTER_LEVEL: 2
   NUM_CORES: 1
-  MEILISEARCH_API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
-  MEILISEARCH_HOST_URL: ${{ vars.MEILISEARCH_HOST_URL }}
-  MEILISEARCH_PUBLIC_API_KEY: ${{ secrets.MEILISEARCH_PUBLIC_API_KEY }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -58,7 +56,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: ansys/actions/doc-deploy-changelog@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+      - uses: ansys/actions/doc-deploy-changelog@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           token: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
           bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
@@ -69,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "PyAnsys code style checks"
-        uses: ansys/actions/code-style@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+        uses: ansys/actions/code-style@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
@@ -78,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "PyAnsys documentation style checks"
-        uses: ansys/actions/doc-style@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+        uses: ansys/actions/doc-style@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           vale-config: doc/.vale.ini
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -138,27 +136,61 @@ jobs:
       - id: set-matrix
         run: |
           # Run all stable mechanical versions release tags
-          # For pull requests and merges use latest stable version (252)
+          # For pull requests and merges use latest stable versions (242-261)
+          # Documentation is only generated for 242-261
           if ${{ github.event_name == 'workflow_dispatch' }}; then
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
             echo "{\"mechanical\":[{\"image\":\"${{ needs.set-mechanical-versions.outputs.image }}\",\"version\":\"${{ needs.set-mechanical-versions.outputs.version }}\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "doc_build_matrix={\"mechanical-revn\":[${{ needs.set-mechanical-versions.outputs.version }}],\"python-version\":[${{ inputs.python-version }}]}" >> $GITHUB_OUTPUT
+            echo "doc_build_matrix={\"mechanical-revn\":[${{ needs.set-mechanical-versions.outputs.version }}],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
           else
             echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-            echo "{\"mechanical\":[{\"image\":\"24.1.0\",\"version\":\"241\"},{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
+            echo "{\"mechanical\":[{\"image\":\"24.2.0\",\"version\":\"242\"},{\"image\":\"25.1.0\",\"version\":\"251\"},{\"image\":\"25.2.0\",\"version\":\"252\"},{\"image\":\"26.1.0\",\"version\":\"261\"}],\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
             echo "DELIMITER" >> ${GITHUB_OUTPUT}
 
-            echo "doc_build_matrix={\"mechanical-revn\":['241', '242', '251', '252'],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
+            echo "doc_build_matrix={\"mechanical-revn\":['242', '251', '252', '261'],\"python-version\":[${{ env.MAIN_PYTHON_VERSION }}]}" >> $GITHUB_OUTPUT
           fi
 
           echo "test_matrix={\"os\":['ubuntu-latest', 'windows-latest'],\"python-version\":${{ needs.set-mechanical-versions.outputs.python-version }}}" >> $GITHUB_OUTPUT
 
 
+  get-image-digests:
+    name: Get Mechanical image digests
+    runs-on: ubuntu-latest
+    needs: [config-matrix]
+    permissions:
+      packages: read
+    outputs:
+      digests: ${{ steps.get-digests.outputs.digests }}
+    steps:
+      - name: "Log in to GHCR"
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: "Get image digests"
+        id: get-digests
+        run: |
+          STUBS_MATRIX='${{ needs.config-matrix.outputs.stubs-matrix }}'
+          IMAGES=$(echo "$STUBS_MATRIX" | python3 -c "import sys,json; m=json.load(sys.stdin); print(' '.join(i['image'] for i in m['mechanical']))")
+
+          json="{"
+          first=true
+          for img in $IMAGES; do
+            digest=$(docker manifest inspect "ghcr.io/ansys/mechanical:${img}" 2>/dev/null \
+              | python3 -c "import sys,json; print(json.dumps(json.load(sys.stdin),sort_keys=True))" \
+              | sha256sum | cut -c1-16 || echo "${img}")
+            echo "  ghcr.io/ansys/mechanical:${img} -> ${digest}"
+            if $first; then first=false; else json="${json},"; fi
+            json="${json}\"${img}\":\"${digest}\""
+          done
+          json="${json}}"
+          echo "digests=${json}" >> $GITHUB_OUTPUT
+
+
   gen-stubs:
     name: Generate Mechanical stubs
-    needs: [style, doc-style, config-matrix]
-    runs-on: public-ubuntu-latest-8-cores
+    needs: [style, doc-style, config-matrix, get-image-digests]
+    runs-on: public-ubuntu-latest-16-cores
     container:
       image: ghcr.io/ansys/mechanical:${{ matrix.mechanical.image }}
       options: --entrypoint /bin/bash
@@ -166,24 +198,51 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix) }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - name: "Extract image digest for cache key"
+        id: image-digest
+        run: |
+          DIGESTS='${{ needs.get-image-digests.outputs.digests }}'
+          IMAGE="${{ matrix.mechanical.image }}"
+          DIGEST=$(echo "$DIGESTS" | grep -o "\"${IMAGE}\":\"[^\"]*\"" | cut -d'"' -f4)
+          echo "digest=${DIGEST:-${{ matrix.mechanical.image }}}" >> $GITHUB_OUTPUT
+
+      - name: "Restore stubs cache"
+        id: cache-stubs
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
+          key: stubs-v${{ matrix.mechanical.version }}-py${{ matrix.python-version }}-${{ steps.image-digest.outputs.digest }}-${{ hashFiles('src/ansys/mechanical/stubs/stub_generator/**') }}
 
       - name: "Set up Python"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         uses: ./.github/workflows/setup-python/
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: "Configure Python"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         run: |
-          # Link python to the installed version
-          ln -s /usr/local/bin/python${{ matrix.python-version }} /usr/bin/python
-
           # Verify Python installation
-          python -m pip install --upgrade pip
           python --version
+          if ! python -m pip --version >/dev/null 2>&1; then
+            python -m ensurepip --default-pip
+          fi
+          python -m pip install --upgrade pip
           python -m pip --version
 
+      - name: "Cache pip packages"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            pip-${{ matrix.python-version }}-
+
       - name: "Install dependencies"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
@@ -196,6 +255,7 @@ jobs:
           python -m pip install --upgrade pip flit pytz tzdata ansys-pythonnet
 
       - name: "Generate the Mechanical stub files"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         env:
           AWP_ROOTDV_DEV: /install/ansys_inc/v${{ matrix.mechanical.version }}
           ANSYSCL${{ matrix.mechanical.version }}_DIR: /install/ansys_inc/v${{ matrix.mechanical.version }}/licensingclient
@@ -204,6 +264,7 @@ jobs:
         continue-on-error: True
 
       - name: "Check stubs were generated"
+        if: steps.cache-stubs.outputs.cache-hit != 'true'
         run: |
           cat results.txt
 
@@ -218,7 +279,7 @@ jobs:
           fi
 
       - name: "Upload v${{ matrix.mechanical.version }} stubs"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: v${{ matrix.mechanical.version }}-${{ matrix.python-version }}
           path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
@@ -232,7 +293,7 @@ jobs:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.test-matrix) }}
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
@@ -242,7 +303,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: "Build a wheelhouse of the Python library"
-      uses: ansys/actions/build-wheelhouse@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+      uses: ansys/actions/build-wheelhouse@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
       with:
         library-name: ${{ env.PACKAGE_NAME }}
         operating-system: ${{ matrix.os }}
@@ -253,12 +314,12 @@ jobs:
     name: Make html and markdown documentation
     if: github.event.action != 'closed'
     needs: [set-mechanical-versions, gen-stubs, smoke-tests, config-matrix]
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     strategy:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
@@ -268,17 +329,40 @@ jobs:
         python-version: ${{ matrix.python-version }}
         mechanical-revn: "v${{ matrix.mechanical-revn }}"
 
+    - name: "Compute stubs hash for doc cache key"
+      id: doc-cache-key
+      run: |
+        stubs_hash=$(find ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical-revn }} -type f -name "*.py" | sort | xargs sha256sum | sha256sum | cut -c1-16)
+        echo "stubs-hash=${stubs_hash}" >> $GITHUB_OUTPUT
+
+    - name: "Cache pip packages"
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+      with:
+        path: ~/.cache/pip
+        key: pip-doc-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
+        restore-keys: |
+          pip-doc-${{ matrix.python-version }}-
+
     - name: "Install project & doc dependencies"
       run: |
         python -m pip install -e .[doc]
 
+    - name: "Restore documentation build cache"
+      id: cache-docs
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+      with:
+        path: doc/_build
+        key: doc-build-v${{ matrix.mechanical-revn }}-py${{ matrix.python-version }}-${{ steps.doc-cache-key.outputs.stubs-hash }}-${{ hashFiles('doc/source/**', 'pyproject.toml') }}
+
     - name: "Generate HTML documentation"
+      if: steps.cache-docs.outputs.cache-hit != 'true'
       env:
         MECHANICAL_REVN: ${{ matrix.mechanical-revn }}
       run: |
         make -C doc html
 
     - name: "Change version switcher"
+      if: steps.cache-docs.outputs.cache-hit != 'true'
       shell: python
       env:
         MECHANICAL_REVN: ${{ matrix.mechanical-revn }}
@@ -310,7 +394,7 @@ jobs:
         replace_version_match("doc/_build/html", os.getenv("MECHANICAL_REVN"))
 
     - name: "Upload version Sphinx HTML documentation"
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-html-v${{ matrix.mechanical-revn }}
@@ -318,11 +402,12 @@ jobs:
         retention-days: 7
 
     - name: "Generate Markdown documentation"
+      if: steps.cache-docs.outputs.cache-hit != 'true'
       run: |
         make -C doc markdown
 
     - name: "Upload version markdown documentation"
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       if: matrix.python-version == env.MAIN_PYTHON_VERSION
       with:
         name: documentation-md-v${{ matrix.mechanical-revn }}
@@ -331,14 +416,14 @@ jobs:
 
   combine-docs:
     name: Combine documentation
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [doc-build, config-matrix]
     strategy:
       matrix:
         python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: "Download all HTML documentation"
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
@@ -350,7 +435,23 @@ jobs:
         with:
           pattern: documentation-md-v*
 
+      - name: "Compute artifact hash for cache key"
+        id: artifact-hash
+        run: |
+          hash=$(find documentation-html-v* documentation-md-v* -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
+          echo "hash=${hash}" >> $GITHUB_OUTPUT
+
+      - name: "Restore combined docs cache"
+        id: cache-combined
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: |
+            documentation-html
+            documentation-md
+          key: combined-docs-${{ steps.artifact-hash.outputs.hash }}
+
       - name: "Combine HTML and Markdown documentation"
+        if: steps.cache-combined.outputs.cache-hit != 'true'
         run: |
           combine_documentation() {
             combined_folder_name=$1
@@ -361,6 +462,7 @@ jobs:
               if [ -d "$combined_folder_path" ]; then
                   folder_version="${folder##*-}"
                   version_path="api/ansys/mechanical/stubs/${folder_version}"
+                  mkdir -p "$combined_folder_path/$version_path"
                   cp -r $folder/$version_path/* $combined_folder_path/$version_path
               else
                   mkdir -p "$combined_folder_path"
@@ -382,7 +484,7 @@ jobs:
           fi
 
       - name: "Upload HTML documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -392,7 +494,7 @@ jobs:
           retention-days: 7
 
       - name: "Upload Markdown documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -410,7 +512,7 @@ jobs:
           touch doc/_build/latex/doc.pdf
 
       - name: Upload PDF Documentation
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -421,14 +523,22 @@ jobs:
 
   clean-docs:
     name: Clean HTML and Markdown documentation
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [combine-docs, config-matrix]
     strategy:
       matrix:
         python-version: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix).python-version }}
     steps:
       - name: "Install Git and clone project"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - name: "Cache pip packages"
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: ~/.cache/pip
+          key: pip-clean-docs-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            pip-clean-docs-${{ matrix.python-version }}-
 
       - name: "Install project & doc dependencies"
         run: |
@@ -448,31 +558,54 @@ jobs:
           pattern: combined-documentation-md
           path: combined-documentation-md
 
+      - name: "Compute artifact hash for cache key"
+        id: artifact-hash
+        run: |
+          hash=$(find combined-documentation-html combined-documentation-md -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
+          echo "hash=${hash}" >> $GITHUB_OUTPUT
+
+      - name: "Restore cleaned docs cache"
+        id: cache-cleaned
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: |
+            combined-documentation-html
+            combined-documentation-md
+            output
+          key: clean-docs-${{ steps.artifact-hash.outputs.hash }}-${{ hashFiles('scripts/**') }}
+
       - name: "Replace Windows apostrophes with single quotes"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --markdown_api_folder combined-documentation-md/api
 
       - name: "Markdown: Make all hrefs local"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/fix-href-md.py --api_folder combined-documentation-md/api
 
       - name: "HTML: Make all hrefs local"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/fix-href-html.py --api_folder combined-documentation-html/api
 
       - name: "Markdown: Clean ID in first row"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/01-clean-id.py --input_folder combined-documentation-md
 
       - name: "Markdown: Clean empty rows"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/02-clean-empty-row.py --input_folder combined-documentation-md
 
       - name: "Create table of contents"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/03-create-toc-from-html-mechanical.py --api_folder combined-documentation-html/api
 
       - name: "Fix paths in toc.yml"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         shell: bash
         run: |
           # Remove doc/_build/html from paths in toc.yml file
@@ -482,21 +615,23 @@ jobs:
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: toc-file
           path: output/
 
       - name: "Markdown: Add header to tables"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/04-add-header-to-tables.py --input_folder combined-documentation-md
 
       - name: "Markdown: Remove links in heading"
+        if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
       - name: "Upload HTML documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -506,7 +641,7 @@ jobs:
           retention-days: 7
 
       - name: "Upload Markdown documentation"
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
           github.event_name == 'workflow_dispatch' ||
           matrix.python-version == env.MAIN_PYTHON_VERSION
@@ -517,11 +652,11 @@ jobs:
 
   doc-deploy-pr:
     name: "Deploy PR documentation"
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [clean-docs]
     if: always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
     steps:
-      - uses: ansys/actions/doc-deploy-pr@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+      - uses: ansys/actions/doc-deploy-pr@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -530,7 +665,7 @@ jobs:
           maximum-pr-doc-deployments: 50
 
       - name: "Install Git and clone project"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: "Update gh-pages versions.json"
         uses: ./.github/workflows/update-gh-pages/
@@ -544,10 +679,10 @@ jobs:
     needs: [clean-docs]
     steps:
     - name: "Install Git and clone project"
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
     - name: "Set up Python"
-      uses: ansys/actions/_setup-python@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+      uses: ansys/actions/_setup-python@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
       with:
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
         use-cache: false
@@ -562,7 +697,7 @@ jobs:
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
     - name: Build library source and wheel artifacts
-      uses: ansys/actions/build-library@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+      uses: ansys/actions/build-library@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
       with:
         library-name: ${{ env.PACKAGE_NAME }}
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
@@ -584,7 +719,7 @@ jobs:
           path: ${{ env.PACKAGE_NAME }}-artifacts
 
       - name: "Upload artifacts to PyPI using trusted publisher"
-        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # v1.13.0
+        uses: pypa/gh-action-pypi-publish@cef221092ed1bacb1cc03d23a2d87d1d172e277b # v1.14.0
         with:
           repository-url: "https://upload.pypi.org/legacy/"
           print-hash: true
@@ -592,7 +727,7 @@ jobs:
           skip-existing: false
 
       - name: "Release to GitHub"
-        uses: ansys/actions/release-github@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+        uses: ansys/actions/release-github@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           library-name: ${{ env.PACKAGE_NAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -600,11 +735,11 @@ jobs:
   doc-deploy-dev:
     name: "Deploy development documentation"
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: [clean-docs]
     steps:
       - name: "Deploy development documentation"
-        uses: ansys/actions/doc-deploy-dev@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+        uses: ansys/actions/doc-deploy-dev@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -612,7 +747,7 @@ jobs:
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
 
       - name: "Install Git and clone project"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: "Update gh-pages versions.json"
         uses: ./.github/workflows/update-gh-pages/
@@ -624,11 +759,11 @@ jobs:
   doc-deploy-stable:
     name: "Deploy stable documentation"
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-    runs-on: ubuntu-latest
+    runs-on: public-ubuntu-latest-16-cores
     needs: release
     steps:
       - name: "Deploy stable documentation"
-        uses: ansys/actions/doc-deploy-stable@1f4f0896a8e49d3aec2f02ced215b04a32c85f28 # v10.2.7
+        uses: ansys/actions/doc-deploy-stable@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -636,7 +771,7 @@ jobs:
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
 
       - name: "Install Git and clone project"
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: "Update gh-pages versions.json"
         uses: ./.github/workflows/update-gh-pages/

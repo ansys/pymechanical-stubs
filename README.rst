@@ -179,7 +179,7 @@ This code shows how to import PyMechanical Stubs and its basic capabilities:
    import ansys.mechanical.core as mech
 
    if TYPE_CHECKING:
-       import ansys.mechanical.stubs.v241.Ansys as Ansys
+       import ansys.mechanical.stubs.v261.Ansys as Ansys
 
    geometry_import_group = app.Model.GeometryImportGroup
    geometry_import = geometry_import_group.AddGeometryImport()
