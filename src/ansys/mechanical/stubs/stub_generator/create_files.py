@@ -68,21 +68,21 @@ def resolve():
     clr.AddReference("Ansys.Mechanical.Embedding")
 
     if version >= 261:
-        win64_string = "Win64" if os.name == "nt" else "Linux64"
+        os_string = "Win64" if os.name == "nt" else "Linux64"
 
         # Add path for Ans.Core
-        ans_core_path = str(Path(install_dir, "Framework", "bin", win64_string))
+        ans_core_path = str(Path(install_dir, "Framework", "bin", os_string))
         sys.path.append(ans_core_path)
         clr.AddReference("Ans.Core")
 
         # Add path for Ansys.ACT.Interfaces
-        act_interfaces_path = str(Path(install_dir, "Addins", "ACT", "bin", win64_string))
+        act_interfaces_path = str(Path(install_dir, "Addins", "ACT", "bin", os_string))
         sys.path.append(act_interfaces_path)
         clr.AddReference("Ansys.ACT.Interfaces")
 
         # Add path for Ans.EngineeringData (Addins/EngineeringData/bin/Win64)
         ans_engineering_data_path = str(
-            Path(install_dir, "Addins", "EngineeringData", "bin", win64_string)
+            Path(install_dir, "Addins", "EngineeringData", "bin", os_string)
         )
         sys.path.append(ans_engineering_data_path)
         clr.AddReference("Ans.EngineeringData")
