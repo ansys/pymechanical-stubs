@@ -50,7 +50,7 @@ def fix_hrefs(api_dir):
                     matches = pattern.findall(joined_lines)
                     if matches:
                         for match in matches:
-                            # '<tr class="row-odd"><td><p><a class="reference internal" href="../../../../../../../v241/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/VectorDeformation.html#VectorDeformation.Activate"
+                            # '<tr class="row-odd"><td><p><a class="reference internal" href="../../../../../../../v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/VectorDeformation.html#VectorDeformation.Activate"
                             # get index of href="
                             href_eq = match.index("href=") + 6
                             # get index of #
