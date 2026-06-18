@@ -18,6 +18,11 @@ inputs:
       Git email to use for the commit.
     required: true
 
+  deploy-target:
+    description: >
+      Documentation deployment target. Supported values are pr, dev, and stable.
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -45,6 +50,7 @@ runs:
       shell: bash
       run: |
         cp doc/versions.json /tmp/versions.json
+        git fetch origin gh-pages:gh-pages
         git checkout gh-pages
         cp /tmp/versions.json versions.json
         git config user.name "${{ inputs.bot-username }}"
@@ -55,32 +61,44 @@ runs:
         git checkout -
 
     - name: "Move content of stable folder to version folder"
+      if: inputs.deploy-target == 'stable'
       shell: bash
       run: |
+        git fetch origin gh-pages:gh-pages
         git checkout gh-pages
-        if [ -d "version/0.1" ] && [ -d "version/dev" ]; then
-          rm -rf version/0.1/ version/dev/
-          rm -f index.html
+        if [ -d "version/stable" ]; then
+          shopt -s nullglob dotglob
+          changed=false
           for item in version/stable/*; do
             basename_item=$(basename "$item")
             [[ "$basename_item" == _* ]] && continue
-            cp -rf "$item" version/
+            rm -rf "version/$basename_item"
+            mv "$item" version/
+            changed=true
           done
-          rm -rf version/stable/
-          ls -l version/
-          git config user.name "${{ inputs.bot-username }}"
-          git config user.email "${{ inputs.bot-email }}"
-          git add .
-          git commit -m "Reorganize version directory structure [skip ci]"
-          git push origin gh-pages
+          shopt -u nullglob dotglob
+          if [ "$changed" = true ]; then
+            rm -rf version/stable/
+            rm -f index.html
+            ls -l version/
+            git config user.name "${{ inputs.bot-username }}"
+            git config user.email "${{ inputs.bot-email }}"
+            git add -A version index.html
+            git diff --cached --quiet || git commit -m "Reorganize version directory structure [skip ci]"
+            git push origin gh-pages
+          else
+            echo "version/stable exists but contains no deployable content, skipping reorganization."
+          fi
         else
-          echo "version/0.1 or version/dev not found, skipping reorganization."
+          echo "version/stable not found, skipping reorganization."
         fi
         git checkout -
 
     - name: "Create root index.html redirect"
+      if: inputs.deploy-target == 'stable'
       shell: bash
       run: |
+        git fetch origin gh-pages:gh-pages
         git checkout gh-pages
         # Find the highest v### version folder that actually exists on gh-pages,
         # rather than trusting versions.json which may list versions not yet deployed.

@@ -672,6 +672,7 @@ jobs:
         with:
           bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          deploy-target: pr
 
   build-library:
     name: Build library
@@ -754,6 +755,7 @@ jobs:
         with:
           bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          deploy-target: dev
 
 
   doc-deploy-stable:
@@ -816,3 +818,4 @@ jobs:
         with:
           bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          deploy-target: stable
