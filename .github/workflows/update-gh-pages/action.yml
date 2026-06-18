@@ -61,7 +61,11 @@ runs:
         if [ -d "version/0.1" ] && [ -d "version/dev" ]; then
           rm -rf version/0.1/ version/dev/
           rm -f index.html
-          cp -rf version/stable/* version/
+          for item in version/stable/*; do
+            basename_item=$(basename "$item")
+            [[ "$basename_item" == _* ]] && continue
+            cp -rf "$item" version/
+          done
           rm -rf version/stable/
           ls -l version/
           git config user.name "${{ inputs.bot-username }}"

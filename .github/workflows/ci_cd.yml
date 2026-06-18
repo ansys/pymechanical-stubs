@@ -762,6 +762,45 @@ jobs:
     runs-on: public-ubuntu-latest-16-cores
     needs: release
     steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Remove non-version directories from gh-pages version/"
+        env:
+          BOT_USER: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
+          BOT_EMAIL: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+        run: |
+          if ! git ls-remote --exit-code origin gh-pages > /dev/null 2>&1; then
+            echo "gh-pages branch does not exist, skipping cleanup."
+            exit 0
+          fi
+          git fetch origin gh-pages:gh-pages
+          git checkout gh-pages
+          changed=false
+          if [ -d "version" ]; then
+            for dir in version/*/; do
+              [ -d "$dir" ] || continue
+              dirname=$(basename "$dir")
+              if [[ "$dirname" == _* ]]; then
+                echo "Removing non-version directory: $dir"
+                git rm -rf "$dir"
+                changed=true
+              fi
+            done
+          fi
+          if [ "$changed" = true ]; then
+            git config user.name "$BOT_USER"
+            git config user.email "$BOT_EMAIL"
+            git commit -m "chore: remove non-version artifacts from version/ [skip ci]"
+            git push origin gh-pages
+          else
+            echo "No non-version directories found, nothing to clean up."
+          fi
+          git checkout -
+
       - name: "Deploy stable documentation"
         uses: ansys/actions/doc-deploy-stable@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
