@@ -6,6 +6,48 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.11](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.11) - June 17, 2026
+
+
+### Added
+
+- Add 261 docs [#203](https://github.com/ansys/pymechanical-stubs/pull/203)
+
+
+### Fixed
+
+- Fix api folder refs in gh-pages [#185](https://github.com/ansys/pymechanical-stubs/pull/185)
+- Fix gh-pages generation for 261 [#206](https://github.com/ansys/pymechanical-stubs/pull/206)
+- 261 stubs and dll path [#218](https://github.com/ansys/pymechanical-stubs/pull/218)
+
+
+### Dependencies
+
+- Bump pypa/gh-action-pypi-publish from 1.13.0 to 1.14.0 [#193](https://github.com/ansys/pymechanical-stubs/pull/193)
+- Bump pytest from 9.0.2 to 9.0.3 [#194](https://github.com/ansys/pymechanical-stubs/pull/194)
+- Bump actions/upload-artifact from 7.0.0 to 7.0.1 [#196](https://github.com/ansys/pymechanical-stubs/pull/196)
+- Bump ansys/actions from 10.2.12 to 10.3.0 [#200](https://github.com/ansys/pymechanical-stubs/pull/200)
+- Bump actions/labeler from 6.0.1 to 6.1.0 [#202](https://github.com/ansys/pymechanical-stubs/pull/202)
+- Bump ansys/actions from 10.3.0 to 10.3.1 [#205](https://github.com/ansys/pymechanical-stubs/pull/205)
+- Bump ansys-pythonnet from 3.1.0rc6 to 3.1.0rc8 [#207](https://github.com/ansys/pymechanical-stubs/pull/207)
+- Bump actions/cache from 4.3.0 to 5.0.5 [#209](https://github.com/ansys/pymechanical-stubs/pull/209)
+- Bump ansys-sphinx-theme from 1.7.2 to 1.8.0 [#211](https://github.com/ansys/pymechanical-stubs/pull/211)
+- Bump ansys-sphinx-theme from 1.8.0 to 1.8.1 [#212](https://github.com/ansys/pymechanical-stubs/pull/212)
+- Bump ansys/actions from 10.3.1 to 10.3.2 [#213](https://github.com/ansys/pymechanical-stubs/pull/213)
+- Bump actions/checkout from 6.0.2 to 6.0.3 [#217](https://github.com/ansys/pymechanical-stubs/pull/217)
+- Bump pytest from 9.0.3 to 9.1.0 [#219](https://github.com/ansys/pymechanical-stubs/pull/219)
+
+
+### Maintenance
+
+- Pre-commit automatic update [#180](https://github.com/ansys/pymechanical-stubs/pull/180), [#187](https://github.com/ansys/pymechanical-stubs/pull/187), [#191](https://github.com/ansys/pymechanical-stubs/pull/191), [#192](https://github.com/ansys/pymechanical-stubs/pull/192), [#197](https://github.com/ansys/pymechanical-stubs/pull/197), [#198](https://github.com/ansys/pymechanical-stubs/pull/198), [#199](https://github.com/ansys/pymechanical-stubs/pull/199), [#201](https://github.com/ansys/pymechanical-stubs/pull/201), [#210](https://github.com/ansys/pymechanical-stubs/pull/210), [#214](https://github.com/ansys/pymechanical-stubs/pull/214), [#216](https://github.com/ansys/pymechanical-stubs/pull/216), [#220](https://github.com/ansys/pymechanical-stubs/pull/220)
+- Bump ansys/actions from 10.2.7 to 10.2.9 [#181](https://github.com/ansys/pymechanical-stubs/pull/181)
+- Update CHANGELOG for v0.1.10 [#183](https://github.com/ansys/pymechanical-stubs/pull/183)
+- Bump pytest-cov from 7.0.0 to 7.1.0 [#186](https://github.com/ansys/pymechanical-stubs/pull/186)
+- Bump ansys/actions from 10.2.9 to 10.2.10 [#188](https://github.com/ansys/pymechanical-stubs/pull/188)
+- Bump ansys/actions from 10.2.10 to 10.2.12 [#190](https://github.com/ansys/pymechanical-stubs/pull/190)
+- Bootstrap pip in gen-stubs Mechanical container before pip commands [#208](https://github.com/ansys/pymechanical-stubs/pull/208)
+
 ## [0.1.10](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.10) - March 19, 2026
 
 
