@@ -49,15 +49,11 @@ runs:
 
         print(os.getcwd())
 
-        print(f"Creating directory: ${{ inputs.package-path }}/_downloaded_artifacts")
-        os.makedirs(f"{os.getcwd()}/${{ inputs.package-path }}/_downloaded_artifacts", exist_ok=True)
-
     - name: Download the library artifacts
       uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
       with:
         pattern: ${{ inputs.folder-pattern }}
-        merge-multiple: false
-        path: ${{ inputs.package-path }}/_downloaded_artifacts
+        path: ${{ inputs.package-path }}
 
     - name: Rename folders
       shell: python
@@ -66,46 +62,19 @@ runs:
         import shutil
 
         base_path = "${{ inputs.package-path }}"
-        download_root = os.path.join(base_path, "_downloaded_artifacts")
         py_suffix = "-${{ inputs.python-version }}"
-        mechanical_revn = "${{ inputs.mechanical-revn }}"
 
-        if not os.path.isdir(download_root):
-            raise RuntimeError(f"Expected download directory does not exist: {download_root}")
-
-        def merge_directory(src: str, dst: str) -> None:
-            os.makedirs(dst, exist_ok=True)
-            for child in os.listdir(src):
-                child_src = os.path.join(src, child)
-                child_dst = os.path.join(dst, child)
-                if os.path.isdir(child_src):
-                    shutil.copytree(child_src, child_dst, dirs_exist_ok=True)
+        for entry in os.listdir(base_path):
+            if py_suffix in entry:
+                original = os.path.join(base_path, entry)
+                if not os.path.isdir(original):
+                    continue
+                renamed = os.path.join(base_path, entry.replace(py_suffix, ""))
+                if os.path.exists(renamed):
+                    shutil.copytree(original, renamed, dirs_exist_ok=True)
+                    shutil.rmtree(original)
                 else:
-                    shutil.copy2(child_src, child_dst)
-
-        entries = [e for e in os.listdir(download_root) if os.path.isdir(os.path.join(download_root, e))]
-        version_artifact_dirs = [e for e in entries if py_suffix in e and e.startswith("v")]
-
-        for artifact_dir in version_artifact_dirs:
-            source = os.path.join(download_root, artifact_dir)
-            version_name = artifact_dir.replace(py_suffix, "")
-            destination = os.path.join(base_path, version_name)
-            merge_directory(source, destination)
-
-        if not version_artifact_dirs:
-            # Some download-artifact layouts place files directly in the target path
-            # when a single artifact is matched. In that case, require mechanical_revn
-            # so content can be moved to a deterministic version folder.
-            if not mechanical_revn:
-                raise RuntimeError(
-                    "No versioned artifact directories were found and 'mechanical-revn' was not provided. "
-                    "Cannot infer destination version folder safely."
-                )
-
-            destination = os.path.join(base_path, mechanical_revn)
-            merge_directory(download_root, destination)
-
-        shutil.rmtree(download_root)
+                    os.rename(original, renamed)
 
         mechanical_versions = ["242", "251", "252", "261"]
         for version in mechanical_versions:
@@ -121,6 +90,9 @@ runs:
       shell: bash
       run: |
         revn_folder="${{ inputs.package-path }}/${{ inputs.mechanical-revn }}"
+
+        ls -lR $revn_folder
+
         if [ "$(find "$revn_folder" -mindepth 1 -print -quit)" ]; then
           echo "$revn_folder is not empty."
         else
