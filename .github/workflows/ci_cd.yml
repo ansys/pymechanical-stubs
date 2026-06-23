@@ -2,6 +2,8 @@ name: GitHub CI
 on:
   pull_request:
     types: [opened, reopened, synchronize, edited, closed]
+  schedule:
+    - cron: '0 0 * * *' # every night at midnight UTC
   workflow_dispatch:
     inputs:
       mechanical-version:
@@ -109,16 +111,21 @@ jobs:
           echo "image=$mech_image_version" >> $GITHUB_OUTPUT
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
-          if [[ -z "${{ inputs.python-version }}" ]]; then
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
             python_version="['3.10', '3.11', '3.12', '3.13']"
             stubs_python_version="['3.11', '3.12', '3.13']"
           else
-            if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
-              python_version="['3.10', '3.11', '3.12', '3.13']"
-              stubs_python_version="['3.11', '3.12', '3.13']"
+            if [[ -z "${{ inputs.python-version }}" ]]; then
+              python_version="['${{ env.MAIN_PYTHON_VERSION }}']"
+              stubs_python_version="['${{ env.MAIN_PYTHON_VERSION }}']"
             else
-              python_version="['${{ inputs.python-version }}']"
-              stubs_python_version="['${{ inputs.python-version }}']"
+              if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
+                python_version="['3.10', '3.11', '3.12', '3.13']"
+                stubs_python_version="['3.11', '3.12', '3.13']"
+              else
+                python_version="['${{ inputs.python-version }}']"
+                stubs_python_version="['${{ inputs.python-version }}']"
+              fi
             fi
           fi
 
@@ -400,6 +407,27 @@ jobs:
         name: documentation-html-v${{ matrix.mechanical-revn }}
         path: doc/_build/html
         retention-days: 7
+
+    - name: Validate Pages artifact (no symlinks, size check)
+      if: matrix.python-version == env.MAIN_PYTHON_VERSION
+      run: |
+        DOCS_DIR=doc/_build/html
+
+        echo "Checking for symlinks..."
+        if find "$DOCS_DIR" -type l | grep -q .; then
+          echo "❌ Symlinks found in Pages artifact:"
+          find "$DOCS_DIR" -type l
+          exit 1
+        fi
+
+        echo "Checking artifact size..."
+        SIZE_BYTES=$(du -sb "$DOCS_DIR" | cut -f1)
+        MAX_BYTES=$((10 * 1024 * 1024 * 1024))
+        echo "Artifact size: $SIZE_BYTES bytes"
+        if [ "$SIZE_BYTES" -ge "$MAX_BYTES" ]; then
+          echo "❌ Artifact exceeds 10GB limit"
+          exit 1
+        fi
 
     - name: "Generate Markdown documentation"
       if: steps.cache-docs.outputs.cache-hit != 'true'
