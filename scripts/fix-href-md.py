@@ -39,9 +39,9 @@ def fix_hrefs(api_dir):
                 # The full path to the html file
                 full_file_path = Path(root) / Path(file)
 
-                # | [`DataType`](../../../../v241/Ansys/Mechanical/Interfaces/IReadOnlyDataSeries.md#IReadOnlyDataSeries.DataType)
+                # | [`DataType`](../../../../v242/Ansys/Mechanical/Interfaces/IReadOnlyDataSeries.md#IReadOnlyDataSeries.DataType)
                 link_regex = r"\| \[\`.*\`\]\(\.\.\/.*\)"
-                # #### *class* ansys.mechanical.stubs.v241.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings
+                # #### *class* ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings
                 class_regex = r"\#\#\#\# \*class\* ansys\.mechanical\.stubs\.v[0-9][0-9][0-9]\."
 
                 for line in fileinput.input(full_file_path, inplace=True, encoding="utf-8"):

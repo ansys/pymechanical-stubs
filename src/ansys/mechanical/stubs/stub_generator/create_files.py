@@ -68,29 +68,21 @@ def resolve():
     clr.AddReference("Ansys.Mechanical.Embedding")
 
     if version >= 261:
+        os_string = "Win64" if os.name == "nt" else "Linux64"
+
         # Add path for Ans.Core
-        ans_core_path = str(
-            Path(install_dir, "Framework", "bin", "Linux64" if os.name != "nt" else "winx64")
-        )
+        ans_core_path = str(Path(install_dir, "Framework", "bin", os_string))
         sys.path.append(ans_core_path)
         clr.AddReference("Ans.Core")
 
         # Add path for Ansys.ACT.Interfaces
-        act_interfaces_path = str(
-            Path(install_dir, "Addins", "ACT", "bin", "Linux64" if os.name != "nt" else "winx64")
-        )
+        act_interfaces_path = str(Path(install_dir, "Addins", "ACT", "bin", os_string))
         sys.path.append(act_interfaces_path)
         clr.AddReference("Ansys.ACT.Interfaces")
 
-        # Add path for Ans.EngineeringData (Addins/EngineeringData/bin/Linux64)
+        # Add path for Ans.EngineeringData (Addins/EngineeringData/bin/Win64)
         ans_engineering_data_path = str(
-            Path(
-                install_dir,
-                "Addins",
-                "EngineeringData",
-                "bin",
-                "Linux64" if os.name != "nt" else "winx64",
-            )
+            Path(install_dir, "Addins", "EngineeringData", "bin", os_string)
         )
         sys.path.append(ans_engineering_data_path)
         clr.AddReference("Ans.EngineeringData")
@@ -172,7 +164,7 @@ def make(base_dir, outdir, assemblies, str_version):
     path = outdir / "Ansys"
     path_init = path / "__init__.py"
 
-    # Make src/ansys/mechanical/stubs/v241/Ansys/__init__.py
+    # Make src/ansys/mechanical/stubs/v<version>/Ansys/__init__.py
     with path_init.open("w") as f:
         f.write('"""Ansys module."""\n')
         for directory in path.iterdir():
@@ -201,7 +193,7 @@ def make(base_dir, outdir, assemblies, str_version):
                 ]
 
                 # Create list of import statements for each submodule. For example,
-                # "import ansys.mechanical.stubs.v241.Ansys.ACT.Common as Common"
+                # "import ansys.mechanical.stubs.v<version>.Ansys.ACT.Common as Common"
                 # in Ansys/ACT/__init__.py
                 import_statements = []
                 for module in module_list:
