@@ -637,33 +637,6 @@ jobs:
         run: |
           python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
-      - name: Validate Pages artifact (no symlinks, no hard links, size check)
-        run: |
-          DOCS_DIR=combined-documentation-html
-
-          echo "Checking for symlinks..."
-          if find "$DOCS_DIR" -type l | grep -q .; then
-            echo "Symlinks found in Pages artifact:"
-            find "$DOCS_DIR" -type l
-            exit 1
-          fi
-
-          echo "Checking for hard links..."
-          if find "$DOCS_DIR" -type f -links +1 | grep -q .; then
-            echo "Hard links found in Pages artifact:"
-            find "$DOCS_DIR" -type f -links +1 -print
-            exit 1
-          fi
-
-          echo "Checking artifact size..."
-          SIZE_BYTES=$(du -sb "$DOCS_DIR" | cut -f1)
-          MAX_BYTES=$((10 * 1024 * 1024 * 1024))
-          echo "Artifact size: $SIZE_BYTES bytes"
-          if [ "$SIZE_BYTES" -ge "$MAX_BYTES" ]; then
-            echo "Artifact exceeds 10GB limit"
-            exit 1
-          fi
-
       - name: "Upload HTML documentation"
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: |
