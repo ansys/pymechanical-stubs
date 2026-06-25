@@ -2,6 +2,8 @@ name: GitHub CI
 on:
   pull_request:
     types: [opened, reopened, synchronize, edited, closed]
+  schedule:
+    - cron: '0 0 * * *' # every night at midnight UTC
   workflow_dispatch:
     inputs:
       mechanical-version:
@@ -109,16 +111,21 @@ jobs:
           echo "image=$mech_image_version" >> $GITHUB_OUTPUT
           echo "version=$mech_version" >> $GITHUB_OUTPUT
 
-          if [[ -z "${{ inputs.python-version }}" ]]; then
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
             python_version="['3.10', '3.11', '3.12', '3.13']"
             stubs_python_version="['3.11', '3.12', '3.13']"
           else
-            if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
-              python_version="['3.10', '3.11', '3.12', '3.13']"
-              stubs_python_version="['3.11', '3.12', '3.13']"
+            if [[ -z "${{ inputs.python-version }}" ]]; then
+              python_version="['${{ env.MAIN_PYTHON_VERSION }}']"
+              stubs_python_version="['${{ env.MAIN_PYTHON_VERSION }}']"
             else
-              python_version="['${{ inputs.python-version }}']"
-              stubs_python_version="['${{ inputs.python-version }}']"
+              if [[ "${{ inputs.python-version }}" == "All of the above" ]]; then
+                python_version="['3.10', '3.11', '3.12', '3.13']"
+                stubs_python_version="['3.11', '3.12', '3.13']"
+              else
+                python_version="['${{ inputs.python-version }}']"
+                stubs_python_version="['${{ inputs.python-version }}']"
+              fi
             fi
           fi
 
@@ -298,9 +305,9 @@ jobs:
     - name: "Download stubs"
       uses: ./.github/workflows/setup-stubs/
       with:
-        folder-pattern: "v[0-9][0-9][0-9]-${{ matrix.python-version }}"
+        folder-pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
         package-path: "${{ env.PACKAGE_PATH }}"
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
     - name: "Build a wheelhouse of the Python library"
       uses: ansys/actions/build-wheelhouse@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
@@ -654,7 +661,7 @@ jobs:
     name: "Deploy PR documentation"
     runs-on: public-ubuntu-latest-16-cores
     needs: [clean-docs]
-    if: always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
+    if: github.event_name == 'pull_request' && always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
     steps:
       - uses: ansys/actions/doc-deploy-pr@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
         with:
@@ -662,7 +669,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
           bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
-          maximum-pr-doc-deployments: 50
+          maximum-pr-doc-deployments: 5
 
       - name: "Install Git and clone project"
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
