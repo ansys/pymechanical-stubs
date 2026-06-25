@@ -9,4 +9,5 @@ pythonnet's
 namespaces
 sublicense
 subpackages
+Synopsys
 toctree
