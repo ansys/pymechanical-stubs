@@ -31,8 +31,8 @@ build = [
     "ansys-pythonnet==3.1.0rc8"
 ]
 doc = [
-    "ansys-tools-common==0.5.0",
-    "ansys-sphinx-theme[autoapi]==1.8.1",
+    "ansys-sphinx-theme[autoapi]==1.8.2",
+    "ansys-tools-common==0.5.1",
     "sphinx-copybutton==0.5.2",
     "sphinx-notfound-page==1.1.0",
     "autodoc_pydantic==2.2.0",
@@ -45,7 +45,7 @@ doc = [
     "sphinxnotes-strike==1.2.1",
 ]
 tests = [
-    "pytest==9.1.0",
+    "pytest==9.1.1",
     "pytest-cov==7.1.0",
 ]
 
