@@ -6,6 +6,28 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.12](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.12) - June 25, 2026
+
+
+### Fixed
+
+- Gh-pages fix [#230](https://github.com/ansys/pymechanical-stubs/pull/230)
+
+
+### Dependencies
+
+- Bump ansys-sphinx-theme from 1.8.1 to 1.8.2 [#215](https://github.com/ansys/pymechanical-stubs/pull/215)
+- Bump actions/checkout from 6.0.3 to 7.0.0 [#223](https://github.com/ansys/pymechanical-stubs/pull/223)
+- Bump ansys-tools-common from 0.5.0 to 0.5.1 [#224](https://github.com/ansys/pymechanical-stubs/pull/224)
+- Bump pytest from 9.1.0 to 9.1.1 [#226](https://github.com/ansys/pymechanical-stubs/pull/226)
+- Bump actions/cache from 5.0.5 to 6.0.0 [#229](https://github.com/ansys/pymechanical-stubs/pull/229)
+
+
+### Maintenance
+
+- Update CHANGELOG for v0.1.11 [#222](https://github.com/ansys/pymechanical-stubs/pull/222)
+- Pre-commit automatic update [#228](https://github.com/ansys/pymechanical-stubs/pull/228)
+
 ## [0.1.11](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.11) - June 17, 2026
 
 
