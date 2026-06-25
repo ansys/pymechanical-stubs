@@ -51,6 +51,8 @@ C_TO_PYTHON = {
     "System.DateTime": "typing.Any",
     "System.Double": "float",
     "System.Int32": "int",
+    "System.IFormatProvider": "typing.Any",
+    "System.MidpointRounding": "typing.Optional[float]",
     "System.Object": "typing.Any",
     "System.String": "str",
     "System.Tuple": "tuple",
@@ -212,6 +214,11 @@ class DocMember:
             summary_text = summary.text
             # Get text from tags in the summary text if necessary
             for tags in summary:
+                # Covers T:Ansys.Core.Units.Quantity summary containing "para" tags
+                if tags.tag == "para":
+                    summary_text += tags.text
+                    if tags.tail is not None:
+                        summary_text += tags.tail
                 if "paramref" in tags.tag:
                     # Get the text of the member's (self._element's) parameter
                     param_text = self._element.find("param").text
@@ -850,7 +857,13 @@ def write_module(
         outdir = outdir / token
     logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
-    class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
+    # See https://learn.microsoft.com/en-us/dotnet/api/system.type.isclass?view=net-9.0 for more
+    # information about Properties like IsClass, IsAnsiClass, and IsInterface
+    class_types = [
+        mod_type
+        for mod_type in mod_types
+        if mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface
+    ]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
     with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
@@ -904,6 +917,15 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
         logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
+    elif "Ans.Core" in assembly.GetName().Name:
+        xml_path = f"{directory}/../../../AnsysEM/common/Framework/bin/Win64/Ans.Core.xml"
+        logging.info(f"Loading xml doc from {xml_path}")
+        doc = load_doc(xml_path)
+        new_doc = {"T:Ansys.Core.Units.Quantity": doc["T:Ansys.Core.Units.Quantity"]}
+        for key, value in doc.items():
+            if "Ansys.Core.Units.Quantity." in key:
+                new_doc[key] = value
+        return new_doc
     else:
         logging.warning("XML Doc file does not exist, skipping")
         return None
@@ -953,7 +975,12 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     if assembly_name == "Ans.Core":
         namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
     elif assembly_name == "Ansys.ACT.Interfaces":
-        namespaces = {"Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"]}
+        namespaces = {
+            "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
+            "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
+        }
+    elif assembly_name == "Ansys.ACT.Core":
+        namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
 
     dump_types(namespaces)
     doc = get_doc(assembly)

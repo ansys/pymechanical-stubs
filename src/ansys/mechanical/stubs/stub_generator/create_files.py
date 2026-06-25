@@ -281,6 +281,7 @@ def main():
     assemblies = [
         "Ansys.Mechanical.DataModel",
         "Ansys.Mechanical.Interfaces",
+        "Ansys.ACT.Core",
         "Ansys.ACT.Interfaces",
         "Ansys.ACT.WB1",
         "Ans.Core",
