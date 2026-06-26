@@ -739,49 +739,168 @@ jobs:
           library-name: ${{ env.PACKAGE_NAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-  doc-deploy-dev:
-    name: "Deploy development documentation"
-    if: github.ref == 'refs/heads/main'
+  doc-deploy:
+    name: "Deploy documentation"
     runs-on: public-ubuntu-latest-16-cores
-    needs: [clean-docs]
+    if: |
+      github.event_name == 'push' && (
+        github.ref == 'refs/heads/main' ||
+        startsWith(github.ref, 'refs/tags/')
+      )
+    needs:
+      - clean-docs
     steps:
-      - name: "Deploy development documentation"
-        uses: ansys/actions/doc-deploy-dev@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
-        with:
-          cname: ${{ env.DOCUMENTATION_CNAME }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
-
       - name: "Install Git and clone project"
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
-      - name: "Update gh-pages versions.json"
-        uses: ./.github/workflows/update-gh-pages/
+      - name: "Download HTML documentation"
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          name: documentation-html
+          path: documentation-html
 
-
-  doc-deploy-stable:
-    name: "Deploy stable documentation"
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-    runs-on: public-ubuntu-latest-16-cores
-    needs: release
-    steps:
-      - name: "Deploy stable documentation"
-        uses: ansys/actions/doc-deploy-stable@d946b24b9a765f4169bcc94afdb27bd1a0533741 # v10.3.2
+      - name: "Download Markdown documentation"
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          cname: ${{ env.DOCUMENTATION_CNAME }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          name: documentation-md
+          path: documentation-md
 
-      - name: "Install Git and clone project"
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-
-      - name: "Update gh-pages versions.json"
-        uses: ./.github/workflows/update-gh-pages/
+      - name: "Download PDF documentation"
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
-          bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
+          name: documentation-pdf
+          path: documentation-pdf
+
+      - name: "Download toc.yml"
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: toc-file
+          path: toc-file
+
+      - name: "Determine deploy type"
+        id: deploy-type
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "type=dev" >> $GITHUB_OUTPUT
+            echo "deploy_target=dev" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == refs/tags/* ]]; then
+            echo "type=stable" >> $GITHUB_OUTPUT
+            echo "deploy_target=stable" >> $GITHUB_OUTPUT
+          else
+            echo "type=unknown" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: "Set up Git config"
+        run: |
+          git config user.name "${{ secrets.PYANSYS_CI_BOT_USERNAME }}"
+          git config user.email "${{ secrets.PYANSYS_CI_BOT_EMAIL }}"
+
+      - name: "Deploy documentation to gh-pages"
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+
+          DEPLOY_TYPE="${{ steps.deploy-type.outputs.type }}"
+          DEPLOY_TARGET="${{ steps.deploy-type.outputs.deploy_target }}"
+          DEPLOY_DIR="version/${DEPLOY_TARGET}"
+
+          echo "Deploying ${DEPLOY_TYPE} documentation to ${DEPLOY_DIR}"
+
+          # Create deploy directory if it doesn't exist
+          mkdir -p "$DEPLOY_DIR"
+
+          # Copy HTML documentation
+          if [ -d "documentation-html" ]; then
+            cp -r documentation-html/* "$DEPLOY_DIR/" || true
+          fi
+
+          # Copy Markdown documentation
+          if [ -d "documentation-md" ]; then
+            mkdir -p "${DEPLOY_DIR}_md"
+            cp -r documentation-md/* "${DEPLOY_DIR}_md/" || true
+          fi
+
+          # Copy toc.yml if available
+          if [ -f "toc-file/toc.yml" ]; then
+            mkdir -p toc_files
+            cp toc-file/toc.yml "toc_files/${DEPLOY_TARGET}-toc.yml"
+          fi
+
+          git add version/
+          git diff --cached --quiet || git commit -m "Deploy ${DEPLOY_TYPE} documentation [skip ci]"
+          git push origin gh-pages
+
+      - name: "Check if versions.json has changed"
+        id: check-versions
+        run: |
+          git fetch origin main || true
+          git show origin/main:doc/versions.json > /tmp/main-versions.json 2>/dev/null || echo "{}" > /tmp/main-versions.json
+          git checkout main
+          if [ -f "doc/versions.json" ]; then
+            if diff -q doc/versions.json /tmp/main-versions.json > /dev/null 2>&1; then
+              echo "versions_changed=false" >> $GITHUB_OUTPUT
+              echo "versions.json is unchanged, skipping update."
+            else
+              echo "versions_changed=true" >> $GITHUB_OUTPUT
+              echo "versions.json has changed, update required."
+            fi
+          fi
+
+      - name: "Update versions.json file"
+        if: steps.check-versions.outputs.versions_changed == 'true'
+        run: |
+          cp doc/versions.json /tmp/versions.json
+          git checkout gh-pages
+          cp /tmp/versions.json versions.json
+          git add versions.json
+          git commit -m "Update versions.json [skip ci]"
+          git push origin gh-pages
+          git checkout main
+
+      - name: "Move content of stable folder to version folder"
+        if: steps.deploy-type.outputs.type == 'stable'
+        run: |
+          git checkout gh-pages
+          if [ -d "version/0.1" ] && [ -d "version/dev" ]; then
+            rm -rf version/0.1/ version/dev/
+            rm -f index.html
+            cp -rf version/stable/* version/
+            rm -rf version/stable/
+            echo "Version directory structure reorganized."
+            git add .
+            git commit -m "Reorganize version directory structure [skip ci]"
+            git push origin gh-pages
+          else
+            echo "version/0.1 or version/dev not found, skipping reorganization."
+          fi
+
+      - name: "Create root index.html redirect"
+        run: |
+          git checkout gh-pages
+          # Find the highest v### version folder that actually exists on gh-pages
+          LATEST_VERSION=$(find version/api/ansys/mechanical/stubs -maxdepth 1 -type d -name "v[0-9][0-9][0-9]" 2>/dev/null | sort | tail -1 | xargs -r basename | sed 's/^v//')
+          if [ -z "$LATEST_VERSION" ]; then
+            echo "No deployed version folders found under version/api/ansys/mechanical/stubs, skipping index.html update."
+            exit 0
+          fi
+          echo "Latest deployed version: $LATEST_VERSION"
+          REDIRECT_URL="version/api/ansys/mechanical/stubs/v${LATEST_VERSION}/index.html"
+          cat > index.html <<EOF
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8" />
+              <meta http-equiv="refresh" content="0; url=${REDIRECT_URL}" />
+              <title>PyMechanical Stubs</title>
+              <script>window.location.replace("${REDIRECT_URL}");</script>
+            </head>
+            <body>
+              <p>Redirecting to the latest API version. If not redirected, <a href="${REDIRECT_URL}">click here</a>.</p>
+            </body>
+          </html>
+          EOF
+          git add index.html
+          git diff --cached --quiet || git commit -m "Update root index.html redirect to v${LATEST_VERSION} [skip ci]"
+          git push origin gh-pages
+          git checkout -
