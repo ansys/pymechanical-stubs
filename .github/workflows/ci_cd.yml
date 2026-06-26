@@ -193,7 +193,6 @@ jobs:
           json="${json}}"
           echo "digests=${json}" >> $GITHUB_OUTPUT
 
-
   gen-stubs:
     name: Generate Mechanical stubs
     needs: [style, doc-style, config-matrix, get-image-digests]
@@ -318,7 +317,7 @@ jobs:
         checkout: false
 
   doc-build:
-    name: Make html and markdown documentation
+    name: Make html documentation
     if: github.event.action != 'closed'
     needs: [set-mechanical-versions, gen-stubs, smoke-tests, config-matrix]
     runs-on: public-ubuntu-latest-16-cores
@@ -408,19 +407,6 @@ jobs:
         path: doc/_build/html
         retention-days: 7
 
-    - name: "Generate Markdown documentation"
-      if: steps.cache-docs.outputs.cache-hit != 'true'
-      run: |
-        make -C doc markdown
-
-    - name: "Upload version markdown documentation"
-      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-      if: matrix.python-version == env.MAIN_PYTHON_VERSION
-      with:
-        name: documentation-md-v${{ matrix.mechanical-revn }}
-        path: doc/_build/markdown
-        retention-days: 7
-
   combine-docs:
     name: Combine documentation
     runs-on: public-ubuntu-latest-16-cores
@@ -437,27 +423,20 @@ jobs:
         with:
           pattern: documentation-html-v*
 
-      - name: "Download all Markdown documentation"
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          pattern: documentation-md-v*
-
       - name: "Compute artifact hash for cache key"
         id: artifact-hash
         run: |
-          hash=$(find documentation-html-v* documentation-md-v* -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
+          hash=$(find documentation-html-v* -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
           echo "hash=${hash}" >> $GITHUB_OUTPUT
 
       - name: "Restore combined docs cache"
         id: cache-combined
         uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
         with:
-          path: |
-            documentation-html
-            documentation-md
+          path: documentation-html
           key: combined-docs-${{ steps.artifact-hash.outputs.hash }}
 
-      - name: "Combine HTML and Markdown documentation"
+      - name: "Combine HTML documentation"
         if: steps.cache-combined.outputs.cache-hit != 'true'
         run: |
           combine_documentation() {
@@ -480,7 +459,6 @@ jobs:
           }
 
           combine_documentation "documentation-html"
-          combine_documentation "documentation-md"
 
           # Regenerate index.html redirect after combining, pointing to the
           # highest (latest) v*** version present in the combined output.
@@ -498,16 +476,6 @@ jobs:
         with:
           name: combined-documentation-html
           path: documentation-html
-          retention-days: 7
-
-      - name: "Upload Markdown documentation"
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: |
-          github.event_name == 'workflow_dispatch' ||
-          matrix.python-version == env.MAIN_PYTHON_VERSION
-        with:
-          name: combined-documentation-md
-          path: documentation-md
           retention-days: 7
 
       - name: "Create fake PDF"
@@ -529,7 +497,7 @@ jobs:
           retention-days: 7
 
   clean-docs:
-    name: Clean HTML and Markdown documentation
+    name: Clean HTML documentation
     runs-on: public-ubuntu-latest-16-cores
     needs: [combine-docs, config-matrix]
     strategy:
@@ -551,7 +519,6 @@ jobs:
         run: |
           python -m pip install -e .[doc]
           mkdir combined-documentation-html
-          mkdir combined-documentation-md
 
       - name: "Download all HTML documentation"
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
@@ -559,16 +526,10 @@ jobs:
           pattern: combined-documentation-html
           path: combined-documentation-html
 
-      - name: "Download all Markdown documentation"
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          pattern: combined-documentation-md
-          path: combined-documentation-md
-
       - name: "Compute artifact hash for cache key"
         id: artifact-hash
         run: |
-          hash=$(find combined-documentation-html combined-documentation-md -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
+          hash=$(find combined-documentation-html -type f 2>/dev/null | sort | xargs sha256sum | sha256sum | cut -c1-16)
           echo "hash=${hash}" >> $GITHUB_OUTPUT
 
       - name: "Restore cleaned docs cache"
@@ -577,65 +538,18 @@ jobs:
         with:
           path: |
             combined-documentation-html
-            combined-documentation-md
             output
           key: clean-docs-${{ steps.artifact-hash.outputs.hash }}-${{ hashFiles('scripts/**') }}
 
       - name: "Replace Windows apostrophes with single quotes"
         if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
-          python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api --markdown_api_folder combined-documentation-md/api
-
-      - name: "Markdown: Make all hrefs local"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        run: |
-          python scripts/fix-href-md.py --api_folder combined-documentation-md/api
+          python scripts/replace-windows-apostrophes.py --html_api_folder combined-documentation-html/api
 
       - name: "HTML: Make all hrefs local"
         if: steps.cache-cleaned.outputs.cache-hit != 'true'
         run: |
           python scripts/fix-href-html.py --api_folder combined-documentation-html/api
-
-      - name: "Markdown: Clean ID in first row"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        run: |
-          python scripts/01-clean-id.py --input_folder combined-documentation-md
-
-      - name: "Markdown: Clean empty rows"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        run: |
-          python scripts/02-clean-empty-row.py --input_folder combined-documentation-md
-
-      - name: "Create table of contents"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        run: |
-          python scripts/03-create-toc-from-html-mechanical.py --api_folder combined-documentation-html/api
-
-      - name: "Fix paths in toc.yml"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        shell: bash
-        run: |
-          # Remove doc/_build/html from paths in toc.yml file
-          sed -i -e 's;doc/_build/html/;;g' output/toc.yml
-
-      - name: "Upload toc.yml file"
-        if: |
-          github.event_name == 'workflow_dispatch' ||
-          matrix.python-version == env.MAIN_PYTHON_VERSION
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: toc-file
-          path: output/
-
-      - name: "Markdown: Add header to tables"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        run: |
-          python scripts/04-add-header-to-tables.py --input_folder combined-documentation-md
-
-      - name: "Markdown: Remove links in heading"
-        if: steps.cache-cleaned.outputs.cache-hit != 'true'
-        run: |
-          python scripts/05-remove-link-in-heading.py --input_folder combined-documentation-md
 
       - name: "Upload HTML documentation"
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -645,16 +559,6 @@ jobs:
         with:
           name: documentation-html
           path: combined-documentation-html
-          retention-days: 7
-
-      - name: "Upload Markdown documentation"
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: |
-          github.event_name == 'workflow_dispatch' ||
-          matrix.python-version == env.MAIN_PYTHON_VERSION
-        with:
-          name: documentation-md
-          path: combined-documentation-md
           retention-days: 7
 
   doc-deploy-pr:
