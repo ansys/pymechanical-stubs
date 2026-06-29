@@ -77,7 +77,7 @@ def main():
     if full_markdown_api_dir.exists():
         replace_windows_apostrophes(full_markdown_api_dir)
     else:
-        raise NotADirectoryError(f"{full_markdown_api_dir} is not a valid directory.")
+        print(f"{full_markdown_api_dir} is not a valid directory. Skipping markdown.")
 
 
 if __name__ == "__main__":
