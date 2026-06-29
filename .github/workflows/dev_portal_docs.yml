@@ -88,8 +88,8 @@ jobs:
           echo "mechanical_matrix=$mechanical_matrix" >> $GITHUB_OUTPUT
           echo "version_list=$version_list" >> $GITHUB_OUTPUT
 
-          python_version='["${{ inputs.python-version }}"]'
-          stubs_python_version='["${{ inputs.python-version }}"]'
+          python_version="['${{ inputs.python-version }}']"
+          stubs_python_version="['${{ inputs.python-version }}']"
 
           echo "python_version=$python_version" >> $GITHUB_OUTPUT
           echo "stubs_python_version=$stubs_python_version" >> $GITHUB_OUTPUT
