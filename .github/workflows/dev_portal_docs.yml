@@ -47,52 +47,40 @@ jobs:
     steps:
       - id: save-versions
         run: |
-          mech_versions=$(echo "${{ inputs.mechanical-version }}" | tr -d '[:space:]')
-          if [[ -z "$mech_versions" ]]; then
-            echo "mechanical-version input must not be empty."
-            exit 1
-          fi
+          python - <<'PY'
+          import json
+          import os
+          import sys
 
-          IFS=',' read -r -a requested_versions <<< "$mech_versions"
+          mech_versions_raw = "${{ inputs.mechanical-version }}"
+          mech_versions = [v.strip() for v in mech_versions_raw.split(",") if v.strip()]
+          if not mech_versions:
+              print("mechanical-version input must not be empty.")
+              sys.exit(1)
 
-          mechanical_matrix="["
-          version_list="["
-          first=true
+          image_map = {
+              "242": "24.2.0",
+              "251": "25.1.0",
+              "252": "25.2.0",
+              "261": "26.1.0",
+          }
 
-          for mech_version in "${requested_versions[@]}"; do
-            case "$mech_version" in
-              242) mech_image_version="24.2.0" ;;
-              251) mech_image_version="25.1.0" ;;
-              252) mech_image_version="25.2.0" ;;
-              261) mech_image_version="26.1.0" ;;
-              *)
-                echo "Unsupported Mechanical version: $mech_version"
-                exit 1
-                ;;
-            esac
+          invalid = [v for v in mech_versions if v not in image_map]
+          if invalid:
+              print(f"Unsupported Mechanical version(s): {', '.join(invalid)}")
+              sys.exit(1)
 
-            if $first; then
-              first=false
-            else
-              mechanical_matrix="${mechanical_matrix},"
-              version_list="${version_list},"
-            fi
+          mechanical_matrix = [{"image": image_map[v], "version": v} for v in mech_versions]
+          version_list = mech_versions
+          python_version = ["${{ inputs.python-version }}"]
+          stubs_python_version = ["${{ inputs.python-version }}"]
 
-            mechanical_matrix="${mechanical_matrix}{\"image\":\"${mech_image_version}\",\"version\":\"${mech_version}\"}"
-            version_list="${version_list}\"${mech_version}\""
-          done
-
-          mechanical_matrix="${mechanical_matrix}]"
-          version_list="${version_list}]"
-
-          echo "mechanical_matrix=$mechanical_matrix" >> $GITHUB_OUTPUT
-          echo "version_list=$version_list" >> $GITHUB_OUTPUT
-
-          python_version='["${{ inputs.python-version }}"]'
-          stubs_python_version='["${{ inputs.python-version }}"]'
-
-          echo "python_version=$python_version" >> $GITHUB_OUTPUT
-          echo "stubs_python_version=$stubs_python_version" >> $GITHUB_OUTPUT
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"mechanical_matrix={json.dumps(mechanical_matrix)}\\n")
+              f.write(f"version_list={json.dumps(version_list)}\\n")
+              f.write(f"python_version={json.dumps(python_version)}\\n")
+              f.write(f"stubs_python_version={json.dumps(stubs_python_version)}\\n")
+          PY
 
   config-matrix:
     runs-on: ubuntu-latest
@@ -103,10 +91,29 @@ jobs:
     steps:
       - id: set-matrix
         run: |
-          echo "stubs_matrix<<DELIMITER" >> ${GITHUB_OUTPUT}
-          echo "{\"mechanical\":${{ needs.set-mechanical-versions.outputs.mechanical-matrix }},\"python-version\":${{ needs.set-mechanical-versions.outputs.stubs-python-version }}}" >> ${GITHUB_OUTPUT}
-          echo "DELIMITER" >> ${GITHUB_OUTPUT}
-          echo "doc_build_matrix={\"mechanical-revn\":${{ needs.set-mechanical-versions.outputs.version-list }},\"python-version\":[\"${{ env.MAIN_PYTHON_VERSION }}\"]}" >> $GITHUB_OUTPUT
+          python - <<'PY'
+          import json
+          import os
+
+          mechanical = json.loads('${{ needs.set-mechanical-versions.outputs.mechanical-matrix }}')
+          stubs_python = json.loads('${{ needs.set-mechanical-versions.outputs.stubs-python-version }}')
+          versions = json.loads('${{ needs.set-mechanical-versions.outputs.version-list }}')
+
+          stubs_matrix = {
+              "mechanical": mechanical,
+              "python-version": stubs_python,
+          }
+          doc_build_matrix = {
+              "mechanical-revn": versions,
+              "python-version": ["${{ env.MAIN_PYTHON_VERSION }}"],
+          }
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write("stubs_matrix<<DELIMITER\\n")
+              f.write(json.dumps(stubs_matrix) + "\\n")
+              f.write("DELIMITER\\n")
+              f.write(f"doc_build_matrix={json.dumps(doc_build_matrix)}\\n")
+          PY
 
   get-image-digests:
     name: Get Mechanical image digests
