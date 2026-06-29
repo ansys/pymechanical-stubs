@@ -135,7 +135,7 @@ jobs:
               | sha256sum | cut -c1-16 || echo "${img}")
             echo "  ghcr.io/ansys/mechanical:${img} -> ${digest}"
             if $first; then first=false; else json="${json},"; fi
-            json="${json}\"${img}\":\"${digest}\""
+            json="${json}\'${img}\':\'${digest}\'"
           done
           json="${json}}"
           echo "digests=${json}" >> $GITHUB_OUTPUT
