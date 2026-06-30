@@ -3,14 +3,62 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    assignees:
+      - "pyansys-ci-bot"
+    commit-message:
+      prefix: "CHORE"
     labels:
       - "maintenance"
       - "dependencies"
+      - "dependabot"
+    groups:
+      build:
+        patterns:
+          - "ansys-pythonnet"
+        update-types:
+          - "minor"
+          - "patch"
+      doc:
+        patterns:
+          - "*sphinx*"
+          - "*sphinxcontrib*"
+          - "*sphinxnotes*"
+          - "ansys-sphinx-theme"
+          - "ansys-tools-common"
+          - "autodoc_pydantic"
+          - "jupyter_sphinx"
+          - "numpydoc"
+        update-types:
+          - "minor"
+          - "patch"
+      tests:
+        patterns:
+          - "pytest*"
+        update-types:
+          - "minor"
+          - "patch"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    assignees:
+      - "pyansys-ci-bot"
     labels:
       - "maintenance"
+      - "dependencies"
+      - "dependabot"
+    commit-message:
+      prefix: "CHORE"
+    groups:
+      actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    cooldown:
+      default-days: 7
