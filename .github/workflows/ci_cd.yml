@@ -216,7 +216,7 @@ jobs:
 
       - name: "Restore stubs cache"
         id: cache-stubs
-        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ env.PACKAGE_PATH }}/v${{ matrix.mechanical.version }}
           key: stubs-v${{ matrix.mechanical.version }}-py${{ matrix.python-version }}-${{ steps.image-digest.outputs.digest }}-${{ hashFiles('src/ansys/mechanical/stubs/stub_generator/**') }}
@@ -240,7 +240,7 @@ jobs:
 
       - name: "Cache pip packages"
         if: steps.cache-stubs.outputs.cache-hit != 'true'
-        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.cache/pip
           key: pip-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -342,7 +342,7 @@ jobs:
         echo "stubs-hash=${stubs_hash}" >> $GITHUB_OUTPUT
 
     - name: "Cache pip packages"
-      uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: ~/.cache/pip
         key: pip-doc-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -355,7 +355,7 @@ jobs:
 
     - name: "Restore documentation build cache"
       id: cache-docs
-      uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: doc/_build
         key: doc-build-v${{ matrix.mechanical-revn }}-py${{ matrix.python-version }}-${{ steps.doc-cache-key.outputs.stubs-hash }}-${{ hashFiles('doc/source/**', 'pyproject.toml') }}
@@ -431,7 +431,7 @@ jobs:
 
       - name: "Restore combined docs cache"
         id: cache-combined
-        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: documentation-html
           key: combined-docs-${{ steps.artifact-hash.outputs.hash }}
@@ -508,7 +508,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: "Cache pip packages"
-        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.cache/pip
           key: pip-clean-docs-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
@@ -534,7 +534,7 @@ jobs:
 
       - name: "Restore cleaned docs cache"
         id: cache-cleaned
-        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: |
             combined-documentation-html
