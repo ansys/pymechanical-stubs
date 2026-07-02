@@ -668,20 +668,6 @@ jobs:
           name: documentation-pdf
           path: documentation-pdf
 
-      # - name: "Determine deploy type"
-      #   id: deploy-type
-      #   run: |
-      #     if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-      #       echo "type=dev" >> $GITHUB_OUTPUT
-      #       echo "deploy_target=dev" >> $GITHUB_OUTPUT
-      #     elif [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == refs/tags/* ]]; then
-      #       echo "type=stable" >> $GITHUB_OUTPUT
-      #       echo "deploy_target=stable" >> $GITHUB_OUTPUT
-      #     else
-      #       echo "type=unknown" >> $GITHUB_OUTPUT
-      #       exit 1
-      #     fi
-
       - name: "Set up Git config"
         run: |
           git config user.name "${{ secrets.PYANSYS_CI_BOT_USERNAME }}"
