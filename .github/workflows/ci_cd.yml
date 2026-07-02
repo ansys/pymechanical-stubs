@@ -647,7 +647,6 @@ jobs:
     name: "Deploy documentation"
     runs-on: public-ubuntu-latest-16-cores
     if: |
-      github.event_name == 'pull_request' ||
       github.event_name == 'push' && (
         github.ref == 'refs/heads/main' ||
         startsWith(github.ref, 'refs/tags/')
@@ -737,23 +736,6 @@ jobs:
           git commit -m "Update versions.json [skip ci]"
           git push origin gh-pages
           git checkout main
-
-      # - name: "Move content of stable folder to version folder"
-      #   if: steps.deploy-type.outputs.type == 'stable'
-      #   run: |
-      #     git checkout gh-pages
-      #     if [ -d "version/0.1" ] && [ -d "version/dev" ]; then
-      #       rm -rf version/0.1/ version/dev/
-      #       rm -f index.html
-      #       cp -rf version/stable/* version/
-      #       rm -rf version/stable/
-      #       echo "Version directory structure reorganized."
-      #       git add .
-      #       git commit -m "Reorganize version directory structure [skip ci]"
-      #       git push origin gh-pages
-      #     else
-      #       echo "version/0.1 or version/dev not found, skipping reorganization."
-      #     fi
 
       - name: "Create root index.html redirect"
         run: |
