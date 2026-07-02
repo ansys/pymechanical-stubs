@@ -1,43 +1,43 @@
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
+
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
     assignees:
       - "pyansys-ci-bot"
     commit-message:
-      prefix: "CHORE"
+      prefix: "chore"
     labels:
       - "maintenance"
       - "dependencies"
-      - "dependabot"
     groups:
       build:
         patterns:
-          - "ansys-pythonnet"
-        update-types:
-          - "minor"
-          - "patch"
-      doc:
-        patterns:
+          - "*ansys*"
+        exclude-patterns:
           - "*sphinx*"
-          - "*sphinxcontrib*"
-          - "*sphinxnotes*"
-          - "ansys-sphinx-theme"
-          - "ansys-tools-common"
-          - "autodoc_pydantic"
-          - "jupyter_sphinx"
-          - "numpydoc"
         update-types:
-          - "minor"
-          - "patch"
+        - "minor"
+        - "patch"
       tests:
         patterns:
           - "pytest*"
+        exclude-patterns:
+          - "*sphinx*"
         update-types:
-          - "minor"
-          - "patch"
+        - "minor"
+        - "patch"
+      doc:
+        patterns:
+          - "*sphinx*"
+          - "ansys-tools-common"
+          - "autodoc_pydantic"
+          - "numpydoc"
+        update-types:
+        - "minor"
+        - "patch"
     cooldown:
       default-days: 7
 
@@ -50,14 +50,13 @@ updates:
     labels:
       - "maintenance"
       - "dependencies"
-      - "dependabot"
     commit-message:
-      prefix: "CHORE"
+      prefix: "chore"
     groups:
-      actions:
-        patterns:
-          - "*"
-        update-types:
+       actions:
+          patterns:
+            - "*"
+          update-types:
           - "minor"
           - "patch"
     cooldown:
