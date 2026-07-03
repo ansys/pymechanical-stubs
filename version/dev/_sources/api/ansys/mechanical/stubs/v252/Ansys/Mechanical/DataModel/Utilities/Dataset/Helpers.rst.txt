@@ -1,0 +1,95 @@
+.. vale off
+
+
+
+:class:`Helpers`
+================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Utilities.Dataset.Helpers
+
+   Bases: :py:obj:`object`
+
+
+   
+   A class that exposes helper methods/properties for a dataset object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+.. py:currentmodule:: Helpers
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetMaximumCutOffFrequency`
+            - Gets the maximum cutoff frequency limit of the dataset (useful for Filters like Butterworth and SAE).
+          * - :py:attr:`~Import`
+            - Imports dataset data from text a file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: GetMaximumCutOffFrequency(dataset: Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   Gets the maximum cutoff frequency limit of the dataset (useful for Filters like Butterworth and SAE).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Import(filename: str) -> Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D
+   :classmethod:
+
+
+.. code-block:: text
+
+   Imports dataset data from text a file.
+   The import autodetects the file format from the supported options of tab delimited or LSPrePost export format for import.
+   An InvalidOperationException is thrown if the import format in the input file is incompatible or if the data within the file is invalid.
+
+..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

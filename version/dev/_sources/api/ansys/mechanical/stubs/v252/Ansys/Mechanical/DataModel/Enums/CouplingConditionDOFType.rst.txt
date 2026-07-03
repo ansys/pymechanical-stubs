@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`CouplingConditionDOFType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.CouplingConditionDOFType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CouplingConditionDOFType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CouplingConditionDOFType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~Voltage`
+            - 
+          * - :py:attr:`~XDisplacement`
+            - 
+          * - :py:attr:`~XRotation`
+            - 
+          * - :py:attr:`~YDisplacement`
+            - 
+          * - :py:attr:`~YRotation`
+            - 
+          * - :py:attr:`~ZDisplacement`
+            - 
+          * - :py:attr:`~ZRotation`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Temperature
+   :value: 8
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+.. py:attribute:: Voltage
+   :value: 7
+
+
+.. py:attribute:: XDisplacement
+   :value: 1
+
+
+.. py:attribute:: XRotation
+   :value: 4
+
+
+.. py:attribute:: YDisplacement
+   :value: 2
+
+
+.. py:attribute:: YRotation
+   :value: 5
+
+
+.. py:attribute:: ZDisplacement
+   :value: 3
+
+
+.. py:attribute:: ZRotation
+   :value: 6
+
+
+
+
+
+
+.. vale on

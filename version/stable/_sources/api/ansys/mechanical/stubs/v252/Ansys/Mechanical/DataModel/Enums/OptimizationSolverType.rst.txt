@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`OptimizationSolverType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.OptimizationSolverType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the OptimizationSolverType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: OptimizationSolverType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~OptimalityCriteria`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~SequentialConvexProgramming`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: OptimalityCriteria
+   :value: 9
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: SequentialConvexProgramming
+   :value: 8
+
+
+
+
+
+
+.. vale on

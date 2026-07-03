@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Materials``
+=============================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Materials
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Materials
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.Materials.ImportSettings`
+            - 
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ImportSettings</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/Materials/ImportSettings>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Materials module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

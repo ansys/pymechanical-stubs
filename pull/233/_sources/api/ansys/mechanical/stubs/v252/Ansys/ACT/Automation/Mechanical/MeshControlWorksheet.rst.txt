@@ -1,0 +1,201 @@
+.. vale off
+
+
+
+:class:`MeshControlWorksheet`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshControlWorksheet
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MeshControlWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Add a row to the MeshControlWorksheet
+          * - :py:attr:`~ClearGenerateMesh`
+            - Clear Mesh
+          * - :py:attr:`~DeleteAllRows`
+            - Delete All Rows
+          * - :py:attr:`~DeleteRow`
+            - Delete a row from the MeshControlWorksheet
+          * - :py:attr:`~GenerateAtRow`
+            - Generate Mesh At Row
+          * - :py:attr:`~GenerateMesh`
+            - Geneate Mesh
+          * - :py:attr:`~GetActiveState`
+            - Gets the Active State property at row index
+          * - :py:attr:`~GetNamedSelection`
+            - Gets the NamedSelection at row index
+          * - :py:attr:`~GetNamedSelectionId`
+            - Gets the ID of the NamedSelection at row index
+          * - :py:attr:`~SetActiveState`
+            - Sets the Active State property at row index
+          * - :py:attr:`~SetNamedSelection`
+            - Sets the NamedSelection at row index
+          * - :py:attr:`~SetNamedSelectionId`
+            - Sets the NamedSelection by ID at row index
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Gets the number of entries
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of entries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> int
+
+   
+   Add a row to the MeshControlWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGenerateMesh() -> None
+
+   
+   Clear Mesh
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllRows() -> None
+
+   
+   Delete All Rows
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+   
+   Delete a row from the MeshControlWorksheet
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateAtRow(index: int) -> None
+
+   
+   Generate Mesh At Row
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateMesh() -> None
+
+   
+   Geneate Mesh
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetActiveState(index: int) -> bool
+
+   
+   Gets the Active State property at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNamedSelection(index: int) -> Ansys.ACT.Automation.Mechanical.NamedSelection
+
+   
+   Gets the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNamedSelectionId(index: int) -> int
+
+   
+   Gets the ID of the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetActiveState(index: int, value: bool) -> None
+
+   
+   Sets the Active State property at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetNamedSelection(index: int, value: Ansys.ACT.Automation.Mechanical.NamedSelection) -> None
+
+   
+   Sets the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetNamedSelectionId(index: int, value: int) -> None
+
+   
+   Sets the NamedSelection by ID at row index
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

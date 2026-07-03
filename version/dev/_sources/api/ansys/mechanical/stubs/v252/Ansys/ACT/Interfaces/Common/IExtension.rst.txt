@@ -1,0 +1,228 @@
+.. vale off
+
+
+
+:class:`IExtension`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IExtension
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines an extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IExtension
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Attributes`
+            - Gets the attributes of the extension.
+          * - :py:attr:`~InstallDir`
+            - Gets the folder where the extension is installed.
+          * - :py:attr:`~MinorVersion`
+            - Gets the minor version of the extension.
+          * - :py:attr:`~Name`
+            - Gets the name of the extension.
+          * - :py:attr:`~UniqueId`
+            - Gets the unique identifier of the extension.
+          * - :py:attr:`~Version`
+            - Gets the version of the extension.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Attributes
+   :type: Optional[Ansys.ACT.Interfaces.Common.IAttributeCollection]
+
+
+   
+   Gets the attributes of the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InstallDir
+   :type: Optional[str]
+
+
+   
+   Gets the folder where the extension is installed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinorVersion
+   :type: Optional[int]
+
+
+   
+   Gets the minor version of the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the name of the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UniqueId
+   :type: Optional[str]
+
+
+   
+   Gets the unique identifier of the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Version
+   :type: Optional[int]
+
+
+   
+   Gets the version of the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

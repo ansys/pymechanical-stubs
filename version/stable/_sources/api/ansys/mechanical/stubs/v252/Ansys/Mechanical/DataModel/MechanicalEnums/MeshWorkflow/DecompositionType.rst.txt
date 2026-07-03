@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`DecompositionType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.DecompositionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in MultiZone mesher controls. It specifies the decomposition type used to generate the MultiZone mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DecompositionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AxisSweep`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Standard`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AxisSweep
+   :value: 6
+
+
+.. py:attribute:: ProgramControlled
+   :value: 7
+
+
+.. py:attribute:: Standard
+   :value: 2
+
+
+
+
+
+
+.. vale on

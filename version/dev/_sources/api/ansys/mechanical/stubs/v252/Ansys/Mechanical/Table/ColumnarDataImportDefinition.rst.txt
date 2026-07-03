@@ -1,0 +1,203 @@
+.. vale off
+
+
+
+:class:`ColumnarDataImportDefinition`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.ColumnarDataImportDefinition
+
+   Bases: :py:obj:`object`
+
+
+   
+   A simple class to hold the import definitions for how a column from a data source in
+   columnar format should be processed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ColumnarDataImportDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Index`
+            - Gets or sets the specified data source column index from which this variable will be
+          * - :py:attr:`~Name`
+            - Gets or sets an identifier for the data source column.
+          * - :py:attr:`~Unit`
+            - Gets or sets the unit of the column.
+          * - :py:attr:`~VariableClassification`
+            - Gets or sets the variable classification of the column.
+          * - :py:attr:`~VariableType`
+            - Gets or sets the variable type of the column.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets or sets the specified data source column index from which this variable will be
+   imported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets an identifier for the data source column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Gets or sets the unit of the column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableClassification
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification]
+
+
+   
+   Gets or sets the variable classification of the column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType]
+
+
+   
+   Gets or sets the variable type of the column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,233 @@
+.. vale off
+
+
+
+:class:`SectionPlanes`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.SectionPlanes
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents the collection of section planes used by graphics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SectionPlanes
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Adds the given SectionPlane object to the collection to modify the view. Currently only 6 SectionPlane objects in the collection can be activated at once.
+          * - :py:attr:`~Clear`
+            - Clears the collection of all SectionPlane objects.
+          * - :py:attr:`~CreateSectionPlane`
+            - Creates a SectionPlane based on a coordinate system and plane orientation.
+          * - :py:attr:`~Remove`
+            - Removes the requested SectionPlane from the collection.
+          * - :py:attr:`~RemoveAt`
+            - Removes the SectionPlane at the given index.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Capping`
+            - Gets or Sets the Capping style of the Section Plane
+          * - :py:attr:`~Count`
+            - The number of section planes in the collection.
+          * - :py:attr:`~ShowHatching`
+            - Controls whether to render hatch lines (the black parallel lines) on the capped surfaces of section planes. Default: true
+          * - :py:attr:`~ShowWholeElement`
+            - Gets or Sets the Element Visibility of the Section Plane
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Capping
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SectionPlaneCappingType]
+
+
+   
+   Gets or Sets the Capping style of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   The number of section planes in the collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowHatching
+   :type: Optional[bool]
+
+
+   
+   Controls whether to render hatch lines (the black parallel lines) on the capped surfaces of section planes. Default: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowWholeElement
+   :type: Optional[bool]
+
+
+   
+   Gets or Sets the Element Visibility of the Section Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(sectionPlane: Ansys.Mechanical.Graphics.SectionPlane) -> None
+
+   
+   Adds the given SectionPlane object to the collection to modify the view. Currently only 6 SectionPlane objects in the collection can be activated at once.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> None
+
+   
+   Clears the collection of all SectionPlane objects.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateSectionPlane(coordinateSystem: Ansys.ACT.Automation.Mechanical.CoordinateSystem, planeOrientation: Ansys.Mechanical.DataModel.MechanicalEnums.Common.PlaneOrientation) -> Ansys.Mechanical.Graphics.SectionPlane
+
+   
+   Creates a SectionPlane based on a coordinate system and plane orientation.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(sectionPlane: Ansys.Mechanical.Graphics.SectionPlane) -> bool
+
+   
+   Removes the requested SectionPlane from the collection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveAt(index: int) -> None
+
+   
+   Removes the SectionPlane at the given index.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

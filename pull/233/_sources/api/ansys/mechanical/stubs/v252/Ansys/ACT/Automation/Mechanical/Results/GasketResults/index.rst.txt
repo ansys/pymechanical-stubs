@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+
+
+
+
+
+``GasketResults``
+=================================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: GasketResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults.GasketResult`
+            - Defines a GasketResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults.NormalGasketPressure`
+            - Defines a NormalGasketPressure.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults.NormalGasketTotalClosure`
+            - Defines a NormalGasketTotalClosure.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults.ShearGasketPressure`
+            - Defines a ShearGasketPressure.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.GasketResults.ShearGasketTotalClosure`
+            - Defines a ShearGasketTotalClosure.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> GasketResult</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/GasketResults/GasketResult>
+    <span class="nf nf-cod-symbol_class"></span> NormalGasketPressure</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/GasketResults/NormalGasketPressure>
+    <span class="nf nf-cod-symbol_class"></span> NormalGasketTotalClosure</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/GasketResults/NormalGasketTotalClosure>
+    <span class="nf nf-cod-symbol_class"></span> ShearGasketPressure</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/GasketResults/ShearGasketPressure>
+    <span class="nf nf-cod-symbol_class"></span> ShearGasketTotalClosure</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/GasketResults/ShearGasketTotalClosure>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+GasketResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

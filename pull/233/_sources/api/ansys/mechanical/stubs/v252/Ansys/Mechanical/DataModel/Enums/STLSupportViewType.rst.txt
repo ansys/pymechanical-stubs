@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`STLSupportViewType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.STLSupportViewType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the STLSupportViewType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: STLSupportViewType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~KnockdownFactors`
+            - 
+          * - :py:attr:`~Mesh`
+            - 
+          * - :py:attr:`~STL`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: KnockdownFactors
+   :value: 2
+
+
+.. py:attribute:: Mesh
+   :value: 1
+
+
+.. py:attribute:: STL
+   :value: 0
+
+
+
+
+
+
+.. vale on

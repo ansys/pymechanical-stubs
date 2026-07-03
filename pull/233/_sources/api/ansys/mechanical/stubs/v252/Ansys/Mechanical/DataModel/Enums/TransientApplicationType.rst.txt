@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`TransientApplicationType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.TransientApplicationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TransientApplicationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TransientApplicationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HighSpeedDynamics`
+            - 
+          * - :py:attr:`~Impact`
+            - 
+          * - :py:attr:`~LowSpeedDynamics`
+            - 
+          * - :py:attr:`~ModerateSpeedDynamics`
+            - 
+          * - :py:attr:`~QuasiStatic`
+            - 
+          * - :py:attr:`~UserDefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: HighSpeedDynamics
+   :value: 1
+
+
+.. py:attribute:: Impact
+   :value: 0
+
+
+.. py:attribute:: LowSpeedDynamics
+   :value: 3
+
+
+.. py:attribute:: ModerateSpeedDynamics
+   :value: 2
+
+
+.. py:attribute:: QuasiStatic
+   :value: 4
+
+
+.. py:attribute:: UserDefined
+   :value: 5
+
+
+
+
+
+
+.. vale on

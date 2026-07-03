@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`SpatialReductionType`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SpatialReductionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Defines the method used to reduce the spatial integrand into a scalar value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpatialReductionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AbsoluteMax`
+            - 
+          * - :py:attr:`~Average`
+            - 
+          * - :py:attr:`~ContinuousAverage`
+            - 
+          * - :py:attr:`~StandardDeviation`
+            - 
+          * - :py:attr:`~Sum`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AbsoluteMax
+   :value: 2
+
+
+.. py:attribute:: Average
+   :value: 0
+
+
+.. py:attribute:: ContinuousAverage
+   :value: 6
+
+
+.. py:attribute:: StandardDeviation
+   :value: 3
+
+
+.. py:attribute:: Sum
+   :value: 4
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,1121 @@
+.. vale off
+
+
+
+:class:`SolutionCombination`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.SolutionCombination
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a SolutionCombination.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolutionCombination
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddBeamTool`
+            - Creates a new BeamTool
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddCompositeFailureTool`
+            - Creates a new CompositeFailureTool
+          * - :py:attr:`~AddContactTool`
+            - Creates a new ContactTool
+          * - :py:attr:`~AddDirectionalAcceleration`
+            - Creates a new DirectionalAcceleration
+          * - :py:attr:`~AddDirectionalAxialForce`
+            - Creates a new DirectionalAxialForce
+          * - :py:attr:`~AddDirectionalBendingMoment`
+            - Creates a new DirectionalBendingMoment
+          * - :py:attr:`~AddDirectionalDeformation`
+            - Creates a new DirectionalDeformation
+          * - :py:attr:`~AddDirectionalShearForce`
+            - Creates a new DirectionalShearForce
+          * - :py:attr:`~AddDirectionalTorsionalMoment`
+            - Creates a new DirectionalTorsionalMoment
+          * - :py:attr:`~AddDirectionalVelocity`
+            - Creates a new DirectionalVelocity
+          * - :py:attr:`~AddElasticStrainIntensity`
+            - Creates a new ElasticStrainIntensity
+          * - :py:attr:`~AddEquivalentElasticStrain`
+            - Creates a new EquivalentElasticStrain
+          * - :py:attr:`~AddEquivalentElasticStrainRST`
+            - Creates a new EquivalentElasticStrainRST
+          * - :py:attr:`~AddEquivalentStress`
+            - Creates a new EquivalentStress
+          * - :py:attr:`~AddEquivalentTotalStrain`
+            - Creates a new EquivalentTotalStrain
+          * - :py:attr:`~AddFatigueTool`
+            - Creates a new FatigueTool
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddLinearizedEquivalentStress`
+            - Creates a new LinearizedEquivalentStress
+          * - :py:attr:`~AddLinearizedMaximumPrincipalStress`
+            - Creates a new LinearizedMaximumPrincipalStress
+          * - :py:attr:`~AddLinearizedMaximumShearStress`
+            - Creates a new LinearizedMaximumShearStress
+          * - :py:attr:`~AddLinearizedMiddlePrincipalStress`
+            - Creates a new LinearizedMiddlePrincipalStress
+          * - :py:attr:`~AddLinearizedMinimumPrincipalStress`
+            - Creates a new LinearizedMinimumPrincipalStress
+          * - :py:attr:`~AddLinearizedNormalStress`
+            - Creates a new LinearizedNormalStress
+          * - :py:attr:`~AddLinearizedShearStress`
+            - Creates a new LinearizedShearStress
+          * - :py:attr:`~AddLinearizedStressIntensity`
+            - Creates a new LinearizedStressIntensity
+          * - :py:attr:`~AddMaximumPrincipalElasticStrain`
+            - Creates a new MaximumPrincipalElasticStrain
+          * - :py:attr:`~AddMaximumPrincipalStress`
+            - Creates a new MaximumPrincipalStress
+          * - :py:attr:`~AddMaximumShearElasticStrain`
+            - Creates a new MaximumShearElasticStrain
+          * - :py:attr:`~AddMaximumShearStress`
+            - Creates a new MaximumShearStress
+          * - :py:attr:`~AddMiddlePrincipalElasticStrain`
+            - Creates a new MiddlePrincipalElasticStrain
+          * - :py:attr:`~AddMiddlePrincipalStress`
+            - Creates a new MiddlePrincipalStress
+          * - :py:attr:`~AddMinimumPrincipalElasticStrain`
+            - Creates a new MinimumPrincipalElasticStrain
+          * - :py:attr:`~AddMinimumPrincipalStress`
+            - Creates a new MinimumPrincipalStress
+          * - :py:attr:`~AddNormalElasticStrain`
+            - Creates a new NormalElasticStrain
+          * - :py:attr:`~AddNormalStress`
+            - Creates a new NormalStress
+          * - :py:attr:`~AddShearElasticStrain`
+            - Creates a new ShearElasticStrain
+          * - :py:attr:`~AddShearMomentDiagramMSUM`
+            - Creates a new TotalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramMY`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramMZ`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramUSUM`
+            - Creates a new TotalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramUY`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramUZ`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramVSUM`
+            - Creates a new TotalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramVY`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearMomentDiagramVZ`
+            - Creates a new DirectionalShearMomentDiagram
+          * - :py:attr:`~AddShearStress`
+            - Creates a new ShearStress
+          * - :py:attr:`~AddStressIntensity`
+            - Creates a new StressIntensity
+          * - :py:attr:`~AddStressTool`
+            - Creates a new StressTool
+          * - :py:attr:`~AddTotalAcceleration`
+            - Creates a new TotalAcceleration
+          * - :py:attr:`~AddTotalAxialForce`
+            - Creates a new TotalAxialForce
+          * - :py:attr:`~AddTotalBendingMoment`
+            - Creates a new TotalBendingMoment
+          * - :py:attr:`~AddTotalDeformation`
+            - Creates a new TotalDeformation
+          * - :py:attr:`~AddTotalShearForce`
+            - Creates a new TotalShearForce
+          * - :py:attr:`~AddTotalTorsionalMoment`
+            - Creates a new TotalTorsionalMoment
+          * - :py:attr:`~AddTotalVelocity`
+            - Creates a new TotalVelocity
+          * - :py:attr:`~AddUserDefinedResult`
+            - Creates a new UserDefinedResult
+          * - :py:attr:`~AddVectorAxialForce`
+            - Creates a new VectorAxialForce
+          * - :py:attr:`~AddVectorBendingMoment`
+            - Creates a new VectorBendingMoment
+          * - :py:attr:`~AddVectorPrincipalElasticStrain`
+            - Creates a new VectorPrincipalElasticStrain
+          * - :py:attr:`~AddVectorPrincipalStress`
+            - Creates a new VectorPrincipalStress
+          * - :py:attr:`~AddVectorShearForce`
+            - Creates a new VectorShearForce
+          * - :py:attr:`~AddVectorTorsionalMoment`
+            - Creates a new VectorTorsionalMoment
+          * - :py:attr:`~ClearGeneratedData`
+            - Run the ClearGeneratedData action.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~EvaluateAllResults`
+            - Run the EvaluateAllResults action.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Definition`
+            - Get the SolutionCombinationDefinition object.
+          * - :py:attr:`~EnvelopeType`
+            - Gets or sets the Envelope Type. Default: F:Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.EnvelopeType.Maximum
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~Type`
+            - Gets or sets the Solution Combination Type. Default: F:Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.Type.LoadCombinations
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Definition
+   :type: Optional[Ansys.ACT.Automation.Mechanical.SolutionCombinationDefinition]
+
+
+   
+   Get the SolutionCombinationDefinition object.
+       This object contains all the Solution Combination data like Base Cases, Load Combinations and Coefficients.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnvelopeType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.EnvelopeType]
+
+
+   
+   Gets or sets the Envelope Type. Default: F:Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.EnvelopeType.Maximum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSSolutionCombinationAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.Type]
+
+
+   
+   Gets or sets the Solution Combination Type. Default: F:Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.Type.LoadCombinations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddBeamTool() -> Ansys.ACT.Automation.Mechanical.Results.BeamToolResults.BeamTool
+
+   
+   Creates a new BeamTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddCompositeFailureTool() -> Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.CompositeFailureTool
+
+   
+   Creates a new CompositeFailureTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddContactTool() -> Ansys.ACT.Automation.Mechanical.PostContactTool
+
+   
+   Creates a new ContactTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAcceleration() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAcceleration
+
+   
+   Creates a new DirectionalAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalAxialForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalAxialForce
+
+   
+   Creates a new DirectionalAxialForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalBendingMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalBendingMoment
+
+   
+   Creates a new DirectionalBendingMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalDeformation() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalDeformation
+
+   
+   Creates a new DirectionalDeformation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalShearForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearForce
+
+   
+   Creates a new DirectionalShearForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalTorsionalMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalTorsionalMoment
+
+   
+   Creates a new DirectionalTorsionalMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddDirectionalVelocity() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocity
+
+   
+   Creates a new DirectionalVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddElasticStrainIntensity() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.ElasticStrainIntensity
+
+   
+   Creates a new ElasticStrainIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrain
+
+   
+   Creates a new EquivalentElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentElasticStrainRST() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentElasticStrainRST
+
+   
+   Creates a new EquivalentElasticStrainRST
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.EquivalentStress
+
+   
+   Creates a new EquivalentStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEquivalentTotalStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.EquivalentTotalStrain
+
+   
+   Creates a new EquivalentTotalStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFatigueTool() -> Ansys.ACT.Automation.Mechanical.FatigueTool
+
+   
+   Creates a new FatigueTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedEquivalentStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedEquivalentStress
+
+   
+   Creates a new LinearizedEquivalentStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMaximumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMaximumPrincipalStress
+
+   
+   Creates a new LinearizedMaximumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMaximumShearStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMaximumShearStress
+
+   
+   Creates a new LinearizedMaximumShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMiddlePrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMiddlePrincipalStress
+
+   
+   Creates a new LinearizedMiddlePrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedMinimumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedMinimumPrincipalStress
+
+   
+   Creates a new LinearizedMinimumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedNormalStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedNormalStress
+
+   
+   Creates a new LinearizedNormalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedShearStress() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedShearStress
+
+   
+   Creates a new LinearizedShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLinearizedStressIntensity() -> Ansys.ACT.Automation.Mechanical.Results.LinearizedStressResults.LinearizedStressIntensity
+
+   
+   Creates a new LinearizedStressIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumPrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumPrincipalElasticStrain
+
+   
+   Creates a new MaximumPrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MaximumPrincipalStress
+
+   
+   Creates a new MaximumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumShearElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MaximumShearElasticStrain
+
+   
+   Creates a new MaximumShearElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMaximumShearStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MaximumShearStress
+
+   
+   Creates a new MaximumShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMiddlePrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MiddlePrincipalElasticStrain
+
+   
+   Creates a new MiddlePrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMiddlePrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MiddlePrincipalStress
+
+   
+   Creates a new MiddlePrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMinimumPrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.MinimumPrincipalElasticStrain
+
+   
+   Creates a new MinimumPrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddMinimumPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.MinimumPrincipalStress
+
+   
+   Creates a new MinimumPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNormalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.NormalElasticStrain
+
+   
+   Creates a new NormalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddNormalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.NormalStress
+
+   
+   Creates a new NormalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.ShearElasticStrain
+
+   
+   Creates a new ShearElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramMSUM() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram
+
+   
+   Creates a new TotalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramMY() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramMZ() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramUSUM() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram
+
+   
+   Creates a new TotalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramUY() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramUZ() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramVSUM() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearMomentDiagram
+
+   
+   Creates a new TotalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramVY() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearMomentDiagramVZ() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.DirectionalShearMomentDiagram
+
+   
+   Creates a new DirectionalShearMomentDiagram
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddShearStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.ShearStress
+
+   
+   Creates a new ShearStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressIntensity() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.StressIntensity
+
+   
+   Creates a new StressIntensity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddStressTool() -> Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressTool
+
+   
+   Creates a new StressTool
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalAcceleration() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalAcceleration
+
+   
+   Creates a new TotalAcceleration
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalAxialForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalAxialForce
+
+   
+   Creates a new TotalAxialForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalBendingMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalBendingMoment
+
+   
+   Creates a new TotalBendingMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalDeformation() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalDeformation
+
+   
+   Creates a new TotalDeformation
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalShearForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalShearForce
+
+   
+   Creates a new TotalShearForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalTorsionalMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.TotalTorsionalMoment
+
+   
+   Creates a new TotalTorsionalMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddTotalVelocity() -> Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalVelocity
+
+   
+   Creates a new TotalVelocity
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddUserDefinedResult() -> Ansys.ACT.Automation.Mechanical.Results.UserDefinedResult
+
+   
+   Creates a new UserDefinedResult
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorAxialForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorAxialForce
+
+   
+   Creates a new VectorAxialForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorBendingMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorBendingMoment
+
+   
+   Creates a new VectorBendingMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorPrincipalElasticStrain() -> Ansys.ACT.Automation.Mechanical.Results.StrainResults.VectorPrincipalElasticStrain
+
+   
+   Creates a new VectorPrincipalElasticStrain
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorPrincipalStress() -> Ansys.ACT.Automation.Mechanical.Results.StressResults.VectorPrincipalStress
+
+   
+   Creates a new VectorPrincipalStress
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorShearForce() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorShearForce
+
+   
+   Creates a new VectorShearForce
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddVectorTorsionalMoment() -> Ansys.ACT.Automation.Mechanical.Results.BeamResults.VectorTorsionalMoment
+
+   
+   Creates a new VectorTorsionalMoment
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Run the ClearGeneratedData action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EvaluateAllResults() -> None
+
+   
+   Run the EvaluateAllResults action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
