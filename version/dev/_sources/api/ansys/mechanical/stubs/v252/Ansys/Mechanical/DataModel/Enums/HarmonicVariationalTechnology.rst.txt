@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`HarmonicVariationalTechnology`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.HarmonicVariationalTechnology(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the HarmonicVariationalTechnology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: HarmonicVariationalTechnology
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: No
+   :value: 3
+
+
+.. py:attribute:: ProgramControlled
+   :value: 1
+
+
+.. py:attribute:: Yes
+   :value: 2
+
+
+
+
+
+
+.. vale on

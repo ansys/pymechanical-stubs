@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+
+
+
+
+
+``MaterialObject``
+==================================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MaterialObject
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: MaterialObject
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MaterialObject.MaterialModel`
+            - The material model class holds the data for a particular material model. Examples of a material model would be;: density, isotropic elasticity, or gasket model.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> MaterialModel</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/MaterialObject/MaterialModel>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+MaterialObject module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

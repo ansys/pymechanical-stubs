@@ -1,0 +1,410 @@
+.. vale off
+
+
+
+:class:`SelectionWorksheet`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.SelectionWorksheet
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: SelectionWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Adds a Row to the worksheet.
+          * - :py:attr:`~DeleteRow`
+            - Deletes a row from the worksheet at index.
+          * - :py:attr:`~Generate`
+            - Generate the selection from the worksheet.
+          * - :py:attr:`~GetAction`
+            - Gets the worksheet Action property at index.
+          * - :py:attr:`~GetBodyTypeValue`
+            - Gets the worksheet Body Type Value property at index.
+          * - :py:attr:`~GetCoordinateSystemSelection`
+            - Gets the worksheet CoordinateSystemSelection property at index.
+          * - :py:attr:`~GetCriterion`
+            - Gets the worksheet Criterion property at index.
+          * - :py:attr:`~GetCriterionActive`
+            - Gets the worksheet CriterionActive property at index.
+          * - :py:attr:`~GetEdgeTypeValue`
+            - Gets the worksheet Edge Type Value property at index.
+          * - :py:attr:`~GetFaceTypeValue`
+            - Gets the worksheet Face Type Value property at index.
+          * - :py:attr:`~GetGeometryType`
+            - Gets the worksheet GeometryType property at index.
+          * - :py:attr:`~GetLowerBound`
+            - Gets the worksheet LowerBound property at index.
+          * - :py:attr:`~GetMeshElementTypeValue`
+            - Gets the worksheet Mesh Element Type Value property at index.
+          * - :py:attr:`~GetOperator`
+            - Gets the worksheet Operator property at index.
+          * - :py:attr:`~GetStringValue`
+            - Gets the worksheet StringValue property at index.
+          * - :py:attr:`~GetTag`
+            - Gets the worksheet Tag property at index.
+          * - :py:attr:`~GetUpperBound`
+            - Gets the worksheet UpperBound property at index.
+          * - :py:attr:`~GetValue`
+            - Gets the worksheet Value property at index.
+          * - :py:attr:`~SetAction`
+            - Sets the worksheet Action property at index.
+          * - :py:attr:`~SetBodyTypeValue`
+            - Sets the worksheet Body Type Value property at index.
+          * - :py:attr:`~SetCoordinateSystemSelection`
+            - Sets the worksheet CoordinateSystemSelection property at index.
+          * - :py:attr:`~SetCriterion`
+            - Sets the worksheet Criterion property at index.
+          * - :py:attr:`~SetCriterionActive`
+            - Sets the worksheet CriterionActive property at index.
+          * - :py:attr:`~SetEdgeTypeValue`
+            - Sets the worksheet Edge Type Value property at index.
+          * - :py:attr:`~SetEntityType`
+            - Sets the worksheet GeometryType property at index.
+          * - :py:attr:`~SetFaceTypeValue`
+            - Sets the worksheet Face Type Value property at index.
+          * - :py:attr:`~SetLowerBound`
+            - Sets the worksheet LowerBound property at index.
+          * - :py:attr:`~SetMeshElementTypeValue`
+            - Sets the worksheet Mesh Element Type Value property at index.
+          * - :py:attr:`~SetOperator`
+            - Sets the worksheet Operator property at index.
+          * - :py:attr:`~SetStringValue`
+            - Sets the worksheet StringValue property at index.
+          * - :py:attr:`~SetTag`
+            - Sets the worksheet Tag property at index.
+          * - :py:attr:`~SetUpperBound`
+            - Sets the worksheet UpperBound property at index.
+          * - :py:attr:`~SetValue`
+            - Sets the worksheet Value property at index.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - ..
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[int]
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> int
+
+   
+   Adds a Row to the worksheet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+   
+   Deletes a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Generate() -> None
+
+   
+   Generate the selection from the worksheet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAction(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetAction
+
+   
+   Gets the worksheet Action property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBodyTypeValue(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetBodyTypeValues
+
+   
+   Gets the worksheet Body Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCoordinateSystemSelection(index: int) -> int
+
+   
+   Gets the worksheet CoordinateSystemSelection property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCriterion(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetCriterion
+
+   
+   Gets the worksheet Criterion property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCriterionActive(index: int) -> bool
+
+   
+   Gets the worksheet CriterionActive property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEdgeTypeValue(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetEdgeTypeValues
+
+   
+   Gets the worksheet Edge Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetFaceTypeValue(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetFaceTypeValues
+
+   
+   Gets the worksheet Face Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetGeometryType(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetEntityType
+
+   
+   Gets the worksheet GeometryType property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLowerBound(index: int) -> float
+
+   
+   Gets the worksheet LowerBound property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshElementTypeValue(index: int) -> Ansys.Mechanical.DataModel.Enums.MeshElementShape
+
+   
+   Gets the worksheet Mesh Element Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetOperator(index: int) -> Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator
+
+   
+   Gets the worksheet Operator property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStringValue(index: int) -> str
+
+   
+   Gets the worksheet StringValue property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTag(index: int) -> str
+
+   
+   Gets the worksheet Tag property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUpperBound(index: int) -> float
+
+   
+   Gets the worksheet UpperBound property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetValue(index: int) -> float
+
+   
+   Gets the worksheet Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetAction(index: int, newVal: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetAction) -> None
+
+   
+   Sets the worksheet Action property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetBodyTypeValue(index: int, newVal: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetBodyTypeValues) -> None
+
+   
+   Sets the worksheet Body Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCoordinateSystemSelection(index: int, newVal: int) -> None
+
+   
+   Sets the worksheet CoordinateSystemSelection property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCriterion(index: int, value: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetCriterion) -> None
+
+   
+   Sets the worksheet Criterion property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCriterionActive(index: int, newVal: bool) -> None
+
+   
+   Sets the worksheet CriterionActive property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEdgeTypeValue(index: int, newVal: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetEdgeTypeValues) -> None
+
+   
+   Sets the worksheet Edge Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetEntityType(index: int, newVal: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetEntityType) -> None
+
+   
+   Sets the worksheet GeometryType property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetFaceTypeValue(index: int, newVal: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetFaceTypeValues) -> None
+
+   
+   Sets the worksheet Face Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetLowerBound(index: int, newVal: float) -> None
+
+   
+   Sets the worksheet LowerBound property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMeshElementTypeValue(index: int, newVal: Ansys.Mechanical.DataModel.Enums.MeshElementShape) -> None
+
+   
+   Sets the worksheet Mesh Element Type Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetOperator(index: int, newVal: Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator) -> None
+
+   
+   Sets the worksheet Operator property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStringValue(index: int, newVal: str) -> None
+
+   
+   Sets the worksheet StringValue property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetTag(index: int, newVal: str) -> None
+
+   
+   Sets the worksheet Tag property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetUpperBound(index: int, newVal: float) -> None
+
+   
+   Sets the worksheet UpperBound property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetValue(index: int, newVal: float) -> None
+
+   
+   Sets the worksheet Value property at index.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

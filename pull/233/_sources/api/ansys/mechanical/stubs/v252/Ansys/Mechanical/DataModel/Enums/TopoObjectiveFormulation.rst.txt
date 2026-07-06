@@ -1,0 +1,108 @@
+.. vale off
+
+
+
+:class:`TopoObjectiveFormulation`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.TopoObjectiveFormulation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the TopoObjectiveFormulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TopoObjectiveFormulation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~LocalStrainEnergy`
+            - 
+          * - :py:attr:`~MaximumPrincipalStress`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~VonMisesStress`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Displacement
+   :value: 3
+
+
+.. py:attribute:: Force
+   :value: 2
+
+
+.. py:attribute:: LocalStrainEnergy
+   :value: 8
+
+
+.. py:attribute:: MaximumPrincipalStress
+   :value: 7
+
+
+.. py:attribute:: ProgramControlled
+   :value: 1
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: VonMisesStress
+   :value: 6
+
+
+
+
+
+
+.. vale on

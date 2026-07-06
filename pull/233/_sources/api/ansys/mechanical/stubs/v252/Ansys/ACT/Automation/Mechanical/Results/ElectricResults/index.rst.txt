@@ -1,0 +1,172 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ElectricResults``
+===================================
+
+
+.. py:module:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ElectricResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalCurrentDensity`
+            - Defines a DirectionalCurrentDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalElectricFieldIntensity`
+            - Defines a DirectionalElectricFieldIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalElectricFluxDensity`
+            - Defines a DirectionalElectricFluxDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.DirectionalElectrostaticForce`
+            - Defines a DirectionalElectrostaticForce.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.ElectricResult`
+            - Defines a ElectricResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.ElectricVoltage`
+            - Defines a ElectricVoltage.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.JouleHeat`
+            - Defines a JouleHeat.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalCurrentDensity`
+            - Defines a TotalCurrentDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalElectricFieldIntensity`
+            - Defines a TotalElectricFieldIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalElectricFluxDensity`
+            - Defines a TotalElectricFluxDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.ElectricResults.TotalElectrostaticForce`
+            - Defines a TotalElectrostaticForce.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> DirectionalCurrentDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/DirectionalCurrentDensity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalElectricFieldIntensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/DirectionalElectricFieldIntensity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalElectricFluxDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/DirectionalElectricFluxDensity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalElectrostaticForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/DirectionalElectrostaticForce>
+    <span class="nf nf-cod-symbol_class"></span> ElectricResult</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/ElectricResult>
+    <span class="nf nf-cod-symbol_class"></span> ElectricVoltage</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/ElectricVoltage>
+    <span class="nf nf-cod-symbol_class"></span> JouleHeat</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/JouleHeat>
+    <span class="nf nf-cod-symbol_class"></span> TotalCurrentDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/TotalCurrentDensity>
+    <span class="nf nf-cod-symbol_class"></span> TotalElectricFieldIntensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/TotalElectricFieldIntensity>
+    <span class="nf nf-cod-symbol_class"></span> TotalElectricFluxDensity</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/TotalElectricFluxDensity>
+    <span class="nf nf-cod-symbol_class"></span> TotalElectrostaticForce</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/Mechanical/Results/ElectricResults/TotalElectrostaticForce>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ElectricResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

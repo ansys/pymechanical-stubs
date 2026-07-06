@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`ContourView`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ContourView(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ContourView.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ContourView
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ContourBands`
+            - 
+          * - :py:attr:`~Isolines`
+            - 
+          * - :py:attr:`~SmoothContours`
+            - 
+          * - :py:attr:`~SolidFill`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ContourBands
+   :value: 1
+
+
+.. py:attribute:: Isolines
+   :value: 2
+
+
+.. py:attribute:: SmoothContours
+   :value: 0
+
+
+.. py:attribute:: SolidFill
+   :value: 3
+
+
+
+
+
+
+.. vale on

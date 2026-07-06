@@ -1,0 +1,120 @@
+.. vale off
+
+
+
+:class:`ObjectiveType`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ObjectiveType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Objective Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ObjectiveType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MaximizeCriterion`
+            - 
+          * - :py:attr:`~MaximizeFrequency`
+            - 
+          * - :py:attr:`~MinimizeAccumulatedEquivalentPlasticStrain`
+            - 
+          * - :py:attr:`~MinimizeCompliance`
+            - 
+          * - :py:attr:`~MinimizeCriterion`
+            - 
+          * - :py:attr:`~MinimizeMass`
+            - 
+          * - :py:attr:`~MinimizeStress`
+            - 
+          * - :py:attr:`~MinimizeThermalCompliance`
+            - 
+          * - :py:attr:`~MinimizeVolume`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: MaximizeCriterion
+   :value: 7
+
+
+.. py:attribute:: MaximizeFrequency
+   :value: 3
+
+
+.. py:attribute:: MinimizeAccumulatedEquivalentPlasticStrain
+   :value: 4
+
+
+.. py:attribute:: MinimizeCompliance
+   :value: 0
+
+
+.. py:attribute:: MinimizeCriterion
+   :value: 6
+
+
+.. py:attribute:: MinimizeMass
+   :value: 1
+
+
+.. py:attribute:: MinimizeStress
+   :value: 5
+
+
+.. py:attribute:: MinimizeThermalCompliance
+   :value: 8
+
+
+.. py:attribute:: MinimizeVolume
+   :value: 2
+
+
+
+
+
+
+.. vale on

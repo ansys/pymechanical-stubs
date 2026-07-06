@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SnapType`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SnapType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SnapType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SnapType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ElementSizeFactor`
+            - 
+          * - :py:attr:`~ManualTolerance`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ElementSizeFactor
+   :value: 1
+
+
+.. py:attribute:: ManualTolerance
+   :value: 0
+
+
+
+
+
+
+.. vale on

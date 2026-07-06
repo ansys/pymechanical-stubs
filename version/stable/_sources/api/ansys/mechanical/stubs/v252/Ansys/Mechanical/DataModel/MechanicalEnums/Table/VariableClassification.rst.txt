@@ -1,0 +1,102 @@
+.. vale off
+
+
+
+:class:`VariableClassification`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum represents the classification of variables that can be represented by Table
+   variables/columns.
+
+   A full variable definition requires both a T:Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType and an
+   T:Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification.
+
+   The explicit enum values need to be kept in-sync with the Typescript enumeration of the
+   same name in the frontend Angular project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VariableClassification
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Independent`
+            - 
+          * - :py:attr:`~Real`
+            - 
+          * - :py:attr:`~Real_i`
+            - 
+          * - :py:attr:`~Real_j`
+            - 
+          * - :py:attr:`~Real_k`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Independent
+   :value: 1
+
+
+.. py:attribute:: Real
+   :value: 2
+
+
+.. py:attribute:: Real_i
+   :value: 201
+
+
+.. py:attribute:: Real_j
+   :value: 202
+
+
+.. py:attribute:: Real_k
+   :value: 203
+
+
+
+
+
+
+.. vale on

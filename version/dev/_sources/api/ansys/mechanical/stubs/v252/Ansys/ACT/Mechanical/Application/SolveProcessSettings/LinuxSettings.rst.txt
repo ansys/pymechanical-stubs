@@ -1,0 +1,147 @@
+.. vale off
+
+
+
+:class:`LinuxSettings`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Application.SolveProcessSettings.LinuxSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   The class representing the linux settings portion of the solve process settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LinuxSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - Whether the linux settings are active.
+          * - :py:attr:`~UserName`
+            - The user name.
+          * - :py:attr:`~WorkingFolder`
+            - The working folder.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+
+   
+   Whether the linux settings are active.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UserName
+   :type: Optional[str]
+
+
+   
+   The user name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkingFolder
+   :type: Optional[str]
+
+
+   
+   The working folder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

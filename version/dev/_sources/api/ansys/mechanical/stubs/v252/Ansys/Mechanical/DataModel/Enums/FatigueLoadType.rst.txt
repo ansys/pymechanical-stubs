@@ -1,0 +1,96 @@
+.. vale off
+
+
+
+:class:`FatigueLoadType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FatigueLoadType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FatigueLoadType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FatigueLoadType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FullyReversed`
+            - 
+          * - :py:attr:`~HistoryData`
+            - 
+          * - :py:attr:`~NonProportional`
+            - 
+          * - :py:attr:`~Ratio`
+            - 
+          * - :py:attr:`~ZeroBased`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FullyReversed
+   :value: 1
+
+
+.. py:attribute:: HistoryData
+   :value: 3
+
+
+.. py:attribute:: NonProportional
+   :value: 4
+
+
+.. py:attribute:: Ratio
+   :value: 2
+
+
+.. py:attribute:: ZeroBased
+   :value: 0
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,471 @@
+.. vale off
+
+
+
+:class:`SolveProcessSettings`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveProcessSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   The class representing solve process settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SolveProcessSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AdditionalCommandLineArguments`
+            - Any additional command line arguments to give to the solver.
+          * - :py:attr:`~CustomExecutablePath`
+            - The custom executable path for user programmable features in the solver.
+          * - :py:attr:`~DCSAutoDownloadResults`
+            - Whether results need to be automatically downloaded for DCS job after completion.
+          * - :py:attr:`~DistributeSolution`
+            - Whether to run the solution in distributed mode.
+          * - :py:attr:`~GPUAccelerationDevice`
+            - The GPU Acceleration device the solver will use.
+          * - :py:attr:`~HybridParallel`
+            - Whether to run the solution in hybrid parallel.
+          * - :py:attr:`~LicenseQueuing`
+            - Whether license queueing is active.
+          * - :py:attr:`~ManualLinuxSettings`
+            - Returns the manual linux settings.
+          * - :py:attr:`~ManualSolverMemorySettings`
+            - Returns the manual solver memory settings.
+          * - :py:attr:`~MaxNumberOfCores`
+            - The maximum number of cores the solver will use.
+          * - :py:attr:`~NumberOfGPUDevices`
+            - The number of GPU devices.
+          * - :py:attr:`~NumberOfProcesses`
+            - The number of processes the solver will use.
+          * - :py:attr:`~SolveInSynchronousMode`
+            - Whether the solve will be in synchronous mode.
+          * - :py:attr:`~ThreadsPerProcess`
+            - The threads per process the solver will use.
+          * - :py:attr:`~UseSharedLicense`
+            - Whether the solver will use a shared license.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AdditionalCommandLineArguments
+   :type: Optional[str]
+
+
+   
+   Any additional command line arguments to give to the solver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomExecutablePath
+   :type: Optional[str]
+
+
+   
+   The custom executable path for user programmable features in the solver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DCSAutoDownloadResults
+   :type: Optional[bool]
+
+
+   
+   Whether results need to be automatically downloaded for DCS job after completion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DistributeSolution
+   :type: Optional[bool]
+
+
+   
+   Whether to run the solution in distributed mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GPUAccelerationDevice
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GPUAccelerationDevicesType]
+
+
+   
+   The GPU Acceleration device the solver will use.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HybridParallel
+   :type: Optional[bool]
+
+
+   
+   Whether to run the solution in hybrid parallel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LicenseQueuing
+   :type: Optional[bool]
+
+
+   
+   Whether license queueing is active.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ManualLinuxSettings
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.LinuxSettings]
+
+
+   
+   Returns the manual linux settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ManualSolverMemorySettings
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolverMemorySettings]
+
+
+   
+   Returns the manual solver memory settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaxNumberOfCores
+   :type: Optional[int]
+
+
+   
+   The maximum number of cores the solver will use.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfGPUDevices
+   :type: Optional[int]
+
+
+   
+   The number of GPU devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfProcesses
+   :type: Optional[int]
+
+
+   
+   The number of processes the solver will use.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolveInSynchronousMode
+   :type: Optional[bool]
+
+
+   
+   Whether the solve will be in synchronous mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThreadsPerProcess
+   :type: Optional[int]
+
+
+   
+   The threads per process the solver will use.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseSharedLicense
+   :type: Optional[bool]
+
+
+   
+   Whether the solver will use a shared license.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on
