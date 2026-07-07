@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FrequencyReductionType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FrequencyReductionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Defines the method used to transform the available values for each frequency into a scalar, optimizable, criterion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FrequencyReductionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Average`
+            - 
+          * - :py:attr:`~AverageOfLevel`
+            - 
+          * - :py:attr:`~Integrate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Average
+   :value: 1
+
+
+.. py:attribute:: AverageOfLevel
+   :value: 2
+
+
+.. py:attribute:: Integrate
+   :value: 0
+
+
+
+
+
+
+.. vale on

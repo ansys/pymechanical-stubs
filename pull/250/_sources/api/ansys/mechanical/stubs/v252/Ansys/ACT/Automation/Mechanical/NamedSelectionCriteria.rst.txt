@@ -1,0 +1,199 @@
+.. vale off
+
+
+
+:class:`NamedSelectionCriteria`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.NamedSelectionCriteria
+
+   Bases: :py:obj:`object`
+
+
+   
+   A collection of named selection criteria.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NamedSelectionCriteria
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Adds the given criterion to the collection.
+          * - :py:attr:`~Clear`
+            - Clears the collection.
+          * - :py:attr:`~Contains`
+            - Returns whether the collection contains the given criterion.
+          * - :py:attr:`~IndexOf`
+            - Returns the index of the given criterion if it exists in the collection.  Returns -1 if it does not
+          * - :py:attr:`~Insert`
+            - Inserts the given criterion into the collection at the given index.
+          * - :py:attr:`~Remove`
+            - Removes the given criterion from the collection if it exists in the collection.  Throws an exception if it does not.
+          * - :py:attr:`~RemoveAt`
+            - Removes the criterion at the given index.  Throws an exception if the given index is not valid.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - The number of criteria in the collection.
+          * - :py:attr:`~Item`
+            - Item property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   The number of criteria in the collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> None
+
+   
+   Adds the given criterion to the collection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> None
+
+   
+   Clears the collection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Contains(criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> bool
+
+   
+   Returns whether the collection contains the given criterion.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IndexOf(criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> int
+
+   
+   Returns the index of the given criterion if it exists in the collection.  Returns -1 if it does not
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Insert(index: int, criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> None
+
+   
+   Inserts the given criterion into the collection at the given index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> bool
+
+   
+   Removes the given criterion from the collection if it exists in the collection.  Throws an exception if it does not.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveAt(index: int) -> None
+
+   
+   Removes the criterion at the given index.  Throws an exception if the given index is not valid.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

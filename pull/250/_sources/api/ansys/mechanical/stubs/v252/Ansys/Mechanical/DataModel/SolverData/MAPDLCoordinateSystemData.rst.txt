@@ -1,0 +1,72 @@
+.. vale off
+
+
+
+:class:`MAPDLCoordinateSystemData`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.SolverData.MAPDLCoordinateSystemData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLCoordinateSystemData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~SystemId`
+            - Gets the System Id for the coordinate system.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: SystemId
+   :type: Optional[int]
+
+
+   
+   Gets the System Id for the coordinate system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

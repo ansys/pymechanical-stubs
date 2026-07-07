@@ -1,0 +1,114 @@
+.. vale off
+
+
+
+:class:`CoordinateSystemAlignmentType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the CoordinateSystemAlignmentType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CoordinateSystemAlignmentType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Associative`
+            - 
+          * - :py:attr:`~Component`
+            - 
+          * - :py:attr:`~Fixed`
+            - 
+          * - :py:attr:`~Free`
+            - 
+          * - :py:attr:`~GlobalX`
+            - 
+          * - :py:attr:`~GlobalY`
+            - 
+          * - :py:attr:`~GlobalZ`
+            - 
+          * - :py:attr:`~HitPoint`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Associative
+   :value: 1
+
+
+.. py:attribute:: Component
+   :value: 6
+
+
+.. py:attribute:: Fixed
+   :value: 0
+
+
+.. py:attribute:: Free
+   :value: 5
+
+
+.. py:attribute:: GlobalX
+   :value: 2
+
+
+.. py:attribute:: GlobalY
+   :value: 3
+
+
+.. py:attribute:: GlobalZ
+   :value: 4
+
+
+.. py:attribute:: HitPoint
+   :value: 7
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ComponentProtectedType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ComponentProtectedType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This Enum specifies if the corresponding contact entities (faces, edges, or vertices) are protected while meshing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ComponentProtectedType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: No
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Yes
+   :value: 2
+
+
+
+
+
+
+.. vale on

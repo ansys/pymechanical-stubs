@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`MultizoneMappedMeshType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MultizoneMappedMeshType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   To select Multizone Mesh Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MultizoneMappedMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AllQuad`
+            - 
+          * - :py:attr:`~AllTri`
+            - 
+          * - :py:attr:`~QuadTri`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: AllQuad
+   :value: 0
+
+
+.. py:attribute:: AllTri
+   :value: 2
+
+
+.. py:attribute:: QuadTri
+   :value: 1
+
+
+
+
+
+
+.. vale on

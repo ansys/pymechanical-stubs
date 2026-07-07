@@ -1,0 +1,3797 @@
+.. vale off
+
+
+
+:class:`EXDAnalysisSettings`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AnalysisSettings.EXDAnalysisSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines Analysis Settings for Explicit Dynamics System.
+   Note: Cycles in the UI are referred to as TimeSteps in API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: EXDAnalysisSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddComment`
+            - Creates a new child Comment.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~DeleteAllRestartPoints`
+            - DeleteAllRestartPoints method.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetAutomaticMassScalingType`
+            - Gets the  AutomaticMassScalingType for a load step.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetLoadStepType`
+            - Gets the  LoadStepType for a step.
+          * - :py:attr:`~GetMassScalingMinTimeStep`
+            - Gets the  MassScalingMinTimeStep for a load step.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetSaveProbeDataOnTime`
+            - Gets the Time increment for Save ProbeData On for a load step.
+          * - :py:attr:`~GetSaveProbeDataOnTimeSteps`
+            - Gets the Cycle increment for Save ProbeData On for a load step.
+          * - :py:attr:`~GetSaveProbeDataOnType`
+            - Gets the  Save ProbeData Type for a load step.
+          * - :py:attr:`~GetSaveRestartsOnPoints`
+            - Gets the Points increment for Save Restarts On Points for a load step.
+          * - :py:attr:`~GetSaveRestartsOnTime`
+            - Gets the Time increment for Save Restarts On for a load step.
+          * - :py:attr:`~GetSaveRestartsOnTimeSteps`
+            - Gets the Cycle increment for Save Restarts On for a load step.
+          * - :py:attr:`~GetSaveRestartsOnType`
+            - Gets the  Save Restarts Type for a load step.
+          * - :py:attr:`~GetSaveResultsOnPoints`
+            - Gets the Points increment for Save Results On for a load step.
+          * - :py:attr:`~GetSaveResultsOnTime`
+            - Gets the Time increment for Save Results On for a load step.
+          * - :py:attr:`~GetSaveResultsOnTimeSteps`
+            - Gets the Cycle increment for Save Results On for a load step.
+          * - :py:attr:`~GetSaveResultsOnType`
+            - Gets the  Save Results Type for a load step.
+          * - :py:attr:`~GetStaticDamping`
+            - Gets the StaticDamping.
+          * - :py:attr:`~GetStepEndTime`
+            - Gets the Step End Time at a given solution step.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~SetAutomaticMassScalingType`
+            - Sets the  AutomaticMassScalingType for a load step.
+          * - :py:attr:`~SetLoadStepType`
+            - Sets the LoadStepType for a step.
+          * - :py:attr:`~SetMassScalingMinTimeStep`
+            - Sets the  MassScalingMinTimeStep for a load step.
+          * - :py:attr:`~SetSaveProbeDataOnTime`
+            - Set the Time increment for Save ProbeData On for a load step.
+          * - :py:attr:`~SetSaveProbeDataOnTimeSteps`
+            - Set the Cycle increment for Save ProbeData On for a load step.
+          * - :py:attr:`~SetSaveProbeDataOnType`
+            - Sets the  Save ProbeData Type for a load step.
+          * - :py:attr:`~SetSaveRestartsOnPoints`
+            - Set the Points increment for Save Restarts On for a load step.
+          * - :py:attr:`~SetSaveRestartsOnTime`
+            - Set the Time increment for Save Restarts On for a load step.
+          * - :py:attr:`~SetSaveRestartsOnTimeSteps`
+            - Set the Cycle increment for Save Restarts On for a load step.
+          * - :py:attr:`~SetSaveRestartsOnType`
+            - Sets the  Save Restarts Type for a load step.
+          * - :py:attr:`~SetSaveResultsOnPoints`
+            - Set the Points increment for Save Results On for a load step.
+          * - :py:attr:`~SetSaveResultsOnTime`
+            - Set the Time increment for Save Results On for a load step.
+          * - :py:attr:`~SetSaveResultsOnTimeSteps`
+            - Sets the Cycle increment for Save Results On for a load step.
+          * - :py:attr:`~SetSaveResultsOnType`
+            - Sets the  Save Results Type for a load step.
+          * - :py:attr:`~SetStaticDamping`
+            - Sets the StaticDamping.
+          * - :py:attr:`~SetStepEndTime`
+            - Sets the Step End Time for a given solution step.
+          * - :py:attr:`~getADRConvergenceMethod`
+            - Gets the Covergence Method for ADR loadstep.
+          * - :py:attr:`~getADRConvergenceTolerance`
+            - Gets the Covergence Tolerance for ADR loadstep.
+          * - :py:attr:`~getADRMaximumIterations`
+            - Gets the Maximum Iterations for ADR loadstep.
+          * - :py:attr:`~setADRConvergenceMethod`
+            - Sets the Covergence Method for ADR loadstep.
+          * - :py:attr:`~setADRConvergenceTolerance`
+            - Sets the Covergence Tolerance for ADR loadstep.
+          * - :py:attr:`~setADRMaximumIterations`
+            - Sets the Maximum Iterations for ADR loadstep.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ArtificialViscosityForShellsType`
+            - Gets or sets the ArtificialViscosityForShellsType.
+          * - :py:attr:`~AutomaticMassScalingType`
+            - Gets or sets the  AutomaticMassScaling.
+          * - :py:attr:`~BeamSolutionType`
+            - Gets or sets the  BeamSolutionType.
+          * - :py:attr:`~BeamTimeStepSafetyFactor`
+            - Gets or sets the  BeamTimeStepSafetyFactor.
+          * - :py:attr:`~CharZoneDimensionType`
+            - Gets or sets the  CharZoneDimensionType.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~Comments`
+            - Gets the list of associated comments.
+          * - :py:attr:`~CurrentStepNumber`
+            - Gets or sets the CurrentStepNumber.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~DensityUpdateType`
+            - Gets or sets the  DensityUpdateType.
+          * - :py:attr:`~DetonationBurnType`
+            - Gets or sets the  DetonationBurnType.
+          * - :py:attr:`~ErosionGeomStrainLimit`
+            - Gets or sets the ErosionGeomStrainLimit
+          * - :py:attr:`~ErosionMinElemTimestep`
+            - Gets or sets the ErosionMinElemTimestep
+          * - :py:attr:`~ErosionOnGeomStrainType`
+            - Gets or sets the ErosionOnGeomStrainType.
+          * - :py:attr:`~ErosionOnMaterialFailureType`
+            - Gets or sets the ErosionOnMaterialFailureType
+          * - :py:attr:`~ErosionOnMinElemTimestepType`
+            - Gets or sets the ErosionOnMinElemTimestepType
+          * - :py:attr:`~ErosionRetainIntertiaType`
+            - Gets or sets the ErosionRetainIntertiaType
+          * - :py:attr:`~EulerBoundLowerX`
+            - Gets or sets the  EulerBoundLowerX.
+          * - :py:attr:`~EulerBoundLowerY`
+            - Gets or sets the  EulerBoundLowerY.
+          * - :py:attr:`~EulerBoundLowerZ`
+            - Gets or sets the  EulerBoundLowerZ.
+          * - :py:attr:`~EulerBoundUpperX`
+            - Gets or sets the  EulerBoundUpperX.
+          * - :py:attr:`~EulerBoundUpperY`
+            - Gets or sets the  EulerBoundUpperY.
+          * - :py:attr:`~EulerBoundUpperZ`
+            - Gets or sets the  EulerBoundUpperZ.
+          * - :py:attr:`~EulerCellSize`
+            - Gets or sets the  EulerCellSize.
+          * - :py:attr:`~EulerDisplayBox`
+            - Gets or sets the  EulerDisplayBox.
+          * - :py:attr:`~EulerDomScopeDefType`
+            - Gets or sets the  EulerDomScopeDefType.
+          * - :py:attr:`~EulerDomainType`
+            - Gets or sets the  EulerDomainType.
+          * - :py:attr:`~EulerGradeIncrement`
+            - Gets or sets the  EulerGradeIncrement.
+          * - :py:attr:`~EulerGradeNumberOfTimes`
+            - Gets or sets the  EulerGradeNumberOfTimes.
+          * - :py:attr:`~EulerGradedDefinition`
+            - Gets or sets the  EulerGradedDefinition.
+          * - :py:attr:`~EulerPropertyDisplayBox`
+            - Gets or sets the  EulerPropertyDisplayBox.
+          * - :py:attr:`~EulerPropertyXmin`
+            - Gets or sets the  EulerPropertyXmin.
+          * - :py:attr:`~EulerPropertyXres`
+            - Gets or sets the  EulerPropertyXres.
+          * - :py:attr:`~EulerPropertyXsize`
+            - Gets or sets the  EulerPropertyXsize.
+          * - :py:attr:`~EulerPropertyYmin`
+            - Gets or sets the  EulerPropertyYmin.
+          * - :py:attr:`~EulerPropertyYres`
+            - Gets or sets the  EulerPropertyYres.
+          * - :py:attr:`~EulerPropertyYsize`
+            - Gets or sets the  EulerPropertyYsize.
+          * - :py:attr:`~EulerPropertyZmin`
+            - Gets or sets the  EulerPropertyZmin.
+          * - :py:attr:`~EulerPropertyZres`
+            - Gets or sets the  EulerPropertyZres.
+          * - :py:attr:`~EulerPropertyZsize`
+            - Gets or sets the  EulerPropertyZsize.
+          * - :py:attr:`~EulerResolutionDefType`
+            - Gets or sets the  EulerResolutionDefType.
+          * - :py:attr:`~EulerSizeDefType`
+            - Gets or sets the  EulerSizeDefType.
+          * - :py:attr:`~EulerTotalCells`
+            - Gets or sets the  EulerTotalCells.
+          * - :py:attr:`~EulerTrackType`
+            - Gets the  EulerTrackType.
+          * - :py:attr:`~EulerXDim`
+            - Gets or sets the  EulerXDim.
+          * - :py:attr:`~EulerXOrigin`
+            - Gets or sets the  EulerXOrigin.
+          * - :py:attr:`~EulerXScaleFactor`
+            - Gets or sets the  EulerXScaleFactor.
+          * - :py:attr:`~EulerXZones`
+            - Gets or sets the  EulerXZones.
+          * - :py:attr:`~EulerYDim`
+            - Gets or sets the  EulerYDim.
+          * - :py:attr:`~EulerYOrigin`
+            - Gets or sets the  EulerYOrigin.
+          * - :py:attr:`~EulerYScaleFactor`
+            - Gets or sets the  EulerYScaleFactor.
+          * - :py:attr:`~EulerYZones`
+            - Gets or sets the  EulerYZones.
+          * - :py:attr:`~EulerZDim`
+            - Gets or sets the  EulerZDim.
+          * - :py:attr:`~EulerZOrigin`
+            - Gets or sets the  EulerZOrigin.
+          * - :py:attr:`~EulerZScaleFactor`
+            - Gets or sets the  EulerZScaleFactor.
+          * - :py:attr:`~EulerZZones`
+            - Gets or sets the  EulerZZones.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Graph`
+            - Graph property.
+          * - :py:attr:`~HexIntegrationType`
+            - Gets or sets the  HexIntegrationType.
+          * - :py:attr:`~HourglassDampingType`
+            - Gets or sets the HourglassDampingType.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InitialTimeStep`
+            - Gets or sets the InitialTimeStep.
+          * - :py:attr:`~InternalObject`
+            - Gets the Internal Object. For advanced usage only.
+          * - :py:attr:`~LinearArtificialViscosity`
+            - Gets or sets the LinearArtificialViscosity.
+          * - :py:attr:`~LinearViscosityExpansionType`
+            - Gets or sets the LinearViscosityExpansionType.
+          * - :py:attr:`~LinearViscositySPH`
+            - Gets or sets the Linear Artificial Viscosity for SPH.
+          * - :py:attr:`~MassScalingMaxElem`
+            - Gets or sets the  MassScalingMaxElem.
+          * - :py:attr:`~MassScalingMaxPart`
+            - Gets or sets the  MassScalingMaxPart.
+          * - :py:attr:`~MassScalingMinTimeStep`
+            - Gets or sets the  MassScalingMinTimeStep.
+          * - :py:attr:`~MassScalingUpdateFreq`
+            - Gets or sets the  MassScalingUpdateFreq.
+          * - :py:attr:`~MaximumEnergyError`
+            - Gets or sets the  MaximumEnergyError.
+          * - :py:attr:`~MaximumTimeStep`
+            - Gets or sets the MaximumTimeStep.
+          * - :py:attr:`~MaximumTimeSteps`
+            - Gets or sets the MaximumNumberofCycles.
+          * - :py:attr:`~MaximumVelocity`
+            - Gets or sets the  MaximumVelocity.
+          * - :py:attr:`~MinimumStrainCutOff`
+            - Gets or sets the  MinimumStrainCutOff.
+          * - :py:attr:`~MinimumTimeStep`
+            - Gets or sets the MinimumTimeStep.
+          * - :py:attr:`~MinimumVelocity`
+            - Gets or sets the  MinimumVelocity.
+          * - :py:attr:`~NumberOfSteps`
+            - Gets or sets the NumberOfSteps.
+          * - :py:attr:`~OutputContactForcesOnPoints`
+            - Gets or Sets the Points increment for OutputContactForcesOnPoints.
+          * - :py:attr:`~OutputContactForcesOnTime`
+            - Gets or Sets the Time increment for OutputContactForcesOnTime.
+          * - :py:attr:`~OutputContactForcesOnTimeSteps`
+            - Gets or Sets the Cycle increment for OutputContactForcesOnTimeSteps.
+          * - :py:attr:`~OutputContactForcesOnType`
+            - Gets or Sets OutputContactForces Increment Type.
+          * - :py:attr:`~OutputRemapFile`
+            - Gets or Sets the Output Remap File Type.
+          * - :py:attr:`~PreferenceType`
+            - Gets or sets the PreferenceType
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~PusoCoefficient`
+            - Gets or sets the  PusoCoefficient.
+          * - :py:attr:`~QuadraticArtificialViscosity`
+            - Gets or sets the QuadraticArtificialViscosity.
+          * - :py:attr:`~QuadratricViscositySPH`
+            - Gets or sets the Quadratic Artificial Viscosity for SPH.
+          * - :py:attr:`~RadiusCutoff`
+            - Gets or sets the  RadiusCutoff.
+          * - :py:attr:`~ReferenceEnergyTimeStep`
+            - Gets or sets the ReferenceEnergyCycle.
+          * - :py:attr:`~ResumeFromTimeStep`
+            - Gets or sets the ResumeFromCycle.
+          * - :py:attr:`~SPHMaxDensityFactor`
+            - Gets or sets the  Maximum Density Factor for SPH.
+          * - :py:attr:`~SPHMinDensityFactor`
+            - Gets or sets the  Minimum Density Factor for SPH.
+          * - :py:attr:`~SPHNodeDensityCutoffOption`
+            - Gets or sets the  SPHNodeDensityCutoffOption.
+          * - :py:attr:`~SavePrintSummaryOnTime`
+            - Gets or Sets the Time increment for SavePrintSummaryOnTime.
+          * - :py:attr:`~SavePrintSummaryOnTimeSteps`
+            - Gets or Sets Cycle increment for SavePrintSummaryOnTimeSteps.
+          * - :py:attr:`~SavePrintSummaryOnType`
+            - Gets or Sets SavePrintSummaryOnType.
+          * - :py:attr:`~SaveUserEditOnTime`
+            - Gets or Sets Time increment for SaveUserEditOnTime.
+          * - :py:attr:`~SaveUserEditOnTimeSteps`
+            - Gets or Sets Cycle increment for SaveUserEditOnTimeSteps.
+          * - :py:attr:`~SaveUserEditOnType`
+            - Gets or Sets SaveUserEditOnType.
+          * - :py:attr:`~ScratchSolverFilesDirectory`
+            - Gets the ScratchSolverFilesDirectory.
+          * - :py:attr:`~ShellInertiaUpdateType`
+            - Gets or sets the  ShellInertiaUpdateType.
+          * - :py:attr:`~ShellShearCorrectionFactor`
+            - Gets or sets the  ShellShearCorrectionFactor.
+          * - :py:attr:`~ShellSublayers`
+            - Gets or sets the  ShellSublayers.
+          * - :py:attr:`~ShellThicknessUpdateType`
+            - Gets or sets the  ShellThicknessUpdateType.
+          * - :py:attr:`~ShellWarpCorrection`
+            - Gets or sets the  ShellWarpCorrection.
+          * - :py:attr:`~SolveUnits`
+            - Gets or sets the  SolveUnits.
+          * - :py:attr:`~SolverFilesDirectory`
+            - Gets the SolverFilesDirectory.
+          * - :py:attr:`~SolverPrecisionType`
+            - Gets or sets the  SolverPrecisionType.
+          * - :py:attr:`~SphMinTimeStep`
+            - Gets or sets the  Minimum Timestep for SPH.
+          * - :py:attr:`~StepawareMassScalingType`
+            - Gets or Sets the Step aware Mass Scaling Controls.
+          * - :py:attr:`~StepawareOutputControlsType`
+            - Gets or Sets the Step aware Output Controls.
+          * - :py:attr:`~StiffnessCoefficient`
+            - Gets or sets the StiffnessCoefficient.
+          * - :py:attr:`~TetPressureIntegrationType`
+            - Gets or sets the  TetIntegrationType.
+          * - :py:attr:`~TimeStepSafetyFactor`
+            - Gets or sets the  TimeStepSafetyFactor.
+          * - :py:attr:`~ViscousCoefficient`
+            - Gets or sets the ViscousCoefficient.
+          * - :py:attr:`~ViscousCoefficientFB`
+            - Gets or sets the ViscousCoefficientFB.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ArtificialViscosityForShellsType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ArtificialViscosityForShellsType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutomaticMassScalingType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the  AutomaticMassScaling.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamSolutionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDBeamSolutionType]
+
+
+   
+   Gets or sets the  BeamSolutionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BeamTimeStepSafetyFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  BeamTimeStepSafetyFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CharZoneDimensionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDCharZoneDimensionType]
+
+
+   
+   Gets or sets the  CharZoneDimensionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comments
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
+
+
+   
+   Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentStepNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the CurrentStepNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DensityUpdateType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDDensityUpdateType]
+
+
+   
+   Gets or sets the  DensityUpdateType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DetonationBurnType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDDetonationBurnType]
+
+
+   
+   Gets or sets the  DetonationBurnType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ErosionGeomStrainLimit
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ErosionGeomStrainLimit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ErosionMinElemTimestep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the ErosionMinElemTimestep
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ErosionOnGeomStrainType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ErosionOnGeomStrainType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ErosionOnMaterialFailureType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ErosionOnMaterialFailureType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ErosionOnMinElemTimestepType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ErosionOnMinElemTimestepType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ErosionRetainIntertiaType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ErosionRetainIntertiaType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerBoundLowerX
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType]
+
+
+   
+   Gets or sets the  EulerBoundLowerX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerBoundLowerY
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType]
+
+
+   
+   Gets or sets the  EulerBoundLowerY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerBoundLowerZ
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType]
+
+
+   
+   Gets or sets the  EulerBoundLowerZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerBoundUpperX
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType]
+
+
+   
+   Gets or sets the  EulerBoundUpperX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerBoundUpperY
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType]
+
+
+   
+   Gets or sets the  EulerBoundUpperY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerBoundUpperZ
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerBoundaryDefType]
+
+
+   
+   Gets or sets the  EulerBoundUpperZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerCellSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerCellSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerDisplayBox
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the  EulerDisplayBox.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerDomScopeDefType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerDomScopeDefType]
+
+
+   
+   Gets or sets the  EulerDomScopeDefType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerDomainType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerDomainType]
+
+
+   
+   Gets or sets the  EulerDomainType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerGradeIncrement
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerGradeIncrement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerGradeNumberOfTimes
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerGradeNumberOfTimes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerGradedDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerGradedDefinition]
+
+
+   
+   Gets or sets the  EulerGradedDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyDisplayBox
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the  EulerPropertyDisplayBox.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyXmin
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerPropertyXmin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyXres
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerPropertyXres.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyXsize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerPropertyXsize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyYmin
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerPropertyYmin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyYres
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerPropertyYres.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyYsize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerPropertyYsize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyZmin
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerPropertyZmin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyZres
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerPropertyZres.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerPropertyZsize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerPropertyZsize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerResolutionDefType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerResolutionDefType]
+
+
+   
+   Gets or sets the  EulerResolutionDefType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerSizeDefType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerSizeDefType]
+
+
+   
+   Gets or sets the  EulerSizeDefType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerTotalCells
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerTotalCells.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerTrackType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDEulerTrackType]
+
+
+   
+   Gets the  EulerTrackType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerXDim
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerXDim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerXOrigin
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerXOrigin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerXScaleFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  EulerXScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerXZones
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerXZones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerYDim
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerYDim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerYOrigin
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerYOrigin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerYScaleFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  EulerYScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerYZones
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerYZones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerZDim
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerZDim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerZOrigin
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  EulerZOrigin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerZScaleFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  EulerZScaleFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EulerZZones
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  EulerZZones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Graph
+   :type: Optional[Ansys.Mechanical.Graphics.AnalysisSettingsGraph]
+
+
+   
+   Graph property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HexIntegrationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDHexIntegrationType]
+
+
+   
+   Gets or sets the  HexIntegrationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HourglassDampingType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDHourglassDampingType]
+
+
+   
+   Gets or sets the HourglassDampingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InitialTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the InitialTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Any]
+
+
+   
+   Gets the Internal Object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LinearArtificialViscosity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the LinearArtificialViscosity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LinearViscosityExpansionType
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the LinearViscosityExpansionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LinearViscositySPH
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Linear Artificial Viscosity for SPH.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MassScalingMaxElem
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  MassScalingMaxElem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MassScalingMaxPart
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  MassScalingMaxPart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MassScalingMinTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  MassScalingMinTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MassScalingUpdateFreq
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  MassScalingUpdateFreq.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumEnergyError
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  MaximumEnergyError.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MaximumTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumTimeSteps
+   :type: Optional[int]
+
+
+   
+   Gets or sets the MaximumNumberofCycles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumVelocity
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  MaximumVelocity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumStrainCutOff
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  MinimumStrainCutOff.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the MinimumTimeStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MinimumVelocity
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  MinimumVelocity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSteps
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutputContactForcesOnPoints
+   :type: Optional[int]
+
+
+   
+   Gets or Sets the Points increment for OutputContactForcesOnPoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutputContactForcesOnTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or Sets the Time increment for OutputContactForcesOnTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutputContactForcesOnTimeSteps
+   :type: Optional[int]
+
+
+   
+   Gets or Sets the Cycle increment for OutputContactForcesOnTimeSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutputContactForcesOnType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDOutputContactForcesOnType]
+
+
+   
+   Gets or Sets OutputContactForces Increment Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutputRemapFile
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDOutputRemapFileOnType]
+
+
+   
+   Gets or Sets the Output Remap File Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreferenceType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDPreferenceType]
+
+
+   
+   Gets or sets the PreferenceType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PusoCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  PusoCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuadraticArtificialViscosity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the QuadraticArtificialViscosity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuadratricViscositySPH
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Quadratic Artificial Viscosity for SPH.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RadiusCutoff
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  RadiusCutoff.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceEnergyTimeStep
+   :type: Optional[int]
+
+
+   
+   Gets or sets the ReferenceEnergyCycle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResumeFromTimeStep
+   :type: Optional[int]
+
+
+   
+   Gets or sets the ResumeFromCycle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SPHMaxDensityFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  Maximum Density Factor for SPH.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SPHMinDensityFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  Minimum Density Factor for SPH.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SPHNodeDensityCutoffOption
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDSPHNodeDensityCutoffOption]
+
+
+   
+   Gets or sets the  SPHNodeDensityCutoffOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SavePrintSummaryOnTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or Sets the Time increment for SavePrintSummaryOnTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SavePrintSummaryOnTimeSteps
+   :type: Optional[int]
+
+
+   
+   Gets or Sets Cycle increment for SavePrintSummaryOnTimeSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SavePrintSummaryOnType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDSavePrintSummaryOnType]
+
+
+   
+   Gets or Sets SavePrintSummaryOnType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveUserEditOnTime
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or Sets Time increment for SaveUserEditOnTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveUserEditOnTimeSteps
+   :type: Optional[int]
+
+
+   
+   Gets or Sets Cycle increment for SaveUserEditOnTimeSteps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SaveUserEditOnType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDSaveUserEditOnType]
+
+
+   
+   Gets or Sets SaveUserEditOnType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScratchSolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the ScratchSolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellInertiaUpdateType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDShellInertiaUpdateType]
+
+
+   
+   Gets or sets the  ShellInertiaUpdateType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellShearCorrectionFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  ShellShearCorrectionFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellSublayers
+   :type: Optional[int]
+
+
+   
+   Gets or sets the  ShellSublayers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellThicknessUpdateType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDShellThicknessUpdateType]
+
+
+   
+   Gets or sets the  ShellThicknessUpdateType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellWarpCorrection
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the  ShellWarpCorrection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolveUnits
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDSolveUnitsType]
+
+
+   
+   Gets or sets the  SolveUnits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   Gets the SolverFilesDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverPrecisionType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDSolverPrecisionType]
+
+
+   
+   Gets or sets the  SolverPrecisionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SphMinTimeStep
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the  Minimum Timestep for SPH.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepawareMassScalingType
+   :type: Optional[bool]
+
+
+   
+   Gets or Sets the Step aware Mass Scaling Controls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepawareOutputControlsType
+   :type: Optional[bool]
+
+
+   
+   Gets or Sets the Step aware Output Controls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StiffnessCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the StiffnessCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TetPressureIntegrationType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.EXDTetPressureIntegrationType]
+
+
+   
+   Gets or sets the  TetIntegrationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TimeStepSafetyFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the  TimeStepSafetyFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ViscousCoefficient
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ViscousCoefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ViscousCoefficientFB
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ViscousCoefficientFB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddComment() -> Ansys.ACT.Automation.Mechanical.Comment
+
+   
+   Creates a new child Comment.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteAllRestartPoints() -> None
+
+   
+   DeleteAllRestartPoints method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAutomaticMassScalingType(stepNumber: int) -> bool
+
+   
+   Gets the  AutomaticMassScalingType for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLoadStepType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.EXDLoadStepType
+
+   
+   Gets the  LoadStepType for a step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMassScalingMinTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the  MassScalingMinTimeStep for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveProbeDataOnTime(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Time increment for Save ProbeData On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveProbeDataOnTimeSteps(stepNumber: int) -> int
+
+   
+   Gets the Cycle increment for Save ProbeData On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveProbeDataOnType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.EXDSaveProbeDataOnType
+
+   
+   Gets the  Save ProbeData Type for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveRestartsOnPoints(stepNumber: int) -> int
+
+   
+   Gets the Points increment for Save Restarts On Points for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveRestartsOnTime(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Time increment for Save Restarts On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveRestartsOnTimeSteps(stepNumber: int) -> int
+
+   
+   Gets the Cycle increment for Save Restarts On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveRestartsOnType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.EXDSaveRestartsOnType
+
+   
+   Gets the  Save Restarts Type for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveResultsOnPoints(stepNumber: int) -> int
+
+   
+   Gets the Points increment for Save Results On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveResultsOnTime(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Time increment for Save Results On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveResultsOnTimeSteps(stepNumber: int) -> int
+
+   
+   Gets the Cycle increment for Save Results On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSaveResultsOnType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.EXDSaveResultsOnType
+
+   
+   Gets the  Save Results Type for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStaticDamping(stepNumber: int) -> Any
+
+   
+   Gets the StaticDamping.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStepEndTime(stepNumber: int) -> Ansys.Core.Units.Quantity
+
+   
+   Gets the Step End Time at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetAutomaticMassScalingType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.EXDAutomaticMassScalingType) -> None
+
+   
+   Sets the  AutomaticMassScalingType for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetLoadStepType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.EXDLoadStepType) -> None
+
+   
+   Sets the LoadStepType for a step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMassScalingMinTimeStep(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the  MassScalingMinTimeStep for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveProbeDataOnTime(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Set the Time increment for Save ProbeData On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveProbeDataOnTimeSteps(stepNumber: int, value: int) -> None
+
+   
+   Set the Cycle increment for Save ProbeData On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveProbeDataOnType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.EXDSaveProbeDataOnType) -> None
+
+   
+   Sets the  Save ProbeData Type for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveRestartsOnPoints(stepNumber: int, value: int) -> None
+
+   
+   Set the Points increment for Save Restarts On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveRestartsOnTime(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Set the Time increment for Save Restarts On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveRestartsOnTimeSteps(stepNumber: int, value: int) -> None
+
+   
+   Set the Cycle increment for Save Restarts On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveRestartsOnType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.EXDSaveRestartsOnType) -> None
+
+   
+   Sets the  Save Restarts Type for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveResultsOnPoints(stepNumber: int, value: int) -> None
+
+   
+   Set the Points increment for Save Results On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveResultsOnTime(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Set the Time increment for Save Results On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveResultsOnTimeSteps(stepNumber: int, value: int) -> None
+
+   
+   Sets the Cycle increment for Save Results On for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSaveResultsOnType(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.EXDSaveResultsOnType) -> None
+
+   
+   Sets the  Save Results Type for a load step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStaticDamping(stepNumber: int, value: float) -> None
+
+   
+   Sets the StaticDamping.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetStepEndTime(stepNumber: int, value: Ansys.Core.Units.Quantity) -> None
+
+   
+   Sets the Step End Time for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: getADRConvergenceMethod(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.EXDADRConvergenceMethod
+
+   
+   Gets the Covergence Method for ADR loadstep.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: getADRConvergenceTolerance(stepNumber: int) -> Any
+
+   
+   Gets the Covergence Tolerance for ADR loadstep.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: getADRMaximumIterations(stepNumber: int) -> Any
+
+   
+   Gets the Maximum Iterations for ADR loadstep.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: setADRConvergenceMethod(stepNumber: int, value: Ansys.Mechanical.DataModel.Enums.EXDADRConvergenceMethod) -> None
+
+   
+   Sets the Covergence Method for ADR loadstep.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: setADRConvergenceTolerance(stepNumber: int, value: float) -> None
+
+   
+   Sets the Covergence Tolerance for ADR loadstep.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: setADRMaximumIterations(stepNumber: int, value: int) -> None
+
+   
+   Sets the Maximum Iterations for ADR loadstep.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
