@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SpacingOptionType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SpacingOptionType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpacingOptionType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpacingOptionType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Default`
+            - 
+          * - :py:attr:`~UserControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Default
+   :value: 0
+
+
+.. py:attribute:: UserControlled
+   :value: 1
+
+
+
+
+
+
+.. vale on

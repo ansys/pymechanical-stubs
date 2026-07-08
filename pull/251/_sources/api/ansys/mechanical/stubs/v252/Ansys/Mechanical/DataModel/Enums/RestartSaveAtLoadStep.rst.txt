@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`RestartSaveAtLoadStep`
+==============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.RestartSaveAtLoadStep(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the RestartSaveAtLoadStep.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RestartSaveAtLoadStep
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Last`
+            - 
+          * - :py:attr:`~None_`
+            - 
+          * - :py:attr:`~Specify`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: Last
+   :value: 1
+
+
+.. py:attribute:: None_
+   :value: 0
+
+
+.. py:attribute:: Specify
+   :value: 3
+
+
+
+
+
+
+.. vale on

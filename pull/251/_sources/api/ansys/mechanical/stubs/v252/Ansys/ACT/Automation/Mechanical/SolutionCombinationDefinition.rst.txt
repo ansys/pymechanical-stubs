@@ -1,0 +1,328 @@
+.. vale off
+
+
+
+:class:`SolutionCombinationDefinition`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.SolutionCombinationDefinition
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: SolutionCombinationDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddBaseCase`
+            - Add a BaseCase to the SolutionCombinationDefinition
+          * - :py:attr:`~AddLoadCombination`
+            - Add a LoadCombination to the SolutionCombination Definition
+          * - :py:attr:`~DeleteBaseCase`
+            - Delete a BaseCase from the SolutionCombinationDefinition
+          * - :py:attr:`~DeleteLoadCombination`
+            - Delete a LoadCombination from the SolutionCombination Definition
+          * - :py:attr:`~Export`
+            - Export Load Combination Definition data to Comma Separated Value (CSV) files
+          * - :py:attr:`~GetBaseCaseAnalysis`
+            - Gets the BaseCase Analysis property at given index.
+          * - :py:attr:`~GetBaseCaseFrequency`
+            - Gets the Frequency property from the Base Case at given index
+          * - :py:attr:`~GetBaseCaseName`
+            - Gets the BaseCase Name property at given index
+          * - :py:attr:`~GetBaseCasePhaseAngle`
+            - Gets the Phase Angle property from the Base Case at given index
+          * - :py:attr:`~GetBaseCaseTime`
+            - Gets the Time property from the Base Case at given index
+          * - :py:attr:`~GetCoefficient`
+            - Gets the Coefficient property at given LoadCombination index and BaseCase index
+          * - :py:attr:`~GetLoadCombinationName`
+            - Gets the LoadCombination Name property at given index
+          * - :py:attr:`~GetLoadCombinationType`
+            - Gets the Load Combination Type property at given index
+          * - :py:attr:`~Import`
+            - Import Load Combination Definition data from Comma Separated Value (CSV) files
+          * - :py:attr:`~SetBaseCaseAnalysis`
+            - Sets the BaseCase Analysis property to given index.
+          * - :py:attr:`~SetBaseCaseFrequency`
+            - Sets the Frequency property to the Base Case at given index
+          * - :py:attr:`~SetBaseCaseName`
+            - Sets the BaseCase Name property at given index
+          * - :py:attr:`~SetBaseCasePhaseAngle`
+            - Sets the Phase Angle property to the Base Case at given index
+          * - :py:attr:`~SetBaseCaseTime`
+            - Sets the Time property to the Base Case at given index
+          * - :py:attr:`~SetCoefficient`
+            - Sets  the Coefficient property at given LoadCombination index and BaseCase index
+          * - :py:attr:`~SetLoadCombinationName`
+            - Sets the LoadCombination Name property at given index
+          * - :py:attr:`~SetLoadCombinationType`
+            - Sets the Load Combination Type property at given index
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BaseCaseCount`
+            - Gets the number of bases cases
+          * - :py:attr:`~LoadCombinationCount`
+            - Gets the number of load combinations
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BaseCaseCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of bases cases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadCombinationCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of load combinations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddBaseCase(name: str, analysis: Ansys.ACT.Automation.Mechanical.Analysis, time: float) -> None
+
+   
+   Add a BaseCase to the SolutionCombinationDefinition
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddLoadCombination(name: str, type: int) -> None
+
+   
+   Add a LoadCombination to the SolutionCombination Definition
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteBaseCase(index: int) -> None
+
+   
+   Delete a BaseCase from the SolutionCombinationDefinition
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteLoadCombination(index: int) -> None
+
+   
+   Delete a LoadCombination from the SolutionCombination Definition
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Export(filepath: str) -> None
+
+   
+   Export Load Combination Definition data to Comma Separated Value (CSV) files
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBaseCaseAnalysis(index: int) -> Ansys.ACT.Automation.Mechanical.Analysis
+
+   
+   Gets the BaseCase Analysis property at given index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBaseCaseFrequency(index: int) -> float
+
+   
+   Gets the Frequency property from the Base Case at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBaseCaseName(index: int) -> str
+
+   
+   Gets the BaseCase Name property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBaseCasePhaseAngle(index: int) -> float
+
+   
+   Gets the Phase Angle property from the Base Case at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBaseCaseTime(index: int) -> float
+
+   
+   Gets the Time property from the Base Case at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCoefficient(LCindex: int, BCindex: int) -> float
+
+   
+   Gets the Coefficient property at given LoadCombination index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLoadCombinationName(index: int) -> str
+
+   
+   Gets the LoadCombination Name property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLoadCombinationType(index: int) -> Ansys.Mechanical.DataModel.Enums.LoadCombinationType
+
+   
+   Gets the Load Combination Type property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Import(filepath: str) -> None
+
+   
+   Import Load Combination Definition data from Comma Separated Value (CSV) files
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetBaseCaseAnalysis(index: int, analysis: Ansys.ACT.Automation.Mechanical.Analysis) -> None
+
+   
+   Sets the BaseCase Analysis property to given index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetBaseCaseFrequency(index: int, value: float) -> None
+
+   
+   Sets the Frequency property to the Base Case at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetBaseCaseName(index: int, name: str) -> None
+
+   
+   Sets the BaseCase Name property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetBaseCasePhaseAngle(index: int, value: float) -> None
+
+   
+   Sets the Phase Angle property to the Base Case at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetBaseCaseTime(index: int, value: float) -> None
+
+   
+   Sets the Time property to the Base Case at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCoefficient(LCindex: int, BCindex: int, value: float) -> None
+
+   
+   Sets  the Coefficient property at given LoadCombination index and BaseCase index 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetLoadCombinationName(index: int, name: str) -> None
+
+   
+   Sets the LoadCombination Name property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetLoadCombinationType(index: int, value: Ansys.Mechanical.DataModel.Enums.LoadCombinationType) -> None
+
+   
+   Sets the Load Combination Type property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

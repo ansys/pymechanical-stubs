@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ElectricType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ElectricType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Electric Physics Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ElectricType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ChargeBased`
+            - 
+          * - :py:attr:`~Conduction`
+            - 
+          * - :py:attr:`~No`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ChargeBased
+   :value: 128
+
+
+.. py:attribute:: Conduction
+   :value: 4
+
+
+.. py:attribute:: No
+   :value: 0
+
+
+
+
+
+
+.. vale on

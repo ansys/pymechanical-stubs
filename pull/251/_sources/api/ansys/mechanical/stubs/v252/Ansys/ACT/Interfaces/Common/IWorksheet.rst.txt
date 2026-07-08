@@ -1,0 +1,122 @@
+.. vale off
+
+
+
+:class:`IWorksheet`
+===================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.IWorksheet
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a worksheets information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IWorksheet
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AddRow`
+            - Adds a row to the worksheet.
+          * - :py:attr:`~DeleteRow`
+            - Deletes a row from the worksheet at index.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - Gets the number of rows contained in the worksheet.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of rows contained in the worksheet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: AddRow() -> int
+
+   
+   Adds a row to the worksheet.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+   
+   Deletes a row from the worksheet at index.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

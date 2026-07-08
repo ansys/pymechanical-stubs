@@ -1,0 +1,42 @@
+.. vale off
+
+
+
+:class:`PlaneType`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.ConstructionLines.PlaneType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Enumeration for the possible edge vertex types that can be represented.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+.. vale on

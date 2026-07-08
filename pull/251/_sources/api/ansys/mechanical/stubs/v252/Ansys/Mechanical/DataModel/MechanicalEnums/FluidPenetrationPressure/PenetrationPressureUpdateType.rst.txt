@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PenetrationPressureUpdateType`
+======================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.FluidPenetrationPressure.PenetrationPressureUpdateType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PenetrationPressureUpdateType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PenetrationPressureUpdateType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~EachIterationUpdate`
+            - 
+          * - :py:attr:`~EachSubstepUpdate`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: EachIterationUpdate
+   :value: 2
+
+
+.. py:attribute:: EachSubstepUpdate
+   :value: 1
+
+
+
+
+
+
+.. vale on

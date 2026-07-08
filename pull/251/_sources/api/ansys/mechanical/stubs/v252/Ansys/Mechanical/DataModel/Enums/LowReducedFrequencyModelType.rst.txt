@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`LowReducedFrequencyModelType`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.LowReducedFrequencyModelType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the LowReducedFrequencyModelType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LowReducedFrequencyModelType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CircularTube`
+            - 
+          * - :py:attr:`~RectangularTube`
+            - 
+          * - :py:attr:`~ThinLayer`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: CircularTube
+   :value: 2
+
+
+.. py:attribute:: RectangularTube
+   :value: 1
+
+
+.. py:attribute:: ThinLayer
+   :value: 0
+
+
+
+
+
+
+.. vale on

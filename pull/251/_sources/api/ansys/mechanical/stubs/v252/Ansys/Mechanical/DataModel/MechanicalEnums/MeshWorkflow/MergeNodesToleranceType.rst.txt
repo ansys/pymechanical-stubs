@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MergeNodesToleranceType`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.MergeNodesToleranceType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum specifies the merge nodes tolerance type to be used when executing Merge Nodes operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MergeNodesToleranceType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Absolute`
+            - 
+          * - :py:attr:`~Relative`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Absolute
+   :value: 1
+
+
+.. py:attribute:: Relative
+   :value: 2
+
+
+
+
+
+
+.. vale on

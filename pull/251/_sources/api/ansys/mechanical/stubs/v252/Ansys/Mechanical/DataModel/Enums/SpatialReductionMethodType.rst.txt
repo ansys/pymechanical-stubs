@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`SpatialReductionMethodType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SpatialReductionMethodType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SpatialReductionMethodType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SpatialReductionMethodType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Continuous`
+            - 
+          * - :py:attr:`~Discrete`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Continuous
+   :value: 1
+
+
+.. py:attribute:: Discrete
+   :value: 0
+
+
+
+
+
+
+.. vale on
