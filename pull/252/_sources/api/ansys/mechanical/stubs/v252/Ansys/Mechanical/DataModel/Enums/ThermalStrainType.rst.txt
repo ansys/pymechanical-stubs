@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`ThermalStrainType`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ThermalStrainType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ThermalStrainType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ThermalStrainType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~Strong`
+            - 
+          * - :py:attr:`~Weak`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+.. py:attribute:: Strong
+   :value: 1
+
+
+.. py:attribute:: Weak
+   :value: 2
+
+
+
+
+
+
+.. vale on

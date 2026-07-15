@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`MinimumOrMaximum`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.MinimumOrMaximum(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the MinimumOrMaximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MinimumOrMaximum
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Maximum`
+            - 
+          * - :py:attr:`~Minimum`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Maximum
+   :value: 1
+
+
+.. py:attribute:: Minimum
+   :value: 0
+
+
+
+
+
+
+.. vale on

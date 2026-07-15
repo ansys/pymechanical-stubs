@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FractureSIFSProbeSubType`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FractureSIFSProbeSubType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FractureSIFSProbeSubType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FractureSIFSProbeSubType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~K1`
+            - 
+          * - :py:attr:`~K2`
+            - 
+          * - :py:attr:`~K3`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: K1
+   :value: 43
+
+
+.. py:attribute:: K2
+   :value: 44
+
+
+.. py:attribute:: K3
+   :value: 45
+
+
+
+
+
+
+.. vale on

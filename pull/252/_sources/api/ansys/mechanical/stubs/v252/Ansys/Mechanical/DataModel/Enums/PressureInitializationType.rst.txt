@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`PressureInitializationType`
+===================================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PressureInitializationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PressureInitializationType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PressureInitializationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~FromDeformedState`
+            - 
+          * - :py:attr:`~FromStressTrace`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: FromDeformedState
+   :value: 0
+
+
+.. py:attribute:: FromStressTrace
+   :value: 1
+
+
+
+
+
+
+.. vale on

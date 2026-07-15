@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`FillingMethod`
+======================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FillingMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Enum to declares how the volume is filled for an Optimization Material. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FillingMethod
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Full`
+            - 
+          * - :py:attr:`~Lattice`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Full
+   :value: 0
+
+
+.. py:attribute:: Lattice
+   :value: 1
+
+
+
+
+
+
+.. vale on
