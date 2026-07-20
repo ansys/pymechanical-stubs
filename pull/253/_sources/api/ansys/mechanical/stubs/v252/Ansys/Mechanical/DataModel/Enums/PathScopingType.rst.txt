@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`PathScopingType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PathScopingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the PathScopingType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PathScopingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Edge`
+            - 
+          * - :py:attr:`~Offset`
+            - 
+          * - :py:attr:`~Points`
+            - 
+          * - :py:attr:`~Ray`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Edge
+   :value: 1
+
+
+.. py:attribute:: Offset
+   :value: 3
+
+
+.. py:attribute:: Points
+   :value: 0
+
+
+.. py:attribute:: Ray
+   :value: 2
+
+
+
+
+
+
+.. vale on

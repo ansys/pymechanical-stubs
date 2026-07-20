@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`FixedOrFree`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FixedOrFree(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the FixedOrFree.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FixedOrFree
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Fixed`
+            - 
+          * - :py:attr:`~Free`
+            - 
+          * - :py:attr:`~MixedConstraints`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Fixed
+   :value: 0
+
+
+.. py:attribute:: Free
+   :value: 1
+
+
+.. py:attribute:: MixedConstraints
+   :value: 2
+
+
+
+
+
+
+.. vale on

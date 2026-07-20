@@ -1,0 +1,1333 @@
+.. vale off
+
+
+
+:class:`MeshWorkflowOutcome`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome
+
+   Bases: :py:obj:`object`
+
+
+   
+   Object that wraps IDSEngineeringModelOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshWorkflowOutcome
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BoundingBoxDimensions`
+            - Gets the bounding box extents of the input aligned along the direction of stacking.
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~FailureMessage`
+            - Gets the failure message.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~MultiZoneDefeaturedEdges`
+            - Gets the number of edges for which MultiZone Meshing output no mesh elements.
+          * - :py:attr:`~MultiZoneDefeaturedEdgesScopeMethod`
+            - Gets the scope method for the MultiZone Defeatured Edges scope outcome.
+          * - :py:attr:`~MultiZoneDefeaturedEdgesScopePattern`
+            - Gets the scope pattern for the MultiZone Defeatured Edges scope outcome.
+          * - :py:attr:`~MultiZoneDefeaturedFaces`
+            - Gets the number of faces for which MultiZone Meshing output no mesh elements.
+          * - :py:attr:`~MultiZoneDefeaturedFacesScopeMethod`
+            - Gets the scope method for the MultiZone Defeatured Faces scope outcome.
+          * - :py:attr:`~MultiZoneDefeaturedFacesScopePattern`
+            - Gets the scope pattern for the MultiZone Defeatured Faces scope outcome.
+          * - :py:attr:`~MultiZoneFailedBlocking`
+            - Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Blocking failed.
+          * - :py:attr:`~MultiZoneFailedBlockingScopeMethod`
+            - Gets the scope method for the MultiZone Failed Blocking scope outcome.
+          * - :py:attr:`~MultiZoneFailedBlockingScopePattern`
+            - Gets the scope pattern for the MultiZone Failed Blocking scope outcome.
+          * - :py:attr:`~MultiZoneFailedInflation`
+            - Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Inflation failed.
+          * - :py:attr:`~MultiZoneFailedInflationScopeMethod`
+            - Gets the scope method for the MultiZone Failed Inflation scope outcome.
+          * - :py:attr:`~MultiZoneFailedInflationScopePattern`
+            - Gets the scope pattern for the MultiZone Failed Inflation scope outcome.
+          * - :py:attr:`~MultiZoneFailedInputMesh`
+            - Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Meshing failed to conformally connect to the input mesh.
+          * - :py:attr:`~MultiZoneFailedInputScopeMethod`
+            - Gets the scope method for the MultiZone Failed Input Mesh Connection scope outcome.
+          * - :py:attr:`~MultiZoneFailedInputScopePattern`
+            - Gets the scope pattern for the MultiZone Failed Input Mesh Connection scope outcome.
+          * - :py:attr:`~MultiZoneFailedMesh`
+            - Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Meshing failed to create a mesh.
+          * - :py:attr:`~MultiZoneFailedMeshCheck`
+            - Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Meshing created inverted or invalid elements.
+          * - :py:attr:`~MultiZoneFailedMeshCheckScopeMethod`
+            - Gets the scope method for the MultiZone Failed Mesh Check scope outcome.
+          * - :py:attr:`~MultiZoneFailedMeshCheckScopePattern`
+            - Gets the scope pattern for the MultiZone Failed Mesh Check scope outcome.
+          * - :py:attr:`~MultiZoneFailedMeshScopeMethod`
+            - Gets the scope method for the MultiZone Failed Mesh scope outcome.
+          * - :py:attr:`~MultiZoneFailedMeshScopePattern`
+            - Gets the scope pattern for the MultiZone Failed Mesh scope outcome.
+          * - :py:attr:`~MultiZoneFreeMesh`
+            - Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Blocking failed to create a swept or mapped block.
+          * - :py:attr:`~MultiZoneFreeMeshScopeMethod`
+            - Gets the scope method for the MultiZone Free Mesh scope outcome.
+          * - :py:attr:`~MultiZoneFreeMeshScopePattern`
+            - Gets the scope pattern for the MultiZone Free Mesh scope outcome.
+          * - :py:attr:`~OutcomeType`
+            - Returns the type of the control.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~ScopeDefinition`
+            - Gets or sets the type of scope definition for the control scoping. Default: Value.
+          * - :py:attr:`~ScopeMethod`
+            - Gets or sets the scoping method for the control scoping.
+          * - :py:attr:`~ScopeOutcome`
+            - Gets or sets the scope outcome for the scoping scoping from a previous operation. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~ScopePattern`
+            - Gets or sets the pattern that defines the scope of the control. Applicable only if scope is defined by value.
+          * - :py:attr:`~SizeFieldName`
+            - 
+          * - :py:attr:`~SmallestLateralEdgeLength`
+            - Gets the smallest edge length along the lateral direction of stacking.
+          * - :py:attr:`~SmallestStackingEdgeLength`
+            - Gets the smallest edge length along the stacking direction.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WarningMessage`
+            - Gets the warning message.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: BoundingBoxDimensions
+   :type: Optional[Ansys.Mechanical.Graphics.Point]
+
+
+   
+   Gets the bounding box extents of the input aligned along the direction of stacking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailureMessage
+   :type: Optional[str]
+
+
+   
+   Gets the failure message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelOutcomeAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneDefeaturedEdges
+   :type: Optional[int]
+
+
+   
+   Gets the number of edges for which MultiZone Meshing output no mesh elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneDefeaturedEdgesScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Defeatured Edges scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneDefeaturedEdgesScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Defeatured Edges scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneDefeaturedFaces
+   :type: Optional[int]
+
+
+   
+   Gets the number of faces for which MultiZone Meshing output no mesh elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneDefeaturedFacesScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Defeatured Faces scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneDefeaturedFacesScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Defeatured Faces scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedBlocking
+   :type: Optional[int]
+
+
+   
+   Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Blocking failed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedBlockingScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Failed Blocking scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedBlockingScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Failed Blocking scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedInflation
+   :type: Optional[int]
+
+
+   
+   Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Inflation failed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedInflationScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Failed Inflation scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedInflationScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Failed Inflation scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedInputMesh
+   :type: Optional[int]
+
+
+   
+   Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Meshing failed to conformally connect to the input mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedInputScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Failed Input Mesh Connection scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedInputScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Failed Input Mesh Connection scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedMesh
+   :type: Optional[int]
+
+
+   
+   Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Meshing failed to create a mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedMeshCheck
+   :type: Optional[int]
+
+
+   
+   Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Meshing created inverted or invalid elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedMeshCheckScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Failed Mesh Check scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedMeshCheckScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Failed Mesh Check scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedMeshScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Failed Mesh scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFailedMeshScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Failed Mesh scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFreeMesh
+   :type: Optional[int]
+
+
+   
+   Gets the number of entities (Volumes for 3D, Faces for 2D) for which the MultiZone Blocking failed to create a swept or mapped block.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFreeMeshScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the MultiZone Free Mesh scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiZoneFreeMeshScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the MultiZone Free Mesh scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutcomeType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType]
+
+
+   
+   Returns the type of the control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the control scoping. Default: Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the control scoping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome for the scoping scoping from a previous operation. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the pattern that defines the scope of the control. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SizeFieldName
+   :type: Optional[str]
+
+
+.. py:property:: SmallestLateralEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the smallest edge length along the lateral direction of stacking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SmallestStackingEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets the smallest edge length along the stacking direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WarningMessage
+   :type: Optional[str]
+
+
+   
+   Gets the warning message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

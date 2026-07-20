@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`LoadCombinationType`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.LoadCombinationType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Load Combination type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: LoadCombinationType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Linear`
+            - 
+          * - :py:attr:`~SRSS`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Linear
+   :value: 0
+
+
+.. py:attribute:: SRSS
+   :value: 1
+
+
+
+
+
+
+.. vale on

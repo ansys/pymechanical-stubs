@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`SendAs`
+===============
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.SendAs(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the SendAs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: SendAs
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Mesh200`
+            - 
+          * - :py:attr:`~Nodes`
+            - 
+          * - :py:attr:`~NotApplicable`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Mesh200
+   :value: 2
+
+
+.. py:attribute:: Nodes
+   :value: 1
+
+
+.. py:attribute:: NotApplicable
+   :value: 0
+
+
+
+
+
+
+.. vale on

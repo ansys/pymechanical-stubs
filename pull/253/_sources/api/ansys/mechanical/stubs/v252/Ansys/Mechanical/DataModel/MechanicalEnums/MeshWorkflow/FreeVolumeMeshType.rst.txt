@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`FreeVolumeMeshType`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.FreeVolumeMeshType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in MultiZone mesher controls. It specifies how free blocks are treated by the MultiZone meshing algorithm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FreeVolumeMeshType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~NotAllowed`
+            - 
+          * - :py:attr:`~TetraPyramid`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: NotAllowed
+   :value: 1
+
+
+.. py:attribute:: TetraPyramid
+   :value: 2
+
+
+
+
+
+
+.. vale on

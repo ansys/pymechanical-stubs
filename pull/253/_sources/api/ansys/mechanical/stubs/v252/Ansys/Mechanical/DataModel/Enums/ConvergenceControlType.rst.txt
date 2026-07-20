@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`ConvergenceControlType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ConvergenceControlType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the ConvergenceControlType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ConvergenceControlType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Manual`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Manual
+   :value: 1
+
+
+.. py:attribute:: ProgramControlled
+   :value: 0
+
+
+
+
+
+
+.. vale on
