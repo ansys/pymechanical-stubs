@@ -36,9 +36,11 @@ import System  # isort: skip
 ACCEPTED_TYPES = {
     "Ansys.Core.Units.Quantity",
     "Ansys.ACT.Interfaces.Common",
+    # "Ansys.ACT.Interfaces.Graphics.Entities",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
     "Ansys.ACT.Mechanical.MechanicalDataModel",
     "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
+    "Ansys.ACT.Core.Math",
 }
 
 
@@ -73,6 +75,7 @@ def resolve():
 
         # Add path for Ans.Core
         ans_core_path = str(Path(install_dir, "Framework", "bin", os_string))
+        print(ans_core_path)
         sys.path.append(ans_core_path)
         clr.AddReference("Ans.Core")
 
@@ -87,6 +90,8 @@ def resolve():
         )
         sys.path.append(ans_engineering_data_path)
         clr.AddReference("Ans.EngineeringData")
+
+        # Add path for Ansys.ACT.Core.Math
 
     import Ansys
 
@@ -279,11 +284,11 @@ def main():
 
     # Assembly files to read from the Ansys Mechanical install.
     assemblies = [
-        "Ansys.Mechanical.DataModel",
-        "Ansys.Mechanical.Interfaces",
-        "Ansys.ACT.Core",
-        "Ansys.ACT.Interfaces",
-        "Ansys.ACT.WB1",
+        # "Ansys.Mechanical.DataModel",
+        # "Ansys.Mechanical.Interfaces",
+        # "Ansys.ACT.Core",
+        # "Ansys.ACT.Interfaces",
+        # "Ansys.ACT.WB1",
         "Ans.Core",
     ]
 

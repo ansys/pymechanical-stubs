@@ -199,6 +199,30 @@ class DocMember:
             return None
         return element.text
 
+    @classmethod
+    def __flatten_summary_element(cls, element: ElementTree.Element) -> str:
+        """Flatten summary XML content to plain text while preserving tagged text.
+
+        This includes text nested in inline tags such as ``<c>`` and resolves
+        ``<paramref name=.../>`` to the parameter name.
+        """
+        parts = []
+        if element.text:
+            parts.append(element.text)
+
+        for child in list(element):
+            if child.tag.endswith("paramref"):
+                param_name = child.attrib.get("name")
+                if param_name:
+                    parts.append(param_name)
+            else:
+                parts.append(cls.__flatten_summary_element(child))
+
+            if child.tail:
+                parts.append(child.tail)
+
+        return "".join(parts)
+
     @property
     def name(self) -> str:
         """The name within the element."""
@@ -208,39 +232,9 @@ class DocMember:
     def summary(self) -> str:
         """The summary within the element."""
         summary = self._element.find("summary")
-        summary_text = None
-
-        if summary is not None:
-            summary_text = summary.text
-            # Get text from tags in the summary text if necessary
-            for tags in summary:
-                # Covers T:Ansys.Core.Units.Quantity summary containing "para" tags
-                if tags.tag == "para":
-                    summary_text += tags.text
-                    if tags.tail is not None:
-                        summary_text += tags.tail
-                if "paramref" in tags.tag:
-                    # Get the text of the member's (self._element's) parameter
-                    param_text = self._element.find("param").text
-                    # Remove period from end of parameter text
-                    if param_text[-1] == ".":
-                        param_text = param_text[:-1]
-                    # Make first letter of parameter text lowercase
-                    if param_text[0].isupper():
-                        param_text = param_text[0].lower() + param_text[1:]
-                    # Append the parameter text to the summary_text string
-                    summary_text += param_text
-                    # Append the text after the param tag to the summary_text
-                    summary_text += tags.tail
-                else:
-                    for key in tags.attrib:
-                        # Append the text of the key of a tag to the summary_text
-                        summary_text += tags.attrib.get(key)
-                        if tags.tail is not None:
-                            # Append the text after the tag to the summary_text if it exists
-                            summary_text += tags.tail
-
-        return summary_text
+        if summary is None:
+            return None
+        return self.__flatten_summary_element(summary)
 
     @property
     def params(self) -> str:
@@ -498,14 +492,14 @@ def get_properties(
     typing.List[Property]
         A list of properties
     """
+    # type_filter is intended for Type objects. Applying it to reflected
+    # members (PropertyInfo/MethodInfo) can hide valid members (for example,
+    # Ansys.Core.Units.Quantity methods/properties) when they do not carry
+    # published attributes.
     if class_type.IsInterface:
-        props = _get_all_interface_members(class_type, lambda t: t.GetProperties(), type_filter)
+        props = _get_all_interface_members(class_type, lambda t: t.GetProperties())
     else:
-        props = [
-            prop
-            for prop in class_type.GetProperties()
-            if (type_filter is None or type_filter(prop))
-        ]
+        props = [prop for prop in class_type.GetProperties()]
     output = []
     for prop in props:
         prop_type = f'"{prop.PropertyType.ToString()}"'
@@ -753,13 +747,44 @@ def get_methods(
     typing.List[Method]
         A list of methods
     """
+    # type_filter is intended for Type objects. Applying it to reflected
+    # members (PropertyInfo/MethodInfo) can hide valid members (for example,
+    # Ansys.Core.Units.Quantity constructor/Abs).
     if class_type.IsInterface:
-        methods = _get_all_interface_members(class_type, lambda t: t.GetMethods(), type_filter)
+        methods = _get_all_interface_members(class_type, lambda t: t.GetMethods())
     else:
-        methods = [
-            prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
-        ]
+        methods = [prop for prop in class_type.GetMethods()]
     output = []
+
+    # Constructors are not returned by Type.GetMethods(). Include them so
+    # XML entries like M:Namespace.Type.#ctor(...) are emitted as __init__ stubs.
+    if not class_type.IsInterface:
+        for ctor in class_type.GetConstructors():
+            params = ctor.GetParameters()
+            args = [
+                Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
+                for param in params
+            ]
+            declaring_type_name = ctor.DeclaringType.ToString()
+            full_ctor_name = f"#ctor({','.join([arg.type for arg in args])})"
+            ctor_doc_key = f"M:{declaring_type_name}.{full_ctor_name}".replace("()", "")
+            ctor_doc_key = adjust_method_name_xml(ctor_doc_key)
+
+            if doc is not None:
+                ctor_doc = doc.get(ctor_doc_key, None)
+            else:
+                ctor_doc = None
+
+            output.append(
+                Method(
+                    name="__init__",
+                    doc=ctor_doc,
+                    return_type='"System.Void"',
+                    static=False,
+                    args=args,
+                )
+            )
+
     for method in methods:
         method_return_type = f'"{method.ReturnType.ToString()}"'
         method_name = method.Name
@@ -977,10 +1002,12 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     elif assembly_name == "Ansys.ACT.Interfaces":
         namespaces = {
             "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
+            # "Ansys.ACT.Interfaces.Graphics.Entities": namespaces["Ansys.ACT.Interfaces.Graphics.Entities"],
             "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
         }
-    elif assembly_name == "Ansys.ACT.Core":
-        namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
+    # elif assembly_name == "Ansys.ACT.Core":
+    #     print(f"namespaces: {namespaces.keys()}")
+    # namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
 
     dump_types(namespaces)
     doc = get_doc(assembly)
