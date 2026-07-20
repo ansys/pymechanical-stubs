@@ -837,8 +837,9 @@ def write_class(
     type_filter: typing.Callable = None
         Whether or not the type is published
     """
-    logging.debug(f"    writing class {class_type.Name}")
-    buffer.write(f"class {class_type.Name}(object):\n")
+    class_name = fix_str(class_type.Name)
+    logging.debug(f"    writing class {class_name}")
+    buffer.write(f"class {class_name}(object):\n")
 
     if doc is not None:
         class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)

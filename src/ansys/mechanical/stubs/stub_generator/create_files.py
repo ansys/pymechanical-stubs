@@ -36,11 +36,12 @@ import System  # isort: skip
 ACCEPTED_TYPES = {
     "Ansys.Core.Units.Quantity",
     "Ansys.ACT.Interfaces.Common",
-    # "Ansys.ACT.Interfaces.Graphics.Entities",
     "Ansys.Mechanical.DataModel.Interfaces.IDataModelObject",
     "Ansys.ACT.Mechanical.MechanicalDataModel",
     "Ansys.ACT.Interfaces.Common.MechanicalUnitSystem",
-    "Ansys.ACT.Core.Math",
+    "Ansys.ACT.Core.Math.Point2D",
+    "Ansys.ACT.Core.Math.Point3D",
+    "Ansys.ACT.Core.Math.Vector3D",
 }
 
 
@@ -83,6 +84,7 @@ def resolve():
         act_interfaces_path = str(Path(install_dir, "Addins", "ACT", "bin", os_string))
         sys.path.append(act_interfaces_path)
         clr.AddReference("Ansys.ACT.Interfaces")
+        clr.AddReference("Ansys.ACT.Core")
 
         # Add path for Ans.EngineeringData (Addins/EngineeringData/bin/Win64)
         ans_engineering_data_path = str(
@@ -90,8 +92,6 @@ def resolve():
         )
         sys.path.append(ans_engineering_data_path)
         clr.AddReference("Ans.EngineeringData")
-
-        # Add path for Ansys.ACT.Core.Math
 
     import Ansys
 
@@ -126,13 +126,17 @@ def is_type_published(mod_type: "System.RuntimeType"):
         `False` if "Ansys.Utilities.Sdk.PublishedAttribute" is not in map(str, attrs)
     """
     try:
+        # Explicit allow-list should always win, regardless of what other
+        # attributes are present on the type.
+        try:
+            if mod_type.FullName in ACCEPTED_TYPES:
+                return True
+        except Exception:
+            return False
+
         attrs = mod_type.GetCustomAttributes(True)
         if len(attrs) == 0:
-            try:
-                if mod_type.FullName in ACCEPTED_TYPES:
-                    return True
-            except:  # noqa: E722
-                return False
+            return False
 
         return "Ansys.Utilities.Sdk.PublishedAttribute" in map(str, attrs)
     except Exception as e:
@@ -286,10 +290,10 @@ def main():
     assemblies = [
         # "Ansys.Mechanical.DataModel",
         # "Ansys.Mechanical.Interfaces",
-        # "Ansys.ACT.Core",
+        "Ansys.ACT.Core",
         # "Ansys.ACT.Interfaces",
         # "Ansys.ACT.WB1",
-        "Ans.Core",
+        # "Ans.Core",
     ]
 
     resolve()
