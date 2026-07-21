@@ -76,7 +76,6 @@ def resolve():
 
         # Add path for Ans.Core
         ans_core_path = str(Path(install_dir, "Framework", "bin", os_string))
-        print(ans_core_path)
         sys.path.append(ans_core_path)
         clr.AddReference("Ans.Core")
 
