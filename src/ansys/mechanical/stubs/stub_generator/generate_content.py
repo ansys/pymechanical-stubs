@@ -1042,14 +1042,37 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
         doc = load_doc(xml_path)
         return doc
     elif "Ans.Core" in assembly.GetName().Name:
-        xml_path = f"{directory}/../../../AnsysEM/common/Framework/bin/Win64/Ans.Core.xml"
-        logging.info(f"Loading xml doc from {xml_path}")
-        doc = load_doc(xml_path)
-        new_doc = {"T:Ansys.Core.Units.Quantity": doc["T:Ansys.Core.Units.Quantity"]}
-        for key, value in doc.items():
-            if "Ansys.Core.Units.Quantity." in key:
-                new_doc[key] = value
-        return new_doc
+        # On some installs (especially Linux CI), Ans.Core.xml is located under
+        # AnsysEM/common/Framework/bin/<platform>/ instead of the assembly folder.
+        base_dir = pathlib.Path(directory)
+        platform = (
+            "Win64"
+            if System.Environment.OSVersion.Platform == System.PlatformID.Win32NT
+            else "Linux64"
+        )
+        fallback_platform = "Linux64" if platform == "Win64" else "Win64"
+        ans_core_doc_base = (
+            base_dir / ".." / ".." / ".." / "AnsysEM" / "common" / "Framework" / "bin"
+        )
+        candidate_paths = [
+            ans_core_doc_base / candidate_platform / "Ans.Core.xml"
+            for candidate_platform in (platform, fallback_platform)
+        ]
+
+        for candidate in candidate_paths:
+            candidate = candidate.resolve()
+            if candidate.is_file():
+                xml_path = str(candidate)
+                logging.info(f"Loading xml doc from {xml_path}")
+                doc = load_doc(xml_path)
+                new_doc = {"T:Ansys.Core.Units.Quantity": doc["T:Ansys.Core.Units.Quantity"]}
+                for key, value in doc.items():
+                    if "Ansys.Core.Units.Quantity." in key:
+                        new_doc[key] = value
+                return new_doc
+
+        logging.warning("Ans.Core.xml not found in fallback locations, skipping")
+        return None
     else:
         logging.warning("XML Doc file does not exist, skipping")
         return None
