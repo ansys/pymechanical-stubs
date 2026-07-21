@@ -35,6 +35,36 @@ Summary
 
 
 
+.. py:currentmodule:: v242
+.. tab-set::
+
+    .. tab-item:: Modules
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys`
+            - Ansys module.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-md-package"></span> Ansys</api/ansys/mechanical/stubs/v242/Ansys/index>
 
 
 

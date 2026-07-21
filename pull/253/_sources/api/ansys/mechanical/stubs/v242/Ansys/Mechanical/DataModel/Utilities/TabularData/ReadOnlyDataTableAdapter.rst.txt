@@ -1,0 +1,189 @@
+.. vale off
+
+
+
+:class:`ReadOnlyDataTableAdapter`
+=================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Utilities.TabularData.ReadOnlyDataTableAdapter(dataTable: Ansys.Mechanical.Interfaces.IDataTable)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Exposes and  instance through the 
+   interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: ReadOnlyDataTableAdapter
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetEnumerator`
+            - 
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetRow`
+            - 
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ColumnNames`
+            - 
+          * - :py:attr:`~Columns`
+            - 
+          * - :py:attr:`~Count`
+            - 
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Metadata`
+            - 
+          * - :py:attr:`~Name`
+            - 
+          * - :py:attr:`~RowCount`
+            - 
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ColumnNames
+   :type: Optional[tuple[str]]
+
+
+.. py:property:: Columns
+   :type: Optional[tuple[Ansys.Mechanical.Interfaces.IReadOnlyDataSeries]]
+
+
+.. py:property:: Count
+   :type: Optional[int]
+
+
+.. py:property:: Item
+   :type: Optional[Ansys.Mechanical.Interfaces.IReadOnlyDataSeries]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Metadata
+   :type: Optional[dict[str, Any]]
+
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+.. py:property:: RowCount
+   :type: Optional[int]
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator[Ansys.Mechanical.Interfaces.IReadOnlyDataSeries]
+   
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetRow(rowIndex: int) -> Iterable
+   
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

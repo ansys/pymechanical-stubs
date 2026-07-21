@@ -1,0 +1,142 @@
+.. vale off
+
+
+
+:class:`AbaqusKeywordArgumentColl`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgumentColl(iAbaqusKeywordArgumentColl: Ansys.Common.Interop.FEParsePlugin_ABAQUS.IAbaqusKeywordArgumentColl)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Collection of keyword arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AbaqusKeywordArgumentColl
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Items`
+            - Gets the list of arguments.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Items
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.ABAQUS.AbaqusKeywordArgument]]
+
+
+   
+   Gets the list of arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

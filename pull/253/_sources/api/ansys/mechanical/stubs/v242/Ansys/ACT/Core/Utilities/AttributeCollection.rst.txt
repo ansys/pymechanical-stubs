@@ -1,0 +1,283 @@
+.. vale off
+
+
+
+:class:`AttributeCollection`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Core.Utilities.AttributeCollection
+
+   Bases: :py:obj:`object`
+
+
+   
+   A collection of attributes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: AttributeCollection
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Clone`
+            - Create a clone of the currection collection.
+          * - :py:attr:`~Contains`
+            - Check if the collection contains an attribute.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~FillDynamicAttributes`
+            - Fill the dynamic attributes of the collection with the given
+          * - :py:attr:`~FillStaticAttributesFromXml`
+            - Fill the static attributes of the collection with the given XmlNode.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
+          * - :py:attr:`~GetStringValue`
+            - Gets an attribute value by its name.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetValue`
+            - Gets an attribute value by its name.
+          * - :py:attr:`~PostDeserialization`
+            - PostDeserialization method.
+          * - :py:attr:`~Remove`
+            - Remove an attribute. The attribute cannot be removed if it was declared as
+          * - :py:attr:`~SetValue`
+            - Set an attribute value.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Keys`
+            - The list of the available keys in the collection.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Item
+   :type: Optional[Any]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Keys
+   :type: Optional[System.Collections.Generic.ICollection[str]]
+
+
+   
+   The list of the available keys in the collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Clone() -> Ansys.ACT.Core.Utilities.AttributeCollection
+
+   
+   Create a clone of the currection collection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Contains(name: str) -> bool
+
+   
+   Check if the collection contains an attribute.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FillDynamicAttributes(other: Ansys.ACT.Core.Utilities.AttributeCollection) -> None
+
+.. code-block:: text
+
+   Fill the dynamic attributes of the collection with the given 
+   AttributeCollection.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: FillStaticAttributesFromXml(dataModel: Ansys.ACT.Core.XmlDataModel.Attributes) -> None
+
+   
+   Fill the static attributes of the collection with the given XmlNode.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator[dict[str, Any]]
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetStringValue(name: str) -> str
+
+   
+   Gets an attribute value by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetValue(name: str, defaultValue: Any) -> Any
+
+   
+   Gets an attribute value by its name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PostDeserialization() -> None
+
+   
+   PostDeserialization method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(name: str) -> bool
+
+.. code-block:: text
+
+   Remove an attribute. The attribute cannot be removed if it was declared as
+   static attribute.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: SetValue(name: str, value: Any) -> None
+
+   
+   Set an attribute value.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

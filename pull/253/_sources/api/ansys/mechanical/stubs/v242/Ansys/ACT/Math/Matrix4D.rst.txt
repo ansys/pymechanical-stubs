@@ -1,0 +1,380 @@
+.. vale off
+
+
+
+:class:`Matrix4D`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Math.Matrix4D
+
+   Bases: :py:obj:`object`
+
+
+   
+   Transformation matrix 
+    *single linear*      *standard zero-based row-column index*
+   |  0  4  8  12  |   |  Rot00*Sx  Rot01     Rot02     TransX  |
+   |  1  5  9  13  |   |  Rot10     Rot11*Sy  Rot12     TransY  |
+   |  2  6  10 14  | = |  Rot20     Rot21     Rot22*Sz  TransZ  |
+   |  3  7  11 15  |   |  0 (30)    0 (31)    0 (32)    1 (33)  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Matrix4D
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CreateMirror`
+            - Create transformation matrix mirroring about a plane
+          * - :py:attr:`~CreateRotate`
+            - Create transformation matrix that rotates about a given vector by a given angle
+          * - :py:attr:`~CreateScale`
+            - Create scaling transformation matrix
+          * - :py:attr:`~CreateSystem`
+            - Create transformation matrix converting to new coordinate system.
+          * - :py:attr:`~CreateTranslate`
+            - Create translating transformation matrix
+          * - :py:attr:`~__add__`
+            - Matrix addition operator.
+          * - :py:attr:`~__mul__`
+            - Matrix multiplication operator - assumes (0,0,0,1) in last row.
+          * - :py:attr:`~__sub__`
+            - Matrix subtraction operator.
+          * - :py:attr:`~op_Explicit`
+            - op_Explicit method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Add matrix to itself.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~Invert`
+            - Invert itself if determinant is non-zero. Return 0 if inverted; 1 - otherwise.
+          * - :py:attr:`~Multiply`
+            - Multiply this matrix by the given matrix
+          * - :py:attr:`~Scale`
+            - Convenient method to combine x, y, z scale into itself.
+          * - :py:attr:`~Subtract`
+            - Subtract matrix from itself.
+          * - :py:attr:`~ToString`
+            - String representation.
+          * - :py:attr:`~Transform`
+            - Apply this transformation matrix to a given point/vector.
+          * - :py:attr:`~Translate`
+            - Convenient method to combine (x, y, z) translatation into itself.
+          * - :py:attr:`~Transpose`
+            - Transpose itself.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Determinant`
+            - Matrix determinant accessor.
+          * - :py:attr:`~Item`
+            - Item property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Determinant
+   :type: Optional[float]
+
+
+   
+   Matrix determinant accessor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[float]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(m44: Ansys.ACT.Math.Matrix4D) -> None
+
+   
+   Add matrix to itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateMirror(normal: Ansys.ACT.Math.Vector3D, d: float) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Create transformation matrix mirroring about a plane
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateRotate(rotationAxis: Ansys.ACT.Math.Vector3D, rotationRadians: float) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Create transformation matrix that rotates about a given vector by a given angle
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateScale(x: float, y: float, z: float) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Create scaling transformation matrix
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateSystem(xAxis: Ansys.ACT.Math.Vector3D, yAxis: Ansys.ACT.Math.Vector3D, zAxis: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Create transformation matrix converting to new coordinate system.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateTranslate(x: float, y: float, z: float) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Create translating transformation matrix
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Invert() -> int
+
+   
+   Invert itself if determinant is non-zero. Return 0 if inverted; 1 - otherwise.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Multiply(m44: Ansys.ACT.Math.Matrix4D) -> None
+
+   
+   Multiply this matrix by the given matrix
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Scale(x: float, y: float, z: float) -> None
+
+   
+   Convenient method to combine x, y, z scale into itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Subtract(m44: Ansys.ACT.Math.Matrix4D) -> None
+
+   
+   Subtract matrix from itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   String representation.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Transform(vector3D: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+
+.. code-block:: text
+
+   Apply this transformation matrix to a given point/vector.
+   Note: assumes (0,0,0,1) in last row.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Translate(x: float, y: float, z: float) -> None
+
+   
+   Convenient method to combine (x, y, z) translatation into itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Transpose() -> None
+
+   
+   Transpose itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __add__(a: Ansys.ACT.Math.Matrix4D, b: Ansys.ACT.Math.Matrix4D) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Matrix addition operator.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __mul__(a: Ansys.ACT.Math.Matrix4D, b: Ansys.ACT.Math.Matrix4D) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Matrix multiplication operator - assumes (0,0,0,1) in last row.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __sub__(a: Ansys.ACT.Math.Matrix4D, b: Ansys.ACT.Math.Matrix4D) -> Ansys.ACT.Math.Matrix4D
+   :classmethod:
+
+
+   
+   Matrix subtraction operator.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: op_Explicit(m44: Ansys.ACT.Math.Matrix4D) -> float
+   :classmethod:
+
+
+   
+   op_Explicit method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,93 @@
+.. vale off
+
+
+
+:class:`IParameterManager`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Common.IParameterManager
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a parameter manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IParameterManager
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Parameters`
+            - Gets a collection of design parameters.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Parameters
+   :type: Optional[System.Collections.ObjectModel.ReadOnlyCollection[Ansys.ACT.Interfaces.Common.IParameter]]
+
+
+   
+   Gets a collection of design parameters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

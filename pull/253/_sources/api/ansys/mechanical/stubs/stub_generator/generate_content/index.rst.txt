@@ -77,6 +77,10 @@ Summary
             - Replace C# types with Python types.
 
 
+          * - :py:obj:`~convert_operator_name`
+            - Convert .NET operator names to Python dunder methods.
+
+
           * - :py:obj:`~crawl_loaded_references`
             - Crawl Loaded assemblies to get Namespaces.
 
@@ -265,6 +269,43 @@ Module detail
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: convert_operator_name(method_name: str, method_args: List, is_static: bool = False) -> str
+
+   
+   Convert .NET operator names to Python dunder methods.
+
+
+   :Parameters:
+
+       **method_name: str**
+           The original method name (e.g., op_Addition)
+
+       **method_args: typing.List**
+           List of method arguments
+
+       **is_static: bool**
+           Whether this is a static method
+
+
+
+   :Returns:
+
+       :class:`python:str`
+           The converted method name (e.g., __add__)
 
 
 

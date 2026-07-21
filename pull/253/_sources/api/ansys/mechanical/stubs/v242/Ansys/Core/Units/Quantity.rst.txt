@@ -1,0 +1,550 @@
+.. vale off
+
+
+
+:class:`Quantity`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Core.Units.Quantity(value: float, unit: str)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Quantity class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Quantity
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Parse`
+            - Parse method.
+          * - :py:attr:`~TryParse`
+            - TryParse method.
+          * - :py:attr:`~__add__`
+            - op_Addition method.
+          * - :py:attr:`~__eq__`
+            - op_Equality method.
+          * - :py:attr:`~__ge__`
+            - op_GreaterThanOrEqual method.
+          * - :py:attr:`~__gt__`
+            - op_GreaterThan method.
+          * - :py:attr:`~__le__`
+            - op_LessThanOrEqual method.
+          * - :py:attr:`~__lt__`
+            - op_LessThan method.
+          * - :py:attr:`~__mod__`
+            - op_Modulus method.
+          * - :py:attr:`~__mul__`
+            - op_Multiply method.
+          * - :py:attr:`~__ne__`
+            - op_Inequality method.
+          * - :py:attr:`~__neg__`
+            - op_UnaryNegation method.
+          * - :py:attr:`~__pos__`
+            - op_UnaryPlus method.
+          * - :py:attr:`~__rtruediv__`
+            - __rtruediv__ method.
+          * - :py:attr:`~__sub__`
+            - op_Subtraction method.
+          * - :py:attr:`~__truediv__`
+            - op_Division method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Abs`
+            - Abs method.
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~ConvertToComputationalUnit`
+            - ConvertToComputationalUnit method.
+          * - :py:attr:`~ConvertToComputationalUnitForUnitSystem`
+            - ConvertToComputationalUnitForUnitSystem method.
+          * - :py:attr:`~ConvertToUnitSystem`
+            - ConvertToUnitSystem method.
+          * - :py:attr:`~ConvertToUserUnit`
+            - ConvertToUserUnit method.
+          * - :py:attr:`~ConvertUnit`
+            - ConvertUnit method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetConvertedValue`
+            - GetConvertedValue method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~Pow`
+            - Pow method.
+          * - :py:attr:`~Round`
+            - Round method.
+          * - :py:attr:`~Sqrt`
+            - Sqrt method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~HasUnit`
+            - HasUnit property.
+          * - :py:attr:`~Unit`
+            - Unit property.
+          * - :py:attr:`~Value`
+            - Value property.
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__pow__`
+            - __pow__ method.
+          * - :py:attr:`~__repr__`
+            - __repr__ method.
+
+
+
+
+Property detail
+---------------
+.. py:property:: HasUnit
+   :type: Optional[bool]
+
+
+   
+   HasUnit property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Unit property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Value
+   :type: Optional[float]
+
+
+   
+   Value property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Abs() -> Ansys.Core.Units.Quantity
+
+   
+   Abs method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CompareTo(quantityB: Ansys.Core.Units.Quantity) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertToComputationalUnit(useBasicUnits: bool) -> Ansys.Core.Units.Quantity
+
+   
+   ConvertToComputationalUnit method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertToComputationalUnitForUnitSystem(quantityName: str, unitSystem: str, useBasicUnits: bool) -> Ansys.Core.Units.Quantity
+
+   
+   ConvertToComputationalUnitForUnitSystem method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertToUnitSystem(unitSystem: str, quantityName: str) -> Ansys.Core.Units.Quantity
+
+   
+   ConvertToUnitSystem method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertToUserUnit(quantityName: str) -> Ansys.Core.Units.Quantity
+
+   
+   ConvertToUserUnit method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertUnit(newUnit: str) -> Ansys.Core.Units.Quantity
+
+   
+   ConvertUnit method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(value: Ansys.Core.Units.Quantity) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetConvertedValue(unit: str) -> float
+
+   
+   GetConvertedValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Parse(valueUnitString: str) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   Parse method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Pow(exponent: float) -> Ansys.Core.Units.Quantity
+
+   
+   Pow method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Round(fractionalDigits: int, rounding: Optional[float]) -> Ansys.Core.Units.Quantity
+
+   
+   Round method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Sqrt() -> Ansys.Core.Units.Quantity
+
+   
+   Sqrt method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TryParse(valueStringQuantity: str, result: Ansys.Core.Units.Quantity) -> bool
+   :classmethod:
+
+
+   
+   TryParse method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __add__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_Addition method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __eq__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+   :classmethod:
+
+
+   
+   op_Equality method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __ge__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+   :classmethod:
+
+
+   
+   op_GreaterThanOrEqual method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __gt__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+   :classmethod:
+
+
+   
+   op_GreaterThan method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __le__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+   :classmethod:
+
+
+   
+   op_LessThanOrEqual method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __lt__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+   :classmethod:
+
+
+   
+   op_LessThan method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __mod__(quantityLeft: Ansys.Core.Units.Quantity, quantityRight: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_Modulus method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __mul__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_Multiply method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __ne__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+   :classmethod:
+
+
+   
+   op_Inequality method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __neg__(quantityA: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_UnaryNegation method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __pos__(quantityA: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_UnaryPlus method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __pow__(exponent: Any) -> Any
+
+   
+   __pow__ method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __repr__() -> Any
+
+   
+   __repr__ method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __rtruediv__(a: Any, b: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   __rtruediv__ method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __sub__(left: float, right: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_Subtraction method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __truediv__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+   :classmethod:
+
+
+   
+   op_Division method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
