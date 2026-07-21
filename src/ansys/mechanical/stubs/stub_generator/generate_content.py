@@ -570,51 +570,81 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     prop_type = c_types_to_python(prop_type)
 
     if prop.static:
-        # this only works for autocomplete for python 3.9+
-        assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
-        buffer.write(f"{indent}@classmethod\n")
-        buffer.write(f"{indent}@property\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
-        indent = "    " * (1 + indent_level)
-        if prop.doc is None:
-            write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
-        else:
-            write_docstring(buffer, prop.doc, indent_level + 1)
-        if prop.value:
-            if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
-                prop.value = fix_str(f"{prop.value}")
-
-            if isinstance(prop.value, str):
-                buffer.write(f"{indent}return {repr(prop.value)}\n")
-            else:
-                buffer.write(f"{indent}return {prop.value}\n")
-        else:
-            buffer.write(f"{indent}return None\n")
-    else:
-        if prop.setter and not prop.getter:
-            # setter only, can't use @property, use python builtin-property feature
-            buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop_type}]) -> None:\n"
-            )
-            indent = "    " * (1 + indent_level)
+        if prop.getter and not prop.setter:
+            buffer.write(f"{indent}@classmethod\n")
+            buffer.write(f"{indent}@property\n")
+            buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
+            inner = "    " * (indent_level + 1)
             if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
             else:
                 write_docstring(buffer, prop.doc, indent_level + 1)
-            buffer.write(f"{indent}return None\n")
+            if prop.value is not None:
+                if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
+                    prop.value = fix_str(f"{prop.value}")
+                if isinstance(prop.value, str):
+                    buffer.write(f"{inner}return {repr(prop.value)}\n")
+                else:
+                    buffer.write(f"{inner}return {prop.value}\n")
+            else:
+                buffer.write(f"{inner}return None\n")
+
+        elif prop.getter and prop.setter:
+            # Static read/write properties cannot be represented with Python's @property
+            # on the class in a simple stub, so emit them as a class variable annotation.
+            buffer.write(f"{indent}{prop.name}: typing.Optional[{prop_type}] = None\n")
+
+        elif prop.setter and not prop.getter:
+            # Rare case: static setter-only property
+            buffer.write(f"{indent}{prop.name}: typing.Optional[{prop_type}] = None\n")
+
+        else:
+            buffer.write(f"{indent}{prop.name}: typing.Optional[{prop_type}] = None\n")
+    else:
+        if prop.getter and prop.setter:
+            # Emit getter with @property decorator
+            buffer.write(f"{indent}@property\n")
+            buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
+            inner = "    " * (indent_level + 1)
+            if prop.doc is None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            buffer.write(f"{inner}return None\n")
             buffer.write("\n")
-            indent = "    " * (indent_level)
+            # Emit setter with @propname.setter decorator
+            buffer.write(f"{indent}@{prop.name}.setter\n")
+            buffer.write(
+                f"{indent}def {prop.name}(self, value: typing.Optional[{prop_type}]) -> None:\n"
+            )
+            inner = "    " * (indent_level + 1)
+            if prop.doc is None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            buffer.write(f"{inner}pass\n")
+        elif prop.setter and not prop.getter:
+            buffer.write(
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop_type}]) -> None:\n"
+            )
+            inner = "    " * (indent_level + 1)
+            if prop.doc is None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            buffer.write(f"{inner}return None\n")
+            buffer.write("\n")
             buffer.write(f"{indent}{prop.name} = property(None, {prop.name})\n")
         else:
             assert prop.getter
             buffer.write(f"{indent}@property\n")
             buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
-            indent = "    " * (1 + indent_level)
+            inner = "    " * (indent_level + 1)
             if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
             else:
                 write_docstring(buffer, prop.doc, indent_level + 1)
-            buffer.write(f"{indent}return None\n")
+            buffer.write(f"{inner}return None\n")
     buffer.write("\n")
 
 
@@ -663,6 +693,55 @@ def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
     buffer.write(f'{indent}"""\n')
 
 
+def convert_operator_name(
+    method_name: str, method_args: typing.List, is_static: bool = False
+) -> str:
+    """Convert .NET operator names to Python dunder methods.
+
+    Parameters
+    ----------
+    method_name: str
+        The original method name (e.g., op_Addition)
+    method_args: typing.List
+        List of method arguments
+    is_static: bool
+        Whether this is a static method
+
+    Returns
+    -------
+    str
+        The converted method name (e.g., __add__)
+    """
+    # Mapping of .NET operator names to Python dunder methods
+    operator_map = {
+        "op_UnaryPlus": "__pos__",
+        "op_UnaryNegation": "__neg__",
+        "op_Addition": "__add__",
+        "op_Subtraction": "__sub__",
+        "op_Multiply": "__mul__",
+        "op_Division": "__truediv__",
+        "op_Modulus": "__mod__",
+        "op_Equality": "__eq__",
+        "op_Inequality": "__ne__",
+        "op_LessThan": "__lt__",
+        "op_GreaterThan": "__gt__",
+        "op_LessThanOrEqual": "__le__",
+        "op_GreaterThanOrEqual": "__ge__",
+        "op_BitwiseAnd": "__and__",
+        "op_BitwiseOr": "__or__",
+        "op_ExclusiveOr": "__xor__",
+        "op_LeftShift": "__lshift__",
+        "op_RightShift": "__rshift__",
+        "op_BitwiseNot": "__invert__",
+        "op_LogicalNot": "__not__",
+    }
+
+    if method_name in operator_map:
+        return operator_map[method_name]
+
+    return method_name
+
+
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
     """Write a method.
 
@@ -685,7 +764,10 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     args = f"({', '.join(args)})"
     method_type = c_types_to_python(method.return_type)
 
-    buffer.write(f"{indent}def {method.name}{args} -> {method_type}:\n")
+    # Convert operator method names to Python dunder methods
+    converted_method_name = convert_operator_name(method.name, method.args, method.static)
+
+    buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
     indent = "    " * (1 + indent_level)
     if method.doc is None:
         write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
@@ -850,10 +932,26 @@ def write_class(
 
     props = get_properties(class_type, doc, type_filter)
     [write_property(buffer, prop, 1) for prop in props]
-    methods = get_methods(class_type, doc, type_filter)
-    [write_method(buffer, method, 1) for method in methods]
 
-    if len(props) == 0 and len(methods) == 0:
+    # Build sets of property names with getters and setters to filter out their backing methods
+    # from the methods list. We exclude get_/set_ methods for any property that already has
+    # an @property or @property.setter decorator.
+    properties_with_getters = {prop.name for prop in props if prop.getter}
+    properties_with_setters = {prop.name for prop in props if prop.setter}
+
+    methods = get_methods(class_type, doc, type_filter)
+    # Filter out get_/set_ methods that correspond to any property (getter or setter)
+    filtered_methods = [
+        method
+        for method in methods
+        if not (
+            (method.name.startswith("get_") and method.name[4:] in properties_with_getters)
+            or (method.name.startswith("set_") and method.name[4:] in properties_with_setters)
+        )
+    ]
+    [write_method(buffer, method, 1) for method in filtered_methods]
+
+    if len(props) == 0 and len(filtered_methods) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
@@ -1003,12 +1101,8 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     elif assembly_name == "Ansys.ACT.Interfaces":
         namespaces = {
             "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
-            # "Ansys.ACT.Interfaces.Graphics.Entities": namespaces["Ansys.ACT.Interfaces.Graphics.Entities"],
             "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
         }
-    # elif assembly_name == "Ansys.ACT.Core":
-    #     print(f"namespaces: {namespaces.keys()}")
-    # namespaces = {"Ansys.ACT.Core.Math": namespaces["Ansys.ACT.Core.Math"]}
 
     dump_types(namespaces)
     doc = get_doc(assembly)
