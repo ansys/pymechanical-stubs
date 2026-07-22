@@ -51,6 +51,8 @@ C_TO_PYTHON = {
     "System.DateTime": "typing.Any",
     "System.Double": "float",
     "System.Int32": "int",
+    "System.IFormatProvider": "typing.Any",
+    "System.MidpointRounding": "typing.Optional[float]",
     "System.Object": "typing.Any",
     "System.String": "str",
     "System.Tuple": "tuple",
@@ -197,6 +199,30 @@ class DocMember:
             return None
         return element.text
 
+    @classmethod
+    def __flatten_summary_element(cls, element: ElementTree.Element) -> str:
+        """Flatten summary XML content to plain text while preserving tagged text.
+
+        This includes text nested in inline tags such as ``<c>`` and resolves
+        ``<paramref name=.../>`` to the parameter name.
+        """
+        parts = []
+        if element.text:
+            parts.append(element.text)
+
+        for child in list(element):
+            if child.tag.endswith("paramref"):
+                param_name = child.attrib.get("name")
+                if param_name:
+                    parts.append(param_name)
+            else:
+                parts.append(cls.__flatten_summary_element(child))
+
+            if child.tail:
+                parts.append(child.tail)
+
+        return "".join(parts)
+
     @property
     def name(self) -> str:
         """The name within the element."""
@@ -206,34 +232,9 @@ class DocMember:
     def summary(self) -> str:
         """The summary within the element."""
         summary = self._element.find("summary")
-        summary_text = None
-
-        if summary is not None:
-            summary_text = summary.text
-            # Get text from tags in the summary text if necessary
-            for tags in summary:
-                if "paramref" in tags.tag:
-                    # Get the text of the member's (self._element's) parameter
-                    param_text = self._element.find("param").text
-                    # Remove period from end of parameter text
-                    if param_text[-1] == ".":
-                        param_text = param_text[:-1]
-                    # Make first letter of parameter text lowercase
-                    if param_text[0].isupper():
-                        param_text = param_text[0].lower() + param_text[1:]
-                    # Append the parameter text to the summary_text string
-                    summary_text += param_text
-                    # Append the text after the param tag to the summary_text
-                    summary_text += tags.tail
-                else:
-                    for key in tags.attrib:
-                        # Append the text of the key of a tag to the summary_text
-                        summary_text += tags.attrib.get(key)
-                        if tags.tail is not None:
-                            # Append the text after the tag to the summary_text if it exists
-                            summary_text += tags.tail
-
-        return summary_text
+        if summary is None:
+            return None
+        return self.__flatten_summary_element(summary)
 
     @property
     def params(self) -> str:
@@ -491,14 +492,14 @@ def get_properties(
     typing.List[Property]
         A list of properties
     """
+    # type_filter is intended for Type objects. Applying it to reflected
+    # members (PropertyInfo/MethodInfo) can hide valid members (for example,
+    # Ansys.Core.Units.Quantity methods/properties) when they do not carry
+    # published attributes.
     if class_type.IsInterface:
-        props = _get_all_interface_members(class_type, lambda t: t.GetProperties(), type_filter)
+        props = _get_all_interface_members(class_type, lambda t: t.GetProperties())
     else:
-        props = [
-            prop
-            for prop in class_type.GetProperties()
-            if (type_filter is None or type_filter(prop))
-        ]
+        props = [prop for prop in class_type.GetProperties()]
     output = []
     for prop in props:
         prop_type = f'"{prop.PropertyType.ToString()}"'
@@ -569,51 +570,81 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     prop_type = c_types_to_python(prop_type)
 
     if prop.static:
-        # this only works for autocomplete for python 3.9+
-        assert prop.getter and not prop.setter, "Don't deal with public static getter+setter"
-        buffer.write(f"{indent}@classmethod\n")
-        buffer.write(f"{indent}@property\n")
-        buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
-        indent = "    " * (1 + indent_level)
-        if prop.doc is None:
-            write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
-        else:
-            write_docstring(buffer, prop.doc, indent_level + 1)
-        if prop.value:
-            if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
-                prop.value = fix_str(f"{prop.value}")
-
-            if isinstance(prop.value, str):
-                buffer.write(f"{indent}return {repr(prop.value)}\n")
-            else:
-                buffer.write(f"{indent}return {prop.value}\n")
-        else:
-            buffer.write(f"{indent}return None\n")
-    else:
-        if prop.setter and not prop.getter:
-            # setter only, can't use @property, use python builtin-property feature
-            buffer.write(
-                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop_type}]) -> None:\n"
-            )
-            indent = "    " * (1 + indent_level)
+        if prop.getter and not prop.setter:
+            buffer.write(f"{indent}@classmethod\n")
+            buffer.write(f"{indent}@property\n")
+            buffer.write(f"{indent}def {prop.name}(cls) -> typing.Optional[{prop_type}]:\n")
+            inner = "    " * (indent_level + 1)
             if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
             else:
                 write_docstring(buffer, prop.doc, indent_level + 1)
-            buffer.write(f"{indent}return None\n")
+            if prop.value is not None:
+                if (type(prop.value) is not type(1)) and ("`" in f"{prop.value}"):
+                    prop.value = fix_str(f"{prop.value}")
+                if isinstance(prop.value, str):
+                    buffer.write(f"{inner}return {repr(prop.value)}\n")
+                else:
+                    buffer.write(f"{inner}return {prop.value}\n")
+            else:
+                buffer.write(f"{inner}return None\n")
+
+        elif prop.getter and prop.setter:
+            # Static read/write properties cannot be represented with Python's @property
+            # on the class in a simple stub, so emit them as a class variable annotation.
+            buffer.write(f"{indent}{prop.name}: typing.Optional[{prop_type}] = None\n")
+
+        elif prop.setter and not prop.getter:
+            # Rare case: static setter-only property
+            buffer.write(f"{indent}{prop.name}: typing.Optional[{prop_type}] = None\n")
+
+        else:
+            buffer.write(f"{indent}{prop.name}: typing.Optional[{prop_type}] = None\n")
+    else:
+        if prop.getter and prop.setter:
+            # Emit getter with @property decorator
+            buffer.write(f"{indent}@property\n")
+            buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
+            inner = "    " * (indent_level + 1)
+            if prop.doc is None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            buffer.write(f"{inner}return None\n")
             buffer.write("\n")
-            indent = "    " * (indent_level)
+            # Emit setter with @propname.setter decorator
+            buffer.write(f"{indent}@{prop.name}.setter\n")
+            buffer.write(
+                f"{indent}def {prop.name}(self, value: typing.Optional[{prop_type}]) -> None:\n"
+            )
+            inner = "    " * (indent_level + 1)
+            if prop.doc is None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            buffer.write(f"{inner}pass\n")
+        elif prop.setter and not prop.getter:
+            buffer.write(
+                f"{indent}def {prop.name}(self, newvalue: typing.Optional[{prop_type}]) -> None:\n"
+            )
+            inner = "    " * (indent_level + 1)
+            if prop.doc is None:
+                write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
+            else:
+                write_docstring(buffer, prop.doc, indent_level + 1)
+            buffer.write(f"{inner}return None\n")
+            buffer.write("\n")
             buffer.write(f"{indent}{prop.name} = property(None, {prop.name})\n")
         else:
             assert prop.getter
             buffer.write(f"{indent}@property\n")
             buffer.write(f"{indent}def {prop.name}(self) -> typing.Optional[{prop_type}]:\n")
-            indent = "    " * (1 + indent_level)
+            inner = "    " * (indent_level + 1)
             if prop.doc is None:
                 write_missing_prop_method_docstring(buffer, prop, "property", indent_level + 1)
             else:
                 write_docstring(buffer, prop.doc, indent_level + 1)
-            buffer.write(f"{indent}return None\n")
+            buffer.write(f"{inner}return None\n")
     buffer.write("\n")
 
 
@@ -662,6 +693,55 @@ def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
     buffer.write(f'{indent}"""\n')
 
 
+def convert_operator_name(
+    method_name: str, method_args: typing.List, is_static: bool = False
+) -> str:
+    """Convert .NET operator names to Python dunder methods.
+
+    Parameters
+    ----------
+    method_name: str
+        The original method name (e.g., op_Addition)
+    method_args: typing.List
+        List of method arguments
+    is_static: bool
+        Whether this is a static method
+
+    Returns
+    -------
+    str
+        The converted method name (e.g., __add__)
+    """
+    # Mapping of .NET operator names to Python dunder methods
+    operator_map = {
+        "op_UnaryPlus": "__pos__",
+        "op_UnaryNegation": "__neg__",
+        "op_Addition": "__add__",
+        "op_Subtraction": "__sub__",
+        "op_Multiply": "__mul__",
+        "op_Division": "__truediv__",
+        "op_Modulus": "__mod__",
+        "op_Equality": "__eq__",
+        "op_Inequality": "__ne__",
+        "op_LessThan": "__lt__",
+        "op_GreaterThan": "__gt__",
+        "op_LessThanOrEqual": "__le__",
+        "op_GreaterThanOrEqual": "__ge__",
+        "op_BitwiseAnd": "__and__",
+        "op_BitwiseOr": "__or__",
+        "op_ExclusiveOr": "__xor__",
+        "op_LeftShift": "__lshift__",
+        "op_RightShift": "__rshift__",
+        "op_BitwiseNot": "__invert__",
+        "op_LogicalNot": "__not__",
+    }
+
+    if method_name in operator_map:
+        return operator_map[method_name]
+
+    return method_name
+
+
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
     """Write a method.
 
@@ -684,7 +764,10 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     args = f"({', '.join(args)})"
     method_type = c_types_to_python(method.return_type)
 
-    buffer.write(f"{indent}def {method.name}{args} -> {method_type}:\n")
+    # Convert operator method names to Python dunder methods
+    converted_method_name = convert_operator_name(method.name, method.args, method.static)
+
+    buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
     indent = "    " * (1 + indent_level)
     if method.doc is None:
         write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
@@ -746,13 +829,44 @@ def get_methods(
     typing.List[Method]
         A list of methods
     """
+    # type_filter is intended for Type objects. Applying it to reflected
+    # members (PropertyInfo/MethodInfo) can hide valid members (for example,
+    # Ansys.Core.Units.Quantity constructor/Abs).
     if class_type.IsInterface:
-        methods = _get_all_interface_members(class_type, lambda t: t.GetMethods(), type_filter)
+        methods = _get_all_interface_members(class_type, lambda t: t.GetMethods())
     else:
-        methods = [
-            prop for prop in class_type.GetMethods() if (type_filter is None or type_filter(prop))
-        ]
+        methods = [prop for prop in class_type.GetMethods()]
     output = []
+
+    # Constructors are not returned by Type.GetMethods(). Include them so
+    # XML entries like M:Namespace.Type.#ctor(...) are emitted as __init__ stubs.
+    if not class_type.IsInterface:
+        for ctor in class_type.GetConstructors():
+            params = ctor.GetParameters()
+            args = [
+                Param(type=fix_str(param.ParameterType.ToString()), name=param.Name)
+                for param in params
+            ]
+            declaring_type_name = ctor.DeclaringType.ToString()
+            full_ctor_name = f"#ctor({','.join([arg.type for arg in args])})"
+            ctor_doc_key = f"M:{declaring_type_name}.{full_ctor_name}".replace("()", "")
+            ctor_doc_key = adjust_method_name_xml(ctor_doc_key)
+
+            if doc is not None:
+                ctor_doc = doc.get(ctor_doc_key, None)
+            else:
+                ctor_doc = None
+
+            output.append(
+                Method(
+                    name="__init__",
+                    doc=ctor_doc,
+                    return_type='"System.Void"',
+                    static=False,
+                    args=args,
+                )
+            )
+
     for method in methods:
         method_return_type = f'"{method.ReturnType.ToString()}"'
         method_name = method.Name
@@ -805,8 +919,9 @@ def write_class(
     type_filter: typing.Callable = None
         Whether or not the type is published
     """
-    logging.debug(f"    writing class {class_type.Name}")
-    buffer.write(f"class {class_type.Name}(object):\n")
+    class_name = fix_str(class_type.Name)
+    logging.debug(f"    writing class {class_name}")
+    buffer.write(f"class {class_name}(object):\n")
 
     if doc is not None:
         class_doc = doc.get(f"T:{namespace}.{class_type.Name}", None)
@@ -817,10 +932,26 @@ def write_class(
 
     props = get_properties(class_type, doc, type_filter)
     [write_property(buffer, prop, 1) for prop in props]
-    methods = get_methods(class_type, doc, type_filter)
-    [write_method(buffer, method, 1) for method in methods]
 
-    if len(props) == 0 and len(methods) == 0:
+    # Build sets of property names with getters and setters to filter out their backing methods
+    # from the methods list. We exclude get_/set_ methods for any property that already has
+    # an @property or @property.setter decorator.
+    properties_with_getters = {prop.name for prop in props if prop.getter}
+    properties_with_setters = {prop.name for prop in props if prop.setter}
+
+    methods = get_methods(class_type, doc, type_filter)
+    # Filter out get_/set_ methods that correspond to any property (getter or setter)
+    filtered_methods = [
+        method
+        for method in methods
+        if not (
+            (method.name.startswith("get_") and method.name[4:] in properties_with_getters)
+            or (method.name.startswith("set_") and method.name[4:] in properties_with_setters)
+        )
+    ]
+    [write_method(buffer, method, 1) for method in filtered_methods]
+
+    if len(props) == 0 and len(filtered_methods) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
@@ -850,7 +981,13 @@ def write_module(
         outdir = outdir / token
     logging.info(f"Writing to {str(outdir.resolve())}")
     outdir.mkdir(exist_ok=True, parents=True)
-    class_types = [mod_type for mod_type in mod_types if mod_type.IsClass or mod_type.IsInterface]
+    # See https://learn.microsoft.com/en-us/dotnet/api/system.type.isclass?view=net-9.0 for more
+    # information about Properties like IsClass, IsAnsiClass, and IsInterface
+    class_types = [
+        mod_type
+        for mod_type in mod_types
+        if mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface
+    ]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
     with pathlib.Path.open(outdir / "__init__.py", "w", encoding="utf-8") as f:
@@ -904,6 +1041,38 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
         logging.info(f"Loading xml doc from {xml_path}")
         doc = load_doc(xml_path)
         return doc
+    elif "Ans.Core" in assembly.GetName().Name:
+        # On some installs (especially Linux CI), Ans.Core.xml is located under
+        # AnsysEM/common/Framework/bin/<platform>/ instead of the assembly folder.
+        base_dir = pathlib.Path(directory)
+        platform = (
+            "Win64"
+            if System.Environment.OSVersion.Platform == System.PlatformID.Win32NT
+            else "Linux64"
+        )
+        fallback_platform = "Linux64" if platform == "Win64" else "Win64"
+        ans_core_doc_base = (
+            base_dir / ".." / ".." / ".." / "AnsysEM" / "common" / "Framework" / "bin"
+        )
+        candidate_paths = [
+            ans_core_doc_base / candidate_platform / "Ans.Core.xml"
+            for candidate_platform in (platform, fallback_platform)
+        ]
+
+        for candidate in candidate_paths:
+            candidate = candidate.resolve()
+            if candidate.is_file():
+                xml_path = str(candidate)
+                logging.info(f"Loading xml doc from {xml_path}")
+                doc = load_doc(xml_path)
+                new_doc = {"T:Ansys.Core.Units.Quantity": doc["T:Ansys.Core.Units.Quantity"]}
+                for key, value in doc.items():
+                    if "Ansys.Core.Units.Quantity." in key:
+                        new_doc[key] = value
+                return new_doc
+
+        logging.warning("Ans.Core.xml not found in fallback locations, skipping")
+        return None
     else:
         logging.warning("XML Doc file does not exist, skipping")
         return None
@@ -953,7 +1122,10 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     if assembly_name == "Ans.Core":
         namespaces = {"Ansys.Core.Units": namespaces["Ansys.Core.Units"]}
     elif assembly_name == "Ansys.ACT.Interfaces":
-        namespaces = {"Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"]}
+        namespaces = {
+            "Ansys.ACT.Interfaces.Common": namespaces["Ansys.ACT.Interfaces.Common"],
+            "Ansys.ACT.Math": namespaces["Ansys.ACT.Math"],
+        }
 
     dump_types(namespaces)
     doc = get_doc(assembly)

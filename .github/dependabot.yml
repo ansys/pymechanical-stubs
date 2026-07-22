@@ -1,16 +1,63 @@
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
+
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    assignees:
+      - "pyansys-ci-bot"
+    commit-message:
+      prefix: "chore"
     labels:
       - "maintenance"
       - "dependencies"
+    groups:
+      build:
+        patterns:
+          - "*ansys*"
+        exclude-patterns:
+          - "*sphinx*"
+        update-types:
+        - "minor"
+        - "patch"
+      tests:
+        patterns:
+          - "pytest*"
+        exclude-patterns:
+          - "*sphinx*"
+        update-types:
+        - "minor"
+        - "patch"
+      doc:
+        patterns:
+          - "*sphinx*"
+          - "ansys-tools-common"
+          - "autodoc_pydantic"
+          - "numpydoc"
+        update-types:
+        - "minor"
+        - "patch"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    assignees:
+      - "pyansys-ci-bot"
     labels:
       - "maintenance"
+      - "dependencies"
+    commit-message:
+      prefix: "chore"
+    groups:
+       actions:
+          patterns:
+            - "*"
+          update-types:
+          - "minor"
+          - "patch"
+    cooldown:
+      default-days: 7
