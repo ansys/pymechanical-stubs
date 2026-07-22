@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+
+
+
+
+
+``StressToolResults``
+=====================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StressToolResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: StressToolResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressRatio`
+            - Defines a StressRatio.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressSafetyFactor`
+            - Defines a StressSafetyFactor.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressSafetyMargin`
+            - Defines a StressSafetyMargin.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressTool`
+            - Defines a StressTool.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StressToolResults.StressToolResult`
+            - Defines a StressToolResult.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> StressRatio</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/StressToolResults/StressRatio>
+    <span class="nf nf-cod-symbol_class"></span> StressSafetyFactor</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/StressToolResults/StressSafetyFactor>
+    <span class="nf nf-cod-symbol_class"></span> StressSafetyMargin</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/StressToolResults/StressSafetyMargin>
+    <span class="nf nf-cod-symbol_class"></span> StressTool</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/StressToolResults/StressTool>
+    <span class="nf nf-cod-symbol_class"></span> StressToolResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/StressToolResults/StressToolResult>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+StressToolResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

@@ -1,0 +1,164 @@
+.. vale off
+
+
+
+:class:`MechanicalUnitSystem`
+=============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Common.MechanicalUnitSystem
+
+   Bases: :py:obj:`object`
+
+
+   
+   Contains all possible mechanical unit systems (standard and consistent).
+   The standard unit systems are used in the mechanical UI. (From the toolbar menu "Unit"). Be aware that the standard unit systems are NOT consistent.
+   The consistent unit systems are mostly used in the solver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MechanicalUnitSystem
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Specifies whether this instance of MechanicalUnitSystem is equal to the given MechanicalUnitSystemEnum value.
+          * - :py:attr:`~GetConsistentUnitSystem`
+            - Gets the consistent unit system (i.e. solver unit system.)
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetMechanicalUnitSystemType`
+            - Get the MechanicalUnitSystemEnum for this MechanicalUnitSystem
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IsConsistent`
+            - IsConsistent property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: IsConsistent
+   :type: Optional[bool]
+
+
+   
+   IsConsistent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(mechanicalUnitSystemType: Ansys.ACT.Interfaces.Common.MechanicalUnitSystemEnum) -> bool
+
+   
+   Specifies whether this instance of MechanicalUnitSystem is equal to the given MechanicalUnitSystemEnum value.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetConsistentUnitSystem() -> Ansys.ACT.Interfaces.Common.MechanicalUnitSystem
+
+   
+   Gets the consistent unit system (i.e. solver unit system.)
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMechanicalUnitSystemType() -> Ansys.ACT.Interfaces.Common.MechanicalUnitSystemEnum
+
+   
+   Get the MechanicalUnitSystemEnum for this MechanicalUnitSystem
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

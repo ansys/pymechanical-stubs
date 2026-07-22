@@ -1,0 +1,109 @@
+.. vale off
+
+
+
+
+
+
+
+
+``Math``
+========================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Math
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Math
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Math.Matrix4D`
+            - Transformation matrix
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Math.Vector3D`
+            - Vector in 3D-space
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> Matrix4D</api/ansys/mechanical/stubs/v242/Ansys/ACT/Math/Matrix4D>
+    <span class="nf nf-cod-symbol_class"></span> Vector3D</api/ansys/mechanical/stubs/v242/Ansys/ACT/Math/Vector3D>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+Math module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on
