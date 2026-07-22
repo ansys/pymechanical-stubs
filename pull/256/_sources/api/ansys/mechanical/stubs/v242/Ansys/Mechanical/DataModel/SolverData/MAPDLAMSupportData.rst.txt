@@ -1,0 +1,148 @@
+.. vale off
+
+
+
+:class:`MAPDLAMSupportData`
+===========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.SolverData.MAPDLAMSupportData
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: MAPDLAMSupportData
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~MaterialIds`
+            - Gets the Material Ids for the AM Support.
+          * - :py:attr:`~RealConstantId`
+            - Gets the Real Constant Id for the AM Support.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: MaterialIds
+   :type: Optional[Iterable[int]]
+
+
+   
+   Gets the Material Ids for the AM Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RealConstantId
+   :type: Optional[int]
+
+
+   
+   Gets the Real Constant Id for the AM Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

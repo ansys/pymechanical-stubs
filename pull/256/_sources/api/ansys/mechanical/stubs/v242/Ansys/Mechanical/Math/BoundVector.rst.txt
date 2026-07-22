@@ -1,0 +1,170 @@
+.. vale off
+
+
+
+:class:`BoundVector`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Math.BoundVector(point: Ansys.Mechanical.Graphics.Point, vector: Ansys.ACT.Math.Vector3D)
+
+   Bases: :py:obj:`object`
+
+
+   
+   A vector with fixed intial point and terminal point.
+   Or a vector with fixed initial point(origin) and a direction(vector).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: BoundVector
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Origin`
+            - The location at the start of the BoundVector.
+          * - :py:attr:`~Vector`
+            - The direction of the BoundVector.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Origin
+   :type: Optional[Ansys.Mechanical.Graphics.Point]
+
+
+   
+   The location at the start of the BoundVector.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Vector
+   :type: Optional[Ansys.ACT.Math.Vector3D]
+
+
+   
+   The direction of the BoundVector.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
