@@ -6,6 +6,46 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.13](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.13) - July 22, 2026
+
+
+### Added
+
+- Add MechanicalUnitSystem, Quantity, MechanicalDataModel, Point2D, Point3D, and Vector3D [#254](https://github.com/ansys/pymechanical-stubs/pull/254)
+
+
+### Fixed
+
+- Fix quotes in the dev portal workflow file [#235](https://github.com/ansys/pymechanical-stubs/pull/235)
+- Correctly order versions in documentation [#250](https://github.com/ansys/pymechanical-stubs/pull/250)
+
+
+### Dependencies
+
+- Bump ansys-sphinx-theme from 1.8.2 to 1.9.0 [#232](https://github.com/ansys/pymechanical-stubs/pull/232)
+- Bump ansys/actions/_setup-python from 10.3.2 to 10.3.3 [#236](https://github.com/ansys/pymechanical-stubs/pull/236)
+- Bump ansys/actions/build-library from 10.3.2 to 10.3.3 [#237](https://github.com/ansys/pymechanical-stubs/pull/237)
+- Bump ansys/actions/doc-changelog from 10.3.2 to 10.3.3 [#238](https://github.com/ansys/pymechanical-stubs/pull/238)
+- Bump ansys/actions/doc-deploy-changelog from 10.3.2 to 10.3.3 [#239](https://github.com/ansys/pymechanical-stubs/pull/239)
+- Bump ansys/actions/build-wheelhouse from 10.3.2 to 10.3.3 [#240](https://github.com/ansys/pymechanical-stubs/pull/240)
+- Bump ansys/actions/code-style from 10.3.2 to 10.3.3 [#245](https://github.com/ansys/pymechanical-stubs/pull/245)
+- Bump ansys/actions/doc-deploy-pr from 10.3.2 to 10.3.3 [#246](https://github.com/ansys/pymechanical-stubs/pull/246)
+- Bump actions/cache from 6.0.0 to 6.1.0 [#247](https://github.com/ansys/pymechanical-stubs/pull/247)
+- Bump ansys/actions/doc-deploy-stable from 10.3.2 to 10.3.3 [#248](https://github.com/ansys/pymechanical-stubs/pull/248)
+- Bump ansys/actions/doc-style from 10.3.2 to 10.3.3 [#249](https://github.com/ansys/pymechanical-stubs/pull/249)
+
+
+### Maintenance
+
+- Update CHANGELOG for v0.1.12 [#231](https://github.com/ansys/pymechanical-stubs/pull/231)
+- Combine doc-deploy jobs [#233](https://github.com/ansys/pymechanical-stubs/pull/233)
+- Create separate workflow file for Developer Portal documentation generation [#234](https://github.com/ansys/pymechanical-stubs/pull/234)
+- Pre-commit automatic update [#241](https://github.com/ansys/pymechanical-stubs/pull/241), [#253](https://github.com/ansys/pymechanical-stubs/pull/253)
+- Group dependencies [#243](https://github.com/ansys/pymechanical-stubs/pull/243)
+- Optimize dependabot configuration with grouped update [#244](https://github.com/ansys/pymechanical-stubs/pull/244)
+- Bump ansys/actions/release-github from 10.3.2 to 10.3.3 in the actions group [#251](https://github.com/ansys/pymechanical-stubs/pull/251)
+- Bump actions/labeler from 6.1.0 to 6.2.0 in the actions group [#252](https://github.com/ansys/pymechanical-stubs/pull/252)
+
 ## [0.1.12](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.12) - June 25, 2026
 
 
