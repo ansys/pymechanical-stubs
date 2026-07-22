@@ -66,7 +66,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.18.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '252';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '242';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -512,67 +512,70 @@ Functions</label><div class="sd-tab-content docutils">
 <tr class="row-even"><td><p><a class="reference internal" href="#generate_content.c_types_to_python" title="generate_content.c_types_to_python"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_types_to_python</span></code></a></p></td>
 <td><p>Replace C# types with Python types.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.crawl_loaded_references" title="generate_content.crawl_loaded_references"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crawl_loaded_references</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.convert_operator_name" title="generate_content.convert_operator_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_operator_name</span></code></a></p></td>
+<td><p>Convert .NET operator names to Python dunder methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.crawl_loaded_references" title="generate_content.crawl_loaded_references"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crawl_loaded_references</span></code></a></p></td>
 <td><p>Crawl Loaded assemblies to get Namespaces.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.dump_types" title="generate_content.dump_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dump_types</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.dump_types" title="generate_content.dump_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dump_types</span></code></a></p></td>
 <td><p>Crawl Loaded assemblies to get Namespaces.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.fix_str" title="generate_content.fix_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_str</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.fix_str" title="generate_content.fix_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_str</span></code></a></p></td>
 <td><p>Replace incorrect special characters in strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.get_doc" title="generate_content.get_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_doc</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.get_doc" title="generate_content.get_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_doc</span></code></a></p></td>
 <td><p>Get the documentation file from assembly, or None if it doesn't exist.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.get_methods" title="generate_content.get_methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_methods</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.get_methods" title="generate_content.get_methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_methods</span></code></a></p></td>
 <td><p>Get information from methods and store it in the Method object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.get_namespaces" title="generate_content.get_namespaces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_namespaces</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.get_namespaces" title="generate_content.get_namespaces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_namespaces</span></code></a></p></td>
 <td><p>Get all the namespaces and filtered types in the assembly given by assembly_name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.get_properties" title="generate_content.get_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_properties</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.get_properties" title="generate_content.get_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_properties</span></code></a></p></td>
 <td><p>Get information from properties and store it in the Property object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.is_namespace" title="generate_content.is_namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_namespace</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.is_namespace" title="generate_content.is_namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_namespace</span></code></a></p></td>
 <td><p>Check if an object is a namespace.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.iter_module" title="generate_content.iter_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_module</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.iter_module" title="generate_content.iter_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_module</span></code></a></p></td>
 <td><p>Recursively iterates through all namespaces in assembly.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.load_doc" title="generate_content.load_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_doc</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.load_doc" title="generate_content.load_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_doc</span></code></a></p></td>
 <td><p>Get a dictionary of doc entities from the Assembly documentation file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.make" title="generate_content.make"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.make" title="generate_content.make"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make</span></code></a></p></td>
 <td><p>Generate Python stubs for an assembly.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.remove_backtick" title="generate_content.remove_backtick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_backtick</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.remove_backtick" title="generate_content.remove_backtick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_backtick</span></code></a></p></td>
 <td><p>Remove backticks from a given string.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_class" title="generate_content.write_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_class</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_class" title="generate_content.write_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_class</span></code></a></p></td>
 <td><p>Write a class.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_docstring" title="generate_content.write_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_docstring</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_docstring" title="generate_content.write_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_docstring</span></code></a></p></td>
 <td><p>Write docstring of class or enum with the given indentation level, if available.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_enum" title="generate_content.write_enum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_enum</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_enum" title="generate_content.write_enum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_enum</span></code></a></p></td>
 <td><p>Write an enum.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_enum_field" title="generate_content.write_enum_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_enum_field</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_enum_field" title="generate_content.write_enum_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_enum_field</span></code></a></p></td>
 <td><p>Write an enum field.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_method" title="generate_content.write_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_method</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_method" title="generate_content.write_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_method</span></code></a></p></td>
 <td><p>Write a method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_missing_class_enum_docstring" title="generate_content.write_missing_class_enum_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_missing_class_enum_docstring</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_missing_class_enum_docstring" title="generate_content.write_missing_class_enum_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_missing_class_enum_docstring</span></code></a></p></td>
 <td><p>Write a docstring for classes and enums that do not contain a docstring in the XML file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_missing_prop_method_docstring" title="generate_content.write_missing_prop_method_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_missing_prop_method_docstring</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_missing_prop_method_docstring" title="generate_content.write_missing_prop_method_docstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_missing_prop_method_docstring</span></code></a></p></td>
 <td><p>Write a docstring for methods and properties that do not contain a docstring in the XML file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_module" title="generate_content.write_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_module</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_module" title="generate_content.write_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_module</span></code></a></p></td>
 <td><p>Write a module.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#generate_content.write_property" title="generate_content.write_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_property</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#generate_content.write_property" title="generate_content.write_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_property</span></code></a></p></td>
 <td><p>Write a property.</p></td>
 </tr>
 </tbody>
@@ -632,6 +635,30 @@ Constants</label><div class="sd-tab-content docutils">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>type_str: str</strong></dt><dd><p>String containing C# type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="generate_content.convert_operator_name">
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">convert_operator_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_static</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#generate_content.convert_operator_name" title="Link to this definition">#</a></dt>
+<dd><p>Convert .NET operator names to Python dunder methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>method_name: str</strong></dt><dd><p>The original method name (e.g., op_Addition)</p>
+</dd>
+<dt><strong>method_args: typing.List</strong></dt><dd><p>List of method arguments</p>
+</dd>
+<dt><strong>is_static: bool</strong></dt><dd><p>Whether this is a static method</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>The converted method name (e.g., __add__)</p>
 </dd>
 </dl>
 </dd>
@@ -1104,6 +1131,7 @@ False if object is not Namespace: Module</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-detail">Module detail</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.adjust_method_name_xml"><code class="docutils literal notranslate"><span class="pre">adjust_method_name_xml()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.c_types_to_python"><code class="docutils literal notranslate"><span class="pre">c_types_to_python()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.convert_operator_name"><code class="docutils literal notranslate"><span class="pre">convert_operator_name()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.crawl_loaded_references"><code class="docutils literal notranslate"><span class="pre">crawl_loaded_references()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.dump_types"><code class="docutils literal notranslate"><span class="pre">dump_types()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate_content.fix_str"><code class="docutils literal notranslate"><span class="pre">fix_str()</span></code></a></li>

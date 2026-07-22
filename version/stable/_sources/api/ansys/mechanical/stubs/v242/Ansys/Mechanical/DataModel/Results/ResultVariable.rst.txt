@@ -1,0 +1,241 @@
+.. vale off
+
+
+
+:class:`ResultVariable`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Results.ResultVariable
+
+   Bases: :py:obj:`object`
+
+
+   
+   Specifies column data for the Result Table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. py:currentmodule:: ResultVariable
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Count`
+            - Count property.
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~QuantityName`
+            - QuantityName property.
+          * - :py:attr:`~Unit`
+            - Unit property.
+
+
+
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - __repr__ method.
+
+
+
+
+Property detail
+---------------
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[float]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: QuantityName
+   :type: Optional[str]
+
+
+   
+   QuantityName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Unit property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __repr__() -> str
+
+   
+   __repr__ method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

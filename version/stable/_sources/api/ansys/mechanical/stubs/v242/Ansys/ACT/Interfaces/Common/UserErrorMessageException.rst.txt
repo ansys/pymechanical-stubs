@@ -1,0 +1,351 @@
+.. vale off
+
+
+
+:class:`UserErrorMessageException`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Common.UserErrorMessageException(msg: str)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a user exception used to send error message to the end user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: UserErrorMessageException
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetBaseException`
+            - GetBaseException method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Data`
+            - Data property.
+          * - :py:attr:`~HResult`
+            - HResult property.
+          * - :py:attr:`~HelpLink`
+            - HelpLink property.
+          * - :py:attr:`~InnerException`
+            - InnerException property.
+          * - :py:attr:`~Message`
+            - Message property.
+          * - :py:attr:`~Source`
+            - Source property.
+          * - :py:attr:`~StackTrace`
+            - StackTrace property.
+          * - :py:attr:`~TargetSite`
+            - TargetSite property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Data
+   :type: Optional[System.Collections.IDictionary]
+
+
+   
+   Data property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HResult
+   :type: Optional[int]
+
+
+   
+   HResult property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HelpLink
+   :type: Optional[str]
+
+
+   
+   HelpLink property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InnerException
+   :type: Optional[System.Exception]
+
+
+   
+   InnerException property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Message
+   :type: Optional[str]
+
+
+   
+   Message property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Source
+   :type: Optional[str]
+
+
+   
+   Source property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StackTrace
+   :type: Optional[str]
+
+
+   
+   StackTrace property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetSite
+   :type: Optional[System.Reflection.MethodBase]
+
+
+   
+   TargetSite property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBaseException() -> System.Exception
+
+   
+   GetBaseException method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

@@ -1,0 +1,179 @@
+.. vale off
+
+
+
+
+
+
+
+
+``DeformationResults``
+======================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: DeformationResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DeformationResult`
+            - Defines a DeformationResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAcceleration`
+            - Defines a DirectionalAcceleration.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAccelerationPSD`
+            - Defines a DirectionalAccelerationPSD.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalAccelerationRS`
+            - Defines a DirectionalAccelerationRS.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalDeformation`
+            - Defines a DirectionalDeformation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocity`
+            - Defines a DirectionalVelocity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocityPSD`
+            - Defines a DirectionalVelocityPSD.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.DirectionalVelocityRS`
+            - Defines a DirectionalVelocityRS.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalAcceleration`
+            - Defines a TotalAcceleration.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalDeformation`
+            - Defines a TotalDeformation.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.TotalVelocity`
+            - Defines a TotalVelocity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.DeformationResults.VectorDeformation`
+            - Defines a VectorDeformation.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> DeformationResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DeformationResult>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalAcceleration</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalAcceleration>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalAccelerationPSD</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalAccelerationPSD>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalAccelerationRS</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalAccelerationRS>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalDeformation</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalDeformation>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalVelocity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalVelocity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalVelocityPSD</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalVelocityPSD>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalVelocityRS</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/DirectionalVelocityRS>
+    <span class="nf nf-cod-symbol_class"></span> TotalAcceleration</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/TotalAcceleration>
+    <span class="nf nf-cod-symbol_class"></span> TotalDeformation</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/TotalDeformation>
+    <span class="nf nf-cod-symbol_class"></span> TotalVelocity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/TotalVelocity>
+    <span class="nf nf-cod-symbol_class"></span> VectorDeformation</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/DeformationResults/VectorDeformation>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+DeformationResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

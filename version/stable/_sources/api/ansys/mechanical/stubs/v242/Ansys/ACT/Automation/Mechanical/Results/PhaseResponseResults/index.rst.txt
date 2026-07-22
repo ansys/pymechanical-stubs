@@ -1,0 +1,130 @@
+.. vale off
+
+
+
+
+
+
+
+
+``PhaseResponseResults``
+========================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: PhaseResponseResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.AccelerationPhaseResponse`
+            - Defines a AccelerationPhaseResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.DeformationPhaseResponse`
+            - Defines a DeformationPhaseResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.ElasticStrainPhaseResponse`
+            - Defines a ElasticStrainPhaseResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.StressPhaseResponse`
+            - Defines a StressPhaseResponse.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.PhaseResponseResults.VelocityPhaseResponse`
+            - Defines a VelocityPhaseResponse.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AccelerationPhaseResponse</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/PhaseResponseResults/AccelerationPhaseResponse>
+    <span class="nf nf-cod-symbol_class"></span> DeformationPhaseResponse</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/PhaseResponseResults/DeformationPhaseResponse>
+    <span class="nf nf-cod-symbol_class"></span> ElasticStrainPhaseResponse</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/PhaseResponseResults/ElasticStrainPhaseResponse>
+    <span class="nf nf-cod-symbol_class"></span> StressPhaseResponse</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/PhaseResponseResults/StressPhaseResponse>
+    <span class="nf nf-cod-symbol_class"></span> VelocityPhaseResponse</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/PhaseResponseResults/VelocityPhaseResponse>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+PhaseResponseResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on
