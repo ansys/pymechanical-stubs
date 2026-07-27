@@ -1,0 +1,98 @@
+.. vale off
+
+
+
+:class:`Property`
+=================
+
+.. py:class:: ansys.mechanical.stubs.stub_generator.generate_content.Property
+
+   
+   Property class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Property
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~doc`
+            - 
+          * - :py:attr:`~getter`
+            - 
+          * - :py:attr:`~name`
+            - 
+          * - :py:attr:`~setter`
+            - 
+          * - :py:attr:`~static`
+            - 
+          * - :py:attr:`~type`
+            - 
+          * - :py:attr:`~value`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: doc
+   :type:  DocMember
+
+.. py:attribute:: getter
+   :type:  bool
+
+.. py:attribute:: name
+   :type:  str
+
+.. py:attribute:: setter
+   :type:  bool
+
+.. py:attribute:: static
+   :type:  bool
+
+.. py:attribute:: type
+   :type:  str
+
+.. py:attribute:: value
+   :type:  Optional[Any]
+
+
+
+
+
+.. vale on

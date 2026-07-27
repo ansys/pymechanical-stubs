@@ -1,0 +1,165 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ThermalResults``
+==================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ThermalResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.DirectionalHeatFlux`
+            - Defines a DirectionalHeatFlux.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.DirectionalThermalHeatFlux`
+            - Defines a DirectionalThermalHeatFlux.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.FluidFlowRate`
+            - Defines a FluidFlowRate.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.FluidHeatConductionRate`
+            - Defines a FluidHeatConductionRate.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.FluidHeatTransportRate`
+            - Defines a FluidHeatTransportRate.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.TemperatureResult`
+            - Defines a TemperatureResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.ThermalError`
+            - Defines a ThermalError.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.ThermalResult`
+            - Defines a ThermalResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.TotalHeatFlux`
+            - Defines a TotalHeatFlux.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ThermalResults.VectorHeatFlux`
+            - Defines a VectorHeatFlux.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> DirectionalHeatFlux</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/DirectionalHeatFlux>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalThermalHeatFlux</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/DirectionalThermalHeatFlux>
+    <span class="nf nf-cod-symbol_class"></span> FluidFlowRate</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/FluidFlowRate>
+    <span class="nf nf-cod-symbol_class"></span> FluidHeatConductionRate</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/FluidHeatConductionRate>
+    <span class="nf nf-cod-symbol_class"></span> FluidHeatTransportRate</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/FluidHeatTransportRate>
+    <span class="nf nf-cod-symbol_class"></span> TemperatureResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/TemperatureResult>
+    <span class="nf nf-cod-symbol_class"></span> ThermalError</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/ThermalError>
+    <span class="nf nf-cod-symbol_class"></span> ThermalResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/ThermalResult>
+    <span class="nf nf-cod-symbol_class"></span> TotalHeatFlux</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/TotalHeatFlux>
+    <span class="nf nf-cod-symbol_class"></span> VectorHeatFlux</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ThermalResults/VectorHeatFlux>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ThermalResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

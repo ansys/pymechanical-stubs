@@ -1,0 +1,978 @@
+.. vale off
+
+
+
+:class:`MechanicalGraphicsWrapper`
+==================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Common.Graphics.MechanicalGraphicsWrapper(mechanicalApi: Ansys.ACT.Mechanical.MechanicalAPI, graphics: Ansys.Common.Interop.Gfx.IDSGraphics)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Wrapper for Graphics in Mechanical.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MechanicalGraphicsWrapper
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CreateAndOpenDraw3DContext`
+            - CreateAndOpenDraw3DContext method.
+          * - :py:attr:`~CreatePixelPoint`
+            - Creates a point from pixel coordinates (ie. window coordinates).
+          * - :py:attr:`~CreateVector3D`
+            - Create a 3D vector from world coordinates.
+          * - :py:attr:`~CreateWorldPoint`
+            - Create a point from world coordinates.
+          * - :py:attr:`~DrawText2D`
+            - DrawText2D method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~Export3D`
+            - Exports the current Graphics display in a 3d format to a file.
+          * - :py:attr:`~ExportImage`
+            - Exports the current graphics display to a 2D image file.
+          * - :py:attr:`~ExportScreenToImage`
+            - ExportScreenToImage method.
+          * - :py:attr:`~ExportViewportChart`
+            - Exports the specified viewport's chart to file.
+          * - :py:attr:`~ExportViewportImage`
+            - Exports the current graphics display to a 2D image file.
+          * - :py:attr:`~ExportViewports`
+            - Creates a composite of images exported from each open viewport.
+          * - :py:attr:`~ForceResume`
+            - Forces the scene to resume. Useful in interactive context (console) if a reference on an
+          * - :py:attr:`~FullRedraw`
+            - FullRedraw method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ImportLegend`
+            - ImportLegend method.
+          * - :py:attr:`~LineTo2D`
+            - LineTo2D method.
+          * - :py:attr:`~MoveTo2D`
+            - MoveTo2D method.
+          * - :py:attr:`~PixelToWorld`
+            - PixelToWorld method.
+          * - :py:attr:`~Redraw`
+            - Forces the scene to redraw its content.
+          * - :py:attr:`~RemoveContext`
+            - RemoveContext method.
+          * - :py:attr:`~Suspend`
+            - Prevents the scene to redraw until the Resume controller method was called.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~VerifyLocaleStringsAreAllRenderable`
+            - Performs a test to see if all characters present in all locale dsstringtable.xml files can be found via DSGStream's TextEngine
+          * - :py:attr:`~WorldToPixel`
+            - WorldToPixel method.
+          * - :py:attr:`~add_ExtendObjectsToDisplay`
+            - add_ExtendObjectsToDisplay method.
+          * - :py:attr:`~remove_ExtendObjectsToDisplay`
+            - remove_ExtendObjectsToDisplay method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AcceleratedGraphics`
+            - Gets or sets the Accelerated Graphics Preference
+          * - :py:attr:`~AdvancedRenderingIsSupported`
+            - AdvancedRenderingIsSupported property.
+          * - :py:attr:`~Camera`
+            - Gets the camera.
+          * - :py:attr:`~CanPlotDisplacementTraces`
+            - CanPlotDisplacementTraces property.
+          * - :py:attr:`~Color`
+            - Color property.
+          * - :py:attr:`~DepthTest`
+            - DepthTest property.
+          * - :py:attr:`~DrawContexts`
+            - DrawContexts property.
+          * - :py:attr:`~GlobalLegendSettings`
+            - Gets the Global Graphics Legend Settings.
+          * - :py:attr:`~ImageCompare`
+            - ImageCompare property.
+          * - :py:attr:`~ImageExportRescaleGraphOverlayPreference`
+            - Gets or sets the Image Export Rescale Graph Overlay Preference
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
+          * - :py:attr:`~KeyframeAnimationUtility`
+            - A utility for creating animations based on keyframes.
+          * - :py:attr:`~LabelManager`
+            - Manages labels and the creation and deletion of them.
+          * - :py:attr:`~LineWeight`
+            - LineWeight property.
+          * - :py:attr:`~ModelViewManager`
+            - An instance of the ModelViewManager.
+          * - :py:attr:`~OverlayManager`
+            - Manages overlays and the creation and deletion of them.
+          * - :py:attr:`~ResultAnimationOptions`
+            - Gets the Global Result Animation options.
+          * - :py:attr:`~RotateAngle`
+            - RotateAngle property.
+          * - :py:attr:`~Scene`
+            - Gets the scene.
+          * - :py:attr:`~SectionPlanes`
+            - Returns the collection of section planes used by graphics
+          * - :py:attr:`~Translucency`
+            - Translucency property.
+          * - :py:attr:`~Unit`
+            - Gets the current graphics unit.
+          * - :py:attr:`~ViewOptions`
+            - Gets the Graphics View Options.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AcceleratedGraphics
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AccGraphicsPreference]
+
+
+   
+   Gets or sets the Accelerated Graphics Preference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AdvancedRenderingIsSupported
+   :type: Optional[bool]
+
+
+   
+   AdvancedRenderingIsSupported property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Camera
+   :type: Optional[Ansys.ACT.Common.Graphics.MechanicalCameraWrapper]
+
+
+   
+   Gets the camera.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CanPlotDisplacementTraces
+   :type: Optional[bool]
+
+
+   
+   CanPlotDisplacementTraces property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Color
+   :type: Optional[int]
+
+
+   
+   Color property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DepthTest
+   :type: Optional[bool]
+
+
+   
+   DepthTest property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DrawContexts
+   :type: Optional[List[Ansys.ACT.Interfaces.Graphics.IDrawContext]]
+
+
+   
+   DrawContexts property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalLegendSettings
+   :type: Optional[Ansys.Mechanical.Graphics.GlobalLegendSettings]
+
+
+   
+   Gets the Global Graphics Legend Settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImageCompare
+   :type: Optional[Ansys.ACT.Common.Graphics.ImageCompare]
+
+
+   
+   ImageCompare property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImageExportRescaleGraphOverlayPreference
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Image Export Rescale Graph Overlay Preference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.Gfx.IDSGraphics]
+
+
+   
+   InternalObject property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: KeyframeAnimationUtility
+   :type: Optional[Ansys.ACT.Common.Graphics.KeyframeAnimationUtility]
+
+
+   
+   A utility for creating animations based on keyframes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LabelManager
+   :type: Optional[Ansys.Mechanical.Graphics.Labels.LabelManager]
+
+
+   
+   Manages labels and the creation and deletion of them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LineWeight
+   :type: Optional[int]
+
+
+   
+   LineWeight property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModelViewManager
+   :type: Optional[Ansys.ACT.Interfaces.Graphics.IModelViewManager]
+
+
+   
+   An instance of the ModelViewManager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OverlayManager
+   :type: Optional[Ansys.Mechanical.Graphics.OverlayManager]
+
+
+   
+   Manages overlays and the creation and deletion of them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultAnimationOptions
+   :type: Optional[Ansys.Mechanical.Graphics.ResultAnimationOptions]
+
+
+   
+   Gets the Global Result Animation options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RotateAngle
+   :type: Optional[float]
+
+
+   
+   RotateAngle property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Scene
+   :type: Optional[Ansys.ACT.Interfaces.Graphics.IGraphicsCollection]
+
+
+   
+   Gets the scene.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SectionPlanes
+   :type: Optional[Ansys.Mechanical.Graphics.SectionPlanes]
+
+
+   
+   Returns the collection of section planes used by graphics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Translucency
+   :type: Optional[float]
+
+
+   
+   Translucency property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Gets the current graphics unit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ViewOptions
+   :type: Optional[Ansys.Mechanical.Graphics.ViewOptions]
+
+
+   
+   Gets the Graphics View Options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CreateAndOpenDraw3DContext() -> Ansys.ACT.Interfaces.Graphics.IDraw3DContext
+
+   
+   CreateAndOpenDraw3DContext method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreatePixelPoint(x: int, y: int) -> Ansys.ACT.Interfaces.Graphics.IPixelPoint
+
+   
+   Creates a point from pixel coordinates (ie. window coordinates).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateVector3D(x: float, y: float, z: float) -> Ansys.ACT.Interfaces.Graphics.IVector3D
+
+   
+   Create a 3D vector from world coordinates.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateWorldPoint(x: float, y: float, z: float) -> Ansys.ACT.Interfaces.Graphics.IWorldPoint
+
+   
+   Create a point from world coordinates.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DrawText2D(x: int, y: int, text: str) -> None
+
+   
+   DrawText2D method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Export3D(filePath: str, format3d: Ansys.Mechanical.DataModel.Enums.Graphics3DExportFormat, settings: Ansys.Mechanical.Graphics.Graphics3DExportSettings) -> None
+
+   
+   Exports the current Graphics display in a 3d format to a file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportImage(filePath: str, formatImage: Ansys.Mechanical.DataModel.Enums.GraphicsImageExportFormat, settings: Ansys.Mechanical.Graphics.GraphicsImageExportSettings) -> None
+
+   
+   Exports the current graphics display to a 2D image file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportScreenToImage(filePath: str) -> None
+
+   
+   ExportScreenToImage method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportViewportChart(viewportIndex: int, filePath: str, width: int, height: int, formatImage: Ansys.Mechanical.DataModel.Enums.GraphicsImageExportFormat) -> None
+
+   
+   Exports the specified viewport's chart to file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportViewportImage(viewportIndex: int, filePath: str, formatImage: Ansys.Mechanical.DataModel.Enums.GraphicsImageExportFormat, settings: Ansys.Mechanical.Graphics.GraphicsImageExportSettings) -> None
+
+   
+   Exports the current graphics display to a 2D image file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportViewports(filePath: str, format: Ansys.Mechanical.DataModel.Enums.GraphicsImageExportFormat, settings: Ansys.Mechanical.Graphics.GraphicsViewportsExportSettings) -> None
+
+   
+   Creates a composite of images exported from each open viewport.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ForceResume() -> None
+
+.. code-block:: text
+
+   Forces the scene to resume. Useful in interactive context (console) if a reference on an
+   operation has been lost.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: FullRedraw() -> None
+
+   
+   FullRedraw method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportLegend(filePath: str, unit: str) -> Ansys.Mechanical.Graphics.Tools.LegendSettings
+
+   
+   ImportLegend method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: LineTo2D(x: int, y: int) -> None
+
+   
+   LineTo2D method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: MoveTo2D(x: int, y: int) -> None
+
+   
+   MoveTo2D method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PixelToWorld(xy: Iterable[int]) -> float
+
+   
+   PixelToWorld method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Redraw() -> None
+
+   
+   Forces the scene to redraw its content.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveContext(context: Ansys.ACT.Interfaces.Graphics.IDrawContext) -> None
+
+   
+   RemoveContext method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Suspend() -> Ansys.ACT.Interfaces.Graphics.ISuspendController
+
+   
+   Prevents the scene to redraw until the Resume controller method was called.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: VerifyLocaleStringsAreAllRenderable() -> tuple[str, bool]
+
+   
+   Performs a test to see if all characters present in all locale dsstringtable.xml files can be found via DSGStream's TextEngine
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WorldToPixel(pt: Iterable[float]) -> int
+
+   
+   WorldToPixel method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: add_ExtendObjectsToDisplay(value: System.EventHandler[Ansys.ACT.Common.Graphics.ExtendObjectsToDisplayArgs]) -> None
+
+   
+   add_ExtendObjectsToDisplay method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: remove_ExtendObjectsToDisplay(value: System.EventHandler[Ansys.ACT.Common.Graphics.ExtendObjectsToDisplayArgs]) -> None
+
+   
+   remove_ExtendObjectsToDisplay method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

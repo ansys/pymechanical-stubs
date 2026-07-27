@@ -1,0 +1,196 @@
+.. vale off
+
+
+
+:class:`MAPDLImportSettings`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.ExternalData.MAPDLImportSettings
+
+   Bases: :py:obj:`object`
+
+
+   
+   defines how to import external data from a MAPDL CDB file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MAPDLImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dimension`
+            - The dimension of the MAPDL CDB file.
+          * - :py:attr:`~Format`
+            - Gets the existing corresponding format.
+          * - :py:attr:`~LengthUnit`
+            - The length unit of the MAPDL CDB file.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Dimension
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SourceDimension]
+
+
+   
+   The dimension of the MAPDL CDB file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Format
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat]
+
+
+   
+   Gets the existing corresponding format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LengthUnit
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.LengthUnit]
+
+
+   
+   The length unit of the MAPDL CDB file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
