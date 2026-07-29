@@ -1,0 +1,149 @@
+.. vale off
+
+
+
+:class:`CompositeCriterionTerm`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm(critTerm: Ansys.Common.Interop.DSObjectsAuto.IDSCompositeCriterionTerm)
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: CompositeCriterionTerm
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Coefficient`
+            - Returns coefficient of PrimaryCriterion in the CompositeCriterionTerm.
+          * - :py:attr:`~PrimaryCriterion`
+            - Returns PrimaryCriterion Object associated with the CompositeCriterionTerm.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Coefficient
+   :type: Optional[float]
+
+
+   
+   Returns coefficient of PrimaryCriterion in the CompositeCriterionTerm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimaryCriterion
+   :type: Optional[Ansys.ACT.Automation.Mechanical.PrimaryCriterion]
+
+
+   
+   Returns PrimaryCriterion Object associated with the CompositeCriterionTerm.
+   Returns None if no PrimaryCriterion Object is assigned to CompositeCriterionTerm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

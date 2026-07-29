@@ -1,0 +1,285 @@
+.. vale off
+
+
+
+:class:`ColumnarDataImportDefinition`
+=====================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.Table.ColumnarDataImportDefinition(index: int, variableType: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType, variableClassification: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification, unit: str, name: str)
+
+   Bases: :py:obj:`object`
+
+
+   
+   A simple class to hold the import definitions for how a column from a data source in
+   columnar format should be processed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+.. py:currentmodule:: ColumnarDataImportDefinition
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GenerateFromComImportDefinition`
+            - GenerateFromComImportDefinition method.
+          * - :py:attr:`~SaveAsComImportDefinition`
+            - SaveAsComImportDefinition method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Index`
+            - Gets or sets the specified data source column index from which this variable will be
+          * - :py:attr:`~Name`
+            - Gets or sets an identifier for the data source column.
+          * - :py:attr:`~Unit`
+            - Gets or sets the unit of the column.
+          * - :py:attr:`~VariableClassification`
+            - Gets or sets the variable classification of the column.
+          * - :py:attr:`~VariableType`
+            - Gets or sets the variable type of the column.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets or sets the specified data source column index from which this variable will be
+   imported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets or sets an identifier for the data source column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Unit
+   :type: Optional[str]
+
+
+   
+   Gets or sets the unit of the column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableClassification
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification]
+
+
+   
+   Gets or sets the variable classification of the column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType]
+
+
+   
+   Gets or sets the variable type of the column.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateFromComImportDefinition(comImportDefinition: Ansys.Common.Interop.AnsStdObjects.DSTableImportSettingsColumnarDataImportDefinition) -> Ansys.Mechanical.Table.ColumnarDataImportDefinition
+   :classmethod:
+
+
+   
+   GenerateFromComImportDefinition method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveAsComImportDefinition(importDefinition: Ansys.Mechanical.Table.ColumnarDataImportDefinition) -> Ansys.Common.Interop.AnsStdObjects.DSTableImportSettingsColumnarDataImportDefinition
+   :classmethod:
+
+
+   
+   SaveAsComImportDefinition method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

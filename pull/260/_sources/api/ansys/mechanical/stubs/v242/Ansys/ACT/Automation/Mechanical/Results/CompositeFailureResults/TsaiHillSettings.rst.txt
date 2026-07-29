@@ -1,0 +1,208 @@
+.. vale off
+
+
+
+:class:`TsaiHillSettings`
+=========================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.TsaiHillSettings(internalObject: Ansys.Common.Interop.DSObjectsAuto.IDSCompositeFailureCriteriaAuto)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines the configuration for the Tsai-Hill failure criterion for reinforced materials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: TsaiHillSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~Reset`
+            - Resets the settings to their default values.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Active`
+            - Active property.
+          * - :py:attr:`~FailureDimension`
+            - Gets or sets whether the failure criterion is evaluated only in-plane (2D),
+          * - :py:attr:`~WeightingFactor`
+            - Gets or sets the weighting factor for the failure criterion.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+
+   
+   Active property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailureDimension
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.FailureDimension]
+
+
+   
+   Gets or sets whether the failure criterion is evaluated only in-plane (2D),
+       or also in the out-of-plane direction (3D).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WeightingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the weighting factor for the failure criterion.
+       The corresponding failure label is 'th'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Reset() -> None
+
+   
+   Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
