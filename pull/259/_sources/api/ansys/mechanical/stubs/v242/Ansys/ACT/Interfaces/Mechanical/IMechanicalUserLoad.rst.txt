@@ -1,0 +1,746 @@
+.. vale off
+
+
+
+:class:`IMechanicalUserLoad`
+============================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Interfaces.Mechanical.IMechanicalUserLoad
+
+   Bases: :py:obj:`object`
+
+
+   
+   Defines a Mechanical user load.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: IMechanicalUserLoad
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CreateChild`
+            - CreateChild method.
+          * - :py:attr:`~Import`
+            - Import method.
+          * - :py:attr:`~NotifyChange`
+            - NotifyChange method.
+          * - :py:attr:`~SetCoordinateSystem`
+            - SetCoordinateSystem method.
+          * - :py:attr:`~SetDefaultSelection`
+            - Sets the default selection of the entity.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~AffectsSolution`
+            - AffectsSolution property.
+          * - :py:attr:`~AllProperties`
+            - AllProperties property.
+          * - :py:attr:`~Analysis`
+            - Gets the associated analysis.
+          * - :py:attr:`~Attributes`
+            - Attributes property.
+          * - :py:attr:`~Caption`
+            - Caption property.
+          * - :py:attr:`~Children`
+            - Children property.
+          * - :py:attr:`~Color`
+            - Color property.
+          * - :py:attr:`~Controller`
+            - Controller property.
+          * - :py:attr:`~Extension`
+            - Extension property.
+          * - :py:attr:`~Icon`
+            - Icon property.
+          * - :py:attr:`~Id`
+            - Id property.
+          * - :py:attr:`~InternalCaption`
+            - InternalCaption property.
+          * - :py:attr:`~IsLoad`
+            - IsLoad property.
+          * - :py:attr:`~IsSupport`
+            - IsSupport property.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~ObjectLocation`
+            - ObjectLocation property.
+          * - :py:attr:`~ObjectType`
+            - ObjectType property.
+          * - :py:attr:`~Parent`
+            - Parent property.
+          * - :py:attr:`~Properties`
+            - Properties property.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~SupportedLocations`
+            - SupportedLocations property.
+          * - :py:attr:`~Suppressed`
+            - Suppressed property.
+          * - :py:attr:`~Version`
+            - Version property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: AffectsSolution
+   :type: Optional[bool]
+
+
+   
+   AffectsSolution property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AllProperties
+   :type: Optional[Iterable[Ansys.ACT.Interfaces.UserObject.ISimProperty]]
+
+
+   
+   AllProperties property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Analysis
+   :type: Optional[Ansys.ACT.Interfaces.Analysis.IAnalysis]
+
+
+   
+   Gets the associated analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Attributes
+   :type: Optional[Ansys.ACT.Interfaces.Common.IAttributeCollection]
+
+
+   
+   Attributes property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Caption
+   :type: Optional[str]
+
+
+   
+   Caption property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Children
+   :type: Optional[Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]]
+
+
+   
+   Children property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Color
+   :type: Optional[int]
+
+
+   
+   Color property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Controller
+   :type: Optional[Any]
+
+
+   
+   Controller property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Extension
+   :type: Optional[Ansys.ACT.Interfaces.Common.IExtension]
+
+
+   
+   Extension property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Icon
+   :type: Optional[str]
+
+
+   
+   Icon property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Id property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalCaption
+   :type: Optional[str]
+
+
+   
+   InternalCaption property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsLoad
+   :type: Optional[bool]
+
+
+   
+   IsLoad property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsSupport
+   :type: Optional[bool]
+
+
+   
+   IsSupport property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectLocation
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum]
+
+
+   
+   ObjectLocation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectType
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectTypeEnum]
+
+
+   
+   ObjectType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.ACT.Interfaces.DataModel.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.IPropertyCollection]
+
+
+   
+   Properties property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[str]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportedLocations
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum]
+
+
+   
+   SupportedLocations property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Suppressed property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Version
+   :type: Optional[int]
+
+
+   
+   Version property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CreateChild(name: str) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
+
+   
+   CreateChild method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Import() -> None
+
+   
+   Import method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: NotifyChange() -> None
+
+   
+   NotifyChange method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetCoordinateSystem(system: Ansys.ACT.Interfaces.Analysis.ICoordinateSystem) -> None
+
+   
+   SetCoordinateSystem method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetDefaultSelection(selection: Ansys.ACT.Interfaces.Common.ISelectionInfo, notifyChange: bool) -> None
+
+   
+   Sets the default selection of the entity.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

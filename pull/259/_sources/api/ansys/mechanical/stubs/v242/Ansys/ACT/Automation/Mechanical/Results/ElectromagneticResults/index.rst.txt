@@ -1,0 +1,179 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ElectromagneticResults``
+==========================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ElectromagneticResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.CurrentDensity`
+            - Defines a CurrentDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.DirectionalMagneticFieldIntensity`
+            - Defines a DirectionalMagneticFieldIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.DirectionalMagneticFluxDensity`
+            - Defines a DirectionalMagneticFluxDensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.ElectricPotential`
+            - Defines a ElectricPotential.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.ElectromagneticResult`
+            - Defines a ElectromagneticResult.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.FluxLinkage`
+            - Defines a FluxLinkage.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.Inductance`
+            - Defines a Inductance.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.MagneticDirectionalForces`
+            - Defines a MagneticDirectionalForces.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.MagneticError`
+            - Defines a MagneticError.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.MagneticTotalForces`
+            - Defines a MagneticTotalForces.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.TotalMagneticFieldIntensity`
+            - Defines a TotalMagneticFieldIntensity.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ElectromagneticResults.TotalMagneticFluxDensity`
+            - Defines a TotalMagneticFluxDensity.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> CurrentDensity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/CurrentDensity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalMagneticFieldIntensity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/DirectionalMagneticFieldIntensity>
+    <span class="nf nf-cod-symbol_class"></span> DirectionalMagneticFluxDensity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/DirectionalMagneticFluxDensity>
+    <span class="nf nf-cod-symbol_class"></span> ElectricPotential</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/ElectricPotential>
+    <span class="nf nf-cod-symbol_class"></span> ElectromagneticResult</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/ElectromagneticResult>
+    <span class="nf nf-cod-symbol_class"></span> FluxLinkage</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/FluxLinkage>
+    <span class="nf nf-cod-symbol_class"></span> Inductance</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/Inductance>
+    <span class="nf nf-cod-symbol_class"></span> MagneticDirectionalForces</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/MagneticDirectionalForces>
+    <span class="nf nf-cod-symbol_class"></span> MagneticError</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/MagneticError>
+    <span class="nf nf-cod-symbol_class"></span> MagneticTotalForces</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/MagneticTotalForces>
+    <span class="nf nf-cod-symbol_class"></span> TotalMagneticFieldIntensity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/TotalMagneticFieldIntensity>
+    <span class="nf nf-cod-symbol_class"></span> TotalMagneticFluxDensity</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ElectromagneticResults/TotalMagneticFluxDensity>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ElectromagneticResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

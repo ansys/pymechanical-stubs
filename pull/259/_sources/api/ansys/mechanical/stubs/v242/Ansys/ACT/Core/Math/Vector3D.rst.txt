@@ -1,0 +1,280 @@
+.. vale off
+
+
+
+:class:`Vector3D`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Core.Math.Vector3D(x: float, y: float, z: float)
+
+   Bases: :py:obj:`object`
+
+
+
+
+
+
+
+.. py:currentmodule:: Vector3D
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__add__`
+            - op_Addition method.
+          * - :py:attr:`~__eq__`
+            - op_Equality method.
+          * - :py:attr:`~__ne__`
+            - op_Inequality method.
+          * - :py:attr:`~__sub__`
+            - op_Subtraction method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CrossProduct`
+            - CrossProduct method.
+          * - :py:attr:`~CylindricalToCartesian`
+            - CylindricalToCartesian method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetNormal`
+            - GetNormal method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~IsColinearTo`
+            - IsColinearTo method.
+          * - :py:attr:`~Length`
+            - Length method.
+          * - :py:attr:`~Normalize`
+            - Normalize method.
+          * - :py:attr:`~SphericalToCartesian`
+            - SphericalToCartesian method.
+          * - :py:attr:`~SquareLength`
+            - SquareLength method.
+          * - :py:attr:`~Substract`
+            - Substract method.
+          * - :py:attr:`~ToArray`
+            - ToArray method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Item`
+            - Item property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Item
+   :type: Optional[float]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CrossProduct(other: Ansys.ACT.Interfaces.Graphics.IVector3D) -> Ansys.ACT.Core.Math.Vector3D
+
+   
+   CrossProduct method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CylindricalToCartesian() -> Ansys.ACT.Core.Math.Vector3D
+
+   
+   CylindricalToCartesian method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.ACT.Core.Math.Vector3D) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNormal() -> Ansys.ACT.Interfaces.Graphics.IVector3D
+
+   
+   GetNormal method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsColinearTo(other: Ansys.ACT.Interfaces.Graphics.IVector3D) -> bool
+
+   
+   IsColinearTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Length() -> float
+
+   
+   Length method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Normalize() -> None
+
+   
+   Normalize method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SphericalToCartesian() -> Ansys.ACT.Core.Math.Vector3D
+
+   
+   SphericalToCartesian method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SquareLength() -> float
+
+   
+   SquareLength method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Substract(other: Ansys.ACT.Core.Math.Vector3D) -> None
+
+   
+   Substract method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToArray() -> float
+
+   
+   ToArray method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __add__(a: Ansys.ACT.Core.Math.Vector3D, b: Ansys.ACT.Core.Math.Vector3D) -> Ansys.ACT.Core.Math.Vector3D
+   :classmethod:
+
+
+   
+   op_Addition method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __eq__(v1: Ansys.ACT.Core.Math.Vector3D, v2: Ansys.ACT.Core.Math.Vector3D) -> bool
+   :classmethod:
+
+
+   
+   op_Equality method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __ne__(v1: Ansys.ACT.Core.Math.Vector3D, v2: Ansys.ACT.Core.Math.Vector3D) -> bool
+   :classmethod:
+
+
+   
+   op_Inequality method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __sub__(a: Ansys.ACT.Core.Math.Vector3D, b: Ansys.ACT.Core.Math.Vector3D) -> Ansys.ACT.Core.Math.Vector3D
+   :classmethod:
+
+
+   
+   op_Subtraction method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
