@@ -1,0 +1,419 @@
+.. vale off
+
+
+
+:class:`Vector3D`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Math.Vector3D(x: float, y: float, z: float)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Vector in 3D-space
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: Vector3D
+
+Overview
+--------
+
+.. tab-set::
+
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Cross`
+            - Cross product - same as multiply operator
+          * - :py:attr:`~Dot`
+            - Dot product.
+          * - :py:attr:`~GetDistance`
+            - Squared distance between vectors/points
+          * - :py:attr:`~GetDistanceSquared`
+            - Squared distance between vectors/points
+          * - :py:attr:`~__add__`
+            - Plus operator
+          * - :py:attr:`~__eq__`
+            - Equal operator
+          * - :py:attr:`~__mul__`
+            - Multiply a factor by a vector operator.
+          * - :py:attr:`~__ne__`
+            - Not-Equal operator
+          * - :py:attr:`~__neg__`
+            - Unary minus operator
+          * - :py:attr:`~__sub__`
+            - Minus operator
+          * - :py:attr:`~__truediv__`
+            - Divide a vector by a factor operator.
+          * - :py:attr:`~op_Explicit`
+            - op_Explicit method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Add vector to itself.
+          * - :py:attr:`~CloneNormalized`
+            - Create a normalized copy of a vector
+          * - :py:attr:`~CrossProduct`
+            - Cross product.
+          * - :py:attr:`~DotProduct`
+            - Dot product.
+          * - :py:attr:`~Equals`
+            - Object.Equals(object o) override
+          * - :py:attr:`~GetHashCode`
+            - Object.GetHashCode() override
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~Normalize`
+            - Convert to an unit vector
+          * - :py:attr:`~Subtract`
+            - Subtract vector from itself.
+          * - :py:attr:`~ToString`
+            - String representation.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Item`
+            - Item property.
+          * - :py:attr:`~Magnitude`
+            - Vector magnitude accessor
+          * - :py:attr:`~MagnitudeSquared`
+            - Vector magnitude squared accessor
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Item
+   :type: Optional[float]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Magnitude
+   :type: Optional[float]
+
+
+   
+   Vector magnitude accessor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MagnitudeSquared
+   :type: Optional[float]
+
+
+   
+   Vector magnitude squared accessor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Add(vec3: Ansys.ACT.Math.Vector3D) -> None
+
+   
+   Add vector to itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CloneNormalized() -> Ansys.ACT.Math.Vector3D
+
+   
+   Create a normalized copy of a vector
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Cross(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+   :classmethod:
+
+
+   
+   Cross product - same as multiply operator
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CrossProduct(vec3: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+
+   
+   Cross product.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Dot(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> float
+   :classmethod:
+
+
+   
+   Dot product.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DotProduct(vec3: Ansys.ACT.Math.Vector3D) -> float
+
+   
+   Dot product.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(o: Any) -> bool
+
+   
+   Object.Equals(object o) override
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDistance(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> float
+   :classmethod:
+
+
+   
+   Squared distance between vectors/points
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDistanceSquared(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> float
+   :classmethod:
+
+
+   
+   Squared distance between vectors/points
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   Object.GetHashCode() override
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Normalize() -> None
+
+   
+   Convert to an unit vector
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Subtract(vec3: Ansys.ACT.Math.Vector3D) -> None
+
+   
+   Subtract vector from itself.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   String representation.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __add__(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+   :classmethod:
+
+
+   
+   Plus operator
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __eq__(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> bool
+   :classmethod:
+
+
+   
+   Equal operator
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __mul__(factor: float, vec3: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+   :classmethod:
+
+
+   
+   Multiply a factor by a vector operator.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __ne__(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> bool
+   :classmethod:
+
+
+   
+   Not-Equal operator
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __neg__(vec3: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+   :classmethod:
+
+
+   
+   Unary minus operator
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __sub__(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+   :classmethod:
+
+
+   
+   Minus operator
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __truediv__(vec3: Ansys.ACT.Math.Vector3D, divFactor: float) -> Ansys.ACT.Math.Vector3D
+   :classmethod:
+
+
+   
+   Divide a vector by a factor operator.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: op_Explicit(vec3: Ansys.ACT.Math.Vector3D) -> float
+   :classmethod:
+
+
+   
+   op_Explicit method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

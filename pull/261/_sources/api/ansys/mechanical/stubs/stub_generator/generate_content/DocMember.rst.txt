@@ -1,0 +1,198 @@
+.. vale off
+
+
+
+:class:`DocMember`
+==================
+
+.. py:class:: ansys.mechanical.stubs.stub_generator.generate_content.DocMember(element: xml.etree.ElementTree.Element)
+
+   
+   Docstring member.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DocMember
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~example`
+            - The example within the element.
+          * - :py:attr:`~name`
+            - The name within the element.
+          * - :py:attr:`~params`
+            - The parameters within a element.
+          * - :py:attr:`~remarks`
+            - The remarks within the element.
+          * - :py:attr:`~summary`
+            - The summary within the element.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: example
+   :type: xml.etree.ElementTree.Element
+
+
+   
+   The example within the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: name
+   :type: str
+
+
+   
+   The name within the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: params
+   :type: str
+
+
+   
+   The parameters within a element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: remarks
+   :type: str
+
+
+   
+   The remarks within the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: summary
+   :type: str
+
+
+   
+   The summary within the element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

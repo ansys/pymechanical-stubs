@@ -1,0 +1,387 @@
+.. vale off
+
+
+
+:class:`NamedSelectionCriterion`
+================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion(active: bool, actionType: Ansys.Mechanical.DataModel.Enums.SelectionActionType, entityType: Ansys.Mechanical.DataModel.Enums.SelectionType, criterionType: Ansys.Mechanical.DataModel.Enums.SelectionCriterionType, operatorType: Ansys.Mechanical.DataModel.Enums.SelectionOperatorType, value: Any, lowerBound: Ansys.Core.Units.Quantity, upperBound: Ansys.Core.Units.Quantity, coordinateSystem: Ansys.ACT.Automation.Mechanical.CoordinateSystem)
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: NamedSelectionCriterion
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CopyFrom`
+            - CopyFrom method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetUnitAndQuantityName`
+            - GetUnitAndQuantityName method.
+          * - :py:attr:`~IsObject`
+            - IsObject method.
+          * - :py:attr:`~IsString`
+            - IsString method.
+          * - :py:attr:`~IsUnitless`
+            - IsUnitless method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Action`
+            - Action property.
+          * - :py:attr:`~Active`
+            - Active property.
+          * - :py:attr:`~CoordinateSystem`
+            - CoordinateSystem property.
+          * - :py:attr:`~Criterion`
+            - Criterion property.
+          * - :py:attr:`~EntityType`
+            - EntityType property.
+          * - :py:attr:`~LowerBound`
+            - LowerBound property.
+          * - :py:attr:`~Operator`
+            - Operator property.
+          * - :py:attr:`~UpperBound`
+            - UpperBound property.
+          * - :py:attr:`~Value`
+            - Value property.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Action
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionActionType]
+
+
+   
+   Action property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Active
+   :type: Optional[bool]
+
+
+   
+   Active property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   CoordinateSystem property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Criterion
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionCriterionType]
+
+
+   
+   Criterion property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EntityType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionType]
+
+
+   
+   EntityType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowerBound
+   :type: Optional[Any]
+
+
+   
+   LowerBound property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Operator
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.SelectionOperatorType]
+
+
+   
+   Operator property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UpperBound
+   :type: Optional[Any]
+
+
+   
+   UpperBound property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Value
+   :type: Optional[Any]
+
+
+   
+   Value property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: CopyFrom(criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> None
+
+   
+   CopyFrom method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUnitAndQuantityName() -> tuple[str, str]
+
+   
+   GetUnitAndQuantityName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsObject() -> bool
+
+   
+   IsObject method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsString() -> bool
+
+   
+   IsString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsUnitless() -> bool
+
+   
+   IsUnitless method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

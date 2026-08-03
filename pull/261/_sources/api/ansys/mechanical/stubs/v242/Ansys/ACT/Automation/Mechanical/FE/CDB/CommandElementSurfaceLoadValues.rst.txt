@@ -1,0 +1,169 @@
+.. vale off
+
+
+
+:class:`CommandElementSurfaceLoadValues`
+========================================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElementSurfaceLoadValues(iElementSurfaceLoadValues: Ansys.Common.Interop.FEParsePlugin_ANSYS.IElementSurfaceLoadValues)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Values associated to an element surface load from a SFEBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandElementSurfaceLoadValues
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~ValueCount`
+            - Gets the number of values.
+          * - :py:attr:`~Values`
+            - Gets the values.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: ValueCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Values
+   :type: Optional[tuple[Any]]
+
+
+   
+   Gets the values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

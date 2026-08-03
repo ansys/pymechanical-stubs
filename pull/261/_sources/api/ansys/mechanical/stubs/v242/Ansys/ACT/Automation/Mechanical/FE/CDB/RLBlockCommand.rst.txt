@@ -1,0 +1,196 @@
+.. vale off
+
+
+
+:class:`RLBlockCommand`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.RLBlockCommand(iRLBlockCommand: Ansys.Common.Interop.FEParsePlugin_ANSYS.IRLBlockCommand)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents a RLBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: RLBlockCommand
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Index`
+            - Gets the command index.
+          * - :py:attr:`~Name`
+            - Gets the command name.
+          * - :py:attr:`~Reals`
+            - Gets the real constant sets.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Index
+   :type: Optional[int]
+
+
+   
+   Gets the command index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Gets the command name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Reals
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.CDB.CommandReal]]
+
+
+   
+   Gets the real constant sets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

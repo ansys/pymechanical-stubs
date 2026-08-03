@@ -1,0 +1,382 @@
+.. vale off
+
+
+
+
+
+
+
+
+``ProbeResults``
+================================
+
+
+.. py:module:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults
+
+
+Summary
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. py:currentmodule:: ProbeResults
+.. tab-set::
+
+
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.AccelerationProbe`
+            - Defines a AccelerationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.AngularAccelerationProbe`
+            - Defines a AngularAccelerationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.AngularVelocityProbe`
+            - Defines a AngularVelocityProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.BeamProbe`
+            - Defines a BoltPretensionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.BearingProbe`
+            - Defines a BoltPretensionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.BoltPretensionProbe`
+            - Defines a BoltPretensionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ChargeReactionProbe`
+            - Defines a ChargeReactionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ContactDistanceProbe`
+            - Defines a ContactDistanceProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.CurrentDensityProbe`
+            - Defines a CurrentDensityProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.DeformationProbe`
+            - Defines a DeformationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ElectricFieldProbe`
+            - Defines a ElectricFieldProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ElectricVoltageProbe`
+            - Defines a ElectricVoltageProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ElectromechanicalCouplingCoefficient`
+            - Defines a ElectromechanicalCouplingCoefficient.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.EmagReactionProbe`
+            - Defines a EmagReactionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.EnergyProbe`
+            - Defines a EnergyProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.FieldIntensityProbe`
+            - Defines a FieldIntensityProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.FlexibleRotationProbe`
+            - Defines a FlexibleRotationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.FluxDensityProbe`
+            - Defines a FluxDensityProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ForceReaction`
+            - Defines a ForceReaction.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ForceSummationProbe`
+            - Defines a ForceSummationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.GeneralizedPlaneStrainProbe`
+            - Defines a GeneralizedPlaneStrainProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.HeatFluxProbe`
+            - Defines a HeatFluxProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ImpedanceProbe`
+            - Defines a ImpedanceProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.JointProbe`
+            - Defines a BoltPretensionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.JouleHeatProbe`
+            - Defines a JouleHeatProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.MagneticFluxProbe`
+            - Defines a MagneticFluxProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.MomentReaction`
+            - Defines a MomentReaction.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.Position`
+            - Defines a Position.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.QualityFactor`
+            - Defines a QualityFactor.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.RadiationProbe`
+            - Defines a RadiationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ReactionProbe`
+            - Defines a ReactionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ResponsePSD`
+            - Defines a ResponsePSD.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.ResultProbe`
+            - Defines a ResultProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.RotationProbe`
+            - Defines a RotationProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.SpringProbe`
+            - Defines a BoltPretensionProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.StrainProbe`
+            - Defines a StrainProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.StressProbe`
+            - Defines a StressProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.TemperatureProbe`
+            - Defines a TemperatureProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.TorqueProbe`
+            - Defines a TorqueProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.VelocityProbe`
+            - Defines a VelocityProbe.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.ProbeResults.VolumeProbe`
+            - Defines a VolumeProbe.
+
+
+
+
+
+
+
+
+
+
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> AccelerationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/AccelerationProbe>
+    <span class="nf nf-cod-symbol_class"></span> AngularAccelerationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/AngularAccelerationProbe>
+    <span class="nf nf-cod-symbol_class"></span> AngularVelocityProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/AngularVelocityProbe>
+    <span class="nf nf-cod-symbol_class"></span> BeamProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/BeamProbe>
+    <span class="nf nf-cod-symbol_class"></span> BearingProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/BearingProbe>
+    <span class="nf nf-cod-symbol_class"></span> BoltPretensionProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/BoltPretensionProbe>
+    <span class="nf nf-cod-symbol_class"></span> ChargeReactionProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ChargeReactionProbe>
+    <span class="nf nf-cod-symbol_class"></span> ContactDistanceProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ContactDistanceProbe>
+    <span class="nf nf-cod-symbol_class"></span> CurrentDensityProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/CurrentDensityProbe>
+    <span class="nf nf-cod-symbol_class"></span> DeformationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/DeformationProbe>
+    <span class="nf nf-cod-symbol_class"></span> ElectricFieldProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ElectricFieldProbe>
+    <span class="nf nf-cod-symbol_class"></span> ElectricVoltageProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ElectricVoltageProbe>
+    <span class="nf nf-cod-symbol_class"></span> ElectromechanicalCouplingCoefficient</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ElectromechanicalCouplingCoefficient>
+    <span class="nf nf-cod-symbol_class"></span> EmagReactionProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/EmagReactionProbe>
+    <span class="nf nf-cod-symbol_class"></span> EnergyProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/EnergyProbe>
+    <span class="nf nf-cod-symbol_class"></span> FieldIntensityProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/FieldIntensityProbe>
+    <span class="nf nf-cod-symbol_class"></span> FlexibleRotationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/FlexibleRotationProbe>
+    <span class="nf nf-cod-symbol_class"></span> FluxDensityProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/FluxDensityProbe>
+    <span class="nf nf-cod-symbol_class"></span> ForceReaction</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ForceReaction>
+    <span class="nf nf-cod-symbol_class"></span> ForceSummationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ForceSummationProbe>
+    <span class="nf nf-cod-symbol_class"></span> GeneralizedPlaneStrainProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/GeneralizedPlaneStrainProbe>
+    <span class="nf nf-cod-symbol_class"></span> HeatFluxProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/HeatFluxProbe>
+    <span class="nf nf-cod-symbol_class"></span> ImpedanceProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ImpedanceProbe>
+    <span class="nf nf-cod-symbol_class"></span> JointProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/JointProbe>
+    <span class="nf nf-cod-symbol_class"></span> JouleHeatProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/JouleHeatProbe>
+    <span class="nf nf-cod-symbol_class"></span> MagneticFluxProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/MagneticFluxProbe>
+    <span class="nf nf-cod-symbol_class"></span> MomentReaction</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/MomentReaction>
+    <span class="nf nf-cod-symbol_class"></span> Position</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/Position>
+    <span class="nf nf-cod-symbol_class"></span> QualityFactor</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/QualityFactor>
+    <span class="nf nf-cod-symbol_class"></span> RadiationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/RadiationProbe>
+    <span class="nf nf-cod-symbol_class"></span> ReactionProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ReactionProbe>
+    <span class="nf nf-cod-symbol_class"></span> ResponsePSD</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ResponsePSD>
+    <span class="nf nf-cod-symbol_class"></span> ResultProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/ResultProbe>
+    <span class="nf nf-cod-symbol_class"></span> RotationProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/RotationProbe>
+    <span class="nf nf-cod-symbol_class"></span> SpringProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/SpringProbe>
+    <span class="nf nf-cod-symbol_class"></span> StrainProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/StrainProbe>
+    <span class="nf nf-cod-symbol_class"></span> StressProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/StressProbe>
+    <span class="nf nf-cod-symbol_class"></span> TemperatureProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/TemperatureProbe>
+    <span class="nf nf-cod-symbol_class"></span> TorqueProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/TorqueProbe>
+    <span class="nf nf-cod-symbol_class"></span> VelocityProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/VelocityProbe>
+    <span class="nf nf-cod-symbol_class"></span> VolumeProbe</api/ansys/mechanical/stubs/v242/Ansys/ACT/Automation/Mechanical/Results/ProbeResults/VolumeProbe>
+
+
+
+
+
+
+
+
+
+Description
+-----------
+
+
+ProbeResults module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..
+    !! processed by numpydoc !!
+
+
+
+
+
+
+
+
+.. vale on

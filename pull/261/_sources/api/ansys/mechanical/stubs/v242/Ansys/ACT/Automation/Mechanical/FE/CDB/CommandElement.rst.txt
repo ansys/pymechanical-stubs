@@ -1,0 +1,358 @@
+.. vale off
+
+
+
+:class:`CommandElement`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.FE.CDB.CommandElement(iElement: Ansys.Common.Interop.FEParsePlugin_ANSYS.IElement)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Represents an element associated to an EBLOCK command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: CommandElement
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Csys`
+            - Gets the coordinate system number.
+          * - :py:attr:`~ElementShapeFlag`
+            - Gets the element shape flag used for contact element types.
+          * - :py:attr:`~Id`
+            - Gets the element number.
+          * - :py:attr:`~Mat`
+            - Gets the material number.
+          * - :py:attr:`~NodeCount`
+            - Gets the number of nodes.
+          * - :py:attr:`~Nodes`
+            - Gets the nodes.
+          * - :py:attr:`~Real`
+            - Gets the real constant set number.
+          * - :py:attr:`~Section`
+            - Gets the section number.
+          * - :py:attr:`~Type`
+            - Gets the element type number.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Csys
+   :type: Optional[int]
+
+
+   
+   Gets the coordinate system number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ElementShapeFlag
+   :type: Optional[int]
+
+
+   
+   Gets the element shape flag used for contact element types.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Gets the element number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Mat
+   :type: Optional[int]
+
+
+   
+   Gets the material number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodeCount
+   :type: Optional[int]
+
+
+   
+   Gets the number of nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Nodes
+   :type: Optional[tuple[int]]
+
+
+   
+   Gets the nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Real
+   :type: Optional[int]
+
+
+   
+   Gets the real constant set number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Section
+   :type: Optional[int]
+
+
+   
+   Gets the section number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Type
+   :type: Optional[int]
+
+
+   
+   Gets the element type number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

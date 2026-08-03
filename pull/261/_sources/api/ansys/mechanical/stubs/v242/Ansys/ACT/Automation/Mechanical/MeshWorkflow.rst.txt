@@ -1,0 +1,1795 @@
+.. vale off
+
+
+
+:class:`MeshWorkflow`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshWorkflow(internalObject: Any)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Object that wraps IDSEngineeringModelWorkflowGroup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: MeshWorkflow
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Activate`
+            - Activate the current object.
+          * - :py:attr:`~AddFigure`
+            - Creates a new child Figure.
+          * - :py:attr:`~AddImage`
+            - Creates a new child Image.
+          * - :py:attr:`~AddInput`
+            - Adds an “Input” node as child object under the “Mesh Workflow” and returns the new MeshWorkflowInput object if not existent, otherwise it returns the already available MeshWorkflowInput object.
+          * - :py:attr:`~AddOutput`
+            - Adds an “Output” node as child object under the “Mesh Workflow” and returns the new MeshWorkflowOutput object if not existent, otherwise it returns the already available MeshWorkflowOutput object.
+          * - :py:attr:`~AddScopeToSelection`
+            - AddScopeToSelection method.
+          * - :py:attr:`~ClearGeneratedData`
+            - Clears all the generated data, i.e.,  It resets all inactive geometry parts/bodies to active again, clears the output data, and resets the state of the child objects (“Input”, “Steps”, “Output”) to the initial state. However, any user-defined settings such as the “Input” node scoping are retained.
+          * - :py:attr:`~ClearOutputData`
+            - Clears only the "Output" data, i.e., the generated Geometry part(s) and the associated mesh.
+          * - :py:attr:`~ComputeMeshQualityMetrics`
+            - ComputeMeshQualityMetrics method.
+          * - :py:attr:`~CopyTo`
+            - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateLabelFromScope`
+            - CreateLabelFromScope method.
+          * - :py:attr:`~CreateLabelFromSelection`
+            - CreateLabelFromSelection method.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
+          * - :py:attr:`~CreateParameter`
+            - Creates a new parameter for a Property.
+          * - :py:attr:`~Delete`
+            - Run the Delete action.
+          * - :py:attr:`~Duplicate`
+            - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~ExportFullWorkflow`
+            - Exports the steps into a .emx file.
+          * - :py:attr:`~ExportWorkflow`
+            - Exports the steps as template into a .emx file.
+          * - :py:attr:`~FinalizeWorkflow`
+            - Once all steps in a mesh workflow are completed successfully, the workflow can be completed which will transfer the generated data back into new Mechanical geometry part(s) together with the corresponding part mesh(es).
+          * - :py:attr:`~Generate`
+            - Generates the desired data by executing the whole workflow, i.e., transferring the input data, executing all steps, and completing the workflow by transferring the output data back into Geometry and Mesh data.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllLabelNames`
+            - Gets all the PrimeMesh model labels names currently defined for the workflow.
+          * - :py:attr:`~GetAllLabels`
+            - Gets all the PrimeMesh model labels currently defined for the workflow.
+          * - :py:attr:`~GetAllPartNames`
+            - Gets all the PrimeMesh model parts names currently defined for the workflow.
+          * - :py:attr:`~GetAllParts`
+            - Gets all the PrimeMesh model parts currently defined for the workflow.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
+          * - :py:attr:`~GetAllZoneNames`
+            - Gets all the PrimeMesh model zones names currently defined for the workflow.
+          * - :py:attr:`~GetAllZones`
+            - Gets all the PrimeMesh model zones currently defined for the workflow.
+          * - :py:attr:`~GetChildren`
+            - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDomainBrowserAvailableScopes`
+            - GetDomainBrowserAvailableScopes method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetIncrementalMeshingInfo`
+            - GetIncrementalMeshingInfo method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetMeshQualityTabIndex`
+            - GetMeshQualityTabIndex method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
+          * - :py:attr:`~GetParameter`
+            - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPrimeMeshModelId`
+            - GetPrimeMeshModelId method.
+          * - :py:attr:`~GetPrimeMeshModelIndex`
+            - GetPrimeMeshModelIndex method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetSheetQuantityTypeString`
+            - Get quantity type of sheet metric from mesh metric type
+          * - :py:attr:`~GetSolidMeshMetrics`
+            - GetSolidMeshMetrics method.
+          * - :py:attr:`~GetSolidMeshQualityState`
+            - Get the state of solid mesh quality worksheet tab
+          * - :py:attr:`~GetSolidSurfaceMeshMetrics`
+            - GetSolidSurfaceMeshMetrics method.
+          * - :py:attr:`~GetSolidSurfaceMeshQualityErrorLimit`
+            - Get Mesh Quality Error Limit
+          * - :py:attr:`~GetSolidSurfaceMeshQualityErrorLimitIsDefault`
+            - Get SolidSurface Mesh Quality Worksheet Error Limit is Default
+          * - :py:attr:`~GetSolidSurfaceMeshQualityName`
+            - Get Mesh Quality Name
+          * - :py:attr:`~GetSolidSurfaceMeshQualityState`
+            - Get the state of solid surface mesh quality worksheet tab
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWarningLimit`
+            - Get Mesh Quality Warning Limit
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWarningLimitIsDefault`
+            - Get SolidSurface Mesh Quality Worksheet Warning Limit is Default
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWorstMetricBackgroundColor`
+            - Get Mesh Quality Worst Metric BackgroundColor
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWorstMetricTooltip`
+            - Get Mesh Quality Worst Metric Tooltip
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWorstMetricValue`
+            - Get Mesh Quality Worst Metric Value
+          * - :py:attr:`~GetSolidSurfaceQuantityTypeString`
+            - Get Quantity type from SolidSurface mesh metric type
+          * - :py:attr:`~GetSurfaceMeshMetrics`
+            - GetSurfaceMeshMetrics method.
+          * - :py:attr:`~GetSurfaceMeshQualityErrorLimit`
+            - Get User Mesh Quality Error Limit
+          * - :py:attr:`~GetSurfaceMeshQualityErrorLimitIsDefault`
+            - Get Mesh Quality Error Limit is default
+          * - :py:attr:`~GetSurfaceMeshQualityName`
+            - GetSurfaceMeshQualityName method.
+          * - :py:attr:`~GetSurfaceMeshQualityState`
+            - Get the state of surface mesh quality worksheet tab
+          * - :py:attr:`~GetSurfaceMeshQualityWarningLimit`
+            - Get User Mesh Quality Warning Limit
+          * - :py:attr:`~GetSurfaceMeshQualityWarningLimitIsDefault`
+            - Get Mesh Quality Warning Limit is default
+          * - :py:attr:`~GetSurfaceMeshQualityWorstMetricBackgroundColor`
+            - Get Mesh Quality Worst Metric Background Colour
+          * - :py:attr:`~GetSurfaceMeshQualityWorstMetricTooltip`
+            - Get Mesh Quality Worst Metric Tooltip
+          * - :py:attr:`~GetSurfaceMeshQualityWorstMetricValue`
+            - Get Mesh Quality Worst Metric Value
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetUnpublishedList`
+            - GetUnpublishedList method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
+          * - :py:attr:`~GetVolumeMeshQualityErrorLimit`
+            - Get Mesh Quality Error Limit
+          * - :py:attr:`~GetVolumeMeshQualityErrorLimitIsDefault`
+            - Get Volume Mesh Quality Worksheet Error Limit is Default
+          * - :py:attr:`~GetVolumeMeshQualityName`
+            - Get Mesh Quality Name
+          * - :py:attr:`~GetVolumeMeshQualityWarningLimit`
+            - Get Mesh Quality Warning Limit
+          * - :py:attr:`~GetVolumeMeshQualityWarningLimitIsDefault`
+            - Get Volume Mesh Quality Worksheet Warning Limit is Default
+          * - :py:attr:`~GetVolumeMeshQualityWorstMetricBackgroundColor`
+            - Get Mesh Quality Worst Metric BackgroundColor
+          * - :py:attr:`~GetVolumeMeshQualityWorstMetricTooltip`
+            - Get Mesh Quality Worst Metric Tooltip
+          * - :py:attr:`~GetVolumeMeshQualityWorstMetricValue`
+            - Get Mesh Quality Worst Metric Value
+          * - :py:attr:`~GetVolumeQuantityTypeString`
+            - Get Quantity type from solid mesh metric type
+          * - :py:attr:`~GetWorkflowStepsGroup`
+            - Updates incremental meshing workflow group object -> generates all need generated steps.
+          * - :py:attr:`~GroupAllSimilarChildren`
+            - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupSimilarObjects`
+            - Run the GroupSimilarObjects action.
+          * - :py:attr:`~ImportWorkflow`
+            - Imports the steps from a template .emx file.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~InitializeWorkflow`
+            - Initializes the mesh workflow by transferring the scoped geometry parts/bodies from Mechanical into the PrimeMesh model and updates the “Input” node state accordingly.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
+          * - :py:attr:`~PropertyByAPIName`
+            - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
+          * - :py:attr:`~PropertyByName`
+            - Get a property by its unique name.
+          * - :py:attr:`~RemoveParameter`
+            - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnType`
+            - Renames applying the default name based on type.
+          * - :py:attr:`~ResetMeshQualityMetrics`
+            - ResetMeshQualityMetrics method.
+          * - :py:attr:`~SetMeshQualityTabIndex`
+            - SetMeshQualityTabIndex method.
+          * - :py:attr:`~SetSolidSurfaceMeshQualityErrorLimit`
+            - Set Mesh Quality Error Limit
+          * - :py:attr:`~SetSolidSurfaceMeshQualityWarningLimit`
+            - Set Mesh Quality Warning Limit
+          * - :py:attr:`~SetSurfaceMeshQualityErrorLimit`
+            - Set Mesh Quality Error Level
+          * - :py:attr:`~SetSurfaceMeshQualityWarningLimit`
+            - Set Mesh Quality Warning Limit
+          * - :py:attr:`~SetVolumeMeshQualityErrorLimit`
+            - Set Mesh Quality Error Limit
+          * - :py:attr:`~SetVolumeMeshQualityWarningLimit`
+            - Set Mesh Quality Warning Limit
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~UpdateWorkflow`
+            - Updates incremental meshing workflow group object -> generates all need generated steps.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Children`
+            - Gets the list of children.
+          * - :py:attr:`~DataModelObjectCategory`
+            - Gets the current DataModelObject's category.
+          * - :py:attr:`~Figures`
+            - Gets the list of associated figures.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
+          * - :py:attr:`~Images`
+            - Gets the list of associated images.
+          * - :py:attr:`~ImportedWorkflowFilename`
+            - The filename of the template.emx file that populated the workflow initially.
+          * - :py:attr:`~InternalObject`
+            - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~MeshWorkflowInput`
+            - Gets the MeshWorkflowInput object.
+          * - :py:attr:`~MeshWorkflowOutput`
+            - Gets the MeshWorkflowOutput object.
+          * - :py:attr:`~ModelContextString`
+            - Gets the ModelContextString.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~NumberOfShellMeshQualityMetrics`
+            - NumberOfShellMeshQualityMetrics property.
+          * - :py:attr:`~NumberOfSolidMeshQualityMetrics`
+            - NumberOfSolidMeshQualityMetrics property.
+          * - :py:attr:`~NumberOfSolidSurfaceMeshQualityMetrics`
+            - NumberOfSolidSurfaceMeshQualityMetrics property.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
+          * - :py:attr:`~Properties`
+            - Gets the list of properties for this object.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~UnitSystem`
+            - Defines the “unit system” of a Prime Model, if not defined, the unit system is deduced from the geometry at input data transfer time.
+          * - :py:attr:`~VisibleProperties`
+            - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WorkflowType`
+            - Returns the workflow type which is applicable to the Input, Steps, and Output.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Children
+   :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
+
+
+   
+   Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataModelObjectCategory
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
+
+
+   
+   Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Figures
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Figure]]
+
+
+   
+   Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Images
+   :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
+
+
+   
+   Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportedWorkflowFilename
+   :type: Optional[str]
+
+
+   
+   The filename of the template.emx file that populated the workflow initially.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelWorkflowGroupAuto]
+
+
+   
+   Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshWorkflowInput
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowInput]
+
+
+   
+   Gets the MeshWorkflowInput object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshWorkflowOutput
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutput]
+
+
+   
+   Gets the MeshWorkflowOutput object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ModelContextString
+   :type: Optional[str]
+
+
+   
+   Gets the ModelContextString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfShellMeshQualityMetrics
+   :type: Optional[int]
+
+
+   
+   NumberOfShellMeshQualityMetrics property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSolidMeshQualityMetrics
+   :type: Optional[int]
+
+
+   
+   NumberOfSolidMeshQualityMetrics property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSolidSurfaceMeshQualityMetrics
+   :type: Optional[int]
+
+
+   
+   NumberOfSolidSurfaceMeshQualityMetrics property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Properties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnitSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Defines the “unit system” of a Prime Model, if not defined, the unit system is deduced from the geometry at input data transfer time. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VisibleProperties
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
+
+
+   
+   Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.WorkflowType]
+
+
+   
+   Returns the workflow type which is applicable to the Input, Steps, and Output.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Activate() -> None
+
+   
+   Activate the current object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddFigure() -> Ansys.ACT.Automation.Mechanical.Figure
+
+   
+   Creates a new child Figure.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddImage(filePath: str) -> Ansys.ACT.Automation.Mechanical.Image
+
+.. code-block:: text
+
+   Creates a new child Image.
+   If a filePath is provided, the image will be loaded from that file,
+   if not, the image will be a screen capture of the Geometry window.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: AddInput() -> Ansys.ACT.Automation.Mechanical.MeshWorkflowInput
+
+   
+   Adds an “Input” node as child object under the “Mesh Workflow” and returns the new MeshWorkflowInput object if not existent, otherwise it returns the already available MeshWorkflowInput object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddOutput() -> Ansys.ACT.Automation.Mechanical.MeshWorkflowOutput
+
+   
+   Adds an “Output” node as child object under the “Mesh Workflow” and returns the new MeshWorkflowOutput object if not existent, otherwise it returns the already available MeshWorkflowOutput object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddScopeToSelection(scopeType: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType, scopeExpression: str) -> None
+
+   
+   AddScopeToSelection method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearGeneratedData() -> None
+
+   
+   Clears all the generated data, i.e.,  It resets all inactive geometry parts/bodies to active again, clears the output data, and resets the state of the child objects (“Input”, “Steps”, “Output”) to the initial state. However, any user-defined settings such as the “Input” node scoping are retained.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ClearOutputData() -> None
+
+   
+   Clears only the "Output" data, i.e., the generated Geometry part(s) and the associated mesh.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ComputeMeshQualityMetrics(scope: str) -> None
+
+   
+   ComputeMeshQualityMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
+
+   
+   Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateLabelFromScope(labelName: str, scopeType: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType, scopeExpression: str, entityFilter: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.LabelCreationFilter) -> None
+
+   
+   CreateLabelFromScope method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateLabelFromSelection(labelName: str, entityFilter: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.LabelCreationFilter) -> None
+
+   
+   CreateLabelFromSelection method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Delete() -> None
+
+   
+   Run the Delete action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportFullWorkflow(fileName: str) -> None
+
+   
+   Exports the steps into a .emx file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportWorkflow(fileName: str) -> None
+
+   
+   Exports the steps as template into a .emx file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FinalizeWorkflow() -> None
+
+   
+   Once all steps in a mesh workflow are completed successfully, the workflow can be completed which will transfer the generated data back into new Mechanical geometry part(s) together with the corresponding part mesh(es).
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Generate() -> None
+
+   
+   Generates the desired data by executing the whole workflow, i.e., transferring the input data, executing all steps, and completing the workflow by transferring the output data back into Geometry and Mesh data.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllLabelNames() -> List[str]
+
+   
+   Gets all the PrimeMesh model labels names currently defined for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllLabels() -> List[Ansys.Common.Interop.WBPrimeMesh.ILabel]
+
+   
+   Gets all the PrimeMesh model labels currently defined for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllPartNames() -> List[str]
+
+   
+   Gets all the PrimeMesh model parts names currently defined for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllParts() -> List[Ansys.Common.Interop.WBPrimeMesh.IPart]
+
+   
+   Gets all the PrimeMesh model parts currently defined for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllZoneNames() -> List[str]
+
+   
+   Gets all the PrimeMesh model zones names currently defined for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllZones() -> List[Ansys.Common.Interop.WBPrimeMesh.IZone]
+
+   
+   Gets all the PrimeMesh model zones currently defined for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+
+   
+   Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableScopes() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableScopes method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIncrementalMeshingInfo() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetIncrementalMeshingInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshQualityTabIndex() -> int
+
+   
+   GetMeshQualityTabIndex method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
+
+   
+   Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPrimeMeshModelId() -> System.Int64
+
+   
+   GetPrimeMeshModelId method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPrimeMeshModelIndex() -> System.Int64
+
+   
+   GetPrimeMeshModelIndex method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSheetQuantityTypeString(metric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get quantity type of sheet metric from mesh metric type
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidMeshMetrics() -> Ansys.Common.Interop.AnsCoreObjects.IAnsIntColl
+
+   
+   GetSolidMeshMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidMeshQualityState() -> Ansys.Common.Interop.DSObjectTypes.DSWorksheetTabState
+
+   
+   Get the state of solid mesh quality worksheet tab
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshMetrics() -> Ansys.Common.Interop.AnsCoreObjects.IAnsIntColl
+
+   
+   GetSolidSurfaceMeshMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityErrorLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get SolidSurface Mesh Quality Worksheet Error Limit is Default 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityName(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Name
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityState() -> Ansys.Common.Interop.DSObjectTypes.DSWorksheetTabState
+
+   
+   Get the state of solid surface mesh quality worksheet tab
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityWarningLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get SolidSurface Mesh Quality Worksheet Warning Limit is Default 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityWorstMetricBackgroundColor(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric BackgroundColor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityWorstMetricTooltip(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Tooltip
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityWorstMetricValue(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Worst Metric Value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceQuantityTypeString(metric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Quantity type from SolidSurface mesh metric type
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshMetrics() -> Ansys.Common.Interop.AnsCoreObjects.IAnsIntColl
+
+   
+   GetSurfaceMeshMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get User Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityErrorLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Mesh Quality Error Limit is default
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityName(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   GetSurfaceMeshQualityName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityState() -> Ansys.Common.Interop.DSObjectTypes.DSWorksheetTabState
+
+   
+   Get the state of surface mesh quality worksheet tab
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get User Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityWarningLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Mesh Quality Warning Limit is default
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityWorstMetricBackgroundColor(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Background Colour
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityWorstMetricTooltip(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Tooltip
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityWorstMetricValue(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Worst Metric Value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUnpublishedList() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetUnpublishedList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityErrorLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Volume Mesh Quality Worksheet Error Limit is Default 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityName(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Name
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityWarningLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Volume Mesh Quality Worksheet Warning Limit is Default 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityWorstMetricBackgroundColor(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric BackgroundColor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityWorstMetricTooltip(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Tooltip
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityWorstMetricValue(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
+
+   
+   Get Mesh Quality Worst Metric Value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeQuantityTypeString(metric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Quantity type from solid mesh metric type
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetWorkflowStepsGroup() -> Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup
+
+   
+   Updates incremental meshing workflow group object -> generates all need generated steps.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupAllSimilarChildren() -> None
+
+   
+   Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSimilarObjects() -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ImportWorkflow(fileName: str) -> None
+
+   
+   Imports the steps from a template .emx file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeWorkflow() -> None
+
+   
+   Initializes the mesh workflow by transferring the scoped geometry parts/bodies from Mechanical into the PrimeMesh model and updates the “Input” node state accordingly.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+.. code-block:: text
+
+   Get a property by its API name.
+   If multiple properties have the same API Name, only the first property with that name will be returned.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RemoveParameter(propName: str) -> None
+
+   
+   Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnType() -> None
+
+   
+   Renames applying the default name based on type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ResetMeshQualityMetrics() -> None
+
+   
+   ResetMeshQualityMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMeshQualityTabIndex(tabIndex: int) -> None
+
+   
+   SetMeshQualityTabIndex method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSolidSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: float) -> None
+
+   
+   Set Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSolidSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: float) -> None
+
+   
+   Set Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: float) -> None
+
+   
+   Set Mesh Quality Error Level
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: float) -> None
+
+   
+   Set Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetVolumeMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: float) -> None
+
+   
+   Set Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetVolumeMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: float) -> None
+
+   
+   Set Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UpdateWorkflow() -> None
+
+   
+   Updates incremental meshing workflow group object -> generates all need generated steps.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on
