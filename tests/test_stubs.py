@@ -23,7 +23,9 @@
 """Test regex in stubs_generator."""
 
 from enum import Enum
+import importlib
 import inspect
+import os
 
 from ansys.mechanical.stubs.stub_generator.generate_content import c_types_to_python
 
@@ -46,17 +48,30 @@ def test_regex():
 
 
 def test_enums_have_values():
-    """Verify that generated enum classes have values (not just 'pass')."""
+    """Verify that generated enum classes have values (not just 'pass').
+
+    Tests the mechanical version specified in the MECHANICAL_VERSION environment
+    variable. Skips if the variable is not set.
+    """
+    mech_version = os.getenv("MECHANICAL_VERSION")
+    if mech_version is None:
+        import pytest
+
+        pytest.fail("MECHANICAL_VERSION environment variable not set")
+
+    module_path = f"ansys.mechanical.stubs.v{mech_version}.Ansys.Mechanical.DataModel.Enums"
+
     try:
-        from ansys.mechanical.stubs.v261.Ansys.Mechanical.DataModel import Enums
-    except ImportError:
+        enums = importlib.import_module(module_path)
+    except ImportError as e:
         # Stubs may not be installed in all test environments
+        print(f"Could not import {module_path}: {e}")
         return
 
     # Collect all Enum classes from the module
     enum_classes = []
-    for name in dir(Enums):
-        obj = getattr(Enums, name)
+    for name in dir(enums):
+        obj = getattr(enums, name)
         try:
             if inspect.isclass(obj) and issubclass(obj, Enum) and obj is not Enum:
                 enum_classes.append((name, obj))
@@ -65,12 +80,12 @@ def test_enums_have_values():
             pass
 
     # Validate that each enum has at least one member
-    assert len(enum_classes) > 0, "No Enum classes found in Enums module"
+    assert len(enum_classes) > 0, f"No Enum classes found in {module_path}"
 
     for enum_name, enum_class in enum_classes:
         members = list(enum_class)
         assert len(members) > 0, (
-            f"Enum '{enum_name}' has no members. This indicates the enum values "
-            f"were not generated. Check that type_filter is not incorrectly applied "
-            f"to enum field constants in stub generation."
+            f"Enum '{enum_name}' in {module_path} has no members. This indicates "
+            f"the enum values were not generated. Check that type_filter is not "
+            f"incorrectly applied to enum field constants in stub generation."
         )

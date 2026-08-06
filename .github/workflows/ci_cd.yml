@@ -319,6 +319,8 @@ jobs:
         python -m pip install -e .[tests]
 
     - name: "Validate enum values in stubs"
+      env:
+        MECHANICAL_VERSION: ${{ matrix.mechanical.version }}
       run: |
         python -m pytest tests/test_stubs.py::test_enums_have_values -v
 
