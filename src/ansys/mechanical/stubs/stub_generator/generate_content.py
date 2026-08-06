@@ -323,11 +323,10 @@ def write_enum(
         Whether or not the type is published.
     """
     logging.debug(f"    writing enum {enum_type.Name}")
-    fields = [
-        field
-        for field in enum_type.GetFields()
-        if field.IsLiteral and (type_filter is None or type_filter(field))
-    ]
+    # type_filter is intended for Type objects. Applying it to reflected
+    # members (FieldInfo) would incorrectly hide enum values, because enum
+    # field constants do not carry PublishedAttribute.
+    fields = [field for field in enum_type.GetFields() if field.IsLiteral]
     buffer.write(f"class {enum_type.Name}(Enum):\n")
 
     if doc is not None:
