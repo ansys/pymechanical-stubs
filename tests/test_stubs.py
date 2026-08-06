@@ -22,6 +22,9 @@
 
 """Test regex in stubs_generator."""
 
+from enum import Enum
+import inspect
+
 from ansys.mechanical.stubs.stub_generator.generate_content import c_types_to_python
 
 
@@ -40,3 +43,34 @@ def test_regex():
     # Assert that the key is equal to the value
     for key, value in test_types.items():
         assert c_types_to_python(key) == value
+
+
+def test_enums_have_values():
+    """Verify that generated enum classes have values (not just 'pass')."""
+    try:
+        from ansys.mechanical.stubs.v261.Ansys.Mechanical.DataModel import Enums
+    except ImportError:
+        # Stubs may not be installed in all test environments
+        return
+
+    # Collect all Enum classes from the module
+    enum_classes = []
+    for name in dir(Enums):
+        obj = getattr(Enums, name)
+        try:
+            if inspect.isclass(obj) and issubclass(obj, Enum) and obj is not Enum:
+                enum_classes.append((name, obj))
+        except TypeError:
+            # Some objects might not be classes
+            pass
+
+    # Validate that each enum has at least one member
+    assert len(enum_classes) > 0, "No Enum classes found in Enums module"
+
+    for enum_name, enum_class in enum_classes:
+        members = list(enum_class)
+        assert len(members) > 0, (
+            f"Enum '{enum_name}' has no members. This indicates the enum values "
+            f"were not generated. Check that type_filter is not incorrectly applied "
+            f"to enum field constants in stub generation."
+        )
