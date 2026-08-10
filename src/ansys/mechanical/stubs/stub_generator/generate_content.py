@@ -30,9 +30,6 @@ import re
 import typing
 import xml.etree.ElementTree as ElementTree
 
-import clr
-import System
-
 C_TO_PYTHON = {
     "IronPython.Runtime.PythonTuple": "tuple",
     "System.Array": "typing.List",
@@ -122,6 +119,8 @@ def is_namespace(something):
         True if object is Namespace: Module
         False if object is not Namespace: Module
     """
+    import System  # noqa: PLC0415
+
     if isinstance(something, type(System)):
         return True
 
@@ -154,9 +153,7 @@ def iter_module(module, type_filter: typing.Callable = None):
     return namespaces
 
 
-def crawl_loaded_references(
-    assembly: "System.Reflection.RuntimeAssembly", type_filter: typing.Callable = None
-) -> dict:
+def crawl_loaded_references(assembly: typing.Any, type_filter: typing.Callable = None) -> dict:
     """Crawl Loaded assemblies to get Namespaces.
 
     Parameters
@@ -1024,14 +1021,16 @@ def load_doc(xml_path: str) -> ElementTree:
     return output
 
 
-def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
+def get_doc(assembly: typing.Any):
     """Get the documentation file from assembly, or None if it doesn't exist.
 
     Parameters
     ----------
-    assembly: "System.Reflection.RuntimeAssembly"
+    assembly: typing.Any
         An assembly. For example, Ansys.ACT.WB1.
     """
+    import System  # noqa: PLC0415
+
     uri = System.UriBuilder(assembly.CodeBase)
     path = System.Uri.UnescapeDataString(uri.Path)
     directory = System.IO.Path.GetDirectoryName(path)
@@ -1077,9 +1076,7 @@ def get_doc(assembly: "System.Reflection.RuntimeAssembly"):
         return None
 
 
-def get_namespaces(
-    assembly: "System.Reflection.RuntimeAssembly", type_filter: typing.Callable = None
-) -> typing.Dict:
+def get_namespaces(assembly: typing.Any, type_filter: typing.Callable = None) -> typing.Dict:
     """Get all the namespaces and filtered types in the assembly given by assembly_name.
 
     Parameters
@@ -1111,6 +1108,8 @@ def make(outdir: str, assembly_name: str, type_filter: typing.Callable = None) -
     type_filter: typing.Callable
         Whether or not a type is published
     """
+    import clr  # noqa: PLC0415
+
     logging.info(f"Loading assembly {assembly_name}")
     assembly = clr.AddReference(assembly_name)
     if type_filter is not None:
