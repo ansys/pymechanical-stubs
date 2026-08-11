@@ -6,6 +6,23 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.14](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.14) - August 11, 2026
+
+
+### Fixed
+
+- Fix type filter for enums [#264](https://github.com/ansys/pymechanical-stubs/pull/264)
+
+
+### Maintenance
+
+- Update CHANGELOG for v0.1.13 [#256](https://github.com/ansys/pymechanical-stubs/pull/256)
+- Bump the actions group with 9 updates [#257](https://github.com/ansys/pymechanical-stubs/pull/257)
+- Pre-commit automatic update [#258](https://github.com/ansys/pymechanical-stubs/pull/258), [#261](https://github.com/ansys/pymechanical-stubs/pull/261), [#265](https://github.com/ansys/pymechanical-stubs/pull/265)
+- Bump the actions group with 11 updates [#259](https://github.com/ansys/pymechanical-stubs/pull/259)
+- Bump actions/labeler from 6.2.0 to 7.0.0 [#260](https://github.com/ansys/pymechanical-stubs/pull/260)
+- Bump pypa/gh-action-pypi-publish from 1.14.1 to 1.14.2 in the actions group [#262](https://github.com/ansys/pymechanical-stubs/pull/262)
+
 ## [0.1.13](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.13) - July 22, 2026
 
 
