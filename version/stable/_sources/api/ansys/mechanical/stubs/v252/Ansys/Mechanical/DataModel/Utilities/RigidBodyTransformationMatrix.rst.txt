@@ -51,6 +51,31 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~IsMatrixWellFormed`
+            - Verify that the data meets the following criteria for a rigid-body transformation:
+          * - :py:attr:`~IsRotationValid`
+            - IsRotationValid method.
+          * - :py:attr:`~IsScaleValid`
+            - IsScaleValid method.
+          * - :py:attr:`~IsShearValid`
+            - IsShearValid method.
+          * - :py:attr:`~IsTranslationValid`
+            - IsTranslationValid method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
    .. tab-item:: Properties
 
@@ -533,6 +558,85 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsMatrixWellFormed() -> bool
+
+.. code-block:: text
+
+   Verify that the data meets the following criteria for a rigid-body transformation:
+     1) The rotation matrix contains three orthonormal orientations
+     2) The transformation components are valid values
+     3) The shear components are all zero
+     4) The scale value is unity
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: IsRotationValid() -> bool
+
+   
+   IsRotationValid method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsScaleValid() -> bool
+
+   
+   IsScaleValid method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsShearValid() -> bool
+
+   
+   IsShearValid method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsTranslationValid() -> bool
+
+   
+   IsTranslationValid method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

@@ -20,6 +20,15 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+
 
    .. tab-item:: Properties
 
@@ -37,6 +46,8 @@ Overview
             - Gets or sets the boolean "Distribute Solution (if possible)" field.
           * - :py:attr:`~GPUAccelerationDevice`
             - Gets or sets the "GPU Acceleration Device" field.
+          * - :py:attr:`~HPSCloudBurstComputeRequirements`
+            - Gets the HPC requirements object for HPS and Cloud Burst.
           * - :py:attr:`~HybridParallel`
             - Gets or sets the boolean "Hybrid Parallel (Mechanical APDL)" field.
           * - :py:attr:`~LicenseQueuing`
@@ -174,6 +185,31 @@ Property detail
 
    
    Gets or sets the "GPU Acceleration Device" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HPSCloudBurstComputeRequirements
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.IHPSCloudBurstHPCRequirements]
+
+
+   
+   Gets the HPC requirements object for HPS and Cloud Burst.
 
 
 
@@ -471,6 +507,16 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: CopyTo(other: Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveProcessSettings) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

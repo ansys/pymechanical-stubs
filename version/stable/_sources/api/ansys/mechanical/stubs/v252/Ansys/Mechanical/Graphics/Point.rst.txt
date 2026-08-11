@@ -5,7 +5,7 @@
 :class:`Point`
 ==============
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.Point
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.Point(location: List[Any], lengthUnit: str)
 
    Bases: :py:obj:`object`
 
@@ -30,9 +30,9 @@ Overview
 
           * - :py:attr:`~ConvertUnit`
             - Returns a new Point given new unit.
-          * - :py:attr:`~op_Equality`
+          * - :py:attr:`~__eq__`
             - Equal operator
-          * - :py:attr:`~op_Inequality`
+          * - :py:attr:`~__ne__`
             - Not-Equal operator
 
 
@@ -43,9 +43,13 @@ Overview
           :widths: auto
 
           * - :py:attr:`~Equals`
-            - Object.Equals(object o) override
+            - Equals method.
           * - :py:attr:`~GetHashCode`
             - Object.GetHashCode() override
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -133,10 +137,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(o: Any) -> bool
+.. py:method:: Equals(point: Ansys.Mechanical.Graphics.Point) -> bool
 
    
-   Object.Equals(object o) override
+   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -149,7 +153,23 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: op_Equality(a: Ansys.Mechanical.Graphics.Point, b: Ansys.Mechanical.Graphics.Point) -> bool
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __eq__(a: Ansys.Mechanical.Graphics.Point, b: Ansys.Mechanical.Graphics.Point) -> bool
    :classmethod:
 
 
@@ -159,7 +179,7 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: op_Inequality(a: Ansys.Mechanical.Graphics.Point, b: Ansys.Mechanical.Graphics.Point) -> bool
+.. py:method:: __ne__(a: Ansys.Mechanical.Graphics.Point, b: Ansys.Mechanical.Graphics.Point) -> bool
    :classmethod:
 
 

@@ -5,7 +5,7 @@
 :class:`RBDAnalysisSettings`
 ============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AnalysisSettings.RBDAnalysisSettings
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AnalysisSettings.RBDAnalysisSettings(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -36,26 +36,52 @@ Overview
             - Creates a new child Image.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~DeleteAllRestartPoints`
             - DeleteAllRestartPoints method.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetAutomaticTimeStepping`
             - Gets the Automatic Time Stepping at a given solution step.
           * - :py:attr:`~GetCarryOverTimeStep`
             - Gets the Carry Over Time Step at a given solution step.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
           * - :py:attr:`~GetInitialTimeStep`
             - Gets the Initial Time Step at a given solution step.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
           * - :py:attr:`~GetMaximumTimeStep`
             - Gets the Maximum Time Step at a given solution step.
           * - :py:attr:`~GetMinimumTimeStep`
             - Gets the Minimum Time Step at a given solution step.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
           * - :py:attr:`~GetStepEndTime`
             - Gets the Step End Time at a given solution step.
           * - :py:attr:`~GetStoreResultAt`
@@ -64,12 +90,26 @@ Overview
             - Gets the StoreResultAtValue setting at a given solution step.
           * - :py:attr:`~GetTimeStep`
             - Gets the (fixed) Time Step at a given solution step.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
@@ -92,6 +132,8 @@ Overview
             - Sets the StoreResultAtValue setting for a given solution step.
           * - :py:attr:`~SetTimeStep`
             - Sets the (fixed) Time Step for a given solution step.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -102,8 +144,12 @@ Overview
 
           * - :py:attr:`~AssemblyType`
             - Gets or sets the AssemblyType.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~ConstraintEquationResidualTolerance`
@@ -130,16 +176,30 @@ Overview
             - Gets or sets the ForceResidualToleranceValue.
           * - :py:attr:`~Graph`
             - Graph property.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~InternalObject`
             - InternalObject property.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NumberOfSteps`
             - Gets or sets the NumberOfSteps.
           * - :py:attr:`~NumericalDampingTolerance`
             - Gets or sets the NumericalDamping activity.
           * - :py:attr:`~NumericalDampingValue`
             - Gets or sets the NumericalDampingValue.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PerformStaticAnalysis`
             - Gets or sets the .
           * - :py:attr:`~PositionCorrection`
@@ -154,6 +214,10 @@ Overview
             - Gets the ScratchSolverFilesDirectory.
           * - :py:attr:`~SolverFilesDirectory`
             - Gets the SolverFilesDirectory.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~SurfaceStress`
+            - Gets or sets the SurfaceStress.
           * - :py:attr:`~TimeIntegrationType`
             - Gets or sets the Integration Method.
           * - :py:attr:`~VelocityConstraintEquationResidualTolerance`
@@ -198,12 +262,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Children
    :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
 
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -548,6 +662,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
@@ -579,6 +743,31 @@ Property detail
 
    
    InternalObject property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
 
 
 
@@ -654,6 +843,106 @@ Property detail
 
    
    Gets or sets the NumericalDampingValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -848,6 +1137,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SurfaceStress
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the SurfaceStress.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: TimeIntegrationType
    :type: Optional[Ansys.Mechanical.DataModel.Enums.RBDTimeIntegrationType]
 
@@ -1022,6 +1361,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -1042,6 +1389,30 @@ Method detail
 
    
    Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
 
    ..
        !! processed by numpydoc !!
@@ -1070,10 +1441,50 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetInitialTimeStep(stepNumber: int) -> Ansys.Core.Units.Quantity
 
    
    Gets the Initial Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
 
    ..
        !! processed by numpydoc !!
@@ -1094,10 +1505,42 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
 
    ..
        !! processed by numpydoc !!
@@ -1134,6 +1577,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GroupAllSimilarChildren() -> None
 
    
@@ -1150,6 +1617,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -1158,6 +1649,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -1244,6 +1743,14 @@ Method detail
 
    
    Sets the (fixed) Time Step for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

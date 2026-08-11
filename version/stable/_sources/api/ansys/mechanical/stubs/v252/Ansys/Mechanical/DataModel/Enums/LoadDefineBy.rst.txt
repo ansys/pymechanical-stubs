@@ -5,9 +5,9 @@
 :class:`LoadDefineBy`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.LoadDefineBy(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.LoadDefineBy
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,34 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~ComplexComponents`
-            - 
-          * - :py:attr:`~ComplexNormalTo`
-            - 
-          * - :py:attr:`~ComplexVector`
-            - 
-          * - :py:attr:`~ComponentX`
-            - 
-          * - :py:attr:`~ComponentY`
-            - 
-          * - :py:attr:`~ComponentZ`
-            - 
-          * - :py:attr:`~Components`
-            - 
-          * - :py:attr:`~NormalToOrTangential`
-            - 
-          * - :py:attr:`~UnknownDefined`
-            - 
-          * - :py:attr:`~Vector`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -77,49 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: ComplexComponents
-   :value: 6
-
-
-.. py:attribute:: ComplexNormalTo
-   :value: 8
-
-
-.. py:attribute:: ComplexVector
-   :value: 7
-
-
-.. py:attribute:: ComponentX
-   :value: 3
-
-
-.. py:attribute:: ComponentY
-   :value: 4
-
-
-.. py:attribute:: ComponentZ
-   :value: 5
-
-
-.. py:attribute:: Components
-   :value: 0
-
-
-.. py:attribute:: NormalToOrTangential
-   :value: 2
-
-
-.. py:attribute:: UnknownDefined
-   :value: -1
-
-
-.. py:attribute:: Vector
-   :value: 1
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

@@ -47,6 +47,12 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AddRow`
+            - AddRow method.
+          * - :py:attr:`~DeleteRow`
+            - DeleteRow method.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetBushingDampingPerThetaUnitX`
             - Gets the Coefficient for the damping per ThetaUnitX at the indicated row index.
           * - :py:attr:`~GetBushingDampingPerThetaUnitY`
@@ -71,6 +77,10 @@ Overview
             - Gets the Coefficient for the stiffness per UnitY at the indicated row index.
           * - :py:attr:`~GetBushingStiffnessPerUnitZ`
             - Gets the Coefficient for the stiffness per UnitZ at the indicated row index.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~SetBushingDampingPerThetaUnitX`
             - Sets the Coefficient for the damping per ThetaUnitX at the indicated row index.
           * - :py:attr:`~SetBushingDampingPerThetaUnitY`
@@ -95,6 +105,18 @@ Overview
             - Sets the Coefficient for the stiffness per UnitY at the indicated row index.
           * - :py:attr:`~SetBushingStiffnessPerUnitZ`
             - Sets the Coefficient for the stiffness per UnitZ at the indicated row index.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~RowCount`
+            - RowCount property.
 
 
 
@@ -102,6 +124,32 @@ Overview
 
 
 
+Property detail
+---------------
+.. py:property:: RowCount
+   :type: Optional[int]
+
+
+   
+   RowCount property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
 
 
 
@@ -109,6 +157,30 @@ Overview
 
 Method detail
 -------------
+.. py:method:: AddRow() -> int
+
+   
+   AddRow method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DeleteRow(index: int) -> None
+
+   
+   DeleteRow method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetBushingDampingPerThetaUnitX(index: int) -> float
 
    
@@ -205,6 +277,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetBushingDampingPerThetaUnitX(index: int, newVal: float) -> float
 
    
@@ -297,6 +385,14 @@ Method detail
 
    
    Sets the Coefficient for the stiffness per UnitZ at the indicated row index.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

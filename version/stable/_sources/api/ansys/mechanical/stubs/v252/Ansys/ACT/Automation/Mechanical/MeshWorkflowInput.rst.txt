@@ -5,7 +5,7 @@
 :class:`MeshWorkflowInput`
 ==========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowInput
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowInput(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -32,6 +32,7 @@
        !! processed by numpydoc !!
 
 
+
 .. py:currentmodule:: MeshWorkflowInput
 
 Overview
@@ -39,6 +40,15 @@ Overview
 
 .. tab-set::
 
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~IsAcceptableScopingMethod`
+            - IsAcceptableScopingMethod method.
 
 
    .. tab-item:: Methods
@@ -55,26 +65,72 @@ Overview
             - Creates a new child Image.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Delete`
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~PropertyTypeInfo`
+            - PropertyTypeInfo method.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnType`
+            - Renames applying the default name based on type.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -83,20 +139,54 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~CloneInputGeometryData`
+            - Gets or sets whether the input geometry is transferred by cloning or not. When cloning, the input bodies do not become inactive and their meshes do not become obsolete. Defaults to False.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
+          * - :py:attr:`~InputDataType`
+            - Gets or sets the transfer type for the input data. If set to "Geometry" only the selected bodies geometry is transferred. Defaults to "Geometry".
+          * - :py:attr:`~InputDescription`
+            - InputDescription property.
+          * - :py:attr:`~InputDescriptionJson`
+            - InputDescriptionJson property.
+          * - :py:attr:`~InputTypeInformation`
+            - InputTypeInformation property.
+          * - :py:attr:`~InputTypeInformationJson`
+            - InputTypeInformationJson property.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
           * - :py:attr:`~Location`
             - Gets or sets the Location.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
+          * - :py:attr:`~ScopingMethod`
+            - Gets or sets the ScopingMethod.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~VisibleProperties`
             - Gets the list of properties that are visible for this object.
 
@@ -108,12 +198,87 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Children
    :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
 
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CloneInputGeometryData
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the input geometry is transferred by cloning or not. When cloning, the input bodies do not become inactive and their meshes do not become obsolete. Defaults to False.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -183,12 +348,187 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
 
    
    Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InputDataType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.InputDataType]
+
+
+   
+   Gets or sets the transfer type for the input data. If set to "Geometry" only the selected bodies geometry is transferred. Defaults to "Geometry".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InputDescription
+   :type: Optional[System.Collections.Generic.Dictionary[str, Any]]
+
+
+   
+   InputDescription property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InputDescriptionJson
+   :type: Optional[str]
+
+
+   
+   InputDescriptionJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InputTypeInformation
+   :type: Optional[System.Collections.Generic.Dictionary[str, str]]
+
+
+   
+   InputTypeInformation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InputTypeInformationJson
+   :type: Optional[str]
+
+
+   
+   InputTypeInformationJson property.
 
 
 
@@ -258,12 +598,187 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Properties
    :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
 
 
    
    Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScopingMethod
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryDefineByType]
+
+
+   
+   Gets or sets the ScopingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
 
 
 
@@ -349,6 +864,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -373,6 +896,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -381,10 +928,106 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -405,6 +1048,40 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsAcceptableScopingMethod(scopingMethod: Ansys.Mechanical.DataModel.Enums.GeometryDefineByType) -> bool
+   :classmethod:
+
+
+   
+   IsAcceptableScopingMethod method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -415,6 +1092,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
@@ -423,10 +1108,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyTypeInfo(property: Ansys.ACT.Automation.Mechanical.Property) -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   PropertyTypeInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RemoveParameter(propName: str) -> None
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnType() -> None
+
+   
+   Renames applying the default name based on type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

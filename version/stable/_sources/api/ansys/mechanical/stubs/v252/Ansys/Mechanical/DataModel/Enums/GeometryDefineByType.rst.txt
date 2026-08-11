@@ -5,9 +5,9 @@
 :class:`GeometryDefineByType`
 =============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.GeometryDefineByType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.GeometryDefineByType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,76 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~AllOptimizationRegions`
-            - 
-          * - :py:attr:`~AnalysisPly`
-            - 
-          * - :py:attr:`~BeamConnection`
-            - 
-          * - :py:attr:`~BoundaryCondition`
-            - 
-          * - :py:attr:`~Component`
-            - 
-          * - :py:attr:`~ContactRegion`
-            - 
-          * - :py:attr:`~Coordinates`
-            - 
-          * - :py:attr:`~CrackGrowth`
-            - 
-          * - :py:attr:`~Fracture`
-            - 
-          * - :py:attr:`~FreeStanding`
-            - 
-          * - :py:attr:`~Geometry`
-            - 
-          * - :py:attr:`~ImportedAssembly`
-            - 
-          * - :py:attr:`~ImportedCPLoadVector`
-            - 
-          * - :py:attr:`~ImportedCondensedPart`
-            - 
-          * - :py:attr:`~ImportedInterface`
-            - 
-          * - :py:attr:`~ImportedPretension`
-            - 
-          * - :py:attr:`~Mapping`
-            - 
-          * - :py:attr:`~MaximumValues`
-            - 
-          * - :py:attr:`~MinimumValues`
-            - 
-          * - :py:attr:`~ModalLoad`
-            - 
-          * - :py:attr:`~ModalLoadVector`
-            - 
-          * - :py:attr:`~NamedSelections`
-            - 
-          * - :py:attr:`~OptimizationRegion`
-            - 
-          * - :py:attr:`~Path`
-            - 
-          * - :py:attr:`~RemotePoint`
-            - 
-          * - :py:attr:`~RemotePointAndNodes`
-            - 
-          * - :py:attr:`~ResultFileItem`
-            - 
-          * - :py:attr:`~Surface`
-            - 
-          * - :py:attr:`~SurfaceCoating`
-            - 
-          * - :py:attr:`~VoltageCoupling`
-            - 
-          * - :py:attr:`~Worksheet`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -119,133 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: AllOptimizationRegions
-   :value: 23
 
 
-.. py:attribute:: AnalysisPly
-   :value: 13
 
 
-.. py:attribute:: BeamConnection
-   :value: 19
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
 
+   
+   CompareTo method.
 
-.. py:attribute:: BoundaryCondition
-   :value: 15
+   ..
+       !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
 
-.. py:attribute:: Component
-   :value: 1
+   
+   Equals method.
 
+   ..
+       !! processed by numpydoc !!
 
-.. py:attribute:: ContactRegion
-   :value: 14
+.. py:method:: GetHashCode() -> int
 
+   
+   GetHashCode method.
 
-.. py:attribute:: Coordinates
-   :value: 11
+   ..
+       !! processed by numpydoc !!
 
+.. py:method:: GetType() -> type
 
-.. py:attribute:: CrackGrowth
-   :value: 31
+   
+   GetType method.
 
+   ..
+       !! processed by numpydoc !!
 
-.. py:attribute:: Fracture
-   :value: 9
+.. py:method:: GetTypeCode() -> typeCode
 
+   
+   GetTypeCode method.
 
-.. py:attribute:: FreeStanding
-   :value: 17
+   ..
+       !! processed by numpydoc !!
 
+.. py:method:: HasFlag(flag: System.Enum) -> bool
 
-.. py:attribute:: Geometry
-   :value: 0
+   
+   HasFlag method.
 
+   ..
+       !! processed by numpydoc !!
 
-.. py:attribute:: ImportedAssembly
-   :value: 12
+.. py:method:: ToString() -> str
 
+   
+   ToString method.
 
-.. py:attribute:: ImportedCPLoadVector
-   :value: 35
-
-
-.. py:attribute:: ImportedCondensedPart
-   :value: 29
-
-
-.. py:attribute:: ImportedInterface
-   :value: 10
-
-
-.. py:attribute:: ImportedPretension
-   :value: 21
-
-
-.. py:attribute:: Mapping
-   :value: 8
-
-
-.. py:attribute:: MaximumValues
-   :value: 4
-
-
-.. py:attribute:: MinimumValues
-   :value: 3
-
-
-.. py:attribute:: ModalLoad
-   :value: 34
-
-
-.. py:attribute:: ModalLoadVector
-   :value: 33
-
-
-.. py:attribute:: NamedSelections
-   :value: 30
-
-
-.. py:attribute:: OptimizationRegion
-   :value: 16
-
-
-.. py:attribute:: Path
-   :value: 6
-
-
-.. py:attribute:: RemotePoint
-   :value: 5
-
-
-.. py:attribute:: RemotePointAndNodes
-   :value: 22
-
-
-.. py:attribute:: ResultFileItem
-   :value: 18
-
-
-.. py:attribute:: Surface
-   :value: 7
-
-
-.. py:attribute:: SurfaceCoating
-   :value: 20
-
-
-.. py:attribute:: VoltageCoupling
-   :value: 28
-
-
-.. py:attribute:: Worksheet
-   :value: 2
-
-
-
+   ..
+       !! processed by numpydoc !!
 
 
 

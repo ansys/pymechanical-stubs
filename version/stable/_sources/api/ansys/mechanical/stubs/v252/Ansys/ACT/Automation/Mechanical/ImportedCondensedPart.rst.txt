@@ -5,7 +5,7 @@
 :class:`ImportedCondensedPart`
 ==============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ImportedCondensedPart
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ImportedCondensedPart(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -69,10 +69,14 @@ Overview
             - CreateJointFromNodeIds method.
           * - :py:attr:`~CreateJoints`
             - CreateJoints method.
+          * - :py:attr:`~CreateNodalNamedSelection`
+            - CreateNodalNamedSelection method.
           * - :py:attr:`~CreateNodalNamedSelectionFromNodeIds`
             - CreateNodalNamedSelectionFromNodeIds method.
           * - :py:attr:`~CreateNodalNamedSelections`
             - CreateNodalNamedSelections method.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~CreateRemotePointFromNodeIds`
@@ -83,28 +87,70 @@ Overview
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~ExtractAndImportCondensedPart`
+            - ExtractAndImportCondensedPart method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetOriginalNodeCoordinates`
             - Get all the Node Locations of the Original Interfaces Data table.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
           * - :py:attr:`~GetTransformedNodeCoordinates`
             - Get all the Node Locations of the Transformed Interfaces Data table.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
           * - :py:attr:`~ImportCondensedPart`
             - Run the Import Condensed Part action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~ReadInterfaceData`
             - Run the Read Interface Data action.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~UpdateNodeLocation`
             - Update Node Location of Original Interfaces Data view table.
 
@@ -117,8 +163,12 @@ Overview
 
           * - :py:attr:`~ActualNodeOffset`
             - Gets the ActualNodeOffset.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~CondensedPartFileName`
@@ -137,6 +187,10 @@ Overview
             - "FutureIntent" property defines the type of solver supported to perform a use pass with the imported condensed part.
           * - :py:attr:`~GeometrySelection`
             - Gets or sets the GeometrySelection.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~ImportFileFormat`
@@ -145,12 +199,22 @@ Overview
             - Gets the ImportStatus.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NodeOffset`
             - Gets or sets the NodeOffset.
           * - :py:attr:`~NumberInterfaceEntries`
             - Gets the NumberInterfaceEntries.
           * - :py:attr:`~NumberMasterNodes`
             - Gets the NumberMasterNodes.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~Physics`
             - Gets the Physics.
           * - :py:attr:`~Properties`
@@ -169,6 +233,8 @@ Overview
             - Gets or sets the SolverUnits.
           * - :py:attr:`~Source`
             - Gets the Source Substructure analysis information of the Imported Condensed Part.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~Suppressed`
             - Gets or sets the Suppressed.
           * - :py:attr:`~TemperatureUnits`
@@ -209,12 +275,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Children
    :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
 
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -459,6 +575,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
@@ -559,6 +725,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NodeOffset
    :type: Optional[int]
 
@@ -615,6 +806,106 @@ Property detail
 
    
    Gets the NumberMasterNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -860,6 +1151,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Suppressed
    :type: Optional[bool]
 
@@ -1032,6 +1348,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateNodalNamedSelection(selectedInterfaceIDNumbers: Iterable[int]) -> Iterable[Ansys.ACT.Automation.Mechanical.DataModelObject]
+
+   
+   CreateNodalNamedSelection method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateNodalNamedSelectionFromNodeIds(selectedNodeIds: Iterable[int]) -> Ansys.ACT.Automation.Mechanical.DataModelObject
 
    
@@ -1044,6 +1368,14 @@ Method detail
 
    
    CreateNodalNamedSelections method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
 
    ..
        !! processed by numpydoc !!
@@ -1088,10 +1420,90 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExtractAndImportCondensedPart() -> None
+
+   
+   ExtractAndImportCondensedPart method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
    Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
 
    ..
        !! processed by numpydoc !!
@@ -1112,10 +1524,58 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetTransformedNodeCoordinates() -> Iterable[dict[int, Iterable[Ansys.Core.Units.Quantity]]]
 
    
    Get all the Node Locations of the Transformed Interfaces Data table.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -1144,6 +1604,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -1152,6 +1636,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -1174,6 +1666,14 @@ Method detail
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

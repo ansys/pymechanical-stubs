@@ -26,6 +26,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
           * - :py:attr:`~SetAsDefault`
             - Sets 'this' to be the default configuration to solve with.
 
@@ -159,6 +161,14 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: CopyTo(other: Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveConfiguration) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetAsDefault() -> None
 
    

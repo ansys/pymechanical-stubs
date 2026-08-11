@@ -34,6 +34,8 @@ Overview
             - Delete a BaseCase from the SolutionCombinationDefinition
           * - :py:attr:`~DeleteLoadCombination`
             - Delete a LoadCombination from the SolutionCombination Definition
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~Export`
             - Export Load Combination Definition data to Comma Separated Value (CSV) files
           * - :py:attr:`~GetBaseCaseAnalysis`
@@ -48,10 +50,14 @@ Overview
             - Gets the Time property from the Base Case at given index
           * - :py:attr:`~GetCoefficient`
             - Gets the Coefficient property at given LoadCombination index and BaseCase index
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetLoadCombinationName`
             - Gets the LoadCombination Name property at given index
           * - :py:attr:`~GetLoadCombinationType`
             - Gets the Load Combination Type property at given index
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~Import`
             - Import Load Combination Definition data from Comma Separated Value (CSV) files
           * - :py:attr:`~SetBaseCaseAnalysis`
@@ -70,6 +76,8 @@ Overview
             - Sets the LoadCombination Name property at given index
           * - :py:attr:`~SetLoadCombinationType`
             - Sets the Load Combination Type property at given index
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -179,6 +187,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Export(filepath: str) -> None
 
    
@@ -235,6 +251,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetLoadCombinationName(index: int) -> str
 
    
@@ -247,6 +271,14 @@ Method detail
 
    
    Gets the Load Combination Type property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -319,6 +351,14 @@ Method detail
 
    
    Sets the Load Combination Type property at given index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

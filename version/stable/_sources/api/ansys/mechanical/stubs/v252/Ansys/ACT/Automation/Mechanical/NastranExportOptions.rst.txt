@@ -5,7 +5,7 @@
 :class:`NastranExportOptions`
 =============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.NastranExportOptions
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.NastranExportOptions(NastranFilename: str, AnalysisType: str, GridCS: int, Offset: int, WTMass: float, JointStiffness: float, PyramidElements: str, Modes: int, Time: float, GroundCheck: bool)
 
    Bases: :py:obj:`object`
 
@@ -41,6 +41,45 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Add`
+            - Add method.
+          * - :py:attr:`~Clear`
+            - Clear method.
+          * - :py:attr:`~ContainsKey`
+            - ContainsKey method.
+          * - :py:attr:`~ContainsValue`
+            - ContainsValue method.
+          * - :py:attr:`~EnsureCapacity`
+            - EnsureCapacity method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~OnDeserialization`
+            - OnDeserialization method.
+          * - :py:attr:`~Remove`
+            - Remove method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~TrimExcess`
+            - TrimExcess method.
+          * - :py:attr:`~TryAdd`
+            - TryAdd method.
+          * - :py:attr:`~TryGetValue`
+            - TryGetValue method.
+
 
    .. tab-item:: Properties
 
@@ -50,12 +89,20 @@ Overview
 
           * - :py:attr:`~AnalysisType`
             - Analysis type.
+          * - :py:attr:`~Comparer`
+            - Comparer property.
+          * - :py:attr:`~Count`
+            - Count property.
           * - :py:attr:`~GridCS`
             - Grid coordinate system number.
           * - :py:attr:`~GroundCheck`
             - Ground check.
+          * - :py:attr:`~Item`
+            - Item property.
           * - :py:attr:`~JointStiffness`
             - Joint stiffness.
+          * - :py:attr:`~Keys`
+            - Keys property.
           * - :py:attr:`~Modes`
             - Modes.
           * - :py:attr:`~NastranFilename`
@@ -66,6 +113,8 @@ Overview
             - Pyramid elements.
           * - :py:attr:`~Time`
             - Time.
+          * - :py:attr:`~Values`
+            - Values property.
           * - :py:attr:`~WTMass`
             - WTMass.
 
@@ -83,6 +132,56 @@ Property detail
 
    
    Analysis type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Comparer
+   :type: Optional[System.Collections.Generic.IEqualityComparer[str]]
+
+
+   
+   Comparer property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Count
+   :type: Optional[int]
+
+
+   
+   Count property.
 
 
 
@@ -152,12 +251,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Item
+   :type: Optional[Any]
+
+
+   
+   Item property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: JointStiffness
    :type: Optional[float]
 
 
    
    Joint stiffness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Keys
+   :type: Optional[System.Collections.Generic.Dictionary.KeyCollection[str, Any]]
+
+
+   
+   Keys property.
 
 
 
@@ -302,6 +451,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Values
+   :type: Optional[System.Collections.Generic.Dictionary.ValueCollection[str, Any]]
+
+
+   
+   Values property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: WTMass
    :type: Optional[float]
 
@@ -330,6 +504,136 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Add(key: str, value: Any) -> None
+
+   
+   Add method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Clear() -> None
+
+   
+   Clear method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ContainsKey(key: str) -> bool
+
+   
+   ContainsKey method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ContainsValue(value: Any) -> bool
+
+   
+   ContainsValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: EnsureCapacity(capacity: int) -> int
+
+   
+   EnsureCapacity method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> System.Collections.Generic.Dictionary.Enumerator[str, Any]
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OnDeserialization(sender: Any) -> None
+
+   
+   OnDeserialization method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(key: str) -> bool
+
+   
+   Remove method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TrimExcess() -> None
+
+   
+   TrimExcess method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TryAdd(key: str, value: Any) -> bool
+
+   
+   TryAdd method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TryGetValue(key: str, value: Any) -> bool
+
+   
+   TryGetValue method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

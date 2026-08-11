@@ -5,7 +5,7 @@
 :class:`ResultDataTable`
 ========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Results.ResultDataTable
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Results.ResultDataTable(independents: Iterable[dict[str, Iterable]], dependents: Iterable[dict[str, Iterable]], hiddenColumns: tuple[str])
 
    Bases: :py:obj:`object`
 
@@ -32,6 +32,7 @@
        !! processed by numpydoc !!
 
 
+
 .. py:currentmodule:: ResultDataTable
 
 Overview
@@ -49,6 +50,18 @@ Overview
 
           * - :py:attr:`~ContainsKey`
             - ContainsKey method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~TryGetValue`
+            - TryGetValue method.
 
 
    .. tab-item:: Properties
@@ -59,15 +72,32 @@ Overview
 
           * - :py:attr:`~Count`
             - Count property.
+          * - :py:attr:`~Dependents`
+            - Dependents property.
+          * - :py:attr:`~HiddenColumns`
+            - HiddenColumns property.
+          * - :py:attr:`~Independents`
+            - Independents property.
           * - :py:attr:`~Item`
             - Item property.
           * - :py:attr:`~Keys`
             - Keys property.
+          * - :py:attr:`~ShowHiddenColumns`
+            - ShowHiddenColumns property.
           * - :py:attr:`~Values`
             - Values property.
 
 
 
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - __repr__ method.
 
 
 
@@ -80,6 +110,81 @@ Property detail
 
    
    Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Dependents
+   :type: Optional[dict[str, Iterable]]
+
+
+   
+   Dependents property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HiddenColumns
+   :type: Optional[tuple[str]]
+
+
+   
+   HiddenColumns property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Independents
+   :type: Optional[dict[str, Iterable]]
+
+
+   
+   Independents property.
 
 
 
@@ -149,6 +254,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ShowHiddenColumns
+   :type: Optional[bool]
+
+
+   
+   ShowHiddenColumns property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Values
    :type: Optional[Iterable[Iterable]]
 
@@ -184,6 +314,62 @@ Method detail
 
    
    ContainsKey method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator[dict[str, Iterable]]
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TryGetValue(key: str, value: Iterable) -> bool
+
+   
+   TryGetValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __repr__() -> str
+
+   
+   __repr__ method.
 
    ..
        !! processed by numpydoc !!

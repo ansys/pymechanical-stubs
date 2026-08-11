@@ -5,9 +5,9 @@
 :class:`FrequencySpacingType`
 =============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FrequencySpacingType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.FrequencySpacingType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,32 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Linear`
-            - 
-          * - :py:attr:`~Logarithmic`
-            - 
-          * - :py:attr:`~OctaveBand1`
-            - 
-          * - :py:attr:`~OctaveBand12`
-            - 
-          * - :py:attr:`~OctaveBand2`
-            - 
-          * - :py:attr:`~OctaveBand24`
-            - 
-          * - :py:attr:`~OctaveBand3`
-            - 
-          * - :py:attr:`~OctaveBand6`
-            - 
-          * - :py:attr:`~OrderBased`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -75,45 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: Linear
-   :value: 0
-
-
-.. py:attribute:: Logarithmic
-   :value: 1
-
-
-.. py:attribute:: OctaveBand1
-   :value: 2
-
-
-.. py:attribute:: OctaveBand12
-   :value: 6
-
-
-.. py:attribute:: OctaveBand2
-   :value: 3
-
-
-.. py:attribute:: OctaveBand24
-   :value: 7
-
-
-.. py:attribute:: OctaveBand3
-   :value: 4
-
-
-.. py:attribute:: OctaveBand6
-   :value: 5
-
-
-.. py:attribute:: OrderBased
-   :value: 8
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

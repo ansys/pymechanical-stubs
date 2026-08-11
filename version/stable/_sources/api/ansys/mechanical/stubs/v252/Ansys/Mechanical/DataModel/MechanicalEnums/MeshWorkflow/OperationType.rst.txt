@@ -5,9 +5,9 @@
 :class:`OperationType`
 ======================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,64 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~AddPrescribedPoints`
-            - 
-          * - :py:attr:`~CreateEnclosure`
-            - 
-          * - :py:attr:`~CreateSurfaceMesh`
-            - 
-          * - :py:attr:`~CreateTopology`
-            - 
-          * - :py:attr:`~CreateVolumeMesh`
-            - 
-          * - :py:attr:`~CreateVolumetricSizeField`
-            - 
-          * - :py:attr:`~DeleteTopology`
-            - 
-          * - :py:attr:`~DetectStackableBodies`
-            - 
-          * - :py:attr:`~ExportMesh`
-            - 
-          * - :py:attr:`~Extrude`
-            - 
-          * - :py:attr:`~FillHoles`
-            - 
-          * - :py:attr:`~ImportMesh`
-            - 
-          * - :py:attr:`~ImproveSurfaceMesh`
-            - 
-          * - :py:attr:`~ImproveVolumeMesh`
-            - 
-          * - :py:attr:`~ManageZoneProperties`
-            - 
-          * - :py:attr:`~MergeNodes`
-            - 
-          * - :py:attr:`~MergeParts`
-            - 
-          * - :py:attr:`~MergeVolumes`
-            - 
-          * - :py:attr:`~MultiZoneVolumeMesher`
-            - 
-          * - :py:attr:`~PatchHoles`
-            - 
-          * - :py:attr:`~ReplicateMesh`
-            - 
-          * - :py:attr:`~StackerDiagnostics`
-            - 
-          * - :py:attr:`~StackerFlattenVolume`
-            - 
-          * - :py:attr:`~StackerMeshVolume`
-            - 
-          * - :py:attr:`~Wrap`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -107,109 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: AddPrescribedPoints
-   :value: 33
-
-
-.. py:attribute:: CreateEnclosure
-   :value: 7
-
-
-.. py:attribute:: CreateSurfaceMesh
-   :value: 26
-
-
-.. py:attribute:: CreateTopology
-   :value: 9
-
-
-.. py:attribute:: CreateVolumeMesh
-   :value: 27
-
-
-.. py:attribute:: CreateVolumetricSizeField
-   :value: 11
-
-
-.. py:attribute:: DeleteTopology
-   :value: 10
-
-
-.. py:attribute:: DetectStackableBodies
-   :value: 38
-
-
-.. py:attribute:: ExportMesh
-   :value: 5
-
-
-.. py:attribute:: Extrude
-   :value: 12
-
-
-.. py:attribute:: FillHoles
-   :value: 13
-
-
-.. py:attribute:: ImportMesh
-   :value: 4
-
-
-.. py:attribute:: ImproveSurfaceMesh
-   :value: 30
-
-
-.. py:attribute:: ImproveVolumeMesh
-   :value: 31
-
-
-.. py:attribute:: ManageZoneProperties
-   :value: 8
-
-
-.. py:attribute:: MergeNodes
-   :value: 50
-
-
-.. py:attribute:: MergeParts
-   :value: 46
-
-
-.. py:attribute:: MergeVolumes
-   :value: 15
-
-
-.. py:attribute:: MultiZoneVolumeMesher
-   :value: 29
-
-
-.. py:attribute:: PatchHoles
-   :value: 14
-
-
-.. py:attribute:: ReplicateMesh
-   :value: 32
-
-
-.. py:attribute:: StackerDiagnostics
-   :value: 39
-
-
-.. py:attribute:: StackerFlattenVolume
-   :value: 36
-
-
-.. py:attribute:: StackerMeshVolume
-   :value: 37
-
-
-.. py:attribute:: Wrap
-   :value: 34
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

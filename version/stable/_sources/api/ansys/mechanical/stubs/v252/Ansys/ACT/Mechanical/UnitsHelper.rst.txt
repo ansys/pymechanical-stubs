@@ -34,6 +34,9 @@
 
 
 
+
+
+
 .. py:currentmodule:: UnitsHelper
 
 Overview
@@ -50,9 +53,30 @@ Overview
 
           * - :py:attr:`~ConvertMechanicalUnitToCoreUnit`
             - Takes input mechanical unit string and category string
+          * - :py:attr:`~GetCurrentCompactUnitString`
+            - Return a compact unit string for the supplied field.
+          * - :py:attr:`~GetQuantityNameBasedOnUnitCategoryType`
+            - GetQuantityNameBasedOnUnitCategoryType method.
           * - :py:attr:`~GetValidQuantityNamesAndUnits`
             - Retrieve a dictionary of quantity names to unit strings.
+          * - :py:attr:`~RegisterConvertionFunction`
+            - RegisterConvertionFunction method.
 
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -79,6 +103,54 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCurrentCompactUnitString(quantityName: str) -> str
+   :classmethod:
+
+
+.. code-block:: text
+
+   Return a compact unit string for the supplied field.
+   for example, on an acceleration object acc (in MKS and NMM, respectively):
+   -  acc.Magnitude.Output.Unit ==> 'm sec^-1 sec^-1' , 'm sec^-1 sec^-1'
+   -  GetCurrentCompactUnitString(ExtAPI, acc.Magnitude.Output.QuantityName) ==> 'm/s²' , 'mm/s²'
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetQuantityNameBasedOnUnitCategoryType(unitCategory: Ansys.Mechanical.DataModel.Enums.UnitCategoryType) -> str
+   :classmethod:
+
+
+   
+   GetQuantityNameBasedOnUnitCategoryType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetValidQuantityNamesAndUnits() -> dict[str, str]
    :classmethod:
 
@@ -90,6 +162,24 @@ Method detail
    Mechanical ACT extensions.        
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: RegisterConvertionFunction(fct: System.Func[str,str,str]) -> None
+   :classmethod:
+
+
+   
+   RegisterConvertionFunction method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
        !! processed by numpydoc !!
 
 

@@ -5,9 +5,9 @@
 :class:`PythonCodeTargetCallback`
 =================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PythonCodeTargetCallback(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.PythonCodeTargetCallback
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,36 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~GetBodyCommands`
-            - 
-          * - :py:attr:`~GetContactCommands`
-            - 
-          * - :py:attr:`~GetPostCommands`
-            - 
-          * - :py:attr:`~GetSolveCommands`
-            - 
-          * - :py:attr:`~OnAfterGeometryChanged`
-            - 
-          * - :py:attr:`~OnAfterMeshGenerated`
-            - 
-          * - :py:attr:`~OnAfterObjectChanged`
-            - 
-          * - :py:attr:`~OnAfterPost`
-            - 
-          * - :py:attr:`~OnAfterSolve`
-            - 
-          * - :py:attr:`~OnBeforeSolve`
-            - 
-          * - :py:attr:`~Unknown`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -79,53 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: GetBodyCommands
-   :value: 3
-
-
-.. py:attribute:: GetContactCommands
-   :value: 5
-
-
-.. py:attribute:: GetPostCommands
-   :value: 6
-
-
-.. py:attribute:: GetSolveCommands
-   :value: 4
-
-
-.. py:attribute:: OnAfterGeometryChanged
-   :value: 11
-
-
-.. py:attribute:: OnAfterMeshGenerated
-   :value: 9
-
-
-.. py:attribute:: OnAfterObjectChanged
-   :value: 8
-
-
-.. py:attribute:: OnAfterPost
-   :value: 7
-
-
-.. py:attribute:: OnAfterSolve
-   :value: 2
-
-
-.. py:attribute:: OnBeforeSolve
-   :value: 1
-
-
-.. py:attribute:: Unknown
-   :value: 0
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

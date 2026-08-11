@@ -5,7 +5,7 @@
 :class:`ColumnarDataImportDefinition`
 =====================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.ColumnarDataImportDefinition
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.ColumnarDataImportDefinition(index: int, variableType: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType, variableClassification: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification, unit: str, name: str)
 
    Bases: :py:obj:`object`
 
@@ -33,6 +33,8 @@
        !! processed by numpydoc !!
 
 
+
+
 .. py:currentmodule:: ColumnarDataImportDefinition
 
 Overview
@@ -41,6 +43,32 @@ Overview
 .. tab-set::
 
 
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GenerateFromComImportDefinition`
+            - GenerateFromComImportDefinition method.
+          * - :py:attr:`~SaveAsComImportDefinition`
+            - SaveAsComImportDefinition method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -197,6 +225,60 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateFromComImportDefinition(comImportDefinition: Ansys.Common.Interop.AnsStdObjects.DSTableImportSettingsColumnarDataImportDefinition) -> Ansys.Mechanical.Table.ColumnarDataImportDefinition
+   :classmethod:
+
+
+   
+   GenerateFromComImportDefinition method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveAsComImportDefinition(importDefinition: Ansys.Mechanical.Table.ColumnarDataImportDefinition) -> Ansys.Common.Interop.AnsStdObjects.DSTableImportSettingsColumnarDataImportDefinition
+   :classmethod:
+
+
+   
+   SaveAsComImportDefinition method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

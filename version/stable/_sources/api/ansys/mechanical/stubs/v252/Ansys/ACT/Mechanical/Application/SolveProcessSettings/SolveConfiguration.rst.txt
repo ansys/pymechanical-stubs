@@ -5,7 +5,7 @@
 :class:`SolveConfiguration`
 ===========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration(name: str)
 
    Bases: :py:obj:`object`
 
@@ -47,8 +47,18 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~SetAsDefault`
             - Sets this solve configuration as the default.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -180,10 +190,50 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: CopyTo(other: Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveConfiguration) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetAsDefault() -> None
 
    
    Sets this solve configuration as the default.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

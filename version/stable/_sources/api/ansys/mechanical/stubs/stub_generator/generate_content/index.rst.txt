@@ -320,7 +320,7 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: crawl_loaded_references(assembly: System.Reflection.RuntimeAssembly, type_filter: Callable = None) -> dict
+.. py:function:: crawl_loaded_references(assembly: Any, type_filter: Callable = None) -> dict
 
    
    Crawl Loaded assemblies to get Namespaces.
@@ -412,7 +412,7 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: get_doc(assembly: System.Reflection.RuntimeAssembly)
+.. py:function:: get_doc(assembly: Any)
 
    
    Get the documentation file from assembly, or None if it doesn't exist.
@@ -420,7 +420,7 @@ Module detail
 
    :Parameters:
 
-       **assembly: "System.Reflection.RuntimeAssembly"**
+       **assembly: typing.Any**
            An assembly. For example, Ansys.ACT.WB1.
 
 
@@ -476,7 +476,7 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: get_namespaces(assembly: System.Reflection.RuntimeAssembly, type_filter: Callable = None) -> Dict
+.. py:function:: get_namespaces(assembly: Any, type_filter: Callable = None) -> Dict
 
    
    Get all the namespaces and filtered types in the assembly given by assembly_name.

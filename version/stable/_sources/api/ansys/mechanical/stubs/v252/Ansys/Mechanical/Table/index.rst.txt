@@ -56,15 +56,15 @@ Summary
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.ColumnarDataSourceBase`
-            - T:Ansys.Mechanical.Table.ColumnarDataSourceBase is a class that provides foundational behavior for
+            - is a class that provides foundational behavior for
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.DelimitedImportSettings`
-            - T:Ansys.Mechanical.Table.DelimitedImportSettings defines how to import data from a delimited source
+            - defines how to import data from a delimited source
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.FixedWidthImportSettings`
-            - T:Ansys.Mechanical.Table.FixedWidthImportSettings defines how to import data from a delimited source
+            - defines how to import data from a delimited source
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.Table.ImportHelpers`

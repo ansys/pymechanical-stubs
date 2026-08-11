@@ -54,14 +54,6 @@ Overview
             - GetEnumerator method.
           * - :py:attr:`~TryGetValue`
             - TryGetValue method.
-          * - :py:attr:`~get_Count`
-            - get_Count method.
-          * - :py:attr:`~get_Item`
-            - get_Item method.
-          * - :py:attr:`~get_Keys`
-            - get_Keys method.
-          * - :py:attr:`~get_Values`
-            - get_Values method.
 
 
    .. tab-item:: Properties
@@ -267,38 +259,6 @@ Method detail
 
    
    TryGetValue method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Count() -> int
-
-   
-   get_Count method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Item(key: str) -> Iterable
-
-   
-   get_Item method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Keys() -> Iterable[str]
-
-   
-   get_Keys method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Values() -> Iterable[Iterable]
-
-   
-   get_Values method.
 
    ..
        !! processed by numpydoc !!

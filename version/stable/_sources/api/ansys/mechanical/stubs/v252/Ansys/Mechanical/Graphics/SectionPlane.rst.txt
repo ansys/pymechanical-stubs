@@ -49,6 +49,12 @@ Overview
 
           * - :py:attr:`~Equals`
             - Indicates whether the current SectionPlane properties are equal to the properties of another SectionPlane object.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -211,6 +217,30 @@ Method detail
 
    
    Indicates whether the current SectionPlane properties are equal to the properties of another SectionPlane object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

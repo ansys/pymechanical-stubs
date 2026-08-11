@@ -5,7 +5,7 @@
 :class:`OptimizationMaterial`
 =============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.OptimizationMaterial
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.OptimizationMaterial(matForOptimization: Ansys.Common.Interop.DSObjectsAuto.IDSOptimizationMaterial)
 
    Bases: :py:obj:`object`
 
@@ -19,6 +19,21 @@ Overview
 .. tab-set::
 
 
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -37,6 +52,8 @@ Overview
             - Gets or sets the material it is based on (a Material, a string or an objectId can be used to set it)
           * - :py:attr:`~VolumeFillingMethod`
             - Gets or sets if the filling method for the OptimizationMaterial
+          * - :py:attr:`~baseMaterialId`
+            - baseMaterialId property.
 
 
 
@@ -171,9 +188,68 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: baseMaterialId
+   :type: Optional[int]
+
+
+   
+   baseMaterialId property.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

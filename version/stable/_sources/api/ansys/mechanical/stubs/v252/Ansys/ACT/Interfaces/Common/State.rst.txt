@@ -5,9 +5,9 @@
 :class:`State`
 ==============
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.State(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.State
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,38 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Disabled`
-            - 
-          * - :py:attr:`~EditRequired`
-            - 
-          * - :py:attr:`~Error`
-            - 
-          * - :py:attr:`~Interrupted`
-            - 
-          * - :py:attr:`~Modified`
-            - 
-          * - :py:attr:`~OutOfDate`
-            - 
-          * - :py:attr:`~RefreshRequired`
-            - 
-          * - :py:attr:`~Unfulfilled`
-            - 
-          * - :py:attr:`~Unknown`
-            - 
-          * - :py:attr:`~UpToDate`
-            - 
-          * - :py:attr:`~UpdateRequired`
-            - 
-          * - :py:attr:`~UpstreamChangesPending`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -81,57 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: Disabled
-   :value: 6
-
-
-.. py:attribute:: EditRequired
-   :value: 8
-
-
-.. py:attribute:: Error
-   :value: 7
-
-
-.. py:attribute:: Interrupted
-   :value: 9
-
-
-.. py:attribute:: Modified
-   :value: 4
-
-
-.. py:attribute:: OutOfDate
-   :value: 2
-
-
-.. py:attribute:: RefreshRequired
-   :value: 1
-
-
-.. py:attribute:: Unfulfilled
-   :value: 5
-
-
-.. py:attribute:: Unknown
-   :value: 11
-
-
-.. py:attribute:: UpToDate
-   :value: 0
-
-
-.. py:attribute:: UpdateRequired
-   :value: 3
-
-
-.. py:attribute:: UpstreamChangesPending
-   :value: 10
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

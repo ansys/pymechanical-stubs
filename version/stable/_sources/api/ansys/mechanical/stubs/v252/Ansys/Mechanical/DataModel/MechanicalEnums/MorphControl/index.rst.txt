@@ -26,10 +26,23 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: MorphControl
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MorphControl.MorphDefinitionType`
+            - To specify what the Morph Control is based on. The available options are Mesh Workflow and Displacement File.
 
 
 
@@ -52,6 +65,13 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> MorphDefinitionType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/MorphControl/MorphDefinitionType>
 
 
 .. toctree::

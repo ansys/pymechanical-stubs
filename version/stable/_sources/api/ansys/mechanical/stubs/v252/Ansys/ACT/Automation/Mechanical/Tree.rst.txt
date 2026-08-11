@@ -11,6 +11,11 @@
 
 
 
+
+
+
+
+
 .. py:currentmodule:: Tree
 
 Overview
@@ -18,6 +23,23 @@ Overview
 
 .. tab-set::
 
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetTreeHandler`
+            - GetTreeHandler method.
+          * - :py:attr:`~IsObjInTreeView`
+            - IsObjInTreeView method.
+          * - :py:attr:`~OnActiveObjectChangedFwd`
+            - OnActiveObjectChangedFwd method.
+          * - :py:attr:`~add_OnActiveObjectChanged`
+            - add_OnActiveObjectChanged method.
+          * - :py:attr:`~remove_OnActiveObjectChanged`
+            - remove_OnActiveObjectChanged method.
 
 
    .. tab-item:: Methods
@@ -28,26 +50,62 @@ Overview
 
           * - :py:attr:`~Activate`
             - selects an object in the tree.
+          * - :py:attr:`~CanAddTreeGroupingFolder`
+            - CanAddTreeGroupingFolder method.
           * - :py:attr:`~ClearFilter`
             - Clears the current filter.
           * - :py:attr:`~ClearSort`
             - Clears the current sort.
+          * - :py:attr:`~Click`
+            - Click method.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~ExpandBranch`
+            - ExpandBranch method.
           * - :py:attr:`~Filter`
             - Filter method.
           * - :py:attr:`~Find`
             - Find method.
+          * - :py:attr:`~GetDataModelChanges`
+            - GetDataModelChanges method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectsByName`
+            - Gets a list of all objects with the specified name.
+          * - :py:attr:`~GetObjectsByType`
+            - Gets a list of all objects with the specified type.
           * - :py:attr:`~GetPathToFirstActiveObject`
             - Gets the full path that needs to be typed in order to go to the selected object.
+          * - :py:attr:`~GetPathToObjectById`
+            - GetPathToObjectById method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~Group`
             - Groups a list of objects together.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
           * - :py:attr:`~IsSorted`
             - Checks if the tree is currently sorted alphabetically.
           * - :py:attr:`~Refresh`
             - Refreshes the tree.
           * - :py:attr:`~Sort`
             - Sorts the tree objects based on given parameters.
+          * - :py:attr:`~StartListening`
+            - StartListening method.
+          * - :py:attr:`~StopListening`
+            - StopListening method.
           * - :py:attr:`~Suspend`
             - Prevents the tree from being updated.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~TryGetFolder`
+            - TryGetFolder method.
           * - :py:attr:`~Ungroup`
             - Removes groupingFolder from the tree.
 
@@ -297,6 +355,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CanAddTreeGroupingFolder(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   CanAddTreeGroupingFolder method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ClearFilter() -> None
 
    
@@ -309,6 +375,38 @@ Method detail
 
    
    Clears the current sort.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Click() -> None
+
+   
+   Click method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExpandBranch(objectId: int) -> None
+
+   
+   ExpandBranch method.
 
    ..
        !! processed by numpydoc !!
@@ -329,10 +427,84 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDataModelChanges(added: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject], modified: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject], removed: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+
+   
+   GetDataModelChanges method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Ansys.ACT.Automation.Mechanical.TreeObjects
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectsByName(name: str) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   Gets a list of all objects with the specified name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectsByType(type: Tree.GetObjectsByType.type) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+   
+   Gets a list of all objects with the specified type.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetPathToFirstActiveObject() -> str
 
    
    Gets the full path that needs to be typed in order to go to the selected object.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPathToObjectById(objectId: int) -> str
+
+   
+   GetPathToObjectById method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTreeHandler() -> Ansys.Common.Interop.SimulationUIHandlers.ISimulationTreeHandler
+   :classmethod:
+
+
+   
+   GetTreeHandler method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -345,10 +517,38 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsObjInTreeView(dataModelObj: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+   :classmethod:
+
+
+   
+   IsObjInTreeView method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: IsSorted() -> bool
 
    
    Checks if the tree is currently sorted alphabetically.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: OnActiveObjectChangedFwd(sender: Any, args: Any) -> None
+   :classmethod:
+
+
+   
+   OnActiveObjectChangedFwd method.
 
    ..
        !! processed by numpydoc !!
@@ -366,10 +566,37 @@ Method detail
 .. code-block:: text
 
    Sorts the tree objects based on given parameters.
-   type
-   reverse
+   Type of sorting to apply.
+   Wheter to sort in reverse order.
 
+   Note that all parameters of Sort are optional.
+   type: Defaults to alphabetical
+   reverse: Defaults to false
+
+   sorting in reverse order is currently not supported
+
+    Usage example - sort alphabetically
+   ExtAPI.DataModel.Tree.Sort()
+
+    Usage example - sort alphabetically
+   ExtAPI.DataModel.Tree.Sort(type=SortingType.Alphabetical, reverse=False)
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: StartListening() -> None
+
+   
+   StartListening method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StopListening() -> None
+
+   
+   StopListening method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: Suspend() -> System.IDisposable
@@ -380,10 +607,46 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: TryGetFolder(obj: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+
+   
+   TryGetFolder method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Ungroup(groupingFolder: Ansys.ACT.Automation.Mechanical.TreeGroupingFolder) -> None
 
    
    Removes groupingFolder from the tree.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: add_OnActiveObjectChanged(value: System.EventHandler[Ansys.ACT.Automation.Mechanical.ActiveObjectChangedEventArgs]) -> None
+   :classmethod:
+
+
+   
+   add_OnActiveObjectChanged method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: remove_OnActiveObjectChanged(value: System.EventHandler[Ansys.ACT.Automation.Mechanical.ActiveObjectChangedEventArgs]) -> None
+   :classmethod:
+
+
+   
+   remove_OnActiveObjectChanged method.
 
    ..
        !! processed by numpydoc !!

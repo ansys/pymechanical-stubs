@@ -28,18 +28,6 @@ Overview
 
           * - :py:attr:`~GetExtensionToolbars`
             - GetExtensionToolbars method.
-          * - :py:attr:`~get_IsBatchMode`
-            - get_IsBatchMode method.
-          * - :py:attr:`~get_MainHandle`
-            - get_MainHandle method.
-          * - :py:attr:`~get_MainWindow`
-            - get_MainWindow method.
-          * - :py:attr:`~get_ProgressMonitor`
-            - get_ProgressMonitor method.
-          * - :py:attr:`~get_Toolbars`
-            - get_Toolbars method.
-          * - :py:attr:`~get_UIRenderer`
-            - get_UIRenderer method.
 
 
    .. tab-item:: Properties
@@ -256,54 +244,6 @@ Method detail
 
    
    GetExtensionToolbars method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_IsBatchMode() -> bool
-
-   
-   get_IsBatchMode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_MainHandle() -> System.IntPtr
-
-   
-   get_MainHandle method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_MainWindow() -> Any
-
-   
-   get_MainWindow method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_ProgressMonitor() -> Ansys.ACT.Interfaces.UserInterface.IProgressMonitor
-
-   
-   get_ProgressMonitor method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Toolbars() -> System.Collections.ObjectModel.ReadOnlyCollection[Ansys.ACT.Interfaces.UserInterface.IToolbar]
-
-   
-   get_Toolbars method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_UIRenderer() -> Ansys.ACT.Interfaces.UserInterface.IRenderer
-
-   
-   get_UIRenderer method.
 
    ..
        !! processed by numpydoc !!

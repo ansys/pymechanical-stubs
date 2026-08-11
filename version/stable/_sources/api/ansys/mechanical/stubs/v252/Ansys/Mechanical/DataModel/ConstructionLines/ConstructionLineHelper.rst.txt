@@ -72,6 +72,21 @@ Overview
             - Get all the edges that have only edge vertex in the given plane.
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
 
 
@@ -91,6 +106,14 @@ Method detail
 
    
    Import global points and connecting edges from an XML file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -145,6 +168,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetPlanesById(constructionLine: Ansys.ACT.Automation.Mechanical.ConstructionLines.ConstructionLine, planeIdCollection: Iterable[int]) -> List[Any]
    :classmethod:
 
@@ -161,6 +192,22 @@ Method detail
 
    
    Get all the edges that have only edge vertex in the given plane.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

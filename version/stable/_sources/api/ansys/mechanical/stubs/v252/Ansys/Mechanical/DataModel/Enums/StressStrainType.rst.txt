@@ -5,9 +5,9 @@
 :class:`StressStrainType`
 =========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.StressStrainType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.StressStrainType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,34 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equivalent`
-            - 
-          * - :py:attr:`~Intensity`
-            - 
-          * - :py:attr:`~MaximumPrincipal`
-            - 
-          * - :py:attr:`~MaximumShear`
-            - 
-          * - :py:attr:`~MiddlePrincipal`
-            - 
-          * - :py:attr:`~MinimumPrincipal`
-            - 
-          * - :py:attr:`~None_`
-            - 
-          * - :py:attr:`~Normal`
-            - 
-          * - :py:attr:`~Shear`
-            - 
-          * - :py:attr:`~Thermal`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -77,49 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: Equivalent
-   :value: 0
-
-
-.. py:attribute:: Intensity
-   :value: 5
-
-
-.. py:attribute:: MaximumPrincipal
-   :value: 1
-
-
-.. py:attribute:: MaximumShear
-   :value: 4
-
-
-.. py:attribute:: MiddlePrincipal
-   :value: 2
-
-
-.. py:attribute:: MinimumPrincipal
-   :value: 3
-
-
-.. py:attribute:: None_
-   :value: 9
-
-
-.. py:attribute:: Normal
-   :value: 6
-
-
-.. py:attribute:: Shear
-   :value: 7
-
-
-.. py:attribute:: Thermal
-   :value: 8
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

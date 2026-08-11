@@ -26,10 +26,23 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: Enums
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.UI.Enums.ThemeName`
+            - Represents the different themes that can be set in Mechanical.
 
 
 
@@ -52,6 +65,13 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ThemeName</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/UI/Enums/ThemeName>
 
 
 .. toctree::

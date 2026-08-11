@@ -5,7 +5,7 @@
 :class:`ANSYSAnalysisSettings`
 ==============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AnalysisSettings.ANSYSAnalysisSettings
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AnalysisSettings.ANSYSAnalysisSettings(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -57,14 +57,24 @@ Overview
             - Creates a new child Image.
           * - :py:attr:`~CopyTo`
             - CopyTo method.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~DeleteAllRestartPoints`
             - DeleteAllRestartPoints method.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetAMStepType`
             - Gets the AM Process Step Type at a given step.
+          * - :py:attr:`~GetAPIName`
+            - GetAPIName method.
+          * - :py:attr:`~GetAffectedSteps`
+            - GetAffectedSteps method.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetAutomaticTimeStepping`
             - Gets the Automatic Time Stepping at a given solution step.
           * - :py:attr:`~GetCarryOverTimeStep`
@@ -85,6 +95,8 @@ Overview
             - Gets the Current Convergence Value at a given solution step.
           * - :py:attr:`~GetDefineBy`
             - Gets the Define By at a given solution step.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
           * - :py:attr:`~GetDisplacementConvergenceMinimumReference`
             - Gets the Displacement Convergence Minimum Reference at a given solution step.
           * - :py:attr:`~GetDisplacementConvergenceTolerance`
@@ -117,6 +129,8 @@ Overview
             - Gets the Energy Convergence Tolerance type at a given solution step.
           * - :py:attr:`~GetEnergyConvergenceValue`
             - Gets the Energy Convergence Value at a given solution step.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
           * - :py:attr:`~GetForceConvergenceMinimumReference`
             - Gets the Force Convergence Minimum Reference at a given solution step.
           * - :py:attr:`~GetForceConvergenceTolerance`
@@ -125,6 +139,8 @@ Overview
             - Gets the Force Convergence Tolerance Type at a given solution step.
           * - :py:attr:`~GetForceConvergenceValue`
             - Gets the Force Convergence Value at a given solution step.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetHeatConvergenceMinimumReference`
             - Gets the Heat Convergence Minimum Reference at a given solution step.
           * - :py:attr:`~GetHeatConvergenceTolerance`
@@ -133,10 +149,14 @@ Overview
             - Gets the Heat Convergence Tolerance type at a given solution step.
           * - :py:attr:`~GetHeatConvergenceValue`
             - Gets the Heat Convergence Value at a given solution step.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
           * - :py:attr:`~GetInitialSubsteps`
             - Gets the Initial Substeps at a given solution step.
           * - :py:attr:`~GetInitialTimeStep`
             - Gets the Initial Time Step at a given solution step.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
           * - :py:attr:`~GetLineSearch`
             - Gets the Line Search at a given solution step.
           * - :py:attr:`~GetMaximumSubsteps`
@@ -157,8 +177,16 @@ Overview
             - Gets the Moment Convergence Value at a given solution step.
           * - :py:attr:`~GetNumberOfSubSteps`
             - Gets the Number of Substeps for a given solution step.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
           * - :py:attr:`~GetRotationConvergenceMinimumReference`
             - Gets the Rotation Convergence Minimum Reference at a given solution step.
           * - :py:attr:`~GetRotationConvergenceTolerance`
@@ -205,6 +233,12 @@ Overview
             - Gets the TimeIntegration for a given solution step.
           * - :py:attr:`~GetTimeStep`
             - Sets the Time Step for a given solution step.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GetVoltageConvergenceMinimumReference`
             - Gets the Voltage Convergence Minimum Reference at a given solution step.
           * - :py:attr:`~GetVoltageConvergenceTolerance`
@@ -217,8 +251,18 @@ Overview
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
+          * - :py:attr:`~PerformSplitFrequencyRange`
+            - Split the user-defined frequencies into multiple step harmonic analysis
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
@@ -375,6 +419,8 @@ Overview
             - Sets the Voltage Convergence Tolerance type for a given solution step.
           * - :py:attr:`~SetVoltageConvergenceValue`
             - Sets the Voltage Convergence Value for a given solution step.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -395,6 +441,8 @@ Overview
             - Gets or sets the AM Substeps to Apply Heat.
           * - :py:attr:`~AggressiveRemeshing`
             - Gets or sets the AggressiveRemeshing.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~AutomaticTimeStepping`
             - Gets or sets the AutomaticTimeStepping.
           * - :py:attr:`~AxisymmetryDivisions`
@@ -443,10 +491,14 @@ Overview
             - Gets or sets the ChargeConvergenceValue.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~ClusterNumber`
             - Gets or sets the ClusterNumber.
           * - :py:attr:`~ClusterResults`
             - Gets or sets the ClusterResults.
+          * - :py:attr:`~CombineDistributedResultFiles`
+            - Gets or sets the CombineDistributedResultFiles.
           * - :py:attr:`~CombineRestartFiles`
             - Gets or sets the CombineRestartFiles.
           * - :py:attr:`~Comments`
@@ -469,6 +521,8 @@ Overview
             - Gets or sets the AM Cooldown Time.
           * - :py:attr:`~CooldownTimeType`
             - Gets or sets the AM Cooldown Time Type.
+          * - :py:attr:`~CoriolisEffect`
+            - Gets or sets the CoriolisEffect in Stationary Reference Frame.
           * - :py:attr:`~CoriolisEffectApplied`
             - Gets or sets the CoriolisEffectApplied.
           * - :py:attr:`~CreepEffects`
@@ -483,6 +537,8 @@ Overview
             - Gets or sets the CurrentConvergenceTolerance.
           * - :py:attr:`~CurrentConvergenceValue`
             - Gets or sets the CurrentConvergenceValue.
+          * - :py:attr:`~CurrentRPMNumber`
+            - Gets or sets the CurrentRPMNumber.
           * - :py:attr:`~CurrentRestartPoint`
             - Gets or sets the Current Restart Point.
           * - :py:attr:`~CurrentStepNumber`
@@ -595,6 +651,8 @@ Overview
             - Gets or sets the GlobalSizeRatioQualityRefinement.
           * - :py:attr:`~Graph`
             - Graph property.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~HarmonicIndexInterval`
             - Gets or sets the HarmonicIndexInterval.
           * - :py:attr:`~HarmonicIndexRange`
@@ -613,6 +671,8 @@ Overview
             - Gets or sets the HeatGenerationRate.
           * - :py:attr:`~HemicubeResolution`
             - Gets or sets the HemicubeResolution.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~IgnoreAcousticDamping`
             - Gets or sets the IgnoreAcousticDamping.
           * - :py:attr:`~Images`
@@ -671,6 +731,8 @@ Overview
             - Gets or sets the MaximumSubsteps.
           * - :py:attr:`~MaximumTimeStep`
             - Gets or sets the MaximumTimeStep.
+          * - :py:attr:`~MaximumTotalFilesToSave`
+            - Gets or sets the maximum total number of restart files that can be saved. Valid range: 0 to 999.
           * - :py:attr:`~MeshLoadStepValue`
             - Gets or sets the MeshLoadStepValue.
           * - :py:attr:`~MeshRetainFilesAfterFullSolve`
@@ -711,10 +773,14 @@ Overview
             - Gets or sets the MomentConvergenceTolerance.
           * - :py:attr:`~MomentConvergenceValue`
             - Gets or sets the MomentConvergenceValue.
+          * - :py:attr:`~MultipleRPMs`
+            - Gets or sets the MultipleRPMs.
           * - :py:attr:`~Multistep`
             - Gets or sets the Multistep.
           * - :py:attr:`~MultistepType`
             - Gets or sets the MultistepType.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NamedSelection`
             - Gets or sets the objects of type NamedSelection to -- Named Selection property in the Output Controls group of Analysis Settings.
           * - :py:attr:`~NewtonRaphsonOption`
@@ -749,12 +815,22 @@ Overview
             - Gets or sets the NumericalDamping.
           * - :py:attr:`~NumericalDampingValue`
             - Gets or sets the NumericalDampingValue.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~OnDemandExpansion`
+            - Gets or sets the OnDemandExpansion.
           * - :py:attr:`~OnDemandExpansionOption`
             - Gets or sets the OnDemandExpansionOption.
           * - :py:attr:`~OutputSelection`
             - Gets or sets the Output Selection property in the Output Controls group of Analysis Settings.
           * - :py:attr:`~OverRelaxation`
             - Gets or sets the OverRelaxation.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~ParticipationFactor`
             - Gets or sets the ParticipationFactor.
           * - :py:attr:`~ProjectToGeometry`
@@ -847,6 +923,8 @@ Overview
             - Gets or sets the Range Minimum property in Options group of Analysis Settings in Modal Analysis.
           * - :py:attr:`~SignificanceThreshold`
             - Gets or sets the SignificanceThreshold.
+          * - :py:attr:`~SkipExpansion`
+            - Gets or sets the SkipExpansion.
           * - :py:attr:`~SolutionIntervals`
             - Gets or sets the SolutionIntervals.
           * - :py:attr:`~SolutionMethod`
@@ -885,6 +963,8 @@ Overview
             - Gets or sets the StabilizationForceLimit.
           * - :py:attr:`~StabilizationMethod`
             - Gets or sets the StabilizationMethod.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~StepEndTime`
             - Gets or sets the StepEndTime.
           * - :py:attr:`~StepName`
@@ -911,6 +991,8 @@ Overview
             - Gets or sets the StructuralDampingCoefficient.
           * - :py:attr:`~StructuralOnly`
             - Gets or sets the StructuralOnly.
+          * - :py:attr:`~SurfaceStress`
+            - Gets or sets the SurfaceStress.
           * - :py:attr:`~TStress`
             - Gets or sets the TStress.
           * - :py:attr:`~TemperatureConvergence`
@@ -939,6 +1021,8 @@ Overview
             - Gets or sets the UserDefinedFrequencies.
           * - :py:attr:`~UserDefinedFrequencySteps`
             - Gets or sets the UserDefinedFrequencySteps.
+          * - :py:attr:`~VariationalTechnology`
+            - Gets or sets the VariationalTechnology.
           * - :py:attr:`~ViewFactorMethod`
             - Gets or sets the ViewFactorMethod.
           * - :py:attr:`~VisibleProperties`
@@ -1093,6 +1177,31 @@ Property detail
 
    
    Gets or sets the AggressiveRemeshing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
 
 
 
@@ -1712,6 +1821,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ClusterNumber
    :type: Optional[int]
 
@@ -1743,6 +1877,31 @@ Property detail
 
    
    Gets or sets the ClusterResults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CombineDistributedResultFiles
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.CombineDistributedResultFilesType]
+
+
+   
+   Gets or sets the CombineDistributedResultFiles.
 
 
 
@@ -2037,6 +2196,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: CoriolisEffect
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CoriolisEffect in Stationary Reference Frame.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CoriolisEffectApplied
    :type: Optional[Ansys.Mechanical.DataModel.Enums.CoriolisEffectType]
 
@@ -2193,6 +2377,31 @@ Property detail
 
    
    Gets or sets the CurrentConvergenceValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CurrentRPMNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the CurrentRPMNumber.
 
 
 
@@ -3612,6 +3821,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: HarmonicIndexInterval
    :type: Optional[int]
 
@@ -3818,6 +4052,31 @@ Property detail
 
    
    Gets or sets the HemicubeResolution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -4562,6 +4821,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MaximumTotalFilesToSave
+   :type: Optional[int]
+
+
+   
+   Gets or sets the maximum total number of restart files that can be saved. Valid range: 0 to 999.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: MeshLoadStepValue
    :type: Optional[int]
 
@@ -5062,6 +5346,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MultipleRPMs
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the MultipleRPMs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Multistep
    :type: Optional[bool]
 
@@ -5093,6 +5402,31 @@ Property detail
 
    
    Gets or sets the MultistepType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
 
 
 
@@ -5540,6 +5874,106 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OnDemandExpansion
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the OnDemandExpansion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: OnDemandExpansionOption
    :type: Optional[Ansys.Mechanical.DataModel.Enums.OnDemandExpansionType]
 
@@ -5596,6 +6030,31 @@ Property detail
 
    
    Gets or sets the OverRelaxation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -6765,6 +7224,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SkipExpansion
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the SkipExpansion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SolutionIntervals
    :type: Optional[int]
 
@@ -7240,6 +7724,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: StepEndTime
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -7546,6 +8055,31 @@ Property detail
 
    
    Gets or sets the StructuralOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SurfaceStress
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the SurfaceStress.
 
 
 
@@ -7915,6 +8449,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: VariationalTechnology
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.HarmonicVariationalTechnology]
+
+
+   
+   Gets or sets the VariationalTechnology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ViewFactorMethod
    :type: Optional[Ansys.Mechanical.DataModel.Enums.RadiosityViewFactorType]
 
@@ -8139,6 +8698,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -8163,10 +8730,42 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetAMStepType(stepNumber: int) -> Ansys.Mechanical.DataModel.Enums.AMProcessStepType
 
    
    Gets the AM Process Step Type at a given step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   GetAPIName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAffectedSteps() -> List[int]
+
+   
+   GetAffectedSteps method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
 
    ..
        !! processed by numpydoc !!
@@ -8247,6 +8846,14 @@ Method detail
 
    
    Gets the Define By at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
 
    ..
        !! processed by numpydoc !!
@@ -8379,6 +8986,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetForceConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
 
    
@@ -8407,6 +9022,14 @@ Method detail
 
    
    Gets the Force Convergence Value at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
 
    ..
        !! processed by numpydoc !!
@@ -8443,6 +9066,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetInitialSubsteps(stepNumber: int) -> int
 
    
@@ -8455,6 +9086,14 @@ Method detail
 
    
    Gets the Initial Time Step at a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
 
    ..
        !! processed by numpydoc !!
@@ -8539,10 +9178,42 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
 
    ..
        !! processed by numpydoc !!
@@ -8731,6 +9402,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetVoltageConvergenceMinimumReference(stepNumber: int) -> Ansys.Core.Units.Quantity
 
    
@@ -8779,6 +9474,38 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PerformSplitFrequencyRange() -> None
+
+   
+   Split the user-defined frequencies into multiple step harmonic analysis
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -8787,6 +9514,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -9433,6 +10168,14 @@ Method detail
 
    
    Sets the Voltage Convergence Value for a given solution step.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

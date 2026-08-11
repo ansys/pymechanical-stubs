@@ -42,8 +42,16 @@ Summary
             - Common module.
 
 
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Core`
+            - Core module.
+
+
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces`
             - Interfaces module.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Math`
+            - Math module.
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical`
@@ -67,7 +75,9 @@ Summary
 
     <span class="nf nf-md-package"></span> Automation</api/ansys/mechanical/stubs/v252/Ansys/ACT/Automation/index>
     <span class="nf nf-md-package"></span> Common</api/ansys/mechanical/stubs/v252/Ansys/ACT/Common/index>
+    <span class="nf nf-md-package"></span> Core</api/ansys/mechanical/stubs/v252/Ansys/ACT/Core/index>
     <span class="nf nf-md-package"></span> Interfaces</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/index>
+    <span class="nf nf-md-package"></span> Math</api/ansys/mechanical/stubs/v252/Ansys/ACT/Math/index>
     <span class="nf nf-md-package"></span> Mechanical</api/ansys/mechanical/stubs/v252/Ansys/ACT/Mechanical/index>
 
 

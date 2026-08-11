@@ -59,6 +59,21 @@ Overview
             - Applies SAE filter on the given dataset at the given cutoff frequency and returns the result as a new dataset.
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
 
 
@@ -102,6 +117,30 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SAE(dataset: Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D, cutoff_frequency: Ansys.Core.Units.Quantity) -> Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D
    :classmethod:
 
@@ -114,6 +153,14 @@ Method detail
    The Maximum Cutoff Frequency for a particular dataset can be queried using the GetMaximumCutoffFrequency method in the Ansys.Mechanical.DataModel.Utilities.Dataset.Helpers namespace). 
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
        !! processed by numpydoc !!
 
 

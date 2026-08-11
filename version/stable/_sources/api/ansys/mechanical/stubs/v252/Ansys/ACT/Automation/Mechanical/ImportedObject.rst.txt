@@ -5,7 +5,7 @@
 :class:`ImportedObject`
 =======================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ImportedObject
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ImportedObject(obj: Any, externalModelDataCollObj: Ansys.ACT.Automation.Mechanical.ExternalModelDataColl)
 
    Bases: :py:obj:`object`
 
@@ -47,14 +47,24 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetPromotedObject`
+            - Get the promoted row object
           * - :py:attr:`~GetPropertyNames`
             - This method gives the complete list of property names that are supported.
           * - :py:attr:`~GetPropertyValue`
             - Get the data for a given property name
           * - :py:attr:`~GetPropertyValueAsString`
             - Data in string format that is present on the columns
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~SetPropertyValue`
             - Set the data for a given property name
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -132,6 +142,30 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPromotedObject(oPromoteOption: Any) -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
+
+   
+   Get the promoted row object
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetPropertyNames() -> Iterable[str]
 
    
@@ -156,10 +190,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetPropertyValue(name: str, value: Any) -> None
 
    
    Set the data for a given property name
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -5,7 +5,7 @@
 :class:`ImportedWarpWeftRatio`
 ==============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedWarpWeftRatio
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedWarpWeftRatio(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -61,20 +61,60 @@ Overview
             - Run the ClearGeneratedData action.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
+          * - :py:attr:`~CreateTabbedFile`
+            - Gets mapped values.
           * - :py:attr:`~Delete`
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~ExportToTextFile`
-            - Run the ExportToTextFile action.
+            - ExportToTextFile method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
           * - :py:attr:`~GetActivateAtLoadStep`
             - GetActivateAtLoadStep method.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetElementsCoordinateSystems`
+            - Get  the elements coordinate systems dictionary.
+          * - :py:attr:`~GetElementsOrientations`
+            - Get  the elements orientations dictionary.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetTableByName`
+            - GetTableByName method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
@@ -83,8 +123,16 @@ Overview
             - Import.
           * - :py:attr:`~ImportLoad`
             - Run the ImportLoad action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~ReloadConfiguration`
@@ -95,6 +143,10 @@ Overview
             - SetActivateAtLoadStep method.
           * - :py:attr:`~SyncAnalysisFrequencies`
             - Synchronizes the analysis settings' RPMs and frequencies based on the selected imported load.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~getFieldInterpolationProxy`
+            - getFieldInterpolationProxy method.
 
 
    .. tab-item:: Properties
@@ -103,16 +155,44 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~ActiveRow`
+            - Gets or sets the ActiveRow.
+          * - :py:attr:`~ActiveRowValue`
+            - Gets or sets the ActiveRowValue.
           * - :py:attr:`~Algorithm`
             - Algorithm property.
+          * - :py:attr:`~AnalysisRpmSelection`
+            - AnalysisRpmSelection property.
+          * - :py:attr:`~AnalysisRpmSetIndex`
+            - AnalysisRpmSetIndex property.
+          * - :py:attr:`~AnalysisRpmSetRanges`
+            - AnalysisRpmSetRanges property.
+          * - :py:attr:`~AnalysisSpecifyRpm`
+            - AnalysisSpecifyRpm property.
+          * - :py:attr:`~AnalysisTimeOrFrequencysDefinition`
+            - AnalysisTimeOrFrequencysDefinition property.
+          * - :py:attr:`~AppliedByType`
+            - AppliedByType property.
           * - :py:attr:`~ApplyAs`
             - This controls how the imported load is applied, either as a boundary condition or an initial condition.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~BoundingBoxTolerance`
             - BoundingBoxTolerance property.
+          * - :py:attr:`~BucketToleranceCheck`
+            - BucketToleranceCheck property.
+          * - :py:attr:`~BucketToleranceKey`
+            - BucketToleranceKey property.
+          * - :py:attr:`~BucketToleranceValue`
+            - BucketToleranceValue property.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
+          * - :py:attr:`~ComplexComponent`
+            - Gets or sets the DisplayMappedData.
           * - :py:attr:`~CreateNameSelectionForMappedNodes`
             - CreateNameSelectionForMappedNodes property.
           * - :py:attr:`~CreateNameSelectionForOutsideNodes`
@@ -121,6 +201,14 @@ Overview
             - CreateNameSelectionForUnmappedNodes property.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
+          * - :py:attr:`~DefineActiveSequenceBy`
+            - Gets or sets the DefineActiveSequenceBy.
+          * - :py:attr:`~DefineByType`
+            - DefineByType property.
+          * - :py:attr:`~DiscretizationX`
+            - DiscretizationX property.
+          * - :py:attr:`~DiscretizationY`
+            - DiscretizationY property.
           * - :py:attr:`~DisplayInteriorPoints`
             - DisplayInteriorPoints property.
           * - :py:attr:`~DisplayProjectionPlane`
@@ -129,10 +217,20 @@ Overview
             - DisplaySourcePointIds property.
           * - :py:attr:`~DisplaySourcePoints`
             - DisplaySourcePoints property.
+          * - :py:attr:`~ExternalDataIdentifier`
+            - ExternalDataIdentifier property.
+          * - :py:attr:`~ExternalLoadScopingType`
+            - ExternalLoadScopingType property.
           * - :py:attr:`~ExtrapolationTolerancePercent`
             - ExtrapolationTolerancePercent property.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~Geometry`
+            - Geometry property.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~InternalObject`
@@ -143,8 +241,18 @@ Overview
             - KrigingCorrelationFunction property.
           * - :py:attr:`~KrigingPolynom`
             - KrigingPolynom property.
+          * - :py:attr:`~LegendMaximum`
+            - LegendMaximum property.
+          * - :py:attr:`~LegendMinimum`
+            - LegendMinimum property.
+          * - :py:attr:`~LegendRange`
+            - LegendRange property.
           * - :py:attr:`~Limit`
             - Limit property.
+          * - :py:attr:`~LoadDisplayComponentType`
+            - Gets or sets the DefineActiveSequenceBy.
+          * - :py:attr:`~LoadedAreaType`
+            - LoadedAreaType property.
           * - :py:attr:`~Location`
             - Gets or sets the Location.
           * - :py:attr:`~MappedNodesName`
@@ -157,16 +265,32 @@ Overview
             - MaxOutsideDistance property.
           * - :py:attr:`~Method`
             - Method property.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NumberOfPoints`
             - NumberOfPoints property.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
           * - :py:attr:`~OrientationRealignment`
             - OrientationRealignment property.
+          * - :py:attr:`~OriginX`
+            - OriginX property.
+          * - :py:attr:`~OriginY`
+            - OriginY property.
+          * - :py:attr:`~OriginZ`
+            - OriginZ property.
           * - :py:attr:`~OutsideDistanceCheck`
             - OutsideDistanceCheck property.
           * - :py:attr:`~OutsideNodesName`
             - OutsideNodesName property.
           * - :py:attr:`~OutsideOption`
             - OutsideOption property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~Pinball`
             - Pinball property.
           * - :py:attr:`~Projection`
@@ -181,14 +305,38 @@ Overview
             - RigidTransformTargetCoordinateSystem property.
           * - :py:attr:`~SharedRefBody`
             - Gets or sets the SharedRefBody.
+          * - :py:attr:`~ShellFace`
+            - ShellFace property.
+          * - :py:attr:`~ShellOffsetType`
+            - ShellOffsetType property.
           * - :py:attr:`~ShellThicknessFactor`
             - ShellThicknessFactor property.
+          * - :py:attr:`~ShowWireframeData`
+            - Gets or sets the ShowWireframeData.
+          * - :py:attr:`~SourceBodies`
+            - SourceBodies property.
+          * - :py:attr:`~SourceComponent`
+            - SourceComponent property.
           * - :py:attr:`~SourceMaximum`
             - SourceMaximum property.
           * - :py:attr:`~SourceMinimum`
             - SourceMinimum property.
+          * - :py:attr:`~SourceZone`
+            - SourceZone property.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~Suppressed`
             - Gets or sets the Suppressed.
+          * - :py:attr:`~TabularLoading`
+            - TabularLoading property.
+          * - :py:attr:`~TargetCoordinateSystem`
+            - TargetCoordinateSystem property.
+          * - :py:attr:`~ThetaXY`
+            - ThetaXY property.
+          * - :py:attr:`~ThetaYZ`
+            - ThetaYZ property.
+          * - :py:attr:`~ThetaZX`
+            - ThetaZX property.
           * - :py:attr:`~UnmappedNodesName`
             - UnmappedNodesName property.
           * - :py:attr:`~VariableType`
@@ -206,12 +354,212 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: ActiveRow
+   :type: Optional[int]
+
+
+   
+   Gets or sets the ActiveRow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ActiveRowValue
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ActiveRowValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Algorithm
    :type: Optional[Ansys.Mechanical.DataModel.Enums.MappingAlgorithm]
 
 
    
    Algorithm property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisRpmSelection
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   AnalysisRpmSelection property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisRpmSetIndex
+   :type: Optional[int]
+
+
+   
+   AnalysisRpmSetIndex property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisRpmSetRanges
+   :type: Optional[str]
+
+
+   
+   AnalysisRpmSetRanges property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisSpecifyRpm
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExternalLoadImportRPMType]
+
+
+   
+   AnalysisSpecifyRpm property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AnalysisTimeOrFrequencysDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AnalysisTimeDefinitionType]
+
+
+   
+   AnalysisTimeOrFrequencysDefinition property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AppliedByType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadAppliedByType]
+
+
+   
+   AppliedByType property.
 
 
 
@@ -256,12 +604,112 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: BoundingBoxTolerance
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    BoundingBoxTolerance property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BucketToleranceCheck
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.OnOffType]
+
+
+   
+   BucketToleranceCheck property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BucketToleranceKey
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MappingToleranceKey]
+
+
+   
+   BucketToleranceKey property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BucketToleranceValue
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   BucketToleranceValue property.
 
 
 
@@ -306,12 +754,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Comments
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
 
 
    
    Gets the list of associated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ComplexComponent
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the DisplayMappedData.
 
 
 
@@ -431,6 +929,106 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: DefineActiveSequenceBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExtLoadDefineActiveSequenceBy]
+
+
+   
+   Gets or sets the DefineActiveSequenceBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DefineByType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExternalLoadDefineByType]
+
+
+   
+   DefineByType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DiscretizationX
+   :type: Optional[int]
+
+
+   
+   DiscretizationX property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DiscretizationY
+   :type: Optional[int]
+
+
+   
+   DiscretizationY property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DisplayInteriorPoints
    :type: Optional[bool]
 
@@ -531,6 +1129,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ExternalDataIdentifier
+   :type: Optional[str]
+
+
+   
+   ExternalDataIdentifier property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExternalLoadScopingType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExternalLoadScopingType]
+
+
+   
+   ExternalLoadScopingType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ExtrapolationTolerancePercent
    :type: Optional[float]
 
@@ -562,6 +1210,81 @@ Property detail
 
    
    Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Geometry
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MappingGeometryType]
+
+
+   
+   Geometry property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -706,12 +1429,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: LegendMaximum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   LegendMaximum property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LegendMinimum
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   LegendMinimum property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LegendRange
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LegendRangeType]
+
+
+   
+   LegendRange property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Limit
    :type: Optional[int]
 
 
    
    Limit property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadDisplayComponentType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExtLoadDisplayComponentType]
+
+
+   
+   Gets or sets the DefineActiveSequenceBy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LoadedAreaType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.LoadedAreaType]
+
+
+   
+   LoadedAreaType property.
 
 
 
@@ -881,6 +1729,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NumberOfPoints
    :type: Optional[int]
 
@@ -906,12 +1779,162 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: OrientationRealignment
    :type: Optional[bool]
 
 
    
    OrientationRealignment property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   OriginX property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   OriginY property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   OriginZ property.
 
 
 
@@ -987,6 +2010,31 @@ Property detail
 
    
    OutsideOption property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -1181,12 +2229,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ShellFace
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ShellFaceType]
+
+
+   
+   ShellFace property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShellOffsetType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ShellOffsetType]
+
+
+   
+   ShellOffsetType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ShellThicknessFactor
    :type: Optional[float]
 
 
    
    ShellThicknessFactor property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowWireframeData
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the ShowWireframeData.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceBodies
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ImportSourceBodies]
+
+
+   
+   SourceBodies property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceComponent
+   :type: Optional[str]
+
+
+   
+   SourceComponent property.
 
 
 
@@ -1256,12 +2429,187 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SourceZone
+   :type: Optional[str]
+
+
+   
+   SourceZone property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Suppressed
    :type: Optional[bool]
 
 
    
    Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TabularLoading
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ExternalLoadSteppingType]
+
+
+   
+   TabularLoading property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetCoordinateSystem
+   :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
+
+
+   
+   TargetCoordinateSystem property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThetaXY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   ThetaXY property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThetaYZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   ThetaYZ property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThetaZX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   ThetaZX property.
 
 
 
@@ -1446,10 +2794,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateTabbedFile() -> str
+
+   
+   Gets mapped values.
 
    ..
        !! processed by numpydoc !!
@@ -1470,10 +2834,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: ExportToTextFile(filePath: str) -> None
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
 
    
-   Run the ExportToTextFile action.
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportToTextFile(bIgnoreExcelPreference: bool, filePath: str) -> None
+
+   
+   ExportToTextFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
 
    ..
        !! processed by numpydoc !!
@@ -1486,6 +2866,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -1494,10 +2882,130 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetElementsCoordinateSystems() -> System.Collections.Generic.Dictionary[System.Int64, Ansys.ACT.Common.CoordinateSystem]
+
+   
+   Get  the elements coordinate systems dictionary.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetElementsOrientations() -> System.Collections.Generic.Dictionary[System.Int64, Ansys.ACT.Automation.Mechanical.ElementOrientationInfo]
+
+   
+   Get  the elements orientations dictionary.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTableByName(name: str) -> Iterable[Ansys.ACT.Automation.Mechanical.WorksheetRow]
+
+   
+   GetTableByName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -1534,6 +3042,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -1542,6 +3074,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -1584,6 +3124,22 @@ Method detail
        A `NotSupportedException` exception will be thrown when called with any non-supported imported loads.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: getFieldInterpolationProxy() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.CImportProxyWrapper
+
+   
+   getFieldInterpolationProxy method.
+
+   ..
        !! processed by numpydoc !!
 
 

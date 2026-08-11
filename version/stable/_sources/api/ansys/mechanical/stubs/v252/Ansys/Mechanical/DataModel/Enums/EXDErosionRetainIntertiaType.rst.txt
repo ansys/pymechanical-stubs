@@ -5,65 +5,10 @@
 :class:`EXDErosionRetainIntertiaType`
 =====================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.EXDErosionRetainIntertiaType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.EXDErosionRetainIntertiaType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
-
-   
-   Create a collection of name/value pairs.
-
-   Example enumeration:
-
-   >>> class Color(Enum):
-   ...     RED = 1
-   ...     BLUE = 2
-   ...     GREEN = 3
-
-   Access them by:
-
-   - attribute access:
-
-     >>> Color.RED
-     <Color.RED: 1>
-
-   - value lookup:
-
-     >>> Color(1)
-     <Color.RED: 1>
-
-   - name lookup:
-
-     >>> Color['RED']
-     <Color.RED: 1>
-
-   Enumerations can be iterated over, and know how many members they have:
-
-   >>> len(Color)
-   3
-
-   >>> list(Color)
-   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
-
-   Methods can be added to enumerations, and members can have their own
-   attributes -- see the documentation for details.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   ..
-       !! processed by numpydoc !!
 
 
 .. py:currentmodule:: EXDErosionRetainIntertiaType
@@ -75,18 +20,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~No`
-            - 
-          * - :py:attr:`~Yes`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -95,17 +48,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: No
-   :value: 0
-
-
-.. py:attribute:: Yes
-   :value: 1
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

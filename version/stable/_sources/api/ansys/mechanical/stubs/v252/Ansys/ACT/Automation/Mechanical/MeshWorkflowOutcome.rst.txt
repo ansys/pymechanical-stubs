@@ -5,7 +5,7 @@
 :class:`MeshWorkflowOutcome`
 ============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -55,26 +55,86 @@ Overview
             - Creates a new child Image.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Delete`
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetDomainPatternProperties`
+            - GetDomainPatternProperties method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetPropertyWorksheetInfo`
+            - GetPropertyWorksheetInfo method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetUnpublishedList`
+            - GetUnpublishedList method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~PropertyTypeInfo`
+            - PropertyTypeInfo method.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnType`
+            - Renames applying the default name based on type.
+          * - :py:attr:`~SetPattern`
+            - SetPattern method.
+          * - :py:attr:`~SetPropertyValue`
+            - SetPropertyValue method.
+          * - :py:attr:`~SetPublish`
+            - SetPublish method.
+          * - :py:attr:`~SetUnpublish`
+            - SetUnpublish method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -83,20 +143,78 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AspectRatioMaxValue`
+            - Gets the AspectRatioMaxValue.
+          * - :py:attr:`~AspectRatioMinValue`
+            - Gets the AspectRatioMinValue.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~BoundingBoxDimensions`
             - Gets the bounding box extents of the input aligned along the direction of stacking.
+          * - :py:attr:`~CheckpointUnoDataEDXFilePath`
+            - Gets the CheckpointUnoDataEDXFilePath.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
+          * - :py:attr:`~DegenerateFaces`
+            - Gets the count of degenerate topology faces.
+          * - :py:attr:`~DeviatingFacets`
+            - Gets the count of topology faces with deviating facets.
+          * - :py:attr:`~ExternalMethod`
+            - Gets the scope method for the External Enclosure scope outcome.
+          * - :py:attr:`~ExternalPattern`
+            - Gets the ExternalPattern.
+          * - :py:attr:`~FMFailureCodeID`
+            - Gets the FMFailureCodeID.
+          * - :py:attr:`~FMFailureCodeString`
+            - Gets the FMFailureCodeString.
+          * - :py:attr:`~FMWarningCodeID`
+            - Gets the FMWarningCodeID.
+          * - :py:attr:`~FMWarningCodeString`
+            - Gets the FMWarningCodeString.
+          * - :py:attr:`~FailedEdges`
+            - Gets the count of failed edges after repairing.
+          * - :py:attr:`~FailedFaces`
+            - Gets the count of failed faces after repairing.
+          * - :py:attr:`~FailureInfoInitialized`
+            - Gets the FailureInfoInitialized.
+          * - :py:attr:`~FailureLines`
+            - Gets the lines in the csv file that caused failure/warning in the operation.
           * - :py:attr:`~FailureMessage`
             - Gets the failure message.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
+          * - :py:attr:`~IncompleteBoundaries`
+            - Gets or sets the IncompleteBoundaries.
+          * - :py:attr:`~IncompleteBoundaryLoops`
+            - Gets the count of topology faces with incomplete boundary loops.
+          * - :py:attr:`~InternalMethod`
+            - Gets the scope method for the Internal Enclosure scope outcome.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~InternalPattern`
+            - Gets the InternalPattern.
+          * - :py:attr:`~IntersectingBoundaryLoops`
+            - Gets the count of topology faces with intersecting boundary loops.
+          * - :py:attr:`~IntersectingPairs`
+            - Gets the count of topology faces with intersecting pairs.
+          * - :py:attr:`~InvalidBoundaries`
+            - Gets or sets the InvalidBoundaries.
+          * - :py:attr:`~InvalidBoundaryLoopOrientation`
+            - Gets the count of topology faces with invalid boundary loop orientation.
+          * - :py:attr:`~LabelEdges`
+            - Gets the LabelEdges.
+          * - :py:attr:`~MissingBoundaries`
+            - Gets or sets the MissingBoundaries.
           * - :py:attr:`~MultiZoneDefeaturedEdges`
             - Gets the number of edges for which MultiZone Meshing output no mesh elements.
           * - :py:attr:`~MultiZoneDefeaturedEdgesScopeMethod`
@@ -145,10 +263,72 @@ Overview
             - Gets the scope method for the MultiZone Free Mesh scope outcome.
           * - :py:attr:`~MultiZoneFreeMeshScopePattern`
             - Gets the scope pattern for the MultiZone Free Mesh scope outcome.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~NewEdges`
+            - Gets the count of new edges after repairing.
+          * - :py:attr:`~NewFaces`
+            - Gets the count of new faces after repairing.
+          * - :py:attr:`~NoBoundaryLoops`
+            - Gets the count of topology faces with no boundary loops.
+          * - :py:attr:`~NoEdgeCurveData`
+            - Gets the count of topology edges without curve data.
+          * - :py:attr:`~NoFaceSurfaceData`
+            - Gets the count of topology faces without surface data.
+          * - :py:attr:`~NodeMergeCount`
+            - Gets the total number of nodes merged by the Merge Nodes operation.
+          * - :py:attr:`~NumberOfFreeMeshEdges`
+            - Gets the NumberOfFreeMeshEdges.
+          * - :py:attr:`~NumberOfMultiMeshEdges`
+            - Gets the NumberOfMultiMeshEdges.
+          * - :py:attr:`~NumberOfSelfIntersections`
+            - Gets the NumberOfSelfIntersections.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~OutcomeDescription`
+            - OutcomeDescription property.
+          * - :py:attr:`~OutcomeDescriptionJson`
+            - OutcomeDescriptionJson property.
+          * - :py:attr:`~OutcomeString`
+            - Gets the OutcomeString.
           * - :py:attr:`~OutcomeType`
             - Returns the type of the control.
+          * - :py:attr:`~OutcomeTypeInformation`
+            - OutcomeTypeInformation property.
+          * - :py:attr:`~OutcomeTypeInformationJson`
+            - OutcomeTypeInformationJson property.
+          * - :py:attr:`~OverlappingTopoFaces`
+            - Gets the count of topology faces which overlap.
+          * - :py:attr:`~Parent`
+            - Parent property.
+          * - :py:attr:`~PerformanceElapsedTime`
+            - Gets the PerformanceElapsedTime.
+          * - :py:attr:`~PerformanceFinalProcessMemory`
+            - Gets the PerformanceFinalProcessMemory.
+          * - :py:attr:`~PerformancePeakProcessMemory`
+            - Gets the PerformancePeakProcessMemory.
+          * - :py:attr:`~PrimeMeshFailureCodeID`
+            - Gets the PrimeMeshFailureCodeID.
+          * - :py:attr:`~PrimeMeshFailureCodeString`
+            - Gets the PrimeMeshFailureCodeString.
+          * - :py:attr:`~PrimeMeshWarningCodeID`
+            - Gets the PrimeMeshWarningCodeID.
+          * - :py:attr:`~PrimeMeshWarningCodeString`
+            - Gets the PrimeMeshWarningCodeString.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
+          * - :py:attr:`~PythonTraceback`
+            - Gets the PythonTraceback.
+          * - :py:attr:`~PythonTracebackInitialized`
+            - Gets the PythonTracebackInitialized.
+          * - :py:attr:`~RecordingName`
+            - 
+          * - :py:attr:`~ReleaseStatusString`
+            - ReleaseStatusString property.
           * - :py:attr:`~ScopeDefinition`
             - Gets or sets the type of scope definition for the control scoping. Default: Value.
           * - :py:attr:`~ScopeMethod`
@@ -159,10 +339,46 @@ Overview
             - Gets or sets the pattern that defines the scope of the control. Applicable only if scope is defined by value.
           * - :py:attr:`~SizeFieldName`
             - 
+          * - :py:attr:`~SkewnessMaxValue`
+            - Gets the SkewnessMaxValue.
+          * - :py:attr:`~SkewnessMinValue`
+            - Gets the SkewnessMinValue.
+          * - :py:attr:`~SkippedEdges`
+            - Gets the count of skipped edges after repairing.
+          * - :py:attr:`~SkippedFaces`
+            - Gets the count of skipped faces after repairing.
+          * - :py:attr:`~SkippedLines`
+            - Gets the lines that were skipped while reading the csv file.
+          * - :py:attr:`~SmallTopoEdges`
+            - Gets the count of small topology edges.
           * - :py:attr:`~SmallestLateralEdgeLength`
             - Gets the smallest edge length along the lateral direction of stacking.
           * - :py:attr:`~SmallestStackingEdgeLength`
             - Gets the smallest edge length along the stacking direction.
+          * - :py:attr:`~SolderBallBottomCapScopeMethod`
+            - Gets the scope method for the Solder Ball Bottom Cap scope outcome.
+          * - :py:attr:`~SolderBallBottomCapScopePattern`
+            - Gets the scope pattern for the Solder Ball Bottom Cap scope outcome.
+          * - :py:attr:`~SolderBallTopCapScopeMethod`
+            - Gets the scope method for the Solder Ball Top Cap scope outcome.
+          * - :py:attr:`~SolderBallTopCapScopePattern`
+            - Gets the scope pattern for the Solder Ball Top Cap scope outcome.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~Status`
+            - Gets the Status.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
+          * - :py:attr:`~ThinStripes`
+            - Gets the count of topology faces which are considered thin stripes.
+          * - :py:attr:`~TopoBodyCountChange`
+            - Gets the change in number of topo bodies after repairing.
+          * - :py:attr:`~TopoEdgeCountChange`
+            - Gets the change in number of topo edges after repairing.
+          * - :py:attr:`~TopoFaceCountChange`
+            - Gets the change in number of topo faces after repairing.
+          * - :py:attr:`~TopoNodeCountChange`
+            - Gets the change in number of topo nodes after repairing.
           * - :py:attr:`~VisibleProperties`
             - Gets the list of properties that are visible for this object.
           * - :py:attr:`~WarningMessage`
@@ -176,12 +392,112 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: AspectRatioMaxValue
+   :type: Optional[float]
+
+
+   
+   Gets the AspectRatioMaxValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AspectRatioMinValue
+   :type: Optional[float]
+
+
+   
+   Gets the AspectRatioMinValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: BoundingBoxDimensions
    :type: Optional[Ansys.Mechanical.Graphics.Point]
 
 
    
    Gets the bounding box extents of the input aligned along the direction of stacking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CheckpointUnoDataEDXFilePath
+   :type: Optional[str]
+
+
+   
+   Gets the CheckpointUnoDataEDXFilePath.
 
 
 
@@ -226,12 +542,337 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DataModelObjectCategory
    :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
 
 
    
    Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DegenerateFaces
+   :type: Optional[int]
+
+
+   
+   Gets the count of degenerate topology faces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeviatingFacets
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces with deviating facets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExternalMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the External Enclosure scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExternalPattern
+   :type: Optional[str]
+
+
+   
+   Gets the ExternalPattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FMFailureCodeID
+   :type: Optional[int]
+
+
+   
+   Gets the FMFailureCodeID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FMFailureCodeString
+   :type: Optional[str]
+
+
+   
+   Gets the FMFailureCodeString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FMWarningCodeID
+   :type: Optional[int]
+
+
+   
+   Gets the FMWarningCodeID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FMWarningCodeString
+   :type: Optional[str]
+
+
+   
+   Gets the FMWarningCodeString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailedEdges
+   :type: Optional[int]
+
+
+   
+   Gets the count of failed edges after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailedFaces
+   :type: Optional[int]
+
+
+   
+   Gets the count of failed faces after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailureInfoInitialized
+   :type: Optional[bool]
+
+
+   
+   Gets the FailureInfoInitialized.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FailureLines
+   :type: Optional[str]
+
+
+   
+   Gets the lines in the csv file that caused failure/warning in the operation.
 
 
 
@@ -301,6 +942,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
@@ -326,12 +1017,262 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: IncompleteBoundaries
+   :type: Optional[int]
+
+
+   
+   Gets or sets the IncompleteBoundaries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IncompleteBoundaryLoops
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces with incomplete boundary loops.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the Internal Enclosure scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: InternalObject
    :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelOutcomeAuto]
 
 
    
    Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalPattern
+   :type: Optional[str]
+
+
+   
+   Gets the InternalPattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IntersectingBoundaryLoops
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces with intersecting boundary loops.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IntersectingPairs
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces with intersecting pairs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InvalidBoundaries
+   :type: Optional[int]
+
+
+   
+   Gets or sets the InvalidBoundaries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InvalidBoundaryLoopOrientation
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces with invalid boundary loop orientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LabelEdges
+   :type: Optional[str]
+
+
+   
+   Gets the LabelEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MissingBoundaries
+   :type: Optional[int]
+
+
+   
+   Gets or sets the MissingBoundaries.
 
 
 
@@ -951,6 +1892,406 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NewEdges
+   :type: Optional[int]
+
+
+   
+   Gets the count of new edges after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NewFaces
+   :type: Optional[int]
+
+
+   
+   Gets the count of new faces after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NoBoundaryLoops
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces with no boundary loops.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NoEdgeCurveData
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology edges without curve data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NoFaceSurfaceData
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces without surface data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NodeMergeCount
+   :type: Optional[int]
+
+
+   
+   Gets the total number of nodes merged by the Merge Nodes operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfFreeMeshEdges
+   :type: Optional[int]
+
+
+   
+   Gets the NumberOfFreeMeshEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfMultiMeshEdges
+   :type: Optional[int]
+
+
+   
+   Gets the NumberOfMultiMeshEdges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSelfIntersections
+   :type: Optional[int]
+
+
+   
+   Gets the NumberOfSelfIntersections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutcomeDescription
+   :type: Optional[System.Collections.Generic.Dictionary[str, Any]]
+
+
+   
+   OutcomeDescription property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutcomeDescriptionJson
+   :type: Optional[str]
+
+
+   
+   OutcomeDescriptionJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutcomeString
+   :type: Optional[str]
+
+
+   
+   Gets the OutcomeString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: OutcomeType
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType]
 
@@ -976,12 +2317,366 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: OutcomeTypeInformation
+   :type: Optional[System.Collections.Generic.Dictionary[str, Any]]
+
+
+   
+   OutcomeTypeInformation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OutcomeTypeInformationJson
+   :type: Optional[str]
+
+
+   
+   OutcomeTypeInformationJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OverlappingTopoFaces
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces which overlap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PerformanceElapsedTime
+   :type: Optional[float]
+
+
+   
+   Gets the PerformanceElapsedTime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PerformanceFinalProcessMemory
+   :type: Optional[float]
+
+
+   
+   Gets the PerformanceFinalProcessMemory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PerformancePeakProcessMemory
+   :type: Optional[float]
+
+
+   
+   Gets the PerformancePeakProcessMemory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimeMeshFailureCodeID
+   :type: Optional[int]
+
+
+   
+   Gets the PrimeMeshFailureCodeID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimeMeshFailureCodeString
+   :type: Optional[str]
+
+
+   
+   Gets the PrimeMeshFailureCodeString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimeMeshWarningCodeID
+   :type: Optional[int]
+
+
+   
+   Gets the PrimeMeshWarningCodeID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrimeMeshWarningCodeString
+   :type: Optional[str]
+
+
+   
+   Gets the PrimeMeshWarningCodeString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Properties
    :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
 
 
    
    Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PythonTraceback
+   :type: Optional[str]
+
+
+   
+   Gets the PythonTraceback.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PythonTracebackInitialized
+   :type: Optional[bool]
+
+
+   
+   Gets the PythonTracebackInitialized.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RecordingName
+   :type: Optional[str]
+
+
+.. py:property:: ReleaseStatusString
+   :type: Optional[str]
+
+
+   
+   ReleaseStatusString property.
 
 
 
@@ -1105,6 +2800,156 @@ Property detail
    :type: Optional[str]
 
 
+.. py:property:: SkewnessMaxValue
+   :type: Optional[float]
+
+
+   
+   Gets the SkewnessMaxValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SkewnessMinValue
+   :type: Optional[float]
+
+
+   
+   Gets the SkewnessMinValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SkippedEdges
+   :type: Optional[int]
+
+
+   
+   Gets the count of skipped edges after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SkippedFaces
+   :type: Optional[int]
+
+
+   
+   Gets the count of skipped faces after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SkippedLines
+   :type: Optional[str]
+
+
+   
+   Gets the lines that were skipped while reading the csv file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SmallTopoEdges
+   :type: Optional[int]
+
+
+   
+   Gets the count of small topology edges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SmallestLateralEdgeLength
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -1136,6 +2981,306 @@ Property detail
 
    
    Gets the smallest edge length along the stacking direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomCapScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the Solder Ball Bottom Cap scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomCapScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the Solder Ball Bottom Cap scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopCapScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets the scope method for the Solder Ball Top Cap scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopCapScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets the scope pattern for the Solder Ball Top Cap scope outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Status
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowObjectStatusType]
+
+
+   
+   Gets the Status.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinStripes
+   :type: Optional[int]
+
+
+   
+   Gets the count of topology faces which are considered thin stripes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopoBodyCountChange
+   :type: Optional[int]
+
+
+   
+   Gets the change in number of topo bodies after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopoEdgeCountChange
+   :type: Optional[int]
+
+
+   
+   Gets the change in number of topo edges after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopoFaceCountChange
+   :type: Optional[int]
+
+
+   
+   Gets the change in number of topo faces after repairing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TopoNodeCountChange
+   :type: Optional[int]
+
+
+   
+   Gets the change in number of topo nodes after repairing.
 
 
 
@@ -1246,6 +3391,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -1270,6 +3423,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -1278,10 +3455,130 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainPatternProperties() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainPatternProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(id: int) -> str
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyWorksheetInfo(parentPath: str) -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetPropertyWorksheetInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUnpublishedList() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetUnpublishedList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -1302,6 +3599,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -1312,6 +3633,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
@@ -1320,10 +3649,66 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyTypeInfo(property: Ansys.ACT.Automation.Mechanical.Property) -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   PropertyTypeInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RemoveParameter(propName: str) -> None
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnType() -> None
+
+   
+   Renames applying the default name based on type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPattern(dispId: int, pattern: str) -> None
+
+   
+   SetPattern method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPropertyValue(id: int, value: str, validate: int) -> None
+
+   
+   SetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPublish(id: int) -> None
+
+   
+   SetPublish method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetUnpublish(id: int) -> None
+
+   
+   SetUnpublish method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

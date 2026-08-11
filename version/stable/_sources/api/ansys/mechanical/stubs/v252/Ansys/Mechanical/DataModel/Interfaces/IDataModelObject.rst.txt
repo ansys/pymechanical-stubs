@@ -42,10 +42,16 @@ Overview
 
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the name of the current DataModelObject's category.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
           * - :py:attr:`~Name`
             - Gets the name of the object.
           * - :py:attr:`~ObjectId`
             - Gets the internal id of the object.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
           * - :py:attr:`~ObjectTags`
             - Gets an IEnumerable object of the tags that 'this' is a part of.
           * - :py:attr:`~Parent`
@@ -65,6 +71,56 @@ Property detail
 
    
    Gets the name of the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Any]
+
+
+   
+   InternalObject property.
 
 
 
@@ -115,6 +171,31 @@ Property detail
 
    
    Gets the internal id of the object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
 
 
 

@@ -5,7 +5,7 @@
 :class:`Geometry`
 =================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Geometry
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Geometry(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -77,36 +77,86 @@ Overview
             - CenterOfMass method.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~Export`
+            - Export method.
           * - :py:attr:`~ExportParts`
             - ExportParts method.
+          * - :py:attr:`~ExportToSTL`
+            - ExportToSTL method.
           * - :py:attr:`~FreezeMeshOnAllParts`
             - Run the FreezeMeshOnAllParts action.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
+          * - :py:attr:`~GetBodies`
+            - GetBodies method.
           * - :py:attr:`~GetBody`
             - Gets the Body associated with the given IGeoBody
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
           * - :py:attr:`~GetPart`
             - Gets the Part associated with the given IGeoPart
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetSelectedPrototypes`
+            - GetSelectedPrototypes method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
           * - :py:attr:`~InvertSuppressedBodySet`
             - Invert all parts Suppressed property.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
           * - :py:attr:`~ResetBodyColors`
             - Run the ResetBodyColors action.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~UnfreezeMeshOnAllParts`
             - Run the UnfreezeMeshOnAllParts action.
           * - :py:attr:`~UnsuppressAllBodies`
@@ -129,6 +179,8 @@ Overview
             - Gets or sets the AssignMaterialOnUpdate.
           * - :py:attr:`~AttachFileViaTempFile`
             - Gets or sets the AttachFileViaTempFile.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~AttributeKey`
             - Gets the AttributeKey.
           * - :py:attr:`~Attributes`
@@ -141,6 +193,8 @@ Overview
             - Gets the CanChangeCADUnits.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~ComparePartsOnUpdate`
@@ -169,6 +223,10 @@ Overview
             - Gets the list of associated figures.
           * - :py:attr:`~GeometryPreferencesReadOnly`
             - Gets the GeometryPreferencesReadOnly.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~ImportCoordinateSystems`
@@ -201,16 +259,26 @@ Overview
             - Gets the MixedImportResolution.
           * - :py:attr:`~Model2DBehavior`
             - Gets or sets the Model2DBehavior.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NamedSelectionKey`
             - Gets the NamedSelectionKey.
           * - :py:attr:`~NamedSelections`
             - Gets the NamedSelections.
           * - :py:attr:`~Nodes`
             - Gets the Nodes.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
           * - :py:attr:`~ParameterKey`
             - Gets the ParameterKey.
           * - :py:attr:`~Parameters`
             - Gets the Parameters.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
           * - :py:attr:`~ReaderModeSavesUpdatedFile`
@@ -227,12 +295,16 @@ Overview
             - Gets the Source.
           * - :py:attr:`~StandardDeviation`
             - Gets the StandardDeviation.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~SurfaceArea`
             - Gets the SurfaceArea.
           * - :py:attr:`~SurfaceBodies`
             - Gets the SurfaceBodies.
           * - :py:attr:`~TemporaryDirectory`
             - Gets or sets the TemporaryDirectory.
+          * - :py:attr:`~TessellationData`
+            - TessellationData property.
           * - :py:attr:`~Tolerance2D`
             - Gets or sets the Tolerance2D.
           * - :py:attr:`~Type`
@@ -341,6 +413,31 @@ Property detail
 
    
    Gets or sets the AttachFileViaTempFile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
 
 
 
@@ -491,6 +588,31 @@ Property detail
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -841,6 +963,56 @@ Property detail
 
    
    Gets the GeometryPreferencesReadOnly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -1260,6 +1432,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NamedSelectionKey
    :type: Optional[str]
 
@@ -1335,6 +1532,81 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ParameterKey
    :type: Optional[str]
 
@@ -1366,6 +1638,31 @@ Property detail
 
    
    Gets the Parameters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -1585,6 +1882,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SurfaceArea
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -1641,6 +1963,31 @@ Property detail
 
    
    Gets or sets the TemporaryDirectory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TessellationData
+   :type: Optional[Ansys.ACT.Automation.Mechanical.Tessellation]
+
+
+   
+   TessellationData property.
 
 
 
@@ -2014,6 +2361,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(paramPath: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -2030,6 +2385,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Export(filePath: str) -> None
+
+   
+   Export method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ExportParts(filePath: str, partIds: List[int]) -> None
 
    
@@ -2038,10 +2409,42 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ExportToSTL(filePath: str) -> None
+
+   
+   ExportToSTL method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: FreezeMeshOnAllParts() -> None
 
    
    Run the FreezeMeshOnAllParts action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetBodies() -> List[Ansys.ACT.Automation.Mechanical.Body]
+
+   
+   GetBodies method.
 
    ..
        !! processed by numpydoc !!
@@ -2062,6 +2465,54 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -2074,6 +2525,62 @@ Method detail
 
    
    Gets the Part associated with the given IGeoPart
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSelectedPrototypes() -> List[Ansys.ACT.Automation.Mechanical.Body]
+
+   
+   GetSelectedPrototypes method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -2094,10 +2601,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: InvertSuppressedBodySet() -> None
 
    
    Invert all parts Suppressed property. 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
 
    ..
        !! processed by numpydoc !!
@@ -2110,6 +2641,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -2132,6 +2671,14 @@ Method detail
 
    
    Run the ResetBodyColors action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

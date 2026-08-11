@@ -41,6 +41,21 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
    .. tab-item:: Properties
 
@@ -48,6 +63,10 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~MaterialProperty`
+            - The MaterialModel is represented by a IMaterialProperty (e.g. Gasket Model) or an IMaterialPropertyData (e.g. Isotropic Elasticity)
+          * - :py:attr:`~MaterialPropertyData`
+            - MaterialPropertyData property.
           * - :py:attr:`~Name`
             - Gets the name that identifies the material model
           * - :py:attr:`~Suppressed`
@@ -61,6 +80,56 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: MaterialProperty
+   :type: Optional[Ansys.EngineeringData.Material.IMaterialProperty]
+
+
+   
+   The MaterialModel is represented by a IMaterialProperty (e.g. Gasket Model) or an IMaterialPropertyData (e.g. Isotropic Elasticity)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaterialPropertyData
+   :type: Optional[Ansys.EngineeringData.Material.IMaterialPropertyData]
+
+
+   
+   MaterialPropertyData property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Name
    :type: Optional[str]
 
@@ -114,6 +183,40 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

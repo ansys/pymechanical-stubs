@@ -5,7 +5,7 @@
 :class:`PuckSettings`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.PuckSettings
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.CompositeFailureResults.PuckSettings(internalObject: Ansys.Common.Interop.DSObjectsAuto.IDSCompositeFailureCriteriaAuto)
 
    Bases: :py:obj:`object`
 
@@ -47,8 +47,16 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~Reset`
             - Resets the settings to their default values.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -57,6 +65,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Active`
+            - Active property.
           * - :py:attr:`~ConsiderInterFiberParallelStresses`
             - Gets or sets whether inter-fiber failure will include the influence of the fiber parallel stresses.
           * - :py:attr:`~DegradationInitiationFactor`
@@ -106,6 +116,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: Active
+   :type: Optional[bool]
+
+
+   
+   Active property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ConsiderInterFiberParallelStresses
    :type: Optional[bool]
 
@@ -613,10 +648,42 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Reset() -> None
 
    
    Resets the settings to their default values.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

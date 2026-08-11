@@ -5,7 +5,7 @@
 :class:`Mesh`
 =============
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshControls.Mesh
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshControls.Mesh(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -111,6 +111,8 @@ Overview
             - Creates a new RepairTopology
           * - :py:attr:`~AddSizing`
             - Creates a new Sizing
+          * - :py:attr:`~AddSmallestEdgesToSelection`
+            - AddSmallestEdgesToSelection method.
           * - :py:attr:`~AddTopologySuppressControl`
             - Creates a new TopologySuppressControl
           * - :py:attr:`~AddWasher`
@@ -121,14 +123,24 @@ Overview
             - Clear generated data for parts and/or bodies provided.
           * - :py:attr:`~ClearGeneratedData`
             - Run the ClearGeneratedData action.
+          * - :py:attr:`~ColorByMeshingEngine`
+            - ColorByMeshingEngine method.
+          * - :py:attr:`~ComputeMeshQualityMetrics`
+            - ComputeMeshQualityMetrics method.
+          * - :py:attr:`~ConvertToWorkflow`
+            - ConvertToWorkflow method.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateHistogram`
+            - CreateHistogram method.
           * - :py:attr:`~CreateMQSolidSurfaceElementsNamedSelection`
             - Create Mesh Quality SolidSurface Element Name Selection
           * - :py:attr:`~CreateMQSurfaceElementsNamedSelection`
             - Create Mesh Quality Surface Element Named Selection
           * - :py:attr:`~CreateMQVolumeElementsNamedSelection`
             - Create Mesh Quality Volume Element Name Selection
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~CreatePinchControls`
@@ -141,72 +153,160 @@ Overview
             - DeactivateAllVolumeWorksheetRows method.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~ExportWeldDefinitionFile`
             - Export the weld definition file to the specified location.
           * - :py:attr:`~GenerateMesh`
             - Run the GenerateMesh action.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetActiveSolidSurfaceMeshQuality`
+            - Get Active Mesh Quality
           * - :py:attr:`~GetActiveSurfaceMeshQuality`
             - Get Active User Mesh Quality
+          * - :py:attr:`~GetActiveUnits`
+            - GetActiveUnits method.
+          * - :py:attr:`~GetActiveVolumeMeshQuality`
+            - Get Active Mesh Quality
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
+          * - :py:attr:`~GetCalculatedMaxFaceSize`
+            - GetCalculatedMaxFaceSize method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetDisplayStyle`
+            - GetDisplayStyle method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetIndexFromSolidSurfaceMeshMetric`
+            - Get index from SolidSurface mesh quality worksheet from given mesh metric type.
+          * - :py:attr:`~GetIndexFromSurfaceMeshMetric`
+            - Get Index of shell mesh metric vector based on mesh metric
+          * - :py:attr:`~GetIndexFromVolumeMeshMetric`
+            - Get index from solid mesh quality worksheet from given mesh metric type.
           * - :py:attr:`~GetIsShellTargetMetric`
             - Get Shell Target Metric
           * - :py:attr:`~GetIsSolidSurfaceTargetMetric`
             - Get SolidSurface Target Metric
           * - :py:attr:`~GetIsSolidTargetMetric`
             - Get Solid Target Metric
+          * - :py:attr:`~GetLegendStyle`
+            - GetLegendStyle method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
           * - :py:attr:`~GetMeshMetricOptions`
             - GetMeshMetricOptions method.
+          * - :py:attr:`~GetMeshMetricQuantityName`
+            - GetMeshMetricQuantityName method.
+          * - :py:attr:`~GetMeshQualityAdvancedView`
+            - GetMeshQualityAdvancedView method.
+          * - :py:attr:`~GetMeshQualityTabIndex`
+            - GetMeshQualityTabIndex method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetSheetQuantityTypeString`
+            - Get quantity type of sheet metric from mesh metric type
+          * - :py:attr:`~GetSolidMeshQualityState`
+            - Get the state of solid mesh quality worksheet tab
           * - :py:attr:`~GetSolidSurfaceMeshMetrics`
             - GetSolidSurfaceMeshMetrics method.
           * - :py:attr:`~GetSolidSurfaceMeshQualityAverageMetricValue`
             - Get Mesh Quality Average Metric Value
           * - :py:attr:`~GetSolidSurfaceMeshQualityCountFailed`
             - Get Mesh Quality Count Failed
+          * - :py:attr:`~GetSolidSurfaceMeshQualityDisplayMetric`
+            - Get SolidSurface Mesh Quality Metric
           * - :py:attr:`~GetSolidSurfaceMeshQualityErrorLimit`
             - Get Mesh Quality Error Limit
+          * - :py:attr:`~GetSolidSurfaceMeshQualityErrorLimitIsDefault`
+            - Get SolidSurface Mesh Quality Worksheet Error Limit is Default
           * - :py:attr:`~GetSolidSurfaceMeshQualityName`
             - Get Mesh Quality Name
           * - :py:attr:`~GetSolidSurfaceMeshQualityPercentageFailed`
             - Get Mesh Quality Percentage Failed
+          * - :py:attr:`~GetSolidSurfaceMeshQualityState`
+            - Get the state of solid surface mesh quality worksheet tab
           * - :py:attr:`~GetSolidSurfaceMeshQualityWarningCountFailed`
             - Get Mesh Quality Warning Count Failed
           * - :py:attr:`~GetSolidSurfaceMeshQualityWarningLimit`
             - Get Mesh Quality Warning Limit
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWarningLimitIsDefault`
+            - Get SolidSurface Mesh Quality Worksheet Warning Limit is Default
           * - :py:attr:`~GetSolidSurfaceMeshQualityWarningPercentageFailed`
             - Get Mesh Quality Warning Percentage Failed
           * - :py:attr:`~GetSolidSurfaceMeshQualityWorstMetricBackgroundColor`
             - Get Mesh Quality Worst Metric BackgroundColor
+          * - :py:attr:`~GetSolidSurfaceMeshQualityWorstMetricTooltip`
+            - Get Mesh Quality Worst Metric Tooltip
           * - :py:attr:`~GetSolidSurfaceMeshQualityWorstMetricValue`
             - Get Mesh Quality Worst Metric Value
+          * - :py:attr:`~GetSolidSurfaceQuantityTypeString`
+            - Get Quantity type from SolidSurface mesh metric type
+          * - :py:attr:`~GetSurfaceMeshMetrics`
+            - GetSurfaceMeshMetrics method.
           * - :py:attr:`~GetSurfaceMeshQualityAverageMetricValue`
             - Get Mesh Quality Average Metric Value
           * - :py:attr:`~GetSurfaceMeshQualityCountFailed`
             - Get Mesh Quality Count Failed
+          * - :py:attr:`~GetSurfaceMeshQualityDisplayMetric`
+            - Get Surface Mesh Quality Metric
           * - :py:attr:`~GetSurfaceMeshQualityErrorLimit`
             - Get User Mesh Quality Error Limit
+          * - :py:attr:`~GetSurfaceMeshQualityErrorLimitIsDefault`
+            - Get Mesh Quality Error Limit is default
           * - :py:attr:`~GetSurfaceMeshQualityName`
             - Get Mesh Quality Name
           * - :py:attr:`~GetSurfaceMeshQualityPercentageFailed`
             - Get Mesh Quality Percentage Failed
+          * - :py:attr:`~GetSurfaceMeshQualityState`
+            - Get the state of surface mesh quality worksheet tab
           * - :py:attr:`~GetSurfaceMeshQualityWarningCountFailed`
             - Get Mesh Quality Warning Count Failed
           * - :py:attr:`~GetSurfaceMeshQualityWarningLimit`
             - Get User Mesh Quality Warning Limit
+          * - :py:attr:`~GetSurfaceMeshQualityWarningLimitIsDefault`
+            - Get Mesh Quality Warning Limit is default
           * - :py:attr:`~GetSurfaceMeshQualityWarningPercentageFailed`
             - Get Mesh Quality Warning Percentage Failed
+          * - :py:attr:`~GetSurfaceMeshQualityWorstMetricBackgroundColor`
+            - Get Mesh Quality Worst Metric BackgroundColor
+          * - :py:attr:`~GetSurfaceMeshQualityWorstMetricTooltip`
+            - Get Mesh Quality Worst Metric Tooltip
           * - :py:attr:`~GetSurfaceMeshQualityWorstMetricValue`
             - Get Mesh Quality Worst Metric Value
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GetVolumeMeshMetrics`
             - GetVolumeMeshMetrics method.
           * - :py:attr:`~GetVolumeMeshQualityAverageMetricValue`
             - Get Mesh Quality Average Metric Value
           * - :py:attr:`~GetVolumeMeshQualityCountFailed`
             - Get Mesh Quality Count Failed
+          * - :py:attr:`~GetVolumeMeshQualityDisplayMetric`
+            - Get Volume Mesh Quality Metric
           * - :py:attr:`~GetVolumeMeshQualityErrorLimit`
             - Get Mesh Quality Error Limit
+          * - :py:attr:`~GetVolumeMeshQualityErrorLimitIsDefault`
+            - Get Volume Mesh Quality Worksheet Error Limit is Default
           * - :py:attr:`~GetVolumeMeshQualityName`
             - Get Mesh Quality Name
           * - :py:attr:`~GetVolumeMeshQualityPercentageFailed`
@@ -215,46 +315,102 @@ Overview
             - Get Mesh Quality Warning Count Failed
           * - :py:attr:`~GetVolumeMeshQualityWarningLimit`
             - Get Mesh Quality Warning Limit
+          * - :py:attr:`~GetVolumeMeshQualityWarningLimitIsDefault`
+            - Get Volume Mesh Quality Worksheet Warning Limit is Default
           * - :py:attr:`~GetVolumeMeshQualityWarningPercentageFailed`
             - Get Mesh Quality Warning Percentage Failed
           * - :py:attr:`~GetVolumeMeshQualityWorstMetricBackgroundColor`
             - Get Mesh Quality Worst Metric BackgroundColor
+          * - :py:attr:`~GetVolumeMeshQualityWorstMetricTooltip`
+            - Get Mesh Quality Worst Metric Tooltip
           * - :py:attr:`~GetVolumeMeshQualityWorstMetricValue`
             - Get Mesh Quality Worst Metric Value
+          * - :py:attr:`~GetVolumeQuantityTypeString`
+            - Get Quantity type from solid mesh metric type
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~HasSheets`
+            - HasSheets method.
+          * - :py:attr:`~HasSolids`
+            - HasSolids method.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsDegree`
+            - IsDegree method.
           * - :py:attr:`~IsMeshMetricVisible`
             - IsMeshMetricVisible method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~LoadMQWorksheetFile`
             - LoadMQWorksheetFile method.
+          * - :py:attr:`~OpenTroubleShootDoc`
+            - OpenTroubleShootDoc method.
           * - :py:attr:`~PinchControlGeomtry`
             - Set the geometry type for the Pinch Control.
+          * - :py:attr:`~PreviewAllQuadLayers`
+            - Preview quad layers on all Quad Layer controls of the Mesh.
+          * - :py:attr:`~PreviewGeometryOnWeld`
+            - Preview geometry on one weld control provided.
+          * - :py:attr:`~PreviewGeometryOnWeldWorksheet`
+            - PreviewGeometryOnWeldWorksheet method.
+          * - :py:attr:`~PreviewGeometryOnWelds`
+            - PreviewGeometryOnWelds method.
           * - :py:attr:`~PreviewInflation`
             - Run the PreviewInflation action.
           * - :py:attr:`~PreviewMeshOnAllWelds`
             - Preview model mesh on all weld controls of the Mesh.
           * - :py:attr:`~PreviewMeshOnWeld`
             - Preview model mesh on one weld control provided.
+          * - :py:attr:`~PreviewMeshOnWeldCurve`
+            - Preview model mesh on a given single weld curve.
           * - :py:attr:`~PreviewMeshOnWeldWorksheet`
             - PreviewMeshOnWeldWorksheet method.
           * - :py:attr:`~PreviewMeshOnWelds`
             - PreviewMeshOnWelds method.
+          * - :py:attr:`~PreviewQuadLayers`
+            - PreviewQuadLayers method.
           * - :py:attr:`~PreviewSurfaceMesh`
             - Run the PreviewSurfaceMesh action.
           * - :py:attr:`~PreviewWelds`
             - Preview Welds.
+          * - :py:attr:`~PrimeMeshFileHelper`
+            - PrimeMeshFileHelper
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~RefreshMeshQualityGridInfo`
+            - RefreshMeshQualityGridInfo method.
           * - :py:attr:`~RemoveMeshLayers`
             - Removes Mesh Layers when contour enabled in Mesh Quality Workhseet mode.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ResetMeshQualityMetrics`
+            - ResetMeshQualityMetrics method.
+          * - :py:attr:`~RunStackerDiagnostics`
+            - Find stackable bodies in a given direction
+          * - :py:attr:`~RunStackerDiagnosticsOnAllFindX`
+            - Find stackable bodies in the Global X direction
+          * - :py:attr:`~RunStackerDiagnosticsOnAllFindY`
+            - /// Find stackable bodies in the Global Y direction
+          * - :py:attr:`~RunStackerDiagnosticsOnAllFindZ`
+            - /// Find stackable bodies in the Global Z direction
+          * - :py:attr:`~SaveBodiesToXMLHelper`
+            - SaveMeshReportHelper
           * - :py:attr:`~SaveMQWorksheetFile`
             - SaveMQWorksheetFile method.
+          * - :py:attr:`~SaveMeshReportForPartHelper`
+            - SaveMeshReportForPartHelper
+          * - :py:attr:`~SaveMeshReportHelper`
+            - SaveMeshReportHelper
+          * - :py:attr:`~SaveMeshToFileHelper`
+            - SaveMeshToFileHelper
           * - :py:attr:`~SetActiveSolidSurfaceMeshQuality`
             - Set Active Mesh Quality
           * - :py:attr:`~SetActiveSurfaceMeshQuality`
@@ -263,6 +419,12 @@ Overview
             - Set Active Mesh Quality
           * - :py:attr:`~SetMeshMetricOptions`
             - SetMeshMetricOptions method.
+          * - :py:attr:`~SetMeshQualityAdvancedView`
+            - SetMeshQualityAdvancedView method.
+          * - :py:attr:`~SetMeshQualityTabIndex`
+            - SetMeshQualityTabIndex method.
+          * - :py:attr:`~SetMeshWorksheetActive`
+            - SetMeshWorksheetActive method.
           * - :py:attr:`~SetSolidMeshMetricLimits`
             - SetSolidMeshMetricLimits method.
           * - :py:attr:`~SetSolidSurfaceMeshMetricLimits`
@@ -289,12 +451,22 @@ Overview
             - Run the ShowMappableBodies action.
           * - :py:attr:`~ShowOverlappingFaces`
             - Run the ShowOverlappingFaces action.
+          * - :py:attr:`~ShowProblematicBodies`
+            - ShowProblematicBodies method.
+          * - :py:attr:`~ShowSuppressibleTopology`
+            - Select all edges/vertices that are topologically suppressible.
           * - :py:attr:`~ShowSweepableBodies`
             - Run the ShowSweepableBodies action.
           * - :py:attr:`~ShowUnconnectedFacesNearEdges`
             - Run the  ShowUnconnectedFreeEdges action.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~ToggleLegend`
+            - ToggleLegend method.
           * - :py:attr:`~Update`
             - Run the Update action.
+          * - :py:attr:`~ValidateMeshQualityMetrics`
+            - ValidateMeshQualityMetrics method.
 
 
    .. tab-item:: Properties
@@ -305,6 +477,8 @@ Overview
 
           * - :py:attr:`~AspectRatio`
             - Gets or sets the AspectRatio.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~AutoMapFillets`
             - Gets or sets the Auto-Map Fillets in Mesh. Auto-Map Fillets enables the mesh generator to detect and map fillets within the limits specified by AutoMapFilletsMinimumRadius and AutoMapFilletsMaximumRadius. Default: False.
           * - :py:attr:`~AutoMapFilletsMaximumRadius`
@@ -329,6 +503,8 @@ Overview
             - Gets or sets the CheckMeshQuality.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~CollisionAvoidance`
             - Gets or sets the CollisionAvoidance.
           * - :py:attr:`~Comments`
@@ -339,6 +515,8 @@ Overview
             - Gets or sets the ConnectionTolerance.
           * - :py:attr:`~ConnectionToleranceList`
             - Gets or sets the ConnectionToleranceList.
+          * - :py:attr:`~ConnectionToleranceType`
+            - ConnectionToleranceType property.
           * - :py:attr:`~CoplanarAngleTol`
             - Gets or sets the CoplanarAngleTol.
           * - :py:attr:`~CornerNodes`
@@ -379,8 +557,12 @@ Overview
             - Gets the GasketElements.
           * - :py:attr:`~GeneratePinchOnRefresh`
             - Gets or sets the GeneratePinchOnRefresh.
+          * - :py:attr:`~GetPhysicsPreference`
+            - GetPhysicsPreference property.
           * - :py:attr:`~GlobalUseCustomTargetLimit`
             - Gets or sets the GlobalUseCustomTargetLimit.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~GrowthRate`
             - Gets or sets the GrowthRate.
           * - :py:attr:`~GrowthRateSF`
@@ -393,6 +575,8 @@ Overview
             - Gets the Hex8.
           * - :py:attr:`~HoleRemovalTolerance`
             - Gets or sets the HoleRemovalTolerance.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~InflationAlgorithm`
@@ -405,14 +589,22 @@ Overview
             - Gets or sets the InitialSizeSeed.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsMeshing`
+            - IsMeshing property.
           * - :py:attr:`~Line2`
             - Gets the Line2.
           * - :py:attr:`~Line3`
             - Gets the Line3.
+          * - :py:attr:`~LocalConnectionOption`
+            - Gets or sets the LocalConnectionOption.
+          * - :py:attr:`~LocalConnectionTolerance`
+            - Gets or sets the LocalConnectionTolerance.
           * - :py:attr:`~Maximum`
             - Gets the Maximum.
           * - :py:attr:`~MaximumAngle`
             - Gets or sets the MaximumAngle.
+          * - :py:attr:`~MaximumFaceSize`
+            - MaximumFaceSize property.
           * - :py:attr:`~MaximumHeightOverBase`
             - Gets or sets the MaximumHeightOverBase.
           * - :py:attr:`~MaximumLayers`
@@ -423,10 +615,16 @@ Overview
             - Gets or sets the MaximumThickness.
           * - :py:attr:`~MeshBasedConnection`
             - Gets or sets the MeshBasedConnection.
+          * - :py:attr:`~MeshDefaults`
+            - Gets or sets Mesh Defaults in Mesh Defaults settings. The default value is Medium.
           * - :py:attr:`~MeshMetric`
             - Gets or sets the MeshMetric.
           * - :py:attr:`~MeshMorphing`
             - Gets or sets the MeshMorphing.
+          * - :py:attr:`~MeshOptimization`
+            - Gets or sets Mesh Optimization in Mesh Quality settings. The default value is TRUE.
+          * - :py:attr:`~MeshSizing`
+            - Gets or sets Sizing Type in Mesh Sizing settings. The default value is Medium.
           * - :py:attr:`~Method`
             - Gets or sets the Method.
           * - :py:attr:`~MidNodes`
@@ -441,6 +639,8 @@ Overview
             - Gets or sets the MinimumSize.
           * - :py:attr:`~MultiConnectionSteps`
             - Gets or sets the MultiConnectionSteps.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NamedSelection`
             - Gets or sets the NamedSelection.
           * - :py:attr:`~Nodes`
@@ -453,8 +653,20 @@ Overview
             - Gets or sets the NumberOfRetries.
           * - :py:attr:`~NumberOfShellMeshQualityMetrics`
             - Gets the number of Mesh Quality Metrics
+          * - :py:attr:`~NumberOfSolidMeshQualityMetrics`
+            - NumberOfSolidMeshQualityMetrics property.
+          * - :py:attr:`~NumberOfSolidSurfaceMeshQualityMetrics`
+            - NumberOfSolidSurfaceMeshQualityMetrics property.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
           * - :py:attr:`~OrientationNodes`
             - Gets the OrientationNodes.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PhysicsPreference`
             - Gets or sets the PhysicsPreference.
           * - :py:attr:`~PinchTolerance`
@@ -513,6 +725,8 @@ Overview
             - Gets or sets the SpanAngleCenter.
           * - :py:attr:`~StandardDeviation`
             - Gets the StandardDeviation.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~StraightSidedElements`
             - Gets or sets the StraightSidedElements.
           * - :py:attr:`~TargetCharacteristicLength`
@@ -576,6 +790,31 @@ Property detail
 
    
    Gets or sets the AspectRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
 
 
 
@@ -895,6 +1134,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CollisionAvoidance
    :type: Optional[int]
 
@@ -1001,6 +1265,31 @@ Property detail
 
    
    Gets or sets the ConnectionToleranceList.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionToleranceType
+   :type: Optional[int]
+
+
+   
+   ConnectionToleranceType property.
 
 
 
@@ -1520,12 +1809,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GetPhysicsPreference
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshPhysicsPreferenceType]
+
+
+   
+   GetPhysicsPreference property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: GlobalUseCustomTargetLimit
    :type: Optional[int]
 
 
    
    Gets or sets the GlobalUseCustomTargetLimit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
 
 
 
@@ -1695,6 +2034,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
@@ -1845,6 +2209,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: IsMeshing
+   :type: Optional[bool]
+
+
+   
+   IsMeshing property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Line2
    :type: Optional[int]
 
@@ -1895,6 +2284,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: LocalConnectionOption
+   :type: Optional[int]
+
+
+   
+   Gets or sets the LocalConnectionOption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LocalConnectionTolerance
+   :type: Optional[str]
+
+
+   
+   Gets or sets the LocalConnectionTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Maximum
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -1926,6 +2365,31 @@ Property detail
 
    
    Gets or sets the MaximumAngle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MaximumFaceSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   MaximumFaceSize property.
 
 
 
@@ -2070,6 +2534,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MeshDefaults
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshDefaultsType]
+
+
+   
+   Gets or sets Mesh Defaults in Mesh Defaults settings. The default value is Medium.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: MeshMetric
    :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshMetricType]
 
@@ -2101,6 +2590,56 @@ Property detail
 
    
    Gets or sets the MeshMorphing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshOptimization
+   :type: Optional[bool]
+
+
+   
+   Gets or sets Mesh Optimization in Mesh Quality settings. The default value is TRUE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshSizing
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshSizingType]
+
+
+   
+   Gets or sets Sizing Type in Mesh Sizing settings. The default value is Medium.
 
 
 
@@ -2295,6 +2834,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NamedSelection
    :type: Optional[Ansys.ACT.Automation.Mechanical.NamedSelection]
 
@@ -2445,12 +3009,162 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: NumberOfSolidMeshQualityMetrics
+   :type: Optional[int]
+
+
+   
+   NumberOfSolidMeshQualityMetrics property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfSolidSurfaceMeshQualityMetrics
+   :type: Optional[int]
+
+
+   
+   NumberOfSolidSurfaceMeshQualityMetrics property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: OrientationNodes
    :type: Optional[int]
 
 
    
    Gets the OrientationNodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -3176,6 +3890,31 @@ Property detail
 
    
    Gets the StandardDeviation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
 
 
 
@@ -4060,6 +4799,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: AddSmallestEdgesToSelection() -> None
+
+   
+   AddSmallestEdgesToSelection method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: AddTopologySuppressControl() -> Ansys.ACT.Automation.Mechanical.MeshControls.TopologySuppressControl
 
    
@@ -4100,10 +4847,42 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ColorByMeshingEngine() -> None
+
+   
+   ColorByMeshingEngine method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ComputeMeshQualityMetrics() -> None
+
+   
+   ComputeMeshQualityMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertToWorkflow() -> None
+
+   
+   ConvertToWorkflow method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
 
    
    Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateHistogram(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> None
+
+   
+   CreateHistogram method.
 
    ..
        !! processed by numpydoc !!
@@ -4128,6 +4907,14 @@ Method detail
 
    
    Create Mesh Quality Volume Element Name Selection
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
 
    ..
        !! processed by numpydoc !!
@@ -4180,6 +4967,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ExportWeldDefinitionFile(filePath: str) -> None
 
 .. code-block:: text
@@ -4199,6 +4994,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetActiveSolidSurfaceMeshQuality(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Active Mesh Quality 
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetActiveSurfaceMeshQuality(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
 
    
@@ -4207,10 +5018,106 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetActiveUnits() -> Ansys.ACT.Interfaces.Common.MechanicalUnitSystemEnum
+
+   
+   GetActiveUnits method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetActiveVolumeMeshQuality(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Active Mesh Quality 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCalculatedMaxFaceSize() -> Ansys.Core.Units.Quantity
+
+   
+   GetCalculatedMaxFaceSize method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
    Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDisplayStyle() -> Ansys.Common.Interop.DSObjectTypes.DSMeshDisplayStyle
+
+   
+   GetDisplayStyle method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIndexFromSolidSurfaceMeshMetric(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> int
+
+   
+   Get index from SolidSurface mesh quality worksheet from given mesh metric type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIndexFromSurfaceMeshMetric(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> int
+
+   
+   Get Index of shell mesh metric vector based on mesh metric
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIndexFromVolumeMeshMetric(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> int
+
+   
+   Get index from solid mesh quality worksheet from given mesh metric type.
 
    ..
        !! processed by numpydoc !!
@@ -4239,6 +5146,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetLegendStyle() -> Ansys.Common.Interop.DSObjectTypes.DSMeshLegendStyle
+
+   
+   GetLegendStyle method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetMeshMetricOptions(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Mechanical.DataModel.Enums.MetricPreference
 
    
@@ -4247,10 +5170,82 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetMeshMetricQuantityName(obj: Ansys.Common.Interop.DSObjectsAuto.IDSMeshControlGroupAuto) -> str
+
+   
+   GetMeshMetricQuantityName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshQualityAdvancedView() -> int
+
+   
+   GetMeshQualityAdvancedView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshQualityTabIndex() -> int
+
+   
+   GetMeshQualityTabIndex method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSheetQuantityTypeString(metric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get quantity type of sheet metric from mesh metric type
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidMeshQualityState() -> int
+
+   
+   Get the state of solid mesh quality worksheet tab
 
    ..
        !! processed by numpydoc !!
@@ -4279,10 +5274,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSolidSurfaceMeshQualityDisplayMetric(index: int) -> Ansys.Mechanical.DataModel.Enums.MeshMetricType
+
+   
+   Get SolidSurface Mesh Quality Metric 
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSolidSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
 
    
    Get Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityErrorLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get SolidSurface Mesh Quality Worksheet Error Limit is Default 
 
    ..
        !! processed by numpydoc !!
@@ -4303,6 +5314,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSolidSurfaceMeshQualityState() -> int
+
+   
+   Get the state of solid surface mesh quality worksheet tab
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSolidSurfaceMeshQualityWarningCountFailed(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> int
 
    
@@ -4315,6 +5334,14 @@ Method detail
 
    
    Get Mesh Quality Warning Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceMeshQualityWarningLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get SolidSurface Mesh Quality Worksheet Warning Limit is Default 
 
    ..
        !! processed by numpydoc !!
@@ -4335,10 +5362,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSolidSurfaceMeshQualityWorstMetricTooltip(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Tooltip
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSolidSurfaceMeshQualityWorstMetricValue(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
 
    
    Get Mesh Quality Worst Metric Value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSolidSurfaceQuantityTypeString(metric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Quantity type from SolidSurface mesh metric type
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshMetrics() -> Ansys.Mechanical.DataModel.Enums.MeshMetricType
+
+   
+   GetSurfaceMeshMetrics method.
 
    ..
        !! processed by numpydoc !!
@@ -4359,10 +5410,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSurfaceMeshQualityDisplayMetric(index: int) -> Ansys.Mechanical.DataModel.Enums.MeshMetricType
+
+   
+   Get Surface Mesh Quality Metric 
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
 
    
    Get User Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityErrorLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Mesh Quality Error Limit is default
 
    ..
        !! processed by numpydoc !!
@@ -4383,6 +5450,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSurfaceMeshQualityState() -> int
+
+   
+   Get the state of surface mesh quality worksheet tab
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSurfaceMeshQualityWarningCountFailed(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> int
 
    
@@ -4399,6 +5474,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSurfaceMeshQualityWarningLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Mesh Quality Warning Limit is default
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSurfaceMeshQualityWarningPercentageFailed(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> float
 
    
@@ -4407,10 +5490,50 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetSurfaceMeshQualityWorstMetricBackgroundColor(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric BackgroundColor
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSurfaceMeshQualityWorstMetricTooltip(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Tooltip
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetSurfaceMeshQualityWorstMetricValue(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
 
    
    Get Mesh Quality Worst Metric Value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -4439,10 +5562,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetVolumeMeshQualityDisplayMetric(index: int) -> Ansys.Mechanical.DataModel.Enums.MeshMetricType
+
+   
+   Get Volume Mesh Quality Metric 
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetVolumeMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
 
    
    Get Mesh Quality Error Limit
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeMeshQualityErrorLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Volume Mesh Quality Worksheet Error Limit is Default 
 
    ..
        !! processed by numpydoc !!
@@ -4479,6 +5618,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetVolumeMeshQualityWarningLimitIsDefault(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> bool
+
+   
+   Get Volume Mesh Quality Worksheet Warning Limit is Default 
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetVolumeMeshQualityWarningPercentageFailed(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> float
 
    
@@ -4495,10 +5642,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetVolumeMeshQualityWorstMetricTooltip(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Mesh Quality Worst Metric Tooltip
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetVolumeMeshQualityWorstMetricValue(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> Ansys.Core.Units.Quantity
 
    
    Get Mesh Quality Worst Metric Value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVolumeQuantityTypeString(metric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> str
+
+   
+   Get Quantity type from solid mesh metric type
 
    ..
        !! processed by numpydoc !!
@@ -4519,10 +5682,58 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: HasSheets() -> bool
+
+   
+   HasSheets method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasSolids() -> bool
+
+   
+   HasSolids method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsDegree() -> bool
+
+   
+   IsDegree method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: IsMeshMetricVisible(index: int) -> bool
 
    
    IsMeshMetricVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
 
    ..
        !! processed by numpydoc !!
@@ -4535,10 +5746,50 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: OpenTroubleShootDoc() -> None
+
+   
+   OpenTroubleShootDoc method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PinchControlGeomtry(geomType: Ansys.Mechanical.DataModel.Enums.MeshControlPinchGeomtryType) -> None
 
    
    Set the geometry type for the Pinch Control.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewAllQuadLayers() -> None
+
+   
+   Preview quad layers on all Quad Layer controls of the Mesh.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewGeometryOnWeld(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
+
+   
+   Preview geometry on one weld control provided.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewGeometryOnWeldWorksheet(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject, indices: Iterable[int]) -> None
+
+   
+   PreviewGeometryOnWeldWorksheet method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewGeometryOnWelds(dataModelObjects: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+
+   
+   PreviewGeometryOnWelds method.
 
    ..
        !! processed by numpydoc !!
@@ -4567,6 +5818,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PreviewMeshOnWeldCurve(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
+
+   
+   Preview model mesh on a given single weld curve.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PreviewMeshOnWeldWorksheet(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject, indices: Iterable[int]) -> None
 
    
@@ -4579,6 +5838,14 @@ Method detail
 
    
    PreviewMeshOnWelds method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewQuadLayers(dataModelObjects: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+
+   
+   PreviewQuadLayers method.
 
    ..
        !! processed by numpydoc !!
@@ -4599,6 +5866,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PrimeMeshFileHelper(filePath: str, mode: int) -> None
+
+   
+   PrimeMeshFileHelper
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -4609,10 +5884,26 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
    Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RefreshMeshQualityGridInfo() -> None
+
+   
+   RefreshMeshQualityGridInfo method.
 
    ..
        !! processed by numpydoc !!
@@ -4633,10 +5924,82 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ResetMeshQualityMetrics() -> None
+
+   
+   ResetMeshQualityMetrics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RunStackerDiagnostics(direction: int) -> None
+
+   
+   Find stackable bodies in a given direction
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RunStackerDiagnosticsOnAllFindX() -> None
+
+   
+   Find stackable bodies in the Global X direction
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RunStackerDiagnosticsOnAllFindY() -> None
+
+   
+   /// Find stackable bodies in the Global Y direction
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RunStackerDiagnosticsOnAllFindZ() -> None
+
+   
+   /// Find stackable bodies in the Global Z direction
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveBodiesToXMLHelper(filePath: str) -> None
+
+   
+   SaveMeshReportHelper
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SaveMQWorksheetFile(filePath: str) -> None
 
    
    SaveMQWorksheetFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveMeshReportForPartHelper(filePath: str, filter: int) -> None
+
+   
+   SaveMeshReportForPartHelper
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveMeshReportHelper(filePath: str, filter: int) -> None
+
+   
+   SaveMeshReportHelper
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveMeshToFileHelper(filePath: str, type: int) -> None
+
+   
+   SaveMeshToFileHelper
 
    ..
        !! processed by numpydoc !!
@@ -4669,6 +6032,30 @@ Method detail
 
    
    SetMeshMetricOptions method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMeshQualityAdvancedView(advancedView: int) -> None
+
+   
+   SetMeshQualityAdvancedView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMeshQualityTabIndex(tabIndex: int) -> None
+
+   
+   SetMeshQualityTabIndex method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMeshWorksheetActive(active: bool) -> None
+
+   
+   SetMeshWorksheetActive method.
 
    ..
        !! processed by numpydoc !!
@@ -4777,6 +6164,24 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ShowProblematicBodies(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType) -> None
+
+   
+   ShowProblematicBodies method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ShowSuppressibleTopology(type: int) -> None
+
+.. code-block:: text
+
+   Select all edges/vertices that are topologically suppressible.
+   Dimension of the topology (0 for Vertices, 1 for Edges)
+
+..
+       !! processed by numpydoc !!
+
 .. py:method:: ShowSweepableBodies() -> None
 
    
@@ -4793,10 +6198,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToggleLegend(legendStyle: Ansys.Common.Interop.DSObjectTypes.DSMeshLegendStyle) -> None
+
+   
+   ToggleLegend method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Update() -> None
 
    
    Run the Update action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ValidateMeshQualityMetrics() -> None
+
+   
+   ValidateMeshQualityMetrics method.
 
    ..
        !! processed by numpydoc !!

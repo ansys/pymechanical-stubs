@@ -5,7 +5,7 @@
 :class:`MeshWorkflowControl`
 ============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowControl
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowControl(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -53,28 +53,130 @@ Overview
             - Creates a new child Figure.
           * - :py:attr:`~AddImage`
             - Creates a new child Image.
+          * - :py:attr:`~CanCheckPublicStateCallbackForIM`
+            - CanCheckPublicStateCallbackForIM method.
+          * - :py:attr:`~CanShowPublishStateIM`
+            - CanShowPublishStateIM method.
+          * - :py:attr:`~ConnectControlDataToSettings`
+            - Connects the control data to the desired settings
+          * - :py:attr:`~ConnectScopeOutcome`
+            - Connects the scope identified by scopeName to the selected outcome.
+          * - :py:attr:`~ControlPropertyNameToDispIDMap`
+            - ControlPropertyNameToDispIDMap method.
+          * - :py:attr:`~ConvertControl`
+            - Converts the control to a ExternalPartEnclosure
+          * - :py:attr:`~CopyControlInternalizedFileContentToClipboard`
+            - CopyControlInternalizedFileContentToClipboard method.
+          * - :py:attr:`~CopyControlInternalizedFilePathToClipboard`
+            - CopyControlInternalizedFilePathToClipboard method.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Delete`
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetControlPointElementSizes`
+            - Gets the Control Point Element Sizes for the specified axis.
+          * - :py:attr:`~GetControlPointIndices`
+            - Gets the Control Point Indices for the specified axis.
+          * - :py:attr:`~GetControlPointPositions`
+            - Gets the Control Point Positions for the specified axis.
+          * - :py:attr:`~GetControlPointRatios`
+            - Gets the Control Point Ratios for the specified axis.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetDomainBrowserAvailableMorphFieldPatterns`
+            - GetDomainBrowserAvailableMorphFieldPatterns method.
+          * - :py:attr:`~GetDomainBrowserAvailableScopes`
+            - GetDomainBrowserAvailableScopes method.
+          * - :py:attr:`~GetDomainBrowserAvailableSizeFieldPatterns`
+            - GetDomainBrowserAvailableSizeFieldPatterns method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetMeshSpacingType`
+            - Gets the Mesh Spacing Type for the specified axis.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetPropertyWorksheetInfo`
+            - GetPropertyWorksheetInfo method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetUnpublishedList`
+            - GetUnpublishedList method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~PropertyTypeInfo`
+            - PropertyTypeInfo method.
+          * - :py:attr:`~PublishIMProp`
+            - PublishIMProp method.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnType`
+            - Renames applying the default name based on type.
+          * - :py:attr:`~SetControlPointElementSizes`
+            - SetControlPointElementSizes method.
+          * - :py:attr:`~SetControlPointIndices`
+            - SetControlPointIndices method.
+          * - :py:attr:`~SetControlPointPositions`
+            - SetControlPointPositions method.
+          * - :py:attr:`~SetControlPointRatios`
+            - SetControlPointRatios method.
+          * - :py:attr:`~SetMeshSpacingType`
+            - Sets the Mesh Spacing Type for the specified axis.
+          * - :py:attr:`~SetPropertyValue`
+            - SetPropertyValue method.
+          * - :py:attr:`~SetPublish`
+            - SetPublish method.
+          * - :py:attr:`~SetScopeMethodAndPattern`
+            - SetScopeMethodAndPattern method.
+          * - :py:attr:`~SetUnpublish`
+            - SetUnpublish method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -83,10 +185,52 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AddUniqueLabelPerPoint`
+            - Gets or sets whether to apply a unique label name to each added prescribed point. Uniqueness is enforced by appending a numbering suffix to the label name.
+          * - :py:attr:`~AddedTopoEntitiesLabel`
+            - This property is used to rename the default label generated for the added topological entities.
           * - :py:attr:`~AppendData`
             - Gets or sets whether to append the mesh data being read to the current PrimeMesh model or to clear the model content before the mesh data is being read. The default value is false.
+          * - :py:attr:`~ApplySemistructuredPattern`
+            - Gets or sets whether to apply Semistructured Pattern mapped meshing.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
+          * - :py:attr:`~AutoCollapseShortEdges`
+            - Gets or sets whether to collapse edges below the specified tolerance. Feature edges and Protected edges are not collapsed.
+          * - :py:attr:`~AutoDeleteInteriorNodes`
+            - Gets or sets whether to delete interior nodes from scoped topology.
+          * - :py:attr:`~AutoMergeParts`
+            - Gets or sets the AutoMergeParts.
+          * - :py:attr:`~AutoPartialDefeature`
+            - Gets or sets whether to partially remove thin faces and sharp angles within provided tolerances, such that only topology impacting mesh quality is removed.
+          * - :py:attr:`~AutoPinchFaces`
+            - Gets or sets whether to remove small features from topology to improve mesh quality.
+          * - :py:attr:`~AutoQuad_AllowCurvedTopoFaces`
+            - Gets or sets whether to allow curved topo faces when detecting and treating holes.
+          * - :py:attr:`~AutoQuad_FragmentedEdgeTolerance`
+            - Gets or sets the edge tolerance for non circular holes with round corners in order to remove the short edge and hotspots when treating holes and features.
+          * - :py:attr:`~AutoQuad_HoleOffsetPercentage`
+            - Gets or sets the hole offset percentage to be used with mesh size when generating quad layers.
+          * - :py:attr:`~AutoQuad_MeshSize`
+            - Gets or sets the maximum size for the mesh.
+          * - :py:attr:`~AutoQuad_SplitTopoEdgesAtApexPoint`
+            - Gets or sets whether to split topo edges at their apex point when repairing topology.
+          * - :py:attr:`~AutoQuad_ThinStripesTolerance`
+            - Gets or sets the maximum thin stripe width to be used when defeaturing topology.
+          * - :py:attr:`~AutoQuad_ZoneThickness`
+            - Gets or sets the Zone Thickness to be used when converting an all quad mesh to splines.
+          * - :py:attr:`~AutoRemoveSharpAngleFaces`
+            - Gets or sets whether to remove sharp angle faces below the specified angle tolerance by merging them to the neighboring faces.
+          * - :py:attr:`~AutoRemoveThinFaces`
+            - Gets or sets whether to remove thin faces by merging them with the neighboring faces.
+          * - :py:attr:`~AutoRepairTopoEdgesOfTopoFaces`
+            - Gets or sets whether to prevent the collapse and defeature of thin or short topologies, and allow the creation of a coarse mesh while keeping topology as-is.
+          * - :py:attr:`~AutoSuppressInteriorEdges`
+            - Gets or sets whether to suppress interior edges of scoped faces.
           * - :py:attr:`~AutomaticExternalScope`
             - Gets or sets whether to define programmatically the external scoping method and pattern for the external enclosure. The default value is false.
+          * - :py:attr:`~Axis`
+            - Gets or sets the Axis coordinates.
           * - :py:attr:`~BaseFaceLabel`
             - Gets or sets the label to be used for the base face.
           * - :py:attr:`~BaseFaceScopeDefinition`
@@ -97,26 +241,94 @@ Overview
             - Gets or sets the scope outcome from a previous operation. Applicable only if BaseFaceScopeOutcome is set to Outcome.
           * - :py:attr:`~BaseFaceScopePattern`
             - Gets or sets the part, zone or label name pattern that defines the scope. Applicable only if BaseFaceScopeOutcome is set to Value.
+          * - :py:attr:`~BendingScopeDefinition`
+            - Gets or sets the type of scope definition for the bending scope. Default: Value
+          * - :py:attr:`~BendingScopeMethod`
+            - Gets or sets the scoping method for the bending scope. Default: Label.
+          * - :py:attr:`~BendingScopeOutcome`
+            - Gets or sets the scope outcome from a previous operation. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~BendingScopePattern`
+            - Gets or sets the part, zone or label name pattern that defines the scope. Applicable only if scope is defined by value.
+          * - :py:attr:`~BiasingIntensity`
+            - Gets or sets the BiasingIntensity.
+          * - :py:attr:`~BiasingModality`
+            - Gets or sets the BiasingModality.
+          * - :py:attr:`~CaptureInternalFeatures`
+            - Gets or sets the CaptureInternalFeatures.
+          * - :py:attr:`~Center`
+            - Gets or sets the Center 3D coordinates.
           * - :py:attr:`~CenterPlaneNormalOffset`
             - It defines the desired offset of the plane of the hemisphere from the model.
           * - :py:attr:`~CenterPosition`
             - It is defined by “Centered”, “Minimal”, and “User Defined”.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~ConformalMeshOnContactSurfaces`
             - Gets or sets whether to decide creation of conformal mesh at contact surfaces.
+          * - :py:attr:`~ConnectIntersectionType`
+            - Gets or sets the connect intersection type. The default value is AllToAll.
+          * - :py:attr:`~ConnectionBaseTolerance`
+            - Gets or sets the base tolerance for the connection with multiple tolerances.
+          * - :py:attr:`~ConnectionSize`
+            - Gets or sets the edge mesh size used to check the connection.
+          * - :py:attr:`~ConnectionTargetTolerance`
+            - Gets or sets the target tolerance for the connection with multiple tolerances.
+          * - :py:attr:`~ConnectionTolerance`
+            - Gets or sets the maximum gap for the connection.
           * - :py:attr:`~ConstantHeight`
             - Height of a single layer of mesh elements.
+          * - :py:attr:`~ConsumeAttachments`
+            - 
           * - :py:attr:`~ControlDataDefinition`
             - This property is used to define if the control data is defined by value or by settings.
+          * - :py:attr:`~ControlDescription`
+            - ControlDescription property.
+          * - :py:attr:`~ControlDescriptionJson`
+            - ControlDescriptionJson property.
+          * - :py:attr:`~ControlScopeDefinition`
+            - It is defined by value or outcome.
+          * - :py:attr:`~ControlScopeMethod`
+            - The method can be label/zone/part.
+          * - :py:attr:`~ControlScopeOutcome`
+            - Gets or sets the ControlScopeOutcome.
+          * - :py:attr:`~ControlScopePattern`
+            - Gets or sets the ControlScopePattern.
+          * - :py:attr:`~ControlString`
+            - Gets the ControlString.
           * - :py:attr:`~ControlType`
             - Returns the type of the control.
+          * - :py:attr:`~ControlTypeInformation`
+            - ControlTypeInformation property.
+          * - :py:attr:`~ControlTypeInformationJson`
+            - ControlTypeInformationJson property.
+          * - :py:attr:`~Coordinate`
+            - Gets or sets the coordinates.
           * - :py:attr:`~CoordinateSystem`
             - Gets or sets the Coordinate System object used to define the material point location.
+          * - :py:attr:`~CoordinatesDefinition`
+            - Gets or sets the location coordinates definition type. The default value is Location.
+          * - :py:attr:`~CoplanarAngleTolerance`
+            - Gets or sets the angle below which the faces are considered coplanar.
+          * - :py:attr:`~CreateAssemblyComponent`
+            - Gets or sets the CreateAssemblyComponent.
+          * - :py:attr:`~CreateAssociationAttributes`
+            - Gets or sets whether to retain the association information on execution. The default value is false.
           * - :py:attr:`~CreateFaceZone`
             - Gets or sets whether to create a new face zone.
+          * - :py:attr:`~CreateGeometry`
+            - Gets or sets the CreateGeometry.
           * - :py:attr:`~CreateQuadraticElements`
             - Gets or sets whether to create quadratic elements. The default value is false.
+          * - :py:attr:`~CreateQuads`
+            - This property is used to define the name of the size field to apply to the meshing operation.
+          * - :py:attr:`~CreateSolidComponent`
+            - Gets or sets the CreateSolidComponent.
+          * - :py:attr:`~CuboidCenterModality`
+            - This property is used to define the rule for the computation of the center of the cuboidal enclosure.
+          * - :py:attr:`~CylinderHeightAxis`
+            - Gets or sets the cylinder height axis coordinates.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
           * - :py:attr:`~DecompositionType`
@@ -131,22 +343,66 @@ Overview
             - This property is used to enable or disable the automatic deletion of empty topo volumes  during mesh to topology conversion. The default value is false.
           * - :py:attr:`~DeleteInputScope`
             - Gets or sets whether to delete of input scope after wrapping. The default value is false.
+          * - :py:attr:`~DeleteMeshVolumes`
+            - Gets or sets the DeleteMeshVolumes.
+          * - :py:attr:`~DeleteZonePropertiesPropertyExpression`
+            - Gets or sets the DeleteZonePropertiesPropertyExpression.
+          * - :py:attr:`~Delta`
+            - Gets or sets the Delta coordinates.
+          * - :py:attr:`~DeltaX`
+            - Gets or sets the x coordinate of the delta attribute of the corresponding control.
+          * - :py:attr:`~DeltaY`
+            - Gets or sets the y coordinate of the delta attribute of the corresponding control.
+          * - :py:attr:`~DeltaZ`
+            - Gets or sets the z coordinate of the delta attribute of the corresponding control.
           * - :py:attr:`~DihedralAngle`
             - The dihedral angle is the angle between the normal vectors of two element faces.
+          * - :py:attr:`~Direction`
+            - Gets or sets the Direction coordinates.
           * - :py:attr:`~DirectionX`
             - Gets or sets the X component of the direction vector, with respect to the Global Coordinate System.
           * - :py:attr:`~DirectionY`
             - Gets or sets the Y component of the direction vector, with respect to the Global Coordinate System.
           * - :py:attr:`~DirectionZ`
             - Gets or sets the Z component of the direction vector, with respect to the Global Coordinate System.
+          * - :py:attr:`~DirectoryName`
+            - Gets or sets the DirectoryName.
+          * - :py:attr:`~Distance`
+            - Gets or sets the Distance.
+          * - :py:attr:`~EdgeBiasingDefineBy`
+            - Gets or sets how the scoped edges meshing size is defined for MultiZone edge biasing.
+          * - :py:attr:`~EdgeBiasingFactor`
+            - Gets or sets the MultiZone Mesher edge sizing biasing factor.
+          * - :py:attr:`~EdgeBiasingType`
+            - Gets or sets the type of biasing to apply along the scoped edges for MultiZone edge biasing.
+          * - :py:attr:`~EdgeCleanup`
+            - Gets or sets the EdgeCleanup.
           * - :py:attr:`~EdgeLabelName`
             - This property is used to rename the default edge label name generated during execution of step.
+          * - :py:attr:`~EdgeMesherBiasingType`
+            - Gets or sets the type of biasing to apply along the scoped edges for the EdgeBiasingEdgeMesher control.
+          * - :py:attr:`~EditMeshMergedFacesLabel`
+            - Gets or sets the label to be applied to the faces that are merged during the EditMesh operation. Defaults to "MergedFaces".
+          * - :py:attr:`~EditMeshSeparatedFacesLabel`
+            - Gets or sets the label to be applied to the faces that are separated during the EditMesh operation. Defaults to "SeparatedFaces".
+          * - :py:attr:`~EditMeshSeparationAngle`
+            - Gets or sets the angle above which adjacent face elements are split into separate faces. Defaults to 40 degrees.
+          * - :py:attr:`~EditMeshSeparationStrategy`
+            - Gets or Sets the separation strategy used by the EditMeshSeparateFaces control. Defaults to Angle.
           * - :py:attr:`~ElementSize`
             - Define element size to achieve desired mesh results. User can achieve coarse, medium, or fine mesh by varying this value.
           * - :py:attr:`~ElementsPerGap`
             - Gets or sets the minimum number of element layers to be generated per gap for the Proximity Sizing control. The default values is 3.
+          * - :py:attr:`~EllipsoidFirstAxis`
+            - Gets or sets the ellipsoid first axis coordinates.
+          * - :py:attr:`~EllipsoidSecondAxis`
+            - Gets or sets the ellipsoid second axis coordinates.
+          * - :py:attr:`~EllipsoidThirdAxis`
+            - Gets or sets the ellipsoid third axis coordinates.
           * - :py:attr:`~EnableCheckpoint`
             - Flag whether to enable a checkpoint or not. The default value is false.
+          * - :py:attr:`~EnableSmoothing`
+            - Gets or sets the EnableSmoothing.
           * - :py:attr:`~ExcludeEnclosure`
             - Gets or sets whether to exclude the enclosure from the wrapper scope . The default value is false.
           * - :py:attr:`~ExcludeScopeDefinition`
@@ -157,6 +413,14 @@ Overview
             - Gets or sets the scope outcome from a previous operation for the Hole Patching exclusion scoping. Applicable only if scope is defined by outcome.
           * - :py:attr:`~ExcludeScopePattern`
             - Gets or sets the part, zone or label name pattern for the Hole Patching exclusion scoping. Applicable only if scope is defined by value.
+          * - :py:attr:`~ExteriorEdgeLoopScopeDefinition`
+            - Gets or sets the type of scope definition for the Exterior Edge Loop scoping. Defaults to Value.
+          * - :py:attr:`~ExteriorEdgeLoopScopeMethod`
+            - Gets or sets the scoping method for the Exterior Edge Loop scoping. Defaults to Label.
+          * - :py:attr:`~ExteriorEdgeLoopScopeOutcome`
+            - Gets or sets the scope outcome from a previous operation for the Exterior Edge Loop scoping. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~ExteriorEdgeLoopScopePattern`
+            - Gets or sets the part, zone or label name pattern for the Exterior Edge Loop scoping. Applicable only if scope is defined by value.
           * - :py:attr:`~ExternalLabelName`
             - This property is used to rename the default external label name generated during execution of step.
           * - :py:attr:`~ExternalScopeDefinition`
@@ -171,30 +435,108 @@ Overview
             - Gets or sets whether to define an independent face zone for each input part.
           * - :py:attr:`~FaceZoneName`
             - This property is used to define the name of the default face zone name generated during execution of step.
+          * - :py:attr:`~FacetQuality`
+            - Gets or sets faceting quality level for faceting on execution.
+          * - :py:attr:`~FeatureAngle`
+            - Gets or sets the angle not to be exceeded when performing repairs. Must be greater than 0 and less than or equal to 180 degrees.
+          * - :py:attr:`~FeatureSize`
+            - Gets or sets the FeatureSize.
           * - :py:attr:`~FieldName`
             - Gets or sets the label name to be applied.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~FileFilter`
+            - Gets or sets the FileFilter.
           * - :py:attr:`~Filename`
             - Assign full path to the filename would like to Import/Export.
           * - :py:attr:`~Filenames`
             - Assign paths with ‘|’ seperator to this property to read multiple files, pass without seperator if single file.
+          * - :py:attr:`~FirstLayerAspectRatio`
+            - Gets or sets the FirstLayerAspectRatio.
+          * - :py:attr:`~FirstLayerHeight`
+            - Gets or sets the FirstLayerHeight.
+          * - :py:attr:`~FixedScopeDefinition`
+            - It is defined by value or outcome.
+          * - :py:attr:`~FixedScopeMethod`
+            - The method can be label/zone/part.
+          * - :py:attr:`~FixedScopeOutcome`
+            - Gets or sets the FixedScopeOutcome.
+          * - :py:attr:`~FixedScopePattern`
+            - Gets or sets the FixedScopePattern.
+          * - :py:attr:`~FreeEdgesAsFixed`
+            - Gets or sets the FreeEdgesAsFixed.
+          * - :py:attr:`~FreeEdgesLabelName`
+            - Gets or sets the FreeEdgesLabelName.
           * - :py:attr:`~FreeFaceMeshType`
             - Gets or sets the type of elements for the MultiZone mesher free face mesh. Defaults to "All Quads".
           * - :py:attr:`~FreeVolumeMeshType`
             - Gets or sets how free mesh blocks should be treated by the MultiZone meshing algorithm. Defaults to "NotAllowed".
+          * - :py:attr:`~FuseBaseTolerance`
+            - Gets or sets the base tolerance for the fuse with multiple tolerances.
+          * - :py:attr:`~FuseTargetTolerance`
+            - Gets or sets the target tolerance for the fuse with multiple tolerances.
+          * - :py:attr:`~GapTolerance`
+            - Gets or sets the GapTolerance.
+          * - :py:attr:`~GeometryFidelity`
+            - Gets or sets the GeometryFidelity.
+          * - :py:attr:`~GroupVolumes`
+            - Gets or sets the GroupVolumes.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~GrowthRate`
             - Gradient of element size as each layer grows.
           * - :py:attr:`~HemisphereCenterModality`
             - This property is used to define the rule for the computation of the center of the hemispherical enclosure.
           * - :py:attr:`~HemisphereOrientationModality`
             - This property is used to define the rule for the computation of the orientation of the hemispherical enclosure.
+          * - :py:attr:`~HexcoreTetLayerRelWidth`
+            - Gets or sets the HexcoreTetLayerRelWidth.
+          * - :py:attr:`~HighPeriodicFacesScopeDefinition`
+            - Gets or sets the type of scope definition for the High Periodic Faces scoping. Defaults to Value.
+          * - :py:attr:`~HighPeriodicFacesScopeMethod`
+            - Gets or sets the scoping method for the High Periodic Faces scoping. Defaults to Label.
+          * - :py:attr:`~HighPeriodicFacesScopeOutcome`
+            - Gets or sets the scope outcome from a previous operation for the High Periodic Faces scoping. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~HighPeriodicFacesScopePattern`
+            - Gets or sets the part, zone or label name pattern for the High Periodic Faces scoping. Applicable only if scope is defined by value.
+          * - :py:attr:`~HorizontalScopeOutcome`
+            - Gets or sets the HorizontalScopeOutcome.
+          * - :py:attr:`~HorizontalScopePattern`
+            - Gets or sets the HorizontalScopePattern.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~IgnoreOrientation`
             - Gets or sets whether to ignore the face normal orientation while calculating the proximity for the Proximity Sizing control. The default value is False.
           * - :py:attr:`~IgnoreSelfProximity`
             - Gets or sets whether to ignore the proximity between two faces from the same face zone while calculating the proximity for the Proximity Sizing control. The default value is True.
+          * - :py:attr:`~IgnoreSolidNames`
+            - Gets or sets the IgnoreSolidNames.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
+          * - :py:attr:`~ImportSourceType`
+            - Gets or sets the ImportSourceType.
+          * - :py:attr:`~InflationBoundaryScopeDefinition`
+            - Gets or sets the type of scope definition for the Inflation Boundary scoping. Default: Value.
+          * - :py:attr:`~InflationBoundaryScopeMethod`
+            - Gets or sets the scoping method for the Inflation Boundary scoping. Default: Label.
+          * - :py:attr:`~InflationBoundaryScopeOutcome`
+            - Gets or sets the scope outcome for Inflation Boundary scoping from a previous operation. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~InflationBoundaryScopePattern`
+            - Gets or sets the zone or label name pattern that defines the Inflation Boundary scoping. Applicable only if scope is defined by value.
+          * - :py:attr:`~InflationDomainScopeDefinition`
+            - Gets or sets the type of scope definition for the Inflation Domain scoping. Default: Value.
+          * - :py:attr:`~InflationDomainScopeMethod`
+            - Gets or sets the scoping method for the Inflation Domain scoping. Default: Label.
+          * - :py:attr:`~InflationDomainScopeOutcome`
+            - Gets or sets the scope outcome for Inflation Domain scoping from a previous operation. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~InflationDomainScopePattern`
+            - Gets or sets the zone or label name pattern that defines the Inflation Domain scoping. Applicable only if scope is defined by value.
+          * - :py:attr:`~InflationFirstLayerHeight`
+            - Gets or sets the height of the first inflation layer.
+          * - :py:attr:`~InflationGrowthRate`
+            - Gets or sets gradient of layer height.
+          * - :py:attr:`~InflationMaximumLayers`
+            - Gets or sets the maximum number of inflation layers.
           * - :py:attr:`~InnerScopeDefinition`
             - It is defined by value or outcome depending on if the Inner scope is defined manually by the user or defined based on a previous outcome.
           * - :py:attr:`~InnerScopeMethod`
@@ -211,14 +553,50 @@ Overview
             - Gets or sets the scope outcome for Input Mesh scoping from a previous operation. Applicable only if InputMeshScopeDefinition is set to Outcome.
           * - :py:attr:`~InputMeshScopePattern`
             - Gets or sets the zone or label name pattern that defines the Input Mesh scoping. Applicable only if InputMeshScopeDefinition is set to Value.
+          * - :py:attr:`~InteriorEdgeLoopScopeDefinition`
+            - Gets or sets the type of scope definition for the Interior Edge Loop scoping. Defaults to Value.
+          * - :py:attr:`~InteriorEdgeLoopScopeMethod`
+            - Gets or sets the scoping method for the Interior Edge Loop scoping. Defaults to Label.
+          * - :py:attr:`~InteriorEdgeLoopScopeOutcome`
+            - Gets or sets the scope outcome from a previous operation for the Interior Edge Loop scoping. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~InteriorEdgeLoopScopePattern`
+            - Gets or sets the part, zone or label name pattern for the Interior Edge Loop scoping. Applicable only if scope is defined by value.
           * - :py:attr:`~InternalLabelName`
             - This property is used to rename the default Internal label name generated during execution of step.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IntersectingTopoFaceTolerance`
+            - Gets or sets the minimum angle used in finding thin stripes with advanced topology diagnostics.
+          * - :py:attr:`~LabelCreationExpression`
+            - Gets or sets the expression set algebra expression used in a LabelCreationByExpression control.
+          * - :py:attr:`~LabelCreationExpressionVariable`
+            - Gets or sets the expression variable name associated to entities identified by a label creation control. These variables can be referenced in a LabelCreationByExpression control to create labels based on expressions. Valid variable names do not contain whitespaces or any of the following characters "&, |, ^, !, (, )".
           * - :py:attr:`~LabelName`
             - This property is used to rename the default label name generated during execution of step.
+          * - :py:attr:`~LastLayerAspectRatio`
+            - Gets or sets the LastLayerAspectRatio.
           * - :py:attr:`~LateralDefeatureSize`
             - Gets or sets the defeature size to be used along the lateral direction of stacking.
+          * - :py:attr:`~LocalRemesh`
+            - Gets or sets the LocalRemesh.
+          * - :py:attr:`~Location`
+            - Gets or sets the location attribute of the corresponding control.
+          * - :py:attr:`~LowPeriodicFacesScopeDefinition`
+            - Gets or sets the type of scope definition for the Low Periodic Faces scoping. Defaults to Value.
+          * - :py:attr:`~LowPeriodicFacesScopeMethod`
+            - Gets or sets the scoping method for the Low Periodic Faces scoping. Defaults to Label.
+          * - :py:attr:`~LowPeriodicFacesScopeOutcome`
+            - Gets or sets the scope outcome from a previous operation for the Low Periodic Faces scoping. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~LowPeriodicFacesScopePattern`
+            - Gets or sets the part, zone or label name pattern for the Low Periodic Faces scoping. Applicable only if scope is defined by value.
+          * - :py:attr:`~ManageTangentEdges`
+            - Gets or sets the attribute to manage tangent edges connection for the connection control.
+          * - :py:attr:`~MappedBlocksSplitAngle`
+            - Gets or sets the split angle to be used for introducing extra splits in the mapped blocks when UseMappedBlocksSplitAngle is True. Defaults to 60.
+          * - :py:attr:`~MatchControlRotationAngle`
+            - Gets or sets the periodic rotation angle for a Cyclic MatchControlMultiZoneMesher control. Defaults to 90 degrees.
+          * - :py:attr:`~MatchControlType`
+            - Gets or Sets the Match Control type used by the MatchControlMultiZoneMesher control. Defaults to Translation.
           * - :py:attr:`~Material`
             - Gets or sets the Material.
           * - :py:attr:`~MaterialName`
@@ -227,16 +605,28 @@ Overview
             - Gets or sets the material point definition type.
           * - :py:attr:`~MaterialPointType`
             - It defines the type of material point, it can be “Include” or “Exclude”.
+          * - :py:attr:`~MaxEdgeLength`
+            - Gets or sets max edge length to be used for faceting on execution.
           * - :py:attr:`~MaxHoleSize`
             - Gets or sets the maximum size of holes to be considered for Wrapper Leak Prevention and Hole Patching.
+          * - :py:attr:`~MaxIterations`
+            - Gets or sets the MaxIterations .
           * - :py:attr:`~MaxSize`
             - Gets or sets the maximum size to be used for the volumetric size field sizing computation in the Proximity Sizing and Curvature Sizing controls. This is a length value.
+          * - :py:attr:`~MergeAcrossParts`
+            - Gets or sets whether to merge across parts during the resolution of the surface overlaps.
           * - :py:attr:`~MergeNodesTolerance`
             - Gets or sets the tolerance within which nodes are to be merged.
           * - :py:attr:`~MergeNodesToleranceType`
             - Gets or sets the merge nodes tolerance type to be used when executing Merge Nodes operation. The default value is Absolute.
+          * - :py:attr:`~MergeOverlappingFaces`
+            - Gets or sets whether to merge overlapping faces after connect. The default value is false.
+          * - :py:attr:`~MeshEntityType`
+            - Gets or sets the target mesh entity type. The default value is Face.
           * - :py:attr:`~MeshFlowControl`
             - This property gives control over the flow of mesh during surface mesh generation. The supported modes are None, and Global Cartesian.
+          * - :py:attr:`~MeshedSurfaceLabelSuffix`
+            - Gets or sets the suffix to be used when defining labels scoped to faces meshed by the MultiZone mesher.
           * - :py:attr:`~MeshedVolumeLabelSuffix`
             - Gets or sets the suffix to be used when defining labels scoped to volumes meshed by the MultiZone mesher. Defaults to "MultiZoneMesh".
           * - :py:attr:`~MinSize`
@@ -245,34 +635,106 @@ Overview
             - It determines the minimal number of layers of volume elements to be created around the scoped body.
           * - :py:attr:`~MinimalRadius`
             - It defines the desired minimal radius of the spherical enclosure.
+          * - :py:attr:`~MorphFieldDefinition`
+            - ..
+          * - :py:attr:`~MorphFieldOutcome`
+            - Gets the MorphFieldOutcome.
+          * - :py:attr:`~MorphMidSideNodes`
+            - Gets or sets whether to apply morphing on the model based on the mid nodes displacements after the projection on the underlying geometry.
           * - :py:attr:`~MorphRecordingName`
             - This property is used to define the name for matching the morphing recording to apply to the meshing operation.
+          * - :py:attr:`~MorphSolverModality`
+            - Gets or sets the MorphSolverModality.
+          * - :py:attr:`~MorphableScopeDefinition`
+            - It is defined by value or outcome.
+          * - :py:attr:`~MorphableScopeMethod`
+            - The method can be label/zone/part.
+          * - :py:attr:`~MorphableScopeOutcome`
+            - Gets or sets the MorphableScopeOutcome.
+          * - :py:attr:`~MorphableScopePattern`
+            - Gets or sets the MorphableScopePattern.
+          * - :py:attr:`~MultiEdgesLabelName`
+            - Gets or sets the MultiEdgesLabelName.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~Names`
+            - Gets or sets the Names.
           * - :py:attr:`~NormalAngle`
             - Gets or sets the maximum allowed normal angle between neighboring elements when computing curvature for the Curvature Sizing control. This value must be between 0 and 180 degrees (0 to π) and defaults to 18 degrees.
+          * - :py:attr:`~NormalTolerance`
+            - Gets or sets normal tolerance to be used for faceting on execution.
           * - :py:attr:`~NumberOfAttempts`
             - Number of attempts for mesh convergence.
           * - :py:attr:`~NumberOfDivisions`
             - Gets or sets the number of divisions for the scoped edges.
           * - :py:attr:`~NumberOfLayers`
             - Number of layers of mesh elements.
+          * - :py:attr:`~NumberOfPlanarCuts`
+            - This property is used to define the number of planar cuts for the automatic planar cut control.
+          * - :py:attr:`~NumberOfRadialDivisions`
+            - Gets or sets the number of radial divisions to apply to scoped faces having two concentric boundary loops.
+          * - :py:attr:`~NumberOfRings`
+            - Gets or sets the NumberOfRings.
+          * - :py:attr:`~NumberOfThreads`
+            - Gets or sets the NumberOfThreads.
+          * - :py:attr:`~NumberOfVolumetricLayers`
+            - Allows user to input number of volumetric layers of the enclosure.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~OffsetDistance`
+            - Gets or sets the offset distance attribute of the corresponding direct morphing control.
           * - :py:attr:`~OffsetFileName`
             - Gets or sets the full file path to the .csv file containing the offset coordinates for replication.
+          * - :py:attr:`~OffsetType`
+            - Gets or sets the OffsetType.
+          * - :py:attr:`~Origin`
+            - Gets or sets the origin coordinates.
           * - :py:attr:`~OriginX`
             - Gets or sets the X coordinate of origin (location of base face) in the volume flattening step.
           * - :py:attr:`~OriginY`
             - Gets or sets the Y coordinate of origin (location of base face) in the volume flattening step.
           * - :py:attr:`~OriginZ`
             - Gets or sets the Z coordinate of origin (location of base face) in the volume flattening step.
+          * - :py:attr:`~OverlapTolerance`
+            - Gets or sets the OverlapTolerance.
+          * - :py:attr:`~OverlappingTopoFaceTolerance`
+            - Gets or sets the tolerance for the minimum overlap distance used in finding overlapping topology faces with advanced topology diagnostics.
+          * - :py:attr:`~OverlapsTolerance`
+            - Gets or sets the tolerance value to be used to detect the overlaps to resolve.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PartName`
             - Gets or sets the part name to be used when generating.
           * - :py:attr:`~PercentageIncrement`
             - The number of volumetric Layers determines the number of layers. This property decides whether all the layers are an equal size (default 0.0) or they should gradually increase the size of volume element than previous element.
+          * - :py:attr:`~PercentageSmoothing`
+            - Gets or sets the PercentageSmoothing.
+          * - :py:attr:`~PinchTolerance`
+            - Gets or sets the largest tolerance to be used when removing small features.
+          * - :py:attr:`~PrescribedPointsFileName`
+            - Gets or sets the path to the file containing the prescribed points locations. The data must be in csv format.
+          * - :py:attr:`~PreserveBoundary`
+            - Gets or sets whether to preserve the boundary or not. If true, adding a prescribed point which causes a deformation of the volume boundary will result in a failure.
+          * - :py:attr:`~PreserveBoundaryLayers`
+            - Gets or sets the PreserveBoundaryLayers.
+          * - :py:attr:`~ProjectOnGeometry`
+            - Gets or sets whether to project the mesh on the underlying geometry.
           * - :py:attr:`~ProjectSideFaces`
             - Gets or sets whether to project the side faces after the extrusion.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
+          * - :py:attr:`~PropertyName`
+            - Gets or sets the PropertyName.
+          * - :py:attr:`~PropertyValue`
+            - Gets or sets the PropertyValue.
           * - :py:attr:`~ProtectOnlyBoundaries`
             - Gets or sets whether the topology protection flag is applied only to the exterior boundary of the scoped boundaries or not. Defaults to False.
+          * - :py:attr:`~ProximityRadius`
+            - Gets or sets the radius for the proximity based search.
           * - :py:attr:`~QuadBoundaryLayerFaceScopeDefinition`
             - Gets or sets the type of scope definition for the quad boundary layer face scoping. Default: Value
           * - :py:attr:`~QuadBoundaryLayerFaceScopeMethod`
@@ -289,22 +751,58 @@ Overview
             - Gets or sets the number of annular divisions on the washer boundary from where the quad layers are grown.
           * - :py:attr:`~QuadBoundaryLayerNumberOfLayers`
             - Gets or sets the number of quad layers on the washer boundary.
+          * - :py:attr:`~Radius`
+            - Gets or sets the radius attribute of the corresponding control.
+          * - :py:attr:`~Ratio`
+            - Gets or sets the ratio attribute of the corresponding control.
           * - :py:attr:`~RecomputeClosedVolumes`
             - Gets or sets whether to recompute closed volumes after the operation.
+          * - :py:attr:`~ReferenceFaceScopeDefinition`
+            - Gets or sets the type of scope definition for the ReferenceFace scoping in MultiZone Edge Biasing. Default: Value.
+          * - :py:attr:`~ReferenceFaceScopeScopeMethod`
+            - Gets or sets the scoping method for the ReferenceFace scoping in MultiZone Edge Biasing. Default: Label.
+          * - :py:attr:`~ReferenceFaceScopeScopeOutcome`
+            - Gets or sets the scope outcome for the ReferenceFace scoping in MultiZone Edge Biasing from a previous operation. Applicable only if scope is defined by outcome.
+          * - :py:attr:`~ReferenceFaceScopeScopePattern`
+            - Gets or sets the zone or label name pattern that defines the ReferenceFace scoping in MultiZone Edge Biasing. Applicable only if scope is defined by value.
           * - :py:attr:`~RegionType`
             - It is defined by Material Point or External.
           * - :py:attr:`~RelativeMergeTolerancePercentage`
             - Gets or sets the percentage of the connected edge lengths to be used as tolerance for merging nodes.
+          * - :py:attr:`~ReleaseStatusString`
+            - ReleaseStatusString property.
           * - :py:attr:`~Remesh`
             - Gets or sets whether to allow the remesh of already meshed volumes. The default value is false.
           * - :py:attr:`~RepairModel`
             - Gets or sets whether to repair the PrimeMesh model after the reading operation is executed. The default value is false.
+          * - :py:attr:`~RepairTolerance`
+            - Gets or sets the tolerance value to be used to reduce variability of output topology, prevent the collapse and defeature of thin or short topologies, and allow the creation of a coarse mesh while keeping topology as-is.
           * - :py:attr:`~RestrictBoundaryNodes`
             - Gets or sets whether to restrict the boundary nodes displacement. The default value is true.
+          * - :py:attr:`~RetainMeshedEdges`
+            - Gets or sets whether to retain the existing mesh on the input edges.
+          * - :py:attr:`~RetainMeshedTopoFaces`
+            - Gets or sets the RetainMeshedTopoFaces.
           * - :py:attr:`~RetainMeshedVolumes`
             - Gets or sets whether existing mesh on the scoped volumes is to be retained or remeshed.
+          * - :py:attr:`~RetryWithGeometry`
+            - Gets or sets the RetryWithGeometry.
+          * - :py:attr:`~ReverseDeformationFieldName`
+            - Gets or sets the ReverseDeformationFieldName.
+          * - :py:attr:`~ReverseEdgeBiasingDirection`
+            - Gets or sets whether the Multizone Mesher edge biasing direction should be reversed.
           * - :py:attr:`~ReverseSurfaceOrientation`
             - Reverse Surface Orientation. The default value is false.
+          * - :py:attr:`~RigidScopeDefinition`
+            - It is defined by value or outcome.
+          * - :py:attr:`~RigidScopeMethod`
+            - The method can be label/zone/part.
+          * - :py:attr:`~RigidScopeOutcome`
+            - Gets or sets the RigidScopeOutcome.
+          * - :py:attr:`~RigidScopePattern`
+            - Gets or sets the RigidScopePattern.
+          * - :py:attr:`~RotationAngle`
+            - Gets or sets the rotation angle attribute of the corresponding direct morphing control.
           * - :py:attr:`~ScaleFactor`
             - Scale Factor is used to scale shapes in different dimensions.
           * - :py:attr:`~ScopeDefinition`
@@ -315,6 +813,8 @@ Overview
             - If the InnerScopeDefinition is set to Outcome, then this property is visible. It defines the previous step outcome. This way we input the results of a previous step to the current step. The input applies to inner region of enclosure.
           * - :py:attr:`~ScopePattern`
             - The value can be a name of a region or a predefined patterns to select multiple region names.
+          * - :py:attr:`~ScriptFilename`
+            - 
           * - :py:attr:`~SeedFaceScopeDefinition`
             - Gets or sets the type of scope definition for the seed face scoping. Default: Value
           * - :py:attr:`~SeedFaceScopeMethod`
@@ -323,18 +823,114 @@ Overview
             - Gets or sets the scope outcome from a previous operation. Applicable only if SeedFaceScopeDefinition is set to Outcome.
           * - :py:attr:`~SeedFaceScopePattern`
             - Gets or sets the part, zone or label name pattern that defines the scope. Applicable only if SeedFaceScopeDefinition is set to Value.
+          * - :py:attr:`~SelfIntersectionsLabelName`
+            - Gets or sets the SelfIntersectionsLabelName.
+          * - :py:attr:`~SemistructuredPatternType`
+            - Gets or sets the Semistructured Pattern type used by the MultiZone Mapped Meshing control.
           * - :py:attr:`~SharedTopologyLabelName`
             - Gets or sets the name used as label to scope the shared topology faces which are automatically added as input mesh for MultiZone. Defaults to "MultiZoneMesh/SharedTopologyInputMesh".
+          * - :py:attr:`~SharpAngle`
+            - Gets or sets the maximum angle between faces to be merged. Must be greater than 0 and less than or equal to 30 degrees.
+          * - :py:attr:`~ShortEdgeLength`
+            - Gets or sets the maximum edge length to be collapsed.
+          * - :py:attr:`~SideTolerance`
+            - Gets or sets the SideTolerance.
           * - :py:attr:`~SizeFieldDefinition`
             - Gets or sets how the control's size field pattern should be defined, either by "Value" or by "Outcome". The default value is "Value".
+          * - :py:attr:`~SizeFieldName`
+            - This property is used to define the name of the size field to apply to the meshing operation.
           * - :py:attr:`~SizeFieldOutcome`
             - Gets or sets the outcome to be used to define the size field pattern when SizeFieldDefinition is set to "Outcome".
           * - :py:attr:`~SizeFieldPattern`
             - This property is used to define the name pattern for matching the size fields to apply to the meshing operation.
+          * - :py:attr:`~SkipInteractiveSession`
+            - Gets or sets whether to skip the interactive session on execution. The default value is false.
+          * - :py:attr:`~SlicerLayerHeight`
+            - Gets or sets the spacing between newly created parallel planes.
+          * - :py:attr:`~SlicerLayerStart`
+            - Gets or sets the z coordinate of the first plane.
+          * - :py:attr:`~SlicerRelativeTolerance`
+            - Gets or sets the relative tolerance for adjusting surface nodes when near a slicing plane. If the surface nodes are within the tolerance distance relative to the layer height, they will be projected to the new plane.
+          * - :py:attr:`~SmallTopoEdgesLength`
+            - Gets or sets the max edge length used in finding small topo edges with advanced topology diagnostics.
           * - :py:attr:`~SmoothingIterations`
             - Allows user to input number of iterations needed to achieve good mesh results.
           * - :py:attr:`~SmoothingPreserveVolume`
             - Gets or sets whether to enable and disable the volume preserving smoothing. If enabled, the smoothing will preserve the initial volume of the input. The default value is false.
+          * - :py:attr:`~SolderBallBottomCapDivisions`
+            - Gets or sets the number of vertical divisions for the bottom cap of the solder ball mesh. If an internal cap is generated, shell divisions is used instead.
+          * - :py:attr:`~SolderBallBottomCapLength`
+            - Gets or sets the length of the solder ball bottom cap. Positive values for spheres create an external cap beneath the bottom split, and negative values create an internal cap beginning at the bottom split length. Torus will take the absolute value and always create an internal cap.
+          * - :py:attr:`~SolderBallBottomSolderSplit`
+            - Gets or sets the point at which the bottom split of the solder ball begins.
+          * - :py:attr:`~SolderBallBottomSplitDivisions`
+            - Gets or sets the number of vertical divisions for the bottom split of the solder ball mesh.
+          * - :py:attr:`~SolderBallBottomSplitLength`
+            - Gets or sets the length of the solder ball beginning at the bottom split point.
+          * - :py:attr:`~SolderBallCentralVerticalDivisions`
+            - Gets or sets the number of vertical divisions for the center of the solder ball mesh, not including top and bottom splits.
+          * - :py:attr:`~SolderBallCylinderShellDivisions`
+            - Gets or sets the number of divisions for the inner cylinder shell of the solder ball mesh.
+          * - :py:attr:`~SolderBallInnerCylinderRadius`
+            - Gets or sets the radius of the solder ball's inner cylinder.
+          * - :py:attr:`~SolderBallOuterLoopDivisions`
+            - Gets or sets the number of outer loop divisions for the solder ball mesh.
+          * - :py:attr:`~SolderBallRadius`
+            - Gets or sets the radius of the solder ball.
+          * - :py:attr:`~SolderBallShapeType`
+            - Gets or sets the solder ball shape type. The default value is Sphere.
+          * - :py:attr:`~SolderBallShellDivisions`
+            - Gets or sets the number of divisions for the outer shell of the solder ball mesh.
+          * - :py:attr:`~SolderBallSmoothMesh`
+            - Gets if the mesh will be smoothed.
+          * - :py:attr:`~SolderBallTopCapDivisions`
+            - Gets or sets the number of vertical divisions for the top cap of the solder ball mesh. If an internal cap is generated, shell divisions is used instead.
+          * - :py:attr:`~SolderBallTopCapLength`
+            - Gets or sets the length of the solder ball top cap. Positive values for spheres create an external cap on top of the top split, and negative values create an internal cap beginning at the top split length. Torus will take the absolute value and always create an internal cap.
+          * - :py:attr:`~SolderBallTopSolderSplit`
+            - Gets or sets the point at which the top split of the solder ball begins.
+          * - :py:attr:`~SolderBallTopSplitDivisions`
+            - Gets or sets the number of vertical divisions for the top split of the solder ball mesh.
+          * - :py:attr:`~SolderBallTopSplitLength`
+            - Gets or sets the length of the solder ball beginning at the top split point.
+          * - :py:attr:`~SolidIGADecimationFactor`
+            - Gets or sets the decimation factor.
+          * - :py:attr:`~SolidIGADegreeR`
+            - Gets or sets the degree R.
+          * - :py:attr:`~SolidIGADegreeS`
+            - Gets or sets the degree S.
+          * - :py:attr:`~SolidIGADegreeT`
+            - Gets or sets the degree T.
+          * - :py:attr:`~SolidIGAFeatureAngle`
+            - Gets or sets the feature angle.
+          * - :py:attr:`~SolidIGAGeometryFileName`
+            - Gets or sets the file name path string.
+          * - :py:attr:`~SolidIGAInterpolationElementsR`
+            - Gets or sets the interpolation elements r.
+          * - :py:attr:`~SolidIGAInterpolationElementsS`
+            - Gets or sets the interpolation elements s.
+          * - :py:attr:`~SolidIGAInterpolationElementsT`
+            - Gets or sets the interpolation elements t.
+          * - :py:attr:`~SolidIGANElementsR`
+            - Gets or sets the number of elements R.
+          * - :py:attr:`~SolidIGANElementsS`
+            - Gets or sets the number of elements S.
+          * - :py:attr:`~SolidIGANElementsT`
+            - Gets or sets the number of elements T.
+          * - :py:attr:`~SolidIGASolverFileName`
+            - Gets or sets the file name path string.
+          * - :py:attr:`~SolidIGATolerance`
+            - Gets or sets the tolerance.
+          * - :py:attr:`~SolidIGATriTolerance`
+            - Gets or sets the tri tolerance.
+          * - :py:attr:`~SourceScopeDefinition`
+            - It is defined by value or outcome.
+          * - :py:attr:`~SourceScopeMethod`
+            - The method can be label/zone/part.
+          * - :py:attr:`~SourceScopeOutcome`
+            - Gets or sets the SourceScopeOutcome.
+          * - :py:attr:`~SourceScopePattern`
+            - Gets or sets the SourceScopePattern.
           * - :py:attr:`~SourceTargetScopeDefinition`
             - Gets or sets the type of scope definition for the Source/Target scoping. Default: Value.
           * - :py:attr:`~SourceTargetScopeMethod`
@@ -347,32 +943,146 @@ Overview
             - This property is used to define the rule for the computation of the center of the spherical enclosure.
           * - :py:attr:`~StackingDefeatureSize`
             - Defines defeature size to be used along the stacking direction.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
           * - :py:attr:`~SurfaceMeshType`
             - This property gives control over what type of elements need to be generated in the mesh. The supported surface mesh types are Triangles and Quadrilaterals.
+          * - :py:attr:`~SurfaceScopeModality`
+            - The modality can be Rings or Distance.
+          * - :py:attr:`~SurfaceTolerance`
+            - Gets or sets surface tolerance to be used for faceting on execution.
           * - :py:attr:`~SweepingSize`
             - Gets or sets the constant size along the sweeping direction.
+          * - :py:attr:`~TargetScopeDefinition`
+            - It is defined by value or outcome.
+          * - :py:attr:`~TargetScopeMethod`
+            - The method can be label/zone/part.
+          * - :py:attr:`~TargetScopeOutcome`
+            - Gets or sets the TargetScopeOutcome.
+          * - :py:attr:`~TargetScopePattern`
+            - Gets or sets the TargetScopePattern.
           * - :py:attr:`~TargetSkewness`
             - Set Limit to the skewness of an element. Higher the skewness value, expecting a better mesh result.
           * - :py:attr:`~Thickness`
             - Gets or sets the Thickness to be assigned to the scoped zone.
+          * - :py:attr:`~ThinFaceWidth`
+            - Gets or sets the maximum thin face width to be merged.
+          * - :py:attr:`~ThinStripesWidth`
+            - Gets or sets the max width used in finding thin stripes with advanced topology diagnostics.
+          * - :py:attr:`~ThinSweepDivisions`
+            - Gets or sets the number of divisions to be used for Thin Sweep decomposition.
+          * - :py:attr:`~ThinSweepThickness`
+            - Gets or sets thin sweep thickness to be used for Thin Sweep decomposition.
           * - :py:attr:`~TopologyConformalConnection`
             - Gets or sets whether to preserve the topology connection for the newly created faces. The default value is false.
           * - :py:attr:`~TriangleCountReductionMode`
             - This property gives control over the mode/degree of triangle count reduction during surface mesh generation. The supported modes are None, Conservative and Aggressive.
+          * - :py:attr:`~TrimBoxMaxX`
+            - Gets or sets the maximum X coordinate for the box coordinates trim.
+          * - :py:attr:`~TrimBoxMaxY`
+            - Gets or sets the maximum Y coordinate for the box coordinates trim.
+          * - :py:attr:`~TrimBoxMaxZ`
+            - Gets or sets the maximum Z coordinate for the box coordinates trim.
+          * - :py:attr:`~TrimBoxMinX`
+            - Gets or sets the minimum X coordinate for the box coordinates trim.
+          * - :py:attr:`~TrimBoxMinY`
+            - Gets or sets the minimum Y coordinate for the box coordinates trim.
+          * - :py:attr:`~TrimBoxMinZ`
+            - Gets or sets the minimum Z coordinate for the box coordinates trim.
+          * - :py:attr:`~TrimDistance`
+            - Gets or sets the distance for the mesh based trim.
+          * - :py:attr:`~TrimElementSelectionType`
+            - Gets or sets the trim element selection type. The default value is Outside.
+          * - :py:attr:`~TrimNode1X`
+            - Gets or sets the X coordinate for trim node 1.
+          * - :py:attr:`~TrimNode1Y`
+            - Gets or sets the Y coordinate for trim node 1.
+          * - :py:attr:`~TrimNode1Z`
+            - Gets or sets the Z coordinate for trim node 1.
+          * - :py:attr:`~TrimNode2X`
+            - Gets or sets the X coordinate for trim node 2.
+          * - :py:attr:`~TrimNode2Y`
+            - Gets or sets the Y coordinate for trim node 2.
+          * - :py:attr:`~TrimNode2Z`
+            - Gets or sets the Z coordinate for trim node 2.
+          * - :py:attr:`~TrimOperationType`
+            - Gets or sets the trim operation type. The default value is Trim.
+          * - :py:attr:`~TrimOptionType`
+            - Gets or sets the trim option type. The default value is Mesh.
+          * - :py:attr:`~TrimRadius1`
+            - Gets or sets the radius 1 for the trim geometry.
+          * - :py:attr:`~TrimRadius2`
+            - Gets or sets the radius 2 for the trim geometry.
+          * - :py:attr:`~UnitsSystem`
+            - Gets or sets the UnitsSystem.
+          * - :py:attr:`~UnoDataEDXPath`
+            - Gets or sets the UnoDataEDXPath.
+          * - :py:attr:`~UseCADCurvature`
+            - Gets or sets whether to define the local curvature based on the CAD.
+          * - :py:attr:`~UseMappedBlocksSplitAngle`
+            - Gets or sets whether extra split should be introduced in the mapped blocks based on the MappedBlocksSplitAngle value. Defaults to False.
+          * - :py:attr:`~VariableName`
+            - Gets or sets the VariableName.
+          * - :py:attr:`~VariableType`
+            - Gets or sets the VariableType.
+          * - :py:attr:`~VariableValue`
+            - Gets or sets the VariableValue.
+          * - :py:attr:`~VerticalDirection`
+            - Gets or sets the VerticalDirection coordinates.
+          * - :py:attr:`~VerticalDirectionX`
+            - Gets or sets the VerticalDirectionX.
+          * - :py:attr:`~VerticalDirectionY`
+            - Gets or sets the VerticalDirectionY.
+          * - :py:attr:`~VerticalDirectionZ`
+            - Gets or sets the VerticalDirectionZ.
+          * - :py:attr:`~VerticalScopeOutcome`
+            - Gets or sets the VerticalScopeOutcome.
+          * - :py:attr:`~VerticalScopePattern`
+            - Gets or sets the VerticalScopePattern.
+          * - :py:attr:`~VerticalizeTargetNormal`
+            - This property defines the target normal direction for the faces during verticalization. The available options are XPlus, YPlus, ZPlus, XMinus, YMinus, ZMinus.
           * - :py:attr:`~VisibleProperties`
             - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~VolumeCushionPercentage`
+            - Gets or sets the VolumeCushionPercentage.
           * - :py:attr:`~VolumeMeshType`
             - Type of Volume elements such as Tetrahedrons and Hex.
+          * - :py:attr:`~VolumeScopeModality`
+            - The modality can be EntireDomain or Box.
           * - :py:attr:`~VolumeZoneName`
             - This property is used to rename the default volume zone name generated during execution of step.
+          * - :py:attr:`~WorkingDirectory`
+            - Gets or sets the WorkingDirectory.
           * - :py:attr:`~WrapByParts`
             - Gets or sets whether to wrap each part separately. The default value is false.
+          * - :py:attr:`~XAxis`
+            - Gets or sets the x coordinate of the axis attribute of the corresponding control.
+          * - :py:attr:`~XCenter`
+            - Gets or sets the x coordinate of the center attribute of the corresponding control.
           * - :py:attr:`~XCoordinate`
             - It defines the X Coordinate.
+          * - :py:attr:`~XPointOnBend`
+            - Gets or sets the x coordinate of the point on the bend region attribute of the corresponding control.
+          * - :py:attr:`~YAxis`
+            - Gets or sets the y coordinate of the axis attribute of the corresponding control.
+          * - :py:attr:`~YCenter`
+            - Gets or sets the y coordinate of the center attribute of the corresponding control.
           * - :py:attr:`~YCoordinate`
             - It defines the Y Coordinate.
+          * - :py:attr:`~YPointOnBend`
+            - Gets or sets the y coordinate of the point on the bend region attribute of the corresponding control.
+          * - :py:attr:`~ZAxis`
+            - Gets or sets the z coordinate of the axis attribute of the corresponding control.
+          * - :py:attr:`~ZCenter`
+            - Gets or sets the z coordinate of the center attribute of the corresponding control.
           * - :py:attr:`~ZCoordinate`
             - It defines the Z Coordinate.
+          * - :py:attr:`~ZPointOnBend`
+            - Gets or sets the z coordinate of the point on the bend region attribute of the corresponding control.
+          * - :py:attr:`~ZoneType`
+            - Gets or sets the ZoneType.
 
 
 
@@ -382,6 +1092,56 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: AddUniqueLabelPerPoint
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to apply a unique label name to each added prescribed point. Uniqueness is enforced by appending a numbering suffix to the label name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AddedTopoEntitiesLabel
+   :type: Optional[str]
+
+
+   
+   This property is used to rename the default label generated for the added topological entities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: AppendData
    :type: Optional[bool]
 
@@ -407,12 +1167,487 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ApplySemistructuredPattern
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to apply Semistructured Pattern mapped meshing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoCollapseShortEdges
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to collapse edges below the specified tolerance. Feature edges and Protected edges are not collapsed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoDeleteInteriorNodes
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to delete interior nodes from scoped topology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoMergeParts
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the AutoMergeParts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoPartialDefeature
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to partially remove thin faces and sharp angles within provided tolerances, such that only topology impacting mesh quality is removed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoPinchFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to remove small features from topology to improve mesh quality.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_AllowCurvedTopoFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to allow curved topo faces when detecting and treating holes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_FragmentedEdgeTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the edge tolerance for non circular holes with round corners in order to remove the short edge and hotspots when treating holes and features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_HoleOffsetPercentage
+   :type: Optional[float]
+
+
+   
+   Gets or sets the hole offset percentage to be used with mesh size when generating quad layers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_MeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum size for the mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_SplitTopoEdgesAtApexPoint
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to split topo edges at their apex point when repairing topology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_ThinStripesTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum thin stripe width to be used when defeaturing topology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoQuad_ZoneThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Zone Thickness to be used when converting an all quad mesh to splines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoRemoveSharpAngleFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to remove sharp angle faces below the specified angle tolerance by merging them to the neighboring faces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoRemoveThinFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to remove thin faces by merging them with the neighboring faces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoRepairTopoEdgesOfTopoFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to prevent the collapse and defeature of thin or short topologies, and allow the creation of a coarse mesh while keeping topology as-is.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AutoSuppressInteriorEdges
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to suppress interior edges of scoped faces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: AutomaticExternalScope
    :type: Optional[bool]
 
 
    
    Gets or sets whether to define programmatically the external scoping method and pattern for the external enclosure. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Axis
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the Axis coordinates.
 
 
 
@@ -557,6 +1792,206 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: BendingScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the bending scope. Default: Value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BendingScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the bending scope. Default: Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BendingScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the scope outcome from a previous operation. Applicable only if scope is defined by outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BendingScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the part, zone or label name pattern that defines the scope. Applicable only if scope is defined by value. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BiasingIntensity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the BiasingIntensity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BiasingModality
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowMorphingBiasingType]
+
+
+   
+   Gets or sets the BiasingModality.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CaptureInternalFeatures
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CaptureInternalFeatures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Center
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the Center 3D coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CenterPlaneNormalOffset
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -632,12 +2067,162 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ConformalMeshOnContactSurfaces
    :type: Optional[bool]
 
 
    
    Gets or sets whether to decide creation of conformal mesh at contact surfaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectIntersectionType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ConnectIntersectionType]
+
+
+   
+   Gets or sets the connect intersection type. The default value is AllToAll.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionBaseTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the base tolerance for the connection with multiple tolerances. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the edge mesh size used to check the connection. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionTargetTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the target tolerance for the connection with multiple tolerances. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ConnectionTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum gap for the connection. 
 
 
 
@@ -682,12 +2267,191 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ConsumeAttachments
+   :type: Optional[bool]
+
+
 .. py:property:: ControlDataDefinition
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlDataDefinedByType]
 
 
    
    This property is used to define if the control data is defined by value or by settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlDescription
+   :type: Optional[System.Collections.Generic.Dictionary[str, Any]]
+
+
+   
+   ControlDescription property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlDescriptionJson
+   :type: Optional[str]
+
+
+   
+   ControlDescriptionJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   It is defined by value or outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   The method can be label/zone/part. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the ControlScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ControlScopePattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlString
+   :type: Optional[str]
+
+
+   
+   Gets the ControlString.
 
 
 
@@ -732,12 +2496,187 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ControlTypeInformation
+   :type: Optional[System.Collections.Generic.Dictionary[str, Any]]
+
+
+   
+   ControlTypeInformation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ControlTypeInformationJson
+   :type: Optional[str]
+
+
+   
+   ControlTypeInformationJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Coordinate
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CoordinateSystem
    :type: Optional[Ansys.ACT.Automation.Mechanical.CoordinateSystem]
 
 
    
    Gets or sets the Coordinate System object used to define the material point location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinatesDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.CoordinatesDefineByType]
+
+
+   
+   Gets or sets the location coordinates definition type. The default value is Location. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoplanarAngleTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the angle below which the faces are considered coplanar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateAssemblyComponent
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateAssemblyComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateAssociationAttributes
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to retain the association information on execution. The default value is false.
 
 
 
@@ -782,12 +2721,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: CreateGeometry
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CreateQuadraticElements
    :type: Optional[bool]
 
 
    
    Gets or sets whether to create quadratic elements. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateQuads
+   :type: Optional[bool]
+
+
+   
+   This property is used to define the name of the size field to apply to the meshing operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CreateSolidComponent
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the CreateSolidComponent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CuboidCenterModality
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.CuboidCenterDefinitionType]
+
+
+   
+   This property is used to define the rule for the computation of the center of the cuboidal enclosure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CylinderHeightAxis
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the cylinder height axis coordinates.
 
 
 
@@ -982,12 +3046,187 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: DeleteMeshVolumes
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the DeleteMeshVolumes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeleteZonePropertiesPropertyExpression
+   :type: Optional[str]
+
+
+   
+   Gets or sets the DeleteZonePropertiesPropertyExpression.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Delta
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the Delta coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeltaX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the x coordinate of the delta attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeltaY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the y coordinate of the delta attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DeltaZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the z coordinate of the delta attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DihedralAngle
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    The dihedral angle is the angle between the normal vectors of two element faces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Direction
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the Direction coordinates.
 
 
 
@@ -1082,12 +3321,287 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: DirectoryName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the DirectoryName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Distance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Distance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeBiasingDefineBy
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.EdgeBiasingDefineBy]
+
+
+   
+   Gets or sets how the scoped edges meshing size is defined for MultiZone edge biasing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeBiasingFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the MultiZone Mesher edge sizing biasing factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeBiasingType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.EdgeBiasingType]
+
+
+   
+   Gets or sets the type of biasing to apply along the scoped edges for MultiZone edge biasing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeCleanup
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the EdgeCleanup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: EdgeLabelName
    :type: Optional[str]
 
 
    
    This property is used to rename the default edge label name generated during execution of step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EdgeMesherBiasingType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.EdgeMesherBiasingType]
+
+
+   
+   Gets or sets the type of biasing to apply along the scoped edges for the EdgeBiasingEdgeMesher control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EditMeshMergedFacesLabel
+   :type: Optional[str]
+
+
+   
+   Gets or sets the label to be applied to the faces that are merged during the EditMesh operation. Defaults to "MergedFaces".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EditMeshSeparatedFacesLabel
+   :type: Optional[str]
+
+
+   
+   Gets or sets the label to be applied to the faces that are separated during the EditMesh operation. Defaults to "SeparatedFaces".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EditMeshSeparationAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the angle above which adjacent face elements are split into separate faces. Defaults to 40 degrees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EditMeshSeparationStrategy
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SeparateFacesStrategyType]
+
+
+   
+   Gets or Sets the separation strategy used by the EditMeshSeparateFaces control. Defaults to Angle.
 
 
 
@@ -1157,12 +3671,112 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: EllipsoidFirstAxis
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the ellipsoid first axis coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EllipsoidSecondAxis
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the ellipsoid second axis coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EllipsoidThirdAxis
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the ellipsoid third axis coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: EnableCheckpoint
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.CheckpointDefinitionType]
 
 
    
    Flag whether to enable a checkpoint or not. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: EnableSmoothing
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the EnableSmoothing.
 
 
 
@@ -1288,6 +3902,106 @@ Property detail
 
    
    Gets or sets the part, zone or label name pattern for the Hole Patching exclusion scoping. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExteriorEdgeLoopScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the Exterior Edge Loop scoping. Defaults to Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExteriorEdgeLoopScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the Exterior Edge Loop scoping. Defaults to Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExteriorEdgeLoopScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome from a previous operation for the Exterior Edge Loop scoping. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ExteriorEdgeLoopScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the part, zone or label name pattern for the Exterior Edge Loop scoping. Applicable only if scope is defined by value.
 
 
 
@@ -1482,6 +4196,81 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: FacetQuality
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.FacetQualityLevelType]
+
+
+   
+   Gets or sets faceting quality level for faceting on execution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FeatureAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the angle not to be exceeded when performing repairs. Must be greater than 0 and less than or equal to 180 degrees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FeatureSize
+   :type: Optional[float]
+
+
+   
+   Gets or sets the FeatureSize.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: FieldName
    :type: Optional[str]
 
@@ -1513,6 +4302,31 @@ Property detail
 
    
    Gets the list of associated figures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FileFilter
+   :type: Optional[str]
+
+
+   
+   Gets or sets the FileFilter.
 
 
 
@@ -1582,6 +4396,206 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: FirstLayerAspectRatio
+   :type: Optional[float]
+
+
+   
+   Gets or sets the FirstLayerAspectRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FirstLayerHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the FirstLayerHeight.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FixedScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   It is defined by value or outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FixedScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   The method can be label/zone/part. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FixedScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the FixedScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FixedScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the FixedScopePattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FreeEdgesAsFixed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the FreeEdgesAsFixed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FreeEdgesLabelName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the FreeEdgesLabelName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: FreeFaceMeshType
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.FreeFaceMeshType]
 
@@ -1613,6 +4627,156 @@ Property detail
 
    
    Gets or sets how free mesh blocks should be treated by the MultiZone meshing algorithm. Defaults to "NotAllowed".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FuseBaseTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the base tolerance for the fuse with multiple tolerances. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FuseTargetTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the target tolerance for the fuse with multiple tolerances. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GapTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the GapTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GeometryFidelity
+   :type: Optional[float]
+
+
+   
+   Gets or sets the GeometryFidelity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupVolumes
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the GroupVolumes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
 
 
 
@@ -1707,6 +4871,206 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: HexcoreTetLayerRelWidth
+   :type: Optional[float]
+
+
+   
+   Gets or sets the HexcoreTetLayerRelWidth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HighPeriodicFacesScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the High Periodic Faces scoping. Defaults to Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HighPeriodicFacesScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the High Periodic Faces scoping. Defaults to Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HighPeriodicFacesScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome from a previous operation for the High Periodic Faces scoping. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HighPeriodicFacesScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the part, zone or label name pattern for the High Periodic Faces scoping. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HorizontalScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the HorizontalScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: HorizontalScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the HorizontalScopePattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: IgnoreOrientation
    :type: Optional[bool]
 
@@ -1757,12 +5121,337 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: IgnoreSolidNames
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the IgnoreSolidNames.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
 
    
    Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportSourceType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowImportModalityType]
+
+
+   
+   Gets or sets the ImportSourceType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationBoundaryScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the Inflation Boundary scoping. Default: Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationBoundaryScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the Inflation Boundary scoping. Default: Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationBoundaryScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome for Inflation Boundary scoping from a previous operation. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationBoundaryScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the zone or label name pattern that defines the Inflation Boundary scoping. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationDomainScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the Inflation Domain scoping. Default: Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationDomainScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the Inflation Domain scoping. Default: Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationDomainScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome for Inflation Domain scoping from a previous operation. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationDomainScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the zone or label name pattern that defines the Inflation Domain scoping. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationFirstLayerHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the height of the first inflation layer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationGrowthRate
+   :type: Optional[float]
+
+
+   
+   Gets or sets gradient of layer height.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InflationMaximumLayers
+   :type: Optional[int]
+
+
+   
+   Gets or sets the maximum number of inflation layers.
 
 
 
@@ -1982,6 +5671,106 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: InteriorEdgeLoopScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the Interior Edge Loop scoping. Defaults to Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InteriorEdgeLoopScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the Interior Edge Loop scoping. Defaults to Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InteriorEdgeLoopScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome from a previous operation for the Interior Edge Loop scoping. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InteriorEdgeLoopScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the part, zone or label name pattern for the Interior Edge Loop scoping. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: InternalLabelName
    :type: Optional[str]
 
@@ -2032,6 +5821,81 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: IntersectingTopoFaceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the minimum angle used in finding thin stripes with advanced topology diagnostics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LabelCreationExpression
+   :type: Optional[str]
+
+
+   
+   Gets or sets the expression set algebra expression used in a LabelCreationByExpression control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LabelCreationExpressionVariable
+   :type: Optional[str]
+
+
+   
+   Gets or sets the expression variable name associated to entities identified by a label creation control. These variables can be referenced in a LabelCreationByExpression control to create labels based on expressions. Valid variable names do not contain whitespaces or any of the following characters "&, |, ^, !, (, )".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: LabelName
    :type: Optional[str]
 
@@ -2057,12 +5921,287 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: LastLayerAspectRatio
+   :type: Optional[float]
+
+
+   
+   Gets or sets the LastLayerAspectRatio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: LateralDefeatureSize
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    Gets or sets the defeature size to be used along the lateral direction of stacking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LocalRemesh
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the LocalRemesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Location
+   :type: Optional[float]
+
+
+   
+   Gets or sets the location attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowPeriodicFacesScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the Low Periodic Faces scoping. Defaults to Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowPeriodicFacesScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the Low Periodic Faces scoping. Defaults to Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowPeriodicFacesScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome from a previous operation for the Low Periodic Faces scoping. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LowPeriodicFacesScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the part, zone or label name pattern for the Low Periodic Faces scoping. Applicable only if scope is defined by value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ManageTangentEdges
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the attribute to manage tangent edges connection for the connection control. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MappedBlocksSplitAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the split angle to be used for introducing extra splits in the mapped blocks when UseMappedBlocksSplitAngle is True. Defaults to 60.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MatchControlRotationAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the periodic rotation angle for a Cyclic MatchControlMultiZoneMesher control. Defaults to 90 degrees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MatchControlType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.MatchControlType]
+
+
+   
+   Gets or Sets the Match Control type used by the MatchControlMultiZoneMesher control. Defaults to Translation.
 
 
 
@@ -2182,6 +6321,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MaxEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets max edge length to be used for faceting on execution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: MaxHoleSize
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -2207,12 +6371,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MaxIterations
+   :type: Optional[int]
+
+
+   
+   Gets or sets the MaxIterations .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: MaxSize
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    Gets or sets the maximum size to be used for the volumetric size field sizing computation in the Proximity Sizing and Curvature Sizing controls. This is a length value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MergeAcrossParts
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to merge across parts during the resolution of the surface overlaps.
 
 
 
@@ -2282,12 +6496,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MergeOverlappingFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to merge overlapping faces after connect. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshEntityType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.MeshEntityType]
+
+
+   
+   Gets or sets the target mesh entity type. The default value is Face.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: MeshFlowControl
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.MeshFlowControl]
 
 
    
    This property gives control over the flow of mesh during surface mesh generation. The supported modes are None, and Global Cartesian.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshedSurfaceLabelSuffix
+   :type: Optional[str]
+
+
+   
+   Gets or sets the suffix to be used when defining labels scoped to faces meshed by the MultiZone mesher.
 
 
 
@@ -2407,6 +6696,80 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MorphFieldDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphFieldOutcome
+   :type: Optional[int]
+
+
+   
+   Gets the MorphFieldOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphMidSideNodes
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to apply morphing on the model based on the mid nodes displacements after the projection on the underlying geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: MorphRecordingName
    :type: Optional[str]
 
@@ -2432,12 +6795,237 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: MorphSolverModality
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowMorphingSolverType]
+
+
+   
+   Gets or sets the MorphSolverModality.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphableScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   It is defined by value or outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphableScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   The method can be label/zone/part. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphableScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the MorphableScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MorphableScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the MorphableScopePattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiEdgesLabelName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the MultiEdgesLabelName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Names
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Names.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NormalAngle
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    Gets or sets the maximum allowed normal angle between neighboring elements when computing curvature for the Curvature Sizing control. This value must be between 0 and 180 degrees (0 to π) and defaults to 18 degrees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NormalTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets normal tolerance to be used for faceting on execution.
 
 
 
@@ -2532,12 +7120,287 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: NumberOfPlanarCuts
+   :type: Optional[int]
+
+
+   
+   This property is used to define the number of planar cuts for the automatic planar cut control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfRadialDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of radial divisions to apply to scoped faces having two concentric boundary loops.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfRings
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfRings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfThreads
+   :type: Optional[int]
+
+
+   
+   Gets or sets the NumberOfThreads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: NumberOfVolumetricLayers
+   :type: Optional[int]
+
+
+   
+   Allows user to input number of volumetric layers of the enclosure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OffsetDistance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the offset distance attribute of the corresponding direct morphing control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: OffsetFileName
    :type: Optional[str]
 
 
    
    Gets or sets the full file path to the .csv file containing the offset coordinates for replication.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OffsetType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.PrismOffsetType]
+
+
+   
+   Gets or sets the OffsetType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Origin
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the origin coordinates.
 
 
 
@@ -2632,6 +7495,106 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: OverlapTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the OverlapTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OverlappingTopoFaceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the tolerance for the minimum overlap distance used in finding overlapping topology faces with advanced topology diagnostics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OverlapsTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the tolerance value to be used to detect the overlaps to resolve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: PartName
    :type: Optional[str]
 
@@ -2663,6 +7626,156 @@ Property detail
 
    
    The number of volumetric Layers determines the number of layers. This property decides whether all the layers are an equal size (default 0.0) or they should gradually increase the size of volume element than previous element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PercentageSmoothing
+   :type: Optional[int]
+
+
+   
+   Gets or sets the PercentageSmoothing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PinchTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the largest tolerance to be used when removing small features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PrescribedPointsFileName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the path to the file containing the prescribed points locations. The data must be in csv format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreserveBoundary
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to preserve the boundary or not. If true, adding a prescribed point which causes a deformation of the volume boundary will result in a failure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreserveBoundaryLayers
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the PreserveBoundaryLayers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProjectOnGeometry
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to project the mesh on the underlying geometry.
 
 
 
@@ -2732,12 +7845,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: PropertyName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the PropertyName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PropertyValue
+   :type: Optional[str]
+
+
+   
+   Gets or sets the PropertyValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ProtectOnlyBoundaries
    :type: Optional[bool]
 
 
    
    Gets or sets whether the topology protection flag is applied only to the exterior boundary of the scoped boundaries or not. Defaults to False.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProximityRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the radius for the proximity based search.
 
 
 
@@ -2957,12 +8145,162 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Radius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the radius attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Ratio
+   :type: Optional[float]
+
+
+   
+   Gets or sets the ratio attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: RecomputeClosedVolumes
    :type: Optional[bool]
 
 
    
    Gets or sets whether to recompute closed volumes after the operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceFaceScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   Gets or sets the type of scope definition for the ReferenceFace scoping in MultiZone Edge Biasing. Default: Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceFaceScopeScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   Gets or sets the scoping method for the ReferenceFace scoping in MultiZone Edge Biasing. Default: Label.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceFaceScopeScopeOutcome
+   :type: Optional[Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome]
+
+
+   
+   Gets or sets the scope outcome for the ReferenceFace scoping in MultiZone Edge Biasing from a previous operation. Applicable only if scope is defined by outcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReferenceFaceScopeScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the zone or label name pattern that defines the ReferenceFace scoping in MultiZone Edge Biasing. Applicable only if scope is defined by value.
 
 
 
@@ -3032,6 +8370,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ReleaseStatusString
+   :type: Optional[str]
+
+
+   
+   ReleaseStatusString property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Remesh
    :type: Optional[bool]
 
@@ -3082,12 +8445,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: RepairTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the tolerance value to be used to reduce variability of output topology, prevent the collapse and defeature of thin or short topologies, and allow the creation of a coarse mesh while keeping topology as-is.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: RestrictBoundaryNodes
    :type: Optional[bool]
 
 
    
    Gets or sets whether to restrict the boundary nodes displacement. The default value is true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RetainMeshedEdges
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to retain the existing mesh on the input edges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RetainMeshedTopoFaces
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the RetainMeshedTopoFaces.
 
 
 
@@ -3132,12 +8570,212 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: RetryWithGeometry
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the RetryWithGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReverseDeformationFieldName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the ReverseDeformationFieldName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ReverseEdgeBiasingDirection
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether the Multizone Mesher edge biasing direction should be reversed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ReverseSurfaceOrientation
    :type: Optional[bool]
 
 
    
    Reverse Surface Orientation. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RigidScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   It is defined by value or outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RigidScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   The method can be label/zone/part. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RigidScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the RigidScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RigidScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the RigidScopePattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RotationAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the rotation angle attribute of the corresponding direct morphing control.
 
 
 
@@ -3282,6 +8920,10 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ScriptFilename
+   :type: Optional[str]
+
+
 .. py:property:: SeedFaceScopeDefinition
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
 
@@ -3382,6 +9024,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SelfIntersectionsLabelName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the SelfIntersectionsLabelName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SemistructuredPatternType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SemistructuredPatternType]
+
+
+   
+   Gets or sets the Semistructured Pattern type used by the MultiZone Mapped Meshing control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SharedTopologyLabelName
    :type: Optional[str]
 
@@ -3407,12 +9099,112 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SharpAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum angle between faces to be merged. Must be greater than 0 and less than or equal to 30 degrees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShortEdgeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum edge length to be collapsed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SideTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the SideTolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SizeFieldDefinition
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
 
 
    
    Gets or sets how the control's size field pattern should be defined, either by "Value" or by "Outcome". The default value is "Value".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SizeFieldName
+   :type: Optional[str]
+
+
+   
+   This property is used to define the name of the size field to apply to the meshing operation.
 
 
 
@@ -3482,6 +9274,131 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SkipInteractiveSession
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to skip the interactive session on execution. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SlicerLayerHeight
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the spacing between newly created parallel planes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SlicerLayerStart
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the z coordinate of the first plane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SlicerRelativeTolerance
+   :type: Optional[float]
+
+
+   
+   Gets or sets the relative tolerance for adjusting surface nodes when near a slicing plane. If the surface nodes are within the tolerance distance relative to the layer height, they will be projected to the new plane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SmallTopoEdgesLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the max edge length used in finding small topo edges with advanced topology diagnostics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SmoothingIterations
    :type: Optional[int]
 
@@ -3513,6 +9430,931 @@ Property detail
 
    
    Gets or sets whether to enable and disable the volume preserving smoothing. If enabled, the smoothing will preserve the initial volume of the input. The default value is false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomCapDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of vertical divisions for the bottom cap of the solder ball mesh. If an internal cap is generated, shell divisions is used instead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomCapLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the length of the solder ball bottom cap. Positive values for spheres create an external cap beneath the bottom split, and negative values create an internal cap beginning at the bottom split length. Torus will take the absolute value and always create an internal cap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomSolderSplit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the point at which the bottom split of the solder ball begins.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomSplitDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of vertical divisions for the bottom split of the solder ball mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallBottomSplitLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the length of the solder ball beginning at the bottom split point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallCentralVerticalDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of vertical divisions for the center of the solder ball mesh, not including top and bottom splits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallCylinderShellDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of divisions for the inner cylinder shell of the solder ball mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallInnerCylinderRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the radius of the solder ball's inner cylinder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallOuterLoopDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of outer loop divisions for the solder ball mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallRadius
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the radius of the solder ball.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallShapeType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SolderBallShapeType]
+
+
+   
+   Gets or sets the solder ball shape type. The default value is Sphere.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallShellDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of divisions for the outer shell of the solder ball mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallSmoothMesh
+   :type: Optional[bool]
+
+
+   
+   Gets if the mesh will be smoothed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopCapDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of vertical divisions for the top cap of the solder ball mesh. If an internal cap is generated, shell divisions is used instead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopCapLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the length of the solder ball top cap. Positive values for spheres create an external cap on top of the top split, and negative values create an internal cap beginning at the top split length. Torus will take the absolute value and always create an internal cap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopSolderSplit
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the point at which the top split of the solder ball begins.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopSplitDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of vertical divisions for the top split of the solder ball mesh.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolderBallTopSplitLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the length of the solder ball beginning at the top split point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGADecimationFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the decimation factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGADegreeR
+   :type: Optional[int]
+
+
+   
+   Gets or sets the degree R.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGADegreeS
+   :type: Optional[int]
+
+
+   
+   Gets or sets the degree S.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGADegreeT
+   :type: Optional[int]
+
+
+   
+   Gets or sets the degree T.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGAFeatureAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the feature angle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGAGeometryFileName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the file name path string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGAInterpolationElementsR
+   :type: Optional[int]
+
+
+   
+   Gets or sets the interpolation elements r.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGAInterpolationElementsS
+   :type: Optional[int]
+
+
+   
+   Gets or sets the interpolation elements s.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGAInterpolationElementsT
+   :type: Optional[int]
+
+
+   
+   Gets or sets the interpolation elements t.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGANElementsR
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of elements R.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGANElementsS
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of elements S.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGANElementsT
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of elements T.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGASolverFileName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the file name path string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGATolerance
+   :type: Optional[float]
+
+
+   
+   Gets or sets the tolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolidIGATriTolerance
+   :type: Optional[float]
+
+
+   
+   Gets or sets the tri tolerance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   It is defined by value or outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   The method can be label/zone/part. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the SourceScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SourceScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the SourceScopePattern.
 
 
 
@@ -3682,6 +10524,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SurfaceMeshType
    :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SurfaceMeshType]
 
@@ -3707,12 +10599,162 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SurfaceScopeModality
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowSurfaceScopeModalityType]
+
+
+   
+   The modality can be Rings or Distance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SurfaceTolerance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets surface tolerance to be used for faceting on execution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SweepingSize
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    Gets or sets the constant size along the sweeping direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetScopeDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeDefinedByType]
+
+
+   
+   It is defined by value or outcome. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetScopeMethod
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType]
+
+
+   
+   The method can be label/zone/part. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the TargetScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TargetScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the TargetScopePattern.
 
 
 
@@ -3782,6 +10824,106 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ThinFaceWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum thin face width to be merged.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinStripesWidth
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the max width used in finding thin stripes with advanced topology diagnostics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinSweepDivisions
+   :type: Optional[int]
+
+
+   
+   Gets or sets the number of divisions to be used for Thin Sweep decomposition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ThinSweepThickness
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets thin sweep thickness to be used for Thin Sweep decomposition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: TopologyConformalConnection
    :type: Optional[bool]
 
@@ -3832,12 +10974,837 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: TrimBoxMaxX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum X coordinate for the box coordinates trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimBoxMaxY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum Y coordinate for the box coordinates trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimBoxMaxZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the maximum Z coordinate for the box coordinates trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimBoxMinX
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the minimum X coordinate for the box coordinates trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimBoxMinY
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the minimum Y coordinate for the box coordinates trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimBoxMinZ
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the minimum Z coordinate for the box coordinates trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimDistance
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the distance for the mesh based trim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimElementSelectionType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALETrimElementSelectionType]
+
+
+   
+   Gets or sets the trim element selection type. The default value is Outside. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimNode1X
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the X coordinate for trim node 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimNode1Y
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Y coordinate for trim node 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimNode1Z
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Z coordinate for trim node 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimNode2X
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the X coordinate for trim node 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimNode2Y
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Y coordinate for trim node 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimNode2Z
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Z coordinate for trim node 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimOperationType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALETrimOperationType]
+
+
+   
+   Gets or sets the trim operation type. The default value is Trim. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimOptionType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALETrimOptionType]
+
+
+   
+   Gets or sets the trim option type. The default value is Mesh. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimRadius1
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the radius 1 for the trim geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TrimRadius2
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the radius 2 for the trim geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnitsSystem
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WBUnitSystemType]
+
+
+   
+   Gets or sets the UnitsSystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnoDataEDXPath
+   :type: Optional[str]
+
+
+   
+   Gets or sets the UnoDataEDXPath.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseCADCurvature
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether to define the local curvature based on the CAD.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseMappedBlocksSplitAngle
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether extra split should be introduced in the mapped blocks based on the MappedBlocksSplitAngle value. Defaults to False.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableName
+   :type: Optional[str]
+
+
+   
+   Gets or sets the VariableName.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.PythonVariableType]
+
+
+   
+   Gets or sets the VariableType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VariableValue
+   :type: Optional[str]
+
+
+   
+   Gets or sets the VariableValue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalDirection
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the VerticalDirection coordinates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalDirectionX
+   :type: Optional[float]
+
+
+   
+   Gets or sets the VerticalDirectionX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalDirectionY
+   :type: Optional[float]
+
+
+   
+   Gets or sets the VerticalDirectionY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalDirectionZ
+   :type: Optional[float]
+
+
+   
+   Gets or sets the VerticalDirectionZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalScopeOutcome
+   :type: Optional[int]
+
+
+   
+   Gets or sets the VerticalScopeOutcome.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalScopePattern
+   :type: Optional[str]
+
+
+   
+   Gets or sets the VerticalScopePattern.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VerticalizeTargetNormal
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.VerticalizeTargetNormal]
+
+
+   
+   This property defines the target normal direction for the faces during verticalization. The available options are XPlus, YPlus, ZPlus, XMinus, YMinus, ZMinus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: VisibleProperties
    :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
 
 
    
    Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: VolumeCushionPercentage
+   :type: Optional[float]
+
+
+   
+   Gets or sets the VolumeCushionPercentage.
 
 
 
@@ -3882,12 +11849,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: VolumeScopeModality
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowVolumeScopeModalityType]
+
+
+   
+   The modality can be EntireDomain or Box.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: VolumeZoneName
    :type: Optional[str]
 
 
    
    This property is used to rename the default volume zone name generated during execution of step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkingDirectory
+   :type: Optional[str]
+
+
+   
+   Gets or sets the WorkingDirectory.
 
 
 
@@ -3932,12 +11949,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: XAxis
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the x coordinate of the axis attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XCenter
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the x coordinate of the center attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: XCoordinate
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    It defines the X Coordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: XPointOnBend
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the x coordinate of the point on the bend region attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YAxis
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the y coordinate of the axis attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: YCenter
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the y coordinate of the center attribute of the corresponding control.
 
 
 
@@ -3982,12 +12124,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: YPointOnBend
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the y coordinate of the point on the bend region attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZAxis
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the z coordinate of the axis attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZCenter
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the z coordinate of the center attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ZCoordinate
    :type: Optional[Ansys.Core.Units.Quantity]
 
 
    
    It defines the Z Coordinate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZPointOnBend
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the z coordinate of the point on the bend region attribute of the corresponding control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZoneType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.MeshWorkflowZoneType]
+
+
+   
+   Gets or sets the ZoneType.
 
 
 
@@ -4040,10 +12307,82 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: CanCheckPublicStateCallbackForIM() -> bool
+
+   
+   CanCheckPublicStateCallbackForIM method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CanShowPublishStateIM() -> bool
+
+   
+   CanShowPublishStateIM method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConnectControlDataToSettings(settings: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> None
+
+   
+   Connects the control data to the desired settings
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConnectScopeOutcome(scopeName: str, outcome: Ansys.ACT.Automation.Mechanical.MeshWorkflowOutcome) -> None
+
+   
+   Connects the scope identified by scopeName to the selected outcome.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ControlPropertyNameToDispIDMap() -> System.Collections.Generic.Dictionary[int, str]
+
+   
+   ControlPropertyNameToDispIDMap method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ConvertControl(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType) -> None
+
+   
+   Converts the control to a ExternalPartEnclosure
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyControlInternalizedFileContentToClipboard() -> None
+
+   
+   CopyControlInternalizedFileContentToClipboard method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyControlInternalizedFilePathToClipboard() -> None
+
+   
+   CopyControlInternalizedFilePathToClipboard method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
 
    
    Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
 
    ..
        !! processed by numpydoc !!
@@ -4072,6 +12411,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -4080,10 +12443,186 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetControlPointElementSizes(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, unit: str) -> List[System.Nullable[float]]
+
+   
+   Gets the Control Point Element Sizes for the specified axis.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetControlPointIndices(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType) -> List[int]
+
+   
+   Gets the Control Point Indices for the specified axis.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetControlPointPositions(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, unit: str) -> List[System.Nullable[float]]
+
+   
+   Gets the Control Point Positions for the specified axis.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetControlPointRatios(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType) -> List[System.Nullable[float]]
+
+   
+   Gets the Control Point Ratios for the specified axis.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableMorphFieldPatterns(path: str) -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableMorphFieldPatterns method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableScopes(path: str) -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableScopes method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableSizeFieldPatterns(path: str) -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableSizeFieldPatterns method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshSpacingType(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType) -> Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEMeshSpacingType
+
+   
+   Gets the Mesh Spacing Type for the specified axis.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(id: int) -> str
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyWorksheetInfo(parentPath: str) -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetPropertyWorksheetInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUnpublishedList() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetUnpublishedList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -4104,6 +12643,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -4114,6 +12677,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
@@ -4122,10 +12693,114 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyTypeInfo(property: Ansys.ACT.Automation.Mechanical.Property) -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   PropertyTypeInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PublishIMProp() -> None
+
+   
+   PublishIMProp method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RemoveParameter(propName: str) -> None
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnType() -> None
+
+   
+   Renames applying the default name based on type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetControlPointElementSizes(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, values: List[System.Nullable[float]], unit: str) -> None
+
+   
+   SetControlPointElementSizes method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetControlPointIndices(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, values: List[int]) -> None
+
+   
+   SetControlPointIndices method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetControlPointPositions(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, values: List[System.Nullable[float]], unit: str) -> None
+
+   
+   SetControlPointPositions method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetControlPointRatios(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, values: List[System.Nullable[float]]) -> None
+
+   
+   SetControlPointRatios method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetMeshSpacingType(axis: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEAxisType, meshSpacingType: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SALEMeshSpacingType) -> None
+
+   
+   Sets the Mesh Spacing Type for the specified axis.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPropertyValue(id: int, value: str, validate: int) -> None
+
+   
+   SetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPublish(id: int) -> None
+
+   
+   SetPublish method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetScopeMethodAndPattern(methodId: int, method: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ScopeType, patternId: int, pattern: str) -> None
+
+   
+   SetScopeMethodAndPattern method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetUnpublish(id: int) -> None
+
+   
+   SetUnpublish method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

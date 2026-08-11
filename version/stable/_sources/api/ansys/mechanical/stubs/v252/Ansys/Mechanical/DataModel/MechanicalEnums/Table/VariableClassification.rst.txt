@@ -5,17 +5,17 @@
 :class:`VariableClassification`
 ===============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
    This enum represents the classification of variables that can be represented by Table
    variables/columns.
 
-   A full variable definition requires both a T:Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType and an
-   T:Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification.
+   A full variable definition requires both a  and an
+   .
 
    The explicit enum values need to be kept in-sync with the Typescript enumeration of the
    same name in the frontend Angular project.
@@ -47,24 +47,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Independent`
-            - 
-          * - :py:attr:`~Real`
-            - 
-          * - :py:attr:`~Real_i`
-            - 
-          * - :py:attr:`~Real_j`
-            - 
-          * - :py:attr:`~Real_k`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -73,29 +75,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: Independent
-   :value: 1
-
-
-.. py:attribute:: Real
-   :value: 2
-
-
-.. py:attribute:: Real_i
-   :value: 201
-
-
-.. py:attribute:: Real_j
-   :value: 202
-
-
-.. py:attribute:: Real_k
-   :value: 203
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

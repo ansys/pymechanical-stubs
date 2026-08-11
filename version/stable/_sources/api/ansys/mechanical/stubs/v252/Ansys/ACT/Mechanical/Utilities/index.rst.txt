@@ -40,7 +40,7 @@ Summary
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences`
-            - ..
+            - This is used to provide import and reload (refresh) preferences for geometry file import.
 
 
 

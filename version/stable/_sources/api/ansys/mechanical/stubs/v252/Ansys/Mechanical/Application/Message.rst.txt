@@ -5,7 +5,7 @@
 :class:`Message`
 ================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Application.Message
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Application.Message(text: str, severity: Ansys.Mechanical.DataModel.Enums.MessageSeverityType)
 
    Bases: :py:obj:`object`
 
@@ -32,6 +32,7 @@
        !! processed by numpydoc !!
 
 
+
 .. py:currentmodule:: Message
 
 Overview
@@ -40,6 +41,21 @@ Overview
 .. tab-set::
 
 
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -52,6 +68,8 @@ Overview
             - The display string of the message.
           * - :py:attr:`~Location`
             - The location of the message.
+          * - :py:attr:`~MessageVisibility`
+            - MessageVisibility property.
           * - :py:attr:`~RelatedObjects`
             - The list of objects related to the message.
           * - :py:attr:`~Severity`
@@ -65,6 +83,15 @@ Overview
 
 
 
+
+   .. tab-item:: Special methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__repr__`
+            - __repr__ method.
 
 
 
@@ -102,6 +129,31 @@ Property detail
 
    
    The location of the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MessageVisibility
+   :type: Optional[bool]
+
+
+   
+   MessageVisibility property.
 
 
 
@@ -249,6 +301,48 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(other: Ansys.Mechanical.Application.Message) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __repr__() -> str
+
+   
+   __repr__ method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

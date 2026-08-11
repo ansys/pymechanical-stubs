@@ -28,10 +28,29 @@ Summary
 
 
 
+
+
+
+
 .. py:currentmodule:: Dataset2D
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.LineType`
+            - An enum that allows user to control the display of dataset with respect to showing lines and markers on the chart.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.MarkerShape`
+            - An enum that allows user to control the shape of dataset markers on the chart.
 
 
 
@@ -58,6 +77,14 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> LineType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/Charts/Dataset2D/LineType>
+    <span class="nf nf-cod-symbol_class"></span> MarkerShape</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/Charts/Dataset2D/MarkerShape>
 
 
 .. toctree::

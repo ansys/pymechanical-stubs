@@ -41,6 +41,17 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~add_EnabledChanged`
+            - add_EnabledChanged method.
+          * - :py:attr:`~remove_EnabledChanged`
+            - remove_EnabledChanged method.
+
 
    .. tab-item:: Properties
 
@@ -141,6 +152,24 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: add_EnabledChanged(value: System.EventHandler) -> None
+
+   
+   add_EnabledChanged method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: remove_EnabledChanged(value: System.EventHandler) -> None
+
+   
+   remove_EnabledChanged method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

@@ -5,7 +5,7 @@
 :class:`ColumnarDataImportDefinition`
 =====================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.ExternalData.ColumnarDataImportDefinition
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.ExternalData.ColumnarDataImportDefinition(index: int, variableType: Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.VariableType, unit: str, name: str, userFieldVariable: str)
 
    Bases: :py:obj:`object`
 
@@ -42,6 +42,21 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
    .. tab-item:: Properties
 
@@ -56,7 +71,7 @@ Overview
           * - :py:attr:`~Unit`
             - Gets or sets the unit of the column.
           * - :py:attr:`~UserFieldVariable`
-            - ..
+            - Gets or sets the user field variable type as a string for the column.
           * - :py:attr:`~VariableType`
             - Gets or sets the variable type of the column.
 
@@ -149,7 +164,9 @@ Property detail
 
 
    
+   Gets or sets the user field variable type as a string for the column. 
 
+   This property is only used when VariableType is UserField.
 
 
 
@@ -196,6 +213,40 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

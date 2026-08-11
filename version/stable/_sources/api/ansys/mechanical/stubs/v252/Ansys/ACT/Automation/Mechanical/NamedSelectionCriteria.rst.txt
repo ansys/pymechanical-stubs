@@ -53,6 +53,16 @@ Overview
             - Clears the collection.
           * - :py:attr:`~Contains`
             - Returns whether the collection contains the given criterion.
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~IndexOf`
             - Returns the index of the given criterion if it exists in the collection.  Returns -1 if it does not
           * - :py:attr:`~Insert`
@@ -61,6 +71,8 @@ Overview
             - Removes the given criterion from the collection if it exists in the collection.  Throws an exception if it does not.
           * - :py:attr:`~RemoveAt`
             - Removes the criterion at the given index.  Throws an exception if the given index is not valid.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -71,6 +83,8 @@ Overview
 
           * - :py:attr:`~Count`
             - The number of criteria in the collection.
+          * - :py:attr:`~IsReadOnly`
+            - IsReadOnly property.
           * - :py:attr:`~Item`
             - Item property.
 
@@ -88,6 +102,31 @@ Property detail
 
    
    The number of criteria in the collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsReadOnly
+   :type: Optional[bool]
+
+
+   
+   IsReadOnly property.
 
 
 
@@ -162,6 +201,46 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CopyTo(criteria: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion, index: int) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Ansys.ACT.Automation.Mechanical.CriterionEnumerator
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: IndexOf(criterion: Ansys.ACT.Automation.Mechanical.NamedSelectionCriterion) -> int
 
    
@@ -190,6 +269,14 @@ Method detail
 
    
    Removes the criterion at the given index.  Throws an exception if the given index is not valid.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

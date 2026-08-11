@@ -34,6 +34,8 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: AdditionalProperties
 .. tab-set::
 
@@ -49,6 +51,10 @@ Summary
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.AdditionalProperties.ApplyCancelProperty`
             - Provides a way to create properties with Apply/Cancel buttons.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.AdditionalProperties.Control`
+            - The control type for an additional property.
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Mechanical.AdditionalProperties.DoubleProperty`
@@ -90,6 +96,7 @@ Summary
    :hidden:
 
     <span class="nf nf-cod-symbol_class"></span> ApplyCancelProperty</api/ansys/mechanical/stubs/v252/Ansys/ACT/Mechanical/AdditionalProperties/ApplyCancelProperty>
+    <span class="nf nf-cod-symbol_class"></span> Control</api/ansys/mechanical/stubs/v252/Ansys/ACT/Mechanical/AdditionalProperties/Control>
     <span class="nf nf-cod-symbol_class"></span> DoubleProperty</api/ansys/mechanical/stubs/v252/Ansys/ACT/Mechanical/AdditionalProperties/DoubleProperty>
     <span class="nf nf-cod-symbol_class"></span> ExpressionProperty</api/ansys/mechanical/stubs/v252/Ansys/ACT/Mechanical/AdditionalProperties/ExpressionProperty>
     <span class="nf nf-cod-symbol_class"></span> OptionsProperty</api/ansys/mechanical/stubs/v252/Ansys/ACT/Mechanical/AdditionalProperties/OptionsProperty>

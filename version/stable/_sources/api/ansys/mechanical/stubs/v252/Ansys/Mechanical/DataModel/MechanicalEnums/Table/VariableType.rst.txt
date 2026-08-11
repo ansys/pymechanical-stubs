@@ -5,14 +5,14 @@
 :class:`VariableType`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
    An enumeration of the different variable types supported by the tabular data
-   T:Ansys.Mechanical.Interfaces.IDataSeries implementation "Ansys.ACT.Automation.Mechanical.Table.Column".
+    implementation "Ansys.ACT.Automation.Mechanical.Table.Column".
 
 
 
@@ -42,42 +42,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~AverageFilmTemperature`
-            - 
-          * - :py:attr:`~BulkTemperature`
-            - 
-          * - :py:attr:`~DifferenceBetweenSurfaceAndBulkTemperature`
-            - 
-          * - :py:attr:`~HeatTransferCoefficient`
-            - 
-          * - :py:attr:`~ID`
-            - 
-          * - :py:attr:`~Pressure`
-            - 
-          * - :py:attr:`~StrainScalingFactor`
-            - 
-          * - :py:attr:`~SurfaceTemperature`
-            - 
-          * - :py:attr:`~Temperature`
-            - 
-          * - :py:attr:`~ThetaCoordinate`
-            - 
-          * - :py:attr:`~Time`
-            - 
-          * - :py:attr:`~XCoordinate`
-            - 
-          * - :py:attr:`~YCoordinate`
-            - 
-          * - :py:attr:`~ZCoordinate`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -86,65 +70,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: AverageFilmTemperature
-   :value: 8
-
-
-.. py:attribute:: BulkTemperature
-   :value: 9
-
-
-.. py:attribute:: DifferenceBetweenSurfaceAndBulkTemperature
-   :value: 11
-
-
-.. py:attribute:: HeatTransferCoefficient
-   :value: 5
-
-
-.. py:attribute:: ID
-   :value: 3
-
-
-.. py:attribute:: Pressure
-   :value: 4
-
-
-.. py:attribute:: StrainScalingFactor
-   :value: 17
-
-
-.. py:attribute:: SurfaceTemperature
-   :value: 10
-
-
-.. py:attribute:: Temperature
-   :value: 7
-
-
-.. py:attribute:: ThetaCoordinate
-   :value: 12
-
-
-.. py:attribute:: Time
-   :value: 13
-
-
-.. py:attribute:: XCoordinate
-   :value: 14
-
-
-.. py:attribute:: YCoordinate
-   :value: 15
-
-
-.. py:attribute:: ZCoordinate
-   :value: 16
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

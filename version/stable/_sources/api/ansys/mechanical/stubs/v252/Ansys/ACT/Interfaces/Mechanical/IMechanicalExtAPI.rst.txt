@@ -47,32 +47,14 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~CloseResultReader`
+            - Close the result readers for a given result file
           * - :py:attr:`~ExecuteCommand`
             - ExecuteCommand method.
           * - :py:attr:`~LockPrePostLicense`
             - Locks the license used by the PRE/POST application.
           * - :py:attr:`~UnlockPrePostLicense`
             - R
-          * - :py:attr:`~get_Application`
-            - get_Application method.
-          * - :py:attr:`~get_Context`
-            - get_Context method.
-          * - :py:attr:`~get_DataModel`
-            - get_DataModel method.
-          * - :py:attr:`~get_ExtensionManager`
-            - get_ExtensionManager method.
-          * - :py:attr:`~get_ExtensionMgr`
-            - get_ExtensionMgr method.
-          * - :py:attr:`~get_Graphics`
-            - get_Graphics method.
-          * - :py:attr:`~get_Log`
-            - get_Log method.
-          * - :py:attr:`~get_SelectionManager`
-            - get_SelectionManager method.
-          * - :py:attr:`~get_Tools`
-            - get_Tools method.
-          * - :py:attr:`~get_UserInterface`
-            - get_UserInterface method.
 
 
    .. tab-item:: Properties
@@ -81,6 +63,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~ActResultReaderUsingMeshDataFromRst`
+            - Gets or sets a value indicating whether the mesh data are read inside the .rst file or not.
           * - :py:attr:`~Application`
             - Application property.
           * - :py:attr:`~Context`
@@ -93,14 +77,26 @@ Overview
             - ExtensionMgr property.
           * - :py:attr:`~Graphics`
             - Graphics property.
+          * - :py:attr:`~GraphicsAddin`
+            - Gets the Mechanical Graphics Addin instance for providing custom graphics
           * - :py:attr:`~Log`
             - Log property.
+          * - :py:attr:`~ResultReaderAllowsMultiServers`
+            - If true then allow to create many readers by result file else create only one reader by result file.
+          * - :py:attr:`~ResultReaderConnectionType`
+            - Gets or sets the type of connection to use for the ACT Result Reader : "PIPE" or "TCP"
+          * - :py:attr:`~ResultReaderPort`
+            - Gets or sets the port used for the connection to the result reader
           * - :py:attr:`~SelectionManager`
             - SelectionManager property.
           * - :py:attr:`~Tools`
             - Tools property.
           * - :py:attr:`~UserInterface`
             - UserInterface property.
+          * - :py:attr:`~UsesStandaloneActResultReaderImplementation`
+            - Gets or sets a value indicating which implementation to use when post processing results.
+          * - :py:attr:`~UsesStandaloneResultReaderImplementation`
+            - Gets or sets a value indicating which implementation to use when post processing results.
 
 
 
@@ -110,6 +106,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: ActResultReaderUsingMeshDataFromRst
+   :type: Optional[bool]
+
+
+   
+   Gets or sets a value indicating whether the mesh data are read inside the .rst file or not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Application
    :type: Optional[Ansys.ACT.Interfaces.Mechanical.IMechanicalApplication]
 
@@ -260,12 +281,112 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GraphicsAddin
+   :type: Optional[Ansys.Mechanical.Graphics.MechanicalGraphicsAddin]
+
+
+   
+   Gets the Mechanical Graphics Addin instance for providing custom graphics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Log
    :type: Optional[Ansys.ACT.Interfaces.Common.ILog]
 
 
    
    Log property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultReaderAllowsMultiServers
+   :type: Optional[bool]
+
+
+   
+   If true then allow to create many readers by result file else create only one reader by result file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultReaderConnectionType
+   :type: Optional[str]
+
+
+   
+   Gets or sets the type of connection to use for the ACT Result Reader : "PIPE" or "TCP"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ResultReaderPort
+   :type: Optional[int]
+
+
+   
+   Gets or sets the port used for the connection to the result reader
 
 
 
@@ -360,12 +481,70 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: UsesStandaloneActResultReaderImplementation
+   :type: Optional[bool]
+
+
+   
+   Gets or sets a value indicating which implementation to use when post processing results.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UsesStandaloneResultReaderImplementation
+   :type: Optional[bool]
+
+
+   
+   Gets or sets a value indicating which implementation to use when post processing results.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 
 
 
 
 Method detail
 -------------
+.. py:method:: CloseResultReader(filename: str) -> None
+
+   
+   Close the result readers for a given result file
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ExecuteCommand(cmd: str, args: System.Collections.Generic.Dictionary[str, Any], vars: str) -> System.Collections.Generic.Dictionary[str, Any]
 
    
@@ -391,86 +570,6 @@ Method detail
        You must relock the license after its use. If you don't relock the license, the PRE/POST application will be in read-only mode.
 
 ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Application() -> Ansys.ACT.Interfaces.Mechanical.IMechanicalApplication
-
-   
-   get_Application method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Context() -> str
-
-   
-   get_Context method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_DataModel() -> Ansys.ACT.Interfaces.Mechanical.IMechanicalDataModel
-
-   
-   get_DataModel method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_ExtensionManager() -> Ansys.ACT.Interfaces.Common.IExtensionManager
-
-   
-   get_ExtensionManager method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_ExtensionMgr() -> Ansys.ACT.Interfaces.Common.IExtensionManager
-
-   
-   get_ExtensionMgr method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Graphics() -> Ansys.ACT.Common.Graphics.MechanicalGraphicsWrapper
-
-   
-   get_Graphics method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Log() -> Ansys.ACT.Interfaces.Common.ILog
-
-   
-   get_Log method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_SelectionManager() -> Ansys.ACT.Interfaces.Common.ISelectionManager
-
-   
-   get_SelectionManager method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Tools() -> Ansys.ACT.Interfaces.Common.ITools
-
-   
-   get_Tools method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_UserInterface() -> Ansys.ACT.Interfaces.UserInterface.IUserInterface
-
-   
-   get_UserInterface method.
-
-   ..
        !! processed by numpydoc !!
 
 

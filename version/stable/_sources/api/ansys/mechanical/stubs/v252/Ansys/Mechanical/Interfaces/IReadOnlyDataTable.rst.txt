@@ -30,8 +30,6 @@ Overview
             - GetEnumerator method.
           * - :py:attr:`~GetRow`
             - Returns an enumerable to iterate over the values in a row.
-          * - :py:attr:`~get_Count`
-            - get_Count method.
 
 
    .. tab-item:: Properties
@@ -257,14 +255,6 @@ Method detail
 
    
    Returns an enumerable to iterate over the values in a row.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Count() -> int
-
-   
-   get_Count method.
 
    ..
        !! processed by numpydoc !!

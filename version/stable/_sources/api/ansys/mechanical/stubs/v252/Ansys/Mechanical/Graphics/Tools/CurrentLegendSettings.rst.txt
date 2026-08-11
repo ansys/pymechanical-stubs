@@ -47,14 +47,22 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~ExportLegend`
+            - ExportLegend method.
           * - :py:attr:`~GetBandColor`
             - Gets the color of the specified band.
           * - :py:attr:`~GetBandColorAuto`
             - Gets whether the specified band is set to Automatic or not.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetLowerBandValueAuto`
             - Gets whether the specified lower band value is set to Automatic or not.
           * - :py:attr:`~GetLowerBound`
             - Gets lower bound value of the specified band.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~GetUpperBandValueAuto`
             - Gets whether the specified upper band value is set to Automatic or not.
           * - :py:attr:`~GetUpperBound`
@@ -69,10 +77,16 @@ Overview
             - Sets the color of the specified band.
           * - :py:attr:`~SetBandColorAuto`
             - Sets the specified band to Automatic.
+          * - :py:attr:`~SetLowerBandValueAuto`
+            - SetLowerBandValueAuto method.
           * - :py:attr:`~SetLowerBound`
             - Sets lower bound value of the specified band.
+          * - :py:attr:`~SetUpperBandValueAuto`
+            - SetUpperBandValueAuto method.
           * - :py:attr:`~SetUpperBound`
             - Sets upper bound value of the specified band.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -95,6 +109,12 @@ Overview
             - Number of bands on the legend (min:3, max:30). Bands are added/removed from the top of the legend.
           * - :py:attr:`~SemiTransparency`
             - Whether the legend is semi-transparent.
+          * - :py:attr:`~Subtitles`
+            - Subtitles property.
+          * - :py:attr:`~Title`
+            - Title property.
+          * - :py:attr:`~Title2`
+            - Title2 property.
 
 
 
@@ -279,12 +299,103 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Subtitles
+   :type: Optional[List[str]]
+
+
+   
+   Subtitles property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Title
+   :type: Optional[str]
+
+
+   
+   Title property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Title2
+   :type: Optional[str]
+
+
+   
+   Title2 property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 
 
 
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportLegend(filePath: str) -> None
+
+   
+   ExportLegend method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetBandColor(index: int) -> int
 
    
@@ -301,6 +412,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetLowerBandValueAuto(index: int) -> bool
 
    
@@ -313,6 +432,14 @@ Method detail
 
    
    Gets lower bound value of the specified band.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -373,6 +500,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: SetLowerBandValueAuto(index: int, val: bool) -> None
+
+   
+   SetLowerBandValueAuto method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetLowerBound(index: int, value: Ansys.Core.Units.Quantity) -> None
 
    
@@ -381,10 +516,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: SetUpperBandValueAuto(index: int, val: bool) -> None
+
+   
+   SetUpperBandValueAuto method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetUpperBound(index: int, value: Ansys.Core.Units.Quantity) -> None
 
    
    Sets upper bound value of the specified band.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

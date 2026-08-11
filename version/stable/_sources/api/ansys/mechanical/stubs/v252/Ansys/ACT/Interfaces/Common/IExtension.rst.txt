@@ -56,6 +56,10 @@ Overview
             - Gets the minor version of the extension.
           * - :py:attr:`~Name`
             - Gets the name of the extension.
+          * - :py:attr:`~ScriptEngine`
+            - Gets the IronPython script engine.
+          * - :py:attr:`~ScriptScope`
+            - Gets the IronPython scope.
           * - :py:attr:`~UniqueId`
             - Gets the unique identifier of the extension.
           * - :py:attr:`~Version`
@@ -150,6 +154,56 @@ Property detail
 
    
    Gets the name of the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScriptEngine
+   :type: Optional[Microsoft.Scripting.Hosting.ScriptEngine]
+
+
+   
+   Gets the IronPython script engine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ScriptScope
+   :type: Optional[Microsoft.Scripting.Hosting.ScriptScope]
+
+
+   
+   Gets the IronPython scope.
 
 
 

@@ -20,6 +20,15 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+
 
    .. tab-item:: Properties
 
@@ -120,6 +129,16 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: CopyTo(other: Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolverMemorySettings) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

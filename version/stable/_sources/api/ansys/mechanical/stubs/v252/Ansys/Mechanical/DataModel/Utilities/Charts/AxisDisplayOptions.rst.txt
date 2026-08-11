@@ -49,6 +49,14 @@ Overview
 
           * - :py:attr:`~CopySettingsFrom`
             - Copies the settings used in the input AxisDisplayOptions reference to the AxisDisplayOptions calling this method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -69,6 +77,8 @@ Overview
             - Gets or sets the Minimum limit used for the chart display.
           * - :py:attr:`~ShowGridLines`
             - Gets or sets the visibility of the axis gridlines.
+          * - :py:attr:`~ShowScrollBarOnZoom`
+            - ShowScrollBarOnZoom property.
           * - :py:attr:`~UpperLimit`
             - Gets the default higher limit of the axis range.
           * - :py:attr:`~UseAutomaticLimits`
@@ -235,6 +245,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ShowScrollBarOnZoom
+   :type: Optional[bool]
+
+
+   
+   ShowScrollBarOnZoom property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: UpperLimit
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -296,6 +331,38 @@ Method detail
 
    
    Copies the settings used in the input AxisDisplayOptions reference to the AxisDisplayOptions calling this method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -30,12 +30,28 @@ Overview
             - Adds a CompositeCriterionTerm at the end in the definition.
           * - :py:attr:`~Clear`
             - Clears all the CompositeCriterionTerms in the definition.
+          * - :py:attr:`~Contains`
+            - Contains method.
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~IndexOf`
             - Gives the index where the specified CompositeCriterionTerm exists in the definition.
           * - :py:attr:`~Insert`
             - Inserts a CompositeCriterionTerm at a specified index in the definition.
+          * - :py:attr:`~Remove`
+            - Remove method.
           * - :py:attr:`~RemoveAt`
             - Removes the CompositeCriterionTerm at a specified index in the definition.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -46,6 +62,8 @@ Overview
 
           * - :py:attr:`~Count`
             - Gives the number of CompositeCriterionTerms in the definition.
+          * - :py:attr:`~IsReadOnly`
+            - IsReadOnly property.
           * - :py:attr:`~Item`
             - Item property.
 
@@ -63,6 +81,31 @@ Property detail
 
    
    Gives the number of CompositeCriterionTerms in the definition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsReadOnly
+   :type: Optional[bool]
+
+
+   
+   IsReadOnly property.
 
 
 
@@ -132,6 +175,54 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Contains(item: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm) -> bool
+
+   
+   Contains method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(array: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm, arrayIndex: int) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator[Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm]
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: IndexOf(item: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm) -> int
 
 .. code-block:: text
@@ -154,6 +245,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: Remove(item: Ansys.ACT.Automation.Mechanical.CompositeCriterionTerm) -> bool
+
+   
+   Remove method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RemoveAt(index: int) -> None
 
 .. code-block:: text
@@ -162,6 +261,14 @@ Method detail
    Returns IndexOutOfRangeException for invalid index.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
        !! processed by numpydoc !!
 
 

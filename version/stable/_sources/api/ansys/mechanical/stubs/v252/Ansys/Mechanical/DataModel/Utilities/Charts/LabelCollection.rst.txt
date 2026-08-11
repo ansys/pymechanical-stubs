@@ -57,6 +57,14 @@ Overview
             - Creates label(s) on the dataset at a specified Y coordinate.
           * - :py:attr:`~DeleteLabel`
             - Deletes a label from a specific position in the chart.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -65,6 +73,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
           * - :py:attr:`~Labels`
             - Gets an IEnumerable of ILabelInfo objects, which contain information about the underlying label
 
@@ -76,6 +86,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSUtils.IDSChartLabelCollection]
+
+
+   
+   InternalObject property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Labels
    :type: Optional[Iterable[Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection.LabelInfo]]
 
@@ -161,6 +196,38 @@ Method detail
    An InvalidOperationException will be thrown when deleting a Label that does not exist.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
        !! processed by numpydoc !!
 
 

@@ -5,7 +5,7 @@
 :class:`Analysis`
 =================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Analysis
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Analysis(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -193,6 +193,8 @@ Overview
             - Creates a new Import Load for Fluids Results File.
           * - :py:attr:`~AddImportedLoadMAPDLResultsFile`
             - Creates a new Import Load for MAPDL Results File.
+          * - :py:attr:`~AddImportedLoadResultFile`
+            - Creates a new Import Load for MAPDL Results File.
           * - :py:attr:`~AddImportedRemoteLoadsGroup`
             - Creates a new Import Remote Load Group.
           * - :py:attr:`~AddInitialVelocity`
@@ -329,6 +331,10 @@ Overview
             - Creates a new VolumeConstraint
           * - :py:attr:`~ClearGeneratedData`
             - Run the ClearGeneratedData action.
+          * - :py:attr:`~ComponentById`
+            - ComponentById method.
+          * - :py:attr:`~CoordinateSystemById`
+            - CoordinateSystemById method.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
           * - :py:attr:`~CreateAutomaticFSI`
@@ -337,32 +343,104 @@ Overview
             - Run the CreateAutomaticFSIandEquivalentSourceSurfaces action.
           * - :py:attr:`~CreateAutomaticFarFieldRadiationSurfaces`
             - Run the CreateAutomaticEquivalentSourceSurfaces action.
+          * - :py:attr:`~CreateLoadObject`
+            - CreateLoadObject method.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
+          * - :py:attr:`~CreateObjectCommand`
+            - CreateObjectCommand method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
+          * - :py:attr:`~CreatePostObject`
+            - CreatePostObject method.
+          * - :py:attr:`~CreateResultObject`
+            - CreateResultObject method.
+          * - :py:attr:`~CurrentConsistentUnitFromQuantityName`
+            - CurrentConsistentUnitFromQuantityName method.
+          * - :py:attr:`~DataObjectById`
+            - DataObjectById method.
+          * - :py:attr:`~DataObjectByName`
+            - DataObjectByName method.
+          * - :py:attr:`~DataObjectNamesByType`
+            - DataObjectNamesByType method.
           * - :py:attr:`~Delete`
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Duplicate method.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~ExportNastranFile`
             - Export Nastran File.
           * - :py:attr:`~FilterBasedOnEnvironment`
             - Enables interface filtering that only displays model-level items applicable to
+          * - :py:attr:`~GenerateCDBFile`
+            - GenerateCDBFile method.
+          * - :py:attr:`~GenerateMesh`
+            - GenerateMesh method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetLoadObjects`
+            - GetLoadObjects method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetResultObjects`
+            - GetResultObjects method.
+          * - :py:attr:`~GetResultsData`
+            - GetResultsData method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetUserObjects`
+            - GetUserObjects method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
+          * - :py:attr:`~GroupLoadsByLoadVector`
+            - GroupLoadsByLoadVector method.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
           * - :py:attr:`~ImportLoad`
             - Import Load action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~OpenSolverFilesDirectory`
             - Run the OpenSolverFilesDirectory action.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~PropertyValue`
+            - PropertyValue method.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
           * - :py:attr:`~SelectBodiesWithMultiplePhysicsRegion`
@@ -371,10 +449,14 @@ Overview
             - Run the SelectBodiesWithoutPhysicsRegion action to select the bodies that don't belong to a Physics Region.
           * - :py:attr:`~Solve`
             - Run the Solve action.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~TransferDataFrom`
             - Transfer Data From action.
           * - :py:attr:`~UnlinkDataFrom`
             - Unlink Data From action.
+          * - :py:attr:`~WriteInputFile`
+            - WriteInputFile method.
           * - :py:attr:`~WriteSystemCouplingFiles`
             - Writes the system coupling files. Usage WriteSystemCouplingFiles("C:\Desktop\temp\scp1.scp");
 
@@ -393,14 +475,28 @@ Overview
             - Gets the AnalysisSettings.
           * - :py:attr:`~AnalysisType`
             - Gets the AnalysisType.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~CellId`
             - Gets the CellId.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
+          * - :py:attr:`~Components`
+            - Components property.
+          * - :py:attr:`~CoordinateSystems`
+            - CoordinateSystems property.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
+          * - :py:attr:`~DataObjectIds`
+            - DataObjectIds property.
+          * - :py:attr:`~DataObjectNames`
+            - DataObjectNames property.
+          * - :py:attr:`~DataObjects`
+            - DataObjects property.
           * - :py:attr:`~Electric`
             - Gets the Electric.
           * - :py:attr:`~EnvironmentTemperature`
@@ -409,30 +505,88 @@ Overview
             - Gets the list of associated figures.
           * - :py:attr:`~GenerateInputOnly`
             - Gets the GenerateInputOnly.
+          * - :py:attr:`~GeoData`
+            - GeoData property.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
+          * - :py:attr:`~Id`
+            - Id property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
+          * - :py:attr:`~ImportableObjectSourceId`
+            - ImportableObjectSourceId property.
           * - :py:attr:`~InitialConditions`
             - Get InitialConditions.
+          * - :py:attr:`~InternalDataObjects`
+            - InternalDataObjects property.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~LinkedEnvironments`
+            - LinkedEnvironments property.
+          * - :py:attr:`~LocalizedAnalysisType`
+            - LocalizedAnalysisType property.
+          * - :py:attr:`~MeshData`
+            - MeshData property.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectIdentifier`
+            - ObjectIdentifier property.
+          * - :py:attr:`~ObjectLocation`
+            - ObjectLocation property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PhysicsType`
             - Gets the PhysicsType.
+          * - :py:attr:`~PredictResourceAfterInputFileGeneration`
+            - PredictResourceAfterInputFileGeneration property.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
+          * - :py:attr:`~PropertyNames`
+            - PropertyNames property.
           * - :py:attr:`~ReadOnly`
             - Gets or sets the ReadOnly.
           * - :py:attr:`~ResultFileName`
             - Get the full path and name of the result file.
           * - :py:attr:`~Solution`
             - Gets the Solution.
+          * - :py:attr:`~SolveConfiguration`
+            - SolveConfiguration property.
+          * - :py:attr:`~Solver`
+            - Solver property.
+          * - :py:attr:`~SolverFilesDirectory`
+            - SolverFilesDirectory property.
+          * - :py:attr:`~SolverName`
+            - SolverName property.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~StepCount`
+            - StepCount property.
+          * - :py:attr:`~StepsEndTime`
+            - StepsEndTime property.
           * - :py:attr:`~Structural`
             - Gets or sets the Structural.
+          * - :py:attr:`~SupportedLocations`
+            - SupportedLocations property.
           * - :py:attr:`~SystemCaption`
             - Gets the SystemCaption.
+          * - :py:attr:`~SystemID`
+            - SystemID property.
           * - :py:attr:`~Thermal`
             - Gets the Thermal.
+          * - :py:attr:`~TransferableObjectId`
+            - TransferableObjectId property.
           * - :py:attr:`~VisibleProperties`
             - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WorkingDir`
+            - WorkingDir property.
 
 
 
@@ -542,6 +696,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CellId
    :type: Optional[str]
 
@@ -592,6 +771,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Comments
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Comment]]
 
@@ -617,12 +821,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Components
+   :type: Optional[List[Ansys.ACT.Interfaces.Mechanical.IMechanicalSelectionInfo]]
+
+
+   
+   Components property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CoordinateSystems
+   :type: Optional[List[Ansys.ACT.Interfaces.Analysis.ICoordinateSystem]]
+
+
+   
+   CoordinateSystems property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DataModelObjectCategory
    :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
 
 
    
    Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataObjectIds
+   :type: Optional[List[int]]
+
+
+   
+   DataObjectIds property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataObjectNames
+   :type: Optional[List[str]]
+
+
+   
+   DataObjectNames property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DataObjects
+   :type: Optional[Ansys.ACT.Interfaces.Analysis.IDataObjectCollection]
+
+
+   
+   DataObjects property.
 
 
 
@@ -742,12 +1071,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GeoData
+   :type: Optional[Ansys.ACT.Interfaces.Geometry.IGeoData]
+
+
+   
+   GeoData property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Id
+   :type: Optional[int]
+
+
+   
+   Id property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
 
    
    Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportableObjectSourceId
+   :type: Optional[str]
+
+
+   
+   ImportableObjectSourceId property.
 
 
 
@@ -792,12 +1246,287 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: InternalDataObjects
+   :type: Optional[List[Any]]
+
+
+   
+   InternalDataObjects property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: InternalObject
    :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSEnvironmentAuto]
 
 
    
    Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LinkedEnvironments
+   :type: Optional[tuple[int]]
+
+
+   
+   LinkedEnvironments property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: LocalizedAnalysisType
+   :type: Optional[str]
+
+
+   
+   LocalizedAnalysisType property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MeshData
+   :type: Optional[Ansys.ACT.Interfaces.Mesh.IMeshData]
+
+
+   
+   MeshData property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectIdentifier
+   :type: Optional[Ansys.ACT.Core.Application.Model.ObjectIdentifier]
+
+
+   
+   ObjectIdentifier property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectLocation
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum]
+
+
+   
+   ObjectLocation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -842,12 +1571,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: PredictResourceAfterInputFileGeneration
+   :type: Optional[bool]
+
+
+   
+   PredictResourceAfterInputFileGeneration property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Properties
    :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
 
 
    
    Gets the list of properties for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PropertyNames
+   :type: Optional[List[str]]
+
+
+   
+   PropertyNames property.
 
 
 
@@ -942,12 +1721,212 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SolveConfiguration
+   :type: Optional[Ansys.ACT.Mechanical.Application.SolveProcessSettings.ISolveConfiguration]
+
+
+   
+   SolveConfiguration property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Solver
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.IUserSolver]
+
+
+   
+   Solver property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverFilesDirectory
+   :type: Optional[str]
+
+
+   
+   SolverFilesDirectory property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SolverName
+   :type: Optional[str]
+
+
+   
+   SolverName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepCount
+   :type: Optional[int]
+
+
+   
+   StepCount property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StepsEndTime
+   :type: Optional[List[float]]
+
+
+   
+   StepsEndTime property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Structural
    :type: Optional[bool]
 
 
    
    Gets or sets the Structural.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SupportedLocations
+   :type: Optional[Ansys.ACT.Interfaces.UserObject.ObjectLocationEnum]
+
+
+   
+   SupportedLocations property.
 
 
 
@@ -992,6 +1971,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SystemID
+   :type: Optional[str]
+
+
+   
+   SystemID property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Thermal
    :type: Optional[bool]
 
@@ -1017,12 +2021,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: TransferableObjectId
+   :type: Optional[str]
+
+
+   
+   TransferableObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: VisibleProperties
    :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
 
 
    
    Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkingDir
+   :type: Optional[str]
+
+
+   
+   WorkingDir property.
 
 
 
@@ -1636,6 +2690,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: AddImportedLoadResultFile() -> Ansys.ACT.Automation.Mechanical.ImportedLoads.ImportedLoadGroup
+
+   
+   Creates a new Import Load for MAPDL Results File.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: AddImportedRemoteLoadsGroup() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.LoadGroup
 
    
@@ -2175,6 +3237,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ComponentById(id: int) -> Ansys.ACT.Interfaces.Mechanical.IMechanicalSelectionInfo
+
+   
+   ComponentById method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CoordinateSystemById(id: int) -> Ansys.ACT.Interfaces.Analysis.ICoordinateSystem
+
+   
+   CoordinateSystemById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
 
    
@@ -2207,10 +3285,82 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateLoadObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
+
+   
+   CreateLoadObject method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjectCommand(userObject: Ansys.ACT.Interfaces.UserObject.IUserObject) -> Ansys.Common.Interop.DSWBApplet.IDSAppCommand
+
+   
+   CreateObjectCommand method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreatePostObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
+
+   
+   CreatePostObject method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateResultObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserResult
+
+   
+   CreateResultObject method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CurrentConsistentUnitFromQuantityName(quantityName: str) -> str
+
+   
+   CurrentConsistentUnitFromQuantityName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DataObjectById(id: int) -> Ansys.ACT.Interfaces.Analysis.IDataObject
+
+   
+   DataObjectById method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DataObjectByName(name: str) -> Ansys.ACT.Interfaces.Analysis.IDataObject
+
+   
+   DataObjectByName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DataObjectNamesByType(dataType: str) -> List[str]
+
+   
+   DataObjectNamesByType method.
 
    ..
        !! processed by numpydoc !!
@@ -2227,6 +3377,14 @@ Method detail
 
    
    Duplicate method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -2249,10 +3407,98 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: GenerateCDBFile(filename: str, arguments: Ansys.ACT.Automation.Mechanical.CDBGenerationArguments, progress: Ansys.Mechanical.Application.Progress) -> None
+
+   
+   GenerateCDBFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GenerateMesh() -> None
+
+   
+   GenerateMesh method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
    Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLoadObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserLoad]
+
+   
+   GetLoadObjects method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
 
    ..
        !! processed by numpydoc !!
@@ -2265,10 +3511,90 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetResultObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserResult]
+
+   
+   GetResultObjects method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetResultsData() -> Ansys.ACT.Interfaces.Post.IResultReader
+
+   
+   GetResultsData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUserObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]
+
+   
+   GetUserObjects method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GroupAllSimilarChildren() -> None
 
    
    Run the GroupAllSimilarChildren action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupLoadsByLoadVector() -> None
+
+   
+   GroupLoadsByLoadVector method.
 
    ..
        !! processed by numpydoc !!
@@ -2285,6 +3611,30 @@ Method detail
 
    
    Import Load action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
 
    ..
        !! processed by numpydoc !!
@@ -2307,10 +3657,26 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
    Get a property by its unique name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyValue(name: str) -> Any
+
+   
+   PropertyValue method.
 
    ..
        !! processed by numpydoc !!
@@ -2347,6 +3713,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: TransferDataFrom(analysis: Ansys.ACT.Automation.Mechanical.Analysis) -> None
 
    
@@ -2359,6 +3733,14 @@ Method detail
 
    
    Unlink Data From action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: WriteInputFile(filename: str) -> None
+
+   
+   WriteInputFile method.
 
    ..
        !! processed by numpydoc !!

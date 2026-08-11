@@ -26,6 +26,8 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: MechanicalEnums
 .. tab-set::
 
@@ -103,6 +105,17 @@ Summary
 
 
 
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MultizoneMappedMeshType`
+            - To select Multizone Mesh Type.
+
+
 
     .. tab-item:: Enums
 
@@ -145,6 +158,13 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> MultizoneMappedMeshType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/MultizoneMappedMeshType>
 
 
 .. toctree::

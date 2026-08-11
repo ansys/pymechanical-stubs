@@ -5,7 +5,7 @@
 :class:`MechanicalCameraWrapper`
 ================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.MechanicalCameraWrapper
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Common.Graphics.MechanicalCameraWrapper(graphics: Ansys.ACT.Common.Graphics.GraphicsWrapper, camera: Ansys.Common.Interop.GraphicsDataModel.IDSCameraItf)
 
    Bases: :py:obj:`object`
 
@@ -47,18 +47,38 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetAsString`
             - Retrieves the view commands as related to the application type as a string.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetLocation`
+            - GetLocation method.
+          * - :py:attr:`~GetTarget`
+            - GetTarget method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~Pan`
             - Shifts the camera position horizontally or vertically based on x and y quantities.
           * - :py:attr:`~Rotate`
             - Rotates the camera about an axis.
+          * - :py:attr:`~RotateView`
+            - RotateView method.
+          * - :py:attr:`~SaveUndoRedoView`
+            - SaveUndoRedoView method.
           * - :py:attr:`~SetFit`
             - Fits the view to the specified selection. If null is supplied, fits the view to the entire model.
           * - :py:attr:`~SetSpecificViewOrientation`
             - Sets a specific view orientation.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~Zoom`
             - Zooms in or out on the model.
+          * - :py:attr:`~ZoomRectPixels`
+            - ZoomRectPixels method.
+          * - :py:attr:`~ZoomRectSubpixels`
+            - ZoomRectSubpixels method.
 
 
    .. tab-item:: Properties
@@ -69,6 +89,8 @@ Overview
 
           * - :py:attr:`~FocalPoint`
             - The focal point of the camera (coordinates are in the global coordinate system).
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
           * - :py:attr:`~SceneHeight`
             - Specifies the scene height (in length units) that will be projected and fit to the viewport.
           * - :py:attr:`~SceneWidth`
@@ -77,6 +99,12 @@ Overview
             - The vector pointing up from the focal point.
           * - :py:attr:`~ViewVector`
             - The vector pointing from the focal point to the camera.
+          * - :py:attr:`~ViewportHeight`
+            - ViewportHeight property.
+          * - :py:attr:`~ViewportWidth`
+            - ViewportWidth property.
+          * - :py:attr:`~ZoomFactor`
+            - ZoomFactor property.
 
 
 
@@ -92,6 +120,31 @@ Property detail
 
    
    The focal point of the camera (coordinates are in the global coordinate system).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.GraphicsDataModel.IDSCameraItf]
+
+
+   
+   InternalObject property.
 
 
 
@@ -211,16 +264,131 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ViewportHeight
+   :type: Optional[int]
+
+
+   
+   ViewportHeight property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ViewportWidth
+   :type: Optional[int]
+
+
+   
+   ViewportWidth property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ZoomFactor
+   :type: Optional[float]
+
+
+   
+   ZoomFactor property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 
 
 
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetAsString(appType: Ansys.Mechanical.DataModel.Enums.ApplicationType) -> str
 
    
    Retrieves the view commands as related to the application type as a string.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLocation() -> Ansys.ACT.Interfaces.Graphics.IWorldPoint
+
+   
+   GetLocation method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTarget() -> Ansys.ACT.Interfaces.Graphics.IWorldPoint
+
+   
+   GetTarget method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -241,6 +409,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: RotateView(angle: float) -> None
+
+   
+   RotateView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SaveUndoRedoView(forcesave: int) -> None
+
+   
+   SaveUndoRedoView method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetFit(sel: Ansys.ACT.Interfaces.Common.ISelectionInfo) -> None
 
    
@@ -257,10 +441,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Zoom(zoomVal: float) -> None
 
    
    Zooms in or out on the model. 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ZoomRectPixels(min_x: int, min_y: int, max_x: int, max_y: int) -> None
+
+   
+   ZoomRectPixels method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ZoomRectSubpixels(min_x: float, min_y: float, max_x: float, max_y: float) -> None
+
+   
+   ZoomRectSubpixels method.
 
    ..
        !! processed by numpydoc !!

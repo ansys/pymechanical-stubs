@@ -49,10 +49,6 @@ Overview
 
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~get_Count`
-            - get_Count method.
-          * - :py:attr:`~get_Item`
-            - get_Item method.
 
 
    .. tab-item:: Properties
@@ -188,22 +184,6 @@ Method detail
 
    
    GetEnumerator method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Count() -> int
-
-   
-   get_Count method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Item(index: int) -> float
-
-   
-   get_Item method.
 
    ..
        !! processed by numpydoc !!

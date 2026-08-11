@@ -49,10 +49,18 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetDisplayOptionsForDataset`
             - Returns a reference to the dataset display options for a specific dataset.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetLabelCollectionForDataset`
             - Returns a reference to the label collection for a specific dataset.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -63,6 +71,8 @@ Overview
 
           * - :py:attr:`~Datasets`
             - Retrieves all datasets of a chart.
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
           * - :py:attr:`~NormalizeYAxis`
             - Allows a normalized display of y-axis values, usually for cases where the axis has mixed quantities.
           * - :py:attr:`~XAxisDisplayOptions`
@@ -84,6 +94,31 @@ Property detail
 
    
    Retrieves all datasets of a chart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSUtils.IDSCharts]
+
+
+   
+   InternalObject property.
 
 
 
@@ -186,6 +221,14 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetDisplayOptionsForDataset(dataset: Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D) -> Ansys.Mechanical.DataModel.Utilities.Charts.Dataset2DDisplayOptions
 
    
@@ -194,10 +237,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetLabelCollectionForDataset(dataset: Ansys.Mechanical.DataModel.Utilities.Dataset.Dataset2D) -> Ansys.Mechanical.DataModel.Utilities.Charts.LabelCollection
 
    
    Returns a reference to the label collection for a specific dataset.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

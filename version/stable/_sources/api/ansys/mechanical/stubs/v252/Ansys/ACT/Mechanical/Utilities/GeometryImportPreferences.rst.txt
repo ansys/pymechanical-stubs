@@ -11,7 +11,13 @@
 
 
    
+   This is used to provide import and reload (refresh) preferences for geometry file import.
+   These preferences are identical to those exposed in the WB2 project schematic and Mechanical
+   Geometry preferences. More information can be found in the “Geometry Preferences” section of
+   the “CAD Integration” documentation. Both general and advanced preferences are provided.
 
+   Default values will be taken from the Mechanical preferences. This allows user-specified
+   default values to propagate to these preferences.
 
 
 
@@ -31,6 +37,7 @@
        !! processed by numpydoc !!
 
 
+
 .. py:currentmodule:: GeometryImportPreferences
 
 Overview
@@ -39,6 +46,30 @@ Overview
 .. tab-set::
 
 
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetScriptedPropertySetter`
+            - Get a string containing script-executable commands to set the properties on a
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -73,6 +104,8 @@ Overview
             - Allows mixed-dimension parts to be imported as assembly components with parts of
           * - :py:attr:`~NamedSelectionKey`
             - If `ProcessNamedSelections` is `true`, import only those named selections with this
+          * - :py:attr:`~ParameterKey`
+            - If `ProcessParameters` is not `None`, this specifies the prefix or postfix filtering
           * - :py:attr:`~ProcessAttributes`
             - Import CAD system attributes.
           * - :py:attr:`~ProcessCoordinateSystems`
@@ -85,6 +118,8 @@ Overview
             - Import primary material data defined in the CAD source.
           * - :py:attr:`~ProcessNamedSelections`
             - Import/create named selections.
+          * - :py:attr:`~ProcessParameters`
+            - Enum to specify how parameters should be processed.
           * - :py:attr:`~ProcessSolids`
             - Import solid bodies.
           * - :py:attr:`~ProcessSurfaces`
@@ -292,8 +327,10 @@ Property detail
    
    Enable the decomposition of disjoint geometries for the following associative geometry
    interfaces:
-   bullet
 
+   Creo Parametric (faces only)
+
+   Autodesk Inventor (bodies only)
 
 
 
@@ -444,6 +481,33 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ParameterKey
+   :type: Optional[str]
+
+
+   
+   If `ProcessParameters` is not `None`, this specifies the prefix or postfix filtering
+   that will be used to identify enabled Workbench parameters. Multiple semicolon-delimited
+   filters may be specified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ProcessAttributes
    :type: Optional[bool]
 
@@ -575,6 +639,31 @@ Property detail
 
    
    Import/create named selections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ProcessParameters
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.GeometryImportPreference.Parameters]
+
+
+   
+   Enum to specify how parameters should be processed.
 
 
 
@@ -747,6 +836,54 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetScriptedPropertySetter(variableName: str, preferencesToChange: Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences, preferencesToMirror: Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences) -> str
+   :classmethod:
+
+
+.. code-block:: text
+
+   Get a string containing script-executable commands to set the properties on a
+   preferences instance preferencesToChange, with the scripted name
+   variableName, to match the properties on another preferences instance
+   preferencesToMirror. Only the properties that are different will be used.
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

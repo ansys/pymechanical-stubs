@@ -26,16 +26,24 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AddRow`
+            - AddRow method.
           * - :py:attr:`~AddThicknessLayer`
             - Add a row to the LayeredSectionWorksheet
           * - :py:attr:`~DeleteRow`
             - Delete a row from the LayeredSectionWorksheet
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetAngle`
             - Gets the angle for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetMaterial`
             - Gets the material for the LayeredSection at the row index specifiied.
           * - :py:attr:`~GetThickness`
             - Gets the thickness for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~InsertThicknessLayerAbove`
             - Insert a new layer to the LayeredSectionWorksheet
           * - :py:attr:`~InsertThicknessLayerBelow`
@@ -46,6 +54,8 @@ Overview
             - Set the material for the LayeredSection at the row index specifiied.
           * - :py:attr:`~SetThickness`
             - Set the thickness for the LayeredSection at the row index specifiied.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -96,6 +106,14 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: AddRow() -> int
+
+   
+   AddRow method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: AddThicknessLayer(materialname: str, thickness: float, angle: float) -> int
 
 .. code-block:: text
@@ -117,6 +135,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetAngle(index: int) -> float
 
 .. code-block:: text
@@ -125,6 +151,14 @@ Method detail
    LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: GetMaterial(index: int) -> str
@@ -145,6 +179,14 @@ Method detail
    LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: InsertThicknessLayerAbove(materialname: str, thickness: float, angle: float, index: int) -> int
@@ -197,6 +239,14 @@ Method detail
    LayeredSectionWorksheet indices are zero based and ordered in the Z direction.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
        !! processed by numpydoc !!
 
 

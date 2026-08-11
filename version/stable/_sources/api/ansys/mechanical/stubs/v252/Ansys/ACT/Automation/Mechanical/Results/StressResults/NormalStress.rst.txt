@@ -5,7 +5,7 @@
 :class:`NormalStress`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.StressResults.NormalStress
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Results.StressResults.NormalStress(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -63,6 +63,8 @@ Overview
             - Run the ClearGeneratedData action.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - CreateParameter method.
           * - :py:attr:`~CreateResultsAtAllSets`
@@ -73,34 +75,84 @@ Overview
             - Creates a copy of the current DataModelObject.
           * - :py:attr:`~DuplicateWithoutResults`
             - Run the DuplicateWithoutResults action.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~EvaluateAllResults`
             - Run the EvaluateAllResults action.
           * - :py:attr:`~ExportAnimation`
             - Run the ExportAnimation action.
+          * - :py:attr:`~ExportToSTLFile`
+            - ExportToSTLFile method.
           * - :py:attr:`~ExportToTextFile`
-            - Run the ExportToTextFile action.
+            - ExportToTextFile method.
+          * - :py:attr:`~FetchRemoteResult`
+            - Run the FetchRemoteResult action.
           * - :py:attr:`~FetchRemoteResults`
             - Run the FetchRemoteResult action.
+          * - :py:attr:`~GetAPIName`
+            - GetAPIName method.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetNodalValues`
+            - GetNodalValues method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetQuantityName`
+            - GetQuantityName method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PromoteToNamedSelection`
             - Run the PromoteToNamedSelection action.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
           * - :py:attr:`~RenameBasedOnDefinition`
             - Run the RenameBasedOnDefinition action.
+          * - :py:attr:`~RetrieveRemoteDPFResults`
+            - RetrieveRemoteDPFResults method.
           * - :py:attr:`~RetrieveResult`
             - Evaluates the individual result without evaluating all the results in the same solution.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -111,6 +163,8 @@ Overview
 
           * - :py:attr:`~Amplitude`
             - Gets or sets the Amplitude.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Average`
             - Gets the Average.
           * - :py:attr:`~AverageAcrossBodies`
@@ -127,6 +181,8 @@ Overview
             - Gets or sets the CalculateTimeHistory.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~CombinationNumber`
             - Gets or sets the Combination Number for a Solution Combination result.
           * - :py:attr:`~Comments`
@@ -155,8 +211,12 @@ Overview
             - Gets or sets the GlobalIDs.
           * - :py:attr:`~GraphControlsXAxis`
             - Gets or sets the GraphControlsXAxis.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~HarmonicIndex`
             - Gets or sets the HarmonicIndex.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Identifier`
             - Gets or sets the Identifier.
           * - :py:attr:`~Images`
@@ -217,10 +277,20 @@ Overview
             - Gets the MinimumOfMinimumOverTime.
           * - :py:attr:`~Mode`
             - Gets or sets the Mode.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NamedSelections`
             - Gets or sets the NamedSelections.
           * - :py:attr:`~NormalOrientation`
             - Gets or sets the NormalOrientation.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~Path`
             - Path property.
           * - :py:attr:`~PeakCenter`
@@ -247,18 +317,26 @@ Overview
             - Gets or sets the RPM Selection value at which the results are evaluated.
           * - :py:attr:`~ReportedFrequency`
             - Gets the ReportedFrequency.
+          * - :py:attr:`~ResultType`
+            - Gets or sets the ResultType.
+          * - :py:attr:`~RpmSetNumber`
+            - Gets or sets the RpmSetNumber.
           * - :py:attr:`~ScaleFactor`
             - Gets or sets the ScaleFactor.
           * - :py:attr:`~ScaleFactorValue`
             - Gets or sets the ScaleFactorValue.
           * - :py:attr:`~ScopingMethod`
             - Gets or sets the ScopingMethod.
+          * - :py:attr:`~SeparateDataByEntity`
+            - Gets or sets the SeparateDataByEntity.
           * - :py:attr:`~SetNumber`
             - Gets or sets the Set Number.
           * - :py:attr:`~SolutionCombinationDriver`
             - Gets or sets the SolutionCombinationDriver.
           * - :py:attr:`~SolverComponentIDs`
             - Gets or sets the SolverComponentIDs.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~StressStrainType`
             - Gets or sets the StressStrainType.
           * - :py:attr:`~SubScopeBy`
@@ -275,6 +353,8 @@ Overview
             - SurfaceCoating property.
           * - :py:attr:`~SweepingPhase`
             - Gets or sets the SweepingPhase.
+          * - :py:attr:`~TabularData`
+            - Gets the tabular data of the result.  Use a to get index to each column of the tabular data.
           * - :py:attr:`~ThroughThicknessBendingStress`
             - Gets or sets the ThroughThicknessBendingStress.
           * - :py:attr:`~Time`
@@ -297,6 +377,40 @@ Overview
             - Gets the TotalOutside.
           * - :py:attr:`~VisibleProperties`
             - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WaterfallDisplayFilterBy`
+            - Gets or sets the Filer in Waterfall.
+          * - :py:attr:`~WaterfallDisplayFrequencySelection`
+            - Gets or sets the Frequency Selection.
+          * - :py:attr:`~WaterfallDisplayInterpolateData`
+            - Gets or sets the Interpolate Data Property.
+          * - :py:attr:`~WaterfallDisplayLowerBand`
+            - Gets or sets the Lower Band Value.
+          * - :py:attr:`~WaterfallDisplayMaxRPM`
+            - Gets or sets the Display Max RPM.
+          * - :py:attr:`~WaterfallDisplayMinRPM`
+            - Gets or sets the Display Min RPM.
+          * - :py:attr:`~WaterfallDisplayModeSelection`
+            - Gets or sets the Mode Selection.
+          * - :py:attr:`~WaterfallDisplayOrderSelection`
+            - Gets or sets the Order Selection.
+          * - :py:attr:`~WaterfallDisplayRpmSelection`
+            - Gets or sets the RPM Selection.
+          * - :py:attr:`~WaterfallDisplayScopeToOrderLines`
+            - Gets or sets the Scope to Order Lines Property.
+          * - :py:attr:`~WaterfallDisplayTimeSelection`
+            - Gets or sets the Time Selection.
+          * - :py:attr:`~WaterfallDisplayUpperBand`
+            - Gets or sets the Upper Band Value.
+          * - :py:attr:`~WaterfallDisplayXAxisMaximum`
+            - Gets or sets the Maximum X-Axis Value.
+          * - :py:attr:`~WaterfallDisplayXAxisMinimum`
+            - Gets or sets the Minimum X-Axis Value.
+          * - :py:attr:`~WaterfallDisplayYAxisMaximum`
+            - Gets or sets the Maximum Y-Axis Value.
+          * - :py:attr:`~WaterfallDisplayYAxisMinimum`
+            - Gets or sets the Minimum Y-Axis Value.
+          * - :py:attr:`~WaterfallShowTextOnMosaic`
+            - Gets or sets the Waterfall Mosaic Text Property.
 
 
 
@@ -312,6 +426,31 @@ Property detail
 
    
    Gets or sets the Amplitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
 
 
 
@@ -512,6 +651,31 @@ Property detail
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -883,12 +1047,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: HarmonicIndex
    :type: Optional[int]
 
 
    
    Gets or sets the HarmonicIndex.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -1658,6 +1872,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NamedSelections
    :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
 
@@ -1689,6 +1928,106 @@ Property detail
 
    
    Gets or sets the NormalOrientation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -2033,6 +2372,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ResultType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ResultType]
+
+
+   
+   Gets or sets the ResultType.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: RpmSetNumber
+   :type: Optional[int]
+
+
+   
+   Gets or sets the RpmSetNumber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ScaleFactor
    :type: Optional[Ansys.Mechanical.DataModel.Enums.ScaleFactorType]
 
@@ -2108,6 +2497,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SeparateDataByEntity
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the SeparateDataByEntity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SetNumber
    :type: Optional[int]
 
@@ -2164,6 +2578,31 @@ Property detail
 
    
    Gets or sets the SolverComponentIDs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
 
 
 
@@ -2364,6 +2803,31 @@ Property detail
 
    
    Gets or sets the SweepingPhase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TabularData
+   :type: Optional[Ansys.Mechanical.Interfaces.ITable]
+
+
+   
+   Gets the tabular data of the result.  Use a to get index to each column of the tabular data.
 
 
 
@@ -2658,6 +3122,431 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: WaterfallDisplayFilterBy
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.WaterfallDisplayFilterBy]
+
+
+   
+   Gets or sets the Filer in Waterfall.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayFrequencySelection
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Frequency Selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayInterpolateData
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Interpolate Data Property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayLowerBand
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Lower Band Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayMaxRPM
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Display Max RPM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayMinRPM
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the Display Min RPM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayModeSelection
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Mode Selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayOrderSelection
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Order Selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayRpmSelection
+   :type: Optional[str]
+
+
+   
+   Gets or sets the RPM Selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayScopeToOrderLines
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Scope to Order Lines Property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayTimeSelection
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Time Selection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayUpperBand
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Upper Band Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayXAxisMaximum
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Maximum X-Axis Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayXAxisMinimum
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Minimum X-Axis Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayYAxisMaximum
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Maximum Y-Axis Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallDisplayYAxisMinimum
+   :type: Optional[float]
+
+
+   
+   Gets or sets the Minimum Y-Axis Value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WaterfallShowTextOnMosaic
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Waterfall Mosaic Text Property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 
 
 
@@ -2731,6 +3620,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -2771,6 +3668,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: EvaluateAllResults() -> None
 
    
@@ -2787,10 +3692,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: ExportToTextFile(filePath: str) -> None
+.. py:method:: ExportToSTLFile(filePath: str) -> None
 
    
-   Run the ExportToTextFile action.
+   ExportToSTLFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportToTextFile(bIgnoreExcelPreference: bool, filePath: str) -> None
+
+   
+   ExportToTextFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FetchRemoteResult() -> None
+
+   
+   Run the FetchRemoteResult action.
 
    ..
        !! processed by numpydoc !!
@@ -2803,6 +3724,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   GetAPIName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -2811,10 +3748,122 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNodalValues(bodyRefId: int) -> System.Collections.Generic.Dictionary[int, float]
+
+   
+   GetNodalValues method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetQuantityName(obj: Ansys.Common.Interop.DSObjectsAuto.IDSResultAuto) -> str
+
+   
+   GetQuantityName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -2835,6 +3884,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PromoteToNamedSelection() -> Iterable[Ansys.ACT.Automation.Mechanical.NamedSelection]
 
    
@@ -2851,6 +3924,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -2877,10 +3958,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: RetrieveRemoteDPFResults() -> None
+
+   
+   RetrieveRemoteDPFResults method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RetrieveResult() -> None
 
    
    Evaluates the individual result without evaluating all the results in the same solution.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

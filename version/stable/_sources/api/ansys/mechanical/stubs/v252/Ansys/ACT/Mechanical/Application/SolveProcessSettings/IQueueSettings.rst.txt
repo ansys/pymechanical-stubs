@@ -20,6 +20,15 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+
 
    .. tab-item:: Properties
 
@@ -27,6 +36,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~CloudAccounts`
+            - Gets the list of Cloud Accounts.
           * - :py:attr:`~DCSPassword`
             - DCSPassword property.
           * - :py:attr:`~DCSUrl`
@@ -39,6 +50,8 @@ Overview
             - Gets or sets the License field for the queue settings.
           * - :py:attr:`~Name`
             - Gets or sets the name of the current queue for the configuration.
+          * - :py:attr:`~SelectedCloudAccount`
+            - Gets or sets the Cloud Account.
           * - :py:attr:`~SolutionExecutionTarget`
             - SolutionExecutionTarget property.
 
@@ -50,6 +63,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: CloudAccounts
+   :type: Optional[List[str]]
+
+
+   
+   Gets the list of Cloud Accounts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DCSPassword
    :type: Optional[str]
 
@@ -200,6 +238,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SelectedCloudAccount
+   :type: Optional[str]
+
+
+   
+   Gets or sets the Cloud Account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: SolutionExecutionTarget
    :type: Optional[str]
 
@@ -228,6 +291,16 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: CopyTo(other: Ansys.ACT.Mechanical.Application.SolveProcessSettings.IQueueSettings) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

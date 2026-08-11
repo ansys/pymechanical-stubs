@@ -5,7 +5,7 @@
 :class:`MAPDLSolverData`
 ========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.SolverData.MAPDLSolverData
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.SolverData.MAPDLSolverData(obj: Ansys.Common.Interop.DSObjectsAuto.IDSSolutionSummaryAuto)
 
    Bases: :py:obj:`object`
 
@@ -28,10 +28,18 @@ Overview
 
           * - :py:attr:`~ElementIdsByMaterialId`
             - Returns a list of Element IDs that belong to a given Material ID
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetObjectData`
             - GetObjectData method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~NodeIdsByMaterialId`
             - Returns a list of Node IDs that belong to a given Material ID
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -144,6 +152,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetObjectData(obj: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> Any
 
    
@@ -152,10 +176,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: NodeIdsByMaterialId(matId: str) -> int
 
    
    Returns a list of Node IDs that belong to a given Material ID
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

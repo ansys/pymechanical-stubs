@@ -46,22 +46,8 @@ Overview
             - RemoveAt method.
           * - :py:attr:`~add_PropertyChanged`
             - add_PropertyChanged method.
-          * - :py:attr:`~get_Count`
-            - get_Count method.
-          * - :py:attr:`~get_IsFixedSize`
-            - get_IsFixedSize method.
-          * - :py:attr:`~get_IsReadOnly`
-            - get_IsReadOnly method.
-          * - :py:attr:`~get_IsSynchronized`
-            - get_IsSynchronized method.
-          * - :py:attr:`~get_Item`
-            - get_Item method.
-          * - :py:attr:`~get_SyncRoot`
-            - get_SyncRoot method.
           * - :py:attr:`~remove_PropertyChanged`
             - remove_PropertyChanged method.
-          * - :py:attr:`~set_Item`
-            - set_Item method.
 
 
    .. tab-item:: Properties
@@ -442,66 +428,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: get_Count() -> int
-
-   
-   get_Count method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_IsFixedSize() -> bool
-
-   
-   get_IsFixedSize method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_IsReadOnly() -> bool
-
-   
-   get_IsReadOnly method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_IsSynchronized() -> bool
-
-   
-   get_IsSynchronized method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_Item(index: int) -> Any
-
-   
-   get_Item method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: get_SyncRoot() -> Any
-
-   
-   get_SyncRoot method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: remove_PropertyChanged(value: System.ComponentModel.PropertyChangedEventHandler) -> None
 
    
    remove_PropertyChanged method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: set_Item(index: int, value: Any) -> None
-
-   
-   set_Item method.
 
    ..
        !! processed by numpydoc !!

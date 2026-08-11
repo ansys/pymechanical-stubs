@@ -5,7 +5,7 @@
 :class:`AMSupportRemovalSequence`
 =================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportRemovalSequence
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMSupportRemovalSequence(sequenceObj: Ansys.Common.Interop.DSObjectsAuto.IDSAMProcessSequence)
 
    Bases: :py:obj:`object`
 
@@ -28,16 +28,34 @@ Overview
 
           * - :py:attr:`~Add`
             - Adds a support or base removal step.
+          * - :py:attr:`~Clear`
+            - Clear method.
           * - :py:attr:`~Contains`
             - Returns true if the step exists in the sequencer. If not, returns false
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~Find`
+            - Find method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~IndexOf`
             - Returns index of removal object
           * - :py:attr:`~Insert`
             - Inserts a given step at particular index(zero based)
+          * - :py:attr:`~Remove`
+            - Remove a support or base removal step.
           * - :py:attr:`~RemoveAt`
             - Remove AM step at index.
           * - :py:attr:`~Swap`
             - Swaps two steps in the Removal sequence.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -48,6 +66,10 @@ Overview
 
           * - :py:attr:`~Count`
             - Count property.
+          * - :py:attr:`~IsReadOnly`
+            - IsReadOnly property.
+          * - :py:attr:`~Item`
+            - Item property.
 
 
 
@@ -63,6 +85,56 @@ Property detail
 
    
    Count property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsReadOnly
+   :type: Optional[bool]
+
+
+   
+   IsReadOnly property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Item
+   :type: Optional[Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep]
+
+
+   
+   Item property.
 
 
 
@@ -101,6 +173,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: Clear() -> None
+
+   
+   Clear method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Contains(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> bool
 
 .. code-block:: text
@@ -111,6 +191,54 @@ Method detail
        index2 = removalSequence.Contains(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyTo(array: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep, index: int) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Find(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> int
+
+   
+   Find method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Iterator[Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep]
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: IndexOf(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> int
@@ -139,6 +267,26 @@ Method detail
    Throws a NotSupportedException if the insertion is invalid
    Usage:
     Sequence.Insert(0,Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.UserStep())
+
+..
+       !! processed by numpydoc !!
+
+.. py:method:: Remove(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> bool
+
+.. code-block:: text
+
+   Remove a support or base removal step.
+   Returns true if the step was removed
+   Returns false if the step could not be removed because it did not exist
+   Usage:
+   C#:
+       removalSequence.Remove(new Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval());
+       removalSequence.Remove(new Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
+       removalSequence.Remove(removalSequence[2]));
+   Python:
+       removalSequence.Remove(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.BaseRemoval());
+       removalSequence.Remove(Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj));
+       removalSequence.Remove(removalSequence[2]))
 
 ..
        !! processed by numpydoc !!
@@ -172,6 +320,14 @@ Method detail
        Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj))
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
        !! processed by numpydoc !!
 
 

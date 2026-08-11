@@ -5,7 +5,7 @@
 :class:`AMBuildSettings`
 ========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.AMBuildSettings(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -57,6 +57,8 @@ Overview
             - Creates a new child Image.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~CreateStrainScalingFactorTable`
@@ -65,18 +67,56 @@ Overview
             - Run the Delete action.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~LoadBuildSettings`
             - Run the LoadBuildSettings action.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
@@ -85,6 +125,8 @@ Overview
             - ResetToDefault - Restores default values of all properties.
           * - :py:attr:`~SaveBuildSettings`
             - Run the SaveBuildSettings action.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -103,6 +145,8 @@ Overview
             - Gets or sets the Absorptivity.
           * - :py:attr:`~AdditiveProcess`
             - Gets or sets the AdditiveProcess.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~BeamDiameter`
             - Gets or sets the BeamDiameter.
           * - :py:attr:`~BeamPower`
@@ -121,6 +165,8 @@ Overview
             - Gets or sets the BuildPowderTemperature.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~CooldownGasConvectionCoefficient`
@@ -147,12 +193,16 @@ Overview
             - Gets or sets the GeneratedLayerRotationAngle.
           * - :py:attr:`~GeneratedStartLayerAngle`
             - Gets or sets the GeneratedStartLayerAngle.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~HatchSpacing`
             - Gets or sets the HatchSpacing.
           * - :py:attr:`~HeatingDuration`
             - Gets or sets the HeatingDuration.
           * - :py:attr:`~HeatingMethod`
             - Gets or sets the HeatingMethod.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~InherentStrain`
@@ -167,8 +217,18 @@ Overview
             - Gets or sets the LayerHeightValue.
           * - :py:attr:`~MachineLearningModel`
             - Gets or sets the MachineLearningModel.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NumberOfHeatSources`
             - Gets or sets the NumberOfHeatSources.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PowderPropertyFactor`
             - Gets or sets the PowderPropertyFactor.
           * - :py:attr:`~PreheatTemperature`
@@ -185,20 +245,30 @@ Overview
             - Gets or sets the ScanSpeed.
           * - :py:attr:`~ScanStripeWidth`
             - Gets or sets the ScanStripeWidth.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~StrainScalingFactor`
             - Gets or sets the StrainScalingFactor.
+          * - :py:attr:`~StrainScalingFactorDefinition`
+            - Gets the StrainScalingFactorDefinition.
           * - :py:attr:`~StrainScalingFactorInterpolationMethod`
             - StrainScalingFactorInterpolationMethod property.
           * - :py:attr:`~StrainScalingFactorX`
             - Gets or sets the StrainScalingFactorX.
+          * - :py:attr:`~StrainScalingFactorXDefinition`
+            - Gets the StrainScalingFactorXDefinition.
           * - :py:attr:`~StrainScalingFactorXInterpolationMethod`
             - StrainScalingFactorXInterpolationMethod property.
           * - :py:attr:`~StrainScalingFactorY`
             - Gets or sets the StrainScalingFactorY.
+          * - :py:attr:`~StrainScalingFactorYDefinition`
+            - Gets the StrainScalingFactorYDefinition.
           * - :py:attr:`~StrainScalingFactorYInterpolationMethod`
             - StrainScalingFactorYInterpolationMethod property.
           * - :py:attr:`~StrainScalingFactorZ`
             - Gets or sets the StrainScalingFactorZ.
+          * - :py:attr:`~StrainScalingFactorZDefinition`
+            - Gets the StrainScalingFactorZDefinition.
           * - :py:attr:`~StrainScalingFactorZInterpolationMethod`
             - StrainScalingFactorZInterpolationMethod property.
           * - :py:attr:`~ThermalStrainMaterialModel`
@@ -324,6 +394,31 @@ Property detail
 
    
    Gets or sets the AdditiveProcess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
 
 
 
@@ -549,6 +644,31 @@ Property detail
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -893,6 +1013,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: HatchSpacing
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -949,6 +1094,31 @@ Property detail
 
    
    Gets or sets the HeatingMethod.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -1143,12 +1313,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NumberOfHeatSources
    :type: Optional[int]
 
 
    
    Gets or sets the NumberOfHeatSources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -1368,12 +1663,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: StrainScalingFactor
    :type: Optional[Any]
 
 
    
    Gets or sets the StrainScalingFactor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StrainScalingFactorDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMStrainScalingFactorDefinition]
+
+
+   
+   Gets the StrainScalingFactorDefinition.
 
 
 
@@ -1443,6 +1788,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: StrainScalingFactorXDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMStrainScalingFactorDefinition]
+
+
+   
+   Gets the StrainScalingFactorXDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: StrainScalingFactorXInterpolationMethod
    :type: Optional[Any]
 
@@ -1493,6 +1863,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: StrainScalingFactorYDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMStrainScalingFactorDefinition]
+
+
+   
+   Gets the StrainScalingFactorYDefinition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: StrainScalingFactorYInterpolationMethod
    :type: Optional[Any]
 
@@ -1524,6 +1919,31 @@ Property detail
 
    
    Gets or sets the StrainScalingFactorZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StrainScalingFactorZDefinition
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.AMStrainScalingFactorDefinition]
+
+
+   
+   Gets the StrainScalingFactorZDefinition.
 
 
 
@@ -1717,6 +2137,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -1749,6 +2177,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -1757,10 +2209,106 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -1781,6 +2329,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: LoadBuildSettings(fName: str) -> None
 
    
@@ -1797,6 +2369,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -1827,6 +2407,14 @@ Method detail
 
    
    Run the SaveBuildSettings action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

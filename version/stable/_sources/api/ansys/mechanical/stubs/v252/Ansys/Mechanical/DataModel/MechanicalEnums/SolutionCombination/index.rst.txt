@@ -28,10 +28,29 @@ Summary
 
 
 
+
+
+
+
 .. py:currentmodule:: SolutionCombination
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.EnvelopeType`
+            - Specifies the Solution Combination Envelope Type
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.SolutionCombination.Type`
+            - Specifies the Solution Combination Type
 
 
 
@@ -58,6 +77,14 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> EnvelopeType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/SolutionCombination/EnvelopeType>
+    <span class="nf nf-cod-symbol_class"></span> Type</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/SolutionCombination/Type>
 
 
 .. toctree::

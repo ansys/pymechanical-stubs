@@ -5,9 +5,9 @@
 :class:`CoordinateSystemAlignmentType`
 ======================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.CoordinateSystemAlignmentType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,30 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Associative`
-            - 
-          * - :py:attr:`~Component`
-            - 
-          * - :py:attr:`~Fixed`
-            - 
-          * - :py:attr:`~Free`
-            - 
-          * - :py:attr:`~GlobalX`
-            - 
-          * - :py:attr:`~GlobalY`
-            - 
-          * - :py:attr:`~GlobalZ`
-            - 
-          * - :py:attr:`~HitPoint`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -73,41 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: Associative
-   :value: 1
-
-
-.. py:attribute:: Component
-   :value: 6
-
-
-.. py:attribute:: Fixed
-   :value: 0
-
-
-.. py:attribute:: Free
-   :value: 5
-
-
-.. py:attribute:: GlobalX
-   :value: 2
-
-
-.. py:attribute:: GlobalY
-   :value: 3
-
-
-.. py:attribute:: GlobalZ
-   :value: 4
-
-
-.. py:attribute:: HitPoint
-   :value: 7
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

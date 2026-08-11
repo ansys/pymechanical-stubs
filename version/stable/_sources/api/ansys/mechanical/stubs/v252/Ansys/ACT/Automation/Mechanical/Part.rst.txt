@@ -5,7 +5,7 @@
 :class:`Part`
 =============
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Part
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Part(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -59,30 +59,74 @@ Overview
             - Run the ClearGeneratedData action.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GenerateMesh`
             - Run the GenerateMesh action.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetGeoPart`
+            - GetGeoPart method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~PreviewInflation`
             - Run the PreviewInflation action.
           * - :py:attr:`~PreviewSurfaceMesh`
             - Run the PreviewSurfaceMesh action.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~Update`
             - Run the Update action.
 
@@ -97,8 +141,16 @@ Overview
             - Gets the approximate surface area of the part. This is only applicable to parts made up entirely of surface bodies.
           * - :py:attr:`~Assignment`
             - Gets or sets the Assignment.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Average`
             - Gets the Average.
+          * - :py:attr:`~BarScaleFactor`
+            - Gets or sets Cable Bar Scale Factor.
+          * - :py:attr:`~BendingScaleFactor`
+            - Gets or sets Cable Bending Scale Factor.
+          * - :py:attr:`~CableLength`
+            - Gets Cable Initial Length, which is the sum of cable body lengths under multibody cable.
           * - :py:attr:`~CentroidX`
             - Gets the CentroidX.
           * - :py:attr:`~CentroidY`
@@ -107,6 +159,8 @@ Overview
             - Gets the CentroidZ.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~ConfigurationId`
@@ -119,18 +173,30 @@ Overview
             - Gets the Elements.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~FreeLength`
+            - Gets or sets Cable Free Length.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~Hidden`
             - Hide or show the body.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
+          * - :py:attr:`~ImportableObjectSourceId`
+            - ImportableObjectSourceId property.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsVirtual`
+            - IsVirtual property.
           * - :py:attr:`~LengthX`
             - Gets the LengthX.
           * - :py:attr:`~LengthY`
             - Gets the LengthY.
           * - :py:attr:`~LengthZ`
             - Gets the LengthZ.
+          * - :py:attr:`~Load`
+            - Gets or sets Cable Load.
           * - :py:attr:`~Mass`
             - Gets the Mass.
           * - :py:attr:`~Material`
@@ -149,8 +215,20 @@ Overview
             - Gets the MomentOfInertiaIp2.
           * - :py:attr:`~MomentOfInertiaIp3`
             - Gets the MomentOfInertiaIp3.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~Nodes`
             - Gets the Nodes.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
+          * - :py:attr:`~PreloadType`
+            - Gets or sets the preload type for cable.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
           * - :py:attr:`~ReadOnly`
@@ -159,8 +237,18 @@ Overview
             - Gets the related Result Mesh's ObjectId.
           * - :py:attr:`~StandardDeviation`
             - Gets the StandardDeviation.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~Suppressed`
             - Gets or sets the Suppressed.
+          * - :py:attr:`~SynchronizeFreeLengthWithGeometry`
+            - Gets or sets whether Geometry properties or "Free Length" property entry is used for cable free length input.
+          * - :py:attr:`~TorsionalScaleFactor`
+            - Gets or sets Cable Torsional Scale Factor.
+          * - :py:attr:`~TransferableObjectId`
+            - TransferableObjectId property.
+          * - :py:attr:`~UseStiffnessScaleFactor`
+            - Gets or sets the UseStiffnessScaleFactor.
           * - :py:attr:`~Visible`
             - Gets or sets the Visible.
           * - :py:attr:`~VisibleProperties`
@@ -226,12 +314,112 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Average
    :type: Optional[float]
 
 
    
    Gets the Average.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BarScaleFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets Cable Bar Scale Factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: BendingScaleFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets Cable Bending Scale Factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CableLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets Cable Initial Length, which is the sum of cable body lengths under multibody cable.
 
 
 
@@ -332,6 +520,31 @@ Property detail
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -501,12 +714,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: FreeLength
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets Cable Free Length.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Hidden
    :type: Optional[bool]
 
 
    
    Hide or show the body.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -551,12 +839,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ImportableObjectSourceId
+   :type: Optional[str]
+
+
+   
+   ImportableObjectSourceId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: InternalObject
    :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSBodyGroupAuto]
 
 
    
    Gets the internal object. For advanced usage only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsVirtual
+   :type: Optional[bool]
+
+
+   
+   IsVirtual property.
 
 
 
@@ -632,6 +970,31 @@ Property detail
 
    
    Gets the LengthZ.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Load
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets Cable Load.
 
 
 
@@ -876,12 +1239,162 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Nodes
    :type: Optional[int]
 
 
    
    Gets the Nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: PreloadType
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.PreloadType]
+
+
+   
+   Gets or sets the preload type for cable.
 
 
 
@@ -1001,12 +1514,137 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Suppressed
    :type: Optional[bool]
 
 
    
    Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: SynchronizeFreeLengthWithGeometry
+   :type: Optional[bool]
+
+
+   
+   Gets or sets whether Geometry properties or "Free Length" property entry is used for cable free length input.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TorsionalScaleFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets Cable Torsional Scale Factor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransferableObjectId
+   :type: Optional[str]
+
+
+   
+   TransferableObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UseStiffnessScaleFactor
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the UseStiffnessScaleFactor.
 
 
 
@@ -1158,6 +1796,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(paramPath: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
@@ -1174,10 +1820,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GenerateMesh() -> None
 
    
    Run the GenerateMesh action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
 
    ..
        !! processed by numpydoc !!
@@ -1190,10 +1860,114 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetGeoPart() -> Ansys.ACT.Interfaces.Geometry.IGeoPart
+
+   
+   GetGeoPart method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -1210,6 +1984,30 @@ Method detail
 
    
    Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
 
    ..
        !! processed by numpydoc !!
@@ -1240,6 +2038,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
@@ -1252,6 +2058,14 @@ Method detail
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

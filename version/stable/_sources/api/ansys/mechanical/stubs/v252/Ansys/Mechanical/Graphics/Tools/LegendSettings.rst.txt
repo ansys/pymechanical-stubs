@@ -5,7 +5,7 @@
 :class:`LegendSettings`
 =======================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.Tools.LegendSettings
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.Tools.LegendSettings(unit: str)
 
    Bases: :py:obj:`object`
 
@@ -47,14 +47,24 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~ExportLegend`
+            - ExportLegend method.
           * - :py:attr:`~GetBandColor`
             - Gets the color of the specified band.
           * - :py:attr:`~GetBandColorAuto`
             - Gets whether the specified band is set to Automatic or not.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetLowerBandValueAuto`
             - Gets whether the lower specified band value is set to Automatic or not.
           * - :py:attr:`~GetLowerBound`
             - Gets lower bound value of the specified band.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~GetUpperBandValueAuto`
             - Gets whether the specified upper band value is set to Automatic or not.
           * - :py:attr:`~GetUpperBound`
@@ -67,10 +77,18 @@ Overview
             - Sets the color of the specified band.
           * - :py:attr:`~SetBandColorAuto`
             - Sets the specified band to Automatic.
+          * - :py:attr:`~SetLowerBandValueAuto`
+            - SetLowerBandValueAuto method.
           * - :py:attr:`~SetLowerBound`
             - Sets lower bound value of the specified band.
+          * - :py:attr:`~SetMinMax`
+            - SetMinMax method.
+          * - :py:attr:`~SetUpperBandValueAuto`
+            - SetUpperBandValueAuto method.
           * - :py:attr:`~SetUpperBound`
             - Sets upper bound value of the specified band.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -89,6 +107,10 @@ Overview
             - Whether to replot and improve the synchronization of the result values.
           * - :py:attr:`~LogarithmicScale`
             - Whether the result values are distributed in a Logarithmic scale.
+          * - :py:attr:`~Max`
+            - Max property.
+          * - :py:attr:`~Min`
+            - Min property.
           * - :py:attr:`~NumberOfBands`
             - Number of bands on the legend (min:3, max:30). Bands are added/removed from the top of the legend.
           * - :py:attr:`~SemiTransparency`
@@ -229,6 +251,56 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Max
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Max property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Min
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Min property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NumberOfBands
    :type: Optional[int]
 
@@ -310,6 +382,30 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: CopyTo(activeLegend: Ansys.Mechanical.Graphics.Tools.CurrentLegendSettings) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportLegend(filePath: str) -> None
+
+   
+   ExportLegend method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetBandColor(index: int) -> int
 
    
@@ -326,6 +422,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetLowerBandValueAuto(index: int) -> bool
 
    
@@ -338,6 +442,14 @@ Method detail
 
    
    Gets lower bound value of the specified band.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -390,6 +502,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: SetLowerBandValueAuto(index: int, val: bool) -> None
+
+   
+   SetLowerBandValueAuto method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetLowerBound(index: int, value: Ansys.Core.Units.Quantity) -> None
 
    
@@ -398,10 +518,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: SetMinMax(min: Ansys.Core.Units.Quantity, max: Ansys.Core.Units.Quantity) -> None
+
+   
+   SetMinMax method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetUpperBandValueAuto(index: int, val: bool) -> None
+
+   
+   SetUpperBandValueAuto method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetUpperBound(index: int, value: Ansys.Core.Units.Quantity) -> None
 
    
    Sets upper bound value of the specified band.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

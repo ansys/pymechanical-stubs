@@ -5,7 +5,7 @@
 :class:`CommandRepository`
 ==========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CommandRepository
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CommandRepository(iCommandRepository: Ansys.Common.Interop.FECommandsModel.ICommandRepository)
 
    Bases: :py:obj:`object`
 
@@ -47,6 +47,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetCommandByIndex`
             - Gets the commands by index.
           * - :py:attr:`~GetCommandName`
@@ -57,6 +59,12 @@ Overview
             - Gets the number of commands of a type specified by param=eCommandsType in the repository.
           * - :py:attr:`~GetCommandsByName`
             - Gets the commands by name.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -71,6 +79,14 @@ Overview
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetCommandByIndex(index: int) -> Ansys.Common.Interop.FECommandsModel.ICommand
 
    
@@ -107,6 +123,30 @@ Method detail
 
    
    Gets the commands by name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

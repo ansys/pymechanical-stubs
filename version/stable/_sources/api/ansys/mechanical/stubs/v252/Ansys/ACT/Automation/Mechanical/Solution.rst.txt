@@ -5,7 +5,7 @@
 :class:`Solution`
 =================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Solution
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Solution(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -211,6 +211,8 @@ Overview
             - Creates a new DirectionalVelocityPSD
           * - :py:attr:`~AddDirectionalVelocityRS`
             - Creates a new DirectionalVelocityRS
+          * - :py:attr:`~AddDisplacementWaterfallDiagram`
+            - Creates a new DisplacementWaterfallDiagram
           * - :py:attr:`~AddElasticStrainFrequencyResponse`
             - Creates a new ElasticStrainFrequencyResponse
           * - :py:attr:`~AddElasticStrainIntensity`
@@ -237,6 +239,8 @@ Overview
             - Creates a new ElementalTriads
           * - :py:attr:`~AddEmagReactionProbe`
             - Creates a new EmagReactionProbe
+          * - :py:attr:`~AddEnergyContribution`
+            - Creates a new EnergyContribution
           * - :py:attr:`~AddEnergyDissipatedPerUnitVolume`
             - Creates a new EnergyDissipatedPerUnitVolume
           * - :py:attr:`~AddEnergyProbe`
@@ -329,6 +333,8 @@ Overview
             - Creates a new JouleHeat
           * - :py:attr:`~AddJouleHeatProbe`
             - Creates a new JouleHeatProbe
+          * - :py:attr:`~AddKrylovResidualNorm`
+            - Creates a new KrylovResidualNorm
           * - :py:attr:`~AddLatticeDensity`
             - Creates a new LatticeDensity
           * - :py:attr:`~AddLatticeElementalDensity`
@@ -599,12 +605,16 @@ Overview
             - Creates a new Volume
           * - :py:attr:`~AddVolumeProbe`
             - Creates a new VolumeProbe
+          * - :py:attr:`~CheckDCSJobStatus`
+            - CheckDCSJobStatus method.
           * - :py:attr:`~ClearGeneratedData`
             - Run the ClearGeneratedData action.
           * - :py:attr:`~ClearRemoteStorageData`
             - ClearRemoteStorageData method.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~CreateResultsAtAllSets`
@@ -613,8 +623,12 @@ Overview
             - DeleteRow method.
           * - :py:attr:`~DisconnectRemoteJob`
             - DisconnectRemoteJob method.
+          * - :py:attr:`~DoSubstructureExport`
+            - DoSubstructureExport method.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~EvaluateAllContactTrackers`
             - EvaluateAllContactTrackers method.
           * - :py:attr:`~EvaluateAllResults`
@@ -623,34 +637,82 @@ Overview
             - EvaluateContactTracker method.
           * - :py:attr:`~ExecutePostCommands`
             - Run Execute Post Commands for all post command objects.
+          * - :py:attr:`~ExportDeformedModel`
+            - ExportDeformedModel method.
           * - :py:attr:`~ExportSubstructure`
+            - Export Substructure to cpa file.
+          * - :py:attr:`~ExportSubstructureGenerationSolution`
+            - ExportSubstructureGenerationSolution method.
+          * - :py:attr:`~ExportSubstructureInCPAFormat`
             - Export Substructure to cpa file.
           * - :py:attr:`~ExtractSolutionStatistics`
             - ExtractSolutionStatistics method.
+          * - :py:attr:`~FetchRemoteResult`
+            - Run the FetchRemoteResult action.
           * - :py:attr:`~FetchRemoteResults`
             - FetchRemoteResults method.
           * - :py:attr:`~FormatValue`
             - FormatValue method.
           * - :py:attr:`~GenerateAdaptedMesh`
             - GenerateAdaptedMesh method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
           * - :py:attr:`~GetResults`
             - Gets the Results from the server.
+          * - :py:attr:`~GetTableGenerator`
+            - GetTableGenerator method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~IsResultFileChanged`
             - Checks if the referenced result file has been changed.
           * - :py:attr:`~IsResultFileSameAsLoaded`
             - Checks if the given result file is same the loaded result file
           * - :py:attr:`~OpenSolverFilesDirectory`
             - Run the OpenSolverFilesDirectory action.
+          * - :py:attr:`~PredictResource`
+            - PredictResource method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~ReadAnsysResultFile`
@@ -669,6 +731,12 @@ Overview
             - Removes the parameter from the parameter set corresponding to the given property.
           * - :py:attr:`~Solve`
             - Run the Solve action.
+          * - :py:attr:`~StartRemoteDPFPostServerOnREP`
+            - StartRemoteDPFPostServerOnREP method.
+          * - :py:attr:`~StopRemoteDPFPostServer`
+            - StopRemoteDPFPostServer method.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~ValueForResultTracking`
             - ValueForResultTracking method.
           * - :py:attr:`~ValueForSolutionTracking`
@@ -683,12 +751,18 @@ Overview
 
           * - :py:attr:`~AllThreadsCPUTime`
             - AllThreadsCPUTime property.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
+          * - :py:attr:`~CPUPerformanceNote`
+            - CPUPerformanceNote property.
           * - :py:attr:`~CalculateBeamSectionResults`
             - Gets or sets the CalculateBeamSectionResults.
           * - :py:attr:`~CellId`
             - Gets the CellId.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~CyclicSectorDisplayRangeBegin`
@@ -715,16 +789,22 @@ Overview
             - Gets or sets the ExportTopologyFile.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~GPUAccelerationNote`
+            - GPUAccelerationNote property.
           * - :py:attr:`~GPUType`
             - GPUType property.
           * - :py:attr:`~GpuAcceleration`
             - GpuAcceleration property.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~IOBound`
             - IOBound property.
           * - :py:attr:`~IORead`
             - IORead property.
           * - :py:attr:`~IOWrite`
             - IOWrite property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~InternalObject`
@@ -761,6 +841,8 @@ Overview
             - Gets or sets the MemoryUsed.
           * - :py:attr:`~MeshSource`
             - Gets or sets the MeshSource.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~Nodes`
             - Nodes property.
           * - :py:attr:`~NumCoresAvailable`
@@ -779,8 +861,16 @@ Overview
             - NumberOfProcessesRequested property.
           * - :py:attr:`~NumberofSectors`
             - Gets or sets the NumberofSectors.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
           * - :py:attr:`~OperatingSystem`
             - OperatingSystem property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~ProcessorModel`
             - ProcessorModel property.
           * - :py:attr:`~Properties`
@@ -815,8 +905,12 @@ Overview
             - SolverType property.
           * - :py:attr:`~SparseMode`
             - Get the Sparse Mode value.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~Status`
             - Gets the Status.
+          * - :py:attr:`~TabularData`
+            - Gets the tabular data of the solution.  Use a to get index to each column of the tabular data.
           * - :py:attr:`~ThreadsPerProcessRequested`
             - ThreadsPerProcessRequested property.
           * - :py:attr:`~TimeOfRun`
@@ -846,6 +940,56 @@ Property detail
 
    
    AllThreadsCPUTime property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CPUPerformanceNote
+   :type: Optional[bool]
+
+
+   
+   CPUPerformanceNote property.
 
 
 
@@ -921,6 +1065,31 @@ Property detail
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -1265,6 +1434,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GPUAccelerationNote
+   :type: Optional[bool]
+
+
+   
+   GPUAccelerationNote property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: GPUType
    :type: Optional[Ansys.Common.Interop.DSObjectTypes.DSGPUType]
 
@@ -1296,6 +1490,31 @@ Property detail
 
    
    GpuAcceleration property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
 
 
 
@@ -1371,6 +1590,31 @@ Property detail
 
    
    IOWrite property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -1840,6 +2084,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Nodes
    :type: Optional[int]
 
@@ -2065,12 +2334,112 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: OperatingSystem
    :type: Optional[str]
 
 
    
    OperatingSystem property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -2515,12 +2884,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Status
    :type: Optional[Ansys.Mechanical.DataModel.Enums.SolutionStatusType]
 
 
    
    Gets the Status.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TabularData
+   :type: Optional[Ansys.Mechanical.Interfaces.ITable]
+
+
+   
+   Gets the tabular data of the solution.  Use a to get index to each column of the tabular data.
 
 
 
@@ -3377,6 +3796,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: AddDisplacementWaterfallDiagram() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.DisplacementWaterfallDiagram
+
+   
+   Creates a new DisplacementWaterfallDiagram
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: AddElasticStrainFrequencyResponse() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.ElasticStrainFrequencyResponse
 
    
@@ -3477,6 +3904,14 @@ Method detail
 
    
    Creates a new EmagReactionProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddEnergyContribution() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.EnergyContribution
+
+   
+   Creates a new EnergyContribution
 
    ..
        !! processed by numpydoc !!
@@ -3848,6 +4283,14 @@ Method detail
 
    
    Creates a new JouleHeatProbe
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: AddKrylovResidualNorm() -> Ansys.ACT.Automation.Mechanical.Results.FrequencyResponseResults.KrylovResidualNorm
+
+   
+   Creates a new KrylovResidualNorm
 
    ..
        !! processed by numpydoc !!
@@ -4932,6 +5375,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CheckDCSJobStatus() -> None
+
+   
+   CheckDCSJobStatus method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ClearGeneratedData() -> None
 
    
@@ -4952,6 +5403,14 @@ Method detail
 
    
    Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
 
    ..
        !! processed by numpydoc !!
@@ -4988,10 +5447,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: DoSubstructureExport(exportFileName: str, exportTempDir: str, exportSettings: Ansys.ACT.Automation.Mechanical.Substructure.ExportSettings, progress: Ansys.Mechanical.Application.Progress) -> None
+
+   
+   DoSubstructureExport method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
 
    
    Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -5028,7 +5503,31 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ExportDeformedModel(resultTime: float, bodyIds: Iterable[int], createGeometryOnly: bool, scaleFactor: float, pmdbFilePath: str, acmoFilePath: str, protoXmlFilePath: str) -> None
+
+   
+   ExportDeformedModel method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ExportSubstructure(exportFileName: str, exportFormat: Ansys.Mechanical.DataModel.MechanicalEnums.Substructure.ExportFormat, exportSettings: Ansys.ACT.Automation.Mechanical.Substructure.ExportSettings) -> None
+
+   
+   Export Substructure to cpa file.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportSubstructureGenerationSolution(exportFileName: str) -> None
+
+   
+   ExportSubstructureGenerationSolution method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportSubstructureInCPAFormat(exportFileName: str, bAddOnDemandExpansionFiles: bool) -> None
 
    
    Export Substructure to cpa file.
@@ -5040,6 +5539,14 @@ Method detail
 
    
    ExtractSolutionStatistics method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: FetchRemoteResult() -> None
+
+   
+   Run the FetchRemoteResult action.
 
    ..
        !! processed by numpydoc !!
@@ -5068,10 +5575,74 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
    Gets the list of children, filtered by type.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
 
    ..
        !! processed by numpydoc !!
@@ -5084,10 +5655,66 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetResults() -> None
 
    
    Gets the Results from the server.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTableGenerator() -> Ansys.ACT.Automation.Mechanical.TableGenerator
+
+   
+   GetTableGenerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -5104,6 +5731,30 @@ Method detail
 
    
    Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
 
    ..
        !! processed by numpydoc !!
@@ -5132,6 +5783,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PredictResource() -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   PredictResource method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -5140,6 +5799,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -5210,6 +5877,30 @@ Method detail
 
    
    Run the Solve action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StartRemoteDPFPostServerOnREP() -> None
+
+   
+   StartRemoteDPFPostServerOnREP method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StopRemoteDPFPostServer() -> None
+
+   
+   StopRemoteDPFPostServer method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

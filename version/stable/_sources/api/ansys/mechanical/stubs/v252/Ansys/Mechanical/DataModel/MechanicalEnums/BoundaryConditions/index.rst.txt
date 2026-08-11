@@ -26,10 +26,23 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: BoundaryConditions
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation`
+            - enumeration used to set the return object for the magnitude property in boundary conditions.
 
 
 
@@ -52,6 +65,13 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> DataRepresentation</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/BoundaryConditions/DataRepresentation>
 
 
 .. toctree::

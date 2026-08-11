@@ -26,10 +26,23 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: ExternalModel
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ExternalModel.ImportedSurfaceLoadType`
+            - Specifies the ImportedSurfaceLoadType.
 
 
 
@@ -52,6 +65,13 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> ImportedSurfaceLoadType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/Enums/ExternalModel/ImportedSurfaceLoadType>
 
 
 .. toctree::

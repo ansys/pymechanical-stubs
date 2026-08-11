@@ -5,7 +5,7 @@
 :class:`ObjectTags`
 ===================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Application.ObjectTags
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Application.ObjectTags(project: Ansys.ACT.Automation.Mechanical.Project)
 
    Bases: :py:obj:`object`
 
@@ -53,14 +53,26 @@ Overview
             - Clears the collection, removing all objects from the tags in the collection.
           * - :py:attr:`~Contains`
             - Returns whether or not the collection contains the given tag.
+          * - :py:attr:`~CopyTo`
+            - CopyTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetEnumerator`
+            - GetEnumerator method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetTag`
             - Returns the tag in the collection with the given name.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~IndexOf`
             - Returns the index of the given tag. If the given tag does not exist in the collection, returns -1.
           * - :py:attr:`~Remove`
             - Removes a tag if it exists in the collection.
           * - :py:attr:`~RemoveAt`
             - Removes the tag at the given index from the collection.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -71,6 +83,8 @@ Overview
 
           * - :py:attr:`~Count`
             - The number of tags in the collection.
+          * - :py:attr:`~IsReadOnly`
+            - IsReadOnly property.
           * - :py:attr:`~Item`
             - Item property.
           * - :py:attr:`~TagNames`
@@ -90,6 +104,31 @@ Property detail
 
    
    The number of tags in the collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IsReadOnly
+   :type: Optional[bool]
+
+
+   
+   IsReadOnly property.
 
 
 
@@ -189,10 +228,50 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CopyTo(array: Ansys.Mechanical.Application.ObjectTag, arrayIndex: int) -> None
+
+   
+   CopyTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumerator() -> Ansys.Mechanical.Application.TagObjects
+
+   
+   GetEnumerator method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetTag(tagName: str) -> Ansys.Mechanical.Application.ObjectTag
 
    
    Returns the tag in the collection with the given name.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -217,6 +296,14 @@ Method detail
 
    
    Removes the tag at the given index from the collection.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

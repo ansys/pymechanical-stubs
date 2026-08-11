@@ -28,10 +28,29 @@ Summary
 
 
 
+
+
+
+
 .. py:currentmodule:: Common
 .. tab-set::
 
 
+
+
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Common.PathType`
+            - This enum specifies how a path should be interpreted.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.Common.PlaneOrientation`
+            - Specifies the PlaneOrientation
 
 
 
@@ -58,6 +77,14 @@ Summary
 
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> PathType</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/Common/PathType>
+    <span class="nf nf-cod-symbol_class"></span> PlaneOrientation</api/ansys/mechanical/stubs/v252/Ansys/Mechanical/DataModel/MechanicalEnums/Common/PlaneOrientation>
 
 
 .. toctree::

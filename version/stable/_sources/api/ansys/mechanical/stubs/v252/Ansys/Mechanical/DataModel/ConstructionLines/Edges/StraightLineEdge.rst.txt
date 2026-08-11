@@ -32,6 +32,8 @@
        !! processed by numpydoc !!
 
 
+
+
 .. py:currentmodule:: StraightLineEdge
 
 Overview
@@ -40,6 +42,32 @@ Overview
 .. tab-set::
 
 
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~__eq__`
+            - op_Equality method.
+          * - :py:attr:`~__ne__`
+            - op_Inequality method.
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -48,6 +76,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~ConstructionLineId`
+            - The ID of the associated ConstructionLine.
           * - :py:attr:`~EndPoint`
             - A Point representing the end vertex of the edge.
           * - :py:attr:`~IsRepresentation`
@@ -67,6 +97,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: ConstructionLineId
+   :type: Optional[int]
+
+
+   
+   The ID of the associated ConstructionLine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: EndPoint
    :type: Optional[Ansys.Mechanical.DataModel.ConstructionLines.Point]
 
@@ -195,6 +250,60 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.ConstructionLines.Edges.StraightLineEdge) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __eq__(left: Ansys.Mechanical.DataModel.ConstructionLines.Edges.StraightLineEdge, right: Ansys.Mechanical.DataModel.ConstructionLines.Edges.StraightLineEdge) -> bool
+   :classmethod:
+
+
+   
+   op_Equality method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: __ne__(left: Ansys.Mechanical.DataModel.ConstructionLines.Edges.StraightLineEdge, right: Ansys.Mechanical.DataModel.ConstructionLines.Edges.StraightLineEdge) -> bool
+   :classmethod:
+
+
+   
+   op_Inequality method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

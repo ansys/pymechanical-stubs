@@ -55,7 +55,7 @@
   
     <link href="../../../../../../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../../../../../../_static/documentation_options.js?v=e7fb764e"></script>
+    <script src="../../../../../../_static/documentation_options.js?v=f2ffa296"></script>
     <script src="../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -66,7 +66,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.18.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scripting.mechanical.docs.pyansys.com/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '242';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '252';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -77,7 +77,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev0" />
+  <meta name="docsearch:version" content="0.1.14" />
   
     
     <script src="../../../../../../_static/searchtools.js"></script>
@@ -667,7 +667,7 @@ Constants</label><div class="sd-tab-content docutils">
 
 <dl class="py function">
 <dt class="sig sig-object py" id="generate_content.crawl_loaded_references">
-<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">crawl_loaded_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">System.Reflection.RuntimeAssembly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a></span></span><a class="headerlink" href="#generate_content.crawl_loaded_references" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">crawl_loaded_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a></span></span><a class="headerlink" href="#generate_content.crawl_loaded_references" title="Link to this definition">#</a></dt>
 <dd><p>Crawl Loaded assemblies to get Namespaces.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -723,12 +723,12 @@ Constants</label><div class="sd-tab-content docutils">
 
 <dl class="py function">
 <dt class="sig sig-object py" id="generate_content.get_doc">
-<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">System.Reflection.RuntimeAssembly</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.get_doc" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#generate_content.get_doc" title="Link to this definition">#</a></dt>
 <dd><p>Get the documentation file from assembly, or None if it doesn't exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>assembly: “System.Reflection.RuntimeAssembly”</strong></dt><dd><p>An assembly. For example, Ansys.ACT.WB1.</p>
+<dt><strong>assembly: typing.Any</strong></dt><dd><p>An assembly. For example, Ansys.ACT.WB1.</p>
 </dd>
 </dl>
 </dd>
@@ -761,7 +761,7 @@ Constants</label><div class="sd-tab-content docutils">
 
 <dl class="py function">
 <dt class="sig sig-object py" id="generate_content.get_namespaces">
-<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_namespaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">System.Reflection.RuntimeAssembly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#generate_content.get_namespaces" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">generate_content.</span></span><span class="sig-name descname"><span class="pre">get_namespaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assembly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#generate_content.get_namespaces" title="Link to this definition">#</a></dt>
 <dd><p>Get all the namespaces and filtered types in the assembly given by assembly_name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

@@ -34,6 +34,8 @@ Overview
             - Delete All Rows
           * - :py:attr:`~DeleteRow`
             - Delete a row from the MeshControlWorksheet
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GenerateAtRow`
             - Generate Mesh At Row
           * - :py:attr:`~GenerateMesh`
@@ -44,10 +46,14 @@ Overview
             - Gets the current set cconnection option at the row index
           * - :py:attr:`~GetConnectionTolerances`
             - Gets the list of connection tolerances at the row index
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
           * - :py:attr:`~GetNamedSelection`
             - Gets the NamedSelection at row index
           * - :py:attr:`~GetNamedSelectionId`
             - Gets the ID of the NamedSelection at row index
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~SetActiveState`
             - Sets the Active State property at row index
           * - :py:attr:`~SetConnectionOption`
@@ -58,6 +64,12 @@ Overview
             - Sets the NamedSelection at row index
           * - :py:attr:`~SetNamedSelectionId`
             - Sets the NamedSelection by ID at row index
+          * - :py:attr:`~StartRecording`
+            - Start Recording
+          * - :py:attr:`~StopRecording`
+            - Stop Recording
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -140,6 +152,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GenerateAtRow(index: int) -> None
 
    
@@ -180,6 +200,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetNamedSelection(index: int) -> Ansys.ACT.Automation.Mechanical.NamedSelection
 
    
@@ -192,6 +220,14 @@ Method detail
 
    
    Gets the ID of the NamedSelection at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -232,6 +268,30 @@ Method detail
 
    
    Sets the NamedSelection by ID at row index
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StartRecording() -> None
+
+   
+   Start Recording
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StopRecording() -> None
+
+   
+   Stop Recording
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

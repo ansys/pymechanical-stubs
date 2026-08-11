@@ -40,7 +40,7 @@ Summary
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.ConstructionLines.ConstructionLine`
-            - ..
+            - Enables the construction and generation of straight line edges directly within
 
 
 

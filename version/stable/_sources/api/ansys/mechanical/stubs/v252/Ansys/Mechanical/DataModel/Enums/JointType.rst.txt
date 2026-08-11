@@ -5,9 +5,9 @@
 :class:`JointType`
 ==================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.JointType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.JointType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,48 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Bushing`
-            - 
-          * - :py:attr:`~ConstantVelocity`
-            - 
-          * - :py:attr:`~Cylindrical`
-            - 
-          * - :py:attr:`~Distance`
-            - 
-          * - :py:attr:`~Fixed`
-            - 
-          * - :py:attr:`~General`
-            - 
-          * - :py:attr:`~Planar`
-            - 
-          * - :py:attr:`~PlaneRadialGap`
-            - 
-          * - :py:attr:`~PointOnCurve`
-            - 
-          * - :py:attr:`~RadialGap3D`
-            - 
-          * - :py:attr:`~Revolute`
-            - 
-          * - :py:attr:`~Screw`
-            - 
-          * - :py:attr:`~Slot`
-            - 
-          * - :py:attr:`~Spherical`
-            - 
-          * - :py:attr:`~SphericalGap`
-            - 
-          * - :py:attr:`~Translational`
-            - 
-          * - :py:attr:`~Universal`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -91,77 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: Bushing
-   :value: 9
-
-
-.. py:attribute:: ConstantVelocity
-   :value: 17
-
-
-.. py:attribute:: Cylindrical
-   :value: 4
-
-
-.. py:attribute:: Distance
-   :value: 18
-
-
-.. py:attribute:: Fixed
-   :value: 0
-
-
-.. py:attribute:: General
-   :value: 8
-
-
-.. py:attribute:: Planar
-   :value: 7
-
-
-.. py:attribute:: PlaneRadialGap
-   :value: 11
-
-
-.. py:attribute:: PointOnCurve
-   :value: 10
-
-
-.. py:attribute:: RadialGap3D
-   :value: 13
-
-
-.. py:attribute:: Revolute
-   :value: 1
-
-
-.. py:attribute:: Screw
-   :value: 16
-
-
-.. py:attribute:: Slot
-   :value: 3
-
-
-.. py:attribute:: Spherical
-   :value: 6
-
-
-.. py:attribute:: SphericalGap
-   :value: 12
-
-
-.. py:attribute:: Translational
-   :value: 2
-
-
-.. py:attribute:: Universal
-   :value: 5
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

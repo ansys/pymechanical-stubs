@@ -41,6 +41,21 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetChartAxisDisplayUnit`
+            - GetChartAxisDisplayUnit method.
+          * - :py:attr:`~GetGraphInteractionEvent`
+            - GetGraphInteractionEvent method.
+          * - :py:attr:`~GetNumberOfCharts`
+            - GetNumberOfCharts method.
+          * - :py:attr:`~SetGraphInteractionEvent`
+            - SetGraphInteractionEvent method.
+
 
    .. tab-item:: Properties
 
@@ -87,6 +102,40 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: GetChartAxisDisplayUnit(chart_idx: int, axis_id: int) -> str
+
+   
+   GetChartAxisDisplayUnit method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetGraphInteractionEvent(ppEventArgs: Any, chartIndex: int) -> None
+
+   
+   GetGraphInteractionEvent method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNumberOfCharts() -> int
+
+   
+   GetNumberOfCharts method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetGraphInteractionEvent(pEventArgs: Any, chartIndex: int) -> None
+
+   
+   SetGraphInteractionEvent method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

@@ -39,7 +39,7 @@ Overview
           * - :py:attr:`~Insert`
             - Insert a column at the specified index.
           * - :py:attr:`~Remove`
-            - Removes the specified column. If the specifier of the column to remove is an T:System.Int32, it will
+            - Removes the specified column. If key is an , it will
           * - :py:attr:`~TryInsertRow`
             - Try to insert the values at the specified row index.
           * - :py:attr:`~TryRemoveRow`
@@ -59,7 +59,7 @@ Overview
           * - :py:attr:`~Count`
             - Gets the number of columns in the table.
           * - :py:attr:`~IsFixedColumnCount`
-            - Get whether additional columns can be added or removed from the contained T:Ansys.Mechanical.Interfaces.IDataSeries.
+            - Get whether additional columns can be added or removed from the contained .
           * - :py:attr:`~IsFixedRowCount`
             - Get whether additional rows can be added or removed from the contained
           * - :py:attr:`~IsReadOnly`
@@ -140,7 +140,7 @@ Property detail
 
 
    
-   Get whether additional columns can be added or removed from the contained T:Ansys.Mechanical.Interfaces.IDataSeries.
+   Get whether additional columns can be added or removed from the contained .
 
 
 
@@ -166,7 +166,7 @@ Property detail
 
    
    Get whether additional rows can be added or removed from the contained
-   T:Ansys.Mechanical.Interfaces.IDataSeries.
+   .
 
 
 
@@ -344,8 +344,8 @@ Method detail
 
 .. code-block:: text
 
-   Removes the specified column. If the specifier of the column to remove is an T:System.Int32, it will
-   be interpreted as an index. If the specifier of the column to remove is a T:System.String, it will
+   Removes the specified column. If key is an , it will
+   be interpreted as an index. If key is a , it will
    be interpreted as a column name.
 
 ..

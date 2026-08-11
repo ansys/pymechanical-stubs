@@ -5,7 +5,7 @@
 :class:`SpotWeldConnection`
 ===========================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Connections.SpotWeldConnection
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Connections.SpotWeldConnection(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -55,38 +55,106 @@ Overview
             - Creates a new child Image.
           * - :py:attr:`~AddNewSpotWeld`
             - Add a new spot weld with/without a customID.
+          * - :py:attr:`~AttachToEvents`
+            - AttachToEvents method.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~CreateSpotWeldFromHitPoint`
             - Add a new spot weld by using a Hit Point.
+          * - :py:attr:`~DetachEvents`
+            - DetachEvents method.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~ExportToCSVFile`
             - Export the contents to a CSV file.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetCurrentItemsInWorksheet`
+            - GetCurrentItemsInWorksheet method.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetSpotWeldIds`
+            - GetSpotWeldIds method.
+          * - :py:attr:`~GetSpotWeldLocations`
+            - GetSpotWeldLocations method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
+          * - :py:attr:`~NotifyOnHitPointAdded`
+            - NotifyOnHitPointAdded method.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
           * - :py:attr:`~RemoveSpotWeld`
             - Remove an existing spot weld.
+          * - :py:attr:`~SetCurrentItemsInWorksheet`
+            - SetCurrentItemsInWorksheet method.
           * - :py:attr:`~SetXCoordinate`
             - Set the X coordinate given the Spot Weld ID.
           * - :py:attr:`~SetYCoordinate`
             - Set the Y coordinate given the Spot Weld ID.
           * - :py:attr:`~SetZCoordinate`
             - Set the Z coordinate given the Spot Weld ID.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~UnitSys`
+            - UnitSys method.
+          * - :py:attr:`~add_OnHitPointAdded`
+            - add_OnHitPointAdded method.
+          * - :py:attr:`~add_OnPointPicked`
+            - add_OnPointPicked method.
+          * - :py:attr:`~remove_OnHitPointAdded`
+            - remove_OnHitPointAdded method.
+          * - :py:attr:`~remove_OnPointPicked`
+            - remove_OnPointPicked method.
+          * - :py:attr:`~setXYZ`
+            - setXYZ method.
 
 
    .. tab-item:: Properties
@@ -97,24 +165,44 @@ Overview
 
           * - :py:attr:`~AngleTolerance`
             - Gets or sets the AngleTolerance.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~ConnectionBehavior`
             - Gets or sets the ConnectionBehavior.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
+          * - :py:attr:`~ImportableObjectSourceId`
+            - ImportableObjectSourceId property.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
           * - :py:attr:`~Material`
             - Gets or sets the Material.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NumWeldPoints`
             - Gets the NumWeldPoints.
           * - :py:attr:`~NumberOfLayers`
             - Gets or sets the NumberOfLayers.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PenetrationTolerance`
             - Gets or sets the PenetrationTolerance.
           * - :py:attr:`~Properties`
@@ -131,10 +219,14 @@ Overview
             - Gets or sets the SnapToEdgeTolerance.
           * - :py:attr:`~SourceGeometry`
             - Gets or sets the SourceGeometry.
+          * - :py:attr:`~State`
+            - State property.
           * - :py:attr:`~StiffnessBehavior`
             - Gets or sets the StiffnessBehavior.
           * - :py:attr:`~TargetGeometry`
             - Gets or sets the TargetGeometry.
+          * - :py:attr:`~TransferableObjectId`
+            - TransferableObjectId property.
           * - :py:attr:`~Type`
             - Gets or sets the Type.
           * - :py:attr:`~VisibleProperties`
@@ -173,12 +265,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Children
    :type: Optional[List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]]
 
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -273,12 +415,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Images
    :type: Optional[Iterable[Ansys.ACT.Automation.Mechanical.Image]]
 
 
    
    Gets the list of associated images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ImportableObjectSourceId
+   :type: Optional[str]
+
+
+   
+   ImportableObjectSourceId property.
 
 
 
@@ -348,6 +565,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NumWeldPoints
    :type: Optional[int]
 
@@ -379,6 +621,106 @@ Property detail
 
    
    Gets or sets the NumberOfLayers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -598,6 +940,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: StiffnessBehavior
    :type: Optional[Ansys.Mechanical.DataModel.Enums.StiffnessBehavior]
 
@@ -629,6 +996,31 @@ Property detail
 
    
    Gets or sets the TargetGeometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: TransferableObjectId
+   :type: Optional[str]
+
+
+   
+   TransferableObjectId property.
 
 
 
@@ -739,10 +1131,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: AttachToEvents() -> None
+
+   
+   AttachToEvents method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
 
    
    Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
 
    ..
        !! processed by numpydoc !!
@@ -763,10 +1171,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: DetachEvents() -> None
+
+   
+   DetachEvents method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Duplicate() -> Ansys.Mechanical.DataModel.Interfaces.IDataModelObject
 
    
    Creates a copy of the current DataModelObject.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -779,6 +1203,22 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -787,10 +1227,130 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetCurrentItemsInWorksheet() -> tuple[int]
+
+   
+   GetCurrentItemsInWorksheet method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSpotWeldIds() -> tuple[int]
+
+   
+   GetSpotWeldIds method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetSpotWeldLocations() -> tuple[float]
+
+   
+   GetSpotWeldLocations method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -811,6 +1371,38 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: NotifyOnHitPointAdded(x: float, y: float, z: float) -> None
+
+   
+   NotifyOnHitPointAdded method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByAPIName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
 .. code-block:: text
@@ -819,6 +1411,14 @@ Method detail
    If multiple properties have the same API Name, only the first property with that name will be returned.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
        !! processed by numpydoc !!
 
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
@@ -845,6 +1445,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: SetCurrentItemsInWorksheet(spotWeldIds: List[int]) -> None
+
+   
+   SetCurrentItemsInWorksheet method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: SetXCoordinate(spotWeldId: int, val: Ansys.Core.Units.Quantity) -> None
 
    
@@ -865,6 +1473,62 @@ Method detail
 
    
    Set the Z coordinate given the Spot Weld ID.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: UnitSys() -> str
+
+   
+   UnitSys method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: add_OnHitPointAdded(value: System.EventHandler[Ansys.ACT.Automation.Mechanical.Connections.SpotWeldConnectionChangedArgs]) -> None
+
+   
+   add_OnHitPointAdded method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: add_OnPointPicked(value: System.EventHandler) -> None
+
+   
+   add_OnPointPicked method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: remove_OnHitPointAdded(value: System.EventHandler[Ansys.ACT.Automation.Mechanical.Connections.SpotWeldConnectionChangedArgs]) -> None
+
+   
+   remove_OnHitPointAdded method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: remove_OnPointPicked(value: System.EventHandler) -> None
+
+   
+   remove_OnPointPicked method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: setXYZ(spotWeldId: int, point: Ansys.Mechanical.Graphics.Point) -> None
+
+   
+   setXYZ method.
 
    ..
        !! processed by numpydoc !!

@@ -68,6 +68,20 @@ Summary
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .. py:currentmodule:: Common
 .. tab-set::
 
@@ -140,8 +154,36 @@ Summary
           :widths: auto
 
 
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.AngleUnitType`
+            - Specifies the AngleUnitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.AngularVelocityUnitType`
+            - Specifies the AngularVelocityUnitType.
+
+
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.MechanicalUnitSystem`
             - Contains all possible mechanical unit systems (standard and consistent).
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.MechanicalUnitSystemEnum`
+            - Specifies the WBUnitSystemType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.MetricTemperatureUnitType`
+            - Specifies the MetricTemperatureUnitType.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.SelectionTypeEnum`
+            - Specifies the selection type.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.State`
+            - General state enumeration to be used across ACT Apps.
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.StateMessageTypes`
+            - Specifies the selection type.
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Common.UserErrorMessageException`
@@ -217,7 +259,14 @@ Summary
    :maxdepth: 1
    :hidden:
 
+    <span class="nf nf-cod-symbol_class"></span> AngleUnitType</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/AngleUnitType>
+    <span class="nf nf-cod-symbol_class"></span> AngularVelocityUnitType</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/AngularVelocityUnitType>
     <span class="nf nf-cod-symbol_class"></span> MechanicalUnitSystem</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/MechanicalUnitSystem>
+    <span class="nf nf-cod-symbol_class"></span> MechanicalUnitSystemEnum</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/MechanicalUnitSystemEnum>
+    <span class="nf nf-cod-symbol_class"></span> MetricTemperatureUnitType</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/MetricTemperatureUnitType>
+    <span class="nf nf-cod-symbol_class"></span> SelectionTypeEnum</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/SelectionTypeEnum>
+    <span class="nf nf-cod-symbol_class"></span> State</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/State>
+    <span class="nf nf-cod-symbol_class"></span> StateMessageTypes</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/StateMessageTypes>
     <span class="nf nf-cod-symbol_class"></span> UserErrorMessageException</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Common/UserErrorMessageException>
 
 

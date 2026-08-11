@@ -11,7 +11,7 @@
 
 
    
-   T:Ansys.Mechanical.Table.ColumnarDataSourceBase is a class that provides foundational behavior for
+    is a class that provides foundational behavior for
    import settings that consume data from columnar data sources (such as delimited or
    fixed-width files).
 
@@ -51,12 +51,20 @@ Overview
 
           * - :py:attr:`~Clear`
             - 
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~GetEnumerator`
             - 
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~RemoveAt`
             - Removes the import definition at the specified index.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~UseColumn`
-            - ..
+            - Add a column to be imported from the specified data source column index and configured
 
 
    .. tab-item:: Properties
@@ -167,7 +175,7 @@ Property detail
 
    
    Gets or sets the type of URI provided for Table import.
-   Default: F:Ansys.Mechanical.DataModel.MechanicalEnums.Common.PathType.Absolute
+   Default: 
 
 
 
@@ -246,8 +254,32 @@ Method detail
 .. py:method:: Clear() -> None
    
 
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetEnumerator() -> Iterator[Ansys.Mechanical.Table.ColumnarDataImportDefinition]
    
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
 
 .. py:method:: RemoveAt(index: int) -> None
 
@@ -257,11 +289,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: UseColumn(index: int, variableType: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType, variableClassification: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification, unit: str, name: str) -> Ansys.Mechanical.Table.ColumnarDataSourceBase
+.. py:method:: ToString() -> str
 
    
+   ToString method.
 
    ..
+       !! processed by numpydoc !!
+
+.. py:method:: UseColumn(index: int, variableType: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType, variableClassification: Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification, unit: str, name: str) -> Ansys.Mechanical.Table.ColumnarDataSourceBase
+
+.. code-block:: text
+
+   Add a column to be imported from the specified data source column index and configured
+   as the specified variable type. The order in which columns are added determines their
+   order in the data imported to .
+
+   If unit is `null`, the default unit (in the active unit system) for the specified
+   variable type will be assumed during import.
+
+   If name is `null` or empty, a unique name will be generated from the specified
+   variableType during import.
+
+   A reference to the instance is returned so that invocations can be chained together.
+..
        !! processed by numpydoc !!
 
 

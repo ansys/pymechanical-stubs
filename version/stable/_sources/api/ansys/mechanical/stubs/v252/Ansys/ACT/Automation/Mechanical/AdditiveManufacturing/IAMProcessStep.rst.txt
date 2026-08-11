@@ -36,6 +36,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~InternalObject`
+            - InternalObject property.
           * - :py:attr:`~ProcessStepType`
             - ProcessStepType property.
 
@@ -47,6 +49,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: InternalObject
+   :type: Optional[Ansys.Common.Interop.DSObjectsAuto.IDSAMProcessSequenceStep]
+
+
+   
+   InternalObject property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ProcessStepType
    :type: Optional[Ansys.Mechanical.DataModel.Enums.AMProcessStepType]
 

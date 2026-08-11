@@ -44,6 +44,8 @@ Summary
 
 
 
+
+
 .. py:currentmodule:: Mechanical
 .. tab-set::
 
@@ -93,6 +95,17 @@ Summary
 
 
 
+    .. tab-item:: Classes
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+
+          * - :py:obj:`~ansys.mechanical.stubs.v252.Ansys.ACT.Interfaces.Mechanical.MechanicalPanelEnum`
+            - Specifies the panel type.
+
+
 
     .. tab-item:: Enums
 
@@ -128,6 +141,13 @@ Summary
     <span class="nf nf-cod-symbol_interface"></span> IMechanicalUserSolver</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Mechanical/IMechanicalUserSolver>
     <span class="nf nf-cod-symbol_interface"></span> ISupportChartOptions</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Mechanical/ISupportChartOptions>
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+    <span class="nf nf-cod-symbol_class"></span> MechanicalPanelEnum</api/ansys/mechanical/stubs/v252/Ansys/ACT/Interfaces/Mechanical/MechanicalPanelEnum>
 
 
 .. toctree::

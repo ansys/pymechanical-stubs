@@ -5,9 +5,9 @@
 :class:`OutcomeType`
 ====================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,50 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CSVProcessingInfo`
-            - 
-          * - :py:attr:`~EnclosureExternalScope`
-            - 
-          * - :py:attr:`~EnclosureInternalScope`
-            - 
-          * - :py:attr:`~ExtrusionEndScope`
-            - 
-          * - :py:attr:`~ExtrusionStartScope`
-            - 
-          * - :py:attr:`~FaceZoneScope`
-            - 
-          * - :py:attr:`~FailureInfo`
-            - 
-          * - :py:attr:`~InternalVolumeZoneScope`
-            - 
-          * - :py:attr:`~MultiZoneVolumeMesherDiagnostics`
-            - 
-          * - :py:attr:`~NonStackableBodies`
-            - 
-          * - :py:attr:`~Scope`
-            - 
-          * - :py:attr:`~SizeFieldName`
-            - 
-          * - :py:attr:`~StackerBaseEdge`
-            - 
-          * - :py:attr:`~StackerBaseFace`
-            - 
-          * - :py:attr:`~StackerDiagnostics`
-            - 
-          * - :py:attr:`~StackerSeedFace`
-            - 
-          * - :py:attr:`~VolumeZoneScope`
-            - 
-          * - :py:attr:`~WarningInfo`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -93,81 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: CSVProcessingInfo
-   :value: 27
-
-
-.. py:attribute:: EnclosureExternalScope
-   :value: 14
-
-
-.. py:attribute:: EnclosureInternalScope
-   :value: 13
-
-
-.. py:attribute:: ExtrusionEndScope
-   :value: 16
-
-
-.. py:attribute:: ExtrusionStartScope
-   :value: 15
-
-
-.. py:attribute:: FaceZoneScope
-   :value: 19
-
-
-.. py:attribute:: FailureInfo
-   :value: 11
-
-
-.. py:attribute:: InternalVolumeZoneScope
-   :value: 21
-
-
-.. py:attribute:: MultiZoneVolumeMesherDiagnostics
-   :value: 41
-
-
-.. py:attribute:: NonStackableBodies
-   :value: 25
-
-
-.. py:attribute:: Scope
-   :value: 4
-
-
-.. py:attribute:: SizeFieldName
-   :value: 5
-
-
-.. py:attribute:: StackerBaseEdge
-   :value: 23
-
-
-.. py:attribute:: StackerBaseFace
-   :value: 22
-
-
-.. py:attribute:: StackerDiagnostics
-   :value: 29
-
-
-.. py:attribute:: StackerSeedFace
-   :value: 24
-
-
-.. py:attribute:: VolumeZoneScope
-   :value: 20
-
-
-.. py:attribute:: WarningInfo
-   :value: 26
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

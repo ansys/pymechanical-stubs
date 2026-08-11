@@ -5,7 +5,7 @@
 :class:`Project`
 ================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Project
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.Project(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -32,6 +32,7 @@
        !! processed by numpydoc !!
 
 
+
 .. py:currentmodule:: Project
 
 Overview
@@ -39,6 +40,15 @@ Overview
 
 .. tab-set::
 
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~DetermineStandaloneAppletModeFromArchive`
+            - DetermineStandaloneAppletModeFromArchive method.
 
 
    .. tab-item:: Methods
@@ -53,36 +63,96 @@ Overview
             - Creates a new child Comment.
           * - :py:attr:`~AddImage`
             - Creates a new child Image.
+          * - :py:attr:`~AddMaterial`
+            - Add a material from a file to the project.
           * - :py:attr:`~Archive`
             - For Mechanical opened independently, without Workbench. Archive a Mechanical project.
+          * - :py:attr:`~BackupExists`
+            - BackupExists method.
+          * - :py:attr:`~BackupRemove`
+            - BackupRemove method.
+          * - :py:attr:`~BackupRestore`
+            - BackupRestore method.
+          * - :py:attr:`~BackupSaveAsCopy`
+            - BackupSaveAsCopy method.
           * - :py:attr:`~ClearGeneratedData`
             - Run the ClearGeneratedData action.
           * - :py:attr:`~CombineTextFiles`
             - Combines two text(.txt / .dmig / .inp / .dat) files. The secondary file will be appened to the primary file
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Duplicate`
             - Creates a copy of the current DataModelObject.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~ExportAssemblyManagerData`
+            - Exports the data relevant to the Assembly Manager
+          * - :py:attr:`~ForceUnlock`
+            - ForceUnlock method.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
+          * - :py:attr:`~GetCanonicalProjectPath`
+            - GetCanonicalProjectPath method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
           * - :py:attr:`~New`
             - For Mechanical opened independently, without Workbench. Start a new Mechanical project.
           * - :py:attr:`~Open`
             - For Mechanical opened independently, without Workbench. Open an existing Mechanical project.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~RemoveDuplicateBodies`
+            - Removes dupliate bodies from the tree.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~ResetArchiveData`
+            - For Mechanical opened independently, without Workbench. Resets the cached file path data for opening an archived project file.
           * - :py:attr:`~Save`
             - For Mechanical opened independently, without Workbench. Save current Mechanical project.
           * - :py:attr:`~SaveAs`
@@ -91,8 +161,12 @@ Overview
             - Specify the use of Celsius thermal units for metric unit systems.
           * - :py:attr:`~SpecifyMetricTemperatureInKelvin`
             - Specify the use of Kelvin thermal units for metric unit systems.
+          * - :py:attr:`~ToString`
+            - ToString method.
           * - :py:attr:`~Unarchive`
             - For Mechanical opened independently, without Workbench. Unarchive a Mechanical project and open it.
+          * - :py:attr:`~ValidateStateEngine`
+            - Runs a full state engine validation of the tree
 
 
    .. tab-item:: Properties
@@ -101,10 +175,14 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
           * - :py:attr:`~Author`
             - Gets or sets the Author.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~Comments`
             - Gets the list of associated comments.
           * - :py:attr:`~CreationDate`
@@ -113,10 +191,16 @@ Overview
             - Gets the CreationTime.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
+          * - :py:attr:`~EngineeringDataLibrary`
+            - EngineeringDataLibrary property.
           * - :py:attr:`~FilePath`
             - Gets the Mechanical Project file path of current Mechanical session.
           * - :py:attr:`~FirstSaved`
             - Gets the FirstSaved.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~ImportedSource`
@@ -125,12 +209,26 @@ Overview
             - Gets the ImportedVersion.
           * - :py:attr:`~InternalObject`
             - Gets the internal object. For advanced usage only.
+          * - :py:attr:`~IsArchive`
+            - For Mechanical opened independently, without Workbench. Returns True when working in an opened archive project, otherwise, returns False.
           * - :py:attr:`~LastSaved`
             - Gets the LastSaved.
           * - :py:attr:`~Model`
             - Gets the Model.
           * - :py:attr:`~Models`
             - Gets the Model.
+          * - :py:attr:`~Name`
+            - Name property.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~OriginalArchiveFile`
+            - For Mechanical opened independently, without Workbench. Returns the original archive file path opened in current session.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~PreparedFor`
             - Gets or sets the PreparedFor.
           * - :py:attr:`~ProductVersion`
@@ -143,8 +241,14 @@ Overview
             - Gets or sets the SaveProjectAfterSolution.
           * - :py:attr:`~SaveProjectBeforeSolution`
             - Gets or sets the SaveProjectBeforeSolution.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~StateEngineMode`
+            - Sets the State Engine Mode which controls validation
           * - :py:attr:`~Subject`
             - Gets or sets the Subject.
+          * - :py:attr:`~UnarchivedProjectFile`
+            - For Mechanical opened independently, without Workbench. Returns the unarchived project file path of the current session.
           * - :py:attr:`~UnitSystem`
             - Change the Unit System.
           * - :py:attr:`~UserFiles`
@@ -160,6 +264,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Author
    :type: Optional[str]
 
@@ -191,6 +320,31 @@ Property detail
 
    
    Gets the list of children.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
 
 
 
@@ -310,6 +464,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: EngineeringDataLibrary
+   :type: Optional[Any]
+
+
+   
+   EngineeringDataLibrary property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: FilePath
    :type: Optional[str]
 
@@ -341,6 +520,56 @@ Property detail
 
    
    Gets the FirstSaved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -460,6 +689,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: IsArchive
+   :type: Optional[bool]
+
+
+   
+   For Mechanical opened independently, without Workbench. Returns True when working in an opened archive project, otherwise, returns False.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: LastSaved
    :type: Optional[str]
 
@@ -516,6 +770,156 @@ Property detail
 
    
    Gets the Model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: OriginalArchiveFile
+   :type: Optional[str]
+
+
+   
+   For Mechanical opened independently, without Workbench. Returns the original archive file path opened in current session.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -685,12 +1089,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: StateEngineMode
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.StateEngineMode]
+
+
+   
+   Sets the State Engine Mode which controls validation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Subject
    :type: Optional[str]
 
 
    
    Gets or sets the Subject.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: UnarchivedProjectFile
+   :type: Optional[str]
+
+
+   
+   For Mechanical opened independently, without Workbench. Returns the unarchived project file path of the current session.
 
 
 
@@ -818,10 +1297,50 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: AddMaterial(url: str, urn: str, name: str) -> str
+
+   
+   Add a material from a file to the project.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Archive(archivePath: str, overwrite: bool, settings: Ansys.ACT.Automation.Mechanical.ArchiveSettings) -> None
 
    
    For Mechanical opened independently, without Workbench. Archive a Mechanical project.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: BackupExists() -> bool
+
+   
+   BackupExists method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: BackupRemove() -> None
+
+   
+   BackupRemove method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: BackupRestore() -> None
+
+   
+   BackupRestore method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: BackupSaveAsCopy(filePath: str) -> None
+
+   
+   BackupSaveAsCopy method.
 
    ..
        !! processed by numpydoc !!
@@ -850,10 +1369,28 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CreateParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Creates a new parameter for a Property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: DetermineStandaloneAppletModeFromArchive(archiveFile: str) -> None
+   :classmethod:
+
+
+   
+   DetermineStandaloneAppletModeFromArchive method.
 
    ..
        !! processed by numpydoc !!
@@ -866,6 +1403,54 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ExportAssemblyManagerData(destinationDir: str, exportFormat: Ansys.Mechanical.DataModel.Enums.AssemblyManagerExportFormat, exportSettings: Ansys.ACT.Automation.Mechanical.AssemblyManagerExportSettings) -> None
+
+   
+   Exports the data relevant to the Assembly Manager 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ForceUnlock(projectFilePath: str) -> None
+
+   
+   ForceUnlock method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetCanonicalProjectPath(sourcePath: str) -> str
+
+   
+   GetCanonicalProjectPath method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -874,10 +1459,106 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(name: str) -> Any
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -894,6 +1575,30 @@ Method detail
 
    
    Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
 
    ..
        !! processed by numpydoc !!
@@ -924,6 +1629,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
@@ -932,10 +1645,26 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: RemoveDuplicateBodies() -> None
+
+   
+   Removes dupliate bodies from the tree.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RemoveParameter(propName: str) -> None
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ResetArchiveData() -> None
+
+   
+   For Mechanical opened independently, without Workbench. Resets the cached file path data for opening an archived project file.
 
    ..
        !! processed by numpydoc !!
@@ -972,6 +1701,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: Unarchive(archivePath: str, projectPath: str, overwrite: bool) -> str
 
 .. code-block:: text
@@ -982,6 +1719,14 @@ Method detail
    Returns a path to the unarchived project database file.
 
 ..
+       !! processed by numpydoc !!
+
+.. py:method:: ValidateStateEngine() -> None
+
+   
+   Runs a full state engine validation of the tree 
+
+   ..
        !! processed by numpydoc !!
 
 

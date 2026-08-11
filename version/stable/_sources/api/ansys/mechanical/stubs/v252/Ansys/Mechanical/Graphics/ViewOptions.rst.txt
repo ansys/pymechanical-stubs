@@ -26,8 +26,20 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
           * - :py:attr:`~RescaleAnnotations`
             - Rescale size of annotation following a zoom in or zoom out of the model.
+          * - :py:attr:`~Reset`
+            - Reset method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+          * - :py:attr:`~ZoomToWeld`
+            - Zoom to the bodies that are affected by the Weld object.
 
 
    .. tab-item:: Properties
@@ -48,8 +60,12 @@ Overview
             - Sets the model display option.
           * - :py:attr:`~ResultPreference`
             - ResultPreference property.
+          * - :py:attr:`~SeamWeldReview`
+            - Activate Seam Weld review mode.
           * - :py:attr:`~ShowBeamThickness`
             - Displays the thickness of beams.
+          * - :py:attr:`~ShowBoundingMeshEdges`
+            - ShowBoundingMeshEdges property.
           * - :py:attr:`~ShowClusteredVertices`
             - Displays all closely clustered vertices of the model.
           * - :py:attr:`~ShowCoordinateSystems`
@@ -58,6 +74,8 @@ Overview
             - Displays the edge direction arrow.
           * - :py:attr:`~ShowLegend`
             - Displays the legend.
+          * - :py:attr:`~ShowLogo`
+            - Displays the logo. The logo is always shown when using an academic license.
           * - :py:attr:`~ShowMesh`
             - Display the model's mesh.
           * - :py:attr:`~ShowMeshConnection`
@@ -241,12 +259,62 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: SeamWeldReview
+   :type: Optional[bool]
+
+
+   
+   Activate Seam Weld review mode.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ShowBeamThickness
    :type: Optional[bool]
 
 
    
    Displays the thickness of beams.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowBoundingMeshEdges
+   :type: Optional[bool]
+
+
+   
+   ShowBoundingMeshEdges property.
 
 
 
@@ -347,6 +415,31 @@ Property detail
 
    
    Displays the legend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ShowLogo
+   :type: Optional[bool]
+
+
+   
+   Displays the logo. The logo is always shown when using an academic license.
 
 
 
@@ -672,10 +765,58 @@ Property detail
 
 Method detail
 -------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RescaleAnnotations() -> None
 
    
    Rescale size of annotation following a zoom in or zoom out of the model.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Reset() -> None
+
+   
+   Reset method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ZoomToWeld() -> None
+
+   
+   Zoom to the bodies that are affected by the Weld object.
 
    ..
        !! processed by numpydoc !!

@@ -5,7 +5,7 @@
 :class:`NCommand`
 =================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CDB.NCommand
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.FE.CDB.NCommand(iNCommand: Ansys.Common.Interop.FEParsePlugin_ANSYS.INCommand)
 
    Bases: :py:obj:`object`
 
@@ -41,6 +41,21 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
    .. tab-item:: Properties
 
@@ -48,6 +63,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~FullName`
+            - FullName property.
           * - :py:attr:`~Index`
             - Gets the command index.
           * - :py:attr:`~Name`
@@ -69,6 +86,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: FullName
+   :type: Optional[str]
+
+
+   
+   FullName property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: Index
    :type: Optional[int]
 
@@ -223,6 +265,40 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

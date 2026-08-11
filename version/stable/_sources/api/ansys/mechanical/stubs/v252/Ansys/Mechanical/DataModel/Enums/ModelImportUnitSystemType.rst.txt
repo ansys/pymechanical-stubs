@@ -5,9 +5,9 @@
 :class:`ModelImportUnitSystemType`
 ==================================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ModelImportUnitSystemType(*args, **kwds)
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.DataModel.Enums.ModelImportUnitSystemType
 
-   Bases: :py:obj:`enum.Enum`
+   Bases: :py:obj:`object`
 
 
    
@@ -41,40 +41,26 @@ Overview
 
 
 
-
-
-   .. tab-item:: Attributes
+   .. tab-item:: Methods
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~UnitSystemConsistentBFT`
-            - 
-          * - :py:attr:`~UnitSystemConsistentBIN`
-            - 
-          * - :py:attr:`~UnitSystemConsistentCGS`
-            - 
-          * - :py:attr:`~UnitSystemConsistentNMM`
-            - 
-          * - :py:attr:`~UnitSystemConsistentNMMKGMMMS`
-            - 
-          * - :py:attr:`~UnitSystemConsistentuMKS`
-            - 
-          * - :py:attr:`~UnitSystemMetricCGS`
-            - 
-          * - :py:attr:`~UnitSystemMetricMKS`
-            - 
-          * - :py:attr:`~UnitSystemMetricNMM`
-            - 
-          * - :py:attr:`~UnitSystemMetricNMMDton`
-            - 
-          * - :py:attr:`~UnitSystemMetricNMMton`
-            - 
-          * - :py:attr:`~UnitSystemMetricUMKS`
-            - 
-          * - :py:attr:`~UnitSystemSI`
-            - 
+          * - :py:attr:`~CompareTo`
+            - CompareTo method.
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetTypeCode`
+            - GetTypeCode method.
+          * - :py:attr:`~HasFlag`
+            - HasFlag method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
 
@@ -83,61 +69,67 @@ Overview
 
 
 
-Attribute detail
-----------------
-.. py:attribute:: UnitSystemConsistentBFT
-   :value: 12
-
-
-.. py:attribute:: UnitSystemConsistentBIN
-   :value: 11
-
-
-.. py:attribute:: UnitSystemConsistentCGS
-   :value: 7
-
-
-.. py:attribute:: UnitSystemConsistentNMM
-   :value: 8
-
-
-.. py:attribute:: UnitSystemConsistentNMMKGMMMS
-   :value: 10
-
-
-.. py:attribute:: UnitSystemConsistentuMKS
-   :value: 9
-
-
-.. py:attribute:: UnitSystemMetricCGS
-   :value: 3
-
-
-.. py:attribute:: UnitSystemMetricMKS
-   :value: 1
-
-
-.. py:attribute:: UnitSystemMetricNMM
-   :value: 4
-
-
-.. py:attribute:: UnitSystemMetricNMMDton
-   :value: 6
-
-
-.. py:attribute:: UnitSystemMetricNMMton
-   :value: 2
-
-
-.. py:attribute:: UnitSystemMetricUMKS
-   :value: 5
-
-
-.. py:attribute:: UnitSystemSI
-   :value: 0
 
 
 
+
+Method detail
+-------------
+.. py:method:: CompareTo(target: Any) -> int
+
+   
+   CompareTo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetTypeCode() -> typeCode
+
+   
+   GetTypeCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasFlag(flag: System.Enum) -> bool
+
+   
+   HasFlag method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 

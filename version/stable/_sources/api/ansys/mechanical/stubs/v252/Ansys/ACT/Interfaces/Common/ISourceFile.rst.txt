@@ -61,6 +61,8 @@ Overview
 
           * - :py:attr:`~Content`
             - Reads or writes the content of the file.
+          * - :py:attr:`~FileName`
+            - The name of the source file.
           * - :py:attr:`~FilePath`
             - Represents the absolute path of the source file.
 
@@ -78,6 +80,31 @@ Property detail
 
    
    Reads or writes the content of the file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: FileName
+   :type: Optional[str]
+
+
+   
+   The name of the source file.
 
 
 

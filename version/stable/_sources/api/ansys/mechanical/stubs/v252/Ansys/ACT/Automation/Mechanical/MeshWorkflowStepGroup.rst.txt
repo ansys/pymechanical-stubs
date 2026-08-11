@@ -5,7 +5,7 @@
 :class:`MeshWorkflowStepGroup`
 ==============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup(internalObject: Any)
 
    Bases: :py:obj:`object`
 
@@ -32,6 +32,10 @@
        !! processed by numpydoc !!
 
 
+
+
+
+
 .. py:currentmodule:: MeshWorkflowStepGroup
 
 Overview
@@ -39,6 +43,21 @@ Overview
 
 .. tab-set::
 
+
+   .. tab-item:: Constructors
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GetMeshWorkflowsControlPropertyList`
+            - GetMeshWorkflowsControlPropertyList method.
+          * - :py:attr:`~GetMeshWorkflowsOperationPropertyList`
+            - GetMeshWorkflowsOperationPropertyList method.
+          * - :py:attr:`~GetMeshWorkflowsOutcomePropertyList`
+            - GetMeshWorkflowsOutcomePropertyList method.
+          * - :py:attr:`~GetMeshWorkflowsPropertyList`
+            - GetMeshWorkflowsPropertyList method.
 
 
    .. tab-item:: Methods
@@ -57,12 +76,24 @@ Overview
             - Add the settings of the input SettingsType to the Steps node.
           * - :py:attr:`~AddStep`
             - Add another operation to the sequence of steps to be executed for the mesh workflow.
+          * - :py:attr:`~CanCheckPublicStateCallbackForIM`
+            - CanCheckPublicStateCallbackForIM method.
+          * - :py:attr:`~CanConvertSizingSettings`
+            - Returns whether the active sizing settings can be converted to the input SettingsType.
+          * - :py:attr:`~CanShowPublishStateIM`
+            - CanShowPublishStateIM method.
           * - :py:attr:`~ClearDataAndDisableCheckpoints`
             - Clear all checkpoints data and disable checkpointing for the workflow.
           * - :py:attr:`~ConvertSizingSettings`
             - Convert the active sizing settings to the input SettingsType for the Steps node.
+          * - :py:attr:`~ConvertWorkflow`
+            - Converts the workflow type to Custom
+          * - :py:attr:`~CopyAttachmentPathToClipboard`
+            - Copies the current attachment path to clipboard.
           * - :py:attr:`~CopyTo`
             - Copies all visible properties from this object to another.
+          * - :py:attr:`~CreateObjRef`
+            - CreateObjRef method.
           * - :py:attr:`~CreateParameter`
             - Creates a new parameter for a Property.
           * - :py:attr:`~Delete`
@@ -77,32 +108,120 @@ Overview
             - Creates a copy of the current DataModelObject.
           * - :py:attr:`~EnableAllCheckpoints`
             - Enables checkpoints for all editable steps in the workflow.
+          * - :py:attr:`~Equals`
+            - Equals method.
           * - :py:attr:`~ExecuteAllSteps`
             - Executes all steps defined under the “StepGroup” object (which is the “Steps” node in the UI).
           * - :py:attr:`~ExecuteNextStep`
             - Executes the next step, i.e. the next operation which is ready to be executed under the parent “StepGroup” object.
           * - :py:attr:`~ExecuteUpToStep`
             - Executes any not yet ready steps up to and including the specified step.
+          * - :py:attr:`~GetAPIName`
+            - Property name bound to dispId.
+          * - :py:attr:`~GetAllProperties`
+            - GetAllProperties method.
+          * - :py:attr:`~GetApplicableOperationTypes`
+            - GetApplicableOperationTypes method.
           * - :py:attr:`~GetChildren`
             - Gets the list of children, filtered by type.
+          * - :py:attr:`~GetDetailsView`
+            - GetDetailsView method.
+          * - :py:attr:`~GetDomainBrowserAvailableMorphFieldPatterns`
+            - GetDomainBrowserAvailableMorphFieldPatterns method.
+          * - :py:attr:`~GetDomainBrowserAvailableScopes`
+            - GetDomainBrowserAvailableScopes method.
+          * - :py:attr:`~GetDomainBrowserAvailableSizeFieldPatterns`
+            - GetDomainBrowserAvailableSizeFieldPatterns method.
+          * - :py:attr:`~GetEnumName`
+            - Enum name bound to value
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetIconFile`
+            - GetIconFile method.
+          * - :py:attr:`~GetLifetimeService`
+            - GetLifetimeService method.
+          * - :py:attr:`~GetNextExecutableControlIdByType`
+            - GetNextExecutableControlIdByType method.
+          * - :py:attr:`~GetNextExecutableOrUndefinedControlIdByType`
+            - GetNextExecutableOrUndefinedControlIdByType method.
+          * - :py:attr:`~GetObjectData`
+            - GetObjectData method.
           * - :py:attr:`~GetParameter`
             - Gets the parameter corresponding to the given property.
+          * - :py:attr:`~GetPath`
+            - GetPath method.
+          * - :py:attr:`~GetPropertyName`
+            - GetPropertyName method.
+          * - :py:attr:`~GetPropertyValue`
+            - GetPropertyValue method.
+          * - :py:attr:`~GetPropertyWorksheetInfo`
+            - GetPropertyWorksheetInfo method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~GetUnpublishedList`
+            - GetUnpublishedList method.
+          * - :py:attr:`~GetVisibleProperties`
+            - GetVisibleProperties method.
+          * - :py:attr:`~GetVisiblePropertyNames`
+            - GetVisiblePropertyNames method.
           * - :py:attr:`~GroupAllSimilarChildren`
             - Run the GroupAllSimilarChildren action.
           * - :py:attr:`~GroupSimilarObjects`
             - Run the GroupSimilarObjects action.
+          * - :py:attr:`~GroupSteps`
+            - GroupSteps method.
+          * - :py:attr:`~HasUnderdefinedSettingsData`
+            - HasUnderdefinedSettingsData method.
+          * - :py:attr:`~InitializeLifetimeService`
+            - InitializeLifetimeService method.
+          * - :py:attr:`~IsPropertyEditable`
+            - IsPropertyEditable method.
+          * - :py:attr:`~IsPropertyVisible`
+            - IsPropertyVisible method.
+          * - :py:attr:`~IsSizingSettings`
+            - IsSizingSettings method.
+          * - :py:attr:`~MeshWorkflowSteps`
+            - Gets the ordered list of Steps for the workflow.
+          * - :py:attr:`~PreviewNextStep`
+            - Previews the next available step in the workflow. After the preview, the step will contain a preview outcome with the information required for the validation of the user inputs. The preview outcome can be returned using the MeshWorkflowOutcomes method of the step.
           * - :py:attr:`~PropagateSettings`
             - Propagate the settings of the input SettingsType to the attributes of the Step nodes. The meshing attributes of the Step nodes will then be automatically defined based on the physical parameters of the settings. Otherwise, the meshing attributes need to be manually specified.
           * - :py:attr:`~PropertyByAPIName`
             - Get a property by its API name.
+          * - :py:attr:`~PropertyById`
+            - PropertyById method.
           * - :py:attr:`~PropertyByName`
             - Get a property by its unique name.
+          * - :py:attr:`~PropertyTypeInfo`
+            - PropertyTypeInfo method.
+          * - :py:attr:`~PublishIMProp`
+            - PublishIMProp method.
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
+          * - :py:attr:`~RenameBasedOnType`
+            - Renames applying the default name based on type.
           * - :py:attr:`~RevertToLastCheckpoint`
             - Revert to the last available checkpoint; if no checkpoint is available, then an exception will be raised.
           * - :py:attr:`~RevertToStep`
             - Revert to the specified step; if no checkpoint is available, then an exception will be raised.
+          * - :py:attr:`~SetPropertyValue`
+            - SetPropertyValue method.
+          * - :py:attr:`~SetPublish`
+            - SetPublish method.
+          * - :py:attr:`~SetUnpublish`
+            - SetUnpublish method.
+          * - :py:attr:`~SettingsReleaseStatusString`
+            - SettingsReleaseStatusString method.
+          * - :py:attr:`~SettingsTypeInformation`
+            - SettingsTypeInformation method.
+          * - :py:attr:`~SettingsTypeInformationJson`
+            - SettingsTypeInformationJson method.
+          * - :py:attr:`~StartCodeGeneration`
+            - Start the code generation for the Meshing operations.
+          * - :py:attr:`~StopCodeGeneration`
+            - Stop the code generation for the Meshing operations.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -111,16 +230,40 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~ActiveSizingSettings`
+            - Gets the active sizing settings type.
           * - :py:attr:`~AnalysisFrequency`
             - Defines the analysis frequency of the acoustic scenario.
+          * - :py:attr:`~ApplicableSettingsTypes`
+            - ApplicableSettingsTypes property.
+          * - :py:attr:`~AttachedRefs`
+            - AttachedRefs property.
+          * - :py:attr:`~Attachment`
+            - 
           * - :py:attr:`~BoundingBoxFactor`
             - Gets or sets the bounding box factor applied to compute automatically the StackerMeshSize from the model. If set to 0, the default bouding box factor is used.
           * - :py:attr:`~Children`
             - Gets the list of children.
+          * - :py:attr:`~ClsId`
+            - ClsId property.
           * - :py:attr:`~CurvatureAngle`
             - Gets or sets the curvature angle of the mesh to be used in workflow steps. If set to 0, the default curvature angle is used.
+          * - :py:attr:`~CustomGlobalCurvatureAngle`
+            - Gets or sets the custom angle to be used for the GlobalCurvatureAngle. If this value is 0, the default GlobalCurvatureAngle is used. Defaults to 0. This property should only accessed for internal usage.
+          * - :py:attr:`~CustomGlobalGrowthRate`
+            - Gets or sets the custom growth rate to be used for the GlobalGrowthRate. If this value is 0, the default GlobalGrowthRate is used. Defaults to 0. This property should only accessed for internal usage.
+          * - :py:attr:`~CustomGlobalMeshSize`
+            - Gets or sets the custom size to be used for the GlobalMeshSize. If this value is 0, the default GlobalMeshSize is used. Defaults to 0. This property should only accessed for internal usage.
+          * - :py:attr:`~CustomGlobalMinimalMeshSize`
+            - Gets or sets the custom size to be used for the GlobalMinimalMeshSize. If this value is 0, the default GlobalMinimalMeshSize is used. Defaults to 0. This property should only accessed for internal usage.
+          * - :py:attr:`~CustomNumberOfAcousticLayers`
+            - Gets or sets the custom number of layers in the acoustic region. If this value is 0, the default NumberOfAcousticLayers is used. Defaults to 0. This property should only accessed for internal usage.
+          * - :py:attr:`~CustomNumberOfPMLs`
+            - Gets or sets the custom number of layers in the perfectly meshed layers region. If this value is 0, the default NumberOfAcousticLayers is used. Defaults to 0. This property should only accessed for internal usage.
           * - :py:attr:`~DataModelObjectCategory`
             - Gets the current DataModelObject's category.
+          * - :py:attr:`~Direction`
+            - Gets or sets the Stacker Direction coordinates.
           * - :py:attr:`~DirectionX`
             - Gets or sets the X component of stacking direction used by stacker operations , with respect to Global Coordinate System.
           * - :py:attr:`~DirectionY`
@@ -129,10 +272,24 @@ Overview
             - Gets or sets the Z component of stacking direction to be used in stacker steps, with respect to Global Coordinate System.
           * - :py:attr:`~Figures`
             - Gets the list of associated figures.
+          * - :py:attr:`~GlobalBoundingBoxFactor`
+            - Gets or sets the bounding box factor applied to compute automatically the GlobalMeshSize from the model. If set to 0, the default bouding box factor is used.
+          * - :py:attr:`~GlobalCurvatureAngle`
+            - Gets or sets the curvature angle of the mesh to be used in workflow steps. If set to 0, the default curvature angle is used.
+          * - :py:attr:`~GlobalDefeatureMeshSize`
+            - Gets or sets the defeature element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~GlobalGrowthRate`
+            - Gets or sets the growth rate of the mesh to be used in workflow steps. If set to 0, the default growth rate is used.
           * - :py:attr:`~GlobalMeshSize`
             - Gets or sets the element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~GlobalMinimalMeshSize`
+            - Gets or sets the minimal element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~GroupingFolder`
+            - GroupingFolder property.
           * - :py:attr:`~GrowthRate`
             - Gets or sets the growth rate of the mesh to be used in workflow steps. If set to 0, the default growth rate is used.
+          * - :py:attr:`~IconName`
+            - IconName property.
           * - :py:attr:`~Images`
             - Gets the list of associated images.
           * - :py:attr:`~InternalObject`
@@ -145,20 +302,32 @@ Overview
             - Defines the mesh size of the acoustic scenario based on the wave velocity and the frequency.
           * - :py:attr:`~MinimumMeshSize`
             - Gets or sets the minimal element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+          * - :py:attr:`~Name`
+            - Name property.
           * - :py:attr:`~NonStackableBodyMeshSize`
             - Gets or sets the element size to be used in meshing non-stackable bodies in stacker workflow.
           * - :py:attr:`~NumberOfAcousticLayers`
-            - Gets or sets the number of layers in the acoustic region. If set to 0, the value defaults to 1 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 2 otherwise.
+            - Gets or sets the number of layers in the acoustic region. If set to 0, the value defaults to 1 if QuadraticElements is enabled (see ) or 2 otherwise.
           * - :py:attr:`~NumberOfCores`
             - Defines how many CPU cores to be used in an operation (if supported by the operation).
           * - :py:attr:`~NumberOfPMLs`
-            - Gets or sets the number of layers in the perfectly meshed layers region. If set to 0, the value defaults to 2 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 4 otherwise.
+            - Gets or sets the number of layers in the perfectly meshed layers region. If set to 0, the value defaults to 2 if QuadraticElements is enabled (see ) or 4 otherwise.
+          * - :py:attr:`~ObjectId`
+            - ObjectId property.
+          * - :py:attr:`~ObjectState`
+            - ObjectState property.
+          * - :py:attr:`~ObjectTags`
+            - ObjectTags property.
+          * - :py:attr:`~Origin`
+            - Gets or sets the Stacker origin coordinates.
           * - :py:attr:`~OriginX`
             - Gets or sets the X coordinate location of base face for the volume flattening step.
           * - :py:attr:`~OriginY`
             - Gets or sets the Y coordinate location of base face for the volume flattening step.
           * - :py:attr:`~OriginZ`
             - Gets or sets the Z coordinate location of base face for the volume flattening step.
+          * - :py:attr:`~Parent`
+            - Parent property.
           * - :py:attr:`~Properties`
             - Gets the list of properties for this object.
           * - :py:attr:`~QuadraticElements`
@@ -167,8 +336,30 @@ Overview
             - Defines the speed of sound in the acoustic scenario.
           * - :py:attr:`~StackingDefeatureSize`
             - Gets or sets the defeature size to be used along the stacking direction in stacker operations.
+          * - :py:attr:`~State`
+            - State property.
+          * - :py:attr:`~Suppressed`
+            - Gets or sets the Suppressed.
           * - :py:attr:`~VisibleProperties`
             - Gets the list of properties that are visible for this object.
+          * - :py:attr:`~WorkflowDescription`
+            - WorkflowDescription property.
+          * - :py:attr:`~WorkflowDescriptionJson`
+            - WorkflowDescriptionJson property.
+          * - :py:attr:`~WorkflowFailureInformation`
+            - WorkflowFailureInformation property.
+          * - :py:attr:`~WorkflowFailureInformationJson`
+            - WorkflowFailureInformationJson property.
+          * - :py:attr:`~WorkflowReleaseStatusString`
+            - WorkflowReleaseStatusString property.
+          * - :py:attr:`~WorkflowString`
+            - Gets the WorkflowString.
+          * - :py:attr:`~WorkflowType`
+            - Returns the type of the operation. .
+          * - :py:attr:`~WorkflowTypeInformation`
+            - WorkflowTypeInformation property.
+          * - :py:attr:`~WorkflowTypeInformationJson`
+            - WorkflowTypeInformationJson property.
 
 
 
@@ -178,6 +369,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: ActiveSizingSettings
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType]
+
+
+   
+   Gets the active sizing settings type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: AnalysisFrequency
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -202,6 +418,60 @@ Property detail
 
    ..
        !! processed by numpydoc !!
+
+.. py:property:: ApplicableSettingsTypes
+   :type: Optional[List[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType]]
+
+
+   
+   ApplicableSettingsTypes property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: AttachedRefs
+   :type: Optional[List[int]]
+
+
+   
+   AttachedRefs property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Attachment
+   :type: Optional[str]
+
 
 .. py:property:: BoundingBoxFactor
    :type: Optional[float]
@@ -253,6 +523,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: ClsId
+   :type: Optional[int]
+
+
+   
+   ClsId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: CurvatureAngle
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -278,12 +573,187 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: CustomGlobalCurvatureAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the custom angle to be used for the GlobalCurvatureAngle. If this value is 0, the default GlobalCurvatureAngle is used. Defaults to 0. This property should only accessed for internal usage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomGlobalGrowthRate
+   :type: Optional[float]
+
+
+   
+   Gets or sets the custom growth rate to be used for the GlobalGrowthRate. If this value is 0, the default GlobalGrowthRate is used. Defaults to 0. This property should only accessed for internal usage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomGlobalMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the custom size to be used for the GlobalMeshSize. If this value is 0, the default GlobalMeshSize is used. Defaults to 0. This property should only accessed for internal usage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomGlobalMinimalMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the custom size to be used for the GlobalMinimalMeshSize. If this value is 0, the default GlobalMinimalMeshSize is used. Defaults to 0. This property should only accessed for internal usage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomNumberOfAcousticLayers
+   :type: Optional[int]
+
+
+   
+   Gets or sets the custom number of layers in the acoustic region. If this value is 0, the default NumberOfAcousticLayers is used. Defaults to 0. This property should only accessed for internal usage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CustomNumberOfPMLs
+   :type: Optional[int]
+
+
+   
+   Gets or sets the custom number of layers in the perfectly meshed layers region. If this value is 0, the default NumberOfAcousticLayers is used. Defaults to 0. This property should only accessed for internal usage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DataModelObjectCategory
    :type: Optional[Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory]
 
 
    
    Gets the current DataModelObject's category.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Direction
+   :type: Optional[Iterable[float]]
+
+
+   
+   Gets or sets the Stacker Direction coordinates.
 
 
 
@@ -403,6 +873,106 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GlobalBoundingBoxFactor
+   :type: Optional[float]
+
+
+   
+   Gets or sets the bounding box factor applied to compute automatically the GlobalMeshSize from the model. If set to 0, the default bouding box factor is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalCurvatureAngle
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the curvature angle of the mesh to be used in workflow steps. If set to 0, the default curvature angle is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalDefeatureMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the defeature element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GlobalGrowthRate
+   :type: Optional[float]
+
+
+   
+   Gets or sets the growth rate of the mesh to be used in workflow steps. If set to 0, the default growth rate is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: GlobalMeshSize
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -428,12 +998,87 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: GlobalMinimalMeshSize
+   :type: Optional[Ansys.Core.Units.Quantity]
+
+
+   
+   Gets or sets the minimal element size of the mesh to be used in workflow steps. If set to 0, the value is automatically defined based on the model size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: GroupingFolder
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   GroupingFolder property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: GrowthRate
    :type: Optional[float]
 
 
    
    Gets or sets the growth rate of the mesh to be used in workflow steps. If set to 0, the default growth rate is used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: IconName
+   :type: Optional[str]
+
+
+   
+   IconName property.
 
 
 
@@ -603,6 +1248,31 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: Name
+   :type: Optional[str]
+
+
+   
+   Name property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: NonStackableBodyMeshSize
    :type: Optional[Ansys.Core.Units.Quantity]
 
@@ -633,7 +1303,7 @@ Property detail
 
 
    
-   Gets or sets the number of layers in the acoustic region. If set to 0, the value defaults to 1 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 2 otherwise.
+   Gets or sets the number of layers in the acoustic region. If set to 0, the value defaults to 1 if QuadraticElements is enabled (see ) or 2 otherwise.
 
 
 
@@ -683,7 +1353,107 @@ Property detail
 
 
    
-   Gets or sets the number of layers in the perfectly meshed layers region. If set to 0, the value defaults to 2 if QuadraticElements is enabled (see P:Ansys.ACT.Automation.Mechanical.MeshWorkflowStepGroup.QuadraticElements) or 4 otherwise.
+   Gets or sets the number of layers in the perfectly meshed layers region. If set to 0, the value defaults to 2 if QuadraticElements is enabled (see ) or 4 otherwise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectId
+   :type: Optional[int]
+
+
+   
+   ObjectId property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectState
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.ObjectState]
+
+
+   
+   ObjectState property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: ObjectTags
+   :type: Optional[Iterable[Ansys.Mechanical.DataModel.Interfaces.IObjectTag]]
+
+
+   
+   ObjectTags property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Origin
+   :type: Optional[Iterable[Ansys.Core.Units.Quantity]]
+
+
+   
+   Gets or sets the Stacker origin coordinates.
 
 
 
@@ -759,6 +1529,31 @@ Property detail
 
    
    Gets or sets the Z coordinate location of base face for the volume flattening step.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Parent
+   :type: Optional[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+
+
+   
+   Parent property.
 
 
 
@@ -878,12 +1673,287 @@ Property detail
    ..
        !! processed by numpydoc !!
 
+.. py:property:: State
+   :type: Optional[Ansys.Mechanical.DataModel.Enums.Legacy.State]
+
+
+   
+   State property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Suppressed
+   :type: Optional[bool]
+
+
+   
+   Gets or sets the Suppressed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: VisibleProperties
    :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.Property]]
 
 
    
    Gets the list of properties that are visible for this object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowDescription
+   :type: Optional[System.Collections.Generic.Dictionary[str, Any]]
+
+
+   
+   WorkflowDescription property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowDescriptionJson
+   :type: Optional[str]
+
+
+   
+   WorkflowDescriptionJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowFailureInformation
+   :type: Optional[System.Collections.Generic.Dictionary[str, str]]
+
+
+   
+   WorkflowFailureInformation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowFailureInformationJson
+   :type: Optional[str]
+
+
+   
+   WorkflowFailureInformationJson property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowReleaseStatusString
+   :type: Optional[str]
+
+
+   
+   WorkflowReleaseStatusString property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowString
+   :type: Optional[str]
+
+
+   
+   Gets the WorkflowString.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.WorkflowType]
+
+
+   
+   Returns the type of the operation. .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowTypeInformation
+   :type: Optional[System.Collections.Generic.Dictionary[str, str]]
+
+
+   
+   WorkflowTypeInformation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: WorkflowTypeInformationJson
+   :type: Optional[str]
+
+
+   
+   WorkflowTypeInformationJson property.
 
 
 
@@ -952,6 +2022,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: CanCheckPublicStateCallbackForIM() -> bool
+
+   
+   CanCheckPublicStateCallbackForIM method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CanConvertSizingSettings(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> bool
+
+   
+   Returns whether the active sizing settings can be converted to the input SettingsType.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CanShowPublishStateIM() -> bool
+
+   
+   CanShowPublishStateIM method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ClearDataAndDisableCheckpoints() -> None
 
    
@@ -968,10 +2062,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: ConvertWorkflow(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.WorkflowType) -> None
+
+   
+   Converts the workflow type to Custom
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CopyAttachmentPathToClipboard() -> None
+
+   
+   Copies the current attachment path to clipboard.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: CopyTo(other: Ansys.ACT.Automation.Mechanical.DataModelObject) -> None
 
    
    Copies all visible properties from this object to another.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: CreateObjRef(requestedType: type) -> System.Runtime.Remoting.ObjRef
+
+   
+   CreateObjRef method.
 
    ..
        !! processed by numpydoc !!
@@ -1032,6 +2150,14 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: Equals(other: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: ExecuteAllSteps() -> None
 
    
@@ -1056,6 +2182,30 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetAPIName(dispId: int) -> str
+
+   
+   Property name bound to dispId.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetAllProperties() -> List[Ansys.ACT.Automation.Mechanical.AutomationPropertyWrapper]
+
+   
+   GetAllProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetApplicableOperationTypes() -> List[Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType]
+
+   
+   GetApplicableOperationTypes method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
 
    
@@ -1064,10 +2214,202 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: GetDetailsView() -> Ansys.ACT.Automation.Mechanical.DetailsViewData
+
+   
+   GetDetailsView method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableMorphFieldPatterns() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableMorphFieldPatterns method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableScopes() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableScopes method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetDomainBrowserAvailableSizeFieldPatterns() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetDomainBrowserAvailableSizeFieldPatterns method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetEnumName(enumType: type, value: int, dispId: int) -> str
+
+   
+   Enum name bound to value
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetIconFile() -> System.Byte
+
+   
+   GetIconFile method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetLifetimeService() -> Any
+
+   
+   GetLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshWorkflowsControlPropertyList(control: Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelControlAuto, pathBase: str, result: List[System.Collections.Generic.Dictionary[str, Any]], filter: bool, filterUnpublishedProps: bool, filterPropertyNames: List[str]) -> None
+   :classmethod:
+
+
+   
+   GetMeshWorkflowsControlPropertyList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshWorkflowsOperationPropertyList(operation: Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelOperationAuto, pathBase: str, result: List[System.Collections.Generic.Dictionary[str, Any]], filter: bool, filterUnpublishedProps: bool, filterPropertyNames: List[str]) -> None
+   :classmethod:
+
+
+   
+   GetMeshWorkflowsOperationPropertyList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshWorkflowsOutcomePropertyList(outcome: Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelOutcomeAuto, pathBase: str, result: List[System.Collections.Generic.Dictionary[str, Any]], filter: bool, filterUnpublishedProps: bool, filterPropertyNames: List[str]) -> None
+   :classmethod:
+
+
+   
+   GetMeshWorkflowsOutcomePropertyList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetMeshWorkflowsPropertyList(workflow: Ansys.Common.Interop.DSObjectsAuto.IDSEngineeringModelWorkflowAuto, result: List[System.Collections.Generic.Dictionary[str, Any]], filter: bool, filterUnpublished: bool, filterPropertyNames: List[str]) -> None
+   :classmethod:
+
+
+   
+   GetMeshWorkflowsPropertyList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNextExecutableControlIdByType(controlTypeEnumValue: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType) -> int
+
+   
+   GetNextExecutableControlIdByType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetNextExecutableOrUndefinedControlIdByType(controlTypeEnumValue: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType) -> int
+
+   
+   GetNextExecutableOrUndefinedControlIdByType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
+
+   
+   GetObjectData method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: GetParameter(propName: str) -> Ansys.ACT.Interfaces.Mechanical.IParameter
 
    
    Gets the parameter corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPath() -> str
+
+   
+   GetPath method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyName(dispId: int) -> str
+
+   
+   GetPropertyName method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyValue(id: int) -> str
+
+   
+   GetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetPropertyWorksheetInfo() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetPropertyWorksheetInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetUnpublishedList() -> List[System.Collections.Generic.Dictionary[str, Any]]
+
+   
+   GetUnpublishedList method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
+
+   
+   GetVisibleProperties method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetVisiblePropertyNames() -> List[str]
+
+   
+   GetVisiblePropertyNames method.
 
    ..
        !! processed by numpydoc !!
@@ -1084,6 +2426,70 @@ Method detail
 
    
    Run the GroupSimilarObjects action.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GroupSteps(stepObjects: Iterable[Ansys.ACT.Automation.Mechanical.MeshWorkflowStep]) -> None
+
+   
+   GroupSteps method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: HasUnderdefinedSettingsData() -> bool
+
+   
+   HasUnderdefinedSettingsData method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: InitializeLifetimeService() -> Any
+
+   
+   InitializeLifetimeService method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyEditable(dispId: int) -> bool
+
+   
+   IsPropertyEditable method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsPropertyVisible(dispId: int) -> bool
+
+   
+   IsPropertyVisible method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: IsSizingSettings(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> bool
+
+   
+   IsSizingSettings method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: MeshWorkflowSteps() -> List[Ansys.ACT.Automation.Mechanical.MeshWorkflowStep]
+
+   
+   Gets the ordered list of Steps for the workflow.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PreviewNextStep() -> None
+
+   
+   Previews the next available step in the workflow. After the preview, the step will contain a preview outcome with the information required for the validation of the user inputs. The preview outcome can be returned using the MeshWorkflowOutcomes method of the step.
 
    ..
        !! processed by numpydoc !!
@@ -1106,6 +2512,14 @@ Method detail
 ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyById(dispId: int) -> Ansys.ACT.Automation.Mechanical.Property
+
+   
+   PropertyById method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: PropertyByName(name: str) -> Ansys.ACT.Automation.Mechanical.Property
 
    
@@ -1114,10 +2528,34 @@ Method detail
    ..
        !! processed by numpydoc !!
 
+.. py:method:: PropertyTypeInfo(property: Ansys.ACT.Automation.Mechanical.Property) -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   PropertyTypeInfo method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: PublishIMProp() -> None
+
+   
+   PublishIMProp method.
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:method:: RemoveParameter(propName: str) -> None
 
    
    Removes the parameter from the parameter set corresponding to the given property.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: RenameBasedOnType() -> None
+
+   
+   Renames applying the default name based on type.
 
    ..
        !! processed by numpydoc !!
@@ -1134,6 +2572,78 @@ Method detail
 
    
    Revert to the specified step; if no checkpoint is available, then an exception will be raised.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPropertyValue(id: int, value: str, validate: int) -> None
+
+   
+   SetPropertyValue method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetPublish(id: int) -> None
+
+   
+   SetPublish method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SetUnpublish(id: int) -> None
+
+   
+   SetUnpublish method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SettingsReleaseStatusString(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> str
+
+   
+   SettingsReleaseStatusString method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SettingsTypeInformation(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> System.Collections.Generic.Dictionary[str, Any]
+
+   
+   SettingsTypeInformation method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: SettingsTypeInformationJson(type: Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.SettingsType) -> str
+
+   
+   SettingsTypeInformationJson method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StartCodeGeneration() -> None
+
+   
+   Start the code generation for the Meshing operations.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: StopCodeGeneration() -> None
+
+   
+   Stop the code generation for the Meshing operations.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -49,6 +49,14 @@ Overview
 
           * - :py:attr:`~CopySettingsFrom`
             - Copies the settings of a Dataset2DDisplayOptions reference to this Dataset2DDisplayOptions .
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
 
 
    .. tab-item:: Properties
@@ -59,6 +67,8 @@ Overview
 
           * - :py:attr:`~Color`
             - Gets or sets the Dataset2D Color
+          * - :py:attr:`~DatasetType`
+            - DatasetType property.
           * - :py:attr:`~IsVisible`
             - Gets or sets the visibility of the Dataset2D
           * - :py:attr:`~LineThickness`
@@ -86,6 +96,31 @@ Property detail
 
    
    Gets or sets the Dataset2D Color 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: DatasetType
+   :type: Optional[Ansys.Mechanical.DataModel.MechanicalEnums.Charts.Dataset2D.Chart2DDatasetType]
+
+
+   
+   DatasetType property.
 
 
 
@@ -266,6 +301,38 @@ Method detail
 
    
    Copies the settings of a Dataset2DDisplayOptions reference to this Dataset2DDisplayOptions . 
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
 
    ..
        !! processed by numpydoc !!

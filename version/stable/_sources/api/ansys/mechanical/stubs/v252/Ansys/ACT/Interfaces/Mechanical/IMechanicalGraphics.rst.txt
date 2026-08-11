@@ -48,6 +48,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~KeyframeAnimationUtility`
+            - KeyframeAnimationUtility property.
           * - :py:attr:`~ModelViewManager`
             - An instance of the ModelViewManager.
           * - :py:attr:`~SectionPlanes`
@@ -61,6 +63,31 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: KeyframeAnimationUtility
+   :type: Optional[Ansys.ACT.Common.Graphics.KeyframeAnimationUtility]
+
+
+   
+   KeyframeAnimationUtility property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: ModelViewManager
    :type: Optional[Ansys.ACT.Interfaces.Graphics.IModelViewManager]
 

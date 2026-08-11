@@ -5,7 +5,7 @@
 :class:`ResultAnimationOptions`
 ===============================
 
-.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.ResultAnimationOptions
+.. py:class:: ansys.mechanical.stubs.v252.Ansys.Mechanical.Graphics.ResultAnimationOptions(graphics: Ansys.Common.Interop.Gfx.IDSGraphics)
 
    Bases: :py:obj:`object`
 
@@ -20,6 +20,21 @@ Overview
 
 
 
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Equals`
+            - Equals method.
+          * - :py:attr:`~GetHashCode`
+            - GetHashCode method.
+          * - :py:attr:`~GetType`
+            - GetType method.
+          * - :py:attr:`~ToString`
+            - ToString method.
+
 
    .. tab-item:: Properties
 
@@ -27,12 +42,18 @@ Overview
           :header-rows: 0
           :widths: auto
 
+          * - :py:attr:`~AcceleratedAnimationWillBeUsed`
+            - Whether the accelerated animation will be used given the current result and display options.
+          * - :py:attr:`~CanEngageMultiViewportAnimation`
+            - CanEngageMultiViewportAnimation property.
           * - :py:attr:`~DisplacementTraces`
             - Gets or Sets if the Displacement Traces are Enabled/Disabled
           * - :py:attr:`~Duration`
             - Gets or Sets the Duration for Result Animation.
           * - :py:attr:`~FitDeformationScalingToAnimation`
             - Gets or Sets if the Animation Displacement Fits for full range of Time Steps in the Screen.
+          * - :py:attr:`~MultiViewportAnimation`
+            - MultiViewportAnimation property.
           * - :py:attr:`~NumberOfFrames`
             - Gets or Sets the Number Of Frames for Distributed Result Animation.
           * - :py:attr:`~RangeType`
@@ -52,6 +73,56 @@ Overview
 
 Property detail
 ---------------
+.. py:property:: AcceleratedAnimationWillBeUsed
+   :type: Optional[bool]
+
+
+   
+   Whether the accelerated animation will be used given the current result and display options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: CanEngageMultiViewportAnimation
+   :type: Optional[bool]
+
+
+   
+   CanEngageMultiViewportAnimation property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:property:: DisplacementTraces
    :type: Optional[bool]
 
@@ -108,6 +179,31 @@ Property detail
 
    
    Gets or Sets if the Animation Displacement Fits for full range of Time Steps in the Screen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: MultiViewportAnimation
+   :type: Optional[bool]
+
+
+   
+   MultiViewportAnimation property.
 
 
 
@@ -255,6 +351,40 @@ Property detail
 
 
 
+
+Method detail
+-------------
+.. py:method:: Equals(obj: Any) -> bool
+
+   
+   Equals method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetHashCode() -> int
+
+   
+   GetHashCode method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: GetType() -> type
+
+   
+   GetType method.
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:method:: ToString() -> str
+
+   
+   ToString method.
+
+   ..
+       !! processed by numpydoc !!
 
 
 
