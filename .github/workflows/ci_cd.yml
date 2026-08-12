@@ -410,7 +410,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install pytest
-        python -m pip install --find-links wheel-artifacts ${{ env.PACKAGE_NAME }}
+        python -m pip install --no-index --find-links wheel-artifacts ${{ env.PACKAGE_NAME }}
 
     - name: "Confirm package was installed from wheel, not source"
       run: |
