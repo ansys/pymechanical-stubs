@@ -304,7 +304,15 @@ def write_enum(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    """Write an enum.
+    """Write an enum, including its member values and inherited .NET methods.
+
+    Each .NET enum inherits from ``System.Enum`` / ``System.Object`` and
+    therefore carries instance methods such as ``GetHashCode``, ``ToString``,
+    ``CompareTo``, ``HasFlag``, ``GetTypeCode``, ``Equals``, and ``GetType``.
+    Those methods are written into the same ``Enum``-based class block so that
+    VS Code autocomplete surfaces both the enum member names *and* the
+    available instance methods without producing a duplicate ``object``-based
+    class definition that would shadow the ``Enum`` one.
 
     Parameters
     ----------
@@ -324,6 +332,8 @@ def write_enum(
     # members (FieldInfo) would incorrectly hide enum values, because enum
     # field constants do not carry PublishedAttribute.
     fields = [field for field in enum_type.GetFields() if field.IsLiteral]
+    methods = get_methods(enum_type, doc, type_filter)
+
     buffer.write(f"class {enum_type.Name}(Enum):\n")
 
     if doc is not None:
@@ -336,7 +346,10 @@ def write_enum(
     for field in fields:
         write_enum_field(buffer, field, 1)
 
-    if len(fields) == 0:
+    for method in methods:
+        write_method(buffer, method, 1)
+
+    if len(fields) == 0 and len(methods) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
@@ -982,7 +995,8 @@ def write_module(
     class_types = [
         mod_type
         for mod_type in mod_types
-        if mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface
+        if (mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface)
+        and not mod_type.IsEnum
     ]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
