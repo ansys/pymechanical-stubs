@@ -651,9 +651,65 @@ jobs:
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
         checkout: false
 
+  test-wheel-install:
+    name: "Test package installed from wheel"
+    # Simulate a real `pip install ansys-mechanical-stubs` and run the full
+    # autocomplete test suite against the installed wheel.  This catches
+    # packaging mistakes (missing stubs files, broken __init__ imports, etc.)
+    # that would not be caught by the editable-install validate-stubs job.
+    runs-on: ${{ matrix.os }}
+    needs: [build-library, config-matrix]
+    strategy:
+      fail-fast: false
+      matrix:
+        mechanical: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix).mechanical }}
+        python-version: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix).python-version }}
+        os: [ubuntu-latest, windows-latest]
+    steps:
+    - name: "Install Git and clone project"
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+    - name: "Set up Python"
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: "Download wheel artifacts"
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      with:
+        name: ${{ env.PACKAGE_NAME }}-artifacts
+        path: wheel-artifacts
+
+    - name: "Install package from wheel (no editable install)"
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install pytest
+        python -m pip install --find-links wheel-artifacts ${{ env.PACKAGE_NAME }}
+
+    - name: "Confirm package was installed from wheel, not source"
+      run: |
+        python -c "
+        import importlib.metadata, pathlib
+        dist = importlib.metadata.distribution('${{ env.PACKAGE_NAME }}')
+        direct_url = dist.read_text('direct_url.json')
+        print('direct_url.json:', direct_url)
+        # If installed from a local wheel the url will be a file:// path
+        # containing the artifacts directory.  An editable install would
+        # have 'editable': true in this file.
+        if direct_url and '\"editable\": true' in direct_url:
+            raise SystemExit('Package appears to be an editable install, not a wheel install.')
+        print('Package installed from wheel correctly.')
+        "
+
+    - name: "Run autocomplete tests against installed wheel"
+      env:
+        MECHANICAL_VERSION: ${{ matrix.mechanical.version }}
+      run: |
+        python -m pytest tests/test_autocomplete.py -v
+
   release:
     runs-on: ubuntu-latest
-    needs: [smoke-tests, build-library, update-changelog]
+    needs: [smoke-tests, build-library, update-changelog, test-wheel-install]
     environment: release
     permissions:
       id-token: write
