@@ -346,10 +346,11 @@ def write_enum(
     for field in fields:
         write_enum_field(buffer, field, 1)
 
-    for method in methods:
-        write_method(buffer, method, 1)
+    method_groups = _group_methods_by_signature_name(methods)
+    for method_group in method_groups:
+        write_method_group(buffer, method_group, 1)
 
-    if len(fields) == 0 and len(methods) == 0:
+    if len(fields) == 0 and len(method_groups) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
@@ -751,6 +752,89 @@ def convert_operator_name(
     return method_name
 
 
+def _format_method_args(method: Method, use_typed_args: bool) -> str:
+    """Build the Python argument list for a method signature."""
+    first_arg = "cls" if method.static else "self"
+    if use_typed_args:
+        args = [first_arg] + [f"{arg.name}: {c_types_to_python(arg.type)}" for arg in method.args]
+    else:
+        args = [first_arg, "*args: typing.Any"]
+    return f"({', '.join(args)})"
+
+
+def _method_signature_name(method: Method) -> str:
+    """Return the emitted Python method name for a reflected method."""
+    return convert_operator_name(method.name, method.args, method.static)
+
+
+def _group_methods_by_signature_name(
+    methods: typing.List[Method],
+) -> typing.List[typing.List[Method]]:
+    """Group reflected methods that map to the same emitted Python method name."""
+    grouped_methods = {}
+    ordered_keys = []
+
+    for method in methods:
+        key = (_method_signature_name(method), method.static)
+        if key not in grouped_methods:
+            grouped_methods[key] = []
+            ordered_keys.append(key)
+        grouped_methods[key].append(method)
+
+    return [grouped_methods[key] for key in ordered_keys]
+
+
+def _combined_return_type(methods: typing.List[Method]) -> str:
+    """Return a shared return type for an overload group when one exists."""
+    return_types = []
+    for method in methods:
+        method_type = c_types_to_python(method.return_type)
+        if method_type not in return_types:
+            return_types.append(method_type)
+
+    if len(return_types) == 1:
+        return return_types[0]
+
+    return "typing.Any"
+
+
+def _write_method_signature(
+    buffer: typing.TextIO,
+    method: Method,
+    indent_level: int = 1,
+    *,
+    use_typed_args: bool,
+    use_overload: bool,
+    return_type: typing.Optional[str] = None,
+    include_docstring: bool = True,
+) -> None:
+    """Write a method signature, optionally as a typing overload declaration."""
+    indent = "    " * indent_level
+    if method.static:
+        buffer.write(f"{indent}@classmethod\n")
+    if use_overload:
+        buffer.write(f"{indent}@typing.overload\n")
+
+    args = _format_method_args(method, use_typed_args=use_typed_args)
+    method_type = return_type or c_types_to_python(method.return_type)
+    converted_method_name = _method_signature_name(method)
+
+    buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
+
+    if use_overload:
+        buffer.write(f"{indent}    ...\n\n")
+        return
+
+    inner = "    " * (1 + indent_level)
+    if include_docstring:
+        if method.doc is None:
+            write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
+        else:
+            write_docstring(buffer, method.doc, indent_level + 1)
+    buffer.write(f"{inner}pass\n")
+    buffer.write("\n")
+
+
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
     """Write a method.
 
@@ -763,27 +847,42 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     indent_level: int
         ``1`` to indent a line once
     """
-    indent = "    " * indent_level
-    if method.static:
-        buffer.write(f"{indent}@classmethod\n")
-        first_arg = "cls"
-    else:
-        first_arg = "self"
-    args = [first_arg] + [f"{arg.name}: {c_types_to_python(arg.type)}" for arg in method.args]
-    args = f"({', '.join(args)})"
-    method_type = c_types_to_python(method.return_type)
+    _write_method_signature(
+        buffer,
+        method,
+        indent_level,
+        use_typed_args=True,
+        use_overload=False,
+    )
 
-    # Convert operator method names to Python dunder methods
-    converted_method_name = convert_operator_name(method.name, method.args, method.static)
 
-    buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
-    indent = "    " * (1 + indent_level)
-    if method.doc is None:
-        write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
-    else:
-        write_docstring(buffer, method.doc, indent_level + 1)
-    buffer.write(f"{indent}pass\n")
-    buffer.write("\n")
+def write_method_group(
+    buffer: typing.TextIO, methods: typing.List[Method], indent_level: int = 1
+) -> None:
+    """Write one or more overloads for a reflected CLR method name."""
+    if len(methods) == 1:
+        write_method(buffer, methods[0], indent_level)
+        return
+
+    for method in methods:
+        _write_method_signature(
+            buffer,
+            method,
+            indent_level,
+            use_typed_args=True,
+            use_overload=True,
+            include_docstring=False,
+        )
+
+    implementation_method = methods[0]
+    _write_method_signature(
+        buffer,
+        implementation_method,
+        indent_level,
+        use_typed_args=False,
+        use_overload=False,
+        return_type=_combined_return_type(methods),
+    )
 
 
 def adjust_method_name_xml(method_name: str):
@@ -958,9 +1057,10 @@ def write_class(
             or (method.name.startswith("set_") and method.name[4:] in properties_with_setters)
         )
     ]
-    [write_method(buffer, method, 1) for method in filtered_methods]
+    method_groups = _group_methods_by_signature_name(filtered_methods)
+    [write_method_group(buffer, method_group, 1) for method_group in method_groups]
 
-    if len(props) == 0 and len(filtered_methods) == 0:
+    if len(props) == 0 and len(method_groups) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
