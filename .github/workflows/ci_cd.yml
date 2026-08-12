@@ -318,11 +318,15 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -e .[tests,build]
 
-    - name: "Validate enum values in stubs"
+    - name: "Run stub generator unit tests"
+      run: |
+        python -m pytest tests/test_generator.py -v
+
+    - name: "Validate generated stubs"
       env:
         MECHANICAL_VERSION: ${{ matrix.mechanical.version }}
       run: |
-        python -m pytest tests/test_stubs.py::test_enums_have_values -v
+        python -m pytest tests/test_autocomplete.py -v
 
   smoke-tests:
     name: Build wheelhouse

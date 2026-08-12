@@ -26,6 +26,10 @@ These tests simulate how VS Code (Pylance / pyright) surfaces stub information
 to the user.  A failing test means that the corresponding symbol would **not**
 appear in VS Code's autocomplete list.
 
+The target Mechanical version is controlled by the ``MECHANICAL_VERSION``
+environment variable (e.g. ``252``, ``261``).  All tests are skipped when the
+variable is not set.
+
 Known-broken symbol in v0.1.14
 -------------------------------
 ``Ansys.Mechanical.DataModel.Enums.AutomaticNodeMovementMethod``
@@ -42,6 +46,7 @@ All tests in ``TestAutomaticNodeMovementMethod`` are therefore expected to
 from enum import Enum
 import importlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -53,18 +58,47 @@ import pytest
 # Shared helpers
 # ---------------------------------------------------------------------------
 
-_STUBS_VERSION = "261"
-_ENUMS_MODULE = f"ansys.mechanical.stubs.v{_STUBS_VERSION}.Ansys.Mechanical.DataModel.Enums"
+_STUBS_VERSION: str = os.getenv("MECHANICAL_VERSION", "")
+
+_skip_no_version = pytest.mark.skipif(
+    not _STUBS_VERSION,
+    reason="MECHANICAL_VERSION environment variable not set — skipping autocomplete tests.",
+)
+
+_ENUMS_MODULE = (
+    f"ansys.mechanical.stubs.v{_STUBS_VERSION}.Ansys.Mechanical.DataModel.Enums"
+    if _STUBS_VERSION
+    else ""
+)
 
 
 def _import_enums():
-    """Return the Enums module for v261."""
+    """Return the Enums module for the version under test."""
     return importlib.import_module(_ENUMS_MODULE)
 
 
 def _get_class(name: str):
-    """Return a class from the v261 Enums module by name."""
+    """Return a class from the Enums module for the version under test."""
     return getattr(_import_enums(), name)
+
+
+def _enum_class_exists(name: str) -> bool:
+    """Return True when *name* exists in the Enums module for the current version."""
+    if not _STUBS_VERSION:
+        return False
+    try:
+        return hasattr(_import_enums(), name)
+    except Exception:
+        return False
+
+
+_skip_no_anmm = pytest.mark.skipif(
+    not _enum_class_exists("AutomaticNodeMovementMethod"),
+    reason=(
+        f"AutomaticNodeMovementMethod not present in v{_STUBS_VERSION} stubs "
+        "— skipping version-specific tests."
+    ),
+)
 
 
 def _pyright_available() -> bool:
@@ -76,6 +110,10 @@ def _pyright_available() -> bool:
         ).returncode
         == 0
     )
+
+
+# Evaluated once at collection time so the subprocess runs only once per session.
+_PYRIGHT_AVAILABLE: bool = _pyright_available()
 
 
 # ---------------------------------------------------------------------------
@@ -96,6 +134,8 @@ _EXPECTED_MEMBERS = {
 # ===========================================================================
 
 
+@_skip_no_version
+@_skip_no_anmm
 class TestAutomaticNodeMovementMethod:
     """Verify that AutomaticNodeMovementMethod works as an Enum with full autocomplete.
 
@@ -221,12 +261,14 @@ class TestAutomaticNodeMovementMethod:
 # ===========================================================================
 
 
+@_skip_no_version
+@_skip_no_anmm
 class TestEnumAccessViaModuleHierarchy:
     """Verify enums are reachable via the full dotted namespace.
 
     A user working in VS Code typically does::
 
-        import ansys.mechanical.stubs.v261 as mech
+        import ansys.mechanical.stubs.v<version> as mech
 
     and then accesses enums as::
 
@@ -269,9 +311,9 @@ class TestEnumAccessViaModuleHierarchy:
 # ===========================================================================
 
 _PYRIGHT_SNIPPET = textwrap.dedent(
-    """\
+    f"""\
     # Type-check snippet: pyright must resolve all members without error.
-    from ansys.mechanical.stubs.v261.Ansys.Mechanical.DataModel.Enums import (
+    from ansys.mechanical.stubs.v{_STUBS_VERSION}.Ansys.Mechanical.DataModel.Enums import (
         AutomaticNodeMovementMethod,
     )
 
@@ -284,6 +326,8 @@ _PYRIGHT_SNIPPET = textwrap.dedent(
 )
 
 
+@_skip_no_version
+@_skip_no_anmm
 class TestPyrightTypeChecking:
     """Run pyright over stub-consuming code to confirm VS Code would resolve symbols.
 
@@ -297,7 +341,7 @@ class TestPyrightTypeChecking:
         pip install pyright
     """
 
-    @pytest.mark.skipif(not _pyright_available(), reason="pyright not installed")
+    @pytest.mark.skipif(not _PYRIGHT_AVAILABLE, reason="pyright not installed")
     def test_pyright_resolves_all_members(self, tmp_path):
         """Pyright must report zero errors when accessing all enum members."""
         test_file = tmp_path / "check_stubs.py"
@@ -328,7 +372,7 @@ class TestPyrightTypeChecking:
             )
         )
 
-    @pytest.mark.skipif(not _pyright_available(), reason="pyright not installed")
+    @pytest.mark.skipif(not _PYRIGHT_AVAILABLE, reason="pyright not installed")
     def test_pyright_no_missing_attribute_errors(self, tmp_path):
         """Pyright must not report 'Cannot access attribute' for enum members.
 
@@ -369,6 +413,8 @@ class TestPyrightTypeChecking:
 # ===========================================================================
 
 
+@_skip_no_version
+@_skip_no_anmm
 class TestAutomaticNodeMovementMethodMemberProperties:
     """Test each enum member's .name and .value properties.
 
@@ -461,6 +507,8 @@ class TestAutomaticNodeMovementMethodMemberProperties:
 # ===========================================================================
 
 
+@_skip_no_version
+@_skip_no_anmm
 class TestAutomaticNodeMovementMethodEnumBehavior:
     """Test Python Enum protocol behaviour for AutomaticNodeMovementMethod.
 
@@ -621,6 +669,8 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
 # ===========================================================================
 
 
+@_skip_no_version
+@_skip_no_anmm
 class TestAutomaticNodeMovementMethodNetMethods:
     """.NET System.Enum methods must be present on AutomaticNodeMovementMethod.
 
@@ -690,6 +740,7 @@ class TestAutomaticNodeMovementMethodNetMethods:
 # ===========================================================================
 
 
+@_skip_no_version
 class TestWorkingEnumControl:
     """Sanity-check enums that do NOT have a duplicate object-based definition.
 
@@ -851,6 +902,53 @@ class TestWorkingEnumControl:
 # ===========================================================================
 
 
+@_skip_no_version
+class TestAllEnumsHaveMembers:
+    """Verify that every Enum class in the Enums module has at least one member.
+
+    This is a broad generator-correctness check: if any enum ends up with zero
+    members it means the stub generator's type_filter was incorrectly applied to
+    enum field constants, or a duplicate ``object``-based class shadowed the
+    ``Enum``-based one.  Both failure modes make VS Code autocomplete show no
+    completion items for that enum.
+    """
+
+    def test_all_enum_classes_have_members(self):
+        """Every Enum subclass in the Enums module must have at least one member."""
+        import inspect
+
+        enums_module = _import_enums()
+
+        enum_classes = [
+            (name, getattr(enums_module, name))
+            for name in dir(enums_module)
+            if inspect.isclass(getattr(enums_module, name, None))
+            and issubclass(getattr(enums_module, name), Enum)
+            and getattr(enums_module, name) is not Enum
+        ]
+
+        assert len(enum_classes) > 0, (
+            f"No Enum classes found in {_ENUMS_MODULE}. "
+            "The module may not have been generated correctly."
+        )
+
+        empty = [name for name, cls in enum_classes if len(list(cls)) == 0]
+        assert not empty, (
+            f"The following enums in {_ENUMS_MODULE} have no members "
+            "(would show empty autocomplete lists in VS Code):\n  "
+            + "\n  ".join(empty)
+            + "\nCheck that type_filter is not applied to enum field constants "
+            "in the stub generator, and that no object-based duplicate class "
+            "shadows the Enum-based definition."
+        )
+
+
+# ===========================================================================
+# TestEnumModuleExports
+# ===========================================================================
+
+
+@_skip_no_version
 class TestEnumModuleExports:
     """Verify the Enums module exports all classes needed for VS Code autocomplete.
 
