@@ -41,11 +41,11 @@ from ansys.mechanical.stubs.stub_generator.generate_content import (
 _TYPE_CONVERSION_CASES = [
     (
         "Ansys.ACT.Interfaces.Mechanical.IParameter",
-        '"Ansys.ACT.Interfaces.Mechanical.IParameter"',
+        "Ansys.ACT.Interfaces.Mechanical.IParameter",
     ),
     (
         "System.Collections.Generic.IList[ChildrenType]",
-        'list["ChildrenType"]',
+        "typing.List[ChildrenType]",
     ),
     (
         "System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,System.Boolean]",
@@ -56,11 +56,11 @@ _TYPE_CONVERSION_CASES = [
         "System.Collections.Generic.KeyValuePair["
         "System.Int32,"
         "System.Collections.Generic.IEnumerable[Ansys.Core.Units.Quantity]]]",
-        'typing.Iterable[dict[int,typing.Iterable["Ansys.Core.Units.Quantity"]]]',
+        "typing.Iterable[dict[int,typing.Iterable[Ansys.Core.Units.Quantity]]]",
     ),
     (
         '"System.Tuple[Ansys.Core.Units.Quantity,Ansys.Core.Units.Quantity]"',
-        'tuple["Ansys.Core.Units.Quantity","Ansys.Core.Units.Quantity"]',
+        "tuple[Ansys.Core.Units.Quantity,Ansys.Core.Units.Quantity]",
     ),
     (
         '"IronPython.Runtime.PythonTuple"',
