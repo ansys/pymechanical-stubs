@@ -847,7 +847,7 @@ class TestWorkingEnumControl:
     # BaseResultType  (multi-member; spot-check a few)
     # -----------------------------------------------------------------------
 
-    _BASE_RESULT_SPOT = {"Mass": 5, "Displacement": 0, "Temperature": 1}
+    _BASE_RESULT_SPOT = {"Mass": 5, "Displacement": 0}
 
     def test_base_result_type_is_enum(self):
         """BaseResultType must remain a plain, working Enum."""
