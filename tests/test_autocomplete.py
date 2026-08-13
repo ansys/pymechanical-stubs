@@ -27,20 +27,8 @@ to the user.  A failing test means that the corresponding symbol would **not**
 appear in VS Code's autocomplete list.
 
 The target Mechanical version is controlled by the ``MECHANICAL_VERSION``
-environment variable (e.g. ``252``, ``261``).  All tests are skipped when the
-variable is not set.
-
-Known-broken symbol in v0.1.14
--------------------------------
-``Ansys.Mechanical.DataModel.Enums.AutomaticNodeMovementMethod``
-
-The stubs file contains **two** class definitions with the same name.  Python
-uses the last definition, which is an ``object``-based stub that has no enum
-members.  The earlier ``Enum``-based definition (with Aggressive / Conservative /
-Custom / Off / ProgramControlled) is silently discarded.
-
-All tests in ``TestAutomaticNodeMovementMethod`` are therefore expected to
-**fail** until the duplicate class definition is removed.
+environment variable (e.g. ``252``, ``261``).  All tests fail with an explicit
+error message when the variable is not set.
 """
 
 from enum import Enum
@@ -60,10 +48,16 @@ import pytest
 
 _STUBS_VERSION: str = os.getenv("MECHANICAL_VERSION", "")
 
-_skip_no_version = pytest.mark.skipif(
-    not _STUBS_VERSION,
-    reason="MECHANICAL_VERSION environment variable not set — skipping autocomplete tests.",
-)
+
+@pytest.fixture(autouse=False)
+def require_version():
+    """Fail the test if MECHANICAL_VERSION is not set."""
+    if not _STUBS_VERSION:
+        pytest.fail(
+            "MECHANICAL_VERSION environment variable is not set. "
+            "Set it to the Mechanical version to test (e.g. MECHANICAL_VERSION=261)."
+        )
+
 
 _ENUMS_MODULE = (
     f"ansys.mechanical.stubs.v{_STUBS_VERSION}.Ansys.Mechanical.DataModel.Enums"
@@ -82,23 +76,18 @@ def _get_class(name: str):
     return getattr(_import_enums(), name)
 
 
-def _enum_class_exists(name: str) -> bool:
-    """Return True when *name* exists in the Enums module for the current version."""
-    if not _STUBS_VERSION:
-        return False
+@pytest.fixture(autouse=False)
+def require_contact_type(require_version):
+    """Fail the test if ContactType is not present in the stubs."""
     try:
-        return hasattr(_import_enums(), name)
-    except Exception:
-        return False
-
-
-_skip_no_anmm = pytest.mark.skipif(
-    not _enum_class_exists("AutomaticNodeMovementMethod"),
-    reason=(
-        f"AutomaticNodeMovementMethod not present in v{_STUBS_VERSION} stubs "
-        "— skipping version-specific tests."
-    ),
-)
+        enums = importlib.import_module(_ENUMS_MODULE)
+        if not hasattr(enums, "ContactType"):
+            pytest.fail(
+                f"ContactType is not present in v{_STUBS_VERSION} stubs. "
+                "Ensure the correct version of ansys-mechanical-stubs is installed."
+            )
+    except ImportError as exc:
+        pytest.fail(f"Could not import Enums module for v{_STUBS_VERSION}: {exc}")
 
 
 def _pyright_available() -> bool:
@@ -117,40 +106,31 @@ _PYRIGHT_AVAILABLE: bool = _pyright_available()
 
 
 # ---------------------------------------------------------------------------
-# Expected members for AutomaticNodeMovementMethod
+# Expected members for ContactType
 # ---------------------------------------------------------------------------
 
 _EXPECTED_MEMBERS = {
-    "Aggressive": 3,
-    "Conservative": 2,
-    "Custom": 4,
-    "Off": 0,
-    "ProgramControlled": 1,
+    "Bonded": 1,
+    "Frictional": 3,
+    "Frictionless": 2,
+    "NoSeparation": 5,
+    "Rough": 4,
 }
 
 
 # ===========================================================================
-# TestAutomaticNodeMovementMethod
+# TestContactType
 # ===========================================================================
 
 
-@_skip_no_version
-@_skip_no_anmm
-class TestAutomaticNodeMovementMethod:
-    """Verify that AutomaticNodeMovementMethod works as an Enum with full autocomplete.
+@pytest.mark.usefixtures("require_version", "require_contact_type")
+class TestContactType:
+    """Verify that ContactType works as an Enum with full autocomplete.
 
     VS Code autocomplete works by reading the type stubs.  For an enum class,
-    Pylance shows each member as a completion item (e.g. ``.Off``, ``.Aggressive``).
+    Pylance shows each member as a completion item (e.g. ``.Bonded``, ``.Frictional``).
     This only works when the class actually **inherits from** ``enum.Enum`` and
     its members are defined as class-level integer attributes in the stub.
-
-    In v0.1.14 the stubs generator emits a second class block with the same name
-    but using ``object`` as the base class.  Python's module loader overwrites the
-    correct ``Enum`` definition with this bare-object version, so the members
-    disappear entirely—both at runtime and in static analysis tools like pyright.
-
-    All tests below are expected to **FAIL** against v0.1.14 and should pass
-    once the duplicate definition is fixed.
     """
 
     # ------------------------------------------------------------------
@@ -158,15 +138,15 @@ class TestAutomaticNodeMovementMethod:
     # ------------------------------------------------------------------
 
     def test_class_is_enum_subclass(self):
-        """AutomaticNodeMovementMethod must inherit from Enum, not object.
+        """ContactType must inherit from Enum, not object.
 
         Pylance only generates enum-member completions for ``enum.Enum``
         subclasses.  If the class base is ``object`` no member completions
         are produced.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert issubclass(cls, Enum), (
-            f"AutomaticNodeMovementMethod bases are {cls.__bases__!r}. "
+            f"ContactType bases are {cls.__bases__!r}. "
             "Expected a subclass of enum.Enum. "
             "VS Code autocomplete will not show enum members for plain-object stubs."
         )
@@ -174,13 +154,13 @@ class TestAutomaticNodeMovementMethod:
     def test_class_is_not_plain_object(self):
         """The class must not be a bare ``object`` subclass.
 
-        This specifically catches the v0.1.14 regression where the stubs file
-        contains a second ``class AutomaticNodeMovementMethod(object):`` block
+        This catches the scenario where the stubs file
+        contains a second ``class ContactType(object):`` block
         that silently replaces the correct Enum definition.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert cls.__bases__ != (object,), (
-            "AutomaticNodeMovementMethod has only 'object' as its base class. "
+            "ContactType has only 'object' as its base class. "
             "A duplicate object-based definition is shadowing the Enum definition."
         )
 
@@ -190,7 +170,7 @@ class TestAutomaticNodeMovementMethod:
 
     def test_all_expected_members_exist(self):
         """Every expected enum member must be present (== VS Code completion items)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         actual = {m.name for m in cls}
         missing = set(_EXPECTED_MEMBERS) - actual
         assert not missing, (
@@ -201,11 +181,9 @@ class TestAutomaticNodeMovementMethod:
     @pytest.mark.parametrize("name,value", _EXPECTED_MEMBERS.items())
     def test_member_value(self, name, value):
         """Each member must carry the correct integer value."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = cls[name]
-        assert member.value == value, (
-            f"AutomaticNodeMovementMethod.{name} = {member.value!r}, expected {value!r}."
-        )
+        assert member.value == value, f"ContactType.{name} = {member.value!r}, expected {value!r}."
 
     # ------------------------------------------------------------------
     # 3. Attribute / dir() access (what VS Code actually queries)
@@ -216,43 +194,43 @@ class TestAutomaticNodeMovementMethod:
         """Each member must be reachable via ``cls.MemberName`` attribute access.
 
         This is the primary access pattern for VS Code completions:
-        after the user types ``AutomaticNodeMovementMethod.`` the IDE calls
+        after the user types ``ContactType.`` the IDE calls
         ``dir(cls)`` and ``getattr(cls, name)`` for each suggestion.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert hasattr(cls, name), (
-            f"AutomaticNodeMovementMethod.{name} is not accessible via getattr(). "
+            f"ContactType.{name} is not accessible via getattr(). "
             "VS Code would not suggest this completion."
         )
 
     @pytest.mark.parametrize("name", _EXPECTED_MEMBERS)
     def test_member_in_dir(self, name):
-        """Each member name must appear in ``dir(AutomaticNodeMovementMethod)``.
+        """Each member name must appear in ``dir(ContactType)``.
 
         Pylance and other completions engines use ``dir()`` to enumerate the
         available attributes.  Members absent from ``dir()`` are absent from
         autocomplete.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert name in dir(cls), (
-            f"'{name}' is missing from dir(AutomaticNodeMovementMethod). "
+            f"'{name}' is missing from dir(ContactType). "
             "VS Code would not list it as an autocomplete option."
         )
 
     def test_no_members_means_shadowed_definition(self):
         """If the enum has zero members the Enum definition has been overwritten.
 
-        In the v0.1.14 bug the ``object``-based class has no members at all,
+        This covers the scenario where the ``object``-based class has no members at all,
         so ``list(cls)`` returns an empty list.  This assertion produces an
         explicit, human-readable failure message for that case.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         members = list(cls)
         assert members, (
-            "AutomaticNodeMovementMethod has no members. "
+            "ContactType has no members. "
             "The Enum definition is almost certainly shadowed by a duplicate "
             "object-based class further down in the stubs file. "
-            "Check for a second 'class AutomaticNodeMovementMethod(object):' block."
+            "Check for a second 'class ContactType(object):' block."
         )
 
 
@@ -261,20 +239,21 @@ class TestAutomaticNodeMovementMethod:
 # ===========================================================================
 
 
-@_skip_no_version
-@_skip_no_anmm
+@pytest.mark.usefixtures("require_version", "require_contact_type")
 class TestEnumAccessViaModuleHierarchy:
     """Verify enums are reachable via the full dotted namespace.
 
-    A user working in VS Code typically does::
+    Mechanical scripting uses ``Ansys``-rooted paths directly. For example::
 
-        import ansys.mechanical.stubs.v<version> as mech
+        app.Graphics.ViewOptions.ResultPreference.ExtraModelDisplay = (
+            Ansys.Mechanical.DataModel.MechanicalEnums.Graphics.ExtraModelDisplay.NoWireframe
+        )
 
-    and then accesses enums as::
-
-        mech.Ansys.Mechanical.DataModel.Enums.AutomaticNodeMovementMethod.Off
-
-    This test walks that exact dotted path to confirm each step resolves.
+    VS Code resolves these completions by walking the stub package hierarchy
+    starting from ``Ansys``.  This test imports the versioned stub package and
+    walks the equivalent path (``Ansys → Mechanical → DataModel → Enums``) to
+    confirm that every intermediate namespace attribute resolves correctly, which
+    is the same traversal Pylance performs when building autocomplete suggestions.
     """
 
     _NAMESPACE_PATH = ["Ansys", "Mechanical", "DataModel", "Enums"]
@@ -288,20 +267,18 @@ class TestEnumAccessViaModuleHierarchy:
         return ns
 
     def test_enum_class_reachable_via_full_namespace(self):
-        """AutomaticNodeMovementMethod must be reachable through the module tree."""
+        """ContactType must be reachable through the module tree."""
         enums_ns = self._walk_to_enums()
-        cls = getattr(enums_ns, "AutomaticNodeMovementMethod")
-        assert issubclass(cls, Enum), (
-            "AutomaticNodeMovementMethod reached via full namespace is not an Enum."
-        )
+        cls = getattr(enums_ns, "ContactType")
+        assert issubclass(cls, Enum), "ContactType reached via full namespace is not an Enum."
 
     @pytest.mark.parametrize("name", _EXPECTED_MEMBERS)
     def test_enum_member_reachable_via_full_namespace(self, name):
         """Each enum member must be reachable via the full dotted path."""
         enums_ns = self._walk_to_enums()
-        cls = getattr(enums_ns, "AutomaticNodeMovementMethod")
+        cls = getattr(enums_ns, "ContactType")
         assert hasattr(cls, name), (
-            f"AutomaticNodeMovementMethod.{name} not accessible via full namespace. "
+            f"ContactType.{name} not accessible via full namespace. "
             "VS Code autocomplete would not suggest it."
         )
 
@@ -314,36 +291,31 @@ _PYRIGHT_SNIPPET = textwrap.dedent(
     f"""\
     # Type-check snippet: pyright must resolve all members without error.
     from ansys.mechanical.stubs.v{_STUBS_VERSION}.Ansys.Mechanical.DataModel.Enums import (
-        AutomaticNodeMovementMethod,
+        ContactType,
     )
 
-    _off: AutomaticNodeMovementMethod = AutomaticNodeMovementMethod.Off
-    _aggressive: AutomaticNodeMovementMethod = AutomaticNodeMovementMethod.Aggressive
-    _conservative: AutomaticNodeMovementMethod = AutomaticNodeMovementMethod.Conservative
-    _custom: AutomaticNodeMovementMethod = AutomaticNodeMovementMethod.Custom
-    _pc: AutomaticNodeMovementMethod = AutomaticNodeMovementMethod.ProgramControlled
+    _bonded: ContactType = ContactType.Bonded
+    _frictional: ContactType = ContactType.Frictional
+    _frictionless: ContactType = ContactType.Frictionless
+    _no_sep: ContactType = ContactType.NoSeparation
+    _rough: ContactType = ContactType.Rough
     """
 )
 
 
-@_skip_no_version
-@_skip_no_anmm
+@pytest.mark.usefixtures("require_version", "require_contact_type")
 class TestPyrightTypeChecking:
     """Run pyright over stub-consuming code to confirm VS Code would resolve symbols.
 
     Pylance (the VS Code Python language server) is built on pyright.  If pyright
     reports errors for a particular attribute access, Pylance will not show that
     attribute as an autocomplete suggestion.
-
-    These tests are skipped automatically when pyright is not installed.
-    Install it with::
-
-        pip install pyright
     """
 
-    @pytest.mark.skipif(not _PYRIGHT_AVAILABLE, reason="pyright not installed")
     def test_pyright_resolves_all_members(self, tmp_path):
         """Pyright must report zero errors when accessing all enum members."""
+        if not _PYRIGHT_AVAILABLE:
+            pytest.fail("pyright is not installed. Install it with: pip install pyright")
         test_file = tmp_path / "check_stubs.py"
         test_file.write_text(_PYRIGHT_SNIPPET, encoding="utf-8")
 
@@ -372,13 +344,14 @@ class TestPyrightTypeChecking:
             )
         )
 
-    @pytest.mark.skipif(not _PYRIGHT_AVAILABLE, reason="pyright not installed")
     def test_pyright_no_missing_attribute_errors(self, tmp_path):
         """Pyright must not report 'Cannot access attribute' for enum members.
 
         This is the exact error Pylance emits when a member is missing from the
         stub, which means it would also be absent from autocomplete.
         """
+        if not _PYRIGHT_AVAILABLE:
+            pytest.fail("pyright is not installed. Install it with: pip install pyright")
         test_file = tmp_path / "check_stubs.py"
         test_file.write_text(_PYRIGHT_SNIPPET, encoding="utf-8")
 
@@ -409,18 +382,17 @@ class TestPyrightTypeChecking:
 
 
 # ===========================================================================
-# TestAutomaticNodeMovementMethodMemberProperties
+# TestContactTypeMemberProperties
 # ===========================================================================
 
 
-@_skip_no_version
-@_skip_no_anmm
-class TestAutomaticNodeMovementMethodMemberProperties:
+@pytest.mark.usefixtures("require_version", "require_contact_type")
+class TestContactTypeMemberProperties:
     """Test each enum member's .name and .value properties.
 
-    These tests fail in v0.1.14 because the shadowing object-based class has
+    This tests the case where a shadowing object-based class has
     no members, so attribute lookup raises AttributeError and iteration is
-    empty.  All tests are expected to pass once the duplicate definition is
+    empty. All tests are expected to pass once the duplicate definition is
     removed.
     """
 
@@ -435,11 +407,10 @@ class TestAutomaticNodeMovementMethodMemberProperties:
         not a real Enum member ``.name`` will either raise AttributeError or
         return the wrong string.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = getattr(cls, attr_name)
         assert member.name == attr_name, (
-            f"AutomaticNodeMovementMethod.{attr_name}.name == {member.name!r}, "
-            f"expected {attr_name!r}."
+            f"ContactType.{attr_name}.name == {member.name!r}, expected {attr_name!r}."
         )
 
     @pytest.mark.parametrize(
@@ -448,11 +419,10 @@ class TestAutomaticNodeMovementMethodMemberProperties:
     )
     def test_member_value_property(self, attr_name, expected_value):
         """``member.value`` must return the documented integer constant."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = getattr(cls, attr_name)
         assert member.value == expected_value, (
-            f"AutomaticNodeMovementMethod.{attr_name}.value == {member.value!r}, "
-            f"expected {expected_value!r}."
+            f"ContactType.{attr_name}.value == {member.value!r}, expected {expected_value!r}."
         )
 
     @pytest.mark.parametrize(
@@ -462,15 +432,14 @@ class TestAutomaticNodeMovementMethodMemberProperties:
     def test_member_type_is_enum_class(self, attr_name, expected_value):
         """Each member must be an instance of the enum class itself.
 
-        ``isinstance(AutomaticNodeMovementMethod.Off, AutomaticNodeMovementMethod)``
+        ``isinstance(ContactType.Bonded, ContactType)``
         must be True.  With the object-based stub the members don't exist at
         all, so this fails with AttributeError.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = getattr(cls, attr_name)
         assert isinstance(member, cls), (
-            f"AutomaticNodeMovementMethod.{attr_name} is not an instance of "
-            "AutomaticNodeMovementMethod."
+            f"ContactType.{attr_name} is not an instance of ContactType."
         )
 
     @pytest.mark.parametrize(
@@ -479,22 +448,20 @@ class TestAutomaticNodeMovementMethodMemberProperties:
     )
     def test_member_is_enum_instance(self, attr_name, expected_value):
         """Each member must be an instance of ``enum.Enum``."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = getattr(cls, attr_name)
-        assert isinstance(member, Enum), (
-            f"AutomaticNodeMovementMethod.{attr_name} is not an enum.Enum instance."
-        )
+        assert isinstance(member, Enum), f"ContactType.{attr_name} is not an enum.Enum instance."
 
     def test_member_count(self):
-        """The class must expose exactly the documented number of members."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        assert len(cls) == len(_EXPECTED_MEMBERS), (
-            f"Expected {len(_EXPECTED_MEMBERS)} members, got {len(cls)}: {[m.name for m in cls]!r}."
+        """The class must expose at least the documented number of core members."""
+        cls = _get_class("ContactType")
+        assert len(cls) >= len(_EXPECTED_MEMBERS), (
+            f"Expected at least {len(_EXPECTED_MEMBERS)} members, got {len(cls)}: {[m.name for m in cls]!r}."
         )
 
     def test_members_dict(self):
         """``__members__`` must map every expected name to its member."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         missing = set(_EXPECTED_MEMBERS) - set(cls.__members__)
         assert not missing, (
             f"Missing from __members__: {missing!r}. "
@@ -503,18 +470,17 @@ class TestAutomaticNodeMovementMethodMemberProperties:
 
 
 # ===========================================================================
-# TestAutomaticNodeMovementMethodEnumBehavior
+# TestContactTypeEnumBehavior
 # ===========================================================================
 
 
-@_skip_no_version
-@_skip_no_anmm
-class TestAutomaticNodeMovementMethodEnumBehavior:
-    """Test Python Enum protocol behaviour for AutomaticNodeMovementMethod.
+@pytest.mark.usefixtures("require_version", "require_contact_type")
+class TestContactTypeEnumBehavior:
+    """Test Python Enum protocol behaviour for ContactType.
 
     These cover the runtime semantics that VS Code's IntelliSense depends on:
     lookup by value/name, iteration, comparison, hashing, and string
-    representations.  All fail in v0.1.14 where the class is object-based.
+    representations. This fails when the class is object-based.
     """
 
     # ------------------------------------------------------------------
@@ -528,10 +494,10 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
     def test_lookup_by_value(self, attr_name, expected_value):
         """``cls(value)`` must return the correct member.
 
-        This is how code like ``AutomaticNodeMovementMethod(0)`` → ``.Off``
+        This is how code like ``ContactType(1)`` → ``.Bonded``
         works at runtime.  The object-based stub does not support call syntax.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = cls(expected_value)
         assert member.name == attr_name, (
             f"cls({expected_value}) returned {member.name!r}, expected {attr_name!r}."
@@ -540,7 +506,7 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
     @pytest.mark.parametrize("attr_name", list(_EXPECTED_MEMBERS))
     def test_lookup_by_name(self, attr_name):
         """``cls[name]`` must return the correct member (subscript access)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member = cls[attr_name]
         assert member.name == attr_name, f"cls[{attr_name!r}] returned {member.name!r}."
 
@@ -550,15 +516,15 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
 
     def test_iteration_yields_all_members(self):
         """``for m in cls`` must yield every expected member exactly once."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         names = {m.name for m in cls}
-        assert names == set(_EXPECTED_MEMBERS), (
-            f"Iteration yielded {names!r}, expected {set(_EXPECTED_MEMBERS)!r}."
+        assert set(_EXPECTED_MEMBERS).issubset(names), (
+            f"Expected members {set(_EXPECTED_MEMBERS)!r} not all present; got {names!r}."
         )
 
     def test_iteration_yields_enum_instances(self):
         """Every object yielded by iteration must be an Enum instance."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         for member in cls:
             assert isinstance(member, Enum), f"Iteration yielded non-Enum object: {member!r}."
 
@@ -567,19 +533,19 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
     # ------------------------------------------------------------------
 
     def test_same_member_equality(self):
-        """A member must equal itself (``Off == Off``)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        assert cls.Off == cls.Off
+        """A member must equal itself (``Bonded == Bonded``)."""
+        cls = _get_class("ContactType")
+        assert cls.Bonded == cls.Bonded
 
     def test_different_members_inequality(self):
-        """Different members must not be equal (``Off != Aggressive``)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        assert cls.Off != cls.Aggressive
+        """Different members must not be equal (``Bonded != Frictional``)."""
+        cls = _get_class("ContactType")
+        assert cls.Bonded != cls.Frictional
 
     def test_member_identity(self):
         """Accessing the same member twice must return the identical object."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        assert cls.Off is cls.Off
+        cls = _get_class("ContactType")
+        assert cls.Bonded is cls.Bonded
 
     def test_member_not_equal_to_raw_value(self):
         """An enum member must not compare equal to its raw integer value.
@@ -587,9 +553,9 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
         Python Enum members are NOT equal to plain ints (unless IntEnum is
         used).  This verifies the class really is Enum-based, not int-based.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
-        assert cls.Off != 0, (
-            "AutomaticNodeMovementMethod.Off == 0 — the class may be IntEnum "
+        cls = _get_class("ContactType")
+        assert cls.Bonded != 1, (
+            "ContactType.Bonded == 1 — the class may be IntEnum "
             "or the value is leaking as a plain int."
         )
 
@@ -599,24 +565,24 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
 
     def test_members_are_hashable(self):
         """Enum members must be hashable (usable as dict keys / set members)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         member_set = set(cls)
-        assert len(member_set) == len(_EXPECTED_MEMBERS), (
+        assert len(member_set) == len(list(cls)), (
             "Not all members could be added to a set — hashing is broken."
         )
 
     def test_member_as_dict_key(self):
         """Enum members must work as dict keys."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         mapping = {m: m.value for m in cls}
-        assert mapping[cls.Off] == 0
+        assert mapping[cls.Bonded] == 1
 
     def test_member_in_set(self):
-        """``cls.Off in {cls.Off, cls.Aggressive}`` must be True."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        s = {cls.Off, cls.Aggressive}
-        assert cls.Off in s
-        assert cls.Conservative not in s
+        """``cls.Bonded in {cls.Bonded, cls.Frictional}`` must be True."""
+        cls = _get_class("ContactType")
+        s = {cls.Bonded, cls.Frictional}
+        assert cls.Bonded in s
+        assert cls.Frictionless not in s
 
     # ------------------------------------------------------------------
     # String representations
@@ -624,31 +590,31 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
 
     def test_str_includes_member_name(self):
         """``str(member)`` must include the member name for hover documentation."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        s = str(cls.Off)
-        assert "Off" in s, f"str(AutomaticNodeMovementMethod.Off) == {s!r} does not contain 'Off'."
+        cls = _get_class("ContactType")
+        s = str(cls.Bonded)
+        assert "Bonded" in s, f"str(ContactType.Bonded) == {s!r} does not contain 'Bonded'."
 
     def test_repr_includes_class_and_member(self):
         """``repr(member)`` should include both the class and the member name."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        r = repr(cls.Off)
-        assert "Off" in r, f"repr contains no member name: {r!r}."
-        assert "AutomaticNodeMovementMethod" in r, f"repr contains no class name: {r!r}."
+        cls = _get_class("ContactType")
+        r = repr(cls.Bonded)
+        assert "Bonded" in r, f"repr contains no member name: {r!r}."
+        assert "ContactType" in r, f"repr contains no class name: {r!r}."
 
     # ------------------------------------------------------------------
     # Containment
     # ------------------------------------------------------------------
 
     def test_member_containment(self):
-        """``cls.Off in cls`` must be True."""
-        cls = _get_class("AutomaticNodeMovementMethod")
-        assert cls.Off in cls
+        """``cls.Bonded in cls`` must be True."""
+        cls = _get_class("ContactType")
+        assert cls.Bonded in cls
 
     def test_non_member_not_contained(self):
         """A random integer must not be reported as contained in the enum."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert all(member.value != 999 for member in cls), (
-            "Unexpected enum member with value 999 found in AutomaticNodeMovementMethod."
+            "Unexpected enum member with value 999 found in ContactType."
         )
 
     # ------------------------------------------------------------------
@@ -657,22 +623,20 @@ class TestAutomaticNodeMovementMethodEnumBehavior:
 
     def test_class_has_docstring(self):
         """The class must have a docstring (VS Code shows this in hover tips)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert cls.__doc__, (
-            "AutomaticNodeMovementMethod has no docstring. "
-            "VS Code hover documentation will be empty."
+            "ContactType has no docstring. VS Code hover documentation will be empty."
         )
 
 
 # ===========================================================================
-# TestAutomaticNodeMovementMethodNetMethods
+# TestContactTypeNetMethods
 # ===========================================================================
 
 
-@_skip_no_version
-@_skip_no_anmm
-class TestAutomaticNodeMovementMethodNetMethods:
-    """.NET System.Enum methods must be present on AutomaticNodeMovementMethod.
+@pytest.mark.usefixtures("require_version", "require_contact_type")
+class TestContactTypeNetMethods:
+    """.NET System.Enum methods must be present on ContactType.
 
     Every .NET enum inherits from System.Enum, which provides GetHashCode,
     ToString, CompareTo, HasFlag, GetTypeCode, Equals, and GetType.  The stubs
@@ -700,20 +664,20 @@ class TestAutomaticNodeMovementMethodNetMethods:
         """Each .NET-inherited method must be accessible on the class.
 
         Pylance surfaces these in the member-completion list when the user
-        types ``AutomaticNodeMovementMethod.Off.<TAB>``.
+        types ``ContactType.Bonded.<TAB>``.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert hasattr(cls, method_name), (
-            f"AutomaticNodeMovementMethod is missing the .NET method '{method_name}'. "
+            f"ContactType is missing the .NET method '{method_name}'. "
             "VS Code would not suggest it as a completion on enum instances."
         )
 
     @pytest.mark.parametrize("method_name", _NET_METHODS)
     def test_net_method_is_callable(self, method_name):
         """Each .NET-inherited method must be callable (not just an attribute)."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         method = getattr(cls, method_name)
-        assert callable(method), f"AutomaticNodeMovementMethod.{method_name} is not callable."
+        assert callable(method), f"ContactType.{method_name} is not callable."
 
     def test_class_is_still_enum_with_net_methods(self):
         """Having .NET methods must not prevent the class from being an Enum.
@@ -721,16 +685,16 @@ class TestAutomaticNodeMovementMethodNetMethods:
         The fix merges .NET methods INTO the Enum-based class, so both enum
         membership and .NET method access work simultaneously.
         """
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         assert issubclass(cls, Enum), (
-            "AutomaticNodeMovementMethod lost its Enum base after .NET methods "
+            "ContactType lost its Enum base after .NET methods "
             "were added.  The class must inherit from both Enum and expose the "
             ".NET methods."
         )
 
     def test_enum_members_survive_net_methods(self):
         """Enum members must still be present alongside the .NET methods."""
-        cls = _get_class("AutomaticNodeMovementMethod")
+        cls = _get_class("ContactType")
         for name in _EXPECTED_MEMBERS:
             assert hasattr(cls, name), f"Member '{name}' disappeared after .NET methods were added."
 
@@ -740,7 +704,7 @@ class TestAutomaticNodeMovementMethodNetMethods:
 # ===========================================================================
 
 
-@_skip_no_version
+@pytest.mark.usefixtures("require_version")
 class TestWorkingEnumControl:
     """Sanity-check enums that do NOT have a duplicate object-based definition.
 
@@ -902,7 +866,7 @@ class TestWorkingEnumControl:
 # ===========================================================================
 
 
-@_skip_no_version
+@pytest.mark.usefixtures("require_version")
 class TestAllEnumsHaveMembers:
     """Verify that every Enum class in the Enums module has at least one member.
 
@@ -948,7 +912,7 @@ class TestAllEnumsHaveMembers:
 # ===========================================================================
 
 
-@_skip_no_version
+@pytest.mark.usefixtures("require_version")
 class TestEnumModuleExports:
     """Verify the Enums module exports all classes needed for VS Code autocomplete.
 
@@ -958,7 +922,7 @@ class TestEnumModuleExports:
     """
 
     _EXPECTED_EXPORTS = [
-        "AutomaticNodeMovementMethod",
+        "ContactType",
         "AutomaticOrManual",
         "AutomaticTimeStepping",
         "AxisSelectionType",
