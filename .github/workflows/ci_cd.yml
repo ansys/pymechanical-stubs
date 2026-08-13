@@ -450,8 +450,13 @@ jobs:
         path: wheel-artifacts
 
     - name: "Show wheel artifact contents"
-      shell: bash
-      run: find wheel-artifacts -type f | sort
+      shell: python
+      run: |
+        import pathlib
+
+        for path in sorted(pathlib.Path("wheel-artifacts").rglob("*")):
+            if path.is_file():
+                print(path.as_posix())
 
     - name: "Install package from wheel (no editable install)"
       run: |
@@ -459,9 +464,8 @@ jobs:
         python -m pip install pytest
 
     - name: "Install built wheel artifact"
-      shell: bash
+      shell: python
       run: |
-        python - <<'PY'
         import glob
         import subprocess
         import sys
@@ -480,7 +484,6 @@ jobs:
 
         print(f"Installing wheel: {target}")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-index", "--pre", target])
-        PY
 
     - name: "Show installed stubs structure"
       shell: python
@@ -499,19 +502,19 @@ jobs:
             print(f"Could not inspect package: {e}", file=sys.stderr)
 
     - name: "Confirm package was installed from wheel, not source"
+      shell: python
       run: |
-        python -c "
-        import importlib.metadata, pathlib
-        dist = importlib.metadata.distribution('${{ env.PACKAGE_NAME }}')
-        direct_url = dist.read_text('direct_url.json')
-        print('direct_url.json:', direct_url)
+        import importlib.metadata
+
+        dist = importlib.metadata.distribution("${{ env.PACKAGE_NAME }}")
+        direct_url = dist.read_text("direct_url.json")
+        print("direct_url.json:", direct_url)
         # If installed from a local wheel the url will be a file:// path
-        # containing the artifacts directory.  An editable install would
-        # have 'editable': true in this file.
-        if direct_url and '\"editable\": true' in direct_url:
-            raise SystemExit('Package appears to be an editable install, not a wheel install.')
-        print('Package installed from wheel correctly.')
-        "
+        # containing the artifacts directory. An editable install would
+        # have '"editable": true' in this file.
+        if direct_url and '"editable": true' in direct_url:
+            raise SystemExit("Package appears to be an editable install, not a wheel install.")
+        print("Package installed from wheel correctly.")
 
     - name: "Run autocomplete tests against installed wheel"
       env:
