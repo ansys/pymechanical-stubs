@@ -461,7 +461,7 @@ jobs:
     - name: "Install package from wheel (no editable install)"
       run: |
         python -m pip install --upgrade pip
-        python -m pip install pytest
+        python -m pip install -e .[tests]
 
     - name: "Install built wheel artifact"
       shell: python
