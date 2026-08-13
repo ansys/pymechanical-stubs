@@ -363,12 +363,55 @@ jobs:
         provision-uv: false
         prune-uv-cache: false
 
-    - name: "Download stubs"
+    - name: "Download stubs for selected workflow_dispatch version"
+      if: github.event_name == 'workflow_dispatch' && inputs.mechanical-version != ''
       uses: ./.github/workflows/setup-stubs/
       with:
-        folder-pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
+        folder-pattern: "v${{ inputs.mechanical-version }}-${{ env.MAIN_PYTHON_VERSION }}"
         package-path: "${{ env.PACKAGE_PATH }}"
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v${{ inputs.mechanical-version }}"
+
+    - name: "Download v242 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v242-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v242"
+
+    - name: "Download v251 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v251-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v251"
+
+    - name: "Download v252 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v252-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v252"
+
+    - name: "Download v261 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v261-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v261"
+
+    - name: "Stage generated stubs for packaging"
+      run: |
+        git add ${{ env.PACKAGE_PATH }}
+        git status --short ${{ env.PACKAGE_PATH }}
 
     - name: Build library source and wheel artifacts
       uses: ansys/actions/build-library@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
@@ -414,7 +457,26 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install pytest
-        python -m pip install --no-index --pre --find-links wheel-artifacts ${{ env.PACKAGE_NAME }}
+        python - <<'PY'
+        import glob
+        import subprocess
+        import sys
+
+        wheels = sorted(glob.glob("wheel-artifacts/**/*.whl", recursive=True))
+        if not wheels:
+            raise SystemExit("No wheel files found under wheel-artifacts")
+
+        target = None
+        for wheel in wheels:
+            if "ansys_mechanical_stubs" in wheel:
+                target = wheel
+                break
+        if target is None:
+            target = wheels[0]
+
+        print(f"Installing wheel: {target}")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-index", "--pre", target])
+        PY
 
     - name: "Show installed stubs structure"
       shell: python
