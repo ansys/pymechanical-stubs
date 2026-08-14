@@ -703,19 +703,13 @@ def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
     buffer.write(f'{indent}"""\n')
 
 
-def convert_operator_name(
-    method_name: str, method_args: typing.List, is_static: bool = False
-) -> str:
+def convert_operator_name(method_name: str) -> str:
     """Convert .NET operator names to Python dunder methods.
 
     Parameters
     ----------
     method_name: str
         The original method name (e.g., op_Addition)
-    method_args: typing.List
-        List of method arguments
-    is_static: bool
-        Whether this is a static method
 
     Returns
     -------
@@ -762,11 +756,6 @@ def _format_method_args(method: Method, use_typed_args: bool) -> str:
     return f"({', '.join(args)})"
 
 
-def _method_signature_name(method: Method) -> str:
-    """Return the emitted Python method name for a reflected method."""
-    return convert_operator_name(method.name, method.args, method.static)
-
-
 def _group_methods_by_signature_name(
     methods: typing.List[Method],
 ) -> typing.List[typing.List[Method]]:
@@ -775,7 +764,7 @@ def _group_methods_by_signature_name(
     ordered_keys = []
 
     for method in methods:
-        key = (_method_signature_name(method), method.static)
+        key = (convert_operator_name(method.name), method.static)
         if key not in grouped_methods:
             grouped_methods[key] = []
             ordered_keys.append(key)
@@ -785,7 +774,7 @@ def _group_methods_by_signature_name(
 
 
 def _combined_return_type(methods: typing.List[Method]) -> str:
-    """Return a shared return type for an overload group when one exists."""
+    """Return a combined return type for an overload group implementation."""
     return_types = []
     for method in methods:
         method_type = c_types_to_python(method.return_type)
@@ -795,7 +784,11 @@ def _combined_return_type(methods: typing.List[Method]) -> str:
     if len(return_types) == 1:
         return return_types[0]
 
-    return "typing.Any"
+    # Keep Any as a conservative fallback when any branch is untyped.
+    if "typing.Any" in return_types:
+        return "typing.Any"
+
+    return " | ".join(return_types)
 
 
 def _write_method_signature(
@@ -817,7 +810,7 @@ def _write_method_signature(
 
     args = _format_method_args(method, use_typed_args=use_typed_args)
     method_type = return_type or c_types_to_python(method.return_type)
-    converted_method_name = _method_signature_name(method)
+    converted_method_name = convert_operator_name(method.name)
 
     buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
 

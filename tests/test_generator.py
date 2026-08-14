@@ -23,7 +23,7 @@
 """Tests for the stub generator (generate_content.py).
 
 Covers:
-- C# → Python type-string conversion (c_types_to_python)
+- C# --> Python type-string conversion (c_types_to_python)
 - CLR method overload grouping and emission (write_method_group)
 """
 
@@ -38,30 +38,45 @@ from ansys.mechanical.stubs.stub_generator.generate_content import (
     write_method_group,
 )
 
+_SYSTEM_FUNC_TYPE = (
+    "System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,System.Boolean]"
+)
+_EXPECTED_SYSTEM_FUNC_TYPE = (
+    '"System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,bool]"'
+)
+_GENERIC_ENUMERABLE_OF_KV_ENUMERABLE = (
+    "System.Collections.Generic.IEnumerable["
+    "System.Collections.Generic.KeyValuePair["
+    "System.Int32,"
+    "System.Collections.Generic.IEnumerable[Ansys.Core.Units.Quantity]]]"
+)
+
+
 _TYPE_CONVERSION_CASES = [
+    # Namespaced Ansys interface should remain unchanged.
     (
         "Ansys.ACT.Interfaces.Mechanical.IParameter",
         "Ansys.ACT.Interfaces.Mechanical.IParameter",
     ),
+    # Generic .NET IList should map to typing.List with the same type argument.
     (
         "System.Collections.Generic.IList[ChildrenType]",
         "typing.List[ChildrenType]",
     ),
+    # System.Func is intentionally preserved as a quoted type string.
+    (_SYSTEM_FUNC_TYPE, _EXPECTED_SYSTEM_FUNC_TYPE),
+    # This is a single long input string split across literals for readability.
+    # Nested IEnumerable<KeyValuePair<int, IEnumerable<T>>> should map recursively.
     (
-        "System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,System.Boolean]",
-        '"System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,bool]"',
-    ),
-    (
-        "System.Collections.Generic.IEnumerable["
-        "System.Collections.Generic.KeyValuePair["
-        "System.Int32,"
-        "System.Collections.Generic.IEnumerable[Ansys.Core.Units.Quantity]]]",
+        _GENERIC_ENUMERABLE_OF_KV_ENUMERABLE,
         "typing.Iterable[dict[int,typing.Iterable[Ansys.Core.Units.Quantity]]]",
     ),
+    # Quoted .NET Tuple annotation should convert to Python tuple[type1, type2].
     (
         '"System.Tuple[Ansys.Core.Units.Quantity,Ansys.Core.Units.Quantity]"',
         "tuple[Ansys.Core.Units.Quantity,Ansys.Core.Units.Quantity]",
     ),
+    # IronPython runtime tuple type should collapse to plain Python tuple.
     (
         '"IronPython.Runtime.PythonTuple"',
         "tuple",
@@ -151,8 +166,8 @@ def test_write_method_group_keeps_classmethod_on_overloads_and_implementation():
     assert "def Parse(cls, *args: typing.Any) -> int:\n        " in contents
 
 
-def test_write_method_group_mixed_return_types_use_any():
-    """Overloads with different return types must collapse to typing.Any in the implementation."""
+def test_write_method_group_mixed_return_types_use_union():
+    """Overloads with different return types should use a union in the implementation."""
     buffer = io.StringIO()
     methods = [
         Method(name="Convert", doc=None, return_type='"System.String"', static=False, args=[]),
@@ -171,5 +186,5 @@ def test_write_method_group_mixed_return_types_use_any():
     # Each @typing.overload keeps its specific return type
     assert "def Convert(self) -> str:" in contents
     assert "def Convert(self, radix: int) -> int:" in contents
-    # Final implementation falls back to Any because the return types differ
-    assert "def Convert(self, *args: typing.Any) -> typing.Any:" in contents
+    # Final implementation combines differing return types into a union
+    assert "def Convert(self, *args: typing.Any) -> str | int:" in contents
