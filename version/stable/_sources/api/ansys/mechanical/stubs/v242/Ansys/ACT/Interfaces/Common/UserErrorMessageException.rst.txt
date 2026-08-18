@@ -47,12 +47,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetBaseException`
             - GetBaseException method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetObjectData`
             - GetObjectData method.
           * - :py:attr:`~GetType`
@@ -298,26 +294,10 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetBaseException() -> System.Exception
 
    
    GetBaseException method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
 
    ..
        !! processed by numpydoc !!

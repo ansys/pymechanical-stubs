@@ -5,9 +5,9 @@
 :class:`NamedSelectionWorksheetOperator`
 ========================================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,42 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Contains`
+            - 
+          * - :py:attr:`~Equal`
+            - 
+          * - :py:attr:`~GreaterThan`
+            - 
+          * - :py:attr:`~GreaterThanEqual`
+            - 
+          * - :py:attr:`~Largest`
+            - 
+          * - :py:attr:`~LessThan`
+            - 
+          * - :py:attr:`~LessThanEqual`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~NotEqual`
+            - 
+          * - :py:attr:`~RangeExclude`
+            - 
+          * - :py:attr:`~RangeInclude`
+            - 
+          * - :py:attr:`~Smallest`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~Yes`
+            - 
 
 
 
@@ -69,67 +85,65 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Contains
+   :value: 13
+
+
+.. py:attribute:: Equal
+   :value: 1
+
+
+.. py:attribute:: GreaterThan
+   :value: 5
+
+
+.. py:attribute:: GreaterThanEqual
+   :value: 6
+
+
+.. py:attribute:: Largest
+   :value: 10
+
+
+.. py:attribute:: LessThan
+   :value: 3
+
+
+.. py:attribute:: LessThanEqual
+   :value: 4
+
+
+.. py:attribute:: No
+   :value: 12
+
+
+.. py:attribute:: NotEqual
+   :value: 2
+
+
+.. py:attribute:: RangeExclude
+   :value: 7
+
+
+.. py:attribute:: RangeInclude
+   :value: 8
+
+
+.. py:attribute:: Smallest
+   :value: 9
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+.. py:attribute:: Yes
+   :value: 11
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

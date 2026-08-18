@@ -32,14 +32,8 @@ Overview
             - Deletes a row from the worksheet at index.
           * - :py:attr:`~DuplicateRow`
             - Insert a row from the worksheet at index.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetCoordinateSystemSelection`
             - Gets the worksheet CoordinateSystemSelection property at index.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetXCoordinate`
             - Gets the worksheet Mic X property at index.
           * - :py:attr:`~GetYCoordinate`
@@ -56,8 +50,6 @@ Overview
             - Sets the worksheet Mic Y property at index.
           * - :py:attr:`~SetZCoordinate`
             - Sets the worksheet Mic Z property at index.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -132,34 +124,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetCoordinateSystemSelection(index: int) -> int
 
    
    Gets the worksheet CoordinateSystemSelection property at index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -224,14 +192,6 @@ Method detail
 
    
    Sets the worksheet Mic Z property at index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

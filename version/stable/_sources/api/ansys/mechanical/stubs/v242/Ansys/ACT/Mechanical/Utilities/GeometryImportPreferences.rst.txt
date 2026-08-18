@@ -56,21 +56,6 @@ Overview
             - Get a string containing script-executable commands to set the properties on a
 
 
-   .. tab-item:: Methods
-
-      .. list-table::
-          :header-rows: 0
-          :widths: auto
-
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~ToString`
-            - ToString method.
-
 
    .. tab-item:: Properties
 
@@ -839,23 +824,8 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetScriptedPropertySetter(variableName: str, preferencesToChange: Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences, preferencesToMirror: Ansys.ACT.Mechanical.Utilities.GeometryImportPreferences) -> str
+               GetScriptedPropertySetter(variableName: str, propertiesChanged: dict[str, Any]) -> str
    :classmethod:
 
 
@@ -867,22 +837,6 @@ Method detail
    preferencesToMirror. Only the properties that are different will be used.
 
 ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
        !! processed by numpydoc !!
 
 

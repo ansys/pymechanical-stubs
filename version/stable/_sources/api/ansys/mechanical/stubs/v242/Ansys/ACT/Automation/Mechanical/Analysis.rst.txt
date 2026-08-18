@@ -6,6 +6,7 @@
 =================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Analysis(internalObject: Any)
+              Analysis(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -403,8 +404,6 @@ Overview
             - GetResultObjects method.
           * - :py:attr:`~GetResultsData`
             - GetResultsData method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetUserObjects`
             - GetUserObjects method.
           * - :py:attr:`~GetVisibleProperties`
@@ -443,8 +442,6 @@ Overview
             - Run the SelectBodiesWithoutPhysicsRegion action to select the bodies that don't belong to a Physics Region.
           * - :py:attr:`~Solve`
             - Run the Solve action.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~TransferDataFrom`
             - Transfer Data From action.
           * - :py:attr:`~UnlinkDataFrom`
@@ -3073,6 +3070,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: AddThermalCondition(representation: Ansys.Mechanical.DataModel.MechanicalEnums.BoundaryConditions.DataRepresentation) -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ThermalCondition
+               AddThermalCondition() -> Ansys.ACT.Automation.Mechanical.BoundaryConditions.ThermalCondition
 
 .. code-block:: text
 
@@ -3207,6 +3205,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CreateLoadObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
+               CreateLoadObject(objName: str, ext: Ansys.ACT.Interfaces.Common.IExtension) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
 
    
    CreateLoadObject method.
@@ -3239,6 +3238,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CreatePostObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
+               CreatePostObject(objName: str, ext: Ansys.ACT.Interfaces.Common.IExtension) -> Ansys.ACT.Interfaces.UserObject.IUserLoad
 
    
    CreatePostObject method.
@@ -3247,6 +3247,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CreateResultObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserResult
+               CreateResultObject(objName: str, ext: Ansys.ACT.Interfaces.Common.IExtension) -> Ansys.ACT.Interfaces.UserObject.IUserResult
 
    
    CreateResultObject method.
@@ -3361,6 +3362,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -3401,6 +3403,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetLoadObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserLoad]
+               GetLoadObjects(extNameOrGUID: str) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserLoad]
 
    
    GetLoadObjects method.
@@ -3449,6 +3452,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetResultObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserResult]
+               GetResultObjects(extNameOrGUID: str) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserResult]
 
    
    GetResultObjects method.
@@ -3464,15 +3468,8 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetUserObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]
+               GetUserObjects(extNameOrGUID: str) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]
 
    
    GetUserObjects method.
@@ -3537,6 +3534,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -3545,6 +3543,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -3587,6 +3586,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: PropertyValue(name: str) -> Any
+               PropertyValue(name: str, value: Any) -> None
 
    
    PropertyValue method.
@@ -3619,17 +3619,10 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Solve(wait: bool) -> None
+               Solve(wait: bool, config: str) -> None
 
    
    Run the Solve action.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -6,6 +6,8 @@
 =================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Math.Matrix4D
+              Matrix4D(entries: float)
+              Matrix4D(m44: Ansys.ACT.Math.Matrix4D)
 
    Bases: :py:obj:`object`
 
@@ -88,12 +90,6 @@ Overview
 
           * - :py:attr:`~Add`
             - Add matrix to itself.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Invert`
             - Invert itself if determinant is non-zero. Return 0 if inverted; 1 - otherwise.
           * - :py:attr:`~Multiply`
@@ -241,30 +237,6 @@ Method detail
 
    
    Create translating transformation matrix
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

@@ -5,9 +5,9 @@
 :class:`VariableClassification`
 ===============================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -47,26 +47,38 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Imaginary`
+            - 
+          * - :py:attr:`~ImaginaryComponentGroup`
+            - 
+          * - :py:attr:`~Imaginary_i`
+            - 
+          * - :py:attr:`~Imaginary_j`
+            - 
+          * - :py:attr:`~Imaginary_k`
+            - 
+          * - :py:attr:`~Independent`
+            - 
+          * - :py:attr:`~Real`
+            - 
+          * - :py:attr:`~RealComponentGroup`
+            - 
+          * - :py:attr:`~Real_i`
+            - 
+          * - :py:attr:`~Real_j`
+            - 
+          * - :py:attr:`~Real_k`
+            - 
+          * - :py:attr:`~Unclassified`
+            - 
 
 
 
@@ -75,67 +87,57 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Imaginary
+   :value: 3
+
+
+.. py:attribute:: ImaginaryComponentGroup
+   :value: 300
+
+
+.. py:attribute:: Imaginary_i
+   :value: 301
+
+
+.. py:attribute:: Imaginary_j
+   :value: 302
+
+
+.. py:attribute:: Imaginary_k
+   :value: 303
+
+
+.. py:attribute:: Independent
+   :value: 1
+
+
+.. py:attribute:: Real
+   :value: 2
+
+
+.. py:attribute:: RealComponentGroup
+   :value: 200
+
+
+.. py:attribute:: Real_i
+   :value: 201
+
+
+.. py:attribute:: Real_j
+   :value: 202
+
+
+.. py:attribute:: Real_k
+   :value: 203
+
+
+.. py:attribute:: Unclassified
+   :value: 0
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

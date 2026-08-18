@@ -6,6 +6,7 @@
 ==============
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Table(internalObject: Any)
+              Table(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -107,8 +108,6 @@ Overview
             - GetPropertyValue method.
           * - :py:attr:`~GetRow`
             - 
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetVisibleProperties`
             - GetVisibleProperties method.
           * - :py:attr:`~GetVisiblePropertyNames`
@@ -137,8 +136,6 @@ Overview
             - 
           * - :py:attr:`~RemoveParameter`
             - Removes the parameter from the parameter set corresponding to the given property.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~TryInsertRow`
             - 
           * - :py:attr:`~TryRemoveRow`
@@ -971,6 +968,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -1014,6 +1012,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetImportSettings(newColumn: Ansys.ACT.Automation.Mechanical.Table.Column) -> Ansys.Mechanical.Table.ImportSettingsBase
+               GetImportSettings(importContract: Ansys.Common.Interop.DSObjects.IDSTableImportContract) -> Ansys.Mechanical.Table.ImportSettingsBase
 
    
    Get the settings used for an import operation.
@@ -1071,14 +1070,6 @@ Method detail
 
 .. py:method:: GetRow(rowIndex: int) -> Iterable
    
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
 
 .. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
 
@@ -1145,6 +1136,7 @@ Method detail
    
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -1153,6 +1145,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -1193,14 +1186,6 @@ Method detail
 
    
    Removes the parameter from the parameter set corresponding to the given property.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

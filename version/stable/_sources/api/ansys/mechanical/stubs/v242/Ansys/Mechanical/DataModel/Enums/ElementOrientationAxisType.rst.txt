@@ -5,9 +5,9 @@
 :class:`ElementOrientationAxisType`
 ===================================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ElementOrientationAxisType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ElementOrientationAxisType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,28 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~AxisUndefined`
+            - 
+          * - :py:attr:`~NegativeXAxis`
+            - 
+          * - :py:attr:`~NegativeYAxis`
+            - 
+          * - :py:attr:`~NegativeZAxis`
+            - 
+          * - :py:attr:`~PositiveXAxis`
+            - 
+          * - :py:attr:`~PositiveYAxis`
+            - 
+          * - :py:attr:`~PositiveZAxis`
+            - 
 
 
 
@@ -69,67 +71,37 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: AxisUndefined
+   :value: 0
+
+
+.. py:attribute:: NegativeXAxis
+   :value: 4
+
+
+.. py:attribute:: NegativeYAxis
+   :value: 5
+
+
+.. py:attribute:: NegativeZAxis
+   :value: 6
+
+
+.. py:attribute:: PositiveXAxis
+   :value: 1
+
+
+.. py:attribute:: PositiveYAxis
+   :value: 2
+
+
+.. py:attribute:: PositiveZAxis
+   :value: 3
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

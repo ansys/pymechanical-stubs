@@ -6,6 +6,7 @@
 =========================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.CoordinateSystem(internalObject: Any)
+              CoordinateSystem(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -105,8 +106,6 @@ Overview
             - GetPropertyValue method.
           * - :py:attr:`~GetTransformationValue`
             - Gets the value of a transformation.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetVisibleProperties`
             - GetVisibleProperties method.
           * - :py:attr:`~GetVisiblePropertyNames`
@@ -155,8 +154,6 @@ Overview
             - Sets the primary axis using a 1 or 2 point selection and the center of mass
           * - :py:attr:`~SetTransformationValue`
             - Sets the value of a transformation.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -1678,6 +1675,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -1765,14 +1763,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
 
    
@@ -1814,6 +1804,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -1822,6 +1813,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -1846,6 +1838,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: OffsetX() -> None
+               OffsetX(value: Any) -> None
 
    
    Creates an offset in the X Axis direction of the coordinate system
@@ -1854,6 +1847,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: OffsetY() -> None
+               OffsetY(value: Any) -> None
 
    
    Creates an offset in the Y Axis direction of the coordinate system
@@ -1862,6 +1856,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: OffsetZ() -> None
+               OffsetZ(value: Any) -> None
 
    
    Creates an offset in the Z Axis direction of the coordinate system
@@ -1912,6 +1907,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: RotateX() -> None
+               RotateX(value: Any) -> None
 
    
    Creates a rotation about the X Axis of the coordinate system
@@ -1920,6 +1916,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: RotateY() -> None
+               RotateY(value: Any) -> None
 
    
    Creates a rotation about the Y Axis of the coordinate system
@@ -1928,6 +1925,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: RotateZ() -> None
+               RotateZ(value: Any) -> None
 
    
    Creates a rotation about the Z Axis of the coordinate system
@@ -1963,14 +1961,6 @@ Method detail
 
    
    Sets the value of a transformation.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

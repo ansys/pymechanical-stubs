@@ -47,16 +47,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Start`
             - Start method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
 
@@ -71,42 +63,11 @@ Overview
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Start(target: str, args: str) -> int
+               Start(target: str, useShell: bool, args: str) -> int
 
    
    Start method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

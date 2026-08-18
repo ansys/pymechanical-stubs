@@ -5,9 +5,9 @@
 :class:`ExternalLoadDisplayComponentType`
 =========================================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplayComponentType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ExternalLoadDisplayComponentType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,38 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Total`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~XComponent`
+            - 
+          * - :py:attr:`~XXComponent`
+            - 
+          * - :py:attr:`~XYComponent`
+            - 
+          * - :py:attr:`~XZComponent`
+            - 
+          * - :py:attr:`~YComponent`
+            - 
+          * - :py:attr:`~YYComponent`
+            - 
+          * - :py:attr:`~YZComponent`
+            - 
+          * - :py:attr:`~ZComponent`
+            - 
+          * - :py:attr:`~ZZComponent`
+            - 
 
 
 
@@ -69,67 +81,57 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: Total
+   :value: 1
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: XComponent
+   :value: 3
+
+
+.. py:attribute:: XXComponent
+   :value: 11
+
+
+.. py:attribute:: XYComponent
+   :value: 14
+
+
+.. py:attribute:: XZComponent
+   :value: 16
+
+
+.. py:attribute:: YComponent
+   :value: 4
+
+
+.. py:attribute:: YYComponent
+   :value: 12
+
+
+.. py:attribute:: YZComponent
+   :value: 15
+
+
+.. py:attribute:: ZComponent
+   :value: 5
+
+
+.. py:attribute:: ZZComponent
+   :value: 13
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

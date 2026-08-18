@@ -47,20 +47,12 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetDefaultBandColor`
             - GetDefaultBandColor method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Reset`
             - Reset method.
           * - :py:attr:`~SetDefaultBandColor`
             - SetDefaultBandColor method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -192,34 +184,10 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetDefaultBandColor(index: int) -> int
 
    
    GetDefaultBandColor method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -236,14 +204,6 @@ Method detail
 
    
    SetDefaultBandColor method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

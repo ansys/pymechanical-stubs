@@ -6,6 +6,7 @@
 =================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Solution(internalObject: Any)
+              Solution(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -677,8 +678,6 @@ Overview
             - GetPropertyValue method.
           * - :py:attr:`~GetResults`
             - Gets the Results from the server.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetVisibleProperties`
             - GetVisibleProperties method.
           * - :py:attr:`~GetVisiblePropertyNames`
@@ -727,8 +726,6 @@ Overview
             - StartRemoteDPFPostServerOnREP method.
           * - :py:attr:`~StopRemoteDPFPostServer`
             - StopRemoteDPFPostServer method.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~ValueForResultTracking`
             - ValueForResultTracking method.
           * - :py:attr:`~ValueForSolutionTracking`
@@ -5418,6 +5415,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: ExecutePostCommands() -> None
+               ExecutePostCommands(activeObjs: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
 
    
    Run Execute Post Commands for all post command objects.
@@ -5514,6 +5512,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -5601,14 +5600,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
 
    
@@ -5650,6 +5641,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -5658,6 +5650,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -5780,6 +5773,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Solve(wait: bool, config: str) -> None
+               Solve(wait: bool, config: Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration) -> None
 
    
    Run the Solve action.
@@ -5799,14 +5793,6 @@ Method detail
 
    
    StopRemoteDPFPostServer method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

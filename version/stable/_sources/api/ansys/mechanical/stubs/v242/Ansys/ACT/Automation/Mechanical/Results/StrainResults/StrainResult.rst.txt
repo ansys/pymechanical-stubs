@@ -6,6 +6,7 @@
 =====================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.Results.StrainResults.StrainResult(internalObject: Any)
+              StrainResult(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -117,8 +118,6 @@ Overview
             - GetPropertyValue method.
           * - :py:attr:`~GetQuantityName`
             - GetQuantityName method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetVisibleProperties`
             - GetVisibleProperties method.
           * - :py:attr:`~GetVisiblePropertyNames`
@@ -147,8 +146,6 @@ Overview
             - Run the RenameBasedOnDefinition action.
           * - :py:attr:`~RetrieveRemoteDPFResults`
             - RetrieveRemoteDPFResults method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -3022,6 +3019,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: ExportToTextFile(bIgnoreExcelPreference: bool, filePath: str) -> None
+               ExportToTextFile(filePath: str) -> None
 
    
    ExportToTextFile method.
@@ -3062,6 +3060,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -3157,14 +3156,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
 
    
@@ -3206,6 +3197,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -3214,6 +3206,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -3275,14 +3268,6 @@ Method detail
 
    
    RetrieveRemoteDPFResults method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -62,8 +62,6 @@ Overview
             - 
           * - :py:attr:`~GetHashCode`
             - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~IndexOf`
             - 
           * - :py:attr:`~Insert`
@@ -215,14 +213,6 @@ Method detail
 
    
    GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

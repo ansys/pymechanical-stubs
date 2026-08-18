@@ -5,9 +5,9 @@
 :class:`SequenceSelectionType`
 ==============================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SequenceSelectionType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.SequenceSelectionType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,34 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~ByNumber`
+            - 
+          * - :py:attr:`~First`
+            - 
+          * - :py:attr:`~Identifier`
+            - 
+          * - :py:attr:`~Last`
+            - 
+          * - :py:attr:`~ModalSolution`
+            - 
+          * - :py:attr:`~MsupExpansion`
+            - 
+          * - :py:attr:`~MsupSolution`
+            - 
+          * - :py:attr:`~PSDPfact`
+            - 
+          * - :py:attr:`~Zero`
+            - 
 
 
 
@@ -69,67 +77,49 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: All
+   :value: 2
+
+
+.. py:attribute:: ByNumber
+   :value: 3
+
+
+.. py:attribute:: First
+   :value: 0
+
+
+.. py:attribute:: Identifier
+   :value: 8
+
+
+.. py:attribute:: Last
+   :value: 1
+
+
+.. py:attribute:: ModalSolution
+   :value: 5
+
+
+.. py:attribute:: MsupExpansion
+   :value: 7
+
+
+.. py:attribute:: MsupSolution
+   :value: 6
+
+
+.. py:attribute:: PSDPfact
+   :value: 9
+
+
+.. py:attribute:: Zero
+   :value: 4
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

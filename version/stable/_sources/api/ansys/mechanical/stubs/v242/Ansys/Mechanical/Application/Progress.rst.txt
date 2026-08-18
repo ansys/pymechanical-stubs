@@ -47,16 +47,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~SetProgress`
             - Set the current progress state
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~add_OnStopped`
             - add_OnStopped method.
           * - :py:attr:`~remove_OnStopped`
@@ -111,42 +103,10 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: SetProgress(uiProgress: int, uiMessage: str, uiSubProgress: int, uiSubMessage: str) -> None
 
    
    Set the current progress state
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

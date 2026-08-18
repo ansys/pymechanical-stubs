@@ -30,8 +30,6 @@ Overview
             - Add a FeatureDetection to the FeatureDetection Definition
           * - :py:attr:`~DeleteFeatureDetection`
             - Delete a FeatureDetection from the Feature Detection Definition
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~ExecuteDetectFeatures`
             - ExecuteDetectFeatures method.
           * - :py:attr:`~Export`
@@ -54,10 +52,6 @@ Overview
             - Gets the Feature Detection Criteria property at given index
           * - :py:attr:`~GetFeatureDetectionType`
             - Gets the Feature Detection Type property at given index
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Import`
             - Import Feature Detection Definition data from Comma Separated Value (CSV) files
           * - :py:attr:`~SetFeatureCriteriaAngle`
@@ -80,8 +74,6 @@ Overview
             - Sets the Feature Detection Criteria property at given index
           * - :py:attr:`~SetFeatureDetectionType`
             - Sets the Feature Detection Type property at given index
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -144,14 +136,6 @@ Method detail
 
    
    Delete a FeatureDetection from the Feature Detection Definition
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -244,22 +228,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Import(filepath: str) -> None
 
    
@@ -348,14 +316,6 @@ Method detail
 
    
    Sets the Feature Detection Type property at given index
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

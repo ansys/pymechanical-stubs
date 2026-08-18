@@ -46,8 +46,6 @@ Overview
             - Equals method.
           * - :py:attr:`~GetHashCode`
             - Object.GetHashCode() override
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~ToString`
             - ToString method.
 
@@ -138,6 +136,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Equals(point: Ansys.Mechanical.Graphics.Point) -> bool
+               Equals(o: Any) -> bool
 
    
    Equals method.
@@ -149,14 +148,6 @@ Method detail
 
    
    Object.GetHashCode() override
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

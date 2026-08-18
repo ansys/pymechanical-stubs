@@ -32,8 +32,6 @@ Summary
 
 
 
-
-
 .. py:currentmodule:: Fields
 .. tab-set::
 
@@ -68,10 +66,6 @@ Summary
 
           * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.Variable`
             - Represents an object that is either an input or an output for a . Depending on whether it is an input or output and on the way it is defined, this object holds a series of discrete values
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Fields.VariableDefinitionType`
-            - Defines the various ways to define the values of a variable.
 
 
 
@@ -110,7 +104,6 @@ Summary
     <span class="nf nf-cod-symbol_class"></span> Field</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Field>
     <span class="nf nf-cod-symbol_class"></span> Range</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Range>
     <span class="nf nf-cod-symbol_class"></span> Variable</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/Variable>
-    <span class="nf nf-cod-symbol_class"></span> VariableDefinitionType</api/ansys/mechanical/stubs/v242/Ansys/ACT/Mechanical/Fields/VariableDefinitionType>
 
 
 .. toctree::

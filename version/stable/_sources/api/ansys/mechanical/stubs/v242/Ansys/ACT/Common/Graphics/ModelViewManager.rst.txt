@@ -38,14 +38,8 @@ Overview
             - Create a view from current graphics with default naming.
           * - :py:attr:`~DeleteView`
             - Delete the specified view by name.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~ExportModelViews`
             - Export model views to the specified file.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetViewPortSize`
             - Returns the width and height of the specified viewport.
           * - :py:attr:`~GetViewPorts`
@@ -76,8 +70,6 @@ Overview
             - Change to Top view.
           * - :py:attr:`~SetViewPorts`
             - Set the number of viewports displayed.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -156,6 +148,7 @@ Property detail
 Method detail
 -------------
 .. py:method:: ApplyModelView(viewIndex: int) -> None
+               ApplyModelView(viewLabel: str) -> None
 
    
    Apply the view specified by index.
@@ -172,6 +165,9 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CaptureModelView(index: int, mode: str) -> None
+               CaptureModelView(viewLabel: str, mode: str) -> None
+               CaptureModelView(viewLabel: str, mode: str, folder: str) -> None
+               CaptureModelView(index: int, mode: str, folder: str) -> None
 
    
    Save the view specified by index as an image to the project userfiles.
@@ -188,6 +184,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CreateView() -> None
+               CreateView(viewName: str) -> None
 
    
    Create a view from current graphics with default naming.
@@ -196,17 +193,10 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: DeleteView(viewLabel: str) -> None
+               DeleteView(viewIndex: int) -> None
 
    
    Delete the specified view by name.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -215,22 +205,6 @@ Method detail
 
    
    Export model views to the specified file.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -260,6 +234,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: RenameView(viewIndex: int, newLabel: str) -> None
+               RenameView(viewLabel: str, newLabel: str) -> None
 
    
    Rename the model view specified by viewIndex to newLabel.
@@ -276,6 +251,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetActiveViewPort(winRowIndex: int, winColIndex: int) -> None
+               SetActiveViewPort(windowsId: int) -> None
 
    
    Set the active of viewport.
@@ -348,17 +324,10 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetViewPorts(numViewPorts: int, horizontal: bool) -> None
+               SetViewPorts(layout: Ansys.Mechanical.DataModel.Enums.ViewportLayoutStyle) -> None
 
    
    Set the number of viewports displayed.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

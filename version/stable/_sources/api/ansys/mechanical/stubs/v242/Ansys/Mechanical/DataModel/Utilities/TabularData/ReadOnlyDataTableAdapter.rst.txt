@@ -56,8 +56,6 @@ Overview
             - GetHashCode method.
           * - :py:attr:`~GetRow`
             - 
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~ToString`
             - ToString method.
 
@@ -167,14 +165,6 @@ Method detail
 
 .. py:method:: GetRow(rowIndex: int) -> Iterable
    
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
 
 .. py:method:: ToString() -> str
 

@@ -86,7 +86,7 @@ Summary
 
 
           * - :py:obj:`~dump_types`
-            - Crawl Loaded assemblies to get Namespaces.
+            - Log the type names within each namespace at debug level.
 
 
           * - :py:obj:`~fix_str`
@@ -107,10 +107,6 @@ Summary
 
           * - :py:obj:`~get_properties`
             - Get information from properties and store it in the Property object.
-
-
-          * - :py:obj:`~is_namespace`
-            - Check if an object is a namespace.
 
 
           * - :py:obj:`~iter_module`
@@ -138,7 +134,7 @@ Summary
 
 
           * - :py:obj:`~write_enum`
-            - Write an enum.
+            - Write an enum containing only its member values.
 
 
           * - :py:obj:`~write_enum_field`
@@ -149,8 +145,12 @@ Summary
             - Write a method.
 
 
+          * - :py:obj:`~write_method_group`
+            - Write one or more overloads for a reflected CLR method name.
+
+
           * - :py:obj:`~write_missing_class_enum_docstring`
-            - Write a docstring for classes and enums that do not contain a docstring in the XML file.
+            - Write a fallback docstring for classes and enums that have no entry in the XML file.
 
 
           * - :py:obj:`~write_missing_prop_method_docstring`
@@ -283,7 +283,7 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: convert_operator_name(method_name: str, method_args: List, is_static: bool = False) -> str
+.. py:function:: convert_operator_name(method_name: str) -> str
 
    
    Convert .NET operator names to Python dunder methods.
@@ -293,12 +293,6 @@ Module detail
 
        **method_name: str**
            The original method name (e.g., op_Addition)
-
-       **method_args: typing.List**
-           List of method arguments
-
-       **is_static: bool**
-           Whether this is a static method
 
 
 
@@ -354,16 +348,16 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: dump_types(namespaces: dict)
+.. py:function:: dump_types(namespaces: dict) -> None
 
    
-   Crawl Loaded assemblies to get Namespaces.
+   Log the type names within each namespace at debug level.
 
 
    :Parameters:
 
        **namespaces: dict**
-           Dictionary of namespaces in the assembly
+           Dictionary mapping namespace strings to lists of types.
 
 
 
@@ -547,39 +541,7 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: is_namespace(something)
-
-   
-   Check if an object is a namespace.
-
-
-   :Parameters:
-
-       **something: object**
-           Object to check if it's a namespace
-
-
-
-   :Returns:
-
-       :ref:`bool <python:bltin-boolean-values>`
-           True if object is Namespace: Module
-           False if object is not Namespace: Module
-
-
-
-
-
-
-
-
-
-
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:function:: iter_module(module, type_filter: Callable = None)
+.. py:function:: iter_module(module, type_filter: Callable = None) -> dict
 
    
    Recursively iterates through all namespaces in assembly.
@@ -597,8 +559,8 @@ Module detail
 
    :Returns:
 
-       :class:`python:str`
-           The namespace in the assembly file
+       :class:`python:dict`
+           A dictionary mapping namespace strings to lists of types in that namespace.
 
 
 
@@ -780,16 +742,20 @@ Module detail
    ..
        !! processed by numpydoc !!
 
-.. py:function:: write_enum(buffer: TextIO, enum_type: Any, namespace: str, doc: Dict[str, DocMember], type_filter: Callable = None) -> None
+.. py:function:: write_enum(buffer: TextIO, enum_type: Any, namespace: str, doc: Dict[str, DocMember]) -> None
 
    
-   Write an enum.
+   Write an enum containing only its member values.
 
+   Methods inherited from ``System.Object`` and ``System.Enum`` (e.g.
+   ``GetHashCode``, ``ToString``, ``Equals``, ``GetType``, ``CompareTo``,
+   ``HasFlag``, ``GetTypeCode``) are intentionally excluded — only the
+   enum field constants are emitted.
 
    :Parameters:
 
        **buffer: typing.TextIO**
-           The buffer for writing the docstring
+           The buffer for writing the enum
 
        **enum_type: typing.Any**
            The enum type
@@ -799,9 +765,6 @@ Module detail
 
        **doc: typing.Dict[str, DocMember]**
            A DocMember or string that holds information about the enum.
-
-       **type_filter: typing.Callable = None**
-           Whether or not the type is published.
 
 
 
@@ -828,7 +791,7 @@ Module detail
    :Parameters:
 
        **buffer: typing.TextIO**
-           The buffer for writing the docstring
+           The buffer for writing the enum field
 
        **field: typing.Any**
            The field information from System.Reflection.MdFieldInfo
@@ -885,10 +848,33 @@ Module detail
    ..
        !! processed by numpydoc !!
 
+.. py:function:: write_method_group(buffer: TextIO, methods: List[Method], indent_level: int = 1) -> None
+
+   
+   Write one or more overloads for a reflected CLR method name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
 .. py:function:: write_missing_class_enum_docstring(buffer, name, obj_type)
 
    
-   Write a docstring for classes and enums that do not contain a docstring in the XML file.
+   Write a fallback docstring for classes and enums that have no entry in the XML file.
 
 
    :Parameters:
@@ -897,10 +883,10 @@ Module detail
            The buffer for writing the docstring
 
        **name: str**
-           The name of an interface
+           The name of the class or enum
 
        **obj_type: str**
-           The object type of the interface
+           The object type, e.g. ``'class'`` or ``'enum'``
 
 
 
@@ -999,7 +985,7 @@ Module detail
    :Parameters:
 
        **buffer: typing.TextIO**
-           The buffer for writing the docstring
+           The buffer for writing the property
 
        **prop: Property**
            A Property object containing information about the property
@@ -1028,7 +1014,7 @@ Module detail
 .. py:data:: ENUM_VALUE_REPLACEMENTS
 
 .. py:data:: EXCLUDED_TYPES_LIST
-   :value: ['System.IAsyncResult', 'System.IDisposable', 'System.Func', 'System.Delegate']
+   :value: ['System.IAsyncResult', 'System.IDisposable']
 
 
 .. py:data:: TYPE_OVERRIDES

@@ -64,10 +64,6 @@ Overview
             - Equals method.
           * - :py:attr:`~GetHashCode`
             - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -254,6 +250,8 @@ Property detail
 Method detail
 -------------
 .. py:method:: Equals(other: Ansys.Mechanical.DataModel.ConstructionLines.Edges.StraightLineEdge) -> bool
+               Equals(obj: Any) -> bool
+               Equals(other: Ansys.Mechanical.DataModel.ConstructionLines.ConstructionLineAssociation) -> bool
 
    
    Equals method.
@@ -265,22 +263,6 @@ Method detail
 
    
    GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

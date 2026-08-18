@@ -48,14 +48,8 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetDiscreteValue`
             - Changes a value at a given position in the tabular definition of the variable.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~SetDiscreteValue`
             - Changes a value at a given position in the tabular definition of the variable.
           * - :py:attr:`~ToString`
@@ -434,34 +428,10 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetDiscreteValue(index: int) -> Ansys.Core.Units.Quantity
 
    
    Changes a value at a given position in the tabular definition of the variable.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -475,6 +445,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: ToString() -> str
+               ToString(isForJournal: bool) -> str
 
    
    ToString method.

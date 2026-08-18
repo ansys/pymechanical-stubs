@@ -5,9 +5,9 @@
 :class:`ContactConstraintType`
 ==============================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ContactConstraintType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ContactConstraintType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,26 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~DistributedAllDirections`
+            - 
+          * - :py:attr:`~DistributedAnywhereInsidePinball`
+            - 
+          * - :py:attr:`~DistributedNormalOnly`
+            - 
+          * - :py:attr:`~ProgramControlled`
+            - 
+          * - :py:attr:`~ProjectedDisplacementOnly`
+            - 
+          * - :py:attr:`~ProjectedUncoupleUtoROT`
+            - 
 
 
 
@@ -69,67 +69,33 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: DistributedAllDirections
+   :value: 0
+
+
+.. py:attribute:: DistributedAnywhereInsidePinball
+   :value: 1
+
+
+.. py:attribute:: DistributedNormalOnly
+   :value: 5
+
+
+.. py:attribute:: ProgramControlled
+   :value: 3
+
+
+.. py:attribute:: ProjectedDisplacementOnly
+   :value: 4
+
+
+.. py:attribute:: ProjectedUncoupleUtoROT
+   :value: 2
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

@@ -58,10 +58,6 @@ Overview
             - DeleteSessionVariable method.
           * - :py:attr:`~DummyNodeRemoveAndFillObjects`
             - DummyNodeRemoveAndFillObjects method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetLifetimeService`
             - GetLifetimeService method.
           * - :py:attr:`~GetObjectById`
@@ -72,8 +68,6 @@ Overview
             - GetObjectsByType method.
           * - :py:attr:`~GetSessionVariableValue`
             - GetSessionVariableValue method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetUserObjectById`
             - GetUserObjectById method.
           * - :py:attr:`~GetUserObjects`
@@ -86,8 +80,6 @@ Overview
             - Remove method.
           * - :py:attr:`~ShouldSuspendStateEngineForDelete`
             - ShouldSuspendStateEngineForDelete method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -643,6 +635,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CreateObject(objName: str) -> Ansys.ACT.Interfaces.UserObject.IUserObject
+               CreateObject(objName: str, extNameOrGUID: str) -> Ansys.ACT.Interfaces.UserObject.IUserObject
+               CreateObject(objName: str, ext: Ansys.ACT.Interfaces.Common.IExtension) -> Ansys.ACT.Interfaces.UserObject.IUserObject
 
    
    CreateObject method.
@@ -698,22 +692,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetLifetimeService() -> Any
 
    
@@ -739,6 +717,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetObjectsByType(type: MechanicalDataModel.GetObjectsByType.type) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+               GetObjectsByType(dataModelObjectCategory: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    GetObjectsByType method.
@@ -754,14 +733,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetUserObjectById(id: int) -> Ansys.ACT.Interfaces.UserObject.IUserObject
 
    
@@ -771,6 +742,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetUserObjects(ext: Ansys.ACT.Interfaces.Common.IExtension) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]
+               GetUserObjects(extNameOrGUID: str) -> Iterable[Ansys.ACT.Interfaces.UserObject.IUserObject]
 
    
    GetUserObjects method.
@@ -795,6 +767,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Remove(dataModelObjects: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
+               Remove(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
 
    
    Remove method.
@@ -806,14 +779,6 @@ Method detail
 
    
    ShouldSuspendStateEngineForDelete method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

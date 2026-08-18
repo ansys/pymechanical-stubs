@@ -6,6 +6,7 @@
 =================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.Core.Units.Quantity(value: float, unit: str)
+              Quantity(value: str)
 
    Bases: :py:obj:`object`
 
@@ -124,8 +125,6 @@ Overview
             - GetConvertedValue method.
           * - :py:attr:`~GetHashCode`
             - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Pow`
             - Pow method.
           * - :py:attr:`~Round`
@@ -258,6 +257,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: CompareTo(quantityB: Ansys.Core.Units.Quantity) -> int
+               CompareTo(obj: Any) -> int
 
    
    CompareTo method.
@@ -266,6 +266,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: ConvertToComputationalUnit(useBasicUnits: bool) -> Ansys.Core.Units.Quantity
+               ConvertToComputationalUnit(quantityName: str, useBasicUnits: bool) -> Ansys.Core.Units.Quantity
 
    
    ConvertToComputationalUnit method.
@@ -298,6 +299,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: ConvertUnit(newUnit: str) -> Ansys.Core.Units.Quantity
+               ConvertUnit(newUnit: str, quantityName: str) -> Ansys.Core.Units.Quantity
 
    
    ConvertUnit method.
@@ -306,6 +308,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Equals(value: Ansys.Core.Units.Quantity) -> bool
+               Equals(obj: Any) -> bool
 
    
    Equals method.
@@ -325,14 +328,6 @@ Method detail
 
    
    GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -372,6 +367,9 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: ToString() -> str
+               ToString(formatString: str) -> str
+               ToString(provider: Any) -> str
+               ToString(format: str, provider: Any) -> str
 
    
    ToString method.
@@ -390,6 +388,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __add__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+               __add__(left: Ansys.Core.Units.Quantity, right: float) -> Ansys.Core.Units.Quantity
+               __add__(left: float, right: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
    :classmethod:
 
 
@@ -400,6 +400,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __eq__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+               __eq__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+               __eq__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> bool
    :classmethod:
 
 
@@ -410,6 +412,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __ge__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+               __ge__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+               __ge__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> bool
    :classmethod:
 
 
@@ -420,6 +424,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __gt__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+               __gt__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+               __gt__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> bool
    :classmethod:
 
 
@@ -430,6 +436,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __le__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+               __le__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+               __le__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> bool
    :classmethod:
 
 
@@ -440,6 +448,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __lt__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+               __lt__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+               __lt__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> bool
    :classmethod:
 
 
@@ -450,6 +460,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __mod__(quantityLeft: Ansys.Core.Units.Quantity, quantityRight: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+               __mod__(quantityLeft: Ansys.Core.Units.Quantity, numberRight: float) -> Ansys.Core.Units.Quantity
+               __mod__(doubleLeft: float, quantityRight: Ansys.Core.Units.Quantity) -> float
    :classmethod:
 
 
@@ -460,6 +472,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __mul__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+               __mul__(quantity: Ansys.Core.Units.Quantity, factor: float) -> Ansys.Core.Units.Quantity
+               __mul__(factor: float, quantity: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
    :classmethod:
 
 
@@ -470,6 +484,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __ne__(other: float, quantity: Ansys.Core.Units.Quantity) -> bool
+               __ne__(quantity: Ansys.Core.Units.Quantity, other: float) -> bool
+               __ne__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> bool
    :classmethod:
 
 
@@ -526,6 +542,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __sub__(left: float, right: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+               __sub__(left: Ansys.Core.Units.Quantity, right: float) -> Ansys.Core.Units.Quantity
+               __sub__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
    :classmethod:
 
 
@@ -536,6 +554,9 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __truediv__(quantityA: Ansys.Core.Units.Quantity, quantityB: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+               __truediv__(quantity: Ansys.Core.Units.Quantity, factor: float) -> Ansys.Core.Units.Quantity
+               __truediv__(factor: float, quantity: Ansys.Core.Units.Quantity) -> Ansys.Core.Units.Quantity
+               __truediv__(a: Ansys.Core.Units.Quantity, b: Any) -> Ansys.Core.Units.Quantity
    :classmethod:
 
 

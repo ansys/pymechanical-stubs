@@ -5,9 +5,9 @@
 :class:`AnalysisType`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AnalysisType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.AnalysisType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,38 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Buckling`
+            - 
+          * - :py:attr:`~DesignAssessment`
+            - 
+          * - :py:attr:`~ExplicitDynamics`
+            - 
+          * - :py:attr:`~Harmonic`
+            - 
+          * - :py:attr:`~MBD`
+            - 
+          * - :py:attr:`~Modal`
+            - 
+          * - :py:attr:`~ResponseSpectrum`
+            - 
+          * - :py:attr:`~Shape`
+            - 
+          * - :py:attr:`~Spectrum`
+            - 
+          * - :py:attr:`~Static`
+            - 
+          * - :py:attr:`~TopologyOptimization`
+            - 
+          * - :py:attr:`~Transient`
+            - 
 
 
 
@@ -69,67 +81,57 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Buckling
+   :value: 4
+
+
+.. py:attribute:: DesignAssessment
+   :value: 11
+
+
+.. py:attribute:: ExplicitDynamics
+   :value: 10
+
+
+.. py:attribute:: Harmonic
+   :value: 1
+
+
+.. py:attribute:: MBD
+   :value: 7
+
+
+.. py:attribute:: Modal
+   :value: 5
+
+
+.. py:attribute:: ResponseSpectrum
+   :value: 9
+
+
+.. py:attribute:: Shape
+   :value: 8
+
+
+.. py:attribute:: Spectrum
+   :value: 3
+
+
+.. py:attribute:: Static
+   :value: 0
+
+
+.. py:attribute:: TopologyOptimization
+   :value: 13
+
+
+.. py:attribute:: Transient
+   :value: 2
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

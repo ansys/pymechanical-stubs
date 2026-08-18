@@ -77,14 +77,8 @@ Overview
             - CountInfoMessages method.
           * - :py:attr:`~CountWarningMessages`
             - CountWarningMessages method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~HideErrorMessages`
             - HideErrorMessages method.
           * - :py:attr:`~HideInfoMessages`
@@ -107,8 +101,6 @@ Overview
             - ShowPopUps method.
           * - :py:attr:`~ShowWarningMessages`
             - ShowWarningMessages method.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~UnmergeMessages`
             - UnmergeMessages method.
 
@@ -298,34 +290,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetEnumerator() -> Ansys.Mechanical.Application.MessageList
 
    
    GetEnumerator method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -424,14 +392,6 @@ Method detail
 
    
    ShowWarningMessages method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

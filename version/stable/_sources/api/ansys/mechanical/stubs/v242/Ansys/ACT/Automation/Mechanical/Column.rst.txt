@@ -52,8 +52,6 @@ Overview
             - 
           * - :py:attr:`~GetHashCode`
             - 
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~IndexOf`
             - 
           * - :py:attr:`~Insert`
@@ -62,8 +60,6 @@ Overview
             - 
           * - :py:attr:`~RemoveAt`
             - 
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~add_PropertyChanged`
             - add_PropertyChanged method.
           * - :py:attr:`~remove_PropertyChanged`
@@ -508,14 +504,6 @@ Method detail
 .. py:method:: GetHashCode(column: Ansys.ACT.Automation.Mechanical.Table.Column) -> int
    
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: IndexOf(value: Any) -> int
    
 
@@ -527,14 +515,6 @@ Method detail
 
 .. py:method:: RemoveAt(index: int) -> None
    
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 .. py:method:: add_PropertyChanged(value: System.ComponentModel.PropertyChangedEventHandler) -> None
 

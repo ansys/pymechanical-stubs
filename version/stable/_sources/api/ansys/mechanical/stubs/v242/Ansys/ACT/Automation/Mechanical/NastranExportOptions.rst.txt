@@ -57,22 +57,14 @@ Overview
             - ContainsValue method.
           * - :py:attr:`~EnsureCapacity`
             - EnsureCapacity method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetObjectData`
             - GetObjectData method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~OnDeserialization`
             - OnDeserialization method.
           * - :py:attr:`~Remove`
             - Remove method.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~TrimExcess`
             - TrimExcess method.
           * - :py:attr:`~TryAdd`
@@ -547,14 +539,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetEnumerator() -> System.Collections.Generic.Dictionary.Enumerator[str, Any]
 
    
@@ -563,26 +547,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
 
    
    GetObjectData method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -596,6 +564,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Remove(key: str) -> bool
+               Remove(key: str, value: Any) -> bool
 
    
    Remove method.
@@ -603,15 +572,8 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: TrimExcess() -> None
+               TrimExcess(capacity: int) -> None
 
    
    TrimExcess method.

@@ -6,6 +6,7 @@
 ======================================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Utilities.RigidBodyTransformationMatrix
+              RigidBodyTransformationMatrix(data: List[Any])
 
    Bases: :py:obj:`object`
 
@@ -57,12 +58,6 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~IsMatrixWellFormed`
             - Verify that the data meets the following criteria for a rigid-body transformation:
           * - :py:attr:`~IsRotationValid`
@@ -73,8 +68,6 @@ Overview
             - IsShearValid method.
           * - :py:attr:`~IsTranslationValid`
             - IsTranslationValid method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -561,30 +554,6 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: IsMatrixWellFormed() -> bool
 
 .. code-block:: text
@@ -626,14 +595,6 @@ Method detail
 
    
    IsTranslationValid method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

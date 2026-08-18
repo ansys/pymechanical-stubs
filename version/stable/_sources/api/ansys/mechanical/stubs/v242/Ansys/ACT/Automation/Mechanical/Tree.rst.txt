@@ -60,8 +60,6 @@ Overview
             - Click method.
           * - :py:attr:`~CreateObjRef`
             - CreateObjRef method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~ExpandBranch`
             - ExpandBranch method.
           * - :py:attr:`~Filter`
@@ -72,8 +70,6 @@ Overview
             - GetDataModelChanges method.
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetLifetimeService`
             - GetLifetimeService method.
           * - :py:attr:`~GetObjectsByName`
@@ -82,8 +78,6 @@ Overview
             - Gets a list of all objects with the specified type.
           * - :py:attr:`~GetPathToFirstActiveObject`
             - Gets the full path that needs to be typed in order to go to the selected object.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Group`
             - Groups a list of objects together.
           * - :py:attr:`~InitializeLifetimeService`
@@ -100,8 +94,6 @@ Overview
             - StopListening method.
           * - :py:attr:`~Suspend`
             - Prevents the tree from being updated.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~TryGetFolder`
             - TryGetFolder method.
           * - :py:attr:`~Ungroup`
@@ -346,6 +338,7 @@ Property detail
 Method detail
 -------------
 .. py:method:: Activate(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> None
+               Activate(dataModelObjects: Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> None
 
    
    selects an object in the tree.
@@ -393,14 +386,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: ExpandBranch(objectId: int) -> None
 
    
@@ -417,7 +402,7 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Find(name: str, func: System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,bool], tag: str, state: Ansys.Mechanical.DataModel.Enums.ObjectState) -> Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+.. py:method:: Find(name: str, func: Callable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject, bool], tag: str, state: Ansys.Mechanical.DataModel.Enums.ObjectState) -> Iterable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Find method.
@@ -441,14 +426,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetLifetimeService() -> Any
 
    
@@ -466,6 +443,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetObjectsByType(type: Tree.GetObjectsByType.type) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
+               GetObjectsByType(dataModelObjectCategory: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets a list of all objects with the specified type.
@@ -491,15 +469,8 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Group(dataModelObjects: Iterable) -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
+               Group(dataModelObject: Ansys.Mechanical.DataModel.Interfaces.IDataModelObject) -> Ansys.ACT.Automation.Mechanical.TreeGroupingFolder
 
    
    Groups a list of objects together.
@@ -593,14 +564,6 @@ Method detail
 
    
    Prevents the tree from being updated.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -34,16 +34,10 @@ Overview
             - Returns true if the step exists in the sequencer. If not, returns false
           * - :py:attr:`~CopyTo`
             - CopyTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~Find`
             - Find method.
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~IndexOf`
             - Returns index of removal object
           * - :py:attr:`~Insert`
@@ -54,8 +48,6 @@ Overview
             - Remove AM step at index.
           * - :py:attr:`~Swap`
             - Swaps two steps in the Removal sequence.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -201,14 +193,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Find(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> int
 
    
@@ -221,22 +205,6 @@ Method detail
 
    
    GetEnumerator method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -272,6 +240,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Remove(item: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> bool
+               Remove(index: int) -> bool
 
 .. code-block:: text
 
@@ -304,6 +273,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: Swap(item1: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep, item2: Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.IAMProcessStep) -> bool
+               Swap(index1: int, index2: int) -> bool
 
 .. code-block:: text
 
@@ -320,14 +290,6 @@ Method detail
        Ansys.ACT.Automation.Mechanical.AdditiveManufacturing.SupportRemoval(supportObj))
 
 ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
        !! processed by numpydoc !!
 
 

@@ -6,6 +6,7 @@
 ==============================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.AnalysisSettings.ANSYSAnalysisSettings(internalObject: Any)
+              ANSYSAnalysisSettings(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -231,8 +232,6 @@ Overview
             - Gets the TimeIntegration for a given solution step.
           * - :py:attr:`~GetTimeStep`
             - Sets the Time Step for a given solution step.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetVisibleProperties`
             - GetVisibleProperties method.
           * - :py:attr:`~GetVisiblePropertyNames`
@@ -417,8 +416,6 @@ Overview
             - Sets the Voltage Convergence Tolerance type for a given solution step.
           * - :py:attr:`~SetVoltageConvergenceValue`
             - Sets the Voltage Convergence Value for a given solution step.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -8677,6 +8674,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -9284,14 +9282,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
 
    
@@ -9365,6 +9355,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -9373,6 +9364,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -10050,14 +10042,6 @@ Method detail
 
    
    Sets the Voltage Convergence Value for a given solution step.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

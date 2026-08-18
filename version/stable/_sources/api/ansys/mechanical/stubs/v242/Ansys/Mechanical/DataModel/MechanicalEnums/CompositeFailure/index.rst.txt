@@ -30,35 +30,10 @@ Summary
 
 
 
-
-
-
-
-
-
 .. py:currentmodule:: CompositeFailure
 .. tab-set::
 
 
-
-
-    .. tab-item:: Classes
-
-        .. list-table::
-          :header-rows: 0
-          :widths: auto
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.FailureDimension`
-            - This enum defines the dimension values for configuring failure criteria.
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.LaRCFormulation`
-            - This enum defines the different formulations which can be used for
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.PuckFormulation`
-            - This enum defines the different formulations which can be used for
 
 
 
@@ -89,15 +64,6 @@ Summary
 
 
 
-
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-   :hidden:
-
-    <span class="nf nf-cod-symbol_class"></span> FailureDimension</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CompositeFailure/FailureDimension>
-    <span class="nf nf-cod-symbol_class"></span> LaRCFormulation</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CompositeFailure/LaRCFormulation>
-    <span class="nf nf-cod-symbol_class"></span> PuckFormulation</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/CompositeFailure/PuckFormulation>
 
 
 .. toctree::

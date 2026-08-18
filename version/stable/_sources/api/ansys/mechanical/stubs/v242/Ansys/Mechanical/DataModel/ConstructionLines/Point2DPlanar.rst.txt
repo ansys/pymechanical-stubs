@@ -6,6 +6,7 @@
 ======================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.Point2DPlanar(location: Ansys.ACT.Core.Math.Point2D, plane: Ansys.Mechanical.DataModel.ConstructionLines.Plane)
+              Point2DPlanar(point2DPlanar: Ansys.Mechanical.DataModel.ConstructionLines.Point2DPlanar)
 
    Bases: :py:obj:`object`
 
@@ -61,8 +62,6 @@ Overview
             - Equals method.
           * - :py:attr:`~GetHashCode`
             - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~ToString`
             - ToString method.
 
@@ -101,14 +100,6 @@ Method detail
 
    
    GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

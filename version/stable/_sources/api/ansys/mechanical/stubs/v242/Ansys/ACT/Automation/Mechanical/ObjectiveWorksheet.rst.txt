@@ -30,8 +30,6 @@ Overview
             - Adds a Row to the worksheet.
           * - :py:attr:`~DeleteRow`
             - Deletes a row from the worksheet at index.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetCriterion`
             - Gets the worksheet Environment property at index.
           * - :py:attr:`~GetEnabled`
@@ -44,8 +42,6 @@ Overview
             - Gets the worksheet Environment property at index.
           * - :py:attr:`~GetFormulation`
             - Gets the worksheet Formulation property at index.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetMode`
             - Gets the worksheet Mode property at index.
           * - :py:attr:`~GetMultipleSets`
@@ -58,8 +54,6 @@ Overview
             - Gets the worksheet Start Step property at index.
           * - :py:attr:`~GetStep`
             - Gets the worksheet Step property at index.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetWeight`
             - Gets the worksheet Weight property at index.
           * - :py:attr:`~SetCriterion`
@@ -88,8 +82,6 @@ Overview
             - Sets the worksheet Step property at index.
           * - :py:attr:`~SetWeight`
             - Sets the worksheet Weight property at index.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -156,14 +148,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetCriterion(index: int) -> Ansys.ACT.Automation.Mechanical.Criterion
 
    
@@ -212,14 +196,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetMode(index: int) -> int
 
    
@@ -264,14 +240,6 @@ Method detail
 
    
    Gets the worksheet Step property at index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -384,14 +352,6 @@ Method detail
 
    
    Sets the worksheet Weight property at index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

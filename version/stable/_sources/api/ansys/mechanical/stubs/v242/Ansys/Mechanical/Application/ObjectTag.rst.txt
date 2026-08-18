@@ -51,12 +51,6 @@ Overview
             - Add an object to this tag.
           * - :py:attr:`~ClearObjects`
             - Clear all objects from this tag.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~RemoveObject`
             - Remove an object from this tag.
           * - :py:attr:`~ToString`
@@ -150,30 +144,6 @@ Method detail
 
    
    Clear all objects from this tag.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

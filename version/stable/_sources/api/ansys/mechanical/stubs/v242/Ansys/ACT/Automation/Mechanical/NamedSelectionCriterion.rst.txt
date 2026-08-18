@@ -28,12 +28,6 @@ Overview
 
           * - :py:attr:`~CopyFrom`
             - CopyFrom method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetUnitAndQuantityName`
             - GetUnitAndQuantityName method.
           * - :py:attr:`~IsObject`
@@ -42,8 +36,6 @@ Overview
             - IsString method.
           * - :py:attr:`~IsUnitless`
             - IsUnitless method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -318,30 +310,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetUnitAndQuantityName() -> tuple[str, str]
 
    
@@ -370,14 +338,6 @@ Method detail
 
    
    IsUnitless method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

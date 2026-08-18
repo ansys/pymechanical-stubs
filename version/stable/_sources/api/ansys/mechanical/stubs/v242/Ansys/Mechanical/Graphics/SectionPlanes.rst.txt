@@ -55,22 +55,14 @@ Overview
             - Returns true if the SectionPlane belongs to the collection.
           * - :py:attr:`~CopyTo`
             - CopyTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~IndexOf`
             - Returns the index of the SectionObject if in the collection.  Returns -1 if not found.
           * - :py:attr:`~Remove`
             - Removes the requested SectionPlane from the collection.
           * - :py:attr:`~RemoveAt`
             - Removes the SectionPlane at the given index.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -261,34 +253,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetEnumerator() -> Ansys.Mechanical.Graphics.SectionPlaneList
 
    
    GetEnumerator method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -313,14 +281,6 @@ Method detail
 
    
    Removes the SectionPlane at the given index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

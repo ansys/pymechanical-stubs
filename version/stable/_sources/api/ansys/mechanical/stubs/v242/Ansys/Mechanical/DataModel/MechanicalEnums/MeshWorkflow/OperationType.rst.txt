@@ -5,9 +5,9 @@
 :class:`OperationType`
 ======================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OperationType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,82 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Checkpoint`
+            - 
+          * - :py:attr:`~Connect`
+            - 
+          * - :py:attr:`~CreateEnclosure`
+            - 
+          * - :py:attr:`~CreateSurfaceMesh`
+            - 
+          * - :py:attr:`~CreateTopology`
+            - 
+          * - :py:attr:`~CreateVolumeMesh`
+            - 
+          * - :py:attr:`~CreateVolumetricSizeField`
+            - 
+          * - :py:attr:`~CreateZones`
+            - 
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~Delete`
+            - 
+          * - :py:attr:`~ExportMesh`
+            - 
+          * - :py:attr:`~Extrude`
+            - 
+          * - :py:attr:`~FillHoles`
+            - 
+          * - :py:attr:`~GenerateGrains`
+            - 
+          * - :py:attr:`~ImportCAD`
+            - 
+          * - :py:attr:`~ImportMesh`
+            - 
+          * - :py:attr:`~ImproveSurfaceMesh`
+            - 
+          * - :py:attr:`~ImproveVolumeMesh`
+            - 
+          * - :py:attr:`~Interactive`
+            - 
+          * - :py:attr:`~ManageZoneProperties`
+            - 
+          * - :py:attr:`~Match`
+            - 
+          * - :py:attr:`~MergeParts`
+            - 
+          * - :py:attr:`~MergeVolumes`
+            - 
+          * - :py:attr:`~Morph`
+            - 
+          * - :py:attr:`~MorphPlayback`
+            - 
+          * - :py:attr:`~MultiZoneMesher`
+            - 
+          * - :py:attr:`~PatchHoles`
+            - 
+          * - :py:attr:`~Python`
+            - 
+          * - :py:attr:`~SetupEnvironment`
+            - 
+          * - :py:attr:`~StackerCreateBaseFace`
+            - 
+          * - :py:attr:`~StackerStackBaseFace`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~Verticalize`
+            - 
+          * - :py:attr:`~Wrap`
+            - 
 
 
 
@@ -69,67 +125,145 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Checkpoint
+   :value: 2
+
+
+.. py:attribute:: Connect
+   :value: 31
+
+
+.. py:attribute:: CreateEnclosure
+   :value: 7
+
+
+.. py:attribute:: CreateSurfaceMesh
+   :value: 20
+
+
+.. py:attribute:: CreateTopology
+   :value: 9
+
+
+.. py:attribute:: CreateVolumeMesh
+   :value: 21
+
+
+.. py:attribute:: CreateVolumetricSizeField
+   :value: 10
+
+
+.. py:attribute:: CreateZones
+   :value: 15
+
+
+.. py:attribute:: Custom
+   :value: 1
+
+
+.. py:attribute:: Delete
+   :value: 6
+
+
+.. py:attribute:: ExportMesh
+   :value: 5
+
+
+.. py:attribute:: Extrude
+   :value: 11
+
+
+.. py:attribute:: FillHoles
+   :value: 12
+
+
+.. py:attribute:: GenerateGrains
+   :value: 16
+
+
+.. py:attribute:: ImportCAD
+   :value: 30
+
+
+.. py:attribute:: ImportMesh
+   :value: 4
+
+
+.. py:attribute:: ImproveSurfaceMesh
+   :value: 23
+
+
+.. py:attribute:: ImproveVolumeMesh
+   :value: 24
+
+
+.. py:attribute:: Interactive
+   :value: 32
+
+
+.. py:attribute:: ManageZoneProperties
+   :value: 8
+
+
+.. py:attribute:: Match
+   :value: 18
+
+
+.. py:attribute:: MergeParts
+   :value: 33
+
+
+.. py:attribute:: MergeVolumes
+   :value: 14
+
+
+.. py:attribute:: Morph
+   :value: 17
+
+
+.. py:attribute:: MorphPlayback
+   :value: 19
+
+
+.. py:attribute:: MultiZoneMesher
+   :value: 22
+
+
+.. py:attribute:: PatchHoles
+   :value: 13
+
+
+.. py:attribute:: Python
+   :value: 26
+
+
+.. py:attribute:: SetupEnvironment
+   :value: 3
+
+
+.. py:attribute:: StackerCreateBaseFace
+   :value: 27
+
+
+.. py:attribute:: StackerStackBaseFace
+   :value: 28
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: Verticalize
+   :value: 29
+
+
+.. py:attribute:: Wrap
+   :value: 25
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

@@ -49,16 +49,8 @@ Overview
 
           * - :py:attr:`~Dispose`
             - 
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~ForceClickOnUnsuspend`
             - ForceClickOnUnsuspend method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
 
@@ -76,42 +68,10 @@ Method detail
 .. py:method:: Dispose() -> None
    
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: ForceClickOnUnsuspend() -> None
 
    
    ForceClickOnUnsuspend method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

@@ -5,9 +5,9 @@
 :class:`ObjectState`
 ====================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ObjectState
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.ObjectState(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,52 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Error`
+            - 
+          * - :py:attr:`~FullyDefined`
+            - 
+          * - :py:attr:`~Hidden`
+            - 
+          * - :py:attr:`~Ignored`
+            - 
+          * - :py:attr:`~LicenseConflict`
+            - 
+          * - :py:attr:`~Meshed`
+            - 
+          * - :py:attr:`~NoState`
+            - 
+          * - :py:attr:`~NotSolved`
+            - 
+          * - :py:attr:`~Obsolete`
+            - 
+          * - :py:attr:`~ObsoleteNotLoaded`
+            - 
+          * - :py:attr:`~PartialSolved`
+            - 
+          * - :py:attr:`~SolveFailed`
+            - 
+          * - :py:attr:`~SolveFailedNotLoaded`
+            - 
+          * - :py:attr:`~Solved`
+            - 
+          * - :py:attr:`~SolvedNotLoaded`
+            - 
+          * - :py:attr:`~Solving`
+            - 
+          * - :py:attr:`~Suppressed`
+            - 
+          * - :py:attr:`~UnderDefined`
+            - 
+          * - :py:attr:`~WaitForValidation`
+            - 
 
 
 
@@ -69,67 +95,85 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Error
+   :value: 7
+
+
+.. py:attribute:: FullyDefined
+   :value: 1
+
+
+.. py:attribute:: Hidden
+   :value: 10
+
+
+.. py:attribute:: Ignored
+   :value: 9
+
+
+.. py:attribute:: LicenseConflict
+   :value: 8
+
+
+.. py:attribute:: Meshed
+   :value: 16
+
+
+.. py:attribute:: NoState
+   :value: 0
+
+
+.. py:attribute:: NotSolved
+   :value: 4
+
+
+.. py:attribute:: Obsolete
+   :value: 6
+
+
+.. py:attribute:: ObsoleteNotLoaded
+   :value: 19
+
+
+.. py:attribute:: PartialSolved
+   :value: 15
+
+
+.. py:attribute:: SolveFailed
+   :value: 13
+
+
+.. py:attribute:: SolveFailedNotLoaded
+   :value: 14
+
+
+.. py:attribute:: Solved
+   :value: 5
+
+
+.. py:attribute:: SolvedNotLoaded
+   :value: 12
+
+
+.. py:attribute:: Solving
+   :value: 11
+
+
+.. py:attribute:: Suppressed
+   :value: 3
+
+
+.. py:attribute:: UnderDefined
+   :value: 2
+
+
+.. py:attribute:: WaitForValidation
+   :value: 17
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

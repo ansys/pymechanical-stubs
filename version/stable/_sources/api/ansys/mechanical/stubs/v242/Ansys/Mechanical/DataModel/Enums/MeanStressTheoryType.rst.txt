@@ -5,9 +5,9 @@
 :class:`MeanStressTheoryType`
 =============================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeanStressTheoryType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeanStressTheoryType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,34 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~ASMEElliptical`
+            - 
+          * - :py:attr:`~Gerber`
+            - 
+          * - :py:attr:`~Goodman`
+            - 
+          * - :py:attr:`~MansonHalford`
+            - 
+          * - :py:attr:`~MeanStressCurves`
+            - 
+          * - :py:attr:`~Morrow`
+            - 
+          * - :py:attr:`~NoneStrain`
+            - 
+          * - :py:attr:`~NoneStress`
+            - 
+          * - :py:attr:`~SWT`
+            - 
+          * - :py:attr:`~Soderberg`
+            - 
 
 
 
@@ -69,67 +77,49 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: ASMEElliptical
+   :value: 15
+
+
+.. py:attribute:: Gerber
+   :value: 2
+
+
+.. py:attribute:: Goodman
+   :value: 0
+
+
+.. py:attribute:: MansonHalford
+   :value: 10
+
+
+.. py:attribute:: MeanStressCurves
+   :value: 4
+
+
+.. py:attribute:: Morrow
+   :value: 7
+
+
+.. py:attribute:: NoneStrain
+   :value: 6
+
+
+.. py:attribute:: NoneStress
+   :value: 5
+
+
+.. py:attribute:: SWT
+   :value: 8
+
+
+.. py:attribute:: Soderberg
+   :value: 1
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

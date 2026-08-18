@@ -5,9 +5,9 @@
 :class:`ControlType`
 ====================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.ControlType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,178 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~AdvancedScopeMorphing`
+            - 
+          * - :py:attr:`~AdvancedSolverMorphing`
+            - 
+          * - :py:attr:`~AdvancedSurfaceMesher`
+            - 
+          * - :py:attr:`~CADOptionsConvertToPrimeMesh`
+            - 
+          * - :py:attr:`~CADOptionsParasolid`
+            - 
+          * - :py:attr:`~CADOptionsSTL`
+            - 
+          * - :py:attr:`~Checkpoint`
+            - 
+          * - :py:attr:`~Connect`
+            - 
+          * - :py:attr:`~ConstantSizeMultiZoneMesher`
+            - 
+          * - :py:attr:`~ConstantSizeSurfaceMesh`
+            - 
+          * - :py:attr:`~ConstantSizeVolumeMesh`
+            - 
+          * - :py:attr:`~ConstantSizeWrap`
+            - 
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~CustomNamesEnclosure`
+            - 
+          * - :py:attr:`~CustomNamesExtrusion`
+            - 
+          * - :py:attr:`~CustomNamesWrap`
+            - 
+          * - :py:attr:`~CylindricalScalingDirectMorphing`
+            - 
+          * - :py:attr:`~Delete`
+            - 
+          * - :py:attr:`~Extrusion`
+            - 
+          * - :py:attr:`~GeometricVolumeMesher`
+            - 
+          * - :py:attr:`~GeometryFidelityWrapper`
+            - 
+          * - :py:attr:`~GrainsGeneration`
+            - 
+          * - :py:attr:`~GrainsGenerationCylinder`
+            - 
+          * - :py:attr:`~GrainsGenerationEllipsoid`
+            - 
+          * - :py:attr:`~GrainsGenerationSphere`
+            - 
+          * - :py:attr:`~HemisphereEnclosure`
+            - 
+          * - :py:attr:`~HintMorphing`
+            - 
+          * - :py:attr:`~HoleFilling`
+            - 
+          * - :py:attr:`~HolePatching`
+            - 
+          * - :py:attr:`~ImportCAD`
+            - 
+          * - :py:attr:`~ImproveSurfaceMeshSecondOrderConversion`
+            - 
+          * - :py:attr:`~ImproveVolumeMeshAutoNodeMove`
+            - 
+          * - :py:attr:`~ImproveVolumeMeshSecondOrderConversion`
+            - 
+          * - :py:attr:`~InflationMultiZoneMesher`
+            - 
+          * - :py:attr:`~Interactive`
+            - 
+          * - :py:attr:`~IrregularShapeConvexEnclosure`
+            - 
+          * - :py:attr:`~IrregularShapeEnclosure`
+            - 
+          * - :py:attr:`~IrregularShapeHemiConvexEnclosure`
+            - 
+          * - :py:attr:`~IrregularShapeWrapperSpecificEnclosure`
+            - 
+          * - :py:attr:`~LeakPrevention`
+            - 
+          * - :py:attr:`~MaterialPoint`
+            - 
+          * - :py:attr:`~MeshExport`
+            - 
+          * - :py:attr:`~MeshImport`
+            - 
+          * - :py:attr:`~NumberOfDivisionsOnEdges`
+            - 
+          * - :py:attr:`~OffsetMorphing`
+            - 
+          * - :py:attr:`~PartEnclosure`
+            - 
+          * - :py:attr:`~PartsMerging`
+            - 
+          * - :py:attr:`~PlaybackMorphing`
+            - 
+          * - :py:attr:`~PyPrimeMeshScript`
+            - 
+          * - :py:attr:`~PythonScript`
+            - 
+          * - :py:attr:`~PythonVariable`
+            - 
+          * - :py:attr:`~RecordingMorphing`
+            - 
+          * - :py:attr:`~RotationMorphing`
+            - 
+          * - :py:attr:`~SetSOLSH190`
+            - 
+          * - :py:attr:`~Setup`
+            - 
+          * - :py:attr:`~SingleZoneCreation`
+            - 
+          * - :py:attr:`~SizeFieldMultiZoneMesher`
+            - 
+          * - :py:attr:`~SizeFieldSurfaceMesher`
+            - 
+          * - :py:attr:`~SizeFieldVolumeMesher`
+            - 
+          * - :py:attr:`~SizeFieldWrap`
+            - 
+          * - :py:attr:`~SourceTargetMorphing`
+            - 
+          * - :py:attr:`~SphericalEnclosure`
+            - 
+          * - :py:attr:`~SphericalScalingMorphing`
+            - 
+          * - :py:attr:`~StackerCreateBaseFace`
+            - 
+          * - :py:attr:`~StackerStackBaseFace`
+            - 
+          * - :py:attr:`~TopologyCreation`
+            - 
+          * - :py:attr:`~TranslationMorphing`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~UserNamesVolumetricSizeField`
+            - 
+          * - :py:attr:`~Verticalize`
+            - 
+          * - :py:attr:`~VerticalizeAdvanced`
+            - 
+          * - :py:attr:`~VolumesMerging`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldBOI`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldCurvature`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldLoad`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldMaxSize`
+            - 
+          * - :py:attr:`~VolumetricSizeFieldProximity`
+            - 
+          * - :py:attr:`~WrapSpecificSurfaceMesh`
+            - 
+          * - :py:attr:`~ZoneMaterialAssignment`
+            - 
+          * - :py:attr:`~ZonePropertiesDeletion`
+            - 
+          * - :py:attr:`~ZonePropertySetting`
+            - 
+          * - :py:attr:`~ZoneThicknessAssignment`
+            - 
 
 
 
@@ -69,67 +221,337 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: AdvancedScopeMorphing
+   :value: 44
+
+
+.. py:attribute:: AdvancedSolverMorphing
+   :value: 45
+
+
+.. py:attribute:: AdvancedSurfaceMesher
+   :value: 51
+
+
+.. py:attribute:: CADOptionsConvertToPrimeMesh
+   :value: 78
+
+
+.. py:attribute:: CADOptionsParasolid
+   :value: 77
+
+
+.. py:attribute:: CADOptionsSTL
+   :value: 76
+
+
+.. py:attribute:: Checkpoint
+   :value: 3
+
+
+.. py:attribute:: Connect
+   :value: 79
+
+
+.. py:attribute:: ConstantSizeMultiZoneMesher
+   :value: 55
+
+
+.. py:attribute:: ConstantSizeSurfaceMesh
+   :value: 48
+
+
+.. py:attribute:: ConstantSizeVolumeMesh
+   :value: 54
+
+
+.. py:attribute:: ConstantSizeWrap
+   :value: 61
+
+
+.. py:attribute:: Custom
+   :value: 1
+
+
+.. py:attribute:: CustomNamesEnclosure
+   :value: 14
+
+
+.. py:attribute:: CustomNamesExtrusion
+   :value: 28
+
+
+.. py:attribute:: CustomNamesWrap
+   :value: 64
+
+
+.. py:attribute:: CylindricalScalingDirectMorphing
+   :value: 37
+
+
+.. py:attribute:: Delete
+   :value: 6
+
+
+.. py:attribute:: Extrusion
+   :value: 27
+
+
+.. py:attribute:: GeometricVolumeMesher
+   :value: 52
+
+
+.. py:attribute:: GeometryFidelityWrapper
+   :value: 62
+
+
+.. py:attribute:: GrainsGeneration
+   :value: 33
+
+
+.. py:attribute:: GrainsGenerationCylinder
+   :value: 36
+
+
+.. py:attribute:: GrainsGenerationEllipsoid
+   :value: 35
+
+
+.. py:attribute:: GrainsGenerationSphere
+   :value: 34
+
+
+.. py:attribute:: HemisphereEnclosure
+   :value: 9
+
+
+.. py:attribute:: HintMorphing
+   :value: 43
+
+
+.. py:attribute:: HoleFilling
+   :value: 29
+
+
+.. py:attribute:: HolePatching
+   :value: 30
+
+
+.. py:attribute:: ImportCAD
+   :value: 75
+
+
+.. py:attribute:: ImproveSurfaceMeshSecondOrderConversion
+   :value: 58
+
+
+.. py:attribute:: ImproveVolumeMeshAutoNodeMove
+   :value: 59
+
+
+.. py:attribute:: ImproveVolumeMeshSecondOrderConversion
+   :value: 60
+
+
+.. py:attribute:: InflationMultiZoneMesher
+   :value: 57
+
+
+.. py:attribute:: Interactive
+   :value: 80
+
+
+.. py:attribute:: IrregularShapeConvexEnclosure
+   :value: 12
+
+
+.. py:attribute:: IrregularShapeEnclosure
+   :value: 10
+
+
+.. py:attribute:: IrregularShapeHemiConvexEnclosure
+   :value: 13
+
+
+.. py:attribute:: IrregularShapeWrapperSpecificEnclosure
+   :value: 11
+
+
+.. py:attribute:: LeakPrevention
+   :value: 65
+
+
+.. py:attribute:: MaterialPoint
+   :value: 66
+
+
+.. py:attribute:: MeshExport
+   :value: 5
+
+
+.. py:attribute:: MeshImport
+   :value: 4
+
+
+.. py:attribute:: NumberOfDivisionsOnEdges
+   :value: 72
+
+
+.. py:attribute:: OffsetMorphing
+   :value: 41
+
+
+.. py:attribute:: PartEnclosure
+   :value: 7
+
+
+.. py:attribute:: PartsMerging
+   :value: 81
+
+
+.. py:attribute:: PlaybackMorphing
+   :value: 47
+
+
+.. py:attribute:: PyPrimeMeshScript
+   :value: 68
+
+
+.. py:attribute:: PythonScript
+   :value: 67
+
+
+.. py:attribute:: PythonVariable
+   :value: 69
+
+
+.. py:attribute:: RecordingMorphing
+   :value: 46
+
+
+.. py:attribute:: RotationMorphing
+   :value: 40
+
+
+.. py:attribute:: SetSOLSH190
+   :value: 19
+
+
+.. py:attribute:: Setup
+   :value: 2
+
+
+.. py:attribute:: SingleZoneCreation
+   :value: 32
+
+
+.. py:attribute:: SizeFieldMultiZoneMesher
+   :value: 56
+
+
+.. py:attribute:: SizeFieldSurfaceMesher
+   :value: 49
+
+
+.. py:attribute:: SizeFieldVolumeMesher
+   :value: 53
+
+
+.. py:attribute:: SizeFieldWrap
+   :value: 63
+
+
+.. py:attribute:: SourceTargetMorphing
+   :value: 42
+
+
+.. py:attribute:: SphericalEnclosure
+   :value: 8
+
+
+.. py:attribute:: SphericalScalingMorphing
+   :value: 38
+
+
+.. py:attribute:: StackerCreateBaseFace
+   :value: 70
+
+
+.. py:attribute:: StackerStackBaseFace
+   :value: 71
+
+
+.. py:attribute:: TopologyCreation
+   :value: 20
+
+
+.. py:attribute:: TranslationMorphing
+   :value: 39
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: UserNamesVolumetricSizeField
+   :value: 21
+
+
+.. py:attribute:: Verticalize
+   :value: 73
+
+
+.. py:attribute:: VerticalizeAdvanced
+   :value: 74
+
+
+.. py:attribute:: VolumesMerging
+   :value: 31
+
+
+.. py:attribute:: VolumetricSizeFieldBOI
+   :value: 26
+
+
+.. py:attribute:: VolumetricSizeFieldCurvature
+   :value: 24
+
+
+.. py:attribute:: VolumetricSizeFieldLoad
+   :value: 22
+
+
+.. py:attribute:: VolumetricSizeFieldMaxSize
+   :value: 23
+
+
+.. py:attribute:: VolumetricSizeFieldProximity
+   :value: 25
+
+
+.. py:attribute:: WrapSpecificSurfaceMesh
+   :value: 50
+
+
+.. py:attribute:: ZoneMaterialAssignment
+   :value: 15
+
+
+.. py:attribute:: ZonePropertiesDeletion
+   :value: 18
+
+
+.. py:attribute:: ZonePropertySetting
+   :value: 17
+
+
+.. py:attribute:: ZoneThicknessAssignment
+   :value: 16
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

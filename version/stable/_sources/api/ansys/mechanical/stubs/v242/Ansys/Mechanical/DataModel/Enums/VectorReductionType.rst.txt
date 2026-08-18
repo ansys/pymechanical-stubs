@@ -5,9 +5,9 @@
 :class:`VectorReductionType`
 ============================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.VectorReductionType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.VectorReductionType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,38 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Directional`
+            - 
+          * - :py:attr:`~FaceNormal`
+            - 
+          * - :py:attr:`~Magnitude`
+            - 
+          * - :py:attr:`~X`
+            - 
+          * - :py:attr:`~XX`
+            - 
+          * - :py:attr:`~XY`
+            - 
+          * - :py:attr:`~XZ`
+            - 
+          * - :py:attr:`~Y`
+            - 
+          * - :py:attr:`~YY`
+            - 
+          * - :py:attr:`~YZ`
+            - 
+          * - :py:attr:`~Z`
+            - 
+          * - :py:attr:`~ZZ`
+            - 
 
 
 
@@ -69,67 +81,57 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Directional
+   :value: 5
+
+
+.. py:attribute:: FaceNormal
+   :value: 4
+
+
+.. py:attribute:: Magnitude
+   :value: 3
+
+
+.. py:attribute:: X
+   :value: 0
+
+
+.. py:attribute:: XX
+   :value: 11
+
+
+.. py:attribute:: XY
+   :value: 6
+
+
+.. py:attribute:: XZ
+   :value: 8
+
+
+.. py:attribute:: Y
+   :value: 1
+
+
+.. py:attribute:: YY
+   :value: 12
+
+
+.. py:attribute:: YZ
+   :value: 7
+
+
+.. py:attribute:: Z
+   :value: 2
+
+
+.. py:attribute:: ZZ
+   :value: 13
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

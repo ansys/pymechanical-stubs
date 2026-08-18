@@ -5,9 +5,9 @@
 :class:`VariableType`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.VariableType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.VariableType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -42,26 +42,56 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~BodyForceDensity`
+            - 
+          * - :py:attr:`~Displacement`
+            - 
+          * - :py:attr:`~ElementId`
+            - 
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~HeatFlux`
+            - 
+          * - :py:attr:`~HeatGeneration`
+            - 
+          * - :py:attr:`~HeatRate`
+            - 
+          * - :py:attr:`~HeatTransferCoefficient`
+            - 
+          * - :py:attr:`~NodeId`
+            - 
+          * - :py:attr:`~OrientationAngle`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~Strain`
+            - 
+          * - :py:attr:`~Stress`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~Thickness`
+            - 
+          * - :py:attr:`~UserField`
+            - 
+          * - :py:attr:`~Velocity`
+            - 
+          * - :py:attr:`~Volume`
+            - 
+          * - :py:attr:`~XCoordinate`
+            - 
+          * - :py:attr:`~YCoordinate`
+            - 
+          * - :py:attr:`~ZCoordinate`
+            - 
 
 
 
@@ -70,67 +100,93 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: BodyForceDensity
+   :value: 17
+
+
+.. py:attribute:: Displacement
+   :value: 12
+
+
+.. py:attribute:: ElementId
+   :value: 4
+
+
+.. py:attribute:: Force
+   :value: 13
+
+
+.. py:attribute:: HeatFlux
+   :value: 8
+
+
+.. py:attribute:: HeatGeneration
+   :value: 9
+
+
+.. py:attribute:: HeatRate
+   :value: 10
+
+
+.. py:attribute:: HeatTransferCoefficient
+   :value: 7
+
+
+.. py:attribute:: NodeId
+   :value: 3
+
+
+.. py:attribute:: OrientationAngle
+   :value: 18
+
+
+.. py:attribute:: Pressure
+   :value: 6
+
+
+.. py:attribute:: Strain
+   :value: 16
+
+
+.. py:attribute:: Stress
+   :value: 15
+
+
+.. py:attribute:: Temperature
+   :value: 5
+
+
+.. py:attribute:: Thickness
+   :value: 11
+
+
+.. py:attribute:: UserField
+   :value: 20
+
+
+.. py:attribute:: Velocity
+   :value: 14
+
+
+.. py:attribute:: Volume
+   :value: 19
+
+
+.. py:attribute:: XCoordinate
+   :value: 0
+
+
+.. py:attribute:: YCoordinate
+   :value: 1
+
+
+.. py:attribute:: ZCoordinate
+   :value: 2
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

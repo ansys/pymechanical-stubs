@@ -34,22 +34,16 @@ Overview
             - Delete All Rows
           * - :py:attr:`~DeleteRow`
             - Delete a row from the MeshControlWorksheet
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GenerateAtRow`
             - Generate Mesh At Row
           * - :py:attr:`~GenerateMesh`
             - Geneate Mesh
           * - :py:attr:`~GetActiveState`
             - Gets the Active State property at row index
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetNamedSelection`
             - Gets the NamedSelection at row index
           * - :py:attr:`~GetNamedSelectionId`
             - Gets the ID of the NamedSelection at row index
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~SetActiveState`
             - Sets the Active State property at row index
           * - :py:attr:`~SetNamedSelection`
@@ -60,8 +54,6 @@ Overview
             - Start Recording
           * - :py:attr:`~StopRecording`
             - Stop Recording
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -144,14 +136,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GenerateAtRow(index: int) -> None
 
    
@@ -176,14 +160,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetNamedSelection(index: int) -> Ansys.ACT.Automation.Mechanical.NamedSelection
 
    
@@ -196,14 +172,6 @@ Method detail
 
    
    Gets the ID of the NamedSelection at row index
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -244,14 +212,6 @@ Method detail
 
    
    Stop Recording
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

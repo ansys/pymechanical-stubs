@@ -49,18 +49,10 @@ Overview
 
           * - :py:attr:`~Clear`
             - 
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetEnumerator`
             - 
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~RemoveAt`
             - Removes the import definition at the specified index.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~UseColumn`
             - Add a column to be imported from the specified data source column index and configured
 
@@ -296,45 +288,13 @@ Method detail
 .. py:method:: Clear() -> None
    
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetEnumerator() -> Iterator[Ansys.Mechanical.ExternalData.ColumnarDataImportDefinition]
    
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
 
 .. py:method:: RemoveAt(index: int) -> None
 
    
    Removes the import definition at the specified index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

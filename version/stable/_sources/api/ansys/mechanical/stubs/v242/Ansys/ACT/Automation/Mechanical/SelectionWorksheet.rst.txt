@@ -30,8 +30,6 @@ Overview
             - Adds a Row to the worksheet.
           * - :py:attr:`~DeleteRow`
             - Deletes a row from the worksheet at index.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~Generate`
             - Generate the selection from the worksheet.
           * - :py:attr:`~GetAction`
@@ -50,8 +48,6 @@ Overview
             - Gets the worksheet Face Type Value property at index.
           * - :py:attr:`~GetGeometryType`
             - Gets the worksheet GeometryType property at index.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetLowerBound`
             - Gets the worksheet LowerBound property at index.
           * - :py:attr:`~GetMeshElementTypeValue`
@@ -62,8 +58,6 @@ Overview
             - Gets the worksheet StringValue property at index.
           * - :py:attr:`~GetTag`
             - Gets the worksheet Tag property at index.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetUpperBound`
             - Gets the worksheet UpperBound property at index.
           * - :py:attr:`~GetValue`
@@ -98,8 +92,6 @@ Overview
             - Sets the worksheet UpperBound property at index.
           * - :py:attr:`~SetValue`
             - Sets the worksheet Value property at index.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -192,14 +184,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Generate() -> None
 
    
@@ -272,14 +256,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetLowerBound(index: int) -> float
 
    
@@ -316,14 +292,6 @@ Method detail
 
    
    Gets the worksheet Tag property at index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -460,14 +428,6 @@ Method detail
 
    
    Sets the worksheet Value property at index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

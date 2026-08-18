@@ -5,9 +5,9 @@
 :class:`VariableType`
 =====================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -42,26 +42,40 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Force`
+            - 
+          * - :py:attr:`~Frequency`
+            - 
+          * - :py:attr:`~HeatTransferCoefficient`
+            - 
+          * - :py:attr:`~ID`
+            - 
+          * - :py:attr:`~Pressure`
+            - 
+          * - :py:attr:`~Stress`
+            - 
+          * - :py:attr:`~Temperature`
+            - 
+          * - :py:attr:`~ThetaCoordinate`
+            - 
+          * - :py:attr:`~Time`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~XCoordinate`
+            - 
+          * - :py:attr:`~YCoordinate`
+            - 
+          * - :py:attr:`~ZCoordinate`
+            - 
 
 
 
@@ -70,67 +84,61 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Force
+   :value: 2
+
+
+.. py:attribute:: Frequency
+   :value: 1
+
+
+.. py:attribute:: HeatTransferCoefficient
+   :value: 5
+
+
+.. py:attribute:: ID
+   :value: 3
+
+
+.. py:attribute:: Pressure
+   :value: 4
+
+
+.. py:attribute:: Stress
+   :value: 6
+
+
+.. py:attribute:: Temperature
+   :value: 7
+
+
+.. py:attribute:: ThetaCoordinate
+   :value: 8
+
+
+.. py:attribute:: Time
+   :value: 9
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+.. py:attribute:: XCoordinate
+   :value: 10
+
+
+.. py:attribute:: YCoordinate
+   :value: 11
+
+
+.. py:attribute:: ZCoordinate
+   :value: 12
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

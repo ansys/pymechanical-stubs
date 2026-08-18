@@ -6,6 +6,8 @@
 ================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Core.Math.Point2D(x: float, y: float)
+              Point2D(point: Ansys.ACT.Core.Math.Point2D)
+              Point2D(xyz: float)
 
    Bases: :py:obj:`object`
 
@@ -30,8 +32,6 @@ Overview
             - Equals method.
           * - :py:attr:`~GetHashCode`
             - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~ToString`
             - ToString method.
 
@@ -123,14 +123,6 @@ Method detail
 
    
    GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

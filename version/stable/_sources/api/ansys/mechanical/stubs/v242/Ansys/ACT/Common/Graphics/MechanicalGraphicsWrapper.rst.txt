@@ -57,8 +57,6 @@ Overview
             - Create a point from world coordinates.
           * - :py:attr:`~DrawText2D`
             - DrawText2D method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~Export3D`
             - Exports the current Graphics display in a 3d format to a file.
           * - :py:attr:`~ExportImage`
@@ -75,10 +73,6 @@ Overview
             - Forces the scene to resume. Useful in interactive context (console) if a reference on an
           * - :py:attr:`~FullRedraw`
             - FullRedraw method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~ImportLegend`
             - ImportLegend method.
           * - :py:attr:`~LineTo2D`
@@ -93,8 +87,6 @@ Overview
             - RemoveContext method.
           * - :py:attr:`~Suspend`
             - Prevents the scene to redraw until the Resume controller method was called.
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~VerifyLocaleStringsAreAllRenderable`
             - Performs a test to see if all characters present in all locale dsstringtable.xml files can be found via DSGStream's TextEngine
           * - :py:attr:`~WorldToPixel`
@@ -787,14 +779,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Export3D(filePath: str, format3d: Ansys.Mechanical.DataModel.Enums.Graphics3DExportFormat, settings: Ansys.Mechanical.Graphics.Graphics3DExportSettings) -> None
 
    
@@ -861,22 +845,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: ImportLegend(filePath: str, unit: str) -> Ansys.Mechanical.Graphics.Tools.LegendSettings
 
    
@@ -902,6 +870,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: PixelToWorld(xy: Iterable[int]) -> float
+               PixelToWorld(x: int, y: int) -> float
 
    
    PixelToWorld method.
@@ -933,14 +902,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: VerifyLocaleStringsAreAllRenderable() -> tuple[str, bool]
 
    
@@ -950,6 +911,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: WorldToPixel(pt: Iterable[float]) -> int
+               WorldToPixel(x: float, y: float, z: float) -> int
 
    
    WorldToPixel method.

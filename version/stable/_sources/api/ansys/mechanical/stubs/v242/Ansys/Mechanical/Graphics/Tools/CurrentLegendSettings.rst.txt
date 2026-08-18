@@ -47,22 +47,16 @@ Overview
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~ExportLegend`
             - ExportLegend method.
           * - :py:attr:`~GetBandColor`
             - Gets the color of the specified band.
           * - :py:attr:`~GetBandColorAuto`
             - Gets whether the specified band is set to Automatic or not.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetLowerBandValueAuto`
             - Gets whether the specified lower band value is set to Automatic or not.
           * - :py:attr:`~GetLowerBound`
             - Gets lower bound value of the specified band.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetUpperBandValueAuto`
             - Gets whether the specified upper band value is set to Automatic or not.
           * - :py:attr:`~GetUpperBound`
@@ -85,8 +79,6 @@ Overview
             - SetUpperBandValueAuto method.
           * - :py:attr:`~SetUpperBound`
             - Sets upper bound value of the specified band.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -380,14 +372,6 @@ Property detail
 
 Method detail
 -------------
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: ExportLegend(filePath: str) -> None
 
    
@@ -412,14 +396,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetLowerBandValueAuto(index: int) -> bool
 
    
@@ -432,14 +408,6 @@ Method detail
 
    
    Gets lower bound value of the specified band.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -528,14 +496,6 @@ Method detail
 
    
    Sets upper bound value of the specified band.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

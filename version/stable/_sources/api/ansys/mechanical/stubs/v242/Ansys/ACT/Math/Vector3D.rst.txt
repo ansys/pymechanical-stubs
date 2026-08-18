@@ -6,6 +6,8 @@
 =================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Math.Vector3D(x: float, y: float, z: float)
+              Vector3D(coordinates: float)
+              Vector3D(vec3: Ansys.ACT.Math.Vector3D)
 
    Bases: :py:obj:`object`
 
@@ -102,8 +104,6 @@ Overview
             - Object.Equals(object o) override
           * - :py:attr:`~GetHashCode`
             - Object.GetHashCode() override
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~Normalize`
             - Convert to an unit vector
           * - :py:attr:`~Subtract`
@@ -302,14 +302,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: Normalize() -> None
 
    
@@ -355,6 +347,8 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: __mul__(factor: float, vec3: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
+               __mul__(vec3: Ansys.ACT.Math.Vector3D, factor: float) -> Ansys.ACT.Math.Vector3D
+               __mul__(a: Ansys.ACT.Math.Vector3D, b: Ansys.ACT.Math.Vector3D) -> Ansys.ACT.Math.Vector3D
    :classmethod:
 
 

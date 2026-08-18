@@ -6,6 +6,7 @@
 ==========================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Automation.Mechanical.MeshWorkflowGroup(internalObject: Any)
+              MeshWorkflowGroup(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext)
 
    Bases: :py:obj:`object`
 
@@ -153,8 +154,6 @@ Overview
             - Get Mesh Quality Worst Metric Tooltip
           * - :py:attr:`~GetSurfaceMeshQualityWorstMetricValue`
             - Get Mesh Quality Worst Metric Value
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetVisibleProperties`
             - GetVisibleProperties method.
           * - :py:attr:`~GetVisiblePropertyNames`
@@ -219,8 +218,6 @@ Overview
             - Set Mesh Quality Error Limit
           * - :py:attr:`~SetVolumeMeshQualityWarningLimit`
             - Set Mesh Quality Warning Limit
-          * - :py:attr:`~ToString`
-            - ToString method.
           * - :py:attr:`~UpdateMeshWorkflowGroup`
             - Updates MeshWorkflowGroup object -> generates all need generated steps.
 
@@ -961,6 +958,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: GetChildren(recurses: bool, children: List[ChildrenType]) -> List[ChildrenType]
+               GetChildren(category: Ansys.Mechanical.DataModel.Enums.DataModelObjectCategory, recurses: bool, children: List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]) -> List[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject]
 
    
    Gets the list of children, filtered by type.
@@ -1240,14 +1238,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetVisibleProperties() -> List[System.Reflection.PropertyInfo]
 
    
@@ -1361,6 +1351,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyEditable(dispId: int) -> bool
+               IsPropertyEditable(propName: str) -> bool
 
    
    IsPropertyEditable method.
@@ -1369,6 +1360,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: IsPropertyVisible(dispId: int) -> bool
+               IsPropertyVisible(propName: str) -> bool
 
    
    IsPropertyVisible method.
@@ -1459,6 +1451,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetSolidSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: float) -> None
+               SetSolidSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: Ansys.Core.Units.Quantity) -> None
 
    
    Set Mesh Quality Error Limit
@@ -1467,6 +1460,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetSolidSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: float) -> None
+               SetSolidSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: Ansys.Core.Units.Quantity) -> None
 
    
    Set Mesh Quality Warning Limit
@@ -1475,6 +1469,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: float) -> None
+               SetSurfaceMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: Ansys.Core.Units.Quantity) -> None
 
    
    Set Mesh Quality Error Level
@@ -1483,6 +1478,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: float) -> None
+               SetSurfaceMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: Ansys.Core.Units.Quantity) -> None
 
    
    Set Mesh Quality Warning Limit
@@ -1491,6 +1487,7 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetVolumeMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: float) -> None
+               SetVolumeMeshQualityErrorLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, errorLevel: Ansys.Core.Units.Quantity) -> None
 
    
    Set Mesh Quality Error Limit
@@ -1499,17 +1496,10 @@ Method detail
        !! processed by numpydoc !!
 
 .. py:method:: SetVolumeMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: float) -> None
+               SetVolumeMeshQualityWarningLimit(meshMetric: Ansys.Mechanical.DataModel.Enums.MeshMetricType, warningLevel: Ansys.Core.Units.Quantity) -> None
 
    
    Set Mesh Quality Warning Limit
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

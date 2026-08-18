@@ -30,35 +30,10 @@ Summary
 
 
 
-
-
-
-
-
-
 .. py:currentmodule:: ExternalData
 .. tab-set::
 
 
-
-
-    .. tab-item:: Classes
-
-        .. list-table::
-          :header-rows: 0
-          :widths: auto
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.ImportFormat`
-            - Specifies how to interpret the variable data source.
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.LengthUnit`
-            - Specifies how to interpret the variable data source.
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.ExternalData.VariableType`
-            - An enumeration of the different variable types supported by the tabular data
 
 
 
@@ -89,15 +64,6 @@ Summary
 
 
 
-
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-   :hidden:
-
-    <span class="nf nf-cod-symbol_class"></span> ImportFormat</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/ImportFormat>
-    <span class="nf nf-cod-symbol_class"></span> LengthUnit</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/LengthUnit>
-    <span class="nf nf-cod-symbol_class"></span> VariableType</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/ExternalData/VariableType>
 
 
 .. toctree::

@@ -36,10 +36,6 @@ Summary
 
 
 
-
-
-
-
 .. py:currentmodule:: ConstructionLines
 .. tab-set::
 
@@ -72,20 +68,12 @@ Summary
             - A 2D sketching planes in a ConstructionLine instance.
 
 
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.PlaneType`
-            - Enumeration for the possible edge vertex types that can be represented.
-
-
           * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.Point`
             - A point in a ConstructionLine instance, may have an associated edge vertex.
 
 
           * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.Point2DPlanar`
             - Basic data that describe a 2D point on a plane.
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.ConstructionLines.PointType`
-            - Enumeration for the possible edge vertex types that can be represented.
 
 
 
@@ -127,10 +115,8 @@ Summary
 
     <span class="nf nf-cod-symbol_class"></span> ConstructionLineHelper</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/ConstructionLines/ConstructionLineHelper>
     <span class="nf nf-cod-symbol_class"></span> Plane</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/ConstructionLines/Plane>
-    <span class="nf nf-cod-symbol_class"></span> PlaneType</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/ConstructionLines/PlaneType>
     <span class="nf nf-cod-symbol_class"></span> Point</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/ConstructionLines/Point>
     <span class="nf nf-cod-symbol_class"></span> Point2DPlanar</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/ConstructionLines/Point2DPlanar>
-    <span class="nf nf-cod-symbol_class"></span> PointType</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/ConstructionLines/PointType>
 
 
 .. toctree::

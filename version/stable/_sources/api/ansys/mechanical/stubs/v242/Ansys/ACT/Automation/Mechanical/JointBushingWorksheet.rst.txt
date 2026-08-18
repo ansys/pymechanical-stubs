@@ -51,8 +51,6 @@ Overview
             - AddRow method.
           * - :py:attr:`~DeleteRow`
             - DeleteRow method.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~GetBushingDampingPerThetaUnitX`
             - Gets the Coefficient for the damping per ThetaUnitX at the indicated row index.
           * - :py:attr:`~GetBushingDampingPerThetaUnitY`
@@ -77,10 +75,6 @@ Overview
             - Gets the Coefficient for the stiffness per UnitY at the indicated row index.
           * - :py:attr:`~GetBushingStiffnessPerUnitZ`
             - Gets the Coefficient for the stiffness per UnitZ at the indicated row index.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~SetBushingDampingPerThetaUnitX`
             - Sets the Coefficient for the damping per ThetaUnitX at the indicated row index.
           * - :py:attr:`~SetBushingDampingPerThetaUnitY`
@@ -105,8 +99,6 @@ Overview
             - Sets the Coefficient for the stiffness per UnitY at the indicated row index.
           * - :py:attr:`~SetBushingStiffnessPerUnitZ`
             - Sets the Coefficient for the stiffness per UnitZ at the indicated row index.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -169,14 +161,6 @@ Method detail
 
    
    DeleteRow method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
 
    ..
        !! processed by numpydoc !!
@@ -277,22 +261,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: SetBushingDampingPerThetaUnitX(index: int, newVal: float) -> float
 
    
@@ -385,14 +353,6 @@ Method detail
 
    
    Sets the Coefficient for the stiffness per UnitZ at the indicated row index.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

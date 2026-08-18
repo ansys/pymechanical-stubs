@@ -51,22 +51,16 @@ Overview
             - Create a clone of the currection collection.
           * - :py:attr:`~Contains`
             - Check if the collection contains an attribute.
-          * - :py:attr:`~Equals`
-            - Equals method.
           * - :py:attr:`~FillDynamicAttributes`
             - Fill the dynamic attributes of the collection with the given
           * - :py:attr:`~FillStaticAttributesFromXml`
             - Fill the static attributes of the collection with the given XmlNode.
           * - :py:attr:`~GetEnumerator`
             - GetEnumerator method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetObjectData`
             - GetObjectData method.
           * - :py:attr:`~GetStringValue`
             - Gets an attribute value by its name.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~GetValue`
             - Gets an attribute value by its name.
           * - :py:attr:`~PostDeserialization`
@@ -75,8 +69,6 @@ Overview
             - Remove an attribute. The attribute cannot be removed if it was declared as
           * - :py:attr:`~SetValue`
             - Set an attribute value.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -170,14 +162,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: FillDynamicAttributes(other: Ansys.ACT.Core.Utilities.AttributeCollection) -> None
 
 .. code-block:: text
@@ -204,14 +188,6 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetObjectData(info: System.Runtime.Serialization.SerializationInfo, context: System.Runtime.Serialization.StreamingContext) -> None
 
    
@@ -228,15 +204,8 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetValue(name: str, defaultValue: Any) -> Any
+               GetValue(name: str) -> Any
 
    
    Gets an attribute value by its name.
@@ -266,14 +235,6 @@ Method detail
 
    
    Set an attribute value.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

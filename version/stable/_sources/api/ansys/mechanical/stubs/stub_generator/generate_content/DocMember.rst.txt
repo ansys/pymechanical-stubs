@@ -50,7 +50,7 @@ Overview
           * - :py:attr:`~name`
             - The name within the element.
           * - :py:attr:`~params`
-            - The parameters within a element.
+            - The parameters within the element.
           * - :py:attr:`~remarks`
             - The remarks within the element.
           * - :py:attr:`~summary`
@@ -115,11 +115,11 @@ Property detail
        !! processed by numpydoc !!
 
 .. py:property:: params
-   :type: str
+   :type: List[xml.etree.ElementTree.Element]
 
 
    
-   The parameters within a element.
+   The parameters within the element.
 
 
 

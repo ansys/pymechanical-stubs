@@ -5,9 +5,9 @@
 :class:`OutcomeType`
 ====================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.OutcomeType(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,50 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~Checkpoint`
+            - 
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~EdgeZoneScope`
+            - 
+          * - :py:attr:`~EnclosureExternalScope`
+            - 
+          * - :py:attr:`~EnclosureInternalScope`
+            - 
+          * - :py:attr:`~EnclosureScope`
+            - 
+          * - :py:attr:`~ExtrusionEndScope`
+            - 
+          * - :py:attr:`~ExtrusionStartScope`
+            - 
+          * - :py:attr:`~FaceZoneScope`
+            - 
+          * - :py:attr:`~FailureInfo`
+            - 
+          * - :py:attr:`~InternalVolumeZoneScope`
+            - 
+          * - :py:attr:`~Performance`
+            - 
+          * - :py:attr:`~PythonTraceback`
+            - 
+          * - :py:attr:`~Scope`
+            - 
+          * - :py:attr:`~SizeField`
+            - 
+          * - :py:attr:`~StackerBaseFace`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+          * - :py:attr:`~VolumeZoneScope`
+            - 
 
 
 
@@ -69,67 +93,81 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: Checkpoint
+   :value: 3
+
+
+.. py:attribute:: Custom
+   :value: 1
+
+
+.. py:attribute:: EdgeZoneScope
+   :value: 13
+
+
+.. py:attribute:: EnclosureExternalScope
+   :value: 9
+
+
+.. py:attribute:: EnclosureInternalScope
+   :value: 8
+
+
+.. py:attribute:: EnclosureScope
+   :value: 7
+
+
+.. py:attribute:: ExtrusionEndScope
+   :value: 11
+
+
+.. py:attribute:: ExtrusionStartScope
+   :value: 10
+
+
+.. py:attribute:: FaceZoneScope
+   :value: 14
+
+
+.. py:attribute:: FailureInfo
+   :value: 6
+
+
+.. py:attribute:: InternalVolumeZoneScope
+   :value: 16
+
+
+.. py:attribute:: Performance
+   :value: 2
+
+
+.. py:attribute:: PythonTraceback
+   :value: 12
+
+
+.. py:attribute:: Scope
+   :value: 4
+
+
+.. py:attribute:: SizeField
+   :value: 5
+
+
+.. py:attribute:: StackerBaseFace
+   :value: 17
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+.. py:attribute:: VolumeZoneScope
+   :value: 15
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 

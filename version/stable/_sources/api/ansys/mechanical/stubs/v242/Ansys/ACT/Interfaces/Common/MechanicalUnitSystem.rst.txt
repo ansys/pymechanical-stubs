@@ -53,12 +53,8 @@ Overview
             - Specifies whether this instance of MechanicalUnitSystem is equal to the given MechanicalUnitSystemEnum value.
           * - :py:attr:`~GetConsistentUnitSystem`
             - Gets the consistent unit system (i.e. solver unit system.)
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
           * - :py:attr:`~GetMechanicalUnitSystemType`
             - Get the MechanicalUnitSystemEnum for this MechanicalUnitSystem
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~ToString`
             - ToString method.
 
@@ -127,26 +123,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetMechanicalUnitSystemType() -> Ansys.ACT.Interfaces.Common.MechanicalUnitSystemEnum
 
    
    Get the MechanicalUnitSystemEnum for this MechanicalUnitSystem
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!

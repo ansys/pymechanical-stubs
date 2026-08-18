@@ -26,23 +26,10 @@ Summary
 
 
 
-
-
 .. py:currentmodule:: Common
 .. tab-set::
 
 
-
-
-    .. tab-item:: Classes
-
-        .. list-table::
-          :header-rows: 0
-          :widths: auto
-
-
-          * - :py:obj:`~ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.MechanicalEnums.Common.PathType`
-            - This enum specifies how a path should be interpreted.
 
 
 
@@ -65,13 +52,6 @@ Summary
 
 
 
-
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-   :hidden:
-
-    <span class="nf nf-cod-symbol_class"></span> PathType</api/ansys/mechanical/stubs/v242/Ansys/Mechanical/DataModel/MechanicalEnums/Common/PathType>
 
 
 .. toctree::

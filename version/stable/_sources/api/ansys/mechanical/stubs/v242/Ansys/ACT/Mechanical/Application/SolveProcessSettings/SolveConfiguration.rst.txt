@@ -6,6 +6,7 @@
 ===========================
 
 .. py:class:: ansys.mechanical.stubs.v242.Ansys.ACT.Mechanical.Application.SolveProcessSettings.SolveConfiguration(name: str)
+              SolveConfiguration
 
    Bases: :py:obj:`object`
 
@@ -51,14 +52,8 @@ Overview
             - CopyTo method.
           * - :py:attr:`~Equals`
             - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
           * - :py:attr:`~SetAsDefault`
             - Sets this solve configuration as the default.
-          * - :py:attr:`~ToString`
-            - ToString method.
 
 
    .. tab-item:: Properties
@@ -206,34 +201,10 @@ Method detail
    ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: SetAsDefault() -> None
 
    
    Sets this solve configuration as the default.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

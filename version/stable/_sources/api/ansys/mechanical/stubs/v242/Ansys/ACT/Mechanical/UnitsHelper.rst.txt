@@ -63,21 +63,6 @@ Overview
             - RegisterConvertionFunction method.
 
 
-   .. tab-item:: Methods
-
-      .. list-table::
-          :header-rows: 0
-          :widths: auto
-
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~ToString`
-            - ToString method.
-
 
 
 
@@ -103,14 +88,6 @@ Method detail
 ..
        !! processed by numpydoc !!
 
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetCurrentCompactUnitString(quantityName: str) -> str
    :classmethod:
 
@@ -125,28 +102,12 @@ Method detail
 ..
        !! processed by numpydoc !!
 
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
 .. py:method:: GetQuantityNameBasedOnUnitCategoryType(unitCategory: Ansys.Mechanical.DataModel.Enums.UnitCategoryType) -> str
    :classmethod:
 
 
    
    GetQuantityNameBasedOnUnitCategoryType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
 
    ..
        !! processed by numpydoc !!
@@ -164,20 +125,12 @@ Method detail
 ..
        !! processed by numpydoc !!
 
-.. py:method:: RegisterConvertionFunction(fct: System.Func[str,str,str]) -> None
+.. py:method:: RegisterConvertionFunction(fct: Callable[str, str, str]) -> None
    :classmethod:
 
 
    
    RegisterConvertionFunction method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
 
    ..
        !! processed by numpydoc !!

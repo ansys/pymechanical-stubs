@@ -5,9 +5,9 @@
 :class:`MeshElementShape`
 =========================
 
-.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeshElementShape
+.. py:class:: ansys.mechanical.stubs.v242.Ansys.Mechanical.DataModel.Enums.MeshElementShape(*args, **kwds)
 
-   Bases: :py:obj:`object`
+   Bases: :py:obj:`enum.Enum`
 
 
    
@@ -41,26 +41,88 @@ Overview
 
 
 
-   .. tab-item:: Methods
+
+
+   .. tab-item:: Attributes
 
       .. list-table::
           :header-rows: 0
           :widths: auto
 
-          * - :py:attr:`~CompareTo`
-            - CompareTo method.
-          * - :py:attr:`~Equals`
-            - Equals method.
-          * - :py:attr:`~GetHashCode`
-            - GetHashCode method.
-          * - :py:attr:`~GetType`
-            - GetType method.
-          * - :py:attr:`~GetTypeCode`
-            - GetTypeCode method.
-          * - :py:attr:`~HasFlag`
-            - HasFlag method.
-          * - :py:attr:`~ToString`
-            - ToString method.
+          * - :py:attr:`~ActualNumElementTypes`
+            - 
+          * - :py:attr:`~All`
+            - 
+          * - :py:attr:`~Beam3`
+            - 
+          * - :py:attr:`~Beam4`
+            - 
+          * - :py:attr:`~EMagArc`
+            - 
+          * - :py:attr:`~EMagCircle`
+            - 
+          * - :py:attr:`~EMagLine`
+            - 
+          * - :py:attr:`~Edge2`
+            - 
+          * - :py:attr:`~Edge3`
+            - 
+          * - :py:attr:`~General`
+            - 
+          * - :py:attr:`~GeneralPlaceholder`
+            - 
+          * - :py:attr:`~Hex20`
+            - 
+          * - :py:attr:`~Hex8`
+            - 
+          * - :py:attr:`~Line2`
+            - 
+          * - :py:attr:`~Line3`
+            - 
+          * - :py:attr:`~NumElementTypes`
+            - 
+          * - :py:attr:`~Point1`
+            - 
+          * - :py:attr:`~Polygon`
+            - 
+          * - :py:attr:`~Pyramid13`
+            - 
+          * - :py:attr:`~Pyramid5`
+            - 
+          * - :py:attr:`~Quad4`
+            - 
+          * - :py:attr:`~Quad8`
+            - 
+          * - :py:attr:`~QuadShell4`
+            - 
+          * - :py:attr:`~QuadShell8`
+            - 
+          * - :py:attr:`~Surface3`
+            - 
+          * - :py:attr:`~Surface4`
+            - 
+          * - :py:attr:`~Surface6`
+            - 
+          * - :py:attr:`~Surface8`
+            - 
+          * - :py:attr:`~Tet10`
+            - 
+          * - :py:attr:`~Tet4`
+            - 
+          * - :py:attr:`~Tri3`
+            - 
+          * - :py:attr:`~Tri6`
+            - 
+          * - :py:attr:`~TriShell3`
+            - 
+          * - :py:attr:`~TriShell6`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~Wedge15`
+            - 
+          * - :py:attr:`~Wedge6`
+            - 
 
 
 
@@ -69,67 +131,157 @@ Overview
 
 
 
+Attribute detail
+----------------
+.. py:attribute:: ActualNumElementTypes
+   :value: 34
+
+
+.. py:attribute:: All
+   :value: -1
+
+
+.. py:attribute:: Beam3
+   :value: 30
+
+
+.. py:attribute:: Beam4
+   :value: 31
+
+
+.. py:attribute:: EMagArc
+   :value: 22
+
+
+.. py:attribute:: EMagCircle
+   :value: 23
+
+
+.. py:attribute:: EMagLine
+   :value: 21
+
+
+.. py:attribute:: Edge2
+   :value: 28
+
+
+.. py:attribute:: Edge3
+   :value: 29
+
+
+.. py:attribute:: General
+   :value: -2
+
+
+.. py:attribute:: GeneralPlaceholder
+   :value: 32
+
+
+.. py:attribute:: Hex20
+   :value: 1
+
+
+.. py:attribute:: Hex8
+   :value: 11
+
+
+.. py:attribute:: Line2
+   :value: 18
+
+
+.. py:attribute:: Line3
+   :value: 8
+
+
+.. py:attribute:: NumElementTypes
+   :value: 19
+
+
+.. py:attribute:: Point1
+   :value: 9
+
+
+.. py:attribute:: Polygon
+   :value: 33
+
+
+.. py:attribute:: Pyramid13
+   :value: 3
+
+
+.. py:attribute:: Pyramid5
+   :value: 13
+
+
+.. py:attribute:: Quad4
+   :value: 16
+
+
+.. py:attribute:: Quad8
+   :value: 6
+
+
+.. py:attribute:: QuadShell4
+   :value: 17
+
+
+.. py:attribute:: QuadShell8
+   :value: 7
+
+
+.. py:attribute:: Surface3
+   :value: 24
+
+
+.. py:attribute:: Surface4
+   :value: 25
+
+
+.. py:attribute:: Surface6
+   :value: 26
+
+
+.. py:attribute:: Surface8
+   :value: 27
+
+
+.. py:attribute:: Tet10
+   :value: 0
+
+
+.. py:attribute:: Tet4
+   :value: 10
+
+
+.. py:attribute:: Tri3
+   :value: 14
+
+
+.. py:attribute:: Tri6
+   :value: 4
+
+
+.. py:attribute:: TriShell3
+   :value: 15
+
+
+.. py:attribute:: TriShell6
+   :value: 5
+
+
+.. py:attribute:: Unknown
+   :value: 20
+
+
+.. py:attribute:: Wedge15
+   :value: 2
+
+
+.. py:attribute:: Wedge6
+   :value: 12
 
 
 
-
-Method detail
--------------
-.. py:method:: CompareTo(target: Any) -> int
-
-   
-   CompareTo method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: Equals(obj: Any) -> bool
-
-   
-   Equals method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetHashCode() -> int
-
-   
-   GetHashCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetType() -> type
-
-   
-   GetType method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: GetTypeCode() -> typeCode
-
-   
-   GetTypeCode method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: HasFlag(flag: System.Enum) -> bool
-
-   
-   HasFlag method.
-
-   ..
-       !! processed by numpydoc !!
-
-.. py:method:: ToString() -> str
-
-   
-   ToString method.
-
-   ..
-       !! processed by numpydoc !!
 
 
 
