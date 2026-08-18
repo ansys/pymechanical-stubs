@@ -107,27 +107,7 @@ def c_types_to_python(type_str):
     return type_str
 
 
-def is_namespace(something):
-    """Check if an object is a namespace.
-
-    Parameters
-    ----------
-    something: object
-        Object to check if it's a namespace
-
-    Returns
-    -------
-    bool
-        True if object is Namespace: Module
-        False if object is not Namespace: Module
-    """
-    import System  # noqa: PLC0415
-
-    if isinstance(something, type(System)):
-        return True
-
-
-def iter_module(module, type_filter: typing.Callable = None):
+def iter_module(module, type_filter: typing.Callable = None) -> dict:
     """Recursively iterates through all namespaces in assembly.
 
     Parameters
@@ -139,8 +119,8 @@ def iter_module(module, type_filter: typing.Callable = None):
 
     Returns
     -------
-    string
-        The namespace in the assembly file
+    dict
+        A dictionary mapping namespace strings to lists of types in that namespace.
     """
     mod_types = module.GetTypes()
     namespaces = {}
@@ -173,13 +153,13 @@ def crawl_loaded_references(assembly: typing.Any, type_filter: typing.Callable =
     return iter_module(assembly, type_filter)
 
 
-def dump_types(namespaces: dict):
-    """Crawl Loaded assemblies to get Namespaces.
+def dump_types(namespaces: dict) -> None:
+    """Log the type names within each namespace at debug level.
 
     Parameters
     ----------
     namespaces: dict
-        Dictionary of namespaces in the assembly
+        Dictionary mapping namespace strings to lists of types.
     """
     printable_namespaces = {k: [x.Name for x in v] for k, v in namespaces.items()}
     logging.debug(json.dumps(printable_namespaces, indent=2, sort_keys=True))
@@ -236,8 +216,8 @@ class DocMember:
         return self.__flatten_summary_element(summary)
 
     @property
-    def params(self) -> str:
-        """The parameters within a element."""
+    def params(self) -> typing.List[ElementTree.Element]:
+        """The parameters within the element."""
         return self._element.findall("param")
 
     @property
@@ -285,7 +265,7 @@ def write_enum_field(buffer: typing.TextIO, field: typing.Any, indent_level: int
     Parameters
     ----------
     buffer: typing.TextIO
-        The buffer for writing the docstring
+        The buffer for writing the enum field
     field: typing.Any
         The field information from System.Reflection.MdFieldInfo
     indent_level: int
@@ -304,7 +284,6 @@ def write_enum(
     enum_type: typing.Any,
     namespace: str,
     doc: typing.Dict[str, DocMember],
-    type_filter: typing.Callable = None,
 ) -> None:
     """Write an enum containing only its member values.
 
@@ -316,22 +295,16 @@ def write_enum(
     Parameters
     ----------
     buffer: typing.TextIO
-        The buffer for writing the docstring
+        The buffer for writing the enum
     enum_type: typing.Any
         The enum type
     namespace: str
         The namespace of the enum
     doc: typing.Dict[str, DocMember]
         A DocMember or string that holds information about the enum.
-    type_filter: typing.Callable = None
-        Whether or not the type is published.
     """
     logging.debug(f"    writing enum {enum_type.Name}")
-    # type_filter is intended for Type objects. Applying it to reflected
-    # members (FieldInfo) would incorrectly hide enum values, because enum
-    # field constants do not carry PublishedAttribute.
     fields = [field for field in enum_type.GetFields() if field.IsLiteral]
-    methods = get_methods(enum_type, doc, type_filter)
 
     buffer.write(f"class {enum_type.Name}(Enum):\n")
 
@@ -345,11 +318,7 @@ def write_enum(
     for field in fields:
         write_enum_field(buffer, field, 1)
 
-    method_groups = _group_methods_by_signature_name(methods)
-    for method_group in method_groups:
-        write_method_group(buffer, method_group, 1)
-
-    if len(fields) == 0 and len(method_groups) == 0:
+    if len(fields) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
@@ -566,7 +535,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     Parameters
     ----------
     buffer: typing.TextIO
-        The buffer for writing the docstring
+        The buffer for writing the property
     prop: Property
         A Property object containing information about the property
     indent_level: int
@@ -658,16 +627,16 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
 
 
 def write_missing_class_enum_docstring(buffer, name, obj_type):
-    """Write a docstring for classes and enums that do not contain a docstring in the XML file.
+    """Write a fallback docstring for classes and enums that have no entry in the XML file.
 
     Parameters
     ----------
     buffer: typing.TextIO
         The buffer for writing the docstring
     name: str
-        The name of an interface
+        The name of the class or enum
     obj_type: str
-        The object type of the interface
+        The object type, e.g. ``'class'`` or ``'enum'``
     """
     indent = "    " * 1
     buffer.write(f'{indent}"""\n')
@@ -968,8 +937,9 @@ def get_methods(
             )
 
     for method in methods:
-        # Skip all methods declared on System.Object or System.Enum — only
-        # enum field constants are wanted in the generated stubs.
+        # Skip methods declared on System.Object or System.Enum (e.g. GetHashCode,
+        # ToString, Equals, CompareTo). These inherited noise methods are not wanted
+        # in the generated stubs for either classes or enums.
         if method.DeclaringType.ToString() in {"System.Object", "System.Enum"}:
             continue
 
@@ -1104,7 +1074,7 @@ def write_module(
         f.write("import typing\n\n")
         logging.info(f"    {len(enum_types)} enum types")
         for enum_type in enum_types:
-            write_enum(f, enum_type, namespace, doc, type_filter)
+            write_enum(f, enum_type, namespace, doc)
         for class_type in class_types:
             write_class(f, class_type, namespace, doc, type_filter)
     logging.info(f"Done processing {namespace}")
