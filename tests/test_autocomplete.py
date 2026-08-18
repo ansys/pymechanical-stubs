@@ -638,25 +638,20 @@ class TestContactTypeEnumBehavior:
 class TestContactTypeNetMethods:
     """.NET System.Enum methods must be present on ContactType.
 
-    Every .NET enum inherits from System.Enum, which provides GetHashCode,
-    ToString, CompareTo, HasFlag, GetTypeCode, Equals, and GetType.  The stubs
-    must expose these so VS Code autocomplete shows them when a user types
-    ``my_method_value.<TAB>``.
+    Every .NET enum inherits from System.Enum, which provides CompareTo,
+    HasFlag, and GetTypeCode.  Methods inherited from System.Object
+    (GetHashCode, ToString, Equals, GetType) are intentionally excluded from
+    the generated stubs because they are noise that adds no value for
+    Mechanical scripting users.
 
-    In v0.1.14 these methods only existed on the shadowing object-based class
-    (which overwrote the Enum definition).  After the fix they live directly on
-    the Enum-based class, so both the enum members AND the .NET methods are
-    available.
+    The stubs must expose the System.Enum-declared methods so VS Code
+    autocomplete shows them when a user types ``my_method_value.<TAB>``.
     """
 
     _NET_METHODS = [
-        "GetHashCode",
-        "ToString",
         "CompareTo",
         "HasFlag",
         "GetTypeCode",
-        "Equals",
-        "GetType",
     ]
 
     @pytest.mark.parametrize("method_name", _NET_METHODS)

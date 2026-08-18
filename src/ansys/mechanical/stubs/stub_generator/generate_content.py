@@ -56,13 +56,15 @@ C_TO_PYTHON = {
     "System.Type": "type",
     "System.UInt32": "int",
     "System.Void": "None",
+    "System.Func": "typing.Callable",
+    "System.Delegate": "typing.Callable",
 }
 
+# These System types have no usable Python equivalent and are wrapped in quotes
+# as unresolved forward-reference strings in the generated stubs.
 EXCLUDED_TYPES_LIST = [
     "System.IAsyncResult",
     "System.IDisposable",
-    "System.Func",
-    "System.Delegate",
 ]
 
 # System.Enum overrides these three methods from System.Object, so their DeclaringType is

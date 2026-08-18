@@ -41,8 +41,10 @@ from ansys.mechanical.stubs.stub_generator.generate_content import (
 _SYSTEM_FUNC_TYPE = (
     "System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,System.Boolean]"
 )
+# System.Func now maps to typing.Callable; System.Boolean maps to bool.
+# The Ansys type argument is not quoted — the Ansys regex in c_types_to_python is a no-op.
 _EXPECTED_SYSTEM_FUNC_TYPE = (
-    '"System.Func[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,bool]"'
+    "typing.Callable[Ansys.Mechanical.DataModel.Interfaces.IDataModelObject,bool]"
 )
 _GENERIC_ENUMERABLE_OF_KV_ENUMERABLE = (
     "System.Collections.Generic.IEnumerable["
@@ -63,7 +65,7 @@ _TYPE_CONVERSION_CASES = [
         "System.Collections.Generic.IList[ChildrenType]",
         "typing.List[ChildrenType]",
     ),
-    # System.Func is intentionally preserved as a quoted type string.
+    # System.Func maps to typing.Callable; type parameters are preserved in brackets.
     (_SYSTEM_FUNC_TYPE, _EXPECTED_SYSTEM_FUNC_TYPE),
     # This is a single long input string split across literals for readability.
     # Nested IEnumerable<KeyValuePair<int, IEnumerable<T>>> should map recursively.
