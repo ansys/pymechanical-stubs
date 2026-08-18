@@ -56,13 +56,15 @@ C_TO_PYTHON = {
     "System.Type": "type",
     "System.UInt32": "int",
     "System.Void": "None",
+    "System.Func": "typing.Callable",
+    "System.Delegate": "typing.Callable",
 }
 
+# These System types have no usable Python equivalent and are wrapped in quotes
+# as unresolved forward-reference strings in the generated stubs.
 EXCLUDED_TYPES_LIST = [
     "System.IAsyncResult",
     "System.IDisposable",
-    "System.Func",
-    "System.Delegate",
 ]
 
 # Maps interface return types to their concrete runtime types for more accurate stubs.
@@ -105,27 +107,7 @@ def c_types_to_python(type_str):
     return type_str
 
 
-def is_namespace(something):
-    """Check if an object is a namespace.
-
-    Parameters
-    ----------
-    something: object
-        Object to check if it's a namespace
-
-    Returns
-    -------
-    bool
-        True if object is Namespace: Module
-        False if object is not Namespace: Module
-    """
-    import System  # noqa: PLC0415
-
-    if isinstance(something, type(System)):
-        return True
-
-
-def iter_module(module, type_filter: typing.Callable = None):
+def iter_module(module, type_filter: typing.Callable = None) -> dict:
     """Recursively iterates through all namespaces in assembly.
 
     Parameters
@@ -137,8 +119,8 @@ def iter_module(module, type_filter: typing.Callable = None):
 
     Returns
     -------
-    string
-        The namespace in the assembly file
+    dict
+        A dictionary mapping namespace strings to lists of types in that namespace.
     """
     mod_types = module.GetTypes()
     namespaces = {}
@@ -171,13 +153,13 @@ def crawl_loaded_references(assembly: typing.Any, type_filter: typing.Callable =
     return iter_module(assembly, type_filter)
 
 
-def dump_types(namespaces: dict):
-    """Crawl Loaded assemblies to get Namespaces.
+def dump_types(namespaces: dict) -> None:
+    """Log the type names within each namespace at debug level.
 
     Parameters
     ----------
     namespaces: dict
-        Dictionary of namespaces in the assembly
+        Dictionary mapping namespace strings to lists of types.
     """
     printable_namespaces = {k: [x.Name for x in v] for k, v in namespaces.items()}
     logging.debug(json.dumps(printable_namespaces, indent=2, sort_keys=True))
@@ -234,8 +216,8 @@ class DocMember:
         return self.__flatten_summary_element(summary)
 
     @property
-    def params(self) -> str:
-        """The parameters within a element."""
+    def params(self) -> typing.List[ElementTree.Element]:
+        """The parameters within the element."""
         return self._element.findall("param")
 
     @property
@@ -283,7 +265,7 @@ def write_enum_field(buffer: typing.TextIO, field: typing.Any, indent_level: int
     Parameters
     ----------
     buffer: typing.TextIO
-        The buffer for writing the docstring
+        The buffer for writing the enum field
     field: typing.Any
         The field information from System.Reflection.MdFieldInfo
     indent_level: int
@@ -302,28 +284,28 @@ def write_enum(
     enum_type: typing.Any,
     namespace: str,
     doc: typing.Dict[str, DocMember],
-    type_filter: typing.Callable = None,
 ) -> None:
-    """Write an enum.
+    """Write an enum containing only its member values.
+
+    Methods inherited from ``System.Object`` and ``System.Enum`` (e.g.
+    ``GetHashCode``, ``ToString``, ``Equals``, ``GetType``, ``CompareTo``,
+    ``HasFlag``, ``GetTypeCode``) are intentionally excluded — only the
+    enum field constants are emitted.
 
     Parameters
     ----------
     buffer: typing.TextIO
-        The buffer for writing the docstring
+        The buffer for writing the enum
     enum_type: typing.Any
         The enum type
     namespace: str
         The namespace of the enum
     doc: typing.Dict[str, DocMember]
         A DocMember or string that holds information about the enum.
-    type_filter: typing.Callable = None
-        Whether or not the type is published.
     """
     logging.debug(f"    writing enum {enum_type.Name}")
-    # type_filter is intended for Type objects. Applying it to reflected
-    # members (FieldInfo) would incorrectly hide enum values, because enum
-    # field constants do not carry PublishedAttribute.
     fields = [field for field in enum_type.GetFields() if field.IsLiteral]
+
     buffer.write(f"class {enum_type.Name}(Enum):\n")
 
     if doc is not None:
@@ -553,7 +535,7 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
     Parameters
     ----------
     buffer: typing.TextIO
-        The buffer for writing the docstring
+        The buffer for writing the property
     prop: Property
         A Property object containing information about the property
     indent_level: int
@@ -645,16 +627,16 @@ def write_property(buffer: typing.TextIO, prop: Property, indent_level: int = 1)
 
 
 def write_missing_class_enum_docstring(buffer, name, obj_type):
-    """Write a docstring for classes and enums that do not contain a docstring in the XML file.
+    """Write a fallback docstring for classes and enums that have no entry in the XML file.
 
     Parameters
     ----------
     buffer: typing.TextIO
         The buffer for writing the docstring
     name: str
-        The name of an interface
+        The name of the class or enum
     obj_type: str
-        The object type of the interface
+        The object type, e.g. ``'class'`` or ``'enum'``
     """
     indent = "    " * 1
     buffer.write(f'{indent}"""\n')
@@ -689,19 +671,13 @@ def write_missing_prop_method_docstring(buffer, obj, obj_type, indent_level):
     buffer.write(f'{indent}"""\n')
 
 
-def convert_operator_name(
-    method_name: str, method_args: typing.List, is_static: bool = False
-) -> str:
+def convert_operator_name(method_name: str) -> str:
     """Convert .NET operator names to Python dunder methods.
 
     Parameters
     ----------
     method_name: str
         The original method name (e.g., op_Addition)
-    method_args: typing.List
-        List of method arguments
-    is_static: bool
-        Whether this is a static method
 
     Returns
     -------
@@ -738,6 +714,88 @@ def convert_operator_name(
     return method_name
 
 
+def _format_method_args(method: Method, use_typed_args: bool) -> str:
+    """Build the Python argument list for a method signature."""
+    first_arg = "cls" if method.static else "self"
+    if use_typed_args:
+        args = [first_arg] + [f"{arg.name}: {c_types_to_python(arg.type)}" for arg in method.args]
+    else:
+        args = [first_arg, "*args: typing.Any"]
+    return f"({', '.join(args)})"
+
+
+def _group_methods_by_signature_name(
+    methods: typing.List[Method],
+) -> typing.List[typing.List[Method]]:
+    """Group reflected methods that map to the same emitted Python method name."""
+    grouped_methods = {}
+    ordered_keys = []
+
+    for method in methods:
+        key = (convert_operator_name(method.name), method.static)
+        if key not in grouped_methods:
+            grouped_methods[key] = []
+            ordered_keys.append(key)
+        grouped_methods[key].append(method)
+
+    return [grouped_methods[key] for key in ordered_keys]
+
+
+def _combined_return_type(methods: typing.List[Method]) -> str:
+    """Return a combined return type for an overload group implementation."""
+    return_types = []
+    for method in methods:
+        method_type = c_types_to_python(method.return_type)
+        if method_type not in return_types:
+            return_types.append(method_type)
+
+    if len(return_types) == 1:
+        return return_types[0]
+
+    # Keep Any as a conservative fallback when any branch is untyped.
+    if "typing.Any" in return_types:
+        return "typing.Any"
+
+    return " | ".join(return_types)
+
+
+def _write_method_signature(
+    buffer: typing.TextIO,
+    method: Method,
+    indent_level: int = 1,
+    *,
+    use_typed_args: bool,
+    use_overload: bool,
+    return_type: typing.Optional[str] = None,
+    include_docstring: bool = True,
+) -> None:
+    """Write a method signature, optionally as a typing overload declaration."""
+    indent = "    " * indent_level
+    if method.static:
+        buffer.write(f"{indent}@classmethod\n")
+    if use_overload:
+        buffer.write(f"{indent}@typing.overload\n")
+
+    args = _format_method_args(method, use_typed_args=use_typed_args)
+    method_type = return_type or c_types_to_python(method.return_type)
+    converted_method_name = convert_operator_name(method.name)
+
+    buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
+
+    if use_overload:
+        buffer.write(f"{indent}    ...\n\n")
+        return
+
+    inner = "    " * (1 + indent_level)
+    if include_docstring:
+        if method.doc is None:
+            write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
+        else:
+            write_docstring(buffer, method.doc, indent_level + 1)
+    buffer.write(f"{inner}pass\n")
+    buffer.write("\n")
+
+
 def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -> None:
     """Write a method.
 
@@ -750,27 +808,42 @@ def write_method(buffer: typing.TextIO, method: Method, indent_level: int = 1) -
     indent_level: int
         ``1`` to indent a line once
     """
-    indent = "    " * indent_level
-    if method.static:
-        buffer.write(f"{indent}@classmethod\n")
-        first_arg = "cls"
-    else:
-        first_arg = "self"
-    args = [first_arg] + [f"{arg.name}: {c_types_to_python(arg.type)}" for arg in method.args]
-    args = f"({', '.join(args)})"
-    method_type = c_types_to_python(method.return_type)
+    _write_method_signature(
+        buffer,
+        method,
+        indent_level,
+        use_typed_args=True,
+        use_overload=False,
+    )
 
-    # Convert operator method names to Python dunder methods
-    converted_method_name = convert_operator_name(method.name, method.args, method.static)
 
-    buffer.write(f"{indent}def {converted_method_name}{args} -> {method_type}:\n")
-    indent = "    " * (1 + indent_level)
-    if method.doc is None:
-        write_missing_prop_method_docstring(buffer, method, "method", indent_level + 1)
-    else:
-        write_docstring(buffer, method.doc, indent_level + 1)
-    buffer.write(f"{indent}pass\n")
-    buffer.write("\n")
+def write_method_group(
+    buffer: typing.TextIO, methods: typing.List[Method], indent_level: int = 1
+) -> None:
+    """Write one or more overloads for a reflected CLR method name."""
+    if len(methods) == 1:
+        write_method(buffer, methods[0], indent_level)
+        return
+
+    for method in methods:
+        _write_method_signature(
+            buffer,
+            method,
+            indent_level,
+            use_typed_args=True,
+            use_overload=True,
+            include_docstring=False,
+        )
+
+    implementation_method = methods[0]
+    _write_method_signature(
+        buffer,
+        implementation_method,
+        indent_level,
+        use_typed_args=False,
+        use_overload=False,
+        return_type=_combined_return_type(methods),
+    )
 
 
 def adjust_method_name_xml(method_name: str):
@@ -864,6 +937,12 @@ def get_methods(
             )
 
     for method in methods:
+        # Skip methods declared on System.Object or System.Enum (e.g. GetHashCode,
+        # ToString, Equals, CompareTo). These inherited noise methods are not wanted
+        # in the generated stubs for either classes or enums.
+        if method.DeclaringType.ToString() in {"System.Object", "System.Enum"}:
+            continue
+
         method_return_type = f'"{method.ReturnType.ToString()}"'
         method_name = method.Name
         params = method.GetParameters()
@@ -945,9 +1024,10 @@ def write_class(
             or (method.name.startswith("set_") and method.name[4:] in properties_with_setters)
         )
     ]
-    [write_method(buffer, method, 1) for method in filtered_methods]
+    method_groups = _group_methods_by_signature_name(filtered_methods)
+    [write_method_group(buffer, method_group, 1) for method_group in method_groups]
 
-    if len(props) == 0 and len(filtered_methods) == 0:
+    if len(props) == 0 and len(method_groups) == 0:
         buffer.write("    pass\n")
     buffer.write("\n")
 
@@ -982,7 +1062,8 @@ def write_module(
     class_types = [
         mod_type
         for mod_type in mod_types
-        if mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface
+        if (mod_type.IsClass or mod_type.IsAnsiClass or mod_type.IsInterface)
+        and not mod_type.IsEnum
     ]
     enum_types = [mod_type for mod_type in mod_types if mod_type.IsEnum]
     logging.info(f"Writing to {str(outdir.resolve())}")
@@ -993,7 +1074,7 @@ def write_module(
         f.write("import typing\n\n")
         logging.info(f"    {len(enum_types)} enum types")
         for enum_type in enum_types:
-            write_enum(f, enum_type, namespace, doc, type_filter)
+            write_enum(f, enum_type, namespace, doc)
         for class_type in class_types:
             write_class(f, class_type, namespace, doc, type_filter)
     logging.info(f"Done processing {namespace}")
