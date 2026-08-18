@@ -58,7 +58,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: ansys/actions/doc-deploy-changelog@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
+      - uses: ansys/actions/doc-deploy-changelog@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
         with:
           token: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
           bot-user: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "PyAnsys code style checks"
-        uses: ansys/actions/code-style@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
+        uses: ansys/actions/code-style@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "PyAnsys documentation style checks"
-        uses: ansys/actions/doc-style@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
+        uses: ansys/actions/doc-style@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
         with:
           vale-config: doc/.vale.ini
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -318,11 +318,9 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -e .[tests,build]
 
-    - name: "Validate enum values in stubs"
-      env:
-        MECHANICAL_VERSION: ${{ matrix.mechanical.version }}
+    - name: "Run stub generator unit tests"
       run: |
-        python -m pytest tests/test_stubs.py::test_enums_have_values -v
+        python -m pytest tests/test_generator.py -v
 
   smoke-tests:
     name: Build wheelhouse
@@ -342,17 +340,192 @@ jobs:
         python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
     - name: "Build a wheelhouse of the Python library"
-      uses: ansys/actions/build-wheelhouse@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
+      uses: ansys/actions/build-wheelhouse@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
       with:
         library-name: ${{ env.PACKAGE_NAME }}
         operating-system: ${{ matrix.os }}
         python-version: ${{ matrix.python-version }}
         checkout: false
 
+  build-library:
+    name: Build library
+    runs-on: ubuntu-latest
+    needs: [smoke-tests]
+    steps:
+    - name: "Install Git and clone project"
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+    - name: "Set up Python"
+      uses: ansys/actions/_setup-python@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
+      with:
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        use-cache: false
+        provision-uv: false
+        prune-uv-cache: false
+
+    - name: "Download stubs for selected workflow_dispatch version"
+      if: github.event_name == 'workflow_dispatch' && inputs.mechanical-version != ''
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v${{ inputs.mechanical-version }}-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v${{ inputs.mechanical-version }}"
+
+    - name: "Download v242 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v242-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v242"
+
+    - name: "Download v251 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v251-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v251"
+
+    - name: "Download v252 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v252-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v252"
+
+    - name: "Download v261 stubs"
+      if: github.event_name != 'workflow_dispatch'
+      uses: ./.github/workflows/setup-stubs/
+      with:
+        folder-pattern: "v261-${{ env.MAIN_PYTHON_VERSION }}"
+        package-path: "${{ env.PACKAGE_PATH }}"
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        mechanical-revn: "v261"
+
+    - name: "Stage generated stubs for packaging"
+      run: |
+        git add ${{ env.PACKAGE_PATH }}
+        git status --short ${{ env.PACKAGE_PATH }}
+
+    - name: Build library source and wheel artifacts
+      uses: ansys/actions/build-library@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
+      with:
+        library-name: ${{ env.PACKAGE_NAME }}
+        python-version: ${{ env.MAIN_PYTHON_VERSION }}
+        checkout: false
+
+  test-wheel-install:
+    name: "Test package installed from wheel"
+    # Simulate a real `pip install ansys-mechanical-stubs` and run the full
+    # autocomplete test suite against the installed wheel.  This catches
+    # packaging mistakes (missing stubs files, broken __init__ imports, etc.)
+    # that would not be caught by the editable-install validate-stubs job.
+    runs-on: ${{ matrix.os }}
+    needs: [build-library, config-matrix]
+    strategy:
+      fail-fast: false
+      matrix:
+        mechanical: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix).mechanical }}
+        python-version: ${{ fromJSON(needs.config-matrix.outputs.stubs-matrix).python-version }}
+        os: [ubuntu-latest, windows-latest]
+    steps:
+    - name: "Install Git and clone project"
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+    - name: "Set up Python"
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: "Download wheel artifacts"
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      with:
+        name: ${{ env.PACKAGE_NAME }}-artifacts
+        path: wheel-artifacts
+
+    - name: "Show wheel artifact contents"
+      shell: python
+      run: |
+        import pathlib
+
+        for path in sorted(pathlib.Path("wheel-artifacts").rglob("*")):
+            if path.is_file():
+                print(path.as_posix())
+
+    - name: "Install package from wheel (no editable install)"
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install -e .[tests]
+
+    - name: "Install built wheel artifact"
+      shell: python
+      run: |
+        import glob
+        import subprocess
+        import sys
+
+        wheels = sorted(glob.glob("wheel-artifacts/**/*.whl", recursive=True))
+        if not wheels:
+            raise SystemExit("No wheel files found under wheel-artifacts")
+
+        target = None
+        for wheel in wheels:
+            if "ansys_mechanical_stubs" in wheel:
+                target = wheel
+                break
+        if target is None:
+            target = wheels[0]
+
+        print(f"Installing wheel: {target}")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-index", "--pre", target])
+
+    - name: "Show installed stubs structure"
+      shell: python
+      run: |
+        import importlib.resources, pathlib, sys
+        try:
+            pkg = importlib.resources.files("ansys.mechanical.stubs")
+            print("Stubs root:")
+            for p in sorted(pathlib.Path(str(pkg)).iterdir()):
+                print(f"  {p.name}/") if p.is_dir() else print(f"  {p.name}")
+            for version_dir in sorted(pathlib.Path(str(pkg)).iterdir()):
+                if version_dir.is_dir() and version_dir.name.startswith("v"):
+                    children = sorted(version_dir.iterdir())
+                    print(f"  {version_dir.name}/: {[c.name for c in children[:8]]}")
+        except Exception as e:
+            print(f"Could not inspect package: {e}", file=sys.stderr)
+
+    - name: "Confirm package was installed from wheel, not source"
+      shell: python
+      run: |
+        import importlib.metadata
+
+        dist = importlib.metadata.distribution("${{ env.PACKAGE_NAME }}")
+        direct_url = dist.read_text("direct_url.json")
+        print("direct_url.json:", direct_url)
+        # If installed from a local wheel the url will be a file:// path
+        # containing the artifacts directory. An editable install would
+        # have '"editable": true' in this file.
+        if direct_url and '"editable": true' in direct_url:
+            raise SystemExit("Package appears to be an editable install, not a wheel install.")
+        print("Package installed from wheel correctly.")
+
+    - name: "Run autocomplete tests against installed wheel"
+      env:
+        MECHANICAL_VERSION: ${{ matrix.mechanical.version }}
+      run: |
+        python -m pytest tests/test_autocomplete.py -v
+
   doc-build:
     name: Make html documentation
     if: github.event.action != 'closed'
-    needs: [set-mechanical-versions, gen-stubs, smoke-tests, config-matrix]
+    needs: [set-mechanical-versions, gen-stubs, smoke-tests, test-wheel-install, config-matrix]
     runs-on: public-ubuntu-latest-16-cores
     strategy:
       matrix: ${{ fromJSON(needs.config-matrix.outputs.doc-build-matrix) }}
@@ -600,7 +773,7 @@ jobs:
     needs: [clean-docs]
     if: github.event_name == 'pull_request' && always() && (needs.clean-docs.result == 'success' || needs.clean-docs.result == 'skipped')
     steps:
-      - uses: ansys/actions/doc-deploy-pr@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
+      - uses: ansys/actions/doc-deploy-pr@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
         with:
           cname: ${{ env.DOCUMENTATION_CNAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -617,39 +790,9 @@ jobs:
       #     bot-username: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
       #     bot-email: ${{ secrets.PYANSYS_CI_BOT_EMAIL }}
 
-  build-library:
-    name: Build library
-    runs-on: ubuntu-latest
-    needs: [clean-docs]
-    steps:
-    - name: "Install Git and clone project"
-      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-    - name: "Set up Python"
-      uses: ansys/actions/_setup-python@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
-      with:
-        python-version: ${{ env.MAIN_PYTHON_VERSION }}
-        use-cache: false
-        provision-uv: false
-        prune-uv-cache: false
-
-    - name: "Download stubs"
-      uses: ./.github/workflows/setup-stubs/
-      with:
-        folder-pattern: "v[0-9][0-9][0-9]-${{ env.MAIN_PYTHON_VERSION }}"
-        package-path: "${{ env.PACKAGE_PATH }}"
-        python-version: ${{ env.MAIN_PYTHON_VERSION }}
-
-    - name: Build library source and wheel artifacts
-      uses: ansys/actions/build-library@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
-      with:
-        library-name: ${{ env.PACKAGE_NAME }}
-        python-version: ${{ env.MAIN_PYTHON_VERSION }}
-        checkout: false
-
   release:
     runs-on: ubuntu-latest
-    needs: [smoke-tests, build-library, update-changelog]
+    needs: [smoke-tests, build-library, update-changelog, test-wheel-install, clean-docs]
     environment: release
     permissions:
       id-token: write
@@ -671,7 +814,7 @@ jobs:
           skip-existing: false
 
       - name: "Release to GitHub"
-        uses: ansys/actions/release-github@84b6533ae76f5dde69a1df26c18682160a8121cf # v10.3.5
+        uses: ansys/actions/release-github@9dc4e3161033d2c2485fbf9687d40cfb7a661fb2 # v10.3.6
         with:
           library-name: ${{ env.PACKAGE_NAME }}
           token: ${{ secrets.GITHUB_TOKEN }}
