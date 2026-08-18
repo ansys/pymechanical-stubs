@@ -67,10 +67,6 @@ EXCLUDED_TYPES_LIST = [
     "System.IDisposable",
 ]
 
-# System.Enum overrides these three methods from System.Object, so their DeclaringType is
-# System.Enum rather than System.Object. Exclude them by name so they are also dropped.
-_SYSTEM_OBJECT_OVERRIDE_NAMES = {"ToString", "GetHashCode", "Equals"}
-
 # Maps interface return types to their concrete runtime types for more accurate stubs.
 TYPE_OVERRIDES = {
     "Ansys.ACT.Interfaces.Mechanical.IMechanicalDataModel": "Ansys.ACT.Mechanical.MechanicalDataModel",
@@ -310,17 +306,12 @@ def write_enum(
     doc: typing.Dict[str, DocMember],
     type_filter: typing.Callable = None,
 ) -> None:
-    """Write an enum, including its member values and inherited .NET methods.
+    """Write an enum containing only its member values.
 
-    Each .NET enum inherits from ``System.Enum`` and therefore carries instance
-    methods declared on ``System.Enum`` such as ``CompareTo``, ``HasFlag``, and
-    ``GetTypeCode``.  Methods inherited from ``System.Object`` (e.g.
-    ``GetHashCode``, ``ToString``, ``Equals``, ``GetType``) are intentionally
-    excluded by the ``System.Object`` filter in ``get_methods``.
-    The remaining methods are written into the same ``Enum``-based class block
-    so that VS Code autocomplete surfaces both the enum member names *and* the
-    available instance methods without producing a duplicate ``object``-based
-    class definition that would shadow the ``Enum`` one.
+    Methods inherited from ``System.Object`` and ``System.Enum`` (e.g.
+    ``GetHashCode``, ``ToString``, ``Equals``, ``GetType``, ``CompareTo``,
+    ``HasFlag``, ``GetTypeCode``) are intentionally excluded — only the
+    enum field constants are emitted.
 
     Parameters
     ----------
@@ -977,15 +968,9 @@ def get_methods(
             )
 
     for method in methods:
-        # Skip methods inherited from System.Object (e.g. GetHashCode, ToString, Equals, GetType)
-        if method.DeclaringType.ToString() == "System.Object":
-            continue
-        # Skip System.Object methods that System.Enum overrides (their DeclaringType
-        # is System.Enum, not System.Object, so the check above won't catch them).
-        if (
-            method.DeclaringType.ToString() == "System.Enum"
-            and method.Name in _SYSTEM_OBJECT_OVERRIDE_NAMES
-        ):
+        # Skip all methods declared on System.Object or System.Enum — only
+        # enum field constants are wanted in the generated stubs.
+        if method.DeclaringType.ToString() in {"System.Object", "System.Enum"}:
             continue
 
         method_return_type = f'"{method.ReturnType.ToString()}"'
