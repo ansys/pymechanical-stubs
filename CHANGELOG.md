@@ -6,6 +6,19 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
+## [0.1.15](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.15) - August 18, 2026
+
+
+### Fixed
+
+- Fix shadowing of enum classes with the same name [#270](https://github.com/ansys/pymechanical-stubs/pull/270)
+
+
+### Maintenance
+
+- Update CHANGELOG for v0.1.14 [#266](https://github.com/ansys/pymechanical-stubs/pull/266)
+- Bump the actions group with 9 updates [#268](https://github.com/ansys/pymechanical-stubs/pull/268)
+
 ## [0.1.14](https://github.com/ansys/pymechanical-stubs/releases/tag/v0.1.14) - August 11, 2026
 
 
