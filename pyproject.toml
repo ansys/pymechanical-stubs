@@ -32,7 +32,7 @@ build = [
 ]
 doc = [
     "ansys-sphinx-theme[autoapi]==1.9.0",
-    "ansys-tools-common==0.5.1",
+    "ansys-tools-common==0.5.2",
     "sphinx-copybutton==0.5.2",
     "sphinx-notfound-page==1.1.0",
     "autodoc_pydantic==2.2.0",
@@ -41,7 +41,7 @@ doc = [
     "sphinx-autodoc-typehints==3.0.1",
     "sphinxcontrib-globalsubs==1.1.0",
     "sphinxcontrib-httpdomain==2.0.0",
-    "sphinx-markdown-builder==0.6.10",
+    "sphinx-markdown-builder==0.6.11",
     "sphinxnotes-strike==1.2.1",
 ]
 tests = [
