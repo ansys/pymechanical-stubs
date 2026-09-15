@@ -1,0 +1,101 @@
+.. vale off
+
+
+
+:class:`ImportSettings`
+=======================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.Materials.ImportSettings
+
+   Bases: :py:obj:`object`
+
+
+
+.. py:currentmodule:: ImportSettings
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Filter`
+            - All materials will be imported if this list of the names of
+          * - :py:attr:`~Replace`
+            - A boolean to specify if a material exists in Mechanical that
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Filter
+   :type: Optional[List[str]]
+
+
+   
+   All materials will be imported if this list of the names of
+   specific materials to be imported is not specified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:property:: Replace
+   :type: Optional[bool]
+
+
+   
+   A boolean to specify if a material exists in Mechanical that
+   it should be replaced by these imported material(s).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

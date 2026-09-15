@@ -1,0 +1,85 @@
+.. vale off
+
+
+
+:class:`PuckFormulation`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.MechanicalEnums.CompositeFailure.PuckFormulation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum defines the different formulations which can be used for
+           evaluating the Puck failure criterion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PuckFormulation
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Simplified`
+            - 
+          * - :py:attr:`~ThreeDimensional`
+            - 
+          * - :py:attr:`~TwoDimensional`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Simplified
+   :value: 0
+
+
+.. py:attribute:: ThreeDimensional
+   :value: 2
+
+
+.. py:attribute:: TwoDimensional
+   :value: 1
+
+
+
+
+
+
+.. vale on

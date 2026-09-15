@@ -1,0 +1,150 @@
+.. vale off
+
+
+
+:class:`NamedSelectionWorksheetOperator`
+========================================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.Enums.NamedSelectionWorksheetOperator(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the Worksheet Enumeration Wrappers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NamedSelectionWorksheetOperator
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Contains`
+            - 
+          * - :py:attr:`~Equal`
+            - 
+          * - :py:attr:`~GreaterThan`
+            - 
+          * - :py:attr:`~GreaterThanEqual`
+            - 
+          * - :py:attr:`~Largest`
+            - 
+          * - :py:attr:`~LessThan`
+            - 
+          * - :py:attr:`~LessThanEqual`
+            - 
+          * - :py:attr:`~No`
+            - 
+          * - :py:attr:`~NotEqual`
+            - 
+          * - :py:attr:`~RangeExclude`
+            - 
+          * - :py:attr:`~RangeInclude`
+            - 
+          * - :py:attr:`~Smallest`
+            - 
+          * - :py:attr:`~Unknown`
+            - 
+          * - :py:attr:`~Yes`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Contains
+   :value: 13
+
+
+.. py:attribute:: Equal
+   :value: 1
+
+
+.. py:attribute:: GreaterThan
+   :value: 5
+
+
+.. py:attribute:: GreaterThanEqual
+   :value: 6
+
+
+.. py:attribute:: Largest
+   :value: 10
+
+
+.. py:attribute:: LessThan
+   :value: 3
+
+
+.. py:attribute:: LessThanEqual
+   :value: 4
+
+
+.. py:attribute:: No
+   :value: 12
+
+
+.. py:attribute:: NotEqual
+   :value: 2
+
+
+.. py:attribute:: RangeExclude
+   :value: 7
+
+
+.. py:attribute:: RangeInclude
+   :value: 8
+
+
+.. py:attribute:: Smallest
+   :value: 9
+
+
+.. py:attribute:: Unknown
+   :value: 0
+
+
+.. py:attribute:: Yes
+   :value: 11
+
+
+
+
+
+
+.. vale on

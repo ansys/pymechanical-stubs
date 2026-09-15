@@ -1,0 +1,144 @@
+.. vale off
+
+
+
+:class:`VariableClassification`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.MechanicalEnums.Table.VariableClassification(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum represents the classification of variables that can be represented by Table
+   variables/columns.
+
+   A full variable definition requires both a  and an
+   .
+
+   The explicit enum values need to be kept in-sync with the Typescript enumeration of the
+   same name in the frontend Angular project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: VariableClassification
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Imaginary`
+            - 
+          * - :py:attr:`~ImaginaryComponentGroup`
+            - 
+          * - :py:attr:`~Imaginary_i`
+            - 
+          * - :py:attr:`~Imaginary_j`
+            - 
+          * - :py:attr:`~Imaginary_k`
+            - 
+          * - :py:attr:`~Independent`
+            - 
+          * - :py:attr:`~Real`
+            - 
+          * - :py:attr:`~RealComponentGroup`
+            - 
+          * - :py:attr:`~Real_i`
+            - 
+          * - :py:attr:`~Real_j`
+            - 
+          * - :py:attr:`~Real_k`
+            - 
+          * - :py:attr:`~Unclassified`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: Imaginary
+   :value: 3
+
+
+.. py:attribute:: ImaginaryComponentGroup
+   :value: 300
+
+
+.. py:attribute:: Imaginary_i
+   :value: 301
+
+
+.. py:attribute:: Imaginary_j
+   :value: 302
+
+
+.. py:attribute:: Imaginary_k
+   :value: 303
+
+
+.. py:attribute:: Independent
+   :value: 1
+
+
+.. py:attribute:: Real
+   :value: 2
+
+
+.. py:attribute:: RealComponentGroup
+   :value: 200
+
+
+.. py:attribute:: Real_i
+   :value: 201
+
+
+.. py:attribute:: Real_j
+   :value: 202
+
+
+.. py:attribute:: Real_k
+   :value: 203
+
+
+.. py:attribute:: Unclassified
+   :value: 0
+
+
+
+
+
+
+.. vale on

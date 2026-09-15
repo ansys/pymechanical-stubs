@@ -1,0 +1,90 @@
+.. vale off
+
+
+
+:class:`DBWeightingType`
+========================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.Enums.DBWeightingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Specifies the dB Weighting Type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DBWeightingType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~A`
+            - 
+          * - :py:attr:`~B`
+            - 
+          * - :py:attr:`~C`
+            - 
+          * - :py:attr:`~None_`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: A
+   :value: 0
+
+
+.. py:attribute:: B
+   :value: 1
+
+
+.. py:attribute:: C
+   :value: 2
+
+
+.. py:attribute:: None_
+   :value: -1
+
+
+
+
+
+
+.. vale on

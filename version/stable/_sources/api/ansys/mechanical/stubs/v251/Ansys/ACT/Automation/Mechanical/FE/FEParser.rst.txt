@@ -1,0 +1,76 @@
+.. vale off
+
+
+
+:class:`FEParser`
+=================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.ACT.Automation.Mechanical.FE.FEParser
+
+   Bases: :py:obj:`object`
+
+
+   
+   FE parser object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: FEParser
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Parse`
+            - Parse method.
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Parse(filename: str, format: str) -> Ansys.ACT.Automation.Mechanical.FE.CommandRepository
+
+   
+   Parse method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

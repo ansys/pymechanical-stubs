@@ -1,0 +1,81 @@
+.. vale off
+
+
+
+:class:`Transaction`
+====================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.ACT.Mechanical.Transaction(suspendClicks: bool, suspendStateEngine: bool)
+
+   Bases: :py:obj:`object`
+
+
+   
+   Speeds up bulk user interactions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: Transaction
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+   .. tab-item:: Methods
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Dispose`
+            - 
+          * - :py:attr:`~ForceClickOnUnsuspend`
+            - ForceClickOnUnsuspend method.
+
+
+
+
+
+
+
+
+
+
+
+
+Method detail
+-------------
+.. py:method:: Dispose() -> None
+   
+
+.. py:method:: ForceClickOnUnsuspend() -> None
+
+   
+   ForceClickOnUnsuspend method.
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+.. vale on

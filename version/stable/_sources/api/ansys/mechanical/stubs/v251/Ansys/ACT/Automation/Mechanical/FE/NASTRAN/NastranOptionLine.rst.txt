@@ -1,0 +1,93 @@
+.. vale off
+
+
+
+:class:`NastranOptionLine`
+==========================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NastranOptionLine(options: List[Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NastranOption])
+
+   Bases: :py:obj:`object`
+
+
+   
+   Option line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: NastranOptionLine
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+   .. tab-item:: Properties
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~Options`
+            - Gets the options.
+
+
+
+
+
+
+
+Property detail
+---------------
+.. py:property:: Options
+   :type: Optional[tuple[Ansys.ACT.Automation.Mechanical.FE.NASTRAN.NastranOption]]
+
+
+   
+   Gets the options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+
+
+
+.. vale on

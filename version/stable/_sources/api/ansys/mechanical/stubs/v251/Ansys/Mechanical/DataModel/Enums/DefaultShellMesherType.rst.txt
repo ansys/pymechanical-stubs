@@ -1,0 +1,78 @@
+.. vale off
+
+
+
+:class:`DefaultShellMesherType`
+===============================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.Enums.DefaultShellMesherType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Use this enum to specify the meshing method to be used for sheet bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: DefaultShellMesherType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~PrimeMesh`
+            - 
+          * - :py:attr:`~QuadDominant`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: PrimeMesh
+   :value: 1
+
+
+.. py:attribute:: QuadDominant
+   :value: 0
+
+
+
+
+
+
+.. vale on

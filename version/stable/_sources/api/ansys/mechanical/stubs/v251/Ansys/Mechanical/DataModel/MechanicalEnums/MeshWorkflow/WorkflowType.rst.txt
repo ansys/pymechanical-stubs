@@ -1,0 +1,138 @@
+.. vale off
+
+
+
+:class:`WorkflowType`
+=====================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.MechanicalEnums.MeshWorkflow.WorkflowType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   This enum is referenced in the “Steps” tree node and reflects the type of workflow being configured. Based on the type of workflow different rules are applied which define the applicable order and type of operations which can be added.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: WorkflowType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~BEMAcoustics`
+            - 
+          * - :py:attr:`~Custom`
+            - 
+          * - :py:attr:`~DirectMorphing`
+            - 
+          * - :py:attr:`~FEMAcousticsExternal`
+            - 
+          * - :py:attr:`~FEMAcousticsFSI`
+            - 
+          * - :py:attr:`~FEMAcousticsFSISingleBody`
+            - 
+          * - :py:attr:`~FEMAcousticsFSISingleBodyCutPlane`
+            - 
+          * - :py:attr:`~FEMAcousticsInternal`
+            - 
+          * - :py:attr:`~MatchMorphing`
+            - 
+          * - :py:attr:`~MicrostructureMeshing`
+            - 
+          * - :py:attr:`~Stacker`
+            - 
+          * - :py:attr:`~Undefined`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: BEMAcoustics
+   :value: 9
+
+
+.. py:attribute:: Custom
+   :value: 1
+
+
+.. py:attribute:: DirectMorphing
+   :value: 2
+
+
+.. py:attribute:: FEMAcousticsExternal
+   :value: 4
+
+
+.. py:attribute:: FEMAcousticsFSI
+   :value: 6
+
+
+.. py:attribute:: FEMAcousticsFSISingleBody
+   :value: 7
+
+
+.. py:attribute:: FEMAcousticsFSISingleBodyCutPlane
+   :value: 8
+
+
+.. py:attribute:: FEMAcousticsInternal
+   :value: 5
+
+
+.. py:attribute:: MatchMorphing
+   :value: 3
+
+
+.. py:attribute:: MicrostructureMeshing
+   :value: 10
+
+
+.. py:attribute:: Stacker
+   :value: 11
+
+
+.. py:attribute:: Undefined
+   :value: 0
+
+
+
+
+
+
+.. vale on

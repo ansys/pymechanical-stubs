@@ -1,0 +1,84 @@
+.. vale off
+
+
+
+:class:`PointType`
+==================
+
+.. py:class:: ansys.mechanical.stubs.v251.Ansys.Mechanical.DataModel.ConstructionLines.PointType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Enumeration for the possible edge vertex types that can be represented.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+.. py:currentmodule:: PointType
+
+Overview
+--------
+
+.. tab-set::
+
+
+
+
+
+   .. tab-item:: Attributes
+
+      .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~GeometryVertex`
+            - 
+          * - :py:attr:`~Global`
+            - 
+          * - :py:attr:`~Planar`
+            - 
+
+
+
+
+
+
+
+
+Attribute detail
+----------------
+.. py:attribute:: GeometryVertex
+   :value: 1
+
+
+.. py:attribute:: Global
+   :value: 0
+
+
+.. py:attribute:: Planar
+   :value: 2
+
+
+
+
+
+
+.. vale on
