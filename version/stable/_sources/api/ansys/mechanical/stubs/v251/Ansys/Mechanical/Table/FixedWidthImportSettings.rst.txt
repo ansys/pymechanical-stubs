@@ -108,15 +108,15 @@ Property detail
    Gets or sets the specified column widths.
    When setting, The value provided to  may be either:
 
-       A `string` using Fortran-esque fixed-format specifications. This is similar to the
-       “User-Defined” format specifier for External Data as described in the product
-       documentation. Note, however, that regardless of the format specifier all imported
-       columns WILL be interpreted using the .NET command `double.TryParse()` to support
-       the requirements of the underlying variable data for Table.
+   A `string` using Fortran-esque fixed-format specifications. This is similar to the
+   “User-Defined” format specifier for External Data as described in the product
+   documentation. Note, however, that regardless of the format specifier all imported
+   columns WILL be interpreted using the .NET command `double.TryParse()` to support
+   the requirements of the underlying variable data for Table.
 
-       An  containing the widths of each column. Negative
-       values may be specified to define a negated width, meaning ‘-2’ would be equivalent
-       to the fixed-width string specification ’2X’.
+   An  containing the widths of each column. Negative
+   values may be specified to define a negated width, meaning ‘-2’ would be equivalent
+   to the fixed-width string specification ’2X’.
 
 
 
