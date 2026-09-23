@@ -37,7 +37,7 @@ doc = [
     "sphinx-notfound-page==1.1.0",
     "autodoc_pydantic==2.2.0",
     "jupyter_sphinx==0.5.3",
-    "numpydoc==1.10.0",
+    "numpydoc==1.11.0",
     "sphinx-autodoc-typehints==3.0.1",
     "sphinxcontrib-globalsubs==1.1.0",
     "sphinxcontrib-httpdomain==2.0.0",
